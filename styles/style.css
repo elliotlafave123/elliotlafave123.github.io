@@ -9,6 +9,7 @@ h1 {
   font-size: 45px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  margin: 0px;
 }
 
 p {
@@ -16,6 +17,7 @@ p {
   font-size: 16px;  
   line-height: 2;
   letter-spacing: 1px;
+  margin: 0px;
 }
 
 
@@ -24,9 +26,13 @@ html {
 }
 
 body {
+	margin: 0px;
 }
 
-h1 {
+#header {
+	width: 100%;
+	background-color: grey;
+	height: 100px;
 }
 
 img {
