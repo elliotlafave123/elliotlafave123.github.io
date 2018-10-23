@@ -33,6 +33,12 @@ body {
 	width: 100%;
 	background-color: grey;
 	height: 100px;
+	padding-top: 30px;
+}
+
+#main_content {
+	padding: 1%;
+	margin: 0px;	
 }
 
 img {
