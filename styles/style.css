@@ -35,10 +35,18 @@ body {
     width:100%;	
 }
 
-#post_box1 {
+#post_box_o {
 	width:100%;
-	background-color: grey;
+	background-color: #ff8914;
 	padding: 1%;
+	text-align: center;
+}
+
+#post_box_g {
+	width:100%;
+	background-color: #69f711;
+	padding: 1%;
+	text-align: center;
 }
 
 img {
@@ -53,7 +61,7 @@ img {
 		width:100%;	
 	}
 
-	#post_box1 {
+	#post_box {
 		width:100%;
 		padding: 1%;
 	}
