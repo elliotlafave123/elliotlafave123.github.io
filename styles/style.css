@@ -68,7 +68,25 @@ li a:hover:not(.active) {
     background-color: #4CAF50;
 }
 
-#header {
+#header_text {
 		width: 100%;
-		min-height: 100%;
+		height: 50px;
+		background-color: #e6e6e6;
+}
+
+.website_logo .dotcom {
+    color: #4CAF50;
+}
+
+.website_logo {
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: #555555;
+    display: block;
+    position: absolute;
+    top: 17px;
 }
