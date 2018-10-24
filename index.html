@@ -23,11 +23,29 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto' rel='stylesheet'>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
   </head>
+  
+  
   <body>
 	
-	<div id="header">
-	<h1>Test Website</h1>
-	</div>
+	<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="about.html">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+    </div>
+	
+	<script>
+	function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}</script>
 	
 	<div id="main_content">
 		<a href="about.html">about</a>
