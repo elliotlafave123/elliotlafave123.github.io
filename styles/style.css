@@ -41,6 +41,7 @@ img {
 /* ################################################################################# */
 
 ul {
+	font-size: 15px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -76,6 +77,7 @@ li a:hover:not(.active) {
 
 .website_logo .dotcom {
     color: #4CAF50;
+	
 }
 
 .website_logo {
