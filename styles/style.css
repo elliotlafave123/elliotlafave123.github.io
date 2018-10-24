@@ -35,19 +35,6 @@ body {
     width:100%;	
 }
 
-#post_box_o {
-	width:100%;
-	background-color: #ff8914;
-	padding: 1%;
-	text-align: center;
-}
-
-#post_box_g {
-	width:100%;
-	background-color: #69f711;
-	padding: 1%;
-	text-align: center;
-}
 
 img {
 }
@@ -59,16 +46,6 @@ img {
 		padding: 0%;
 		margin: 0px;
 		width:100%;	
-	}
-
-	#post_box_o{
-		width:100%;
-		padding: 1%;
-	}
-	
-	#post_box_g{
-		width:100%;
-		padding: 1%;
 	}
 }
 /* ########################################           Header           ######################################### */
