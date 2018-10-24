@@ -61,7 +61,12 @@ img {
 		width:100%;	
 	}
 
-	#post_box {
+	#post_box_o{
+		width:100%;
+		padding: 1%;
+	}
+	
+	#post_box_g{
 		width:100%;
 		padding: 1%;
 	}
