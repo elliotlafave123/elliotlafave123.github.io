@@ -29,12 +29,6 @@ body {
 	margin: 0px;
 }
 
-#header {
-	width: 100%;
-	background-color: grey;
-	height: 100px;
-	padding-top: 30px;
-}
 
 #main_content {
 	padding: 1%;
