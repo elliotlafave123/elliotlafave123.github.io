@@ -39,8 +39,9 @@ body {
 
 img {
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -54,8 +55,10 @@ img {
 	}
 	
 	img {
-		width: 300%;
+		width: 280%;
 		display: block;	
+		margin-left: auto;
+		margin-right: auto;		
 	}
 }
 /* ########################################           Header           ######################################### */
