@@ -61,25 +61,51 @@ body {
 
 #full_width_white {
 	padding: 0;
-	margin-top: 25px;
+	margin-top: 0px;
 	margin-bottom: 25px;
 	background-color: white;
     width:100%;	
 }
 
 #home_content_1 {
-	padding-left: 10%;
-	margin-left:0;
+	padding-left: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
     width:100%;	
+	float: left;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#curved_box_1 {
+	padding-top: 20px;
+	margin-left: 15%;
+	margin-bottom: 20px;
+    width:20%;
+	background-color: #f9a825;	
+	height: 450px;
+	border-radius: 15px;
 	float: left;
 }
 
-#curved_box {
-	padding: 0px;
-	margin: 2px;
-    width:22%;
-	background-color: orange;	
-	height: 600px;
+#curved_box_2 {
+	padding-top: 20px;
+	margin-left: 5%;
+	margin-bottom: 20px;
+    width:20%;
+	background-color: #57f42c;	
+	height: 450px;
+	border-radius: 15px;
+	float: left;
+}
+
+#curved_box_3 {
+	padding-top: 20px;
+	margin-left: 5%;
+	margin-bottom: 20px;
+    width:20%;
+	background-color: #2defcc;	
+	height: 450px;
 	border-radius: 15px;
 	float: left;
 }
@@ -132,18 +158,37 @@ img {
 	
 	#home_content_1 {
 	padding: 0%;
-	margin:0;
+	margin-top: 0px;
     width:100%;	
 	float: left;
 	}
 	
-	#curved_box {
+	#curved_box_1 {
 	padding: 1%;
 	margin-bottom: 10px;
 	margin-left:5.5%;
     width:88%;
-	background-color: orange;	
-	height: 300px;
+	height: 400px;
+	border-radius: 15px;
+	float: left;
+	}
+	
+	#curved_box_2 {
+	padding: 1%;
+	margin-bottom: 10px;
+	margin-left:5.5%;
+    width:88%;
+	height: 400px;
+	border-radius: 15px;
+	float: left;
+	}
+	
+	#curved_box_3 {
+	padding: 1%;
+	margin-bottom: 10px;
+	margin-left:5.5%;
+    width:88%;	
+	height: 400px;
 	border-radius: 15px;
 	float: left;
 	}
