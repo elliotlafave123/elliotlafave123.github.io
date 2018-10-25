@@ -28,6 +28,12 @@ h3 {
   margin: 0px;
 }
 
+h4 {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;  
@@ -61,7 +67,12 @@ body {
     width:100%;	
 }
 
-.home {
+.h3home {
+	text-align: center;
+	color: #555555;
+}
+
+.h4home {
 	text-align: center;
 	color: #555555;
 }
