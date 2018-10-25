@@ -70,11 +70,11 @@ img {
 	}
 	
 	img {
-		width: 280%;
+		width: 300%;
 		display: block;	
 		margin-left: auto;
 		margin-right: auto;		
-		height: 600px;
+		height: 650px;
 	}
 }
 
