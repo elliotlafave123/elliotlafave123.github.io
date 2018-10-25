@@ -3,6 +3,10 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
+.whole_page::-webkit-scrollbar { 
+  /* This is the magic bit */
+  display: none;
+}
 
 h1 {
   font-size: 45px;
@@ -54,9 +58,9 @@ img {
 
 /* ########################################           mobile/content           ######################################### */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
 	h2 {
-		font-size: 60px;
+		font-size: 50px;
 	}
 	
 	#main_content {
@@ -69,23 +73,36 @@ img {
 		width: 280%;
 		display: block;	
 		margin-left: auto;
-		margin-right: auto;			
+		margin-right: auto;		
+		height: 600px;
 	}
 }
 
-@media only screen and (min-width: 1120px) {
+@media only screen and (min-width: 1000px) and (min-width: 1120px) {
 	img {
-		height: 827px;
+		height: 800px;
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 601px) and (max-width: 700px) {
 	h2 {
 		font-size: 40px;
 	}
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 701px) and (max-width: 800px) {
+	h2 {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (min-width: 801px) and (max-width: 900px) {
+	h2 {
+		font-size: 50px;
+	}
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1000px) {
 	h2 {
 		font-size: 50px;
 	}
