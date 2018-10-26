@@ -211,6 +211,10 @@ img {
 	float: left;
 	}
 	
+	#footer {
+	font-size: 10px;
+	}
+	
 	
 }
 
@@ -365,12 +369,16 @@ li a:hover:not(.active) {
 /* ########################################           Footer           ######################################### */
 
 #footer {
-	width: 100%;
+	margin:2%;
+	width:96%;
 	min-height: 20px;
 	background-color: #FFFFFF;
-	font-size: 12px;
+	font-size: 14px;
 	float: left;
+	text-align: center;
 }
 
-
+#footer a {
+	color: #4CAF50;
+}
 
