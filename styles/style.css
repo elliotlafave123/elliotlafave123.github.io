@@ -135,6 +135,23 @@ body {
 	text-align: center;
 }
 
+.packages_text_small {
+		font-size: 14px;
+}
+
+.packages_text_medium {
+		font-size: 24px;
+}
+
+#packages_content {
+	margin-left: 15%;
+	padding: 20px;
+	margin-bottom: 25px;
+	background-color: white;
+    width:70%;	
+}
+
+
 /* ########################################           Images           ######################################### */
 
 img {
@@ -210,6 +227,15 @@ img {
 	border-radius: 15px;
 	float: left;
 	}
+	
+	#packages_content {
+	margin: 0px;
+	padding: 10px;
+	margin-bottom: 25px;
+	background-color: white;
+    width:100%;	
+	}
+	
 	
 	#footer {
 	font-size: 10px;
