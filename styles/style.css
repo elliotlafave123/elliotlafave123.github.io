@@ -162,6 +162,9 @@ img {
 	max-height:100%;
 }
 
+img .home_content {
+	width:70%;
+}
 
 /* ########################################           mobile/content           ######################################### */
 
@@ -230,11 +233,12 @@ img {
 	
 	#packages_content {
 	margin: 0px;
-	padding: 10px;
+	padding: 1%;
 	margin-bottom: 25px;
 	background-color: white;
-    width:100%;	
+    width:98%;	
 	}
+	
 	
 	
 	#footer {

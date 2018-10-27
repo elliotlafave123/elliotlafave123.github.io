@@ -1,3 +1,21 @@
+<?php
+$list = array
+(
+"Peter,Griffin,Oslo,Norway",
+"Glenn,Quagmire,Oslo,Norway",
+);
+
+$file = fopen("form_data.csv","w");
+
+foreach ($list as $line)
+  {
+  fputcsv($file,explode(',',$line));
+  }
+
+fclose($file); 
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +39,18 @@
 	<div id="main_content"> <!------------ all content below the navigation menu -------------->		
 		<div id="full_width_white">
 			<div class="center_text"><span style="font-size:80px; color: #555555; "><i class="fas fa-users"></i></div>
-			<p><h3 class="h3home">Get your brand noticed by millions</h3></p>
+			<p><h3 class="h3home">Complete A request form to be reviewed</h3></p>
+			<p><h4 class="h4home">Once completed a designer will be in touch with you within 1-5 working days to explain the process further</h4></p>
+			<div id="packages_content">
+			<a name="form1204314182" id="formAnchor1204314182"></a>
+<script type="text/javascript" src="https://fs4.formsite.com/include/form/embedManager.js?1204314182"></script>
+<script type="text/javascript">
+EmbedManager.embed({
+	key: "https://fs4.formsite.com/res/showFormEmbed?EParam=PyBo85CFjhFw8AZDJmjPuNt7h1SghSJ6&1204314182",
+	width: "100%",
+	mobileResponsive: true
+});
+</script>
 		</div>
 	
 	<div id="footer"> <!---------------------- footer ------------------------>
