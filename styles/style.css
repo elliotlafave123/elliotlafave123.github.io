@@ -261,6 +261,10 @@ img .home_content {
 	font-size: 18px; 
 	}
 	
+	#package_btn {
+		margin-left: 0%;
+	}
+	
 	
 }
 
@@ -410,6 +414,10 @@ li a:hover:not(.active) {
 /* Darker background on mouse-over */
 .curved_box_button:hover {
     background-color: RoyalBlue;
+}
+
+#package_btn {
+	margin-left: 20%;
 }
 
 /* ########################################           Footer           ######################################### */
