@@ -51,6 +51,9 @@ body {
 	margin: 0px;
 }
 
+a {
+	color: #4CAF50;
+}
 /* ########################################           content           ######################################### */
 
 #main_content {
@@ -436,6 +439,7 @@ li a:hover:not(.active) {
 
 #footer {
 	margin:2%;
+	margin-bottom: 10px;
 	width:96%;
 	min-height: 20px;
 	background-color: #FFFFFF;
@@ -448,3 +452,17 @@ li a:hover:not(.active) {
 	color: #4CAF50;
 }
 
+#footer_socials {
+	margin:1%;
+	margin-top: 0; 
+	width:98%;
+	min-height: 20px;
+	background-color: #FFFFFF;
+	font-size: 23px;
+	float: left;
+	text-align: center;
+}
+
+#footer_socials a {
+	color: #555555;
+}
