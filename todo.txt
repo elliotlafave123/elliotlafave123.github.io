@@ -1,5 +1,3 @@
-Page with all the icons on,
 404 page,
 .tk email,
 facebook, twitter, google+ etc..,
-SSL Certificate.
