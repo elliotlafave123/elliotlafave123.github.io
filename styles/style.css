@@ -279,8 +279,6 @@ img .home_content {
 	width: 100%;
 	height: 20px;
 	}
-	
-	
 }
 
 @media only screen and (min-width: 1000px) and (min-width: 1120px) {
@@ -440,9 +438,8 @@ li a:hover:not(.active) {
 }
 
 #header_btn {
-	width:10%;
+	width:200px;
 	float:right;
-	margin-left: 45%;
 	margin-right: 20px;
 	margin-top: 11px;
 	background-color: DodgerBlue; /* Blue background */
