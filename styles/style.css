@@ -435,6 +435,12 @@ li a:hover:not(.active) {
 	margin-left: 22%;
 }
 
+#fourofour_btn {
+	display: block;
+	width:20%;
+	float:center;
+	margin-left: 42%;
+}
 /* ########################################           Footer           ######################################### */
 
 #footer {
