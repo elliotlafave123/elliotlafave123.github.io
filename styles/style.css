@@ -326,6 +326,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    width: 100%;
 }
 
 li {
@@ -349,10 +350,13 @@ li a:hover:not(.active) {
 }
 
 #header_text {
-		width: 100%;
+		width: 40%;
 		height: 50px;
 		background-color: #FFFFFF;
 		padding-bottom: 13px;
+		margin:0%;
+		display: block;
+		float: left;
 }
 
 .website_logo .dotcom {
@@ -435,11 +439,19 @@ li a:hover:not(.active) {
 	margin-left: 22%;
 }
 
-#fourofour_btn {
-	display: block;
-	width:20%;
-	float:center;
-	margin-left: 42%;
+#header_btn {
+	width:10%;
+	float:right;
+	margin-left: 45%;
+	margin-right: 20px;
+	margin-top: 11px;
+	background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+	border-radius: 15px;
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
 }
 /* ########################################           Footer           ######################################### */
 
