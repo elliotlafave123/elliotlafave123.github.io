@@ -169,6 +169,11 @@ a {
 #header_btn {
 	float: left;
 }
+
+.medium_width {
+	width: 60%;
+	margin-left: 20%;
+}
 /* ########################################           Images           ######################################### */
 
 img {
@@ -480,5 +485,20 @@ li a:hover:not(.active) {
 }
 
 #footer_socials a {
+	color: #555555;
+}
+
+#footer_policies {
+	margin:1%;
+	margin-top: 0; 
+	width:98%;
+	min-height: 20px;
+	background-color: #FFFFFF;
+	font-size: 12px;
+	float: left;
+	text-align: center;
+}
+
+#footer_policies a {
 	color: #555555;
 }
