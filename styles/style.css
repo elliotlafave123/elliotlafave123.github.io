@@ -54,6 +54,10 @@ body {
 a {
 	color: #4CAF50;
 }
+
+#list1 {
+	font-family: 'Montserrat', sans-serif;
+}
 /* ########################################           content           ######################################### */
 
 #main_content {
@@ -285,6 +289,10 @@ img .home_content {
 	height: 20px;
 	}
 
+	.medium_width {
+	width: 96%;
+	margin: 2%;
+	}
 	
 }
 
