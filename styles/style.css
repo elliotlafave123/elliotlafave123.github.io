@@ -240,6 +240,7 @@ img .home_content {
 	height: 400px;
 	border-radius: 0px;
 	float: left;
+	box-shadow: 0px 5px 5px grey;
 	}
 	
 	#curved_box_2 {
@@ -250,6 +251,7 @@ img .home_content {
 	height: 400px;
 	border-radius: 0px;
 	float: left;
+		box-shadow: 0px 3px 3px grey;
 	}
 	
 	#curved_box_3 {
@@ -260,6 +262,7 @@ img .home_content {
 	height: 400px;
 	border-radius: 0px;
 	float: left;
+		box-shadow: 0px 2px 5px grey;
 	}
 	
 	#packages_content {
@@ -402,6 +405,7 @@ li a:hover:not(.active) {
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
+    	box-shadow: 2px 3px 5px grey;
 }
 
 .btn:hover {
@@ -418,6 +422,7 @@ li a:hover:not(.active) {
     font-size: 16px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
 	width: 70%;
+	box-shadow: 2px 3px 5px grey;
 }
 
 /* Darker background on mouse-over */
