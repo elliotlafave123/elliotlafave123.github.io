@@ -53,62 +53,47 @@ input[type=submit]:hover {
 			<p><h4 class="h4home">Once completed a designer will be in touch with you within 1-5 working days to explain the process further</h4></p>
 			<div id="packages_content">
 				<form method="POST" netlify>
-	<h3>Personal Infomation</h3>
+	<h3>Basic Infomation</h3>
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
     <label for="Email">Email</label>
-    <input type="email" id="Email" name="Email" placeholder="Your Email..">
+    <input type="email" id="Email" name="Email" placeholder="Your Email.." required>
 
     <label for="Pnumber">Phone number</label>
-    <input type="phone" id="Pnumber" name="Phonenumber" placeholder="Your Phone number..">
-
-    <h3>Companys Infomation</h3><hr>
+    <input type="phone" id="Pnumber" name="Phonenumber" placeholder="Your Phone number.." required>
 
     <label for="Cname">Company Name</label>
-    <input type="text" id="Cname" name="companyname" placeholder="Your company's name..">
-
-    <label for="Caddress">Company Address</label>
-    <input type="text" id="Caddress" name="companyaddress" placeholder="Your company's address..">
-
-    <label for="Postcode">Postcode</label>
-    <input type="text" id="Postcode" name="Postcode" placeholder="Postcode..">
+    <input type="text" id="Cname" name="companyname" placeholder="Your company's name.." required>
 
     <h3>Your Website</h3><hr>
 
     <label for="pages">How Many Pages?</label>
-    <select id="pages" name="pages">
+    <select id="pages" name="pages" required>
       <option value="4">4</option>
       <option value="5-20">5-20</option>
       <option value="21+">21+</option>
     </select>
 
     <label for="timeframe">How quickly do you need your site?</label>
-    <select id="timeframe" name="timeframe">
+    <select id="timeframe" name="timeframe" required>
       <option value="21-28">in 21-28 days</option>
       <option value="28-45">in 28-45 days</option>
       <option value=">20">under 20 days</option>
     </select>
 
-    <label for="budget">What's your budget?</label>
-    <select id="budget" name="budget">
-      <option value="£500-£750">£500-£750</option>
-      <option value=">£500">£500</option>
-      <option value="£750-£1000">£750-£1000</option>
-      <option value="£1000+">£1000+</option>
+    <label for="budget">Choose your plan    <a href="learn_more/pricing.html">Learn More</a></label>
+    <select id="budget" name="budget" required>
+      <option value="£500-£750">Simple Pite Plan</option>
+      <option value=">£500">Small Business Plan</option>
+      <option value="£750-£1000">Yearly Plan</option>
     </select>    
 
-    <label for="fname">Details of your company</label>
-    <textarea id="subject" name="subject" placeholder="What does your company do?" style="height:200px"></textarea>
-
     <label for="subject">What would you like on your webpage?</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Describe your website..." style="height:200px" required></textarea>
     <h4>We will shortly send you an E-mail and talk more about your request.<br>
-    	For pricing please see<a href="#"> Website Pricing.</a></h4>
+    	For pricing please see <a href="learn_more/pricing.html">Website Pricing</a>.</h4>
 
     <input type="submit" value="Submit">
   </form>
