@@ -10,7 +10,7 @@
 </head> 
 
 <body>
-<div id="header_text"><a class="website_logo" href="index.html">Elliotlafave<span class="dotcom">.com</span></a><a href="index.html"></a></div>
+<div id="header_text"><a class="website_logo" href="index.html">Elliotlafave<span class="dotcom">.tk</span></a><a href="index.html"></a></div>
 
 
 <ul> <!------------ contains header navigation menu -------------->
@@ -95,6 +95,8 @@
 		</div>
 		
 	</div>
+	
+	<?php include 'footer.php';?>
 	
 	<div id="footer"> <!---------------------- footer ------------------------>
 		<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Elliotlafave.tk</span>
