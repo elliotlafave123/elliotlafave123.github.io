@@ -172,7 +172,7 @@ li a:hover:not(.active) {
 	margin-left: 7.5%;
 	margin-bottom: 20px;
     width:25%;
-	background-color: #f9a825;	
+	background-color: #833ab4;	
 	height: 410px;
 	border-radius: 15px;
 	float: left;
@@ -184,7 +184,7 @@ li a:hover:not(.active) {
 	margin-left: 5%;
 	margin-bottom: 20px;
     width:25%;
-	background-color: #57f42c;	
+	background-color: #4b7ee5;	
 	height: 410px;
 	border-radius: 15px;
 	float: left;
@@ -196,7 +196,7 @@ li a:hover:not(.active) {
 	margin-left: 5%;
 	margin-bottom: 20px;
     width:25%;
-	background-color: #2defcc;	
+	background-color: #00ffd0;	
 	height: 410px;
 	border-radius: 15px;
 	float: left;
@@ -263,6 +263,8 @@ img {
     margin-left: auto;
     margin-right: auto;
 	max-height: 100%;
+	border:0px;
+	outline: 0px;
 }
 
 img .home_content {
@@ -309,7 +311,7 @@ img .home_content {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #4CAF50;
+    background-color: #9600fb;
     color: white;
     font-size: 16px;
     padding: 12px 24px;
@@ -317,7 +319,7 @@ img .home_content {
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
-    	box-shadow: 2px 3px 5px grey;
+    	box-shadow: 1px 2px 1px grey;
 }
 
 .btn:hover {
