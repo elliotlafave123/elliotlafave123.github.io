@@ -98,7 +98,7 @@ html {
 		  height: 50px;
 		  background-color: #FFFFFF;
 		  padding-bottom: 13px;
-		  padding-left: 1%;
+		  padding-left: 6%;
 		  margin:0%;
 		  display: block;
 		  float: left;
@@ -490,6 +490,10 @@ html {
 
 	  .header_gradient_small {
 			display:none;
+	  }
+
+	  #header_text {
+			padding-left:2%;
 	  }
   
 	  #desktop_nav {
