@@ -358,7 +358,18 @@ html {
 	  left: 50%;
 	  transform: translate(-50%, -50%);
   }
+
+  #img_container_svg {
+	  width:100%;
+	  height:80px;
+  }
   
+  #img_container_svg svg{
+	width:100%;
+	height:80px;
+	float:bottom;
+}
+
   /* ########################################           Button containers           ######################################### */
   
   .btn {
@@ -624,6 +635,8 @@ html {
 	  #header_text {
 		  width: 70%;
 	  }
+
+
 	  
   }
   
