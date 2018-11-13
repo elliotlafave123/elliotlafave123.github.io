@@ -8,16 +8,40 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head> 
 
+<script type="text/javascript">
+	function toggle_div_fun(id) {
+
+		 var divelement = document.getElementById(id);
+
+		 if(divelement.style.display == 'none')
+				divelement.style.display = 'block';
+		 else
+				divelement.style.display = 'none';
+	}
+</script>
+
 <body>
+
+<div id="full_header">
 <div id="header_text"><a class="website_logo" href="index.html">Elliotlafave<span class="dotcom">.com</span></a></div>
 
-<ul> <!------------ contains header navigation menu -------------->
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="news.html">Services</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="about.html">About</a></li>
-</ul>
-	
+<div id="desktop_nav">
+	<a href="index.html">Home</a>
+	<a href="news.html">Services</a>
+	<a href="about.html">About Us</a>
+	<a href="contact.html">Contact Us</a>
+</div>
+
+<div id="nav_clickable" onclick="toggle_div_fun('mobile_nav');"><i class="fas fa-bars"></i></div>
+<div id="mobile_nav">
+	<div class="mobile_nav_item"><a href="index.html">Home</a></div>
+	<div class="mobile_nav_item"><a href="news.html">Services</a></div>
+	<div class="mobile_nav_item"><a href="about.html">About Us</a></div>
+	<div class="mobile_nav_item"><a href="contact.html">Contact Us</a></div>
+</div>
+</div>
+
+<div class="header_gradient_small"></div>
 	
 	<br><br>
 	<div id="main_content"> <!------------ all content below the navigation menu -------------->		

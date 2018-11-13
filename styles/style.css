@@ -45,6 +45,7 @@ html {
   
   html {
 	background-color: #FFFFFF;
+	overflow-x: hidden;
   }
   
   body {
@@ -130,6 +131,7 @@ html {
   #desktop_nav a{
 	  text-decoration: none;
 	  margin-right:16px;
+	  margin-bottom:20px;
   }
   
   #mobile_nav {
@@ -140,6 +142,20 @@ html {
   #nav_clickable {
 	  display:none;
 	  float:right;
+  }
+
+  #full_header{
+	  width:100%;
+	  height:65px;
+	  margin:0px;
+  }
+
+  .header_gradient_small {
+	  width:100%;
+	  margin:0;
+	  height: 40px;
+	  background: linear-gradient(90deg, #9600fb 0%,
+	  #00ffd0 100%);
   }
   /* ########################################           content           ######################################### */
   
@@ -234,6 +250,7 @@ html {
   
   .center_text {
 	  text-align: center;
+	  float:center;
   }
   
   .packages_text_small {
@@ -272,6 +289,10 @@ html {
 	  width: 60%;
 	  margin-left: 20%;
   }
+
+  .home_content_box {
+	  width:100%;
+  }
   
   
   /* ########################################           Images           ######################################### */
@@ -302,11 +323,13 @@ html {
   /* ########################################           Image containers           ######################################### */
   
   .img_container {
+	  display: block;
 	  width: 100%;
 	  position: relative;
 	  text-align: center;
 	  color: #ffffff;
 	  margin: 0; 
+	  margin-bottom: 20px; 
 	  height: 100%;
 	  overflow: hidden;
 	  float: left;
@@ -431,6 +454,11 @@ html {
   /* ########################################                                    ######################################### */
   
   @media only screen and (min-width: 0px) and (max-width: 900px) {
+
+	html {
+		overflow-x: hidden;
+	}
+
 	  h2 {
 		  font-size: 50px;
 	  }
@@ -470,6 +498,10 @@ html {
 		  margin-left: auto;
 		  margin-right:auto;		
 		  height: 680px;
+	  }
+
+	  .img_container {
+		  margin-bottom: 20px;
 	  }
 	  
 	  #home_content_1 {
