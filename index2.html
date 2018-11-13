@@ -3,34 +3,56 @@
 
 <head>
   <meta name="description" content="Elliot La Fave development is a business that builds websites for small businesses at a cheap price.  Elliotlafave Development LTD's goal is to make the internet accessible to all small businesses">
-  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="styles/style2.css" rel="stylesheet" type="text/css">
   <link rel='shortcut icon' type='image/x-icon' href='images/favicon.png' />
   <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head> 
 
+<script type="text/javascript">
+    function toggle_div_fun(id) {
+
+       var divelement = document.getElementById(id);
+
+       if(divelement.style.display == 'none')
+          divelement.style.display = 'block';
+       else
+          divelement.style.display = 'none';
+    }
+</script>
+
 <body>
 <div id="header_text"><a class="website_logo" href="index.html">Elliotlafave<span class="dotcom">.com</span></a><a href="index.html"></a></div>
 
+	<div id="desktop_nav">
+		<a href="index.html">Home</a>
+		<a href="news.html">Services</a>
+		<a href="about.html">About Us</a>
+		<a href="contact.html">Contact Us</a>
+	</div>
 
-<ul> <!------------ contains header navigation menu -------------->
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="news.html">Services</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="about.html">About</a>  </li>
-</ul>
+	<div id="nav_clickable" onclick="toggle_div_fun('mobile_nav');"><i class="fas fa-bars"></i></div>
+	<div id="mobile_nav">
+		<div class="mobile_nav_item"><a href="index.html">Home</a></div>
+		<div class="mobile_nav_item"><a href="news.html">Services</a></div>
+		<div class="mobile_nav_item"><a href="about.html">About Us</a></div>
+		<div class="mobile_nav_item"><a href="contact.html">Contact Us</a></div>
+	</div>
 
 	<div id="main_content"> <!------------ all content below the navigation menu -------------->
 		<div class="img_container">
-			<img src="images/home_image5.jpg"></img>
+			<img>
 			<div class="centered"><h2>Your businesses website.. made easy</h2></div>
 			<a href="get_started.html"><button class="btn">Get Started Today!</button></a>
 		</div>	
 		
-		<div id="full_width_white">
+		
+		<div id="full_width_white_home">
+
 			<div class="center_text"><span style="font-size:80px; color: #555555; "><i class="fas fa-users"></i></div>
 			<p><h3 class="h3home">Get your brand noticed by millions</h3></p>
 			<p><h4 class="h4home">With free search engine optimization included with every site, you can have your website show up on google, bing etc...</h4></p>
+		
 			<div id="home_content_1">
 				<div id="curved_box_1">
 				    <div class="center_text"><span style="font-size:80px; color: #FFFFFF; "><i class="fas fa-fighter-jet"></i></div>
@@ -53,44 +75,39 @@
 			</div>
 		</div>
 		
-		<div id="full_width_white">
+		<div id="full_width_white_home">
 			<div class="center_text"><span style="font-size:80px; color: #555555; "><i class="fas fa-file-contract"></i></div>
 			<p><h3 class="h3home">Get the perfect website for your needs</h3></p>
 			<p><h4 class="h4home">All of our websites are custom made to fit your businesses personal needs</h4></p>
 			<div id="home_content_2">
+
 				<div id="curved_box_1">
-				    <div class="center_text"><span style="font-size:80px; color: #FFFFFF; "><i class="fas fa-angle-right"></i></div>
-					<h4>Basic Package</h4>
-					<span>4 web pages </span><i class="fas fa-check"></i><br>
-					<span>Personalized website design </span><i class="fas fa-check"></i><br>
-					<span>Free .tk domain name </span><i class="fas fa-check"></i><br>	
-					<span>Search engine optimization </span><i class="fas fa-check"></i><br>
-					<span>Created in under 28 days </span><i class="fas fa-times"></i><br>
-					<span>Google analytics account </span><i class="fas fa-times"></i><br><br><br>
-					<a href="learn_more/basic_package.html"><button class="curved_box_button">Learn More <i class="fa fa-angle-right"></i></button></a>
+				    <div class="center_text"><span style="font-size:80px; color: #FFFFFF; "><i class="fas fa-money-bill-alt"></i></div>
+					<h4>Pricing</h4>
+					<span>All our websites are build to a high standard and we pride ourselves on having extremely low prices on
+						our services. </span><br><br>
+					<span>You will be given a final price once you have submitted a request form. </span><br>
+					<br><a href="learn_more/pricing.html"><button class="curved_box_button">Learn More <i class="fa fa-angle-right"></i></button></a>
 				</div>
+
 				<div id="curved_box_2">
-					<div class="center_text"><span style="font-size:80px; color: #FFFFFF; "><i class="fas fa-angle-right"></i><i class="fas fa-angle-right"></i></div>
-					<h4>Premium Package</h4>
-					<span>Up to 25 web pages </span><i class="fas fa-check"></i><br>
-					<span>Personalized website design </span><i class="fas fa-check"></i><br>
-					<span>Free .tk domain name </span><i class="fas fa-check"></i><br>
-					<span>Search engine optimization </span><i class="fas fa-check"></i><br>
-					<span>Created in under 24 days </span><i class="fas fa-check"></i><br>
-					<span>Google analytics account </span><i class="fas fa-check"></i><br><br><br>
-					<a href="learn_more/premium_package.html"><button class="curved_box_button">Learn More <i class="fa fa-angle-right"></i></button></a>
+					<div class="center_text"><span style="font-size:80px; color: #FFFFFF; "><i class="fas fa-object-group"></i></div>
+					<h4>Design Process</h4>
+					<span>We follow a 7 step design process on all of the sites we build, first we get the information about your business
+						through a request form. </span><br><br>
+					<span>We build your website for you and then check in wit you to ensure you are happy. </span><br>
+					<br><a href="learn_more/design_process.html"><button class="curved_box_button">Learn More <i class="fa fa-angle-right"></i></button></a>
 				</div>
+
 				<div id="curved_box_3">
-					<div class="center_text"><span style="font-size:80px; color: #FFFFFF; "><i class="fas fa-angle-right"></i><i class="fas fa-angle-right"></i><i class="fas fa-angle-right"></i></div>
-					<h4>Custom Package</h4>
-					<span>Custom number of web pages </span><i class="fas fa-check"></i><br>
-					<span>Personalized website design </span><i class="fas fa-check"></i><br>
-					<span>Free .tk domain name </span><i class="fas fa-check"></i><br>
-					<span>Search engine optimization </span><i class="fas fa-check"></i><br>
-					<span>Created in under 20 days </span><i class="fas fa-check"></i><br>
-					<span>Google analytics account </span><i class="fas fa-check"></i><br><br><br>
-					<a href="learn_more/custom_package.html"><button class="curved_box_button">Learn More <i class="fa fa-angle-right"></i></button></a>
+					<div class="center_text"><span style="font-size:80px; color: #FFFFFF; "><i class="fas fa-cogs"></i></div>
+					<h4>Website Maintenance</h4>
+					<span>We guarantee that your website will be online 99.9% of the time and if theres ever an issue a technician
+						will work on it immediately. </span><br><br>
+					<span>You will pay a small monthly maintenance fee for this service. </span><br>
+					<br><a href="learn_more/maintenance.html"><button class="curved_box_button">Learn More <i class="fa fa-angle-right"></i></button></a>
 				</div>
+
 			</div>
 		</div>
 		
