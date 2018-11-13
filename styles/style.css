@@ -211,7 +211,7 @@ html {
 	  margin-left: 7.5%;
 	  margin-bottom: 20px;
 	  width:25%;
-	  background-color: #833ab4;	
+	  background-color:;	
 	  height: 410px;
 	  border-radius: 15px;
 	  float: left;
@@ -584,7 +584,7 @@ html {
 		  display: block;	
 		  margin-left: auto;
 		  margin-right:auto;		
-		  height: 680px;
+		  height: 620px;
 	  }
 
 	  .img_container {
