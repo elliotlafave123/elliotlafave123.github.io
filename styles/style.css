@@ -446,10 +446,12 @@ html {
 	  }
   
 	  .mobile_nav_item {
+		  width:"80%";
+		  float:left;
 		  text-align: center;
 		  width: 96%;
 		  margin-left: 2%;
-		  margin-bottom:10px;
+		  margin-top:10px;
 	  }
   
 	  .mobile_nav_item a {
