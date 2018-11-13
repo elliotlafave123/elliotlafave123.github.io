@@ -339,6 +339,22 @@ html {
 	  #00ffd0 100%);
   }
   
+  .img_container_small {
+	display: block;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	color: #ffffff;
+	margin: 0; 
+	margin-bottom: 20px; 
+	height: 40px;
+	overflow: hidden;
+	float: left;
+	border:none;
+	background: linear-gradient(90deg, #9600fb 0%,
+	#00ffd0 100%);
+}
+
   .centered {
 	  position: absolute;
 	  top: 48%;
