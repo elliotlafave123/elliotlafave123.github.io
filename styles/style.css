@@ -202,7 +202,7 @@ html {
 	  float: left;
 	  color: #FFFFFF;
 	  text-align: center;
-	  font-size: 17px;
+	  font-size: 18px;
 	  background-color: #00ffd0;
   }
   
@@ -245,7 +245,7 @@ html {
 	margin-bottom: 20px;
 	width:25%;
 	background-color: #00ffd0;	
-	height: 410px;
+	height: 460px;
 	border-radius: 15px;
 	float: left;
 }
@@ -256,7 +256,7 @@ html {
 	margin-bottom: 20px;
 	width:25%;
 	background-color: #00ffd0;	
-	height: 410px;
+	height: 460px;
 	border-radius: 15px;
 	float: left;
 }
@@ -267,7 +267,7 @@ html {
 	margin-bottom: 20px;
 	width:25%;
 	background-color: #00ffd0;	
-	height: 410px;
+	height: 460px;
 	border-radius: 15px;
 	float: left;
 }
@@ -408,7 +408,7 @@ html {
 
   #img_container_svg {
 	  width:100%;
-	  height:80px;
+	  height:70px;
   }
   
   #img_container_svg_2 {
@@ -603,66 +603,67 @@ html {
 	  margin: 0px;
 	  width:100%;	
 	  float: left;
+	  font-size: 20px;
 	  }
 	  
 	  #curved_box_1 {
-	  padding: 1%;
+	  padding: 2%;
 	  margin-bottom: 0px;
 	  margin-left:0%;
-	  width:98%;
+	  width:96%;
 	  height: 400px;
 	  border-radius: 0px;
 	  float: left;
 	  }
 	  
 	  #curved_box_2 {
-	  padding: 1%;
+	  padding: 2%;
 	  margin-bottom: 0px;
 	  margin-top: 0px;
 	  margin-left:0%;
-	  width:98%;
+	  width:96%;
 	  height: 400px;
 	  border-radius: 0px;
 	  float: left;
 	  }
 	  
 	  #curved_box_3 {
-	  padding: 1%;
+	  padding: 2%;
 	  margin-bottom: 0px;
 	  margin-left:0%;
-	  width:98%;
+	  width:96%;
 	  height: 400px;
 	  border-radius: 0px;
 	  float: left;
 	  }
 	  
 	  #curved_box_1b {
-		padding: 1%;
+		padding: 2%;
 		margin-bottom: 0px;
 		margin-left:0%;
-		width:98%;
-		height: 400px;
+		width:96%;
+		height: 440px;
 		border-radius: 0px;
 		float: left;
 		}
 		
 		#curved_box_2b {
-		padding: 1%;
+		padding: 2%;
 		margin-bottom: 0px;
 		margin-top: 0px;
 		margin-left:0%;
-		width:98%;
+		width:96%;
 		height: 400px;
 		border-radius: 0px;
 		float: left;
 		}
 		
 		#curved_box_3b {
-		padding: 1%;
+		padding: 2%;
 		margin-bottom: 0px;
 		margin-left:0%;
-		width:98%;
-		height: 400px;
+		width:96%;
+		height: 440px;
 		border-radius: 0px;
 		float: left;
 		}
