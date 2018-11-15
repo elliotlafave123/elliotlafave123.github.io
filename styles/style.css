@@ -371,7 +371,7 @@ html {
 	  overflow: hidden;
 	  float: left;
 	  border:none;
-	  background: linear-gradient(90deg, #9600fb 0%,
+	  background: linear-gradient(130deg, #9600fb 0%,
 	  #00ffd0 100%);
   }
   
@@ -387,7 +387,7 @@ html {
 	overflow: hidden;
 	float: left;
 	border:none;
-	background: linear-gradient(90deg, #9600fb 0%,
+	background: linear-gradient(130deg, #9600fb 0%,
 	#00ffd0 100%);
 }
 
