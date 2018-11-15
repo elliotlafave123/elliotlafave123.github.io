@@ -5,6 +5,8 @@ html {
 	-moz-osx-font-smoothing: grayscale;
   }
   
+
+
   .whole_page::-webkit-scrollbar { 
 	/* This is the magic bit */
 	display: none;
@@ -124,7 +126,7 @@ html {
   
   #desktop_nav {
 	  float: right;
-	  margin-top:18px;
+	  margin-top:20px;
 	  margin-right:7%;
   }
   
@@ -358,7 +360,10 @@ html {
   
   
   /* ########################################           Image containers           ######################################### */
-  
+  img {
+		  height: 800px;
+	  }
+	  
   .img_container {
 	  display: block;
 	  width: 100%;
@@ -557,7 +562,7 @@ html {
 	  #nav_clickable {
 		  display:block;
 		  margin-right:5%;
-		  margin-top:4.5%;
+		  margin-top:22px;
 	  }
   
 	  .mobile_nav_item {
@@ -725,13 +730,18 @@ html {
 
 	  
   }
-  
-  @media only screen and (min-width: 1000px) and (min-width: 1120px) {
-	  img {
-		  height: 800px;
-	  }
-	  
-	  h3 {
-		  font-size: 45px;
-	  }
-  }
+
+
+  @media only screen and (min-width: 901px) and (max-width: 1120px) {
+	img {
+		height: 800px;
+	}
+	
+	h3 {
+		font-size: 45px;
+	}
+
+	#header_text {
+		width:36%;
+	}
+}
