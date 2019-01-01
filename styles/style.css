@@ -169,6 +169,25 @@ li a:hover:not(.active) {
   width: 100%;
 }
 
+#full_width_whiteB {
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+#full_width_gray {
+  padding: 0;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  margin-bottom: 25px;
+  background-color: #ecf3f5;
+  width: 100%;
+  text-align: center;
+}
+
 #full_width_white_home {
   padding-top: 40px;
   margin-top: 0px;
