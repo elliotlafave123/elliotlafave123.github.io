@@ -537,13 +537,14 @@ img {
     margin-top: 22px;
   }
   .mobile_nav_item {
-    width: "80%";
     float: left;
     text-align: center;
-    width: 96%;
+    width: 100%;
     margin-left: 2%;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
+
   .mobile_nav_item a {
     text-decoration: none;
   }
