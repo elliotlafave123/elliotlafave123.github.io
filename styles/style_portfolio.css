@@ -1,0 +1,102 @@
+html {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 45px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 60px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+  margin: 0px;
+}
+
+html {
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+}
+
+a {
+  color: #4CAF50;
+}
+
+#content{
+  background-color: rgb(212, 209, 209);
+  width:80%;
+  margin-left:10%;
+  margin-top:30px;
+  padding-top:20px;
+  padding-bottom:30px;
+  text-align: center;
+}
+
+#box {
+  background-color: rgb(189, 183, 183);
+  width:80%;
+  margin-left:10%;
+  margin-right: 0%;
+  margin-top:30px;
+  text-align: left;
+  padding:1%;
+  position: relative;
+}
+
+#footer {
+  background-color: rgb(95, 94, 94);
+  width:80%;
+  margin-left:10%;
+  padding-top:20px;
+  padding-bottom:30px;
+  margin-bottom: 30px;
+  text-align: center;
+  color:#FFFFFF;
+}
+/* ########################################                                    ######################################### */
+/* ########################################           mobile/content           ######################################### */
+/* ########################################                                    ######################################### */
+@media only screen  and (min-width: 0px) and (max-width: 900px) {
+  #content{
+    width:100%;
+    margin-left:0%; 
+    margin-top:0px; 
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1120px) {
+  img {
+    height: 800px;
+  }
+  h3 {
+    font-size: 45px;
+  }
+}
