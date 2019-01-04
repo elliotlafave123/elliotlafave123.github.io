@@ -59,6 +59,13 @@ a {
   font-family: 'Montserrat', sans-serif;
 }
 
+.center_text2 {
+  text-align:center;
+  display:block;
+  font-size: 13px;
+  color:rgb(163, 162, 162);
+}
+
 /* ########################################           Header           ######################################### */
 ul {
   font-size: 17px;
@@ -496,6 +503,7 @@ img {
   margin-left:40%;
   -webkit-box-shadow: 2px 3px 5px grey;
           box-shadow: 2px 3px 5px grey;
+          margin-bottom:3px;
 }
 
 .payment_button:hover {
