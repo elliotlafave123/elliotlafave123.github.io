@@ -169,6 +169,14 @@ li a:hover:not(.active) {
   width: 100%;
 }
 
+#full_width_white_payment {
+  padding: 0;
+  margin-top: 120px;
+  margin-bottom: 25px;
+  background-color: white;
+  width: 100%;
+}
+
 #full_width_whiteB {
   padding: 0;
   margin-top: 0px;
@@ -283,6 +291,9 @@ li a:hover:not(.active) {
   font-size: 14px;
 }
 
+.packages_text_small {
+  font-size: 20px;
+}
 .packages_text_medium {
   font-size: 24px;
 }
@@ -466,6 +477,32 @@ img {
   margin-left: 22%;
 }
 
+/* Style buttons */
+.payment_button {
+  background-color:linear-gradient(110,#9600fb,#00ffd0) ;
+  /* Blue background */
+  border: none;
+  /* Remove borders */
+  border-radius: 600px;
+  color: white;
+  /* White text */
+  padding: 12px 16px;
+  /* Some padding */
+  font-size: 16px;
+  /* Set a font size */
+  cursor: pointer;
+  /* Mouse pointer on hover */
+  width: 20%;
+  margin-left:40%;
+  -webkit-box-shadow: 2px 3px 5px grey;
+          box-shadow: 2px 3px 5px grey;
+}
+
+.payment_button:hover {
+  background-color: RoyalBlue;
+}
+
+
 #header_btn {
   float: right;
   margin-right: 20px;
@@ -566,6 +603,12 @@ img {
 
   .mobile_nav_item a {
     text-decoration: none;
+  }
+
+  .payment_button {
+    margin-left:5%;
+    padding:5px;
+    width:90%;
   }
   #main_content {
     padding: 0%;
@@ -692,6 +735,12 @@ img {
   }
   #header_text {
     width: 70%;
+  }
+
+  #full_width_white_payment {
+    padding: 2%;
+    width:96%;
+    margin-top: 45px;
   }
 }
 
