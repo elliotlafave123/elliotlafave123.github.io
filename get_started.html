@@ -92,32 +92,18 @@ input[type=submit]:hover {
     <label for="Cname">Company Name</label>
     <input type="text" id="Cname" name="companyname" placeholder="Your company's name.." required>
 
-    <h3>Your Website</h3><hr>
-
-    <label for="pages">How Many Pages?</label>
-    <select id="pages" name="pages" required>
-      <option value="4">4</option>
-      <option value="5-20">5-20</option>
-      <option value="21+">21+</option>
-    </select>
-
-    <label for="timeframe">How quickly do you need your site?</label>
-    <select id="timeframe" name="timeframe" required>
-      <option value="21-28">in 21-28 days</option>
-      <option value="28-45">in 28-45 days</option>
-      <option value=">20">under 20 days</option>
-    </select>
-
-    <label for="budget">Choose your plan    <a href="learn_more/pricing.html">Learn More</a></label>
-    <select id="budget" name="budget" required>
-      <option value=">£500">Small Business Plan</option>
-      <option value="£750-£1000">Yearly Plan         *best value*</option>
-    </select>    
+    <h3>Your Website</h3><hr>   
 
     <label for="subject">What would you like on your webpage?</label>
     <textarea id="subject" name="subject" placeholder="Describe your website..." style="height:200px" required></textarea>
-    <h4>We will shortly send you an E-mail and talk more about your request.<br>
+
+    <label for="business">What does your business do?</label>
+    <textarea id="business" name="business" placeholder="Describe your company..." style="height:200px" required></textarea>
+
+    <h4>We will shortly send you an E-mail to discuss your website request.<br><br>
     	For pricing please see <a href="learn_more/pricing.html">Website Pricing</a>.</h4>
+
+    <input type="checkbox" required> I agree to the Terms Of Service and Privacy Policy.<br><br>
 
     <input type="submit" value="Submit">
   </form>
