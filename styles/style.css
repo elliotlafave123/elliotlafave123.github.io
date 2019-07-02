@@ -215,8 +215,8 @@ li a:hover:not(.active) {
 #home_content_1 {
   padding-left: 0;
   margin-top: 0px;
-  padding-top:100px;
   margin-bottom: 0px;
+  padding-top: 120px;
   width: 100%;
   float: left;
   color: #FFFFFF;
@@ -228,6 +228,7 @@ li a:hover:not(.active) {
   padding-left: 0;
   margin-top: 0px;
   margin-bottom: 0px;
+  padding-top: 120px;
   width: 100%;
   float: left;
   color: #FFFFFF;
