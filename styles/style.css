@@ -606,10 +606,14 @@ img {
   .mobile_nav_item {
     float: left;
     text-align: center;
-    width: 100%;
+    width: 96%;
     margin-left: 2%;
     margin-top: 5px;
     margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #333;
   }
 
   .mobile_nav_item a {
