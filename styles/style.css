@@ -52,7 +52,7 @@ body {
 }
 
 a {
-  color: #4CAF50;
+  color: #7600c5;
 }
 
 #list1 {
@@ -94,7 +94,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #4CAF50 ;
 }
 
 #header_text {
@@ -122,7 +122,7 @@ li a:hover:not(.active) {
 }
 
 .website_logo .dotcom {
-  color: #4CAF50;
+  color: #7600c5;
 }
 
 #desktop_nav {
@@ -135,6 +135,7 @@ li a:hover:not(.active) {
   text-decoration: none;
   margin-right: 16px;
   margin-bottom: 20px;
+  color:#333;
 }
 
 #mobile_nav {
@@ -545,7 +546,7 @@ img {
 }
 
 #footer a {
-  color: #4CAF50;
+  color: #7600c5;
 }
 
 #footer_socials {
