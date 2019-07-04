@@ -9,6 +9,17 @@ html {
 	height: auto;
 }
 
+section {
+  opacity: 0;
+  transform: translate(0, 30px); 
+  transition: all 2s;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
 @font-face {
     font-family: 'roadgeek_2005_series_emRg';
     src: url('../fonts/roadgeek.woff') format('woff');
@@ -263,7 +274,7 @@ li a:hover:not(.active) {
 	height: 410px;
 	border-radius: 15px;
 	float: left;
-	background: #e6e6e6;
+  background: #e6e6e6;
 }
 
 #curved_box_2,
@@ -275,7 +286,7 @@ li a:hover:not(.active) {
 	background-color: #e6e6e6;
 	height: 410px;
 	border-radius: 15px;
-	float: left;
+  float: left;
 }
 
 #curved_box_1b {
@@ -286,7 +297,7 @@ li a:hover:not(.active) {
 	background-color: #e6e6e6;
 	height: 460px;
 	border-radius: 15px;
-	float: left;
+  float: left;
 }
 
 #curved_box_2b,
@@ -298,7 +309,7 @@ li a:hover:not(.active) {
 	background-color: #e6e6e6;
 	height: 460px;
 	border-radius: 15px;
-	float: left;
+  float: left;
 }
 
 .h3home {
@@ -393,6 +404,8 @@ li a:hover:not(.active) {
 	padding-bottom: 40px;
 	height: 400px;
 }
+
+
 
 
 /* ########################################           Images           ######################################### */
