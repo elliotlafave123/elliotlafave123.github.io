@@ -875,7 +875,7 @@ img {
 
   #home_img2 {
     position: absolute;
-    top:110%;
+    top:750px;
     left:10%;
     width:80%;
     height:200px;
@@ -883,7 +883,7 @@ img {
 
   #home_img3 {
     position: absolute;
-    top:430%;
+    top:2960px;
     left:10%;
     width:80%;
     height:200px;
