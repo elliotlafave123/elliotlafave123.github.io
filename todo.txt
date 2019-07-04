@@ -1,3 +1,1 @@
-404 page,
-.tk email,
-facebook, twitter, google+ etc..,
+404 page
