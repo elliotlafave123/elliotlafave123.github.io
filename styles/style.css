@@ -4,6 +4,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  position: fixed;
 }
 
 .whole_page::-webkit-scrollbar {
