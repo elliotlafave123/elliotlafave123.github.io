@@ -9,6 +9,11 @@ html {
 	height: auto;
 }
 
+@font-face {
+    font-family: 'roadgeek_2005_series_emRg';
+    src: url('../fonts/roadgeek.woff') format('woff');
+}
+
 .whole_page::-webkit-scrollbar {
 	/* This is the magic bit */
 	display: none;
@@ -116,6 +121,7 @@ li a:hover:not(.active) {
 	text-decoration: none;
 	line-height: 1;
 	font-size: 40px;
+	font-family: 'roadgeek_2005_series_emRg';
 	letter-spacing: 3px;
 	color: #0F75C7;
 	display: block;
@@ -683,6 +689,7 @@ img {
 	letter-spacing: 3px;
 	display: block;
 	padding-bottom: 25px;
+	font-family: 'roadgeek_2005_series_emRg';
 }
 
 #footer a {
