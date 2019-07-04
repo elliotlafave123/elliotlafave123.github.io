@@ -52,6 +52,7 @@ body {
   margin: 0px;
   background: #ffffff;
   overflow-x: hidden;
+  position: relative;
 }
 
 a {
