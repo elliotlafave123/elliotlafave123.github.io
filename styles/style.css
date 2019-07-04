@@ -685,6 +685,7 @@ img {
 @media only screen and (min-width: 0px) and (max-width: 900px) {
   html {
     overflow-x: hidden;
+    max-width: 100vw;
   }
   h2 {
     font-size: 50px;
@@ -864,6 +865,7 @@ img {
     top:0%;
     left:10%;
     width:320%;
+    overflow: hidden;
   }
 
   #home_img {
