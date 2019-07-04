@@ -3,7 +3,9 @@ html {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  max-width: 100%;
+    overflow-x: hidden;
+    background: #ffffff;
 }
 
 .whole_page::-webkit-scrollbar {
@@ -43,15 +45,12 @@ p {
   margin: 0px;
 }
 
-html {
-  background-color: #FFFFFF;
-  overflow-x: hidden;
-}
 
 body {
   margin: 0px;
   background: #ffffff;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 a {
