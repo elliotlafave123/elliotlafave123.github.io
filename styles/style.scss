@@ -1,681 +1,683 @@
 html {
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .whole_page::-webkit-scrollbar {
-    /* This is the magic bit */
-    display: none;
-  }
-  
-  h1 {
-    font-size: 45px;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-  }
-  
-  h2 {
-    font-size: 60px;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-  }
-  
-  h3 {
-    font-size: 40px;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-  }
-  
-  h4 {
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 10px;
-  }
-  
-  p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-    margin: 0px;
-  }
-  
-  html {
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-  }
-  
-  body {
-    margin: 0px;
-  }
-  
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.whole_page::-webkit-scrollbar {
+  /* This is the magic bit */
+  display: none;
+}
+
+h1 {
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 60px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+  margin: 0px;
+}
+
+html {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+}
+
+a {
+  color: #4caf50;
+}
+
+#list1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ########################################           Header           ######################################### */
+
+ul {
+  font-size: 17px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+
+li {
+  float: left;
   a {
-    color: #4CAF50;
-  }
-  
-  #list1 {
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  /* ########################################           Header           ######################################### */
-  
-  ul {
-    font-size: 17px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    width: 100%;
-  }
-  
-  li {
-    float: left;
-    a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      &:hover:not(.active) {
-        background-color: #111;
-      }
-    }
-  }
-  
-  .active {
-    background-color: #4CAF50;
-  }
-  
-  #header_text {
-    width: 40%;
-    height: 50px;
-    background-color: #FFFFFF;
-    padding-bottom: 13px;
-    padding-left: 6%;
-    margin: 0%;
     display: block;
-    float: left;
-  }
-  
-  .website_logo {
-    .dotcom {
-      color: #4CAF50;
-    }
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 30px;
-    letter-spacing: 3px;
-    color: #555555;
-    display: block;
-    position: absolute;
-    top: 17px;
-  }
-  
-  #desktop_nav {
-    float: right;
-    margin-top: 20px;
-    margin-right: 7%;
-    a {
-      text-decoration: none;
-      margin-right: 16px;
-      margin-bottom: 20px;
+    &:hover:not(.active) {
+      background-color: #111;
     }
   }
-  
-  #mobile_nav {
-    display: none;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+#header_text {
+  width: 40%;
+  height: 50px;
+  background-color: #ffffff;
+  padding-bottom: 13px;
+  padding-left: 6%;
+  margin: 0%;
+  display: block;
+  float: left;
+}
+
+.website_logo {
+  .dotcom {
+    color: #4caf50;
   }
-  
-  #nav_clickable {
-    display: none;
-    float: right;
-  }
-  
-  #full_header {
-    width: 100%;
-    height: 65px;
-    margin: 0px;
-  }
-  
-  .header_gradient_small {
-    display: block;
-    width: 100%;
-    margin: 0;
-    height: 40px;
-    background: linear-gradient(90deg, #9600fb 0%, #00ffd0 100%);
-  }
-  
-  /* ########################################           content           ######################################### */
-  
-  #main_content {
-    padding: 0;
-    margin: 0px;
-    width: 100%;
-  }
-  
-  #full_width_white {
-    padding: 0;
-    margin-top: 0px;
-    margin-bottom: 25px;
-    background-color: white;
-    width: 100%;
-  }
-  
-  #full_width_white_home {
-    padding-top: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    background-color: white;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  #home_content_1 {
-    padding-left: 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    width: 100%;
-    float: left;
-    color: #FFFFFF;
-    text-align: center;
-    background-color: #833ab4;
-  }
-  
-  #home_content_2 {
-    padding-left: 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    width: 100%;
-    float: left;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 18px;
-    background-color: #00ffd0;
-  }
-  
-  #curved_box_1 {
-    padding-top: 20px;
-    margin-left: 7.5%;
+  text-decoration: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #555555;
+  display: block;
+  position: absolute;
+  top: 17px;
+}
+
+#desktop_nav {
+  float: right;
+  margin-top: 20px;
+  margin-right: 7%;
+  a {
+    text-decoration: none;
+    margin-right: 16px;
     margin-bottom: 20px;
-    width: 25%;
-    height: 410px;
-    border-radius: 15px;
-    float: left;
   }
-  
-  #curved_box_2, #curved_box_3 {
-    padding-top: 20px;
-    margin-left: 5%;
-    margin-bottom: 20px;
-    width: 25%;
-    background-color: #833ab4;
-    height: 410px;
-    border-radius: 15px;
-    float: left;
-  }
-  
-  #curved_box_1b {
-    padding-top: 20px;
-    margin-left: 7.5%;
-    margin-bottom: 20px;
-    width: 25%;
-    background-color: #00ffd0;
-    height: 460px;
-    border-radius: 15px;
-    float: left;
-  }
-  
-  #curved_box_2b, #curved_box_3b {
-    padding-top: 20px;
-    margin-left: 5%;
-    margin-bottom: 20px;
-    width: 25%;
-    background-color: #00ffd0;
-    height: 460px;
-    border-radius: 15px;
-    float: left;
-  }
-  
-  .h3home {
-    text-align: center;
-    color: #555555;
-  }
-  
-  .h4home {
-    text-align: center;
-    color: #555555;
-    margin-bottom: 70px;
-  }
-  
-  .center_text {
-    text-align: center;
-    float: center;
-  }
-  
-  .packages_text_small {
-    font-size: 14px;
-  }
-  
-  .packages_text_medium {
-    font-size: 24px;
-  }
-  
-  #packages_content {
-    margin-left: 15%;
-    padding: 20px;
-    margin-bottom: 25px;
-    background-color: white;
+}
+
+#mobile_nav {
+  display: none;
+}
+
+#nav_clickable {
+  display: none;
+  float: right;
+}
+
+#full_header {
+  width: 100%;
+  height: 65px;
+  margin: 0px;
+}
+
+.header_gradient_small {
+  display: block;
+  width: 100%;
+  margin: 0;
+  height: 40px;
+  background: linear-gradient(90deg, #9600fb 0%, #00ffd0 100%);
+}
+
+/* ########################################           content           ######################################### */
+
+#main_content {
+  padding: 0;
+  margin: 0px;
+  width: 100%;
+}
+
+#full_width_white {
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  background-color: white;
+  width: 100%;
+}
+
+#full_width_white_home {
+  padding-top: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+#home_content_1 {
+  padding-left: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  background-color: #833ab4;
+}
+
+#home_content_2 {
+  padding-left: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  background-color: #00ffd0;
+}
+
+#curved_box_1 {
+  padding-top: 20px;
+  margin-left: 7.5%;
+  margin-bottom: 20px;
+  width: 25%;
+  height: 410px;
+  border-radius: 15px;
+  float: left;
+}
+
+#curved_box_2,
+#curved_box_3 {
+  padding-top: 20px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  width: 25%;
+  background-color: #833ab4;
+  height: 410px;
+  border-radius: 15px;
+  float: left;
+}
+
+#curved_box_1b {
+  padding-top: 20px;
+  margin-left: 7.5%;
+  margin-bottom: 20px;
+  width: 25%;
+  background-color: #00ffd0;
+  height: 460px;
+  border-radius: 15px;
+  float: left;
+}
+
+#curved_box_2b,
+#curved_box_3b {
+  padding-top: 20px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  width: 25%;
+  background-color: #00ffd0;
+  height: 460px;
+  border-radius: 15px;
+  float: left;
+}
+
+.h3home {
+  text-align: center;
+  color: #555555;
+}
+
+.h4home {
+  text-align: center;
+  color: #555555;
+  margin-bottom: 70px;
+}
+
+.center_text {
+  text-align: center;
+  float: center;
+}
+
+.packages_text_small {
+  font-size: 14px;
+}
+
+.packages_text_medium {
+  font-size: 24px;
+}
+
+#packages_content {
+  margin-left: 15%;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: white;
+  width: 70%;
+}
+
+.about {
+  font-size: 15px;
+  color: #555555;
+  text-align: center;
+  margin: 0;
+}
+
+#line_break {
+  width: 100%;
+  height: 0px;
+}
+
+#header_btn {
+  float: left;
+}
+
+.medium_width {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.home_content_box {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* ########################################           Images           ######################################### */
+
+img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100%;
+  border: 0px;
+  outline: 0px;
+  .home_content {
     width: 70%;
   }
-  
-  .about {
-    font-size: 15px;
+}
+
+#circle {
+  border-radius: 60px;
+  width: 120px;
+  height: 120px;
+}
+
+/* ########################################           Image containers           ######################################### */
+
+img {
+  height: 800px;
+}
+
+.img_container {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+  border: none;
+  background: linear-gradient(130deg, #9600fb 0%, #00ffd0 100%);
+}
+
+.img_container_small {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+  height: 40px;
+  overflow: hidden;
+  float: left;
+  border: none;
+  background: linear-gradient(130deg, #9600fb 0%, #00ffd0 100%);
+}
+
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+}
+
+#img_container_svg {
+  width: 100%;
+  height: 70px;
+}
+
+#img_container_svg_2 {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 40px;
+  float: left;
+}
+
+#img_container_svg svg {
+  width: 100%;
+  height: 70px;
+  float: bottom;
+}
+
+/* ########################################           Button containers           ######################################### */
+
+.btn {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #9600fb;
+  color: white;
+  font-size: 17px;
+  padding: 18px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 1px 2px 1px grey;
+  &:hover {
+    background-color: #555555;
+  }
+}
+
+/* Style buttons */
+
+.curved_box_button {
+  background-color: DodgerBlue;
+  /* Blue background */
+  border: none;
+  /* Remove borders */
+  border-radius: 30px;
+  color: white;
+  /* White text */
+  padding: 12px 16px;
+  /* Some padding */
+  font-size: 16px;
+  /* Set a font size */
+  cursor: pointer;
+  /* Mouse pointer on hover */
+  width: 70%;
+  box-shadow: 2px 3px 5px grey;
+  &:hover {
+    background-color: RoyalBlue;
+  }
+}
+
+/* Darker background on mouse-over */
+
+#package_btn {
+  margin-left: 22%;
+}
+
+#header_btn {
+  float: right;
+  margin-right: 20px;
+  margin-top: 11px;
+  background-color: DodgerBlue;
+  /* Blue background */
+  border: none;
+  /* Remove borders */
+  border-radius: 15px;
+  color: white;
+  /* White text */
+  padding: 12px 16px;
+  /* Some padding */
+  font-size: 16px;
+  /* Set a font size */
+  cursor: pointer;
+  /* Mouse pointer on hover */
+}
+
+/* ########################################           Footer           ######################################### */
+
+#footer {
+  margin: 2%;
+  margin-bottom: 10px;
+  width: 96%;
+  min-height: 20px;
+  background-color: #ffffff;
+  font-size: 14px;
+  float: left;
+  text-align: center;
+  a {
+    color: #4caf50;
+  }
+}
+
+#footer_socials {
+  margin: 1%;
+  margin-top: 0;
+  width: 98%;
+  min-height: 20px;
+  background-color: #ffffff;
+  font-size: 23px;
+  float: left;
+  text-align: center;
+  a {
     color: #555555;
-    text-align: center;
-    margin: 0;
   }
-  
-  #line_break {
-    width: 100%;
-    height: 0px;
+}
+
+#footer_policies {
+  margin: 0%;
+  margin-bottom: 5px;
+  width: 100%;
+  min-height: 20px;
+  background-color: #ffffff;
+  font-size: 12px;
+  float: left;
+  text-align: center;
+  a {
+    color: #555555;
   }
-  
-  #header_btn {
+}
+
+/* ########################################                                    ######################################### */
+/* ########################################           mobile/content           ######################################### */
+/* ########################################                                    ######################################### */
+
+@media only screen and (min-width: 0px) and (max-width: 900px) {
+  html {
+    overflow-x: hidden;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  .header_gradient_small {
+    display: none;
+  }
+  #header_text {
+    padding-left: 2%;
+  }
+  #desktop_nav {
+    display: none;
+  }
+  #nav_clickable {
+    display: block;
+    margin-right: 5%;
+    margin-top: 22px;
+  }
+  .mobile_nav_item {
+    height: 80px;
+    width: "80%";
     float: left;
+    text-align: center;
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 20px;
+    a {
+      text-decoration: none;
+    }
   }
-  
-  .medium_width {
-    width: 60%;
-    margin-left: 20%;
-  }
-  
-  .home_content_box {
+  #main_content {
+    padding: 0%;
+    margin: 0px;
     width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
-  
-  /* ########################################           Images           ######################################### */
-  
   img {
-    width: 100%;
+    width: 200%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-height: 100%;
-    border: 0px;
-    outline: 0px;
-    .home_content {
-      width: 70%;
-    }
+    height: 620px;
   }
-  
-  #circle {
-    border-radius: 60px;
-    width: 120px;
-    height: 120px;
-  }
-  
-  /* ########################################           Image containers           ######################################### */
-  
-  img {
-    height: 800px;
-  }
-  
   .img_container {
-    display: block;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    color: #ffffff;
-    margin: 0;
     margin-bottom: 20px;
-    height: 100%;
-    overflow: hidden;
-    float: left;
-    border: none;
-    background: linear-gradient(130deg, #9600fb 0%, #00ffd0 100%);
   }
-  
-  .img_container_small {
-    display: block;
+  #home_content_1 {
+    padding: 0%;
+    margin-top: 0px;
     width: 100%;
-    position: relative;
-    text-align: center;
-    color: #ffffff;
-    margin: 0;
-    margin-bottom: 20px;
-    height: 40px;
-    overflow: hidden;
     float: left;
-    border: none;
-    background: linear-gradient(130deg, #9600fb 0%, #00ffd0 100%);
   }
-  
+  #home_content_2 {
+    padding: 0%;
+    margin: 0px;
+    width: 100%;
+    float: left;
+    font-size: 20px;
+  }
+  #curved_box_1 {
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-left: 0%;
+    width: 96%;
+    height: 400px;
+    border-radius: 0px;
+    float: left;
+  }
+  #curved_box_2 {
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0%;
+    width: 96%;
+    height: 400px;
+    border-radius: 0px;
+    float: left;
+  }
+  #curved_box_3 {
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-left: 0%;
+    width: 96%;
+    height: 400px;
+    border-radius: 0px;
+    float: left;
+  }
+  #curved_box_1b {
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-left: 0%;
+    width: 96%;
+    height: 440px;
+    border-radius: 0px;
+    float: left;
+  }
+  #curved_box_2b {
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0%;
+    width: 96%;
+    height: 400px;
+    border-radius: 0px;
+    float: left;
+  }
+  #curved_box_3b {
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-left: 0%;
+    width: 96%;
+    height: 440px;
+    border-radius: 0px;
+    float: left;
+  }
+  #packages_content {
+    margin: 0px;
+    padding: 1%;
+    margin-bottom: 25px;
+    background-color: white;
+    width: 98%;
+  }
+  #footer {
+    font-size: 10px;
+  }
+  #packages_content {
+    font-size: 18px;
+  }
+  #package_btn {
+    margin-left: 22%;
+  }
+  #line_break {
+    width: 100%;
+    height: 20px;
+  }
+  .medium_width {
+    width: 96%;
+    margin: 2%;
+  }
   .centered {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
-  .centered_2 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-  }
-  
-  #img_container_svg {
-    width: 100%;
-    height: 70px;
-  }
-  
-  #img_container_svg_2 {
-    width: 100%;
-    height: 70px;
-    margin-bottom: 40px;
-    float: left;
-  }
-  
-  #img_container_svg svg {
-    width: 100%;
-    height: 70px;
-    float: bottom;
-  }
-  
-  /* ########################################           Button containers           ######################################### */
-  
   .btn {
     position: absolute;
-    top: 60%;
+    top: 74%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #9600fb;
-    color: white;
-    font-size: 17px;
-    padding: 18px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 40px;
-    text-align: center;
-    box-shadow: 1px 2px 1px grey;
-    &:hover {
-      background-color: #555555;
-    }
   }
-  
-  /* Style buttons */
-  
-  .curved_box_button {
-    background-color: DodgerBlue;
-    /* Blue background */
-    border: none;
-    /* Remove borders */
-    border-radius: 30px;
-    color: white;
-    /* White text */
-    padding: 12px 16px;
-    /* Some padding */
-    font-size: 16px;
-    /* Set a font size */
-    cursor: pointer;
-    /* Mouse pointer on hover */
+  .center_text {
+    display: block;
+  }
+  #header_text {
     width: 70%;
-    box-shadow: 2px 3px 5px grey;
-    &:hover {
-      background-color: RoyalBlue;
-    }
   }
-  
-  /* Darker background on mouse-over */
-  
-  #package_btn {
-    margin-left: 22%;
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1120px) {
+  img {
+    height: 800px;
   }
-  
-  #header_btn {
-    float: right;
-    margin-right: 20px;
-    margin-top: 11px;
-    background-color: DodgerBlue;
-    /* Blue background */
-    border: none;
-    /* Remove borders */
-    border-radius: 15px;
-    color: white;
-    /* White text */
-    padding: 12px 16px;
-    /* Some padding */
-    font-size: 16px;
-    /* Set a font size */
-    cursor: pointer;
-    /* Mouse pointer on hover */
+  h3 {
+    font-size: 45px;
   }
-  
-  /* ########################################           Footer           ######################################### */
-  
-  #footer {
-    margin: 2%;
-    margin-bottom: 10px;
-    width: 96%;
-    min-height: 20px;
-    background-color: #FFFFFF;
-    font-size: 14px;
-    float: left;
-    text-align: center;
-    a {
-      color: #4CAF50;
-    }
+  #header_text {
+    width: 36%;
   }
-  
-  #footer_socials {
-    margin: 1%;
-    margin-top: 0;
-    width: 98%;
-    min-height: 20px;
-    background-color: #FFFFFF;
-    font-size: 23px;
-    float: left;
-    text-align: center;
-    a {
-      color: #555555;
-    }
-  }
-  
-  #footer_policies {
-    margin: 0%;
-    margin-bottom: 5px;
-    width: 100%;
-    min-height: 20px;
-    background-color: #FFFFFF;
-    font-size: 12px;
-    float: left;
-    text-align: center;
-    a {
-      color: #555555;
-    }
-  }
-  
-  /* ########################################                                    ######################################### */
-  /* ########################################           mobile/content           ######################################### */
-  /* ########################################                                    ######################################### */
-  
-  @media only screen and (min-width: 0px) and (max-width: 900px) {
-    html {
-      overflow-x: hidden;
-    }
-    h2 {
-      font-size: 50px;
-    }
-    .header_gradient_small {
-      display: none;
-    }
-    #header_text {
-      padding-left: 2%;
-    }
-    #desktop_nav {
-      display: none;
-    }
-    #nav_clickable {
-      display: block;
-      margin-right: 5%;
-      margin-top: 22px;
-    }
-    .mobile_nav_item {
-      height:80px;
-      width: "80%";
-      float: left;
-      text-align: center;
-      width: 96%;
-      margin-left: 2%;
-      margin-top: 20px;
-      a {
-        text-decoration: none;
-      }
-    }
-    #main_content {
-      padding: 0%;
-      margin: 0px;
-      width: 100%;
-    }
-    img {
-      width: 200%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      height: 620px;
-    }
-    .img_container {
-      margin-bottom: 20px;
-    }
-    #home_content_1 {
-      padding: 0%;
-      margin-top: 0px;
-      width: 100%;
-      float: left;
-    }
-    #home_content_2 {
-      padding: 0%;
-      margin: 0px;
-      width: 100%;
-      float: left;
-      font-size: 20px;
-    }
-    #curved_box_1 {
-      padding: 2%;
-      margin-bottom: 0px;
-      margin-left: 0%;
-      width: 96%;
-      height: 400px;
-      border-radius: 0px;
-      float: left;
-    }
-    #curved_box_2 {
-      padding: 2%;
-      margin-bottom: 0px;
-      margin-top: 0px;
-      margin-left: 0%;
-      width: 96%;
-      height: 400px;
-      border-radius: 0px;
-      float: left;
-    }
-    #curved_box_3 {
-      padding: 2%;
-      margin-bottom: 0px;
-      margin-left: 0%;
-      width: 96%;
-      height: 400px;
-      border-radius: 0px;
-      float: left;
-    }
-    #curved_box_1b {
-      padding: 2%;
-      margin-bottom: 0px;
-      margin-left: 0%;
-      width: 96%;
-      height: 440px;
-      border-radius: 0px;
-      float: left;
-    }
-    #curved_box_2b {
-      padding: 2%;
-      margin-bottom: 0px;
-      margin-top: 0px;
-      margin-left: 0%;
-      width: 96%;
-      height: 400px;
-      border-radius: 0px;
-      float: left;
-    }
-    #curved_box_3b {
-      padding: 2%;
-      margin-bottom: 0px;
-      margin-left: 0%;
-      width: 96%;
-      height: 440px;
-      border-radius: 0px;
-      float: left;
-    }
-    #packages_content {
-      margin: 0px;
-      padding: 1%;
-      margin-bottom: 25px;
-      background-color: white;
-      width: 98%;
-    }
-    #footer {
-      font-size: 10px;
-    }
-    #packages_content {
-      font-size: 18px;
-    }
-    #package_btn {
-      margin-left: 22%;
-    }
-    #line_break {
-      width: 100%;
-      height: 20px;
-    }
-    .medium_width {
-      width: 96%;
-      margin: 2%;
-    }
-    .centered {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .btn {
-      position: absolute;
-      top: 74%;
-      left: 50%;
-    }
-    .center_text {
-      display: block;
-    }
-    #header_text {
-      width: 70%;
-    }
-  }
-  
-  @media only screen and (min-width: 901px) and (max-width: 1120px) {
-    img {
-      height: 800px;
-    }
-    h3 {
-      font-size: 45px;
-    }
-    #header_text {
-      width: 36%;
-    }
-  }
+}
