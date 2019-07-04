@@ -106,7 +106,6 @@ li a:hover:not(.active) {
   padding-left: 6%;
   margin: 0%;
   float: left;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .website_logo {
@@ -165,7 +164,7 @@ li a:hover:not(.active) {
   height: 65px;
   margin: 0px;
   margin-top:10px;
-  background-color: none;
+  background-color: #ffffff;
   opacity:0%;
   position: relative;
 }
