@@ -862,7 +862,7 @@ img {
   }
 
   #home_svg {
-    visibility: hidden;
+    display:none;
   }
 
   #home_img {
