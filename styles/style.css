@@ -3,6 +3,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .whole_page::-webkit-scrollbar {
@@ -50,6 +51,7 @@ html {
 body {
   margin: 0px;
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 a {
