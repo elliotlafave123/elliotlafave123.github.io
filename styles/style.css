@@ -1057,6 +1057,22 @@ fieldset {
 		padding: 10%;
 		width: 80%;
 	}
+	.h3contact {
+		text-align: left;
+		color: #555;
+		font-size: 26px;
+		margin-left: 10%;
+		width:70%;
+		float:left;
+		padding-right:0;
+	}
+	.container {
+		max-width:80%;
+		width:100%;
+		float:left;
+		margin-left:10%;
+		height:350;
+	}
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1120px) {
