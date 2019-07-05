@@ -49,28 +49,26 @@
 			<div class="center_text"><span style="font-size:80px; color: #555555; "></div>
 			<p><h3 class="h3contact">Contact Us</h3></p>
 			<div class="container">  
-				<form id="contact" action="index.html" method="POST" data-netlify="true">
-				  <h3>Quick Contact</h3>
-				  <h4>Contact us today, and get reply with in 48 hours!</h4>
-				  <p>
-					<input placeholder="Your name" type="text" tabindex="1" required autofocus>
-				  </p>
-				  <p>
-					<input placeholder="Your Email Address" type="email" tabindex="2" required>
-				  </p>
-				  <p>
-					<input placeholder="Your Phone Number" type="tel" tabindex="3" required>
-				  </p>
-				  <p>
-					<input placeholder="Your Business Name" type="text" tabindex="4" required>
-				  </p>
-				  <p>
-					<textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
-				  </p>
-				  <p>
-					<button name="submit" type="submit" value="Submit" id="contact-submit">Submit</button>
-				  </p>
-				</form>	
+				<form name="contact" method="POST" data-netlify="true">
+					<p>
+					  <label>Your Name: <input type="text" name="name" /></label>   
+					</p>
+					<p>
+					  <label>Your Email: <input type="email" name="email" /></label>
+					</p>
+					<p>
+					  <label>Your Role: <select name="role[]" multiple>
+						<option value="leader">Leader</option>
+						<option value="follower">Follower</option>
+					  </select></label>
+					</p>
+					<p>
+					  <label>Message: <textarea name="message"></textarea></label>
+					</p>
+					<p>
+					  <button type="submit">Send</button>
+					</p>
+				  </form>
 			  </div>
 			<div id="line_break"></div>
 			<div id="packages_content">
