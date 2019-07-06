@@ -9,6 +9,11 @@ html {
 	height: auto;
 }
 
+#hidden {
+	visibility: hidden;
+	display: none;
+}
+
 section {
   opacity: 0;
   transform: translate(0, 30px); 
