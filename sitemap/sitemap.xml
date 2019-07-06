@@ -1,41 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-	<url>
-      <loc>http://www.elliotlafave.tk/</loc> 
-	</url>
-
-	<url>
-      <loc>http://www.elliotlafave.tk/index.html</loc> 
-	</url>
-	
-	<url>
-      <loc>http://www.elliotlafave.tk/news.html</loc> 
-	</url>
-	
-	<url>
-      <loc>http://www.elliotlafave.tk/contact.html</loc> 
-	</url>
-	
-	<url>
-      <loc>http://www.elliotlafave.tk/about.html</loc> 
-	</url>
-
-	<url>
-      <loc>http://www.elliotlafave.tk/get_started.html</loc> 
-	</url>
-
-	<url>
-      <loc>http://www.elliotlafave.tk/learn_more/basic_package.html</loc> 
-	</url>
-	
-	<url>
-      <loc>http://www.elliotlafave.tk/learn_more/premium_package.html</loc> 
-	</url>
-	
-	<url>
-      <loc>http://www.elliotlafave.tk/learn_more/custom_package.html</loc> 
-	</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <!--
+ created with Free Online Sitemap Generator www.xml-sitemaps.com 
+-->
+<url>
+<loc>https://www.elliotlafave.com/</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://www.elliotlafave.com/news</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.elliotlafave.com/about</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.elliotlafave.com/contact</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.elliotlafave.com/learn_more/pricing</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>0.50</priority>
+</url>
+<url>
+<loc>
+https://www.elliotlafave.com/learn_more/design_process
+</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>0.50</priority>
+</url>
+<url>
+<loc>
+https://www.elliotlafave.com/learn_more/maintenance
+</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>0.50</priority>
+</url>
+<url>
+<loc>
+https://www.elliotlafave.com/policies/terms_of_service
+</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>0.40</priority>
+</url>
+<url>
+<loc>https://www.elliotlafave.com/policies/privacy</loc>
+<lastmod>2019-07-06T22:24:00+00:00</lastmod>
+<priority>0.40</priority>
+</url>
 </urlset>
-
