@@ -51,17 +51,31 @@ a {
 }
 
 #content{
-  background-color: rgb(212, 209, 209);
-  width:80%;
-  margin-left:10%;
+  background-color: white;
+  widows: 100%;
   margin-top:30px;
   padding-top:20px;
   padding-bottom:30px;
   text-align: center;
 }
 
-#box {
-  background-color: rgb(189, 183, 183);
+/* ########################################                                    ######################################### */
+/* ########################################            Box Sizes               ######################################### */
+/* ########################################                                    ######################################### */
+
+#box20 {
+  background-color: lightgray;
+  width:20%;
+  margin-left:10%;
+  margin-right: 0%;
+  margin-top:30px;
+  text-align: left;
+  padding:1%;
+  position: relative;
+}
+
+#box80 {
+  background-color: lightgray;
   width:80%;
   margin-left:10%;
   margin-right: 0%;
@@ -71,13 +85,17 @@ a {
   position: relative;
 }
 
+/* ########################################                                    ######################################### */
+/* ########################################               Footer               ######################################### */
+/* ########################################                                    ######################################### */
+
+
 #footer {
-  background-color: rgb(95, 94, 94);
-  width:80%;
-  margin-left:10%;
+  background-color:  #b3fffa;
+  height: 200px;
+  width:100%;
   padding-top:20px;
   padding-bottom:30px;
-  margin-bottom: 30px;
   text-align: center;
   color:#FFFFFF;
 }
