@@ -6,7 +6,7 @@ html {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 60px;
   font-family: 'Montserrat', sans-serif;
   margin: 0px;
 }
@@ -27,6 +27,18 @@ h4 {
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   margin-top: 10px;
+}
+
+h5 {
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0px;
+}
+
+h6 {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0px;
 }
 
 p {
@@ -51,14 +63,24 @@ a {
 }
 
 #content{
+  height: 1000px;
   background-color: white;
   widows: 100%;
   margin-top:30px;
   padding-top:20px;
   padding-bottom:30px;
-  text-align: center;
 }
 
+#name {
+  background-color: lightgray;
+
+  width:13%;
+  margin-left:10%;
+  margin-right: 0%;
+  max-resolution: top 2px;px;
+  padding:1%;
+  position: relative;
+}
 /* ########################################                                    ######################################### */
 /* ########################################            Box Sizes               ######################################### */
 /* ########################################                                    ######################################### */
@@ -70,6 +92,7 @@ a {
   margin-right: 0%;
   margin-top:30px;
   text-align: left;
+  float:left;
   padding:1%;
   position: relative;
 }
