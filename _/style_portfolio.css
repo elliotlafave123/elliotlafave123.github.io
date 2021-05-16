@@ -3,6 +3,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 h1 {
@@ -171,9 +172,11 @@ a {
   #goal {
     margin-top:70%;
     margin-left:3%;
-    width:100%;
+    width:96%;
+    padding: 2%;
     color:#FFFFFF;
     display:block;
+    text-overflow: inherit;
   }
   
   #location {
