@@ -172,8 +172,8 @@ a {
   #goal {
     margin-top:70%;
     margin-left:3%;
-    width:96%;
-    padding: 2%;
+    margin-right: 3%;
+    width:100%;
     color:#FFFFFF;
     display:block;
     text-overflow: inherit;
