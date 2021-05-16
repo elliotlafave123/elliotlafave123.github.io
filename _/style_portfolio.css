@@ -75,7 +75,7 @@ a {
 }
 
 #wrapper1{
-  height: 1080px;
+  height: 700px;
   background-color: #A3FCF7;
   width: 98%;
   overflow: hidden;
@@ -143,8 +143,8 @@ a {
 
 
 #footer {
-  background-color: #A3FCF7;
-  height: 200px;
+  background-color: blue;
+  height: 100px; 
   width:100%;
   padding-top:20px;
   padding-bottom:30px;
