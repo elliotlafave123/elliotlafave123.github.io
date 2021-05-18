@@ -137,6 +137,12 @@ a {
   float: left;
 }
 
+#job {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 50px;
+}
+
 #company {
   width:100%;
   height:160px;
@@ -152,6 +158,7 @@ a {
   color:#6e6e6e;
   overflow-wrap: break-word;
   float: left;
+  margin-top:0;
 }
 
 
@@ -181,10 +188,12 @@ a {
 }
 
 #line1 {
-  width:10px;
+  content:' ';
+  width:8px;
   height: 800px;
   float:left;
   background: #000;
+  position:absolute;
 }
 
 
