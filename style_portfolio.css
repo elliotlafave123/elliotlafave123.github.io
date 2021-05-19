@@ -600,7 +600,7 @@ a {
   width:80%;
   margin-left:5%;
   color:#FFFFFF;
-  margin-top:80px;
+  margin-top:60px;
   position:absolute;
   display:block;
 }
@@ -634,7 +634,7 @@ a {
 }
 
 #infomation {
-  width:50%;
+  width:75%;
   height:600px;
   margin-left:10%;
   color:#000000;
@@ -673,7 +673,7 @@ a {
 
 
 #dates {
-  display: none;
+  display: none !important;
 }
 
 #date2 {
@@ -681,9 +681,9 @@ a {
 }
 
 #timelines {
-  width:10%;
+  width:5%;
   height:600px;
-  margin-left:5%;
+  margin-left:0.3%;
   color:#000000;
   margin-top:4%;
   display:block;
@@ -734,7 +734,7 @@ a {
 }
 
 #infomation2 {
-  width:50%;
+  width:70%;
   height:600px;
   margin-left:10%;
   padding-top:5%;
@@ -748,7 +748,7 @@ a {
 #timelines2 {
   width:10%;
   height:600px;
-  margin-left:5%;
+  margin-left:0%;
   color:#FFF;
   display:block;
   overflow-wrap: break-word;
@@ -759,7 +759,7 @@ a {
   content:' ';
   width:8px;
   height: 1400px;
-  margin-left: 21.8%;
+  margin-left:7%;
   float:left;
   background: #FFF;
   position:absolute;
@@ -769,8 +769,8 @@ a {
   height: 20px;
   width: 20px;
   background-color: #fff;
-  margin-left:212%;
-  margin-top:140px;
+  margin-left:60%;
+  margin-top:130px;
   border-radius: 50%;
   float: left;
 }
@@ -779,8 +779,8 @@ a {
   height: 20px;
   width: 20px;
   background-color: #FFFFFF;
-  margin-left:212%;
-  margin-top:600px;
+  margin-left:60%;
+  margin-top:690px;
   border-radius: 50%;
   float: left;
 }
@@ -796,8 +796,9 @@ a {
 
 #grades {
   width:10%;
-  margin-top:7%;
+  margin-top:50px;
   margin-left:40%;
+  margin-bottom:60px;
   color: #FFF;
   display:block;
   overflow-wrap: break-word;
@@ -806,7 +807,7 @@ a {
 
 #schools {
   width:100%;
-  margin-top:7%;
+  margin-top:60px;
   color: #FFF;
   display:block;
   overflow-wrap: break-word;
