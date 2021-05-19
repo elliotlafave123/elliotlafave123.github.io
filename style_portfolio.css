@@ -68,10 +68,9 @@ a {
 /* ########################################             Wrappers               ######################################### */
 /* ########################################                                    ######################################### */
 #content{
-  height: 10000px;
+  height: 4900px;
   background-color: white;
   overflow: hidden;
-
 }
 
 
@@ -421,7 +420,7 @@ a {
 /* ########################################             Achievements               ######################################### */
 
 #wrapper5 {
-  height: 1400px;
+  height: 1000px;
   background-color: #FFEAA1;
   width: 100%;
   margin-top: 200px;
@@ -444,7 +443,7 @@ a {
 #line5 {
   content:' ';
   width:8px;
-  height: 1400px;
+  height: 1095px;
   margin-left: 12%;
   float:left;
   background: #FFF;
@@ -456,7 +455,7 @@ a {
   width: 20px;
   background-color: #fff;
   margin-left:115%;
-  margin-top:140px;
+  margin-top:250px;
   border-radius: 50%;
   float: left;
 }
@@ -466,7 +465,7 @@ a {
   width: 20px;
   background-color: #FFFFFF;
   margin-left:115%;
-  margin-top:500px;
+  margin-top:440px;
   border-radius: 50%;
   float: left;
 }
@@ -505,14 +504,12 @@ a {
 
 
 #footer {
-  background-color: blue;
+  background-color: #fff;
   height: 100px; 
   width:100%;
-  padding-top:20px;
-  padding-bottom:30px;
-  margin-top: 100px;
+  margin:5%;
   text-align: center;
-  color:#FFFFFF;
+  color:#000;
 }
 /* ########################################                                    ######################################### */
 /* ########################################           mobile/content           ######################################### */
