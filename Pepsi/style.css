@@ -24,19 +24,18 @@ h6 {font-size: 0.67em;}
 body {
     height:2000px;
     font-family: 'PepsiFont', Fallback, sans-serif;
-    background-color: var(--light);
-    margin:none;
     letter-spacing: 3px;
+    margin:0;
 }
 
 #header {
     background-color: var(--light);
-    margin: 5rem auto;
-    width: min(90%, 75rem);
+    width: 90%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     justify-items: center;
-    align-items:start;
+    align-items:center;
+    padding:10px 5%;
 }
 
 #header a {
@@ -45,13 +44,27 @@ body {
 }
 
 #content {
-    padding:1rem;
+    height:3000px;
 }
 
 #home-top {
     color: var(--white);
+    background-color: var(--light);
+    padding:var(--sec-pad);
     display: grid;
     grid-template-columns: 60% 40%;
     justify-items: center;
     align-items:start;
 }
+
+/* Bars */
+#bars {
+    width:100%;
+}
+
+
+
+
+
+
+
