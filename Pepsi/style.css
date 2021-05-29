@@ -1,0 +1,57 @@
+:root {
+    --dark:rgb(0, 76, 151);
+    --light:rgb(0,94,184);
+    --white:rgb(255, 255, 255);
+    --accent:rgb(228, 0, 43);
+
+    --sec-pad:150px 0;
+}
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.17em;}
+h4 {font-size: 1.00em;}
+h5 {font-size: 0.83em;}
+h6 {font-size: 0.67em;}
+
+@font-face {
+    font-family: 'PepsiFont';
+    src: url('Fonts/font.woff2') format('woff2'),
+         url('Fonts/font.woff') format('woff'),
+         url('Fonts/font.ttf')  format('truetype');
+}
+
+body {
+    height:2000px;
+    font-family: 'PepsiFont', Fallback, sans-serif;
+    background-color: var(--light);
+    margin:none;
+    letter-spacing: 3px;
+}
+
+#header {
+    background-color: var(--light);
+    margin: 5rem auto;
+    width: min(90%, 75rem);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    align-items:start;
+}
+
+#header a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+#content {
+    padding:1rem;
+}
+
+#home-top {
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-items: center;
+    align-items:start;
+}
