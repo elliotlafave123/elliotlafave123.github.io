@@ -231,12 +231,20 @@ hr {
 }
 
 @media only screen and (max-width: 765px) {
+  hr{
+    width:15%;
+  }
+
   .projects {
      grid-template-columns: 1fr;
   }
 
   .skills {
-    width:90vw;
+    width:100%;
+  }
+
+  .skill-row {
+    width:85%;
   }
 
   .profile {
@@ -249,7 +257,6 @@ hr {
     position: absolute;
     bottom: 0;
     margin-left: 10%;
-
   }
 
   .top-cloud {
@@ -263,5 +270,22 @@ hr {
     width:22%;
     position:absolute;
     left:20%;
+  }
+
+  .bottom-container {
+    height:250px;
+  }
+  .bottom-container a {
+    display: block;
+    font-size: 1.8rem;
+    text-decoration: none;
+    margin-right: 1em;
+  }
+  .bottom-container a {
+    margin-top:0.8em;
+  }
+
+  .middle-container {
+    width:100%;
   }
 }
