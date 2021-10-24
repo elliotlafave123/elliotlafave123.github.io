@@ -109,12 +109,12 @@ hr {
 .card {
   display: inline-block;
   width:24%;
-  height:60vh;
+  height:70vh;
   background-color:#a1eaed;
   opacity: 0.8;
-  margin-right:4%;
+  margin-right:3%;
   border-radius: 2em;
-  padding:1em;
+  padding:0 2% 0 2%;
   overflow: hidden;
 }
 
@@ -124,10 +124,10 @@ hr {
 
 .card img {
   height:40%;
-  width: 109%;
+  width: 122%;
   position: relative;
-  top:-1em;
-  left:-1em;
+  top:;
+  left:-11%;
   opacity: 0.8;
 }
 
