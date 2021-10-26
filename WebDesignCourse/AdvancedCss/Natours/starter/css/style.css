@@ -1,0 +1,198 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {  /** Changes all in document (resets the defualts) **/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /** Change Box model so padding and width dont effect box size **/
+}
+
+html {
+  font-size: 62.5%; /** changes rem to 10px   (defualt is 16px)**/  
+}
+
+body {
+  font-family: "lato", sans-serif;  /** Used google fonts to import this font **/
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+}
+
+/*****************************************************************************************************************************/
+/****************************************************     header     *********************************************************/
+/*****************************************************************************************************************************/
+
+.header {
+  position: relative;  /** Allows absolute positioned logo to be relative to the header parent **/
+  height:95vh; /** 95% of the viewport width **/
+  background-image:linear-gradient(             /** Linear gradient on top of img **/
+    to right bottom,
+    rgba(127, 213, 112, 0.8),
+    rgba(40, 180, 133, 0.8)),
+    url(../img/hero.jpg); 
+
+  background-size: cover;
+  background-position: top; /** ensures topo of image stays at the top of the parent **/
+
+  clip-path: polygon(0 0,100% 0, 100% 80%,0 100%)  /** Creates an angular clip over the image. (x y, x y, x y, x y)  **/
+
+}
+
+.logo-box {
+  position: absolute;  /** Relative to parent **/
+  top:4rem;
+  left: 4rem;
+}
+
+.logo {
+  height: 3.5rem;
+}
+
+.text-box {
+  position: absolute;    /**  Center Textbox using positioning  **/
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);      /**  translate textbxs so it is exactly centered **/
+  text-align: center;
+}
+
+.heading-primary {
+  color:#FFF; 
+  text-transform: uppercase; /** Makes all text UPPERCASE **/
+  backface-visibility: hidden; /** Fixes animation moving unintentionally **/
+  margin-bottom: 7rem;
+}
+
+.heading-primary-main {
+  display: block;   /* takes up full available width */
+  font-size: 7rem;
+  font-weight: 500;
+  letter-spacing: 3.5rem;
+
+  animation-name: moveInLeft;   /** Import the animation by name **/
+  animation-duration: 1.2s;   /** Animation Time **/
+  animation-delay: 0s; /** Adds a delay to animation **/
+  animation-timing-function: ease-out; /** Type of timing function (ease-out is slower at end of animation)**/
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 1.8rem;
+
+  animation: moveInRight 1.2s ease-out; /** Shorthand version of above animation **/
+}
+
+/*****************************************************************************************************************************/
+/***************************************************     Buttons     *********************************************************/
+/*****************************************************************************************************************************/
+
+.btn:link, .btn:visited {   /** Pseudoelement for links **/
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.8rem 3.5rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  display: inline-block;
+  border-radius: 5rem;
+  transition: all .2s; /** Edits transition speed **/
+  position: relative;
+}
+
+.btn:hover {   /** hover pseudoclass **/
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);   /** box shadow property  (x y blur color) **/
+}
+
+.btn:active {  /** clicked pseudoclass **/
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+}
+
+.btn-white {
+  background-color: #FFF;
+  color: #777;
+}
+
+.btn::after {  /** add element behind button **/
+  content: ""; /** must specify content for it to appear, can be empty **/
+  display: inline-block;
+  height: 100%;
+  width:100%;
+  border-radius: 5rem;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;  /** Makes element behind previous element **/
+  transition: all 0.4s;
+}
+
+.btn-white::after { 
+  background-color: #fff;
+}
+
+.btn:hover::after {  
+  transform: scale(1.4, 1.6);  /** Changes the size of the element **/
+  opacity: 0;
+}
+
+.btn-animated{
+  animation: moveInBtn 1.2s ease-in-out .75s;
+  animation-fill-mode: backwards; /** automatically hides btn **/
+}
+/*****************************************************************************************************************************/
+/**************************************************     Animation     ********************************************************/
+/*****************************************************************************************************************************/
+
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);  /** Animation starts with text -100px from original position **/ 
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);  /** Ends animation in original position **/
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);  /** Animation starts with text -100px from original position **/ 
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);  /** Ends animation in original position **/
+  }
+}
+
+@keyframes moveInBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);  /** Animation starts with text -100px from original position **/ 
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);  /** Ends animation in original position **/
+  }
+}
