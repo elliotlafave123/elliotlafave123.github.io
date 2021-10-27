@@ -1,0 +1,43 @@
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20rem);  /** Animation starts with text -100px from original position **/ 
+    }
+  
+    80% {
+      transform: translateX(1rem);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);  /** Ends animation in original position **/
+    }
+  }
+
+@keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem);  /** Animation starts with text -100px from original position **/ 
+    }
+  
+    80% {
+      transform: translateX(-1rem);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);  /** Ends animation in original position **/
+    }
+  }
+  
+  @keyframes moveInBtn {
+    0% {
+      opacity: 0;
+      transform: translateY(10rem);  /** Animation starts with text -100px from original position **/ 
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);  /** Ends animation in original position **/
+    }
+  }

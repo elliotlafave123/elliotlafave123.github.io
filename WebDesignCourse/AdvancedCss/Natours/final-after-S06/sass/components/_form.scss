@@ -16,9 +16,6 @@
         display: block;
         transition: all .3s;
 
-        @include respond(tab-port) {
-            width: 100%;
-        }
 
         &:focus {
             outline: none;
@@ -65,7 +62,7 @@
     &__radio-input {
         display: none;
     }
-    
+
     &__radio-label {
         font-size: $default-font-size;
         cursor: pointer;

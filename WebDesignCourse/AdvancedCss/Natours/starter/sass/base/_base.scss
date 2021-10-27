@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {  /** Changes all in document (resets the defualts) **/
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /** Inherits border box from body **/
+}
+
+html {
+  font-size: 62.5%; /** changes rem to 10px   (defualt is 16px)**/  
+}
+
+body {
+  box-sizing: border-box; /** Change Box model so padding and width dont effect box size **/
+}
