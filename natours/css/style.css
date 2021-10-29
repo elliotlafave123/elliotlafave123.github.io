@@ -523,6 +523,8 @@ body {
     position: absolute;
     top: 2rem;
     right: 4rem; }
+  .popup__close:hover {
+    color: #28b485; }
   .popup__content {
     width: 65vw;
     background-color: white;
