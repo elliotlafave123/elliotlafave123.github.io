@@ -1,0 +1,23 @@
+@import "abstracts/variables";
+@import "abstracts/mixins"; 
+@import "abstracts/functions";
+
+@import "base/utilities";   
+@import "base/base";
+@import "base/animations"; 
+@import "base/typography"; 
+
+
+@import "components/feature-box";
+@import "components/button";
+@import "components/composition"; 
+@import "components/card";
+@import "components/story"; 
+@import "components/form";  
+@import "components/bg-video"; 
+ 
+@import "layout/header"; 
+@import "layout/grid"; 
+@import "layout/footer"; 
+  
+@import "pages/home";                   
