@@ -3,7 +3,6 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
   }
 
 .heading-primary {
@@ -22,6 +21,11 @@ body {
       animation-duration: 1.2s;   /** Animation Time **/
       animation-delay: 0s; /** Adds a delay to animation **/
       animation-timing-function: ease-out; /** Type of timing function (ease-out is slower at end of animation)**/
+
+      @include respond(phone) {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+      }
     }
   
     &--sub {
@@ -31,6 +35,10 @@ body {
       letter-spacing: 1.8rem;
     
       animation: moveInRight 1.2s ease-out; /** Shorthand version of above animation **/
+
+      @include respond(phone) {
+        letter-spacing: .5rem;
+      }
     }
   }
 
@@ -44,7 +52,15 @@ body {
     -webkit-background-clip:text;    // clips background to the shape of the text.
     background-clip:text;
     letter-spacing: 0.2rem;
-    transition: all, 0.2s;          
+    transition: all, 0.2s;    
+    
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
     
     &:hover {
       transform: skew(2deg, 2deg) scale(1.1);    // skew tilts lext/imgages         // scale makes it bigger

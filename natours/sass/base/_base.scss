@@ -8,8 +8,26 @@
 
 html {
   font-size: 62.5%; /** changes rem to 10px   (defualt is 16px)**/  
+
+  @include respond(tab-land) {
+    font-size:56.25%; 
+  }
+
+  @include respond(tab-port) {
+    font-size:50%; 
+  }
+
+  @include respond(big-desktop) {
+    font-size:75%; 
+  }
+
 }
 
 body {
   box-sizing: border-box; /** Change Box model so padding and width dont effect box size **/
+  padding: 3rem;
+
+  @include respond(phone) {
+    padding: 0; 
+  }
 }

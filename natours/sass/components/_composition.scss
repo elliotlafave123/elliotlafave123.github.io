@@ -1,4 +1,5 @@
 .composition {
+
     position: relative;
     &__photo {
         width: 65%;
@@ -9,6 +10,10 @@
         z-index: 1;
         outline-offset: 2rem;   // offsets the outline of the image
 
+        @include respond(tab-land) {
+            width: 40% !important; 
+        }
+
 
         &--p1 {
             left:0;
@@ -18,6 +23,10 @@
         &--p2 {
             right:-9rem;
             top:2rem;
+
+            @include respond(tab-land) {
+                right: 3rem; 
+            }
         }
 
         &--p3 {

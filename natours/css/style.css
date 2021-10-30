@@ -1,3 +1,22 @@
+/* 
+
+0 - 600px: phone
+600 - 900px: tablet-portrait
+900 - 1200px: tablet-landscape
+1200 - 1800px: normal syles apply
+1800+: big desktop
+
+*/
+/*
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+*/
 .u-center-text {
   text-align: center; }
 
@@ -37,10 +56,23 @@
 html {
   font-size: 62.5%;
   /** changes rem to 10px   (defualt is 16px)**/ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
-  /** Change Box model so padding and width dont effect box size **/ }
+  /** Change Box model so padding and width dont effect box size **/
+  padding: 3rem; }
+  @media (max-width: 37.5em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -81,8 +113,7 @@ body {
   /** Used google fonts to import this font **/
   font-weight: 400;
   line-height: 1.7;
-  color: #777777;
-  padding: 3rem; }
+  color: #777777; }
 
 .heading-primary {
   color: white;
@@ -105,6 +136,10 @@ body {
     /** Adds a delay to animation **/
     animation-timing-function: ease-out;
     /** Type of timing function (ease-out is slower at end of animation)**/ }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2.4rem;
@@ -112,6 +147,9 @@ body {
     letter-spacing: 1.8rem;
     animation: moveInRight 1.2s ease-out;
     /** Shorthand version of above animation **/ }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -124,6 +162,12 @@ body {
   background-clip: text;
   letter-spacing: 0.2rem;
   transition: all, 0.2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skew(2deg, 2deg) scale(1.1);
     text-shadow: 0.5rem 1.4rem 2rem rgba(0, 0, 0, 0.4); }
@@ -250,12 +294,18 @@ body {
     transition: all 0.15s;
     z-index: 1;
     outline-offset: 2rem; }
+    @media (max-width: 75em) {
+      .composition__photo {
+        width: 40% !important; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
     .composition__photo--p2 {
       right: -9rem;
       top: 2rem; }
+      @media (max-width: 75em) {
+        .composition__photo--p2 {
+          right: 3rem; } }
     .composition__photo--p3 {
       left: 20%;
       top: 10rem; }
@@ -570,6 +620,13 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 75em) {
+    .navigation__button {
+      right: 12rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -581,6 +638,16 @@ body {
   background-image: radial-gradient(#55c57a, #28b485);
   z-index: 5;
   transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
+  @media (max-width: 75em) {
+    .navigation__background {
+      right: 12rem; } }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      right: 12rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.2rem;
+      right: 3.2rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -680,6 +747,11 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   /** Creates an angular clip over the image. (x y, x y, x y, x y)  **/ }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      /** Creates an angular clip over the image. (x y, x y, x y, x y)  **/ } }
   .header__logo-box {
     position: absolute;
     /** Relative to parent **/
@@ -705,11 +777,24 @@ body {
     display: table; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 60rem; } }
   .row [class^="col-"] {
     float: left;
     padding: 1rem; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 5rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 5rem) / 2); }
   .row .col-1-of-3 {
@@ -725,16 +810,26 @@ body {
   background-color: #333333;
   padding: 10rem 0;
   font-size: 1.4rem; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
   .footer__logo {
     width: 15rem;
     height: auto; }
+  .footer__navigation {
+    border-top: 1px solid white;
+    padding-top: 2rem;
+    display: inline-block; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none;
-    padding-top: 1.4rem;
-    border-top: 1px solid white; }
+    padding-top: 1.4rem; }
   .footer__item {
     display: inline-block; }
     .footer__item:not(:last-child) {
@@ -751,7 +846,12 @@ body {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
       transform: rotate(3deg) scale(1.2); }
   .footer__copyright {
-    border-top: 1px solid white; }
+    border-top: 1px solid white;
+    padding-top: 2rem; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        text-align: center; } }
 
 .section-about {
   background-color: #f1f1f1;

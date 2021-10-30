@@ -12,6 +12,11 @@
   
     -webkit-clip-path: polygon(0 0,100% 0, 100% 80%,0 100%);
     clip-path: polygon(0 0,100% 0, 100% 80%,0 100%);  /** Creates an angular clip over the image. (x y, x y, x y, x y)  **/
+
+    @include respond(phone) {
+      -webkit-clip-path: polygon(0 0,100% 0, 100% 90%,0 100%);
+    clip-path: polygon(0 0,100% 0, 100% 90%,0 100%);  /** Creates an angular clip over the image. (x y, x y, x y, x y)  **/
+    }
   
     &__logo-box {
       position: absolute;  /** Relative to parent **/

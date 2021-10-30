@@ -2,6 +2,10 @@
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
+
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
     
 
     &__logo-box {
@@ -15,13 +19,19 @@
     }
 
     &__navigation {
+        border-top: 1px solid $color-white;
+        padding-top: 2rem;
+        display:inline-block;
 
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
         list-style: none;
-        padding-top: 1.4rem;
-        border-top: 1px solid $color-white;
+        padding-top: 1.4rem; 
     }
 
     &__item {
@@ -53,5 +63,11 @@
 
     &__copyright {
         border-top: 1px solid $color-white;
+        padding-top: 2rem;
+        
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
