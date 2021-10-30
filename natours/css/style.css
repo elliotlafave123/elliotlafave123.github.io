@@ -857,6 +857,9 @@ body {
   background-color: #f1f1f1;
   padding: 30rem 0;
   margin-top: -20vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 20rem 0; } }
 
 .section-features {
   padding: 20rem 0;

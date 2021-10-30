@@ -2,6 +2,10 @@
     background-color: $color-grey-light-1;
     padding: 30rem 0;
     margin-top:-20vh;
+
+    @include respond(tab-port) {
+      padding: 20rem 0;
+    }
 }
 
 .section-features {
