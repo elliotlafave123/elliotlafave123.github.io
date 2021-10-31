@@ -324,7 +324,7 @@ body {
           top: -1rem;
           right: 0rem;
           transform: scale(1.3);
-          z-index: 100; } }
+          z-index: 2; } }
     .composition__photo--p3 {
       left: 20%;
       top: 10rem; }
