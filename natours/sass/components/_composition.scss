@@ -2,6 +2,7 @@
 
     position: relative;
     &__photo {
+
         width: 65%;
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.3);
         border-radius: 0.01rem;
@@ -10,28 +11,45 @@
         z-index: 1;
         outline-offset: 2rem;   // offsets the outline of the image
 
-        @include respond(tab-land) {
-            width: 40% !important; 
+        @include respond(tab-port) {
+            float: left;
+            width: 33.3333333%;
+            position: relative;
         }
 
 
         &--p1 {
             left:0;
             top:-2rem;
+
+            @include respond(tab-port) {
+                top:0rem;
+                left:0rem; 
+                transform: scale(1.2);
+            }
         }
 
         &--p2 {
-            right:-9rem;
+            right:-1rem;
             top:2rem;
 
-            @include respond(tab-land) {
-                right: 3rem; 
+            @include respond(tab-port) {
+                top:-1rem;
+                right: 0rem; 
+                transform: scale(1.3);
+                z-index: 100;
             }
         }
 
         &--p3 {
             left:20%;
             top:10rem;
+
+            @include respond(tab-port) {
+                left: 0;
+                top: 1rem;
+                transform: scale(1.1);
+            }
         }
 
         &:hover { 
