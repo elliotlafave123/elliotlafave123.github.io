@@ -5,13 +5,21 @@
       to right,
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)),
-      url(../img/hero.jpg); 
+      url(../img/hero-small.jpg); 
   
     background-size: cover;
     background-position: top; /** ensures topo of image stays at the top of the parent **/
   
     -webkit-clip-path: polygon(0 0,100% 0, 100% 80%,0 100%);
     clip-path: polygon(0 0,100% 0, 100% 80%,0 100%);  /** Creates an angular clip over the image. (x y, x y, x y, x y)  **/
+
+    @media (min-resolution: 192dpi) and (min-width:37.5em), (min-width:125em) {      // media query for image on hig res display
+      background-image:linear-gradient(             
+      to right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)),
+      url(../img/hero.jpg); 
+    }
 
     @include respond(phone) {
       -webkit-clip-path: polygon(0 0,100% 0, 100% 90%,0 100%);

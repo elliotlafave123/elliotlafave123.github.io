@@ -643,6 +643,11 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s; }
+  @supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.2); } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -822,13 +827,16 @@ body {
   /** Allows absolute positioned logo to be relative to the header parent **/
   height: 95vh;
   /** 95% of the viewport width **/
-  background-image: linear-gradient(to right, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   /** ensures topo of image stays at the top of the parent **/
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   /** Creates an angular clip over the image. (x y, x y, x y, x y)  **/ }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
