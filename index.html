@@ -19,15 +19,15 @@
         <img src="img/header-img.png" alt="" class="header__background-img">
         <p class="header__logo">Logo</p>
         <ul class="header__nav">
-            <li class="header__nav-item"><a href="#">Contact Me</a></li>
+            <li class="header__nav-item"><a href="#contactme">Contact Me</a></li>
             <li class="header__nav-item"><a href="#">CV</a></li>
-            <li class="header__nav-item"><a href="#">Portfolio</a></li>
+            <li class="header__nav-item"><a href="#portfolio">Portfolio</a></li>
         </ul>
 
         <div class="header__content">
             <h1 class="header__content--title u-margin-bottom-small">I'm Elliot La Fave</h1>
             <p class="header__content--subtitle u-margin-bottom-xlarge">An aspiring software developer.</p>
-            <a href="#" class="btn btn-purple">Contact Me!</a>
+            <a href="#contactme" class="btn btn-purple">Contact Me!</a>
         </div>
 
     </section>
@@ -89,7 +89,7 @@
     </div>
 
     <section class="portfolio">
-        <h3 class="skills__header u-margin-bottom-large">My Projects</h3>
+        <h3 class="skills__header u-margin-bottom-large" id="portfolio">My Projects</h3>
         <div class="card__grid u-margin-bottom-medium">
             <div class="card">
                 <img src="img/card-order.png" alt="" class="card__img">
@@ -146,8 +146,8 @@
     </div>
 
     <section class="contact">
-        <img src="img/contact.png" alt="" class="contact__img">
-        <h3 class="skills__header u-margin-bottom-large">Contact Me</h3>
+        <img src="img/contact.png" alt="" class="contact__img" >
+        <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
         <div class="contact__form">
             <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact">
                 <div class="form__group">
@@ -155,7 +155,7 @@
                     <label for="name" class="form__label">Full name</label>
                 </div>
 
-                <div class="form__group">
+                <div class="form__group" >
                     <input type="email" class="form__input form__input-small" placeholder="Email address" id="email" required>
                     <label for="email" class="form__label">Email address</label>
                 </div>
@@ -179,9 +179,9 @@
             <p>Logo</p>
         </div>
         <ul class="footer__nav">
-            <li class="footer__nav-item"><a href="#">Contact Me</a></li>
+            <li class="footer__nav-item"><a href="#contactme">Contact Me</a></li>
             <li class="footer__nav-item"><a href="#">CV</a></li>
-            <li class="footer__nav-item"><a href="#">Portfolio</a></li>
+            <li class="footer__nav-item"><a href="#portfolio">Portfolio</a></li>
         </ul>
         <p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
         <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
