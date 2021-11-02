@@ -1,0 +1,574 @@
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-top-small {
+  margin-top: 1.2rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 4rem !important; }
+
+.u-margin-top-large {
+  margin-top: 10rem !important; }
+
+.u-margin-top-xlarge {
+  margin-top: 12rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.2rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-bottom-large {
+  margin-bottom: 10rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-large {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-bottom-xlarge {
+  margin-bottom: 12rem !important; }
+
+.u-margin-bottom-xxlarge {
+  margin-bottom: 15rem !important; }
+
+.u-margin-bottom-xxxlarge {
+  margin-bottom: 20rem !important; }
+
+*,
+*::after,
+*::before {
+  /** Changes all in document (resets the defualts) **/
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /** Inherits border box from body **/
+  text-decoration: none; }
+
+html {
+  font-size: 62.5%;
+  /** changes rem to 10px   (defualt is 16px)**/ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  /** Change Box model so padding and width dont effect box size **/
+  padding: 0rem;
+  background-color: #343a40; }
+  @media (max-width: 37.5em) {
+    body {
+      padding: 0; } }
+
+body {
+  font-family: "lato", sans-serif;
+  /** Used google fonts to import this font **/
+  font-weight: 400;
+  line-height: 1.7; }
+
+h1 {
+  font-size: 8rem;
+  font-weight: 400;
+  letter-spacing: 6px; }
+
+h2 {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-size: 5rem; }
+
+h3 {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-size: 6rem;
+  position: relative;
+  width: fit-content; }
+  h3::after {
+    content: "";
+    background: white;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    height: 8px;
+    width: 70%;
+    border-radius: 0 4px 4px 0; }
+
+h4 {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  position: relative;
+  width: fit-content; }
+  h4::after {
+    content: "";
+    background: #7048E8;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    height: 8px;
+    width: 60%;
+    border-radius: 0 4px 4px 0; }
+
+.btn, .btn:link, .btn:visited {
+  /** Pseudoelement for links **/
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+  display: inline-block;
+  border-radius: 5rem;
+  transition: all .2s;
+  /** Edits transition speed **/
+  position: relative;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  /** hover pseudoclass **/
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  /** box shadow property  (x y blur color) **/ }
+  .btn:hover::after {
+    transform: scale(1.4, 1.6);
+    /** Changes the size of the element **/
+    opacity: 0; }
+
+.btn:active {
+  /** clicked pseudoclass **/
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--card {
+  background-color: #7048E8;
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  width: 75%;
+  position: absolute !important;
+  bottom: 0;
+  left: 0; }
+  .btn--card-icon {
+    position: absolute;
+    right: 2rem;
+    top: 0.25rem;
+    font-size: 2rem; }
+  .btn--card::after {
+    background-color: #7048E8; }
+
+.btn--git {
+  background-color: #33373a;
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  width: 4.2rem;
+  height: 4.2rem; }
+  .btn--git img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5rem;
+    transform: translate(-50%, -50%); }
+  .btn--git::after {
+    background-color: #33373a; }
+
+.btn-purple {
+  background-color: #7048E8;
+  color: white;
+  font-size: 3rem;
+  padding: 1rem 6rem; }
+  .btn-purple::after {
+    background-color: #7048E8; }
+  .btn-purple-small {
+    font-size: 2rem;
+    background-color: #7048E8;
+    color: white;
+    padding: 1rem 6rem; }
+    .btn-purple-small::after {
+      background-color: #7048E8; }
+  .btn-purple-post {
+    font-size: 2.2rem;
+    background-color: #7048E8;
+    color: white;
+    padding: 1.5rem 4rem; }
+    .btn-purple-post::after {
+      background-color: #7048E8; }
+
+.btn::after {
+  /** add element behind button **/
+  content: "";
+  /** must specify content for it to appear, can be empty **/
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /** Makes element behind previous element **/
+  transition: all 0.4s; }
+
+.btn-animated {
+  animation: moveInBtn 1.2s ease-in-out .75s;
+  animation-fill-mode: backwards;
+  /** automatically hides btn **/ }
+
+.wave-top {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 10rem;
+  transform: translate(0, 1rem); }
+  .wave-top__img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 10rem; }
+
+.wave-bottom {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 10rem; }
+  .wave-bottom__img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 10rem; }
+
+.skill-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2.2em;
+  grid-auto-rows: minmax(100px, auto);
+  justify-items: stretch;
+  align-items: stretch;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 3.5rem; }
+  .skill-grid__item--0 {
+    grid-column: 1/2;
+    grid-row: 1; }
+  .skill-grid__item--1 {
+    grid-column: 1/2;
+    grid-row: 2; }
+  .skill-grid__item--2 {
+    grid-column: 2/3;
+    grid-row: 2; }
+  .skill-grid__item--3 {
+    grid-column: 1/2;
+    grid-row: 3; }
+  .skill-grid__item--4 {
+    grid-column: 2/3;
+    grid-row: 3; }
+  .skill-grid__item--5 {
+    grid-column: 1/2;
+    grid-row: 4; }
+  .skill-grid__item--6 {
+    grid-column: 2/3;
+    grid-row: 4; }
+
+.skill__bar {
+  position: relative;
+  background-color: #dee2e6;
+  width: 100%;
+  height: 1.5rem;
+  border-radius: .75rem;
+  z-index: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; }
+  .skill__bar--progress {
+    position: absolute;
+    background-color: #7048E8;
+    height: 1.5rem;
+    border-radius: .75rem;
+    left: 0;
+    top: 0;
+    z-index: 5; }
+    .skill__bar--progress--1 {
+      width: 96%; }
+    .skill__bar--progress--2 {
+      width: 87%; }
+    .skill__bar--progress--3 {
+      width: 96%; }
+    .skill__bar--progress--4 {
+      width: 57%; }
+    .skill__bar--progress--5 {
+      width: 89%; }
+    .skill__bar--progress--6 {
+      width: 96%; }
+    .skill__bar--progress--7 {
+      width: 98%; }
+
+.card {
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: rgba(67, 72, 78, 0.93);
+  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+  transition: all 0.2s; }
+  .card__text {
+    font-family: "lato", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5%;
+    font-size: 1.3rem;
+    margin-bottom: 1.6rem; }
+  .card__img {
+    width: 100%;
+    height: 18rem; }
+  .card__content {
+    padding: 2rem; }
+  .card__buttons {
+    width: 100%;
+    position: relative;
+    height: 5rem; }
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 6px 20px 0px; }
+
+.tags {
+  width: 80%;
+  margin-bottom: 1rem; }
+  .tags__tag {
+    background-color: #3F4348;
+    width: 20%;
+    height: 2rem;
+    padding: 0.2rem 1.2rem;
+    margin-right: 1rem;
+    border-radius: 2px; }
+    .tags__tag--html {
+      color: #F0582F; }
+    .tags__tag--css {
+      color: #007CC4; }
+    .tags__tag--js {
+      color: #F48031; }
+
+.card__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 4rem; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: #495057;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  display: block;
+  transition: all .3s; }
+  @media (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
+  .form__input-small {
+    width: 50%; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730; }
+  .form__input::-webkit-input-placeholder {
+    color: #dee2e6; }
+
+.form__label {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+  @media (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #7048E8;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.4rem; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7048E8;
+    opacity: 0;
+    transition: opacity .2s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
+.header {
+  position: relative; }
+  .header__background-img {
+    position: absolute;
+    width: initial;
+    height: 80vh;
+    right: 0;
+    top: 0;
+    z-index: -1; }
+  .header__nav {
+    position: absolute;
+    top: 4rem;
+    right: 15rem; }
+    .header__nav-item {
+      font-size: 3rem;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 500;
+      display: inline-block; }
+      .header__nav-item a {
+        color: white; }
+        .header__nav-item a:hover {
+          color: #9c82e7; }
+      .header__nav-item:hover {
+        transform: rotate(3deg) scale(1.1); }
+      .header__nav-item:not(:last-child) {
+        margin-right: 8rem; }
+  .header__logo {
+    position: absolute;
+    color: white;
+    top: 4rem;
+    left: 15rem;
+    font-size: 3rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500; }
+  .header__content {
+    margin: 28vh 0 20rem 15rem;
+    font-weight: 400; }
+    .header__content--title {
+      color: white; }
+    .header__content--subtitle {
+      color: #dee2e6;
+      font-size: 3rem;
+      letter-spacing: 1px; }
+
+.section-about {
+  position: relative;
+  background-color: #495057;
+  text-align: center;
+  color: white; }
+  .section-about__heading {
+    margin-top: 4rem;
+    margin-bottom: 6rem; }
+  .section-about__paragraph {
+    margin: 0 auto 5rem auto;
+    width: 70vw;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 3rem;
+    font-weight: 900; }
+
+.skills {
+  box-sizing: border-box;
+  padding: 15rem 20vw 5rem 20vw;
+  color: white;
+  margin-bottom: 5rem;
+  position: relative; }
+  .skills__img {
+    position: absolute;
+    right: 18vw;
+    top: 15rem; }
+
+.portfolio {
+  background-color: #495057;
+  box-sizing: border-box;
+  padding: 0vh 20vw 0rem 20vw;
+  color: white;
+  position: relative; }
+
+.contact {
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  margin: 0 20vw 20rem 20vw;
+  text-align: left; }
+  .contact__img {
+    position: absolute;
+    right: -5vw;
+    top: 8rem; }
+
+.footer {
+  position: relative;
+  background-color: #22262b;
+  text-align: center;
+  color: white;
+  text-align: left;
+  padding: 10rem 20vw; }
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 4.5rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500; }
+  .footer__nav {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 8rem 0; }
+    .footer__nav-item {
+      font-size: 2.5rem;
+      font-family: "lato", sans-serif;
+      font-weight: 400;
+      display: inline-block; }
+      .footer__nav-item a {
+        color: #dee2e6; }
+        .footer__nav-item a:hover {
+          color: #9c82e7; }
+      .footer__nav-item:hover {
+        transform: rotate(3deg) scale(1.1); }
+      .footer__nav-item:not(:last-child) {
+        margin-right: 8rem; }
+  .footer__paragraph {
+    font-size: 2rem;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    color: #dee2e6;
+    margin-bottom: 3rem; }
