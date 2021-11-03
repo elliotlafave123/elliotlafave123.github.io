@@ -160,7 +160,7 @@ h4 {
     top: 0.25rem;
     font-size: 2rem; }
   .btn--card::after {
-    background-color: #7048E8; }
+    background-color: #29175e; }
 
 .btn--git {
   background-color: #33373a;
@@ -184,21 +184,21 @@ h4 {
   font-size: 3rem;
   padding: 1rem 6rem; }
   .btn-purple::after {
-    background-color: #7048E8; }
+    background-color: #29175e; }
   .btn-purple-small {
     font-size: 2rem;
     background-color: #7048E8;
     color: white;
     padding: 1rem 6rem; }
     .btn-purple-small::after {
-      background-color: #7048E8; }
+      background-color: #29175e; }
   .btn-purple-post {
     font-size: 2.2rem;
     background-color: #7048E8;
     color: white;
     padding: 1.5rem 4rem; }
     .btn-purple-post::after {
-      background-color: #7048E8; }
+      background-color: #29175e; }
 
 .btn::after {
   /** add element behind button **/
@@ -487,6 +487,38 @@ h4 {
 
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
+
+.liquid {
+  position: relative;
+  height: 8rem; }
+  .liquid h1 {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 400;
+    letter-spacing: 6px; }
+    .liquid h1:nth-child(1) {
+      z-index: -1;
+      color: #dee2e6;
+      text-shadow: -2px 2px 0px #29175e, -4px 4px 0px #29175e, -6px 6px 0px #29175e, -8px 8px 0px #29175e, -4px 10px 20px rgba(0, 0, 0, 0.5); }
+    .liquid h1:nth-child(2) {
+      color: #7048E8;
+      opacity: 0.3;
+      animation: animate 3s ease-in-out infinite; }
+    .liquid h1:nth-child(3) {
+      color: #7048E8;
+      opacity: 0.5;
+      animation: animate 6s ease-in-out infinite; }
+    .liquid h1:nth-child(4) {
+      color: #7048E8;
+      animation: animate 4s ease-in-out infinite; }
+
+@keyframes animate {
+  0% {
+    clip-path: polygon(0% 0%, 1% 0%, 4% 19%, 7% 29%, 10% 50%, 15% 63%, 19% 70%, 23% 62%, 28% 47%, 31% 26%, 35% 12%, 40% 13%, 46% 13%, 50% 25%, 53% 41%, 56% 43%, 62% 42%, 65% 25%, 69% 9%, 75% 9%, 78% 23%, 80% 49%, 82% 77%, 86% 88%, 89% 88%, 91% 75%, 93% 52%, 96% 24%, 98% 10%, 100% 0%, 100% 100%, 0% 100%); }
+  50% {
+    clip-path: polygon(0 70%, 3% 58%, 5% 55%, 8% 52%, 12% 77%, 15% 90%, 20% 89%, 23% 76%, 26% 53%, 30% 37%, 36% 35%, 41% 54%, 47% 81%, 52% 81%, 56% 72%, 59% 65%, 64% 58%, 69% 69%, 72% 77%, 76% 79%, 79% 69%, 82% 58%, 85% 62%, 86% 62%, 89% 54%, 91% 43%, 94% 39%, 96% 36%, 98% 49%, 100% 63%, 100% 100%, 0% 100%); }
+  100% {
+    clip-path: polygon(0% 0%, 1% 0%, 4% 19%, 7% 29%, 10% 50%, 15% 63%, 19% 70%, 23% 62%, 28% 47%, 31% 26%, 35% 12%, 40% 13%, 46% 13%, 50% 25%, 53% 41%, 56% 43%, 62% 42%, 65% 25%, 69% 9%, 75% 9%, 78% 23%, 80% 49%, 82% 77%, 86% 88%, 89% 88%, 91% 75%, 93% 52%, 96% 24%, 98% 10%, 100% 0%, 100% 100%, 0% 100%); } }
 
 .header {
   position: relative; }
