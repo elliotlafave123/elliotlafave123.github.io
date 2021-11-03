@@ -185,27 +185,41 @@ h4 {
   .btn--git::after {
     background-color: #33373a; }
 
-.btn-purple {
+.btn-purple-landing {
+  position: absolute;
   background-color: #7048E8;
   color: white;
   font-size: 3rem;
+  padding: 1rem 6rem;
+  top: 40vh; }
+  @media (max-width: 75em) {
+    .btn-purple-landing {
+      top: 55vh; } }
+  @media (max-width: 56.25em) {
+    .btn-purple-landing {
+      top: 55vh; } }
+  @media (max-width: 37.5em) {
+    .btn-purple-landing {
+      top: 25vh; } }
+
+.btn-purple::after {
+  background-color: #29175e; }
+
+.btn-purple-small {
+  font-size: 2rem;
+  background-color: #7048E8;
+  color: white;
   padding: 1rem 6rem; }
-  .btn-purple::after {
+  .btn-purple-small::after {
     background-color: #29175e; }
-  .btn-purple-small {
-    font-size: 2rem;
-    background-color: #7048E8;
-    color: white;
-    padding: 1rem 6rem; }
-    .btn-purple-small::after {
-      background-color: #29175e; }
-  .btn-purple-post {
-    font-size: 2.2rem;
-    background-color: #7048E8;
-    color: white;
-    padding: 1.5rem 4rem; }
-    .btn-purple-post::after {
-      background-color: #29175e; }
+
+.btn-purple-post {
+  font-size: 2.2rem;
+  background-color: #7048E8;
+  color: white;
+  padding: 1.5rem 4rem; }
+  .btn-purple-post::after {
+    background-color: #29175e; }
 
 .btn::after {
   /** add element behind button **/
@@ -530,12 +544,16 @@ h4 {
   position: relative; }
   @media (max-width: 37.5em) {
     .liquid {
-      height: 25vh; } }
+      height: 25vh;
+      width: 100%; } }
   .liquid h1 {
     position: absolute;
     font-size: 8rem;
     font-weight: 400;
     letter-spacing: 6px; }
+    @media (max-width: 37.5em) {
+      .liquid h1 {
+        font-size: 6.5rem; } }
     .liquid h1:nth-child(1) {
       z-index: -1;
       color: #dee2e6;
@@ -577,7 +595,8 @@ h4 {
         height: 50vh; } }
     @media (max-width: 37.5em) {
       .header__background-img {
-        height: 30vh; } }
+        height: 0;
+        display: none; } }
   .header__nav {
     position: absolute;
     top: 4rem;
@@ -613,23 +632,47 @@ h4 {
       .header__logo {
         left: 5rem; } }
   .header__content {
-    margin: 28vh 0 20rem 15rem;
-    font-weight: 400; }
+    margin: 30vh 0 20rem 15rem;
+    font-weight: 400;
+    position: relative; }
+    @media (max-width: 75em) {
+      .header__content {
+        margin: 20vh 0 20rem 15rem; } }
     @media (max-width: 56.25em) {
       .header__content {
         margin: 28vh 0 20rem 5rem; } }
+    @media (max-width: 37.5em) {
+      .header__content {
+        margin: 20vh 0 20rem 5rem; } }
     .header__content--title {
-      color: white; }
+      color: white;
+      display: block;
+      position: absolute;
+      top: 0rem; }
       @media (max-width: 75em) {
         .header__content--title {
           width: 50rem; } }
       @media (max-width: 56.25em) {
         .header__content--title {
-          width: 40rem; } }
+          width: 60rem; } }
+      @media (max-width: 37.5em) {
+        .header__content--title {
+          width: 85%; } }
     .header__content--subtitle {
       color: #dee2e6;
       font-size: 3rem;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      position: absolute;
+      top: 20vh; }
+      @media (max-width: 75em) {
+        .header__content--subtitle {
+          top: 40vh; } }
+      @media (max-width: 56.25em) {
+        .header__content--subtitle {
+          top: 35vh; } }
+      @media (max-width: 37.5em) {
+        .header__content--subtitle {
+          top: 30vh; } }
 
 .section-about {
   position: relative;
@@ -747,3 +790,6 @@ h4 {
     font-weight: 300;
     color: #dee2e6;
     margin-bottom: 3rem; }
+
+.section-header {
+  height: 70vh; }
