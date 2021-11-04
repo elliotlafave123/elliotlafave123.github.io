@@ -85,7 +85,8 @@ h3 {
   font-weight: 500;
   font-size: 6rem;
   position: relative;
-  width: fit-content; }
+  width: fit-content;
+  color: white; }
   h3::after {
     content: "";
     background: white;
@@ -123,6 +124,23 @@ h4 {
         height: 8px;
         width: 60%;
         border-radius: 0 4px 4px 0; } }
+
+h5 {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-size: 5rem;
+  position: relative;
+  width: fit-content;
+  color: white; }
+  h5::after {
+    content: "";
+    background: white;
+    position: absolute;
+    bottom: -0.6rem;
+    left: 0;
+    height: 6px;
+    width: 70%;
+    border-radius: 0 4px 4px 0; }
 
 .btn, .btn:link, .btn:visited {
   /** Pseudoelement for links **/
@@ -211,6 +229,15 @@ h4 {
   color: white;
   padding: 1rem 6rem; }
   .btn-purple-small::after {
+    background-color: #29175e; }
+
+.btn-purple-cv {
+  font-size: 2rem;
+  background-color: #7048E8;
+  color: white;
+  padding: 1rem 6rem;
+  margin-left: 2rem; }
+  .btn-purple-cv::after {
     background-color: #29175e; }
 
 .btn-purple-post {
@@ -578,6 +605,40 @@ h4 {
   100% {
     clip-path: polygon(0% 0%, 1% 0%, 4% 19%, 7% 29%, 10% 50%, 15% 63%, 19% 70%, 23% 62%, 28% 47%, 31% 26%, 35% 12%, 40% 13%, 46% 13%, 50% 25%, 53% 41%, 56% 43%, 62% 42%, 65% 25%, 69% 9%, 75% 9%, 78% 23%, 80% 49%, 82% 77%, 86% 88%, 89% 88%, 91% 75%, 93% 52%, 96% 24%, 98% 10%, 100% 0%, 100% 100%, 0% 100%); } }
 
+.nav {
+  position: relative;
+  padding-top: 3rem;
+  height: 8rem; }
+  .nav__links {
+    position: absolute;
+    right: 10rem; }
+    .nav__links--item {
+      font-size: 3rem;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 500;
+      display: inline-block; }
+      .nav__links--item a {
+        color: white; }
+        .nav__links--item a:hover {
+          color: #9c82e7; }
+      .nav__links--item:hover {
+        transform: rotate(3deg) scale(1.1); }
+      .nav__links--item:not(:last-child) {
+        margin-right: 8rem; }
+        @media (max-width: 37.5em) {
+          .nav__links--item:not(:last-child) {
+            margin-right: 2rem; } }
+  .nav__logo {
+    position: absolute;
+    color: white;
+    left: 15rem;
+    font-size: 3rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500; }
+    @media (max-width: 56.25em) {
+      .nav__logo {
+        left: 5rem; } }
+
 .header {
   position: relative; }
   .header__background-img {
@@ -790,6 +851,145 @@ h4 {
     font-weight: 300;
     color: #dee2e6;
     margin-bottom: 3rem; }
+
+.work {
+  padding: 10rem 10vw 0 10vw; }
+  .work__title {
+    width: 100%;
+    position: relative; }
+    .work__title--buttons {
+      float: right;
+      margin-top: 3rem; }
+    .work__title--title {
+      display: inline-block; }
+
+.experience--1 {
+  grid-template-columns: 1fr 7fr 3fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  width: 100%;
+  padding: 3rem 4rem;
+  border: 5px solid #3F454B;
+  border-radius: 1rem;
+  display: grid;
+  gap: 4rem 0;
+  margin-bottom: 8rem; }
+  .experience--1 img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%); }
+
+.experience--2 {
+  grid-template-columns: 1fr 7fr 3fr;
+  grid-template-rows: 1fr 2fr;
+  width: 100%;
+  padding: 3rem 4rem;
+  border: 5px solid #3F454B;
+  border-radius: 1rem;
+  display: grid;
+  gap: 4rem 0; }
+  .experience--2 img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-left: 50%;
+    margin-top: 30%;
+    transform: translate(-50%, -50%); }
+
+.experience__title {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  font-family: "lato", sans-serif;
+  font-size: 4rem;
+  color: white;
+  padding-bottom: 4rem; }
+
+.experience__paragraph {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-family: "lato", sans-serif;
+  font-size: 3rem;
+  color: #dee2e6; }
+
+.experience__won {
+  padding-left: 4rem;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 2.5rem;
+  color: white; }
+
+.experience__date {
+  text-align: right;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 2.5rem;
+  color: #dee2e6; }
+
+.section-education {
+  width: 100%;
+  padding: 10rem 10vw 0 10vw;
+  height: 70vh; }
+
+.education {
+  position: relative; }
+  .education__schools--school {
+    font-size: 3rem;
+    color: #dee2e6;
+    font-family: "Zen Kaku Gothic New", sans-serif; }
+  .education__schools--date {
+    font-size: 2.5rem;
+    color: #dee2e6;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    margin-bottom: 4rem; }
+  .education__title {
+    display: block; }
+  .education__schools {
+    position: absolute;
+    top: 0;
+    width: 49%;
+    display: inline-block; }
+  .education__grades {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 3rem 4rem;
+    border: 5px solid #3F454B;
+    border-radius: 1rem; }
+    .education__grades--title {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 500;
+      font-size: 3rem;
+      position: relative;
+      width: fit-content;
+      color: white; }
+      .education__grades--title::after {
+        content: "";
+        background: white;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        height: 4px;
+        width: 70%;
+        border-radius: 0 4px 4px 0; }
+    .education__grades--subject {
+      font-family: "lato", sans-serif;
+      font-size: 2.5rem;
+      color: #dee2e6;
+      font-weight: 400; }
+    .education__grades--grade {
+      font-family: "lato", sans-serif;
+      font-size: 2.5rem;
+      color: #dee2e6;
+      font-weight: 400; }
 
 .section-header {
   height: 70vh; }

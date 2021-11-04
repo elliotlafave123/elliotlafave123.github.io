@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/873062b8ef.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+        <title>Portfolio</title>
+    </head>
+<body>
+
+    <section class="nav">
+        <p class="nav__logo">Logo</p>
+        <ul class="nav__links">
+            <li class="nav__links--item"><a href="#contactme">Contact Me</a></li>
+            <li class="nav__links--item"><a href="#">CV</a></li>
+            <li class="nav__links--item"><a href="#portfolio">Portfolio</a></li>
+        </ul>
+    </section>
+
+    <section class="work">
+        <div class="work__title">
+            <h3 class="work__title--title u-margin-bottom-large">My CV</h3>
+            <div class="work__title--buttons">
+                <a href="#" class="btn btn-purple btn-purple-cv ">Download CV</a>
+                <a href="#" class="btn btn-purple btn-purple-cv ">Linkedin</a>
+            </div>
+        </div>
+        <h5 class="skills__header u-margin-bottom-large">Work Experience</h5>
+        <div class="experience--1">
+            <p class="experience__title">Edge Restaurants NW LTD (McDonalds)</p>
+            <img src="img/pin.png" alt="">
+            <p class="experience__paragraph">13 Rowlandsway, Civic Centre, Wythenshawe, Manchester, M22 5RG</p>
+            <ul class="experience__won"><li>Won employee of the quarter.</li></ul>
+            <p class="experience__date">13/08/2019 - Present</p>
+        </div>
+
+        <div class="experience--2">
+            <p class="experience__title">Hitec Computers LTD </p>
+            <img src="img/pin.png" alt="">
+            <p class="experience__paragraph">84 High St, Cheadle SK8 1AE</p>
+            <p class="experience__date">05/06/2015 – 27/09/2015</p>
+        </div>
+    </section>
+
+    <section class="section-education">
+        <div class="education">
+            <div class="education__schools">
+                <h5 class="education__title--title u-margin-bottom-large">Education</h5>
+                <p class="education__schools--school">Outwood Primary School</p>
+                <p class="education__schools--date">2007 - 2012</p>
+                <p class="education__schools--school">The Kingsway School</p>
+                <p class="education__schools--date">2012 - 2017</p>
+            </div>
+            <div class="education__grades">
+                <p class="education__grades--title">GCSE Grades</p>
+                <span>&nbsp;</span>
+                <p class="education__grades--subject">Computer Science</p>
+                <p class="education__grades--grade">7</p>
+                <p class="education__grades--subject">Business</p>
+                <p class="education__grades--grade">5</p>
+                <p class="education__grades--subject">Mathematics</p>
+                <p class="education__grades--grade">5</p>
+                <p class="education__grades--subject">Combined Science Higher</p>
+                <p class="education__grades--grade">5, 5</p>
+                <p class="education__grades--subject">English Language</p>
+                <p class="education__grades--grade">5</p>
+            </div>
+        </div>    
+    </section>
+
+
+    <section class="skills">
+        <img src="img/percentages.png" alt="" class="skills__img">
+        <h3 class="skills__header u-margin-bottom-large">My Skills</h3>
+        <div class="skill-grid">
+            <div class="skill-grid__item--0">
+                <p class="skill__name">HTML</p>
+                <div class="skill__bar"><div class="skill__bar--progress skill__bar--progress--1"></div></div>
+            </div>
+            <div class="skill-grid__item--1">
+                <p class="skill__name">CSS</p>
+                <div class="skill__bar"><div class="skill__bar--progress skill__bar--progress--2"></div></div>
+            </div>    
+            <div class="skill-grid__item--2">
+                <p class="skill__name">Time Management</p>
+                <div class="skill__bar"><div class="skill__bar--progress skill__bar--progress--3"></div></div>
+            </div>    
+            <div class="skill-grid__item--3">
+                <p class="skill__name">Javascript</p>
+                <div class="skill__bar"><div class="skill__bar--progress skill__bar--progress--4"></div></div>
+            </div>    
+            <div class="skill-grid__item--4">
+                <p class="skill__name">Phone Etiquette</p>
+                <div class="skill__bar"><div class="skill__bar--progress skill__bar--progress--5"></div></div>
+            </div>    
+            <div class="skill-grid__item--5">
+                <p class="skill__name">Customer Service</p>
+                <div class="skill__bar"><div class="skill__bar--progress skill__bar--progress--6"></div></div>
+            </div>    
+            <div class="skill-grid__item--6">
+                <p class="skill__name">Typing Speed</p>
+                <div class="skill__bar"><div class="skill__bar--progress skill__bar--progress--7"></div></div>
+            </div>           
+        </div>
+    </section>
+
+    <section class="contact">
+        <img src="img/contact.png" alt="" class="contact__img" >
+        <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
+        <div class="contact__form">
+            <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact">
+                <div class="form__group">
+                    <input type="text" class="form__input form__input-small" placeholder="Full name" id="name" required>
+                    <label for="name" class="form__label">Full name</label>
+                </div>
+
+                <div class="form__group" >
+                    <input type="email" class="form__input form__input-small" placeholder="Email address" id="email" required>
+                    <label for="email" class="form__label">Email address</label>
+                </div>
+
+                <div class="form__group">
+                    <label for="message" class="form__label u-margin-bottom-small">Your message</label>
+                    <textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" required></textarea>
+                </div>
+
+                <button class="btn btn-purple-post u-margin-top-small">Send Message! &nbsp; &rarr;</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="wave-top">
+        <img src="img/wave5.png" alt="" class="wave-bottom__img">
+    </div>
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <p>Logo</p>
+        </div>
+        <ul class="footer__nav">
+            <li class="footer__nav-item"><a href="#contactme">Contact Me</a></li>
+            <li class="footer__nav-item"><a href="#">CV</a></li>
+            <li class="footer__nav-item"><a href="#portfolio">Portfolio</a></li>
+        </ul>
+        <p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
+        <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
+    </footer>
+</body>
+</html>
