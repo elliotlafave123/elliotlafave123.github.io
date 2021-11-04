@@ -142,6 +142,24 @@ h5 {
     width: 70%;
     border-radius: 0 4px 4px 0; }
 
+::-webkit-scrollbar {
+  width: 18px;
+  margin: 1px; }
+
+::-webkit-scrollbar-track {
+  background: rgba(52, 58, 64, 0.9); }
+
+::-webkit-scrollbar-thumb {
+  background: #7048E8;
+  border-radius: 100vw;
+  border: 3px solid #343a40; }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7c50ff; }
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: #7048E8 #343a40; } }
+
 .btn, .btn:link, .btn:visited {
   /** Pseudoelement for links **/
   text-transform: uppercase;
