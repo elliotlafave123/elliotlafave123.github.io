@@ -838,6 +838,9 @@ h5 {
   color: white;
   text-align: left;
   padding: 10rem 20vw; }
+  @media (max-width: 37.5em) {
+    .footer {
+      padding: 8rem 5rem; } }
   .footer__logo {
     display: flex;
     justify-content: center;
@@ -849,6 +852,11 @@ h5 {
     display: flex;
     justify-content: center;
     margin: 5rem 0 8rem 0; }
+    @media (max-width: 37.5em) {
+      .footer__nav {
+        flex-direction: column;
+        margin: 5rem 0 8rem 0;
+        align-items: center; } }
     .footer__nav-item {
       font-size: 2.5rem;
       font-family: "lato", sans-serif;
@@ -858,10 +866,17 @@ h5 {
         color: #dee2e6; }
         .footer__nav-item a:hover {
           color: #9c82e7; }
+      @media (max-width: 37.5em) {
+        .footer__nav-item {
+          font-size: 3.5rem; } }
       .footer__nav-item:hover {
         transform: rotate(3deg) scale(1.1); }
       .footer__nav-item:not(:last-child) {
         margin-right: 8rem; }
+        @media (max-width: 37.5em) {
+          .footer__nav-item:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 3rem; } }
   .footer__paragraph {
     font-size: 2rem;
     text-align: center;
