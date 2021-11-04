@@ -17,13 +17,24 @@
 
     <section class="section-header">
         <img src="img/header-img.png" alt="" class="header__background-img">
-        <section class="nav">
-            <p class="nav__logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></p>
-            <ul class="nav__links">
-                <li class="nav__links--item"><a href="#contactme">Contact Me</a></li>
-                <li class="nav__links--item"><a href="CV.html">CV</a></li>
-                <li class="nav__links--item"><a href="#portfolio">Portfolio</a></li>
-            </ul>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><label for="navi-toggle-2">
+                        <a href="#contactme" class="navigation__link">Contact Me</label></a>
+                    </label></li>
+                    <li class="navigation__item"><a href="CV.html" class="navigation__link">My CV</a></li>
+                    <li class="navigation__item"><a href="#portfolio" class="navigation__link">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
         </section>
 
         <div class="header__content">
@@ -145,8 +156,9 @@
                     </div>                  
                 </div>
             </div>
-        </div>    
-        <a href="#" class="btn btn-purple btn-purple-small u-margin-bottom-medium">All projects</a>
+        </div> 
+        <span class="u-margin-bottom-large">&nbsp;</span>   
+        <!--   <a href="#" class="btn btn-purple btn-purple-small u-margin-bottom-medium">All projects</a>    -->   
     </section>
 
     <div class="wave-bottom">

@@ -15,14 +15,19 @@
     </head>
 <body>
 
-    <section class="nav"> 
-        <p class="nav__logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></p>
-        <ul class="nav__links">
-            <li class="nav__links--item"><a href="#contactme">Contact Me</a></li>
-            <li class="nav__links--item"><a href="CV.html">CV</a></li>
-            <li class="nav__links--item"><a href="index.html#portfolio">Portfolio</a></li>
-        </ul>
-    </section>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#contactme" class="navigation__link">Contact Me</a></li>
+                <li class="navigation__item"><a href="CV.html" class="navigation__link">My CV</a></li>
+                <li class="navigation__item"><a href="index.html#portfolio" class="navigation__link">Portfolio</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <section class="work">
         <div class="work__title">
