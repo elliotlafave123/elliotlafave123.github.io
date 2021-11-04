@@ -1060,5 +1060,19 @@ h5 {
       color: #dee2e6;
       font-weight: 400; }
 
+.section-achievements {
+  width: 100%;
+  padding: 10rem 10vw 0 10vw; }
+
+.achievements__paragraph {
+  width: 60%;
+  font-family: "lato", sans-serif;
+  color: #dee2e6;
+  font-size: 3rem;
+  font-weight: 300; }
+  @media (max-width: 37.5em) {
+    .achievements__paragraph {
+      width: 100%; } }
+
 .section-header {
   height: 70vh; }
