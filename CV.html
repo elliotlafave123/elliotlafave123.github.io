@@ -20,24 +20,39 @@
         <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
         <div class="navigation__background">&nbsp;</div>
 
+        <ul class="desktop__nav">
+            <li class="desktop__nav-item"><a href="#contactme">Contact Me</a></li>
+            <li class="desktop__nav-item"><a href="CV.html">My CV</a></li>
+            <li class="desktop__nav-item"><a href="index.html#portfolio">Portfolio</a></li>
+        </ul>
+
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#contactme" class="navigation__link">Contact Me</a></li>
+                <li class="navigation__item"><label for="navi-toggle-2">
+                    <a href="#contactme" class="navigation__link">Contact Me</label></a>
+                </label></li>
                 <li class="navigation__item"><a href="CV.html" class="navigation__link">My CV</a></li>
-                <li class="navigation__item"><a href="index.html#portfolio" class="navigation__link">Portfolio</a></li>
+                <li class="navigation__item"><a href="#portfolio" class="navigation__link">Portfolio</a></li>
             </ul>
         </nav>
-    </div>
+
+        <section class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+        </section>
 
     <section class="work">
-        <div class="work__title">
+        <div class="work__title u-margin-bottom-medium">
             <h3 class="work__title--title u-margin-bottom-large">My CV</h3>
             <div class="work__title--buttons">
                 <a href="Files/CV .docx" class="btn btn-purple btn-purple-cv ">Download CV</a>
-                <a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" class="btn btn-purple btn-purple-cv " target="blank">Linkedin</a>
+                <a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" class="btn btn-purple btn-purple-cv u-margin-bottom-medium " target="blank">Linkedin</a>
             </div>
         </div>
-        <h5 class="skills__header u-margin-bottom-large">Work Experience</h5>
+    </section>
+
+    <section class="experience">
+        <div class="experience__main--title"><h5>Work experience</h5></div>
+
         <div class="experience--1">
             <p class="experience__title">Edge Restaurants NW LTD (McDonalds)</p>
             <img src="img/pin.png" alt="">
@@ -161,8 +176,8 @@
         </div>
         <ul class="footer__nav">
             <li class="footer__nav-item"><a href="#contactme">Contact Me</a></li>
-            <li class="footer__nav-item"><a href="index.html#portfolio">CV</a></li>
-            <li class="footer__nav-item"><a href="#portfolio">Portfolio</a></li>
+            <li class="footer__nav-item"><a href="#">CV</a></li>
+            <li class="footer__nav-item"><a href="index.html#portfolio">Portfolio</a></li>
         </ul>
         <p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
         <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
