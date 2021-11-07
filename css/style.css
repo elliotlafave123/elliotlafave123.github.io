@@ -75,6 +75,17 @@ body {
   font-weight: 400;
   line-height: 1.7; }
 
+hr {
+  width: 5vw;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1rem dotted #22262b;
+  margin: 1rem auto; }
+  @media (max-width: 75em) {
+    hr {
+      width: 10vw; } }
+
 h2 {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 500;
@@ -221,6 +232,26 @@ h5 {
   .btn--git::after {
     background-color: #33373a; }
 
+.btn--github {
+  font-size: 2rem;
+  background-color: #33373a;
+  color: white;
+  padding: 1rem 6rem;
+  margin-right: 2rem; }
+  @media (max-width: 75em) {
+    .btn--github {
+      margin-bottom: 2rem; } }
+  .btn--github::after {
+    background-color: #33373a; }
+  .btn--github img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5rem;
+    transform: translate(-50%, -50%); }
+  .btn--github::after {
+    background-color: #33373a; }
+
 .btn-purple-landing {
   background-color: #7048E8;
   color: white;
@@ -244,7 +275,11 @@ h5 {
   font-size: 2rem;
   background-color: #7048E8;
   color: white;
-  padding: 1rem 6rem; }
+  padding: 1rem 6rem;
+  margin-right: 2rem; }
+  @media (max-width: 75em) {
+    .btn-purple-small {
+      margin-bottom: 2rem; } }
   .btn-purple-small::after {
     background-color: #29175e; }
 
@@ -648,6 +683,122 @@ h5 {
       .logo-img {
         margin-left: 2.5rem;
         font-size: 2.2rem; } }
+
+.portfolio-page {
+  box-sizing: border-box;
+  padding: 0vh 10vw 0rem 10vw;
+  color: white;
+  position: relative; }
+  @media (max-width: 37.5em) {
+    .portfolio-page {
+      padding: 0vh 5rem 0rem 5rem; } }
+  .portfolio-page__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-wrap: wrap; }
+  .portfolio-page__project {
+    width: 100%;
+    padding: 3rem 4rem;
+    border: 5px solid #3F454B;
+    border-radius: 1rem; }
+    .portfolio-page__project--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      @media (max-width: 56.25em) {
+        .portfolio-page__project--grid {
+          grid-template-columns: 1fr; } }
+    @media (max-width: 56.25em) {
+      .portfolio-page__project--heading {
+        font-size: 3rem; } }
+    .portfolio-page__project--paragraph {
+      font-size: 2.5rem; }
+    .portfolio-page__project--img-container {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .portfolio-page__project--img {
+      width: 75%;
+      position: relative;
+      transition: all 0.3s; }
+      .portfolio-page__project--img:hover {
+        transform: scale(1.1); }
+    .portfolio-page__project--buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      .portfolio-page__project--buttons--text {
+        font-size: 1.6rem;
+        color: lime; }
+        @media (max-width: 56.25em) {
+          .portfolio-page__project--buttons--text {
+            display: none; } }
+  .portfolio-page__typography--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem; }
+    @media (max-width: 56.25em) {
+      .portfolio-page__typography--grid {
+        grid-template-columns: 1fr; } }
+  .portfolio-page__typography--fonts {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+  .portfolio-page__typography--font {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 8rem; }
+    @media (max-width: 56.25em) {
+      .portfolio-page__typography--font {
+        font-size: 7rem; } }
+    @media (max-width: 37.5em) {
+      .portfolio-page__typography--font {
+        font-size: 4rem; } }
+    .portfolio-page__typography--font--100 {
+      font-weight: 100; }
+    .portfolio-page__typography--font--300 {
+      font-weight: 300; }
+    .portfolio-page__typography--font--400 {
+      font-weight: 400; }
+    .portfolio-page__typography--font--700 {
+      font-weight: 700; }
+    .portfolio-page__typography--font--900 {
+      font-weight: 900; }
+  .portfolio-page__typography--side {
+    font-size: 1.5rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 100;
+    margin-top: 3.2rem; }
+  .portfolio-page__colors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; }
+    .portfolio-page__colors--container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+    .portfolio-page__colors--circle {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      content: ''; }
+      .portfolio-page__colors--circle--natours1 {
+        background-color: #7ED56F; }
+      .portfolio-page__colors--circle--natours2 {
+        background-color: #55C57A; }
+      .portfolio-page__colors--circle--natours3 {
+        background-color: #28B485; }
+      .portfolio-page__colors--circle--natours4 {
+        background-color: #FFFFFF; }
+    .portfolio-page__colors--hex {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 300;
+      font-size: 2.5rem;
+      margin-top: 1rem; }
+    .portfolio-page__colors--title {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-weight: 400;
+      font-size: 3rem; }
 
 .desktop__nav {
   display: flex;
