@@ -450,6 +450,8 @@ h5 {
   background-color: rgba(67, 72, 78, 0.93);
   box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
   transition: all 0.2s; }
+  .card--2 {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 30px 0px; }
   @media (max-width: 56.25em) {
     .card {
       max-width: 100%; } }
@@ -477,6 +479,9 @@ h5 {
   .card:hover {
     transform: scale(1.02);
     box-shadow: rgba(100, 100, 111, 0.3) 0px 6px 20px 0px; }
+  .card--2:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 20px 0px; }
 
 .tags {
   width: 80%;
@@ -1103,6 +1108,8 @@ h5 {
   @media (max-width: 37.5em) {
     .portfolio {
       padding: 0vh 5rem 0rem 5rem; } }
+  .portfolio--2 {
+    background-color: transparent; }
 
 .contact {
   position: relative;
