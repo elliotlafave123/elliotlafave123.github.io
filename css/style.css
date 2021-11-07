@@ -706,7 +706,8 @@ h5 {
     width: 100%;
     padding: 3rem 4rem;
     border: 5px solid #3F454B;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    margin-bottom: 5rem; }
     .portfolio-page__project--grid {
       display: grid;
       grid-template-columns: 1fr 1fr; }
@@ -760,14 +761,25 @@ h5 {
         font-size: 4rem; } }
     .portfolio-page__typography--font--100 {
       font-weight: 100; }
+    .portfolio-page__typography--font--200 {
+      font-weight: 200; }
     .portfolio-page__typography--font--300 {
       font-weight: 300; }
     .portfolio-page__typography--font--400 {
       font-weight: 400; }
+    .portfolio-page__typography--font--500 {
+      font-weight: 500; }
+    .portfolio-page__typography--font--600 {
+      font-weight: 600; }
     .portfolio-page__typography--font--700 {
       font-weight: 700; }
+    .portfolio-page__typography--font--800 {
+      font-weight: 800; }
     .portfolio-page__typography--font--900 {
       font-weight: 900; }
+    .portfolio-page__typography--font--open-sans {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 5.5rem; }
   .portfolio-page__typography--side {
     font-size: 1.5rem;
     font-family: "Zen Kaku Gothic New", sans-serif;
@@ -795,6 +807,14 @@ h5 {
         background-color: #28B485; }
       .portfolio-page__colors--circle--natours4 {
         background-color: #FFFFFF; }
+      .portfolio-page__colors--circle--trillo1 {
+        background-color: #eb2f64; }
+      .portfolio-page__colors--circle--trillo2 {
+        background-color: #c3285e; }
+      .portfolio-page__colors--circle--trillo3 {
+        background-color: #333333; }
+      .portfolio-page__colors--circle--trillo4 {
+        background-color: #f4f2f2; }
     .portfolio-page__colors--hex {
       font-family: "Zen Kaku Gothic New", sans-serif;
       font-weight: 300;
