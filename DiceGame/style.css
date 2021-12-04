@@ -28,8 +28,10 @@ main {
   width: 100rem;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
-  filter: blur();
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  -webkit-filter: blur();
+          filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   overflow: hidden;
@@ -116,14 +118,15 @@ main {
 
   background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.btn::first-letter {
+span {
   font-size: 2.4rem;
   display: inline-block;
   margin-right: 0.7rem;
@@ -168,4 +171,122 @@ main {
 
 .hidden {
   display: none;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 1000px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+    align-items: flex-start;
+  }
+  
+  main {
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .player {
+    flex:auto;
+    padding:0;
+  }
+
+  .current {
+    background-color: #c7365f;
+    opacity: 0.8;
+    border-radius: 6px;
+    color: #fff;
+    width: 40%;
+    padding: .8rem;
+    text-align: center;
+    transition: all 0.75s;
+    margin-bottom: 3rem;
+  }
+  
+  .current-label {
+    text-transform: uppercase;
+    margin: 0.5rem;
+    font-size: 1.7rem;
+    color: #ddd;
+  }
+  
+  .current-score {
+    font-size: 3.5rem;
+  }
+
+  .name {
+    position: relative;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .score {
+    font-size: 8rem;
+    font-weight: 300;
+    color: #c7365f;
+    margin-bottom: auto;
+  }
+
+  .btn--new {
+    top: 13vh;
+    left: 12rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-animation: fadeinLoad 1s 1.3s forwards;
+    animation: fadeinLoad 1s 1.3s forwards;
+  }
+  .btn--roll {
+    top: unset;
+    bottom: 11vh;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .btn--hold {
+  top:unset;
+    bottom: 2.5vh;
+  }
+
+  .player--0 {
+    padding-bottom: 3rem;
+  }
+
+  .player--1 {
+    padding-top: 3rem;
+  }
+
+  .dice {
+    position: absolute;
+    left: 50%;
+    top: 35vh;
+    transform: translateX(-50%);
+    height: 9rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  }
+} 
+
+@keyframes fadeinLoad {
+  from {
+    left:12rem;
+  }
+  to {
+    left:-2rem;
+  }
+}
+
+@-webkit-keyframes fadeinLoad {
+  from {
+    left:12rem;
+  }
+  to {
+    left:-2rem;
+  }
 }
