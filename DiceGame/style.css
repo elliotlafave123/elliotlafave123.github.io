@@ -173,6 +173,8 @@ span {
   display: none;
 }
 
+
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 1000px) {
   body {
@@ -183,7 +185,7 @@ span {
   
   main {
     flex-direction: column;
-    height: 80vh;
+    height: 74vh;
     width: 100%;
     border-radius: 0;
   }
@@ -208,17 +210,17 @@ span {
   .current-label {
     text-transform: uppercase;
     margin: 0.5rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #ddd;
   }
   
   .current-score {
-    font-size: 3.5rem;
+    font-size: 2.3rem;
   }
 
   .name {
     position: relative;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 2px;
@@ -228,7 +230,7 @@ span {
   }
   
   .score {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 300;
     color: #c7365f;
     margin-bottom: auto;
@@ -245,33 +247,58 @@ span {
   }
   .btn--roll {
     top: unset;
-    bottom: 11vh;
+    bottom: 16vh;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
   .btn--hold {
   top:unset;
-    bottom: 2.5vh;
+    bottom: 7vh;
   }
 
   .player--0 {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 
   .player--1 {
-    padding-top: 3rem;
+    padding-top: 2rem;
   }
 
   .dice {
     position: absolute;
     left: 50%;
-    top: 35vh;
+    top: 43.4%;
     transform: translateX(-50%);
     height: 9rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
   }
 } 
+
+@media only screen and (max-width:450px) {
+  .score {
+    font-size: 5rem;
+  }
+
+  .name {
+    position: relative;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width:380px) {
+  .dice {
+    top:42%;
+  }
+
+  .player--0 {
+    padding-bottom: 2.4rem;
+  }
+
+  .player--1 {
+    padding-top: 2.4rem;
+  }
+}
 
 @keyframes fadeinLoad {
   from {
