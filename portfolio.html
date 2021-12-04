@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+        <link rel="shortcut icon" href="img/logo.png"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -51,139 +51,189 @@
             <a href="https://codepen.io/elliotlafave123" class="btn btn-purple-small">Codepen</a>
         </div>
 
-        <div class="portfolio-page__project">
-            <div class="portfolio-page__project--grid u-margin-bottom-medium">
-                <div class="portfolio-page__project--content">
-                    <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Natours</h5>
-                    <p class="portfolio-page__project--paragraph">I coded a website that sells nature tours. To create the site I used HTML, CSS and SCSS. I created animations with @keyframes and transitions using custom cubic-bezier timing functions.</p>
-                </div>
-                <div class="portfolio-page__project--img-container">
-                    <img src="img/Responsive-natours.png" alt="Responsive design showcase image" class="portfolio-page__project--img">
-                </div>
+        <div class="mobile-only u-margin-bottom-xlarge">
+            <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Natours</h5>
+            <div class="portfolio-page__project--img-container">
+                <img src="img/Responsive-natours.png" alt="Responsive design showcase image" class="portfolio-page__project--img">
             </div>
-            <div class="portfolio-page__project--buttons u-margin-bottom-large">
-                <a href="natours/index.html" class="btn btn-purple-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+            <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I coded a website that sells nature tours. To create the site I used HTML, CSS and SCSS. I created animations with @keyframes and transitions using custom cubic-bezier timing functions.</p>
+            <div class="tags">
+                <span class="tags__tag tags__tag--html">HTML</span>
+                <span class="tags__tag tags__tag--css">CSS</span>
+                <span class="tags__tag tags__tag--scss">SCSS</span>
+            </div> 
+            <div class="portfolio-page__project--buttons u-margin-top-medium">
+                <a href="natours/index.html" class="btn btn-purple-small u-margin-bottom-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
                 <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/natours" class="btn btn--github" target="blank">Github</a>
                 <span class="portfolio-page__project--buttons--text">&larr; &nbsp; &nbsp;See the code</span>
+            </div> 
+          </div>
+
+          <div class="mobile-only">
+            <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Trillo</h5>
+            <div class="portfolio-page__project--img-container">
+                <img src="img/Responsive-trillo.png" alt="Responsive design showcase image" class="portfolio-page__project--img">
             </div>
-
-            <hr>
-            <h5 class="portfolio-page__project--heading u-margin-bottom-medium u-margin-top-medium">Colors and Typography</h5>
-
-            <div class="portfolio-page__typography--grid">
-
-                <div class="portfolio-page__typography--fonts">
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">100 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--100">Lato</p>
-                    </div>
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">700 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--700">Lato</p>
-                    </div>
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">300 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--300">Lato</p>
-                    </div>
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">900 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--900">Lato</p>
-                    </div>
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">400 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--400">Lato</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-page__colors">
-                    <div class="portfolio-page__colors--container">
-                        <div class="portfolio-page__colors--circle portfolio-page__colors--circle--natours1"></div>
-                        <p class="portfolio-page__colors--hex">#7ED56F</p>
-                        <p class="portfolio-page__colors--title">Fresh Green</p>
-                    </div>
-                    <div class="portfolio-page__colors--container">
-                        <div class="portfolio-page__colors--circle portfolio-page__colors--circle--natours2"></div>
-                        <p class="portfolio-page__colors--hex">#55C57A</p>
-                        <p class="portfolio-page__colors--title">Paris Green</p>
-                    </div>
-                    <div class="portfolio-page__colors--container">
-                        <div class="portfolio-page__colors--circle portfolio-page__colors--circle--natours3"></div>
-                        <p class="portfolio-page__colors--hex">#28B485</p>
-                        <p class="portfolio-page__colors--title">Dark Seafoam</p>
-                    </div>
-                    <div class="portfolio-page__colors--container">
-                        <div class="portfolio-page__colors--circle portfolio-page__colors--circle--natours4"></div>
-                        <p class="portfolio-page__colors--hex">#FFFFFF</p>
-                        <p class="portfolio-page__colors--title">White</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="portfolio-page__project">
-            <div class="portfolio-page__project--grid u-margin-bottom-medium">
-                <div class="portfolio-page__project--content">
-                    <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Trillo</h5>
-                    <p class="portfolio-page__project--paragraph">I programmed a web application that sells hotels and flights. I used HTML and SCSS for the design and mainly used CSS Flexbox to create the layout. The design is 100% responsive (works on all devices)</p>
-                </div>
-                <div class="portfolio-page__project--img-container">
-                    <img src="img/Responsive-trillo.png" alt="Responsive design showcase image" class="portfolio-page__project--img">
-                </div>
-            </div>
-            <div class="portfolio-page__project--buttons u-margin-bottom-large">
-                <a href="trillo/index.html" class="btn btn-purple-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+            
+            <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I programmed a web application that sells hotels and flights. I used HTML and SCSS for the design and mainly used CSS Flexbox to create the layout. The design is 100% responsive (works on all devices)</p>
+            <div class="tags">
+                <span class="tags__tag tags__tag--html">HTML</span>
+                <span class="tags__tag tags__tag--css">CSS</span>
+                <span class="tags__tag tags__tag--scss">SCSS</span>
+            </div> 
+            <div class="portfolio-page__project--buttons u-margin-top-medium">
+                <a href="trillo/index.html" class="btn btn-purple-small u-margin-bottom-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
                 <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/trillo" class="btn btn--github" target="blank">Github</a>
                 <span class="portfolio-page__project--buttons--text">&larr; &nbsp; &nbsp;See the code</span>
             </div>
+          </div>   
 
-            <hr>
-            <h5 class="portfolio-page__project--heading u-margin-bottom-medium u-margin-top-medium">Colors and Typography</h5>
+        <div class="slider-container">
+            <div class="left-slide">
+              <div>
+                <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Natours</h5>
+                <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I coded a website that sells nature tours. To create the site I used HTML, CSS and SCSS. I created animations with @keyframes and transitions using custom cubic-bezier timing functions.</p>
+                <div class="tags">
+                    <span class="tags__tag tags__tag--html">HTML</span>
+                    <span class="tags__tag tags__tag--css">CSS</span>
+                    <span class="tags__tag tags__tag--scss">SCSS</span>
+                </div> 
+                <div class="portfolio-page__project--buttons u-margin-top-medium">
+                    <a href="natours/index.html" class="btn btn-purple-small u-margin-bottom-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/natours" class="btn btn--github" target="blank">Github</a>
+                    <span class="portfolio-page__project--buttons--text">&larr; &nbsp; &nbsp;See the code</span>
+                </div> 
+              </div>
 
-            <div class="portfolio-page__typography--grid">
-
-                <div class="portfolio-page__typography--fonts">
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">300 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--300 portfolio-page__typography--font--open-sans">Open Sans</p>
-                    </div>
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">500 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--500 portfolio-page__typography--font--open-sans">Open Sans</p>
-                    </div>
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">400 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--400 portfolio-page__typography--font--open-sans">Open Sans</p>
-                    </div>
-                    <div class="portfolio-page__typography--font">
-                        <p class="portfolio-page__typography--side">600 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
-                        <p class="portfolio-page__typography--font--600 portfolio-page__typography--font--open-sans">Open Sans</p>
-                    </div>
+              <div>
+                <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Trillo</h5>
+                <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I programmed a web application that sells hotels and flights. I used HTML and SCSS for the design and mainly used CSS Flexbox to create the layout. The design is 100% responsive (works on all devices)</p>
+                <div class="tags">
+                    <span class="tags__tag tags__tag--html">HTML</span>
+                    <span class="tags__tag tags__tag--css">CSS</span>
+                    <span class="tags__tag tags__tag--scss">SCSS</span>
+                </div> 
+                <div class="portfolio-page__project--buttons u-margin-top-medium">
+                    <a href="trillo/index.html" class="btn btn-purple-small u-margin-bottom-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/trillo" class="btn btn--github" target="blank">Github</a>
+                    <span class="portfolio-page__project--buttons--text">&larr; &nbsp; &nbsp;See the code</span>
                 </div>
-
-                <div class="portfolio-page__colors">
-                    <div class="portfolio-page__colors--container">
-                        <div class="portfolio-page__colors--circle portfolio-page__colors--circle--trillo1"></div>
-                        <p class="portfolio-page__colors--hex">#eb2f64</p>
-                        <p class="portfolio-page__colors--title">Amaranth</p>
-                    </div>
-                    <div class="portfolio-page__colors--container">
-                        <div class="portfolio-page__colors--circle portfolio-page__colors--circle--trillo2"></div>
-                        <p class="portfolio-page__colors--hex">#c3285e</p>
-                        <p class="portfolio-page__colors--title">Burnt Pink</p>
-                    </div>
-                    <div class="portfolio-page__colors--container">
-                        <div class="portfolio-page__colors--circle portfolio-page__colors--circle--trillo3"></div>
-                        <p class="portfolio-page__colors--hex">#333333</p>
-                        <p class="portfolio-page__colors--title">Dune</p>
-                    </div>
-                    <div class="portfolio-page__colors--container">
-                        <div class="portfolio-page__colors--circle portfolio-page__colors--circle--trillo4"></div>
-                        <p class="portfolio-page__colors--hex">#f4f2f2</p>
-                        <p class="portfolio-page__colors--title">Porcelain</p>
-                    </div>
-                </div>
+              </div>            
             </div>
-        </div>
+      
+            <div class="right-slide">
+                <section class="right-slide__container" style="background-color: #CA295F;">
+                    <div class="slide__img">
+                        <img src="img/Responsive-trillo.png" alt="Responsive design showcase image" class="portfolio-page__project--img">
+                    </div>
+                    <div class="slide__fonts slide__fonts-trillo">
+                        <div class="portfolio-page__typography--fonts">
+                            <div class="portfolio-page__typography--font">
+                                <p class="portfolio-page__typography--side">300 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                                <p class="portfolio-page__typography--font--300 portfolio-page__typography--font--open-sans">Open Sans</p>
+                            </div>
+                            <div class="portfolio-page__typography--font">
+                                <p class="portfolio-page__typography--side">500 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                                <p class="portfolio-page__typography--font--500 portfolio-page__typography--font--open-sans">Open Sans</p>
+                            </div>
+                            <div class="portfolio-page__typography--font">
+                                <p class="portfolio-page__typography--side">400 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                                <p class="portfolio-page__typography--font--400 portfolio-page__typography--font--open-sans">Open Sans</p>
+                            </div>
+                            <div class="portfolio-page__typography--font">
+                                <p class="portfolio-page__typography--side">600 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                                <p class="portfolio-page__typography--font--600 portfolio-page__typography--font--open-sans">Open Sans</p>
+                            </div>
+                        </div>
+        
+                        <div class="portfolio-page__colors">
+                            <div class="portfolio-page__colors--container">
+                                <div class="portfolio-page__colors--circle portfolio-page__colors--circle--trillo1"></div>
+                                <p class="portfolio-page__colors--hex">#eb2f64</p>
+                                <p class="portfolio-page__colors--title">Amaranth</p>
+                            </div>
+                            <div class="portfolio-page__colors--container">
+                                <div class="portfolio-page__colors--circle portfolio-page__colors--circle--trillo2"></div>
+                                <p class="portfolio-page__colors--hex">#c3285e</p>
+                                <p class="portfolio-page__colors--title">Burnt Pink</p>
+                            </div>
+                            <div class="portfolio-page__colors--container">
+                                <div class="portfolio-page__colors--circle portfolio-page__colors--circle--trillo3"></div>
+                                <p class="portfolio-page__colors--hex">#333333</p>
+                                <p class="portfolio-page__colors--title">Dune</p>
+                            </div>
+                            <div class="portfolio-page__colors--container">
+                                <div class="portfolio-page__colors--circle portfolio-page__colors--circle--trillo4"></div>
+                                <p class="portfolio-page__colors--hex">#f4f2f2</p>
+                                <p class="portfolio-page__colors--title">Porcelain</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+              <section class="right-slide__container" style="background-color: #55C57A;">
+                <div class="slide__img">
+                    <img src="img/Responsive-natours.png" alt="Responsive design showcase image" class="portfolio-page__project--img">
+                </div>
+                <div class="slide__fonts">
+                    <div class="portfolio-page__typography--fonts">
+                        <div class="portfolio-page__typography--font">
+                            <p class="portfolio-page__typography--side">100 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                            <p class="portfolio-page__typography--font--100">Lato</p>
+                        </div>
+                        <div class="portfolio-page__typography--font">
+                            <p class="portfolio-page__typography--side">700 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                            <p class="portfolio-page__typography--font--700">Lato</p>
+                        </div>
+                        <div class="portfolio-page__typography--font">
+                            <p class="portfolio-page__typography--side">300 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                            <p class="portfolio-page__typography--font--300">Lato</p>
+                        </div>
+                        <div class="portfolio-page__typography--font">
+                            <p class="portfolio-page__typography--side">900 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                            <p class="portfolio-page__typography--font--900">Lato</p>
+                        </div>
+                        <div class="portfolio-page__typography--font">
+                            <p class="portfolio-page__typography--side">400 &nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;</p>
+                            <p class="portfolio-page__typography--font--400">Lato</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-page__colors">
+                        <div class="portfolio-page__colors--container">
+                            <div class="portfolio-page__colors--circle portfolio-page__colors--circle--natours1"></div>
+                            <p class="portfolio-page__colors--hex">#7ED56F</p>
+                            <p class="portfolio-page__colors--title">Fresh Green</p>
+                        </div>
+                        <div class="portfolio-page__colors--container">
+                            <div class="portfolio-page__colors--circle portfolio-page__colors--circle--natours2"></div>
+                            <p class="portfolio-page__colors--hex">#55C57A</p>
+                            <p class="portfolio-page__colors--title">Paris Green</p>
+                        </div>
+                        <div class="portfolio-page__colors--container">
+                            <div class="portfolio-page__colors--circle portfolio-page__colors--circle--natours3"></div>
+                            <p class="portfolio-page__colors--hex">#28B485</p>
+                            <p class="portfolio-page__colors--title">Dark Seafoam</p>
+                        </div>
+                        <div class="portfolio-page__colors--container">
+                            <div class="portfolio-page__colors--circle portfolio-page__colors--circle--natours4"></div>
+                            <p class="portfolio-page__colors--hex">#FFFFFF</p>
+                            <p class="portfolio-page__colors--title">White</p>
+                        </div>
+                    </div>
+                </div>
+              </section>
+            </div>
+      
+            <div class="action-buttons">
+              <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+              </button>
+              <button class="up-button">
+                <i class="fas fa-arrow-up"></i>
+              </button>
+            </div>
+          </div>
     </section>
 
     <section class="portfolio portfolio--2 u-margin-top-large">
@@ -324,3 +374,5 @@
         <p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
         <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
     </footer>
+
+    <script src="script.js"></script>
