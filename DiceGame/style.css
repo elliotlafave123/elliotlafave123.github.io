@@ -268,7 +268,7 @@ span {
   .dice {
     position: absolute;
     left: 50%;
-    top: 43.4%;
+    top: 42.8%;
     transform: translateX(-50%);
     height: 9rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
