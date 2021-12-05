@@ -5,9 +5,14 @@ const upButton = document.querySelector('.up-button')
 const downButton = document.querySelector('.down-button')
 const slidesLength = sliderRight.querySelectorAll('section').length
 
+
+
+
+// portolio big projects slider
+
 let activeSlideIndex = 0
 
-sliderLeft.style.top = `-${(slidesLength - 1) * 80}vh`
+sliderLeft.style.top = `-${(slidesLength - 1) * 90}vh`
 
 upButton.addEventListener('click', () => changeSlide('up'))
 downButton.addEventListener('click', () => changeSlide('down'))

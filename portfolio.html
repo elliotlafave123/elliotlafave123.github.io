@@ -23,9 +23,35 @@
         <div class="navigation__background">&nbsp;</div>
 
         <ul class="desktop__nav">
-            <li class="desktop__nav-item"><a href="#contactme">Contact Me</a></li>
-            <li class="desktop__nav-item"><a href="CV.html">My CV</a></li>
-            <li class="desktop__nav-item"><a href="portfolio.html">Portfolio</a></li>
+            <li class="desktop__nav-item">
+                <div class="toggle-container">
+                    <input type="checkbox"  id="checkboxSlider" class="toggle">
+                    <label for="checkboxSlider" class="label">
+                      <div class="ball"></div>
+                    </label>
+                  </div>
+            </li>
+
+            <li class="desktop__nav-item">
+                <div class="link-wrapper">
+                    <a href="index.html" class="link hover-12"><p class="link-text">Home</p></a>
+                </div>
+            </li>
+            <li class="desktop__nav-item">
+                <div class="link-wrapper">
+                    <a href="#contactme" class="link hover-12"><p class="link-text">Contact Me</p></a>
+                </div>
+            </li>
+            <li class="desktop__nav-item">
+                <div class="link-wrapper">
+                    <a href="CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
+                </div>    
+            </li>
+            <li class="desktop__nav-item">
+                <div class="link-wrapper">
+                    <a href="portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
+                </div>
+            </li>
         </ul>
 
         <nav class="navigation__nav">
@@ -376,3 +402,4 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="darkMode.js"></script>
