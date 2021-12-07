@@ -508,7 +508,7 @@ a:before, a:after {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 20px 0px; }
 
 .tags {
-  width: 80%;
+  width: 100%;
   margin-bottom: 1rem; }
   @media (max-width: 37.5em) {
     .tags {
@@ -529,6 +529,8 @@ a:before, a:after {
       color: #F48031; }
     .tags__tag--scss {
       color: #cc6699; }
+    .tags__tag--api {
+      color: #f5f258; }
   @media (max-width: 37.5em) {
     .tags__tag {
       background-color: #3F4348;
@@ -545,6 +547,12 @@ a:before, a:after {
         font-size: 1.6rem; }
       .tags__tag--js {
         color: #F48031;
+        font-size: 1.6rem; }
+      .tags__tag--scss {
+        color: #cc6699;
+        font-size: 1.6rem; }
+      .tags__tag--api {
+        color: #f5f258;
         font-size: 1.6rem; } }
 
 .card__grid {
