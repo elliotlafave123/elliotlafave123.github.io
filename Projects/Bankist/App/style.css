@@ -83,6 +83,46 @@ nav {
   color: #777;
 }
 
+/* INFO */
+.info {
+  width: 25%;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  padding: 3.5rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 5rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.info p {
+  display: inline-block;
+}
+
+.info span {
+  font-weight: 800;
+  color: #000;
+}
+
+.info-users {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-data2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
 /* MAIN */
 .app {
   position: relative;
@@ -208,6 +248,16 @@ nav {
   cursor: pointer;
 }
 
+.btn--sort-mob {
+  display: none;
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 /* OPERATIONS */
 .operation {
   border-radius: 1rem;
@@ -299,6 +349,11 @@ h2 {
 }
 
 @media only screen and (max-width: 700px) {
+  body {
+    width: 100%;
+    padding: 2rem 4vw 2rem 4vw;
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -341,6 +396,47 @@ h2 {
   .login__btn {
     margin: 1.2rem 0 1.2rem 0;
     font-size: 3rem;
+  }
+
+  /* INFO */
+  .info {
+    width: 92vw;
+    background-color: #fff;
+    border-radius: 0.7rem;
+    padding: 3.5rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info p {
+    display: inline-block;
+  }
+
+  .info span {
+    font-weight: 800;
+    color: #000;
+  }
+
+  .info-users {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .info-data2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 0.2rem;
   }
 
   /* MAIN */
@@ -388,6 +484,7 @@ h2 {
   .movements {
     grid-row: 2;
     width: 92vw;
+    height: 80vh;
     background-color: #fff;
     border-radius: 1rem;
     overflow-y: scroll;
@@ -435,9 +532,11 @@ h2 {
 
   /* SUMMARY */
   .summary {
-    grid-row: 3;
+    grid-row: 4;
     display: flex;
+    width: 92vw;
     align-items: baseline;
+    justify-content: space-around;
     padding: 0 0.3rem;
     margin-top: 1rem;
   }
@@ -446,12 +545,12 @@ h2 {
     font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
-    margin-right: 0.8rem;
+    margin-right: 0;
   }
 
   .summary__value {
-    font-size: 2.2rem;
-    margin-right: 2.5rem;
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
   }
 
   .summary__value--in,
@@ -464,12 +563,15 @@ h2 {
   }
 
   .btn--sort {
-    margin-left: auto;
-    border: none;
-    background: none;
-    font-size: 1.3rem;
-    font-weight: 500;
-    cursor: pointer;
+    display: none;
+  }
+
+  .btn--sort-mob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 3;
+    width: 92vw;
   }
 
   /* OPERATIONS */
@@ -480,17 +582,20 @@ h2 {
   }
 
   .operation--transfer {
-    grid-row: 4;
+    grid-row: 5;
+    width: 92vw;
     background-image: linear-gradient(to top left, #ffb003, #ffcb03);
   }
 
   .operation--loan {
-    grid-row: 5;
+    grid-row: 6;
+    width: 92vw;
     background-image: linear-gradient(to top left, #39b385, #9be15d);
   }
 
   .operation--close {
-    grid-row: 6;
+    grid-row: 7;
+    width: 92vw;
     background-image: linear-gradient(to top left, #e52a5a, #ff585f);
   }
 
@@ -555,10 +660,10 @@ h2 {
   }
 
   .logout-timer {
-    grid-row: 7;
+    grid-row: 8;
     padding: 0 0.3rem;
-    margin-top: 1.9rem;
-    text-align: right;
+    margin: 1.9rem 0 4rem 0;
+    text-align: center;
     font-size: 1.25rem;
   }
 
