@@ -222,10 +222,16 @@ const search = function (input) {
 
     data.forEach(function (project, i) {
         let words = project.title.toLowerCase().split(" ");
+        let wordsStr = words.join("");
+        console.log(wordsStr);
 
-        if (words.includes(input)) {
+        if (wordsStr.includes(input.toLowerCase())) {
             isThere.push(project);
         }
+
+        // if (words.includes(input.toLowerCase())) {
+        //     isThere.push(project);
+        // }
     });
 
     displayMovements(isThere);
