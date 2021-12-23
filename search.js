@@ -168,7 +168,7 @@ const displayMovements = function (data) {
     data.forEach(function (project, i) {
         console.log();
         const html = `
-        <div class="card">
+        <div class="cardjs">
 				<img
 					src="${project.linkImg}"
 					alt=""

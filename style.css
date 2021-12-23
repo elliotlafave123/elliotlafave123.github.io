@@ -13,9 +13,13 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-main {
+.app-container {
+    padding: 5vh 10vw 5vh 10vw;
+}
+
+#cardsContainer {
     width: 80vw;
-    margin: 5vh 10vw 5vh 10vw;
+    margin: 5vh 0vw 5vh 0vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 4rem;
@@ -25,15 +29,16 @@ h4 {
     color: #fff;
     font-size: 2.1rem;
     letter-spacing: 0.5px;
-    margin-bottom: 0.6rem;
+    margin-bottom: 2.3rem;
 }
 
-.card {
+.cardjs {
     background-color: #343a40;
     position: relative;
+    box-shadow: ;
 }
 
-.card img {
+.cardjs img {
     width: 100%;
 }
 
@@ -129,13 +134,13 @@ h4 {
 
 /* Search Bar */
 .search {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    margin: 4rem 0 0 10vw;
+    margin: 4rem 0 2rem 0vw;
 }
 
 .search-input {
