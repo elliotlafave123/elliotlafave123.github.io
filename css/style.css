@@ -81,15 +81,15 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
   /** changes rem to 10px   (defualt is 16px)**/ }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 149em) {
-    html {
-      font-size: 75%; } }
   @media (min-width: 150em) {
     html {
       font-size: 85%; } }
@@ -1169,9 +1169,13 @@ button:focus {
   color: #f1f3f5;
   font-size: 1.3rem;
   font-weight: 500;
-  margin-bottom: 4.5rem;
+  margin-bottom: 6rem;
   margin-top: 1rem;
   -webkit-line-clamp: 3; }
+  @media (max-width: 56.25em) {
+    .JScard-content p {
+      font-size: 1.7rem;
+      margin-bottom: 8rem; } }
 
 .tags-container {
   width: 100%;
@@ -1276,8 +1280,6 @@ button:focus {
   color: #fff; }
 
 @media only screen and (max-width: 700px) {
-  .card-content p {
-    margin-bottom: 7rem; }
   .search {
     flex-direction: column;
     justify-content: center;
@@ -1556,9 +1558,6 @@ button:focus {
     font-weight: 400;
     display: block;
     position: relative; }
-    @media (max-width: 149em) {
-      .header__content {
-        padding: 15vh 0 20vh 15rem; } }
     @media (max-width: 75em) {
       .header__content {
         padding: 5rem 0 20rem 15rem;
