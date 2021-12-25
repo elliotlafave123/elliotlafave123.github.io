@@ -23,14 +23,14 @@
             <div class="navigation__background">&nbsp;</div>
 
             <ul class="desktop__nav">
-                <li class="desktop__nav-item">
+                <!-- <li class="desktop__nav-item">
                     <div class="toggle-container">
                         <input type="checkbox"  id="checkboxSlider" class="toggle">
                         <label for="checkboxSlider" class="label">
                           <div class="ball"></div>
                         </label>
                       </div>
-                </li>
+                </li> -->
 
                 <li class="desktop__nav-item">
                     <div class="link-wrapper">
@@ -103,7 +103,7 @@
     </section>
 
     <div class="wave-top">
-        <img src="img/wave1.png" alt="" class="wave-top__img">
+        <img src="img/wave1.png" alt="" class="wave-top__img" id="wave1">
     </div>
 
     <section class="section-about">
@@ -116,7 +116,7 @@
     </section>
 
     <div class="wave-bottom">
-        <img src="img/wave2.png" alt="" class="wave-bottom__img">
+        <img src="img/wave2.png" alt="" class="wave-bottom__img" id="wave2">
     </div>
 
     <section class="skills">
@@ -155,7 +155,7 @@
     </section>
 
     <div class="wave-top">
-        <img src="img/wave3.png" alt="" class="wave-bottom__img">
+        <img src="img/wave3.png" alt="" class="wave-bottom__img" id="wave3">
     </div>
 
     <section class="portfolio">
@@ -164,21 +164,22 @@
         <div class="card__grid u-margin-bottom-medium">
 
             <div class="card">
-                <img src="img/natours.png" alt="" class="card__img">
+                <img src="img/Projects/bankist.png" alt="" class="card__img">
                 <div class="card__content">
-                    <h4 class="card__title u-margin-bottom-medium">Nature Tours Homepage</h4>
-                    <p class="card__text">I coded a nature tours website using advanced css techniques such as transformations and animations. The site is in pure HTML and SCSS</p>
+                    <h4 class="card__title u-margin-bottom-medium">Bankist - Bank Application</h4>
+                    <p class="card__text">I created a banking application using vanilla JavaScript. Users can log in and transfer money between the different accounts along with closing the account and getting loans.</p>
                     <div class="tags">
                         <span class="tags__tag tags__tag--html">HTML</span>
                         <span class="tags__tag tags__tag--css">CSS</span>
-                        <span class="tags__tag tags__tag--scss">SCSS</span>
+                        <span class="tags__tag tags__tag--js">JS</span>
                     </div> 
                     <div class="card__buttons">
-                        <a href="natours/index.html" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-                        <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/natours" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                        <a href="Projects/Bankist/App/index.html" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
+                        <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/Bankist/App" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
                     </div>                  
                 </div>
-            </div>
+            </div> 
+            
 
             <div class="card">
                 <img src="img/trillo.png" alt="" class="card__img">
@@ -193,6 +194,23 @@
                     <div class="card__buttons">
                         <a href="trillo/index.html" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
                         <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/trillo" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                    </div>                  
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/natours.png" alt="" class="card__img">
+                <div class="card__content">
+                    <h4 class="card__title u-margin-bottom-medium">Nature Tours Homepage</h4>
+                    <p class="card__text">I coded a nature tours website using advanced css techniques such as transformations and animations. The site is in pure HTML and SCSS</p>
+                    <div class="tags">
+                        <span class="tags__tag tags__tag--html">HTML</span>
+                        <span class="tags__tag tags__tag--css">CSS</span>
+                        <span class="tags__tag tags__tag--scss">SCSS</span>
+                    </div> 
+                    <div class="card__buttons">
+                        <a href="natours/index.html" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
+                        <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/natours" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
                     </div>                  
                 </div>
             </div>
@@ -212,25 +230,7 @@
                     </div>                  
                 </div>
             </div>   -->
-
-            <div class="card">
-                <img src="img/card-testimonials.png" alt="" class="card__img">
-                <div class="card__content">
-                    <h4 class="card__title u-margin-bottom-medium">Testimonials Grid</h4>
-                    <p class="card__text">I coded a testimonials page using CSS(3) Grid to display the items in an interesting way. I added images and borders around them aswel as complimentary colors.</p>
-                    <div class="tags">
-                        <span class="tags__tag tags__tag--html">HTML</span>
-                        <span class="tags__tag tags__tag--css">CSS</span>
-                        <span class="tags__tag tags__tag--js">JS</span>
-                    </div> 
-                    <div class="card__buttons">
-                        <a href="Challenges/testimonials-grid/index.html" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-                        <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Challenges/testimonials-grid" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
-                    </div>                  
-                </div>
-            </div>
-
-            
+     
 
         </div> 
         <span class="u-margin-bottom-large">&nbsp;</span>   
@@ -238,7 +238,7 @@
     </section>
 
     <div class="wave-bottom">
-        <img src="img/wave2.png" alt="" class="wave-bottom__img">
+        <img src="img/wave4.png" alt="" class="wave-bottom__img" id="wave4">
     </div>
 
     <section class="contact u-margin-top-large">
@@ -267,13 +267,13 @@
     </section>
 
     <div class="wave-top">
-        <img src="img/wave5.png" alt="" class="wave-bottom__img">
+        <img src="img/wave5.png" alt="" class="wave-bottom__img" id="wave5">
     </div>
 
 
     <footer class="footer">
         <div class="footer__logo">
-            <a href="index.html"><img src="img/logo-dark.png" alt="Footer Logo"></a>
+            <a href="index.html"><img src="img/logo.png" alt="Footer Logo"></a>
         </div>
         <ul class="footer__nav">
             <li class="footer__nav-item"><a href="#contactme">Contact Me</a></li>

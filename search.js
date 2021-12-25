@@ -142,6 +142,39 @@ const dataProject12 = {
     tags: ["html", "css", "js", "api"],
 };
 
+const dataProject13 = {
+    title: "Testimonials Grid",
+    paragraph:
+        "I coded a testimonials page using CSS(3) Grid to display the items in an interesting way. I added images and borders around them aswel as complimentary colors.",
+    linkLivePreview: "Challenges/testimonials-grid/index.html",
+    linkGit:
+        "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Challenges/testimonials-grid",
+    linkImg: "img/card-testimonials.png",
+    tags: ["html", "css"],
+};
+
+const dataProject14 = {
+    title: "Order Completion Page",
+    paragraph:
+        "I designed a order completion page using HTML(5) and CSS(3). I used a variety of DIV elements and positioning to complete the design.",
+    linkLivePreview: "Challenges/order-page/index.html",
+    linkGit:
+        "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Challenges/order-page",
+    linkImg: "img/card-order.png",
+    tags: ["html", "css"],
+};
+
+const dataProject15 = {
+    title: "Guess My Number Game",
+    paragraph:
+        "I coded a number guessing game using Javascript, used Javascript functions and DOM manipulation to make the game functional in the browser",
+    linkLivePreview: "guessNumber/index.html",
+    linkGit:
+        "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/guessNumber",
+    linkImg: "img/card-guessNumber.png",
+    tags: ["html", "css", "js"],
+};
+
 const data = [
     dataProject0,
     dataProject1,
@@ -156,6 +189,9 @@ const data = [
     dataProject10,
     dataProject11,
     dataProject12,
+    dataProject13,
+    dataProject14,
+    dataProject15,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
@@ -171,9 +207,10 @@ const displayMovements = function (data) {
         <div class="cardjs">
 				<img
 					src="${project.linkImg}"
-					alt=""
+					alt="A Project Card Image" 
+                    class="cardjs-img"
 				/>
-				<div class="card-content">
+				<div class="JScard-content">
 					<h4>${project.title}</h4>
 					<div class="tags-container">
                         ${
@@ -190,7 +227,7 @@ const displayMovements = function (data) {
 					</p>
 				</div>
 				<div class="buttons-container">
-					<a href="${project.linkLivePreview}" class="btn-live-preview"
+					<a href="${project.linkLivePreview}" class="JSbtn-live-preview"
 						>Live Preview
 						<i class="fa-solid fa-up-right-from-square"></i>
 					</a>
