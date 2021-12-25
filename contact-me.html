@@ -1,103 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/873062b8ef.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/873062b8ef.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
         <title>Portfolio</title>
     </head>
-<body>
+    <body>
+        <div class="navigation">
+            <input
+                type="checkbox"
+                class="navigation__checkbox"
+                id="navi-toggle"
+            />
+            <label for="navi-toggle" class="navigation__button"
+                ><span class="navigation__icon">&nbsp;</span></label
+            >
+            <div class="navigation__background">&nbsp;</div>
 
-
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
-        <div class="navigation__background">&nbsp;</div>
-
-        <ul class="desktop__nav">
-            <li class="desktop__nav-item">
-                <div class="link-wrapper">
-                    <a href="index.html" class="link hover-12"><p class="link-text">Home</p></a>
-                </div>
-            </li>
-            <li class="desktop__nav-item">
-                <div class="link-wrapper">
-                    <a href="#contactme" class="link hover-12"><p class="link-text">Contact Me</p></a>
-                </div>
-            </li>
-            <li class="desktop__nav-item">
-                <div class="link-wrapper">
-                    <a href="CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
-                </div>    
-            </li>
-            <li class="desktop__nav-item">
-                <div class="link-wrapper">
-                    <a href="portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
-                </div>
-            </li>
-        </ul>
-
-        <nav class="navigation__nav">
-            <ul class="navigation__list">
-                <li class="navigation__item"><label for="navi-toggle-2">
-                    <a href="contact-me.html" class="navigation__link">Contact Me</label></a>
-                </label></li>
-                <li class="navigation__item"><a href="CV.html" class="navigation__link">My CV</a></li>
-                <li class="navigation__item"><a href="index.html#portfolio" class="navigation__link">Portfolio</a></li>
+            <ul class="desktop__nav">
+                <li class="desktop__nav-item">
+                    <div class="link-wrapper">
+                        <a href="index.html" class="link hover-12"
+                            ><p class="link-text">Home</p></a
+                        >
+                    </div>
+                </li>
+                <li class="desktop__nav-item">
+                    <div class="link-wrapper">
+                        <a href="#contactme" class="link hover-12"
+                            ><p class="link-text">Contact Me</p></a
+                        >
+                    </div>
+                </li>
+                <li class="desktop__nav-item">
+                    <div class="link-wrapper">
+                        <a href="CV.html" class="link hover-12"
+                            ><p class="link-text">My CV</p></a
+                        >
+                    </div>
+                </li>
+                <li class="desktop__nav-item">
+                    <div class="link-wrapper">
+                        <a href="portfolio.html" class="link hover-12"
+                            ><p class="link-text">Portfolio</p></a
+                        >
+                    </div>
+                </li>
             </ul>
-        </nav>
-    </div>
 
-    <section class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
-    </section>
-
-    <section class="contact u-margin-top-small">
-        <img src="img/contact.png" alt="" class="contact__img" >
-        <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
-        <div class="contact__form">
-            <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact">
-                <div class="form__group">
-                    <input type="text" class="form__input form__input-small" placeholder="Full name" id="name" required>
-                    <label for="name" class="form__label">Full name</label>
-                </div>
-
-                <div class="form__group" >
-                    <input type="email" class="form__input form__input-small" placeholder="Email address" id="email" required>
-                    <label for="email" class="form__label">Email address</label>
-                </div>
-
-                <div class="form__group">
-                    <label for="message" class="form__label u-margin-bottom-small">Your message</label>
-                    <textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" required></textarea>
-                </div>
-
-                <button class="btn btn-purple-post u-margin-top-small">Send Message! &nbsp; &rarr;</button>
-            </form>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <label for="navi-toggle-2">
+                            <a href="contact-me.html" class="navigation__link"
+                                >Contact Me</a
+                            >
+                        </label>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="CV.html" class="navigation__link">My CV</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="index.html#portfolio" class="navigation__link"
+                            >Portfolio</a
+                        >
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </section>
 
-    <div class="wave-top">
-        <img src="img/wave5.png" alt="" class="wave-bottom__img">
-    </div>
+        <section class="logo">
+            <a href="index.html"
+                ><img src="img/logo.png" alt="Logo" class="logo-img"
+            /></a>
+        </section>
 
+        <section class="contact u-margin-top-small">
+            <img src="img/contact.png" alt="" class="contact__img" />
+            <h3 class="skills__header u-margin-bottom-large" id="contactme">
+                Contact Me
+            </h3>
+            <div class="contact__form">
+                <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    class="form"
+                    id="form-contact"
+                >
+                    <div class="form__group">
+                        <input
+                            type="text"
+                            class="form__input form__input-small"
+                            placeholder="Full name"
+                            id="name"
+                            required
+                        />
+                        <label for="name" class="form__label">Full name</label>
+                    </div>
 
-    <footer class="footer">
-        <div class="footer__logo">
-            <a href="index.html"><img src="img/logo-dark.png" alt="Footer Logo"></a>
+                    <div class="form__group">
+                        <input
+                            type="email"
+                            class="form__input form__input-small"
+                            placeholder="Email address"
+                            id="email"
+                            required
+                        />
+                        <label for="email" class="form__label"
+                            >Email address</label
+                        >
+                    </div>
+
+                    <div class="form__group">
+                        <label
+                            for="message"
+                            class="form__label u-margin-bottom-small"
+                            >Your message</label
+                        >
+                        <textarea
+                            class="form__input form__input-textarea"
+                            id="message"
+                            rows="8"
+                            form="form-contact"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button class="btn btn-purple-post u-margin-top-small">
+                        Send Message! &nbsp; &rarr;
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <div class="wave-top">
+            <img src="img/wave5.png" alt="" class="wave-bottom__img" />
         </div>
-        <ul class="footer__nav">
-            <li class="footer__nav-item"><a href="#contactme">Contact Me</a></li>
-            <li class="footer__nav-item"><a href="CV.html">CV</a></li>
-            <li class="footer__nav-item"><a href="index.html#portfolio">Portfolio</a></li>
-        </ul>
-        <p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
-        <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
-    </footer>
+
+        <footer class="footer">
+            <div class="footer__logo">
+                <a href="index.html"
+                    ><img src="img/logo.png" alt="Footer Logo"
+                /></a>
+            </div>
+            <ul class="footer__nav">
+                <li class="footer__nav-item">
+                    <a href="#contactme">Contact Me</a>
+                </li>
+                <li class="footer__nav-item"><a href="CV.html">CV</a></li>
+                <li class="footer__nav-item">
+                    <a href="index.html#portfolio">Portfolio</a>
+                </li>
+            </ul>
+            <p class="footer__paragraph">
+                Designed and coded by Elliot La Fave using HTML, CSS and JS.
+            </p>
+            <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
+        </footer>
+    </body>
+</html>

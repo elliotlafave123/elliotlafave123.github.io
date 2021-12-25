@@ -189,9 +189,9 @@ const data = [
     dataProject10,
     dataProject11,
     dataProject12,
-    dataProject13,
-    dataProject14,
-    dataProject15,
+    // dataProject13,
+    // dataProject14,
+    // dataProject15,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
