@@ -17,7 +17,6 @@
     </head>
 <body>
 
-
     <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
         <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
@@ -33,26 +32,33 @@
                   </div>
             </li> -->
 
-            <li class="desktop__nav-item">
-                <div class="link-wrapper">
-                    <a href="index.html" class="link hover-12"><p class="link-text">Home</p></a>
-                </div>
-            </li>
-            <li class="desktop__nav-item">
-                <div class="link-wrapper">
-                    <a href="#contactme" class="link hover-12"><p class="link-text">Contact Me</p></a>
-                </div>
-            </li>
-            <li class="desktop__nav-item">
-                <div class="link-wrapper">
-                    <a href="CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
-                </div>    
-            </li>
-            <li class="desktop__nav-item">
-                <div class="link-wrapper">
-                    <a href="portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
-                </div>
-            </li>
+            <section class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+            </section>
+
+            <div>
+                <li class="desktop__nav-item">
+                    <div class="link-wrapper">
+                        <a href="#contactme" class="link link-btn"><p class="link-text">Contact Me</p></a>
+                    </div>
+                </li>
+                <li class="desktop__nav-item">
+                    <div class="link-wrapper">
+                        <a href="index.html" class="link hover-12"><p class="link-text">Home</p></a>
+                    </div>    
+                </li>
+                <li class="desktop__nav-item">
+                    <div class="link-wrapper">
+                        <a href="CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
+                    </div>    
+                </li>
+                <li class="desktop__nav-item">
+                    <div class="link-wrapper">
+                        <a href="portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
+                    </div>
+                </li>
+            </div>
+            
         </ul>
 
         <nav class="navigation__nav">
@@ -65,9 +71,8 @@
             </ul>
         </nav>
     </div>
-
-    <section class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+    <section class="logo mobile-only">
+        <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img mobile-only"></a>
     </section>
 
     <section class="portfolio-page u-margin-top-large">
@@ -117,14 +122,17 @@
 
         <div class="slider-container">
             <div class="left-slide">
-              <div>
-                <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Natours</h5>
-                <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I coded a website that sells nature tours. To create the site I used HTML, CSS and SCSS. I created animations with @keyframes and transitions using custom cubic-bezier timing functions.</p>
-                <div class="tags">
-                    <span class="tags__tag tags__tag--html">HTML</span>
-                    <span class="tags__tag tags__tag--css">CSS</span>
-                    <span class="tags__tag tags__tag--scss">SCSS</span>
-                </div> 
+              <div class="left-slide-container">
+                  <div>
+                    <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Natours</h5>
+                    <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I coded a website that sells nature tours. To create the site I used HTML, CSS and SCSS. I created animations with @keyframes and transitions using custom cubic-bezier timing functions.</p>
+                    <div class="tags">
+                        <span class="tags__tag tags__tag--html">HTML</span>
+                        <span class="tags__tag tags__tag--css">CSS</span>
+                        <span class="tags__tag tags__tag--scss">SCSS</span>
+                    </div> 
+                  </div>
+                
                 <div class="portfolio-page__project--buttons u-margin-top-medium">
                     <a href="natours/index.html" class="btn btn-purple-small u-margin-bottom-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
                     <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/natours" class="btn btn--github" target="blank">Github</a>
@@ -132,14 +140,17 @@
                 </div> 
               </div>
 
-              <div>
-                <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Trillo</h5>
-                <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I programmed a web application that sells hotels and flights. I used HTML and SCSS for the design and mainly used CSS Flexbox to create the layout. The design is 100% responsive (works on all devices)</p>
-                <div class="tags">
-                    <span class="tags__tag tags__tag--html">HTML</span>
-                    <span class="tags__tag tags__tag--css">CSS</span>
-                    <span class="tags__tag tags__tag--scss">SCSS</span>
-                </div> 
+              <div class="left-slide-container">
+                  <div>
+                    <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Trillo</h5>
+                    <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I programmed a web application that sells hotels and flights. I used HTML and SCSS for the design and mainly used CSS Flexbox to create the layout. The design is 100% responsive (works on all devices)</p>
+                    <div class="tags">
+                        <span class="tags__tag tags__tag--html">HTML</span>
+                        <span class="tags__tag tags__tag--css">CSS</span>
+                        <span class="tags__tag tags__tag--scss">SCSS</span>
+                    </div> 
+                  </div>
+                
                 <div class="portfolio-page__project--buttons u-margin-top-medium">
                     <a href="trillo/index.html" class="btn btn-purple-small u-margin-bottom-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
                     <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/trillo" class="btn btn--github" target="blank">Github</a>

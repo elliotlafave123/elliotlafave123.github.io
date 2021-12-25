@@ -21,72 +21,56 @@
     </head>
     <body>
         <div class="navigation">
-            <input
-                type="checkbox"
-                class="navigation__checkbox"
-                id="navi-toggle"
-            />
-            <label for="navi-toggle" class="navigation__button"
-                ><span class="navigation__icon">&nbsp;</span></label
-            >
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
             <div class="navigation__background">&nbsp;</div>
-
+    
             <ul class="desktop__nav">
-                <li class="desktop__nav-item">
-                    <div class="link-wrapper">
-                        <a href="index.html" class="link hover-12"
-                            ><p class="link-text">Home</p></a
-                        >
-                    </div>
-                </li>
-                <li class="desktop__nav-item">
-                    <div class="link-wrapper">
-                        <a href="#contactme" class="link hover-12"
-                            ><p class="link-text">Contact Me</p></a
-                        >
-                    </div>
-                </li>
-                <li class="desktop__nav-item">
-                    <div class="link-wrapper">
-                        <a href="CV.html" class="link hover-12"
-                            ><p class="link-text">My CV</p></a
-                        >
-                    </div>
-                </li>
-                <li class="desktop__nav-item">
-                    <div class="link-wrapper">
-                        <a href="portfolio.html" class="link hover-12"
-                            ><p class="link-text">Portfolio</p></a
-                        >
-                    </div>
-                </li>
+                <!-- <li class="desktop__nav-item">
+                    <div class="toggle-container">
+                        <input type="checkbox"  id="checkboxSlider" class="toggle">
+                        <label for="checkboxSlider" class="label">
+                          <div class="ball"></div>
+                        </label>
+                      </div>
+                </li> -->
+    
+                <section class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+                </section>
+    
+                <div>
+                    <li class="desktop__nav-item">
+                        <div class="link-wrapper">
+                            <a href="index.html" class="link hover-12"><p class="link-text">Home</p></a>
+                        </div>    
+                    </li>
+                    <li class="desktop__nav-item">
+                        <div class="link-wrapper">
+                            <a href="CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
+                        </div>    
+                    </li>
+                    <li class="desktop__nav-item">
+                        <div class="link-wrapper">
+                            <a href="portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
+                        </div>
+                    </li>
+                </div>
+                
             </ul>
-
+    
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <label for="navi-toggle-2">
-                            <a href="contact-me.html" class="navigation__link"
-                                >Contact Me</a
-                            >
-                        </label>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="CV.html" class="navigation__link">My CV</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="index.html#portfolio" class="navigation__link"
-                            >Portfolio</a
-                        >
-                    </li>
+                    <li class="navigation__item"><label for="navi-toggle-2">
+                        <a href="contact-me.html" class="navigation__link">Contact Me</label></a>
+                    </label></li>
+                    <li class="navigation__item"><a href="CV.html" class="navigation__link">My CV</a></li>
+                    <li class="navigation__item"><a href="portfolio.html" class="navigation__link">Portfolio</a></li>
                 </ul>
             </nav>
         </div>
-
-        <section class="logo">
-            <a href="index.html"
-                ><img src="img/logo.png" alt="Logo" class="logo-img"
-            /></a>
+        <section class="logo mobile-only">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img mobile-only"></a>
         </section>
 
         <section class="contact u-margin-top-small">
