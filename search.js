@@ -186,23 +186,61 @@ const dataProject16 = {
     tags: ["html", "css"],
 };
 
+const dataProject17 = {
+    title: "Dice Game",
+    paragraph:
+        "I created a dice game using Javascript, HTML and CSS. You can chose to hold your score or keep rolling but get 0 points when a 1 is rolled. First to 100 score wins.",
+    linkLivePreview: "DiceGame/index.html",
+    linkGit:
+        "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/DiceGame",
+    linkImg: "img/DiceGame.png",
+    tags: ["html", "css", "js"],
+};
+
+const dataProject18 = {
+    title: "Rock Paper Scissors",
+    paragraph:
+        "I created a Rock Paper Scissors game using html and javascript page manipulation.",
+    linkLivePreview: "Projects/RockPaperScissors/index.html",
+    linkGit:
+        "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/RockPaperScissors",
+    linkImg: "img/Projects/Rock, Paper, Scissors.png",
+    tags: ["html", "css", "js"],
+};
+
+const dataProject19 = {
+    title: "Bankist - Bank Application",
+    paragraph:
+        "I created a banking application using vanilla JavaScript. Users can log in and transfer money between the different accounts along with closing the account and getting loans.",
+    linkLivePreview: "Projects/Bankist/App/index.html",
+    linkGit:
+        "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/Bankist/App",
+    linkImg: "img/Projects/bankist.png",
+    tags: ["html", "css", "js"],
+};
+
 const data = [
-    dataProject0,
     dataProject1,
     dataProject2,
+    dataProject13,
+    dataProject14,
     dataProject3,
     dataProject4,
     dataProject5,
-    dataProject6,
     dataProject7,
-    dataProject8,
-    dataProject9,
     dataProject10,
+    dataProject9,
+    dataProject17,
+    dataProject18,
+
+    dataProject19,
+    dataProject8,
+    dataProject15,
+    dataProject6,
+
+    dataProject0,
     dataProject11,
     dataProject12,
-    dataProject13,
-    dataProject14,
-    dataProject15,
     dataProject16,
 ];
 
