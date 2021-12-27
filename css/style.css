@@ -1141,8 +1141,14 @@ button:focus {
   width: 80vw;
   margin: 5vh 0vw 5vh 0vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 4rem; }
+  @media (min-width: 150em) {
+    #cardsContainer {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
+  @media (max-width: 37.5em) {
+    #cardsContainer {
+      grid-template-columns: 1fr; } }
 
 .cardjs {
   background-color: #343a40;
