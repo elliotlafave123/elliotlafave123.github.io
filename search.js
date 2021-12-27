@@ -149,7 +149,7 @@ const dataProject13 = {
     linkLivePreview: "Challenges/testimonials-grid/index.html",
     linkGit:
         "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Challenges/testimonials-grid",
-    linkImg: "img/card-testimonials.png",
+    linkImg: "img/Projects/testimonials.png",
     tags: ["html", "css"],
 };
 
@@ -160,7 +160,7 @@ const dataProject14 = {
     linkLivePreview: "Challenges/order-page/index.html",
     linkGit:
         "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Challenges/order-page",
-    linkImg: "img/card-order.png",
+    linkImg: "img/Projects/order.png",
     tags: ["html", "css"],
 };
 
@@ -173,6 +173,17 @@ const dataProject15 = {
         "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/guessNumber",
     linkImg: "img/card-guessNumber.png",
     tags: ["html", "css", "js"],
+};
+
+const dataProject16 = {
+    title: "Nexter - Real Estate Site",
+    paragraph:
+        "I coded a website that sells luxury homes from the top trusted realtors. Across the site i used CSS grid to place the content.",
+    linkLivePreview: "Projects/nexter/index.html",
+    linkGit:
+        "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/Nexter",
+    linkImg: "img/Projects/nexter.png",
+    tags: ["html", "css"],
 };
 
 const data = [
@@ -192,6 +203,7 @@ const data = [
     dataProject13,
     dataProject14,
     dataProject15,
+    dataProject16,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
@@ -202,7 +214,6 @@ const displayMovements = function (data) {
     cardsContainer.innerHTML = "";
 
     data.forEach(function (project, i) {
-        console.log();
         const html = `
         <div class="cardjs">
 				<img
@@ -253,37 +264,30 @@ searchInput.addEventListener("input", (e) => {
 });
 
 let isThere = [];
-
 const search = function (input) {
     isThere = [];
 
     data.forEach(function (project, i) {
         let words = project.title.toLowerCase().split(" ");
         let wordsStr = words.join("");
-        console.log(wordsStr);
 
         if (wordsStr.includes(input.toLowerCase())) {
             isThere.push(project);
         }
-
-        // if (words.includes(input.toLowerCase())) {
-        //     isThere.push(project);
-        // }
     });
 
     displayMovements(isThere);
 };
 
+let selection = [];
 dropdown.addEventListener("input", (e) => {
     e.preventDefault();
-    let selection = [];
+    selection = [];
 
     data.forEach(function (project, i) {
         if (project.tags.includes(dropdown.value)) {
             selection.push(project);
             displayMovements(selection);
-        } else {
-            displayMovements(data);
         }
     });
 });
