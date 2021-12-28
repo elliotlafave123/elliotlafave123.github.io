@@ -146,7 +146,7 @@ const dataProject13 = {
 	title: "Testimonials Grid",
 	paragraph:
 		"I coded a testimonials page using CSS(3) Grid to display the items in an interesting way. I added images and borders around them aswel as complimentary colors.",
-	linkLivePreview: "Challenges/testimonials-grid/index.html",
+	linkLivePreview: "Projects/testimonials-grid/index.html",
 	linkGit:
 		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/testimonials-grid",
 	linkImg: "img/Projects/testimonials.png",
@@ -157,7 +157,7 @@ const dataProject14 = {
 	title: "Order Completion Page",
 	paragraph:
 		"I designed a order completion page using HTML(5) and CSS(3). I used a variety of DIV elements and positioning to complete the design.",
-	linkLivePreview: "Challenges/order-page/index.html",
+	linkLivePreview: "Projects/order-page/index.html",
 	linkGit:
 		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/order-page",
 	linkImg: "img/Projects/order.png",
