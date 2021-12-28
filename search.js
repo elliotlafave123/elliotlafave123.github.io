@@ -259,6 +259,7 @@ const cardsContainer = document.getElementById("cardsContainer");
 const searchInput = document.querySelector(".search-input");
 const dropdown = document.getElementById("dropdown");
 const featured = document.getElementById("cardGrid3");
+const featuredHome = document.getElementById("cardGrid3-home");
 
 const getFeaturedData = function (data) {
     let picked = [];
@@ -286,6 +287,55 @@ const getFeaturedData = function (data) {
     return data1;
 };
 // getFeaturedData();
+
+const displayFeaturedHome = function (data) {
+    featuredHome.innerHTML = "";
+
+    data.forEach(function (project, i) {
+        const html = `
+        <div class="card">
+                <img src="${project.linkImg}" alt="" class="card__img">
+                <div class="card__content">
+                    <h4 class="card__title u-margin-bottom-medium">${
+                        project.title
+                    }</h4>
+                    <p class="card__text">${project.paragraph}</p>
+                    <div class="tags">
+                    ${
+                        project.tags.includes("css")
+                            ? '<span class="tags__tag tags__tag--html">HTML</span>'
+                            : ""
+                    }
+                    ${
+                        project.tags.includes("css")
+                            ? '<span class="tags__tag tags__tag--css">CSS</span>'
+                            : ""
+                    }
+                    ${
+                        project.tags.includes("js")
+                            ? '<span class="tags__tag tags__tag--js">JS</span>'
+                            : ""
+                    }
+                    </div> 
+                    <div class="card__buttons">
+                        <a href="${
+                            project.linkLivePreview
+                        }" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
+                        <a href="${
+                            project.linkGit
+                        }" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                    </div>                  
+                </div>
+            </div> 
+      `;
+
+        featuredHome.insertAdjacentHTML("afterbegin", html);
+    });
+};
+
+if (featuredHome) {
+    displayFeaturedHome(getFeaturedData(featuredProjects));
+}
 
 const displayFeatured = function (data) {
     featured.innerHTML = "";
@@ -331,7 +381,9 @@ const displayFeatured = function (data) {
         featured.insertAdjacentHTML("afterbegin", html);
     });
 };
-displayFeatured(getFeaturedData(featuredProjects));
+if (featured) {
+    displayFeatured(getFeaturedData(featuredProjects));
+}
 
 const displayMovements = function (data) {
     cardsContainer.innerHTML = "";
