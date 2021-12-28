@@ -219,6 +219,17 @@ const dataProject19 = {
     tags: ["html", "css", "js"],
 };
 
+const featuredProjects = [
+    dataProject18,
+    dataProject16,
+    dataProject19,
+    dataProject12,
+    dataProject11,
+    dataProject17,
+    dataProject0,
+];
+// const featuredData = [dataProject18, dataProject16, dataProject19];
+
 const data = [
     dataProject1,
     dataProject2,
@@ -247,6 +258,80 @@ const data = [
 const cardsContainer = document.getElementById("cardsContainer");
 const searchInput = document.querySelector(".search-input");
 const dropdown = document.getElementById("dropdown");
+const featured = document.getElementById("cardGrid3");
+
+const getFeaturedData = function (data) {
+    let picked = [];
+    let data1 = [];
+
+    const getRandomPositions = function () {
+        let i = Math.floor(Math.random() * featuredProjects.length);
+
+        if (!picked.includes(i)) {
+            picked.push(i);
+        }
+    };
+
+    while (picked.length < 3) {
+        getRandomPositions();
+    }
+
+    const addData = function (picked) {
+        for (let i = 0; i < 3; i++) {
+            data1.push(featuredProjects[picked[i]]);
+        }
+    };
+    addData(picked);
+
+    return data1;
+};
+// getFeaturedData();
+
+const displayFeatured = function (data) {
+    featured.innerHTML = "";
+
+    data.forEach(function (project, i) {
+        const html = `
+        <div class="card card--2">
+                <img src="${project.linkImg}" alt="" class="card__img">
+                <div class="card__content">
+                    <h4 class="card__title u-margin-bottom-medium">${
+                        project.title
+                    }</h4>
+                    <p class="card__text">${project.paragraph}</p>
+                    <div class="tags">
+                    ${
+                        project.tags.includes("css")
+                            ? '<span class="tags__tag tags__tag--html">HTML</span>'
+                            : ""
+                    }
+                    ${
+                        project.tags.includes("css")
+                            ? '<span class="tags__tag tags__tag--css">CSS</span>'
+                            : ""
+                    }
+                    ${
+                        project.tags.includes("js")
+                            ? '<span class="tags__tag tags__tag--js">JS</span>'
+                            : ""
+                    }
+                    </div> 
+                    <div class="card__buttons">
+                        <a href="${
+                            project.linkLivePreview
+                        }" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
+                        <a href="${
+                            project.linkGit
+                        }" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                    </div>                  
+                </div>
+            </div> 
+      `;
+
+        featured.insertAdjacentHTML("afterbegin", html);
+    });
+};
+displayFeatured(getFeaturedData(featuredProjects));
 
 const displayMovements = function (data) {
     cardsContainer.innerHTML = "";
