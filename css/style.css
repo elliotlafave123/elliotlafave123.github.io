@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 :root {
-  --color-primary: #7048e8;
+  --color-primary: hsl(255, 78%, 60%);
   --primary-light: #9c82e7;
   --color-primary-dark: rgb(41, 23, 94);
-  --color-secondary: rgb(230, 104, 103);
+  --color-secondary: hsl(0, 72%, 65%);
   --color-secondary-light: #f23f7b;
   --color-secondary-dark: #f54559;
   --color-form-false: rgb(255, 119, 48);
@@ -17,6 +17,7 @@
   --color-white: rgb(255, 255, 255);
   --color-black: rgb(0, 0, 0);
   --text-light: #f1f3f5;
+  --text-dark: #212529;
   --color-tag: #495057;
   --color-card: #343a40;
   --color-card-dark: #212529;
@@ -77,6 +78,9 @@
   align-self: center;
   justify-self: center; }
 
+.hidden {
+  display: none; }
+
 *,
 *::after,
 *::before {
@@ -108,7 +112,8 @@ body {
   box-sizing: border-box;
   /** Change Box model so padding and width dont effect box size **/
   padding: 0rem;
-  background-color: var(--color-grey-dark); }
+  background-color: var(--color-grey-dark);
+  transition: background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
   @media (max-width: 37.5em) {
     body {
       padding: 0; } }
@@ -141,10 +146,10 @@ h3 {
   font-size: 6rem;
   position: relative;
   width: fit-content;
-  color: var(--color-white); }
+  color: var(--text-light); }
   h3::after {
     content: "";
-    background: var(--color-white);
+    background: var(--text-light);
     position: absolute;
     bottom: -0.8rem;
     left: 0;
@@ -157,7 +162,8 @@ h4 {
   font-weight: 500;
   font-size: 1.8rem;
   position: relative;
-  width: fit-content; }
+  width: fit-content;
+  color: var(--text-light); }
   h4::after {
     content: "";
     background: var(--color-primary);
@@ -185,11 +191,11 @@ h5 {
   font-weight: 500;
   font-size: 5rem;
   position: relative;
-  color: var(--color-white);
+  color: var(--text-light);
   width: max-content; }
   h5::after {
     content: "";
-    background: var(--color-white);
+    background: var(--text-light);
     position: absolute;
     bottom: -0.6rem;
     left: 0;
@@ -511,7 +517,8 @@ a:before, a:after {
     letter-spacing: 1.5%;
     font-size: 1.3rem;
     margin-bottom: 1.6rem;
-    min-height: 7rem; }
+    min-height: 7rem;
+    color: var(--text-light); }
     @media (max-width: 37.5em) {
       .card__text {
         font-size: 1.9rem; } }
@@ -857,7 +864,8 @@ a:before, a:after {
       .portfolio-page__project--heading {
         font-size: 3rem; } }
     .portfolio-page__project--paragraph {
-      font-size: 1.7rem; }
+      font-size: 1.7rem;
+      color: var(--text-light); }
     .portfolio-page__project--img-container {
       display: flex;
       align-items: center;
@@ -1089,40 +1097,42 @@ button:focus {
   .slide__fonts-trillo {
     background-color: #b92657; }
 
-.toggle-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  width: auto; }
-
+/*  Dark Mode Slider  */
 .toggle {
   display: none; }
 
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5.5rem; }
+
 .label {
   position: relative;
-  background-color: var(--color-primary);
+  background: linear-gradient(60deg, #7149e9 0%, #e66565 60%, #e66565 100%);
   border-radius: 50px;
   cursor: pointer;
   display: inline-block;
-  margin: 0 0px 0;
-  width: 80px;
-  height: 40px; }
+  margin-left: 1rem;
+  width: 65px;
+  height: 30px;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 .toggle:checked + .label {
-  background-color: var(--color-primary); }
+  background: linear-gradient(60deg, #e66565 0%, #e66565 40%, #7149e9 100%); }
 
 .ball {
-  background: #fff;
-  height: 34px;
-  width: 34px;
+  background: var(--color-white);
+  height: 24px;
+  width: 24px;
   border-radius: 50%;
   position: absolute;
   top: 3px;
   left: 3px;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 12px;
   animation: slideOff 0.3s linear forwards; }
 
 .toggle:checked + .label .ball {
@@ -1132,15 +1142,15 @@ button:focus {
   0% {
     transform: translateX(0) scale(1); }
   50% {
-    transform: translateX(20px) scale(1.05); }
+    transform: translateX(17.5px) scale(1.05); }
   100% {
-    transform: translateX(40px) scale(1); } }
+    transform: translateX(35px) scale(1); } }
 
 @keyframes slideOff {
   0% {
-    transform: translateX(40px) scale(1); }
+    transform: translateX(35px) scale(1); }
   50% {
-    transform: translateX(20px) scale(1.05); }
+    transform: translateX(17.5px) scale(1.05); }
   100% {
     transform: translateX(0px) scale(1); } }
 
@@ -1167,7 +1177,7 @@ button:focus {
       grid-template-columns: 1fr; } }
 
 .cardjs {
-  background-color: #343a40;
+  background-color: var(--color-card);
   position: relative;
   border-radius: 5px; }
 
@@ -1182,7 +1192,7 @@ button:focus {
   flex-direction: column; }
 
 .JScard-content p {
-  color: #f1f3f5;
+  color: var(--text-light);
   font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 6rem;
@@ -1341,7 +1351,7 @@ button:focus {
     font-weight: 400;
     display: inline-block; }
     .desktop__nav-item a {
-      color: var(--color-grey-light-1); }
+      color: var(--text-light); }
     @media (max-width: 37.5em) {
       .desktop__nav-item {
         font-size: 3.5rem; } }
@@ -1606,7 +1616,7 @@ button:focus {
       .header__content--title {
         width: 85%; } }
     .header__content--subtitle {
-      color: var(--color-grey-light-1);
+      color: var(--text-light);
       font-size: 3rem;
       letter-spacing: 1px;
       margin-top: 20vh; }
@@ -1646,7 +1656,7 @@ button:focus {
 .skills {
   box-sizing: border-box;
   padding: 15rem 20vw 5rem 20vw;
-  color: var(--color-white);
+  color: var(--text-light);
   margin-bottom: 5rem;
   position: relative; }
   @media (max-width: 56.25em) {
@@ -1811,7 +1821,7 @@ button:focus {
     grid-auto-rows: max-content;
     width: 100%;
     padding: 3rem 4rem;
-    border: 5px solid #3F454B;
+    border: 5px solid #3f454b;
     border-radius: 1rem;
     display: grid;
     gap: 4rem 1rem;
@@ -1834,7 +1844,7 @@ button:focus {
     grid-template-rows: 1fr 2fr;
     width: 100%;
     padding: 3rem 4rem;
-    border: 5px solid #3F454B;
+    border: 5px solid #3f454b;
     border-radius: 1rem;
     display: grid;
     gap: 4rem 0; }
@@ -1856,7 +1866,7 @@ button:focus {
     grid-row: 1/3;
     font-family: "lato", sans-serif;
     font-size: 3.7rem;
-    color: var(--color-white);
+    color: var(--text-light);
     padding-bottom: 4rem; }
     @media (max-width: 56.25em) {
       .experience__title {
@@ -1866,14 +1876,14 @@ button:focus {
     grid-row: 2/3;
     font-family: "lato", sans-serif;
     font-size: 3rem;
-    color: var(--color-grey-light-1); }
+    color: var(--text-light); }
   .experience__won {
     padding-left: 4rem;
     grid-column: 1/3;
     grid-row: 3/4;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-size: 2.5rem;
-    color: var(--color-white); }
+    color: var(--text-light); }
   .experience__date {
     text-align: right;
     grid-column: 3/4;
@@ -1927,11 +1937,11 @@ button:focus {
     display: inline-block; }
     .education__schools--school {
       font-size: 3rem;
-      color: var(--color-grey-light-1);
+      color: var(--text-light);
       font-family: "Zen Kaku Gothic New", sans-serif; }
     .education__schools--date {
       font-size: 2.5rem;
-      color: var(--color-grey-light-1);
+      color: var(--text-light);
       font-family: "lato", sans-serif;
       font-weight: 300;
       margin-bottom: 4rem; }
@@ -1947,7 +1957,7 @@ button:focus {
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     padding: 3rem 4rem;
-    border: 5px solid #3F454B;
+    border: 5px solid #3f454b;
     border-radius: 1rem; }
     .education__grades--title {
       font-family: "Zen Kaku Gothic New", sans-serif;
@@ -1955,10 +1965,10 @@ button:focus {
       font-size: 3rem;
       position: relative;
       width: fit-content;
-      color: var(--color-white); }
+      color: var(--text-light); }
       .education__grades--title::after {
         content: "";
-        background: var(--color-white);
+        background: var(--text-light);
         position: absolute;
         top: 5rem;
         left: 0;
@@ -1968,12 +1978,12 @@ button:focus {
     .education__grades--subject {
       font-family: "lato", sans-serif;
       font-size: 2.5rem;
-      color: var(--color-grey-light-1);
+      color: var(--text-light);
       font-weight: 400; }
     .education__grades--grade {
       font-family: "lato", sans-serif;
       font-size: 2.5rem;
-      color: var(--color-grey-light-1);
+      color: var(--text-light);
       font-weight: 400; }
 
 .section-achievements {
@@ -1983,7 +1993,7 @@ button:focus {
 .achievements__paragraph {
   width: 60%;
   font-family: "lato", sans-serif;
-  color: var(--color-grey-light-1);
+  color: var(--text-light);
   font-size: 3rem;
   font-weight: 300; }
   @media (max-width: 37.5em) {

@@ -1,18 +1,18 @@
 .section-achievements {
-    width: 100%;
-    padding: 10rem 10vw 0 10vw; 
+	width: 100%;
+	padding: 10rem 10vw 0 10vw;
 }
 
 .achievements {
-    &__paragraph {
-        width: 60%;
-        font-family: $font-lato;
-        color: $color-grey-light-1;
-        font-size: 3rem;
-        font-weight: 300;
+	&__paragraph {
+		width: 60%;
+		font-family: $font-lato;
+		color: $text-light;
+		font-size: 3rem;
+		font-weight: 300;
 
-        @include respond(phone) {
-            width: 100%;
-        }
-    }
+		@include respond(phone) {
+			width: 100%;
+		}
+	}
 }

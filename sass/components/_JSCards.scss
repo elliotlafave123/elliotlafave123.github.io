@@ -1,218 +1,218 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 .app-container {
-    padding: 5vh 10vw 5vh 10vw;
+	padding: 5vh 10vw 5vh 10vw;
 }
 
 #cardsContainer {
-    width: 80vw;
-    margin: 5vh 0vw 5vh 0vw;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4rem;
+	width: 80vw;
+	margin: 5vh 0vw 5vh 0vw;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 4rem;
 
-    @include respond(large-desktop) {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
+	@include respond(large-desktop) {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
 
-    @include respond(tab-land) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+	@include respond(tab-land) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 
-    @include respond(tab-port) {
-        grid-template-columns: 1fr 1fr;
-    }
+	@include respond(tab-port) {
+		grid-template-columns: 1fr 1fr;
+	}
 
-    @include respond(phone) {
-        grid-template-columns: 1fr;
-    }
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .cardjs {
-    background-color: #343a40;
-    position: relative;
-    border-radius: 5px;
+	background-color: $color-card;
+	position: relative;
+	border-radius: 5px;
 }
 
 .cardjs-img {
-    width: 100%;
-    height: 19rem;
-    border-radius: 5px 5px 0 0;
+	width: 100%;
+	height: 19rem;
+	border-radius: 5px 5px 0 0;
 }
 
 .JScard-content {
-    padding: 1.5rem 2rem;
-    display: flex;
-    flex-direction: column;
+	padding: 1.5rem 2rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .JScard-content p {
-    color: #f1f3f5;
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 6rem;
-    margin-top: 1rem;
-    -webkit-line-clamp: 3;
+	color: $text-light;
+	font-size: 1.3rem;
+	font-weight: 500;
+	margin-bottom: 6rem;
+	margin-top: 1rem;
+	-webkit-line-clamp: 3;
 
-    @include respond(tab-port) {
-        font-size: 1.7rem;
-        margin-bottom: 8rem;
-    }
+	@include respond(tab-port) {
+		font-size: 1.7rem;
+		margin-bottom: 8rem;
+	}
 }
 
 .tags-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 2rem 0 1.2rem 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin: 2rem 0 1.2rem 0;
 }
 
 .tag {
-    background-color: $color-tag;
-    padding: 0.2rem 1.6rem;
-    border-radius: 0.4rem;
-    margin-right: 1rem;
-    font-size: 0.9rem;
-    font-weight: 500;
+	background-color: $color-tag;
+	padding: 0.2rem 1.6rem;
+	border-radius: 0.4rem;
+	margin-right: 1rem;
+	font-size: 0.9rem;
+	font-weight: 500;
 }
 
 .tag-html {
-    color: #f0582f;
+	color: #f0582f;
 }
 
 .tag-css {
-    color: #007cc4;
+	color: #007cc4;
 }
 
 .tag-js {
-    color: #f48031;
+	color: #f48031;
 }
 
 .tag-api {
-    color: #e1de56;
+	color: #e1de56;
 }
 
 .buttons-container {
-    width: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 0;
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 0;
 }
 
 .JSbtn-live-preview {
-    width: 80%;
-    background-color: #7048e8;
-    padding: 1rem 2rem 1rem 2rem;
-    border-radius: 0 0 0 5px;
+	width: 80%;
+	background-color: #7048e8;
+	padding: 1rem 2rem 1rem 2rem;
+	border-radius: 0 0 0 5px;
 
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color: #fff;
+	font-size: 1.8rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-decoration: none;
+	color: #fff;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-    &:hover {
-        background-color: #5f3dc4;
-    }
+	&:hover {
+		background-color: #5f3dc4;
+	}
 }
 
 .btn-git {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8rem;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.8rem;
 
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-    &:hover {
-        background-color: $color-grey-dark;
-    }
+	&:hover {
+		background-color: $color-grey-dark;
+	}
 }
 
 .btn-git img {
-    width: 70%;
+	width: 70%;
 }
 
 /* Search Bar */
 .search {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 
-    margin: 4rem 0 2rem 0vw;
+	margin: 4rem 0 2rem 0vw;
 
-    @include respond(tab-port) {
-        flex-direction: column;
-        align-items: start;
-    }
+	@include respond(tab-port) {
+		flex-direction: column;
+		align-items: start;
+	}
 }
 
 .search-input {
-    width: 18vw;
-    border: none;
-    outline: none;
-    cursor: text;
-    background-color: #495057;
-    padding: 1rem 4rem 1rem 4rem;
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: #fff;
-    border-radius: 3rem;
+	width: 18vw;
+	border: none;
+	outline: none;
+	cursor: text;
+	background-color: #495057;
+	padding: 1rem 4rem 1rem 4rem;
+	font-size: 1.7rem;
+	font-weight: 700;
+	color: #fff;
+	border-radius: 3rem;
 
-    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
-    transform: scale(0.98);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
+	transform: scale(0.98);
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    @include respond(tab-port) {
-        width: 100%;
-        transform: scale(1);
-        margin-bottom: 2rem;
-    }
+	@include respond(tab-port) {
+		width: 100%;
+		transform: scale(1);
+		margin-bottom: 2rem;
+	}
 
-    @include respond(phone) {
-        width: 100%;
-        transform: scale(1);
-        margin-bottom: 2rem;
-    }
+	@include respond(phone) {
+		width: 100%;
+		transform: scale(1);
+		margin-bottom: 2rem;
+	}
 }
 
 .search-input:focus {
-    width: 25vw;
-    transform: scale(1);
-    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
+	width: 25vw;
+	transform: scale(1);
+	box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
 
-    @include respond(tab-port) {
-        transform: scale(1.01);
-        width: 100%;
-    }
+	@include respond(tab-port) {
+		transform: scale(1.01);
+		width: 100%;
+	}
 
-    @include respond(phone) {
-        transform: scale(1.01);
-        width: 100%;
-    }
+	@include respond(phone) {
+		transform: scale(1.01);
+		width: 100%;
+	}
 }
 
 .search select {
-    width: 10rem;
-    padding: 1rem 2rem 1rem 2rem;
-    background-color: $color-card;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
+	width: 10rem;
+	padding: 1rem 2rem 1rem 2rem;
+	background-color: $color-card;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
 
-    @include respond(tab-port) {
-        width: 40%;
-    }
+	@include respond(tab-port) {
+		width: 40%;
+	}
 }

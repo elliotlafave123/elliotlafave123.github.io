@@ -22,20 +22,19 @@
         <div class="navigation__background">&nbsp;</div>
 
         <ul class="desktop__nav">
-            <!-- <li class="desktop__nav-item">
-                <div class="toggle-container">
-                    <input type="checkbox"  id="checkboxSlider" class="toggle">
-                    <label for="checkboxSlider" class="label">
-                      <div class="ball"></div>
-                    </label>
-                  </div>
-            </li> -->
-
             <section class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
             </section>
 
             <div>
+                <li class="desktop__nav-item">
+                    <div class="toggle-container">
+                        <input type="checkbox" id="checkboxSlider" class="toggle" />
+                        <label for="checkboxSlider" class="label">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </li>
                 <li class="desktop__nav-item">
                     <div class="link-wrapper">
                         <a href="#contactme" class="link link-btn"><p class="link-text">Contact Me</p></a>
@@ -331,7 +330,8 @@
     </section>
 
     <div class="wave-top">
-        <img src="img/wave5.png" alt="" class="wave-bottom__img">
+        <img src="img/wave5.png" alt="" class="wave-bottom__img" id="wave5-dark">
+        <img src="img/wave5-light.png" alt="" class="wave-top__img hidden" id="wave5-light">
     </div>
 
 
@@ -352,6 +352,7 @@
         <p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
         <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
     </footer>
+    <script src="scripts/darkmodePortfolio.js"></script>
     <script src="search.js"></script>
     <script src="script.js"></script>
     
