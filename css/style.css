@@ -1266,6 +1266,10 @@ button:focus {
   justify-content: space-between;
   align-items: center;
   margin: 4rem 0 2rem 0vw; }
+  @media (max-width: 56.25em) {
+    .search {
+      flex-direction: column;
+      align-items: start; } }
 
 .search-input {
   width: 18vw;
@@ -1293,7 +1297,7 @@ button:focus {
   box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px; }
   @media (max-width: 56.25em) {
     .search-input:focus {
-      transform: scale(1.02);
+      transform: scale(1.01);
       width: 100%; } }
 
 .search select {
@@ -1303,17 +1307,9 @@ button:focus {
   border: none;
   border-radius: 5px;
   color: #fff; }
-
-@media only screen and (max-width: 700px) {
-  .search {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; }
-  .search select {
-    width: 12rem;
-    padding: 0.7rem 2rem 0.7rem 2rem; }
-  #cardsContainer {
-    grid-template-columns: 1fr; } }
+  @media (max-width: 56.25em) {
+    .search select {
+      width: 40%; } }
 
 .desktop__nav {
   display: flex;
