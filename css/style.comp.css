@@ -1758,6 +1758,13 @@ button:focus {
     font-weight: 300;
     color: var(--color-grey-light-1);
     margin-bottom: 3rem; }
+  .footer__icons {
+    list-style: none;
+    text-decoration: none; }
+    .footer__icons__icon {
+      fill: #fff; }
+      .footer__icons__icona {
+        text-decoration: none; }
 
 .work {
   padding: 10rem 10vw 0 10vw; }
