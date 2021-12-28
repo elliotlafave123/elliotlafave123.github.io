@@ -1,0 +1,53 @@
+.wave-top {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 10rem;
+    transform: translate(0, 1rem);
+
+    &__img {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 10rem;
+    }
+}
+
+.wave-bottom {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 10rem;
+
+    &__img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        height: 10rem;
+    }
+}
+
+// .wave-top {
+//     width: 100%;
+//     height: 10rem;
+
+//     img {
+//         width: 100%;
+//         height: 10rem;
+//         transform: translateY(1rem);
+//     }
+// }
+
+// .wave-bottom {
+//     width: 100%;
+//     height: 10rem;
+//     z-index: -100;
+
+//     img {
+//         width: 100%;
+//         height: 10rem;
+//         transform: translateY(-1rem);
+//     }
+// }

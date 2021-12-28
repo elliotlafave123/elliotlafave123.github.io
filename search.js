@@ -179,7 +179,7 @@ const dataProject16 = {
 	title: "Nexter - Real Estate Site",
 	paragraph:
 		"I coded a website that sells luxury homes from the top trusted realtors. Across the site i used CSS grid to place the content.",
-	linkLivePreview: "Projects/nexter/index.html",
+	linkLivePreview: "Projects/Nexter/",
 	linkGit:
 		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/Nexter",
 	linkImg: "img/Projects/nexter.png",

@@ -1,0 +1,94 @@
+.header {
+    position: relative;
+
+    &__background-img {
+        position: absolute;
+        width: initial;
+        height: 60vh;
+        right: 0;
+        top: 0;
+        z-index: -1;
+
+        @include respond(tab-land) {
+            width: auto;
+            height: 60vh;
+        }
+
+        @include respond(tab-port) {
+            height: 40vh;
+            width: auto;
+        }
+
+        @include respond(phone) {
+            height: 0;
+            width: auto;
+            display: none;
+        }
+    }
+
+    &__content {
+        padding: 15vh 0 0rem 15rem;
+        font-weight: 400;
+        display: block;
+        position: relative;
+
+        @include respond(big-desktop) {
+            padding: 15vh 0 20vh 15rem;
+        }
+
+        @include respond(tab-land) {
+            padding: 5rem 0 20rem 15rem;
+            width: 70%;
+            height: 100vh;
+        }
+
+        @include respond(tab-port) {
+            padding: 10vh 0 0 5rem;
+            height: 100vh;
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            padding: 10vh 0 0 5rem;
+            height: auto;
+            width: 100%;
+        }
+
+        &--title {
+            @include respond(tab-land) {
+                height: fit-content;
+            }
+
+            @include respond(tab-port) {
+                width: 60rem;
+            }
+
+            @include respond(phone) {
+                width: 85%;
+            }
+        }
+
+        &--subtitle {
+            color: $color-grey-light-1;
+            font-size: 3rem;
+            letter-spacing: 1px;
+            margin-top: 20vh;
+
+            @include respond(tab-land) {
+                margin-top: 5rem;
+            }
+
+            @include respond(tab-port) {
+                margin-top: 8rem;
+            }
+
+            @include respond(phone) {
+                margin-top: 10vh;
+            }
+        }
+    }
+}
+
+.section-header {
+    margin-bottom: 15rem;
+}

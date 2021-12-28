@@ -1,0 +1,90 @@
+.section-education {
+    width: 100%;
+    padding: 10rem 10vw 0 10vw; 
+    
+}
+
+.education {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+    }
+    
+    &__schools {
+        
+        width: 100%;
+        display: inline-block;
+
+        &--school {
+            font-size: 3rem;
+            color:$color-grey-light-1;
+            font-family: $font-zen;
+        }
+        &--date {
+            font-size: 2.5rem;
+            color:$color-grey-light-1;
+            font-family: $font-lato;
+            font-weight: 300;
+            margin-bottom: 4rem;
+        }
+        
+        @include respond(tab-port) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__title {
+        display: block;
+    }
+
+    &__grades {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+        gap:1rem;
+
+        padding: 3rem 4rem;
+        border:5px solid #3F454B;
+        border-radius:1rem;
+
+        &--title {
+            font-family: $font-zen;
+            font-weight: 500;
+            font-size: 3rem;
+            position: relative;
+            width: fit-content;
+            color: $color-white;
+            
+            &::after {
+                content: "";
+                background: $color-white;
+                position: absolute;
+                top: 5rem;
+                left: 0;
+                height: 4px;
+                width: 70%;
+                border-radius: 0 4px 4px 0;
+            }
+        }
+
+        &--subject {
+            font-family: $font-lato;
+            font-size: 2.5rem;
+            color:$color-grey-light-1;
+            font-weight: 400;
+        }
+
+        &--grade {
+            font-family: $font-lato;
+            font-size: 2.5rem;
+            color:$color-grey-light-1;
+            font-weight: 400;
+        }
+    }
+    
+}

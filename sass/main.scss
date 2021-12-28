@@ -1,0 +1,36 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+@import "base/utilities";
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+
+@import "components/scrollbar";
+@import "components/button";
+@import "components/wave";
+@import "components/skill-grid";
+@import "components/skill";
+@import "components/card";
+@import "components/form";
+@import "components/liquid";
+@import "components/nav";
+@import "components/portfolio-page";
+@import "components/slider";
+@import "components/darkModeSlider";
+@import "components/JSCards";
+
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/about";
+@import "layout/skills";
+@import "layout/portfolio";
+@import "layout/contact";
+@import "layout/footer";
+@import "layout/work";
+@import "layout/education";
+@import "layout/achievements";
+
+@import "pages/home";
+@import "pages/TechStack"
