@@ -1,195 +1,195 @@
 .card {
-    position: relative;
-    // max-width: 40rem;
-    width: minmax(40rem, 1fr);
-    border-radius: 1rem;
-    overflow: hidden;
-    background-color: $color-card-dark;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
-    transition: all 0.2s;
+	position: relative;
+	// max-width: 40rem;
+	width: minmax(40rem, 1fr);
+	border-radius: 1rem;
+	overflow: hidden;
+	background-color: $color-card-dark;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
+	transition: all 0.2s;
 
-    &--2 {
-        background-color: $color-card;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
-    }
+	&--2 {
+		background-color: $color-card;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
+	}
 
-    &--3 {
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
-        max-width: 30rem;
-    }
+	&--3 {
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
+		max-width: 30rem;
+	}
 
-    @include respond(tab-port) {
-        max-width: 100%;
-    }
+	@include respond(tab-port) {
+		max-width: 100%;
+	}
 
-    &__text {
-        font-family: $font-lato;
-        font-weight: 500;
-        letter-spacing: 1.5%;
-        font-size: 1.3rem;
-        margin-bottom: 1.6rem;
-        min-height: 7rem;
+	&__text {
+		font-family: $font-lato;
+		font-weight: 500;
+		letter-spacing: 1.5%;
+		font-size: 1.3rem;
+		margin-bottom: 1.6rem;
+		min-height: 7rem;
 
-        @include respond(phone) {
-            font-size: 1.9rem;
-        }
-    }
+		@include respond(phone) {
+			font-size: 1.9rem;
+		}
+	}
 
-    &__img {
-        width: 100%;
-        height: 18rem;
-    }
+	&__img {
+		width: 100%;
+		height: 18rem;
+	}
 
-    &__content {
-        padding: 2rem;
-        position: relative;
-        @include respond(phone) {
-            padding: 3rem;
-        }
-    }
+	&__content {
+		padding: 2rem;
+		position: relative;
+		@include respond(phone) {
+			padding: 3rem;
+		}
+	}
 
-    &__buttons {
-        width: 100%;
-        position: relative;
-        height: 5rem;
-    }
+	&__buttons {
+		width: 100%;
+		position: relative;
+		height: 5rem;
+	}
 
-    &:hover {
-        transform: scale(1.02);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 0px;
-    }
+	&:hover {
+		transform: scale(1.02);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 0px;
+	}
 
-    &--2:hover {
-        transform: scale(1.02);
-        box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 20px 0px;
-    }
+	&--2:hover {
+		transform: scale(1.02);
+		box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 20px 0px;
+	}
 }
 
 .tags {
-    width: 100%;
-    margin-bottom: 1rem;
+	width: 100%;
+	margin-bottom: 1rem;
 
-    @include respond(phone) {
-        margin-bottom: 2rem;
-        margin-top: 0.5rem;
-    }
+	@include respond(phone) {
+		margin-bottom: 2rem;
+		margin-top: 0.5rem;
+	}
 
-    &__tag {
-        background-color: $color-tag;
-        width: 20%;
-        height: 2rem;
-        padding: 0.2rem 1.2rem;
-        margin-right: 1rem;
-        border-radius: 2px;
+	&__tag {
+		background-color: $color-tag;
+		width: 20%;
+		height: 2rem;
+		padding: 0.2rem 1.2rem;
+		margin-right: 1rem;
+		border-radius: 2px;
 
-        &--html {
-            color: #f0582f;
-        }
+		&--html {
+			color: #f0582f;
+		}
 
-        &--css {
-            color: #007cc4;
-        }
+		&--css {
+			color: #007cc4;
+		}
 
-        &--js {
-            color: #f48031;
-        }
+		&--js {
+			color: #f48031;
+		}
 
-        &--scss {
-            color: #cc6699;
-        }
+		&--scss {
+			color: #cc6699;
+		}
 
-        &--api {
-            color: #f5f258;
-        }
-    }
+		&--api {
+			color: #f5f258;
+		}
+	}
 
-    @include respond(phone) {
-        &__tag {
-            background-color: #3f4348;
-            width: 20%;
-            height: 2rem;
-            padding: 0.2rem 1.7rem;
-            margin-right: 1rem;
-            border-radius: 2px;
+	@include respond(phone) {
+		&__tag {
+			background-color: #3f4348;
+			width: 20%;
+			height: 2rem;
+			padding: 0.2rem 1.7rem;
+			margin-right: 1rem;
+			border-radius: 2px;
 
-            &--html {
-                color: #f0582f;
-                font-size: 1.6rem;
-            }
+			&--html {
+				color: #f0582f;
+				font-size: 1.6rem;
+			}
 
-            &--css {
-                color: #007cc4;
-                font-size: 1.6rem;
-            }
+			&--css {
+				color: #007cc4;
+				font-size: 1.6rem;
+			}
 
-            &--js {
-                color: #f48031;
-                font-size: 1.6rem;
-            }
+			&--js {
+				color: #f48031;
+				font-size: 1.6rem;
+			}
 
-            &--scss {
-                color: #cc6699;
-                font-size: 1.6rem;
-            }
+			&--scss {
+				color: #cc6699;
+				font-size: 1.6rem;
+			}
 
-            &--api {
-                color: #f5f258;
-                font-size: 1.6rem;
-            }
-        }
-    }
+			&--api {
+				color: #f5f258;
+				font-size: 1.6rem;
+			}
+		}
+	}
 }
 
 .card__grid {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8rem;
-    margin: 0 auto 0 auto;
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 8rem;
+	margin: 0 auto 0 auto;
 
-    align-content: space-between;
+	align-content: space-between;
 
-    @include respond(tab-land) {
-        grid-template-columns: auto auto;
-        grid-row-gap: 4rem;
-        width: 80%;
-    }
+	@include respond(tab-land) {
+		grid-template-columns: auto auto;
+		grid-row-gap: 4rem;
+		width: 80%;
+	}
 
-    @include respond(tab-port) {
-        grid-template-columns: auto;
-        grid-row-gap: 4rem;
-        width: 70%;
-    }
+	@include respond(tab-port) {
+		grid-template-columns: auto;
+		grid-row-gap: 4rem;
+		width: 70%;
+	}
 
-    @include respond(phone) {
-        grid-template-columns: auto;
-        grid-row-gap: 4rem;
-        width: 100%;
-    }
+	@include respond(phone) {
+		grid-template-columns: auto;
+		grid-row-gap: 4rem;
+		width: 100%;
+	}
 }
 
 .card__grid--small {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 4rem;
-    margin: 0 auto 0 auto;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 4rem;
+	margin: 0 auto 0 auto;
 
-    @include respond(tab-land) {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: 4rem;
-        width: 80%;
-    }
+	@include respond(tab-land) {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-row-gap: 4rem;
+		width: 80%;
+	}
 
-    @include respond(tab-port) {
-        grid-template-columns: auto auto;
-        grid-row-gap: 4rem;
-        width: 70%;
-    }
+	@include respond(tab-port) {
+		grid-template-columns: auto auto;
+		grid-row-gap: 4rem;
+		width: 70%;
+	}
 
-    @include respond(phone) {
-        grid-template-columns: auto;
-        grid-row-gap: 4rem;
-        width: 90%;
-    }
+	@include respond(phone) {
+		grid-template-columns: auto;
+		grid-row-gap: 4rem;
+		width: 90%;
+	}
 }
