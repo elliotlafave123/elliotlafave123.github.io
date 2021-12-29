@@ -104,10 +104,6 @@
 		font-size: 3.7rem;
 		color: $text-light;
 		padding-bottom: 4rem;
-
-		@include respond(tab-port) {
-			font-size: 3.2rem;
-		}
 	}
 
 	&__paragraph {
@@ -141,7 +137,7 @@
 			grid-column: 1/2;
 			grid-row: 1/2;
 			font-family: $font-lato;
-			font-size: 4rem;
+			font-size: 3rem;
 			color: $color-white;
 			padding-bottom: 4rem;
 		}

@@ -21,6 +21,10 @@ h2 {
 	font-family: $font-zen;
 	font-weight: 500;
 	font-size: 5rem;
+
+	@include respond(phone) {
+		font-size: 4rem;
+	}
 }
 
 h3 {
@@ -40,6 +44,21 @@ h3 {
 		height: 8px;
 		width: 70%;
 		border-radius: 0 4px 4px 0;
+	}
+
+	@include respond(phone) {
+		font-size: 4rem;
+
+		&::after {
+			content: "";
+			background: $color-primary;
+			position: absolute;
+			bottom: -0.6rem;
+			left: 0;
+			height: 5px;
+			width: 60%;
+			border-radius: 0 4px 4px 0;
+		}
 	}
 }
 
@@ -95,6 +114,21 @@ h5 {
 		height: 6px;
 		width: 70%;
 		border-radius: 0 4px 4px 0;
+	}
+
+	@include respond(phone) {
+		font-size: 4rem;
+
+		&::after {
+			content: "";
+			background: $color-primary;
+			position: absolute;
+			bottom: -0.6rem;
+			left: 0;
+			height: 5px;
+			width: 60%;
+			border-radius: 0 4px 4px 0;
+		}
 	}
 }
 

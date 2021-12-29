@@ -139,6 +139,9 @@ h2 {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 500;
   font-size: 5rem; }
+  @media (max-width: 37.5em) {
+    h2 {
+      font-size: 4rem; } }
 
 h3 {
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -156,6 +159,18 @@ h3 {
     height: 8px;
     width: 70%;
     border-radius: 0 4px 4px 0; }
+  @media (max-width: 37.5em) {
+    h3 {
+      font-size: 4rem; }
+      h3::after {
+        content: "";
+        background: var(--color-primary);
+        position: absolute;
+        bottom: -0.6rem;
+        left: 0;
+        height: 5px;
+        width: 60%;
+        border-radius: 0 4px 4px 0; } }
 
 h4 {
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -202,6 +217,18 @@ h5 {
     height: 6px;
     width: 70%;
     border-radius: 0 4px 4px 0; }
+  @media (max-width: 37.5em) {
+    h5 {
+      font-size: 4rem; }
+      h5::after {
+        content: "";
+        background: var(--color-primary);
+        position: absolute;
+        bottom: -0.6rem;
+        left: 0;
+        height: 5px;
+        width: 60%;
+        border-radius: 0 4px 4px 0; } }
 
 a:before, a:after {
   content: "";
@@ -1165,6 +1192,7 @@ button:focus {
   gap: 4rem; }
   @media (min-width: 150em) {
     #cardsContainer {
+      width: 80vw;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
   @media (max-width: 75em) {
     #cardsContainer {
@@ -1868,9 +1896,6 @@ button:focus {
     font-size: 3.7rem;
     color: var(--text-light);
     padding-bottom: 4rem; }
-    @media (max-width: 56.25em) {
-      .experience__title {
-        font-size: 3.2rem; } }
   .experience__paragraph {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -1896,7 +1921,7 @@ button:focus {
       grid-column: 1/2;
       grid-row: 1/2;
       font-family: "lato", sans-serif;
-      font-size: 4rem;
+      font-size: 3rem;
       color: var(--color-white);
       padding-bottom: 4rem; }
     .experience__paragraph {
@@ -1968,7 +1993,7 @@ button:focus {
       color: var(--text-light); }
       .education__grades--title::after {
         content: "";
-        background: var(--text-light);
+        background: var(--color-primary);
         position: absolute;
         top: 5rem;
         left: 0;
@@ -2320,7 +2345,7 @@ button:focus {
   70% {
     opacity: 80%; }
   100% {
-    opacity: 50%; } }
+    opacity: 60%; } }
 
 @keyframes opacityText {
   0% {
