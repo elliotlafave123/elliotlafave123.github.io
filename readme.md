@@ -7,4 +7,4 @@ I'm Elliot La Fave, an aspiring software deveoper based in Manchester UK. I am s
 ![GitHub last commit](https://img.shields.io/github/last-commit/elliotlafave123/elliotlafave123.github.io)
 
 <br />
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=elliotlafave123)](https://github.com/elliotlafave123/github-readme-stats)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=elliotlafave123)](https://github.com/elliotlafave123/github-readme-stats)
