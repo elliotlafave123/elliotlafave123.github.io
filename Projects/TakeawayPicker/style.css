@@ -11,7 +11,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	height: 90vh;
 	overflow: hidden;
 	margin: 0;
 }
@@ -70,7 +70,7 @@ main {
 	grid-template-columns: 1fr;
 	grid-template-rows: 80% 20%;
 
-	background-color: #5f3dc4;
+	background-color: #e29e51;
 	margin-bottom: 4rem;
 	color: #fff;
 	text-align: center;
@@ -102,8 +102,8 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	box-shadow: inset 0px 11px 30px -10px #332169,
-		inset 0px -11px 30px -10px #332169;
+	box-shadow: inset 0px 11px 15px -10px #ad7a3e,
+		inset 0px -11px 15px -10px #ad7a3e;
 }
 
 main img {
@@ -129,8 +129,11 @@ main img {
 	font-family: inherit;
 	background-color: #495057;
 	width: 280px;
-	transition: scale 0.15s ease;
+	transition: scale 0.4s ease;
+	/* transition: scale 0.15s ease; */
 	opacity: 0%;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
 	animation: popIn 0.3s ease-out 0.8s forwards;
 }
@@ -142,7 +145,8 @@ main img {
 
 .btn:active {
 	background-color: #868e96;
-	transform: scale(0.97);
+	transform: scale(0.98);
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .hidden {
