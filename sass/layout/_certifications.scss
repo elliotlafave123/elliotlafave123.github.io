@@ -1,0 +1,55 @@
+.section-certifications {
+	width: 100%;
+	padding: 10rem 10vw 0 10vw;
+}
+
+.certificates {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+	padding: 5rem 0 0 0;
+
+	@include respond(tab-port) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.certificate {
+	width: 100%;
+	padding: 2rem 0rem;
+	text-align: center;
+	background-color: transparent;
+
+	&:hover {
+		background-color: $color-grey-dark-2;
+		cursor: pointer;
+	}
+
+	&--title {
+		font-family: $font-zen;
+		font-weight: 500;
+		font-size: 3.5rem;
+		position: relative;
+		width: fit-content;
+		color: $text-light;
+		margin-bottom: 5rem;
+		width: 100%;
+
+		@include respond(tab-land) {
+			font-size: 2.3rem;
+		}
+
+		@include respond(tab-port) {
+			font-size: 3rem;
+		}
+	}
+
+	img {
+		width: 80%;
+	}
+}

@@ -2106,6 +2106,49 @@ button:focus {
     .message {
       width: 80%; } }
 
+.section-certifications {
+  width: 100%;
+  padding: 10rem 10vw 0 10vw; }
+
+.certificates {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 5rem 0 0 0; }
+  @media (max-width: 56.25em) {
+    .certificates {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 37.5em) {
+    .certificates {
+      grid-template-columns: 1fr; } }
+
+.certificate {
+  width: 100%;
+  padding: 2rem 0rem;
+  text-align: center;
+  background-color: transparent; }
+  .certificate:hover {
+    background-color: var(--color-grey-dark-2);
+    cursor: pointer; }
+  .certificate--title {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-size: 3.5rem;
+    position: relative;
+    width: fit-content;
+    color: var(--text-light);
+    margin-bottom: 5rem;
+    width: 100%; }
+    @media (max-width: 75em) {
+      .certificate--title {
+        font-size: 2.3rem; } }
+    @media (max-width: 56.25em) {
+      .certificate--title {
+        font-size: 3rem; } }
+  .certificate img {
+    width: 80%; }
+
 .section-header {
   margin: 0; }
 
