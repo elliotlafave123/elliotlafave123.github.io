@@ -160,7 +160,7 @@ main img {
 	}
 
 	99% {
-		transform: translateY(3500px);
+		transform: translateY(3000px);
 	}
 	100% {
 		transform: translateY(0%);
