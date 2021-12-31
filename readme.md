@@ -9,3 +9,27 @@ I'm Elliot La Fave, an aspiring software deveoper based in Manchester UK. I am s
 <br />
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=elliotlafave123&count_private=true&hide=prs,contribs&show_icons=true&theme=aura&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
+
+<br />
+
+# I'm interested in 👀
+Front-end website development using HTML, CSS / SASS and JavaScript.
+I enjoy designing websited and completing coding challenges from Frontend Mentor.
+I like creating small projects which can all be found at [elliotlafave.com/portfolio].
+
+<br />
+
+# I’m currently learning 🌱
+JavaScript and advanced SASS using npm to build css.
+Advanced DOM manipulation with JS.
+Nods JS and backend website development using Mongo DB.
+
+<br />
+
+# How to reach me 📫
+E-Mail - elliot@lafave.co.uk
+<br />
+website - [elliotlafave.com/contact-me]
+
+[elliotlafave.com/contact-me]: https://www.elliotlafave.com/contact-me
+[elliotlafave.com/portfolio]: https://www.elliotlafave.com/portfolio
