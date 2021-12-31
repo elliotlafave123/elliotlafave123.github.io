@@ -1,7 +1,7 @@
 const project0 = {
 	title: "Natours",
 	paragraph:
-		"I created a social media dashboard using HTML, CSS and JS to add data to the webpage.",
+		"I coded a website that sells nature tours. To create the site I used HTML, CSS and SCSS. I created animations with @keyframes and transitions using custom cubic-bezier timing functions.",
 	linkLivePreview: "Projects/natours/index.html",
 	linkGit:
 		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/natours",
