@@ -83,41 +83,22 @@
         </div>
 
         <div class="mobile-only u-margin-bottom-xlarge">
-            <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Natours</h5>
-            <div class="portfolio-page__project--img-container">
-                <img src="img/Responsive-natours.png" alt="Responsive design showcase image" class="portfolio-page__project--img">
-            </div>
-            <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I coded a website that sells nature tours. To create the site I used HTML, CSS and SCSS. I created animations with @keyframes and transitions using custom cubic-bezier timing functions.</p>
-            <div class="tags">
-                <span class="tags__tag tags__tag--html">HTML</span>
-                <span class="tags__tag tags__tag--css">CSS</span>
-                <span class="tags__tag tags__tag--scss">SCSS</span>
-            </div> 
-            <div class="portfolio-page__project--buttons u-margin-top-medium">
-                <a href="Projects/natours/index.html" class="btn btn-purple-small u-margin-bottom-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
-                <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/natours" class="btn btn--github" target="blank">Github</a>
-                <span class="portfolio-page__project--buttons--text">&larr; &nbsp; &nbsp;See the code</span>
-            </div> 
-          </div> 
+            <div class="mobile-slider">
+                <div class="mobile-slider__container" id="container">
+                </div> 
 
-          <div class="mobile-only">
-            <h5 class="portfolio-page__project--heading u-margin-bottom-medium">Trillo</h5>
-            <div class="portfolio-page__project--img-container">
-                <img src="img/Responsive-trillo.png" alt="Responsive design showcase image" class="portfolio-page__project--img">
+                <nav class="mobile-slider__nav">
+                   <button class="mobile-slider__nav-button" id="mobile-slider-btn-last">
+                       <img src="img/mobile-slider/iPhone 13-Arrow 19.svg" alt="">
+                       <p>last</p>
+                   </button>
+                   <button class="mobile-slider__nav-button" id="mobile-slider-btn-next">
+                        <p>next</p>
+                        <img src="img/mobile-slider/iPhone 13-Arrow 18.svg" alt="">       
+                    </button>
+                </nav>
             </div>
-            
-            <p class="portfolio-page__project--paragraph u-margin-bottom-medium">I programmed a web application that sells hotels and flights. I used HTML and SCSS for the design and mainly used CSS Flexbox to create the layout. The design is 100% responsive (works on all devices)</p>
-            <div class="tags">
-                <span class="tags__tag tags__tag--html">HTML</span>
-                <span class="tags__tag tags__tag--css">CSS</span>
-                <span class="tags__tag tags__tag--scss">SCSS</span>
-            </div> 
-            <div class="portfolio-page__project--buttons u-margin-top-medium">
-                <a href="Projects/natours/index.html" class="btn btn-purple-small u-margin-bottom-small" target="blank">Live Preview&nbsp; &nbsp;&nbsp; &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
-                <a href="https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/trillo" class="btn btn--github" target="blank">Github</a>
-                <span class="portfolio-page__project--buttons--text">&larr; &nbsp; &nbsp;See the code</span>
-            </div>
-          </div>   
+        </div>
 
         <div class="slider-container">
             <div class="left-slide">
@@ -352,6 +333,7 @@
         <p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
         <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
     </footer>
+    <script src="scripts/mobileSlider.js"></script>
     <script src="scripts/darkmodePortfolio.js"></script>
     <script src="search.js"></script>
     <script src="script.js"></script>
