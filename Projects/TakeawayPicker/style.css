@@ -5,12 +5,77 @@
 	margin: 0;
 }
 
+/* sidebar */
+nav {
+	width: 100%;
+	padding: 1rem;
+	color: #000;
+}
+
+nav img {
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.navBtn {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	position: absolute;
+	z-index: 200;
+	top: 1rem;
+}
+
+/* 
+checkDominos ? takeaways.push("Dominos") : takeaways.push("");
+	checkKFC ? takeaways.push("KFC") : takeaways.push("");
+	checkPapaJhons ? takeaways.push("PapaJohns") : takeaways.push("");
+	checkSubWay ? takeaways.push("SubWay") : takeaways.push("");
+	checkMcDonalds ? takeaways.push("McDonald's") : takeaways.push("");
+*/
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 85vw;
+	background-color: #e29e51;
+	z-index: 100;
+
+	transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+
+	padding: 7rem 1rem 1rem 1.5rem;
+	box-shadow: 10px 0 40px -2px #000;
+}
+
+label {
+	font-size: 2rem;
+	margin-left: 1rem;
+}
+
+form {
+	padding: 2rem 0 0 0;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.85);
+	margin-left: 0.9rem;
+}
+
+.form-item {
+	display: flex;
+	align-items: center;
+}
+
+/* Main */
+
 body {
 	font-family: "Roboto", sans-serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 	height: 90vh;
 	overflow: hidden;
 	margin: 0;
@@ -20,6 +85,7 @@ h1 {
 	font-size: 2.2rem;
 	animation: popIn 0.3s ease-out forwards;
 	opacity: 0%;
+	margin-top: 1.5rem;
 }
 
 h3 {
