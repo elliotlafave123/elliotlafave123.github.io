@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>My Project</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>My Project</title>
+	</head>
 
-  <body>
-    <h1>Random Takeaway Picker</h1>
+	<body>
+		<div class="title">
+			<h1>Random Takeaway Picker</h1>
+			<span><h3>2.0</h3></span>
+		</div>
 
-    <main class="takeaway">
-      <img src="" id="img">
-      <h2 class="name">Press Button</h2>
-    </main>
+		<main class="takeaway">
+			<div class="imgContainer" id="imgContainer"></div>
+			<div class="name-container">
+				<h2 class="name">Press Button</h2>
+			</div>
+		</main>
 
-    <div class="buttons-container">
-      <button class="btn" id="spin">Random Takeaway</button>
-      <button class="btn hidden" id="again">Again!</button>
-    </div>
+		<div class="buttons-container">
+			<button class="btn" id="spin">Spin</button>
+			<button class="btn hidden" id="again">Again!</button>
+		</div>
 
-    <script src="script.js"></script>
-  </body>
+		<script src="script.js"></script>
+	</body>
 </html>
