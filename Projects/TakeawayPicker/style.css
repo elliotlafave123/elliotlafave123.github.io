@@ -39,14 +39,20 @@ checkDominos ? takeaways.push("Dominos") : takeaways.push("");
 	top: 0;
 	left: 0;
 	height: 100vh;
-	width: 85vw;
+	width: 20vw;
 	background-color: #e29e51;
 	z-index: 100;
 
 	transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 
 	padding: 7rem 1rem 1rem 1.5rem;
-	box-shadow: 10px 0 40px -2px #000;
+	box-shadow: 3px 0 40px -2px #000;
+}
+
+@media only screen and (max-width: 700px) {
+	.sidebar {
+		width: 90vw;
+	}
 }
 
 label {
