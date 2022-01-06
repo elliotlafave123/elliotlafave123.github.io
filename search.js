@@ -430,13 +430,17 @@ const displayMovements = function (data) {
 		cardsContainer.insertAdjacentHTML("afterbegin", html);
 	});
 };
-displayMovements(data);
+if (cardsContainer) {
+	displayMovements(data);
+}
 
-searchInput.addEventListener("input", (e) => {
-	e.preventDefault();
+if (searchInput) {
+	searchInput.addEventListener("input", (e) => {
+		e.preventDefault();
 
-	search(searchInput.value);
-});
+		search(searchInput.value);
+	});
+}
 
 let isThere = [];
 const search = function (input) {
@@ -455,14 +459,16 @@ const search = function (input) {
 };
 
 let selection = [];
-dropdown.addEventListener("input", (e) => {
-	e.preventDefault();
-	selection = [];
+if (dropdown) {
+	dropdown.addEventListener("input", (e) => {
+		e.preventDefault();
+		selection = [];
 
-	data.forEach(function (project, i) {
-		if (project.tags.includes(dropdown.value)) {
-			selection.push(project);
-			displayMovements(selection);
-		}
+		data.forEach(function (project, i) {
+			if (project.tags.includes(dropdown.value)) {
+				selection.push(project);
+				displayMovements(selection);
+			}
+		});
 	});
-});
+}
