@@ -1,26 +1,71 @@
 "use strict";
 
-const vodka = {
-	name: "vodka",
+//////////////////////////
+// DRINKS
+
+/////   VODKA   /////
+const absolut = {
+	name: "absolut",
 	img: "img/Vodka.png",
 };
 
-const whiskey = {
-	name: "whiskey",
+const smirnoff = {
+	name: "Smirnoff",
+	img: "img/smirnoff.png",
+};
+
+const vodka = [absolut, smirnoff];
+
+/////   WHISKEY   /////
+const jamersons = {
+	name: "Jamersons",
 	img: "img/Whiskey.png",
 };
 
-const gin = {
-	name: "gin",
+const JD = {
+	name: "Jack Daniel's",
+	img: "img/JD.png",
+};
+
+const famousGrouse = {
+	name: "The Famous Grouse",
+	img: "img/famousGrouse.png",
+};
+
+const whiskey = [jamersons, JD, famousGrouse];
+
+/////   GIN   /////
+const gordons = {
+	name: "Gordons",
 	img: "img/Gin.png",
 };
 
-const rum = {
-	name: "rum",
+const bombaySapphire = {
+	name: "Bombay Sapphire",
+	img: "img/bombaySapphire.png",
+};
+
+const gin = [gordons, bombaySapphire];
+
+/////   RUM   /////
+const bacardi = {
+	name: "Bacardi",
 	img: "img/Rum.png",
 };
 
-let data = [vodka, whiskey, gin, rum];
+const captainMorgan = {
+	name: "Captain Morgans",
+	img: "img/captainMorgan.png",
+};
+
+const rum = [bacardi, captainMorgan];
+
+/////   SHOTS   /////
+
+const shots = [];
+
+let data = [vodka, whiskey, gin, rum].flat(1);
+console.log(data);
 
 const spin = document.getElementById("spin");
 const again = document.getElementById("again");
