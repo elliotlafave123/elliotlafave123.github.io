@@ -58,12 +58,39 @@ const bacardi = {
 	img: "img/rum.png",
 };
 
+const bacardiDark = {
+	name: "Bacardi Dark",
+	img: "img/bacardiDark.jfif",
+};
+
+const captainMorganTiki = {
+	name: "Captain Morgan's Tiki",
+	img: "img/captainMorganTiki.jfif",
+};
+
+const malibu = {
+	name: "Malibu",
+	img: "img/malibu.jfif",
+};
+
+const dmf = {
+	name: "Dead Man's Fingers",
+	img: "img/deadMansFingers.jfif",
+};
+
 const captainMorgan = {
 	name: "Captain Morgans",
 	img: "img/captainMorgan.png",
 };
 
-const rum = [bacardi, captainMorgan];
+const rum = [
+	bacardi,
+	captainMorgan,
+	captainMorganTiki,
+	malibu,
+	dmf,
+	bacardiDark,
+];
 
 /////   SHOTS   /////
 
