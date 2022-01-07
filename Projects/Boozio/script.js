@@ -19,6 +19,21 @@ const russianStandard = {
 	img: "img/russianStandard.jpg",
 };
 
+const valdivar = {
+	name: "Valdivar",
+	img: "img/valdivar.jfif",
+};
+
+const absolutRaspberry = {
+	name: "Absolut Raspberry",
+	img: "img/absolutRaspberry.jfif",
+};
+
+const absolutWatermelon = {
+	name: "Absolut Watermelon",
+	img: "img/absolutWatermelon.jfif",
+};
+
 const vodka = [absolut, smirnoff, russianStandard];
 
 /////   WHISKEY   /////
