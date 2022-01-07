@@ -64,7 +64,8 @@ const rum = [bacardi, captainMorgan];
 
 const shots = [];
 
-let data = [vodka, whiskey, gin, rum].flat(1);
+let data = [vodka, whiskey, gin, rum];
+let dataFlat = data.flat(1);
 console.log(data);
 
 const spin = document.getElementById("spin");
@@ -76,29 +77,53 @@ const navBtn = document.getElementById("navBtn");
 const sidebar = document.getElementById("sidebar");
 const form = document.getElementById("sidebarForm");
 
+const group1 = document.querySelector(".form-group-1");
+const group2 = document.querySelector(".form-group-2");
+const group3 = document.querySelector(".form-group-3");
+const group4 = document.querySelector(".form-group-4");
+const group5 = document.querySelector(".form-group-5");
+
+const groups = [group1, group2, group3, group4, group5];
 let delayInMilliseconds = 3000;
 
 const init = function (data) {
-	form.innerHTML = "";
+	// form.innerHTML = `
+	// <div class="form-group-1"><h5>vodkas</h5></div>
+	// <div class="form-group-2"><h5>whiskeys</h5></div>
+	// <div class="form-group-3"><h5>gins</h5></div>
+	// <div class="form-group-4"><h5>rums</h5></div>
+	// <div class="form-group-5"><h5>shots</h5></div>
+	// `;
+	let groupNumber = 1;
+	let currentGroop;
 
 	// add drinks to sidebar
-	data.forEach(function (drink, i) {
-		let html = "";
+	data.forEach(function (group, i) {
+		console.log(group);
 
-		html = `
-        <div class="form-item">
-            <input type="checkbox" id="${drink.name}" />
-            <label for="${drink.name}">${drink.name}</label>
-        </div>
-        `;
+		let groupHTML = `
+		<div class="form-group-1"><h5>vodkas</h5></div>
+		`;
+		group.insertAdjacentHTML("afterbegin", groupHTML);
 
-		form.insertAdjacentHTML("afterbegin", html);
+		group.forEach(function (drink, i) {
+			let html = "";
 
-		drink.checkbox = document.getElementById(`${drink.name}`);
+			html = `
+			<div class="form-item">
+				<input type="checkbox" class="checkbox" id="${drink.name}" />
+				<label for="${drink.name}">${drink.name}</label>
+			</div>
+			`;
+
+			currentGroop.insertAdjacentHTML("afterbegin", html);
+
+			drink.checkbox = document.getElementById(`${drink.name}`);
+		});
 	});
 
 	// check checkboxes
-	data.forEach(function (drink, i) {
+	dataFlat.forEach(function (drink, i) {
 		let x = drink.checkbox;
 		x.checked = true;
 	});
