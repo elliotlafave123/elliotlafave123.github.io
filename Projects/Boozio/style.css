@@ -16,7 +16,7 @@ h2 {
 
 h5 {
 	font-size: 1.5rem;
-	margin-top: 1rem;
+	/* margin-top: 1rem; */
 }
 
 /* Header */
@@ -123,6 +123,7 @@ label {
 
 .checkbox {
 	/* justify-self: flex-start; */
+	margin-left: 1rem;
 }
 
 form {
@@ -131,7 +132,7 @@ form {
 
 input[type="checkbox"] {
 	transform: scale(1.85);
-	margin-left: 0.2rem;
+	/* margin-left: 0.2rem; */
 }
 
 .form-item {
@@ -139,6 +140,19 @@ input[type="checkbox"] {
 	align-items: center;
 	flex-direction: row;
 	/* justify-content: center; */
+}
+
+.form-group {
+	height: 2.6rem;
+	width: 100%;
+	overflow: hidden;
+	padding-right: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid rgba(165, 166, 167, 0.2);
+}
+
+.form-group-1 {
+	/* height: auto; */
 }
 
 /* Main */

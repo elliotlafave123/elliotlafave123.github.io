@@ -331,3 +331,93 @@ navBtn.addEventListener("click", () => {
 		navBtn.innerHTML = `<i class="fas fa-bars"></i>`;
 	}
 });
+
+// code for the collapsing containers in menu
+const button1 = document.querySelector(".sidebar-title-1");
+const button2 = document.querySelector(".sidebar-title-2");
+const button3 = document.querySelector(".sidebar-title-3");
+const button4 = document.querySelector(".sidebar-title-4");
+const button5 = document.querySelector(".sidebar-title-5");
+
+let btn1 = false;
+let btn2 = false;
+let btn3 = false;
+let btn4 = false;
+let btn5 = false;
+
+const closeAll = function (x) {
+	if (x != 1) {
+		group1.style.height = "2.6rem";
+	}
+	if (x != 2) {
+		group2.style.height = "2.6rem";
+	}
+	if (x != 3) {
+		group3.style.height = "2.6rem";
+	}
+	if (x != 4) {
+		group4.style.height = "2.6rem";
+	}
+	if (x != 5) {
+		group5.style.height = "2.6rem";
+	}
+};
+
+button1.addEventListener("click", () => {
+	closeAll(1);
+	if (!btn1) {
+		group1.style.height = "auto";
+		btn1 = true;
+	} else {
+		group1.style.height = "2.6rem";
+		btn1 = false;
+	}
+});
+
+button2.addEventListener("click", () => {
+	closeAll(2);
+
+	if (!btn2) {
+		group2.style.height = "auto";
+		btn2 = true;
+	} else {
+		group2.style.height = "2.6rem";
+		btn2 = false;
+	}
+});
+
+button3.addEventListener("click", () => {
+	closeAll(3);
+
+	if (!btn3) {
+		group3.style.height = "auto";
+		btn3 = true;
+	} else {
+		group3.style.height = "2.6rem";
+		btn3 = false;
+	}
+});
+
+button4.addEventListener("click", () => {
+	closeAll(4);
+
+	if (!btn4) {
+		group4.style.height = "auto";
+		btn4 = true;
+	} else {
+		group4.style.height = "2.6rem";
+		btn4 = false;
+	}
+});
+
+button5.addEventListener("click", () => {
+	closeAll(5);
+
+	if (!btn5) {
+		group5.style.height = "auto";
+		btn5 = true;
+	} else {
+		group5.style.height = "2.6rem";
+		btn5 = false;
+	}
+});
