@@ -34,7 +34,14 @@ const absolutWatermelon = {
 	img: "img/absolutWatermelon.jfif",
 };
 
-const vodka = [absolut, smirnoff, russianStandard];
+const vodka = [
+	absolut,
+	smirnoff,
+	russianStandard,
+	valdivar,
+	absolutWatermelon,
+	absolutRaspberry,
+];
 
 /////   WHISKEY   /////
 const jamersons = {
