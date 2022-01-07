@@ -6,7 +6,7 @@
 /////   VODKA   /////
 const absolut = {
 	name: "absolut",
-	img: "img/Vodka.png",
+	img: "img/vodka.png",
 };
 
 const smirnoff = {
@@ -19,7 +19,7 @@ const vodka = [absolut, smirnoff];
 /////   WHISKEY   /////
 const jamersons = {
 	name: "Jamersons",
-	img: "img/Whiskey.png",
+	img: "img/whiskey.png",
 };
 
 const JD = {
@@ -37,7 +37,7 @@ const whiskey = [jamersons, JD, famousGrouse];
 /////   GIN   /////
 const gordons = {
 	name: "Gordons",
-	img: "img/Gin.png",
+	img: "img/gin.png",
 };
 
 const bombaySapphire = {
@@ -50,7 +50,7 @@ const gin = [gordons, bombaySapphire];
 /////   RUM   /////
 const bacardi = {
 	name: "Bacardi",
-	img: "img/Rum.png",
+	img: "img/rum.png",
 };
 
 const captainMorgan = {
@@ -62,9 +62,34 @@ const rum = [bacardi, captainMorgan];
 
 /////   SHOTS   /////
 
-const shots = [];
+const tequila = {
+	name: "Tequila",
+	img: "img/sierra.jpg",
+};
 
-let data = [vodka, whiskey, gin, rum];
+const sourzCherry = {
+	name: "Cherry Sourz",
+	img: "img/sourz.jpg",
+};
+
+const sourzApple = {
+	name: "Apple Sourz",
+	img: "img/sourzApple.jpg",
+};
+
+const sourzRaspberry = {
+	name: "Raspberry Sourz",
+	img: "img/sourzRaspberry.jpg",
+};
+
+const jager = {
+	name: "Jagermeister",
+	img: "img/jager.jpg",
+};
+
+const shots = [tequila, sourzApple, sourzCherry, sourzRaspberry];
+
+let data = [vodka, whiskey, gin, rum, shots];
 let dataFlat = data.flat(1);
 console.log(data);
 
@@ -83,31 +108,30 @@ const group3 = document.querySelector(".form-group-3");
 const group4 = document.querySelector(".form-group-4");
 const group5 = document.querySelector(".form-group-5");
 
-const groups = [group1, group2, group3, group4, group5];
+const toggle1 = document.getElementById("toggle-1");
+const toggle2 = document.getElementById("toggle-2");
+const toggle3 = document.getElementById("toggle-3");
+const toggle4 = document.getElementById("toggle-4");
+const toggle5 = document.getElementById("toggle-5");
+let groups = [group1, group2, group3, group4, group5];
+
 let delayInMilliseconds = 3000;
 
 const init = function (data) {
-	// form.innerHTML = `
-	// <div class="form-group-1"><h5>vodkas</h5></div>
-	// <div class="form-group-2"><h5>whiskeys</h5></div>
-	// <div class="form-group-3"><h5>gins</h5></div>
-	// <div class="form-group-4"><h5>rums</h5></div>
-	// <div class="form-group-5"><h5>shots</h5></div>
-	// `;
-	let groupNumber = 1;
-	let currentGroop;
+	// check group checkboxes
+	toggle1.checked = true;
+	toggle2.checked = true;
+	toggle3.checked = true;
+	toggle4.checked = true;
+	toggle5.checked = true;
 
 	// add drinks to sidebar
 	data.forEach(function (group, i) {
-		console.log(group);
-
-		let groupHTML = `
-		<div class="form-group-1"><h5>vodkas</h5></div>
-		`;
-		group.insertAdjacentHTML("afterbegin", groupHTML);
+		let z = 0;
+		let groupDIV = groups[i];
 
 		group.forEach(function (drink, i) {
-			let html = "";
+			let html;
 
 			html = `
 			<div class="form-item">
@@ -116,25 +140,87 @@ const init = function (data) {
 			</div>
 			`;
 
-			currentGroop.insertAdjacentHTML("afterbegin", html);
+			groupDIV.insertAdjacentHTML("beforeend", html);
 
 			drink.checkbox = document.getElementById(`${drink.name}`);
+			drink.checkbox.checked = true;
+			z++;
 		});
 	});
 
 	// check checkboxes
-	dataFlat.forEach(function (drink, i) {
-		let x = drink.checkbox;
-		x.checked = true;
-	});
+	dataFlat.forEach(function (drink, i) {});
 };
 init(data);
+
+const setGroups = function () {
+	if (toggle1.checked) {
+		data.push(vodka);
+		vodka.forEach(function (check, i) {
+			check.checkbox.checked = true;
+		});
+	} else {
+		vodka.forEach(function (check, i) {
+			check.checkbox.checked = false;
+		});
+	}
+
+	if (toggle2.checked) {
+		data.push(whiskey);
+		whiskey.forEach(function (check, i) {
+			check.checkbox.checked = true;
+		});
+	} else {
+		whiskey.forEach(function (check, i) {
+			check.checkbox.checked = false;
+		});
+	}
+
+	if (toggle3.checked) {
+		data.push(gin);
+		gin.forEach(function (check, i) {
+			check.checkbox.checked = true;
+		});
+	} else {
+		gin.forEach(function (check, i) {
+			check.checkbox.checked = false;
+		});
+	}
+
+	if (toggle4.checked) {
+		data.push(rum);
+		rum.forEach(function (check, i) {
+			check.checkbox.checked = true;
+		});
+	} else {
+		rum.forEach(function (check, i) {
+			check.checkbox.checked = false;
+		});
+	}
+
+	if (toggle5.checked) {
+		data.push(shots);
+		shots.forEach(function (check, i) {
+			check.checkbox.checked = true;
+		});
+	} else {
+		shots.forEach(function (check, i) {
+			check.checkbox.checked = false;
+		});
+	}
+};
+
+toggle1.addEventListener("change", setGroups);
+toggle2.addEventListener("change", setGroups);
+toggle3.addEventListener("change", setGroups);
+toggle4.addEventListener("change", setGroups);
+toggle5.addEventListener("change", setGroups);
 
 let drinks = [];
 
 const whatDrinks = function (data) {
 	drinks = [];
-	data.forEach(function (drink, i) {
+	dataFlat.forEach(function (drink, i) {
 		if (drink.checkbox.checked === true) {
 			drinks.push(drink);
 		}
@@ -184,8 +270,10 @@ navBtn.addEventListener("click", () => {
 	if (open === false) {
 		sidebar.style.transform = "translate(0,0)";
 		open = true;
+		navBtn.innerHTML = `<i class="fas fa-times"></i>`;
 	} else {
 		sidebar.style.transform = "translate(-100vw,0)";
 		open = false;
+		navBtn.innerHTML = `<i class="fas fa-bars"></i>`;
 	}
 });

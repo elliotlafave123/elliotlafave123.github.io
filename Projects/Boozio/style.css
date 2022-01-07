@@ -10,6 +10,15 @@ body {
 	position: relative;
 }
 
+h2 {
+	font-size: 2rem;
+}
+
+h5 {
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+
 /* Header */
 
 .header {
@@ -45,6 +54,12 @@ nav img {
 	background-color: transparent;
 	cursor: pointer;
 	z-index: 200;
+	width: 2rem;
+	height: 2rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	position: absolute;
 	top: 1.8rem;
@@ -66,6 +81,7 @@ checkDominos ? takeaways.push("Dominos") : takeaways.push("");
 	top: 0;
 	left: 0;
 	height: 100vh;
+	overflow-y: scroll;
 	width: 25vw;
 	background-color: #fff;
 	z-index: 100;
@@ -74,6 +90,13 @@ checkDominos ? takeaways.push("Dominos") : takeaways.push("");
 
 	padding: 1.7rem 1.5rem 2rem 1.5rem;
 	box-shadow: 3px 0 40px -2px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 
 @media only screen and (max-width: 700px) {
@@ -87,7 +110,7 @@ checkDominos ? takeaways.push("Dominos") : takeaways.push("");
 }
 
 label {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	padding-left: 1.4rem;
 
 	display: flex;
@@ -103,7 +126,7 @@ label {
 }
 
 form {
-	padding: 2rem 0 0 0;
+	padding: 0.8rem 0 0 0;
 }
 
 input[type="checkbox"] {
@@ -301,5 +324,77 @@ main img {
 
 	100% {
 		opacity: 100%;
+	}
+}
+
+/* Checkbox slider */
+.toggle-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+	width: 200px;
+}
+
+.toggle {
+	/* display: none; */
+}
+
+.label {
+	position: relative;
+	background-color: #aaaaaa;
+	border-radius: 50px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 15px 0;
+	width: 44px;
+	height: 21px;
+	display: none;
+}
+
+.toggle:checked + .label {
+	background-color: #3584e4;
+}
+
+.ball {
+	display: none;
+	background: #fff;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	align-items: center;
+	justify-content: center;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 16px;
+	animation: slideOff 0.3s linear forwards;
+}
+
+.toggle:checked + .label .ball {
+	animation: slideOn 0.3s linear forwards;
+}
+
+@keyframes slideOn {
+	0% {
+		transform: translateX(0) scale(1);
+	}
+	50% {
+		transform: translateX(11px) scale(1.05);
+	}
+	100% {
+		transform: translateX(22px) scale(1);
+	}
+}
+
+@keyframes slideOff {
+	0% {
+		transform: translateX(22px) scale(1);
+	}
+	50% {
+		transform: translateX(11px) scale(1.05);
+	}
+	100% {
+		transform: translateX(0px) scale(1);
 	}
 }
