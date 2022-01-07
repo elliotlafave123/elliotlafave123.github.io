@@ -14,7 +14,12 @@ const smirnoff = {
 	img: "img/smirnoff.png",
 };
 
-const vodka = [absolut, smirnoff];
+const russianStandard = {
+	name: "Russian Standard",
+	img: "img/russianStandard.jpg",
+};
+
+const vodka = [absolut, smirnoff, russianStandard];
 
 /////   WHISKEY   /////
 const jamersons = {
