@@ -212,13 +212,6 @@ let groups = [group1, group2, group3, group4, group5];
 let delay = 2500;
 
 const init = function (data) {
-	// check group checkboxes
-	toggle1.checked = true;
-	toggle2.checked = true;
-	toggle3.checked = true;
-	toggle4.checked = true;
-	toggle5.checked = true;
-
 	// add drinks to sidebar
 	data.forEach(function (group, i) {
 		let z = 0;
