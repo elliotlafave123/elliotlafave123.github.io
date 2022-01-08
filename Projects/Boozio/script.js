@@ -156,11 +156,11 @@ const navBtn = document.getElementById("navBtn");
 const sidebar = document.getElementById("sidebar");
 const form = document.getElementById("sidebarForm");
 
-const group1 = document.querySelector(".form-group-1");
-const group2 = document.querySelector(".form-group-2");
-const group3 = document.querySelector(".form-group-3");
-const group4 = document.querySelector(".form-group-4");
-const group5 = document.querySelector(".form-group-5");
+const group1 = document.querySelector(".sidebar-content-1");
+const group2 = document.querySelector(".sidebar-content-2");
+const group3 = document.querySelector(".sidebar-content-3");
+const group4 = document.querySelector(".sidebar-content-4");
+const group5 = document.querySelector(".sidebar-content-5");
 
 const toggle1 = document.getElementById("toggle-1");
 const toggle2 = document.getElementById("toggle-2");
@@ -207,6 +207,7 @@ const init = function (data) {
 };
 init(data);
 
+// check checkboxes by group
 const setGroups = function () {
 	if (toggle1.checked) {
 		data.push(vodka);
@@ -318,6 +319,7 @@ function getTakeaways() {
 spin.addEventListener("click", getTakeaways);
 again.addEventListener("click", getTakeaways);
 
+// open sidebar
 sidebar.style.transform = "translate(-120vw, 0)";
 let open = false;
 navBtn.addEventListener("click", () => {
@@ -345,79 +347,56 @@ let btn3 = false;
 let btn4 = false;
 let btn5 = false;
 
-const closeAll = function (x) {
-	if (x != 1) {
-		group1.style.height = "2.6rem";
-	}
-	if (x != 2) {
-		group2.style.height = "2.6rem";
-	}
-	if (x != 3) {
-		group3.style.height = "2.6rem";
-	}
-	if (x != 4) {
-		group4.style.height = "2.6rem";
-	}
-	if (x != 5) {
-		group5.style.height = "2.6rem";
-	}
-};
+groups.forEach(function (group, i) {
+	group.classList.add("hidden");
+});
 
 button1.addEventListener("click", () => {
-	closeAll(1);
 	if (!btn1) {
-		group1.style.height = "auto";
+		group1.classList.remove("hidden");
 		btn1 = true;
 	} else {
-		group1.style.height = "2.6rem";
+		group1.classList.add("hidden");
 		btn1 = false;
 	}
 });
 
 button2.addEventListener("click", () => {
-	closeAll(2);
-
 	if (!btn2) {
-		group2.style.height = "auto";
+		group2.classList.remove("hidden");
 		btn2 = true;
 	} else {
-		group2.style.height = "2.6rem";
+		group2.classList.add("hidden");
 		btn2 = false;
 	}
 });
 
 button3.addEventListener("click", () => {
-	closeAll(3);
-
 	if (!btn3) {
-		group3.style.height = "auto";
+		group3.classList.remove("hidden");
 		btn3 = true;
 	} else {
-		group3.style.height = "2.6rem";
+		group3.classList.add("hidden");
 		btn3 = false;
 	}
 });
 
 button4.addEventListener("click", () => {
-	closeAll(4);
-
 	if (!btn4) {
-		group4.style.height = "auto";
+		group4.classList.remove("hidden");
 		btn4 = true;
 	} else {
-		group4.style.height = "2.6rem";
+		group4.classList.add("hidden");
 		btn4 = false;
 	}
 });
 
 button5.addEventListener("click", () => {
-	closeAll(5);
-
 	if (!btn5) {
-		group5.style.height = "auto";
+		group5.classList.remove("hidden");
 		btn5 = true;
 	} else {
-		group5.style.height = "2.6rem";
+		group5.classList.add("hidden");
 		btn5 = false;
 	}
 });

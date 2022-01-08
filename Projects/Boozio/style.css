@@ -99,6 +99,11 @@ checkDominos ? takeaways.push("Dominos") : takeaways.push("");
 	justify-content: space-between;
 }
 
+.sidebar-title i {
+	font-size: 1rem;
+	margin-left: 0.2rem;
+}
+
 @media only screen and (max-width: 700px) {
 	.sidebar {
 		width: 100vw;
@@ -143,16 +148,12 @@ input[type="checkbox"] {
 }
 
 .form-group {
-	height: 2.6rem;
+	/* height: 2.6rem; */
 	width: 100%;
 	overflow: hidden;
 	padding-right: 1rem;
-	margin-bottom: 1rem;
+	padding: 0.7rem 0 0.7rem 0;
 	border-bottom: 1px solid rgba(165, 166, 167, 0.2);
-}
-
-.form-group-1 {
-	/* height: auto; */
 }
 
 /* Main */
@@ -351,7 +352,7 @@ main img {
 }
 
 .toggle {
-	/* display: none; */
+	display: none;
 }
 
 .label {
@@ -363,7 +364,7 @@ main img {
 	margin: 0 15px 0;
 	width: 44px;
 	height: 21px;
-	display: none;
+	/* display: none; */
 }
 
 .toggle:checked + .label {
@@ -371,7 +372,7 @@ main img {
 }
 
 .ball {
-	display: none;
+	/* display: none; */
 	background: #fff;
 	height: 15px;
 	width: 15px;
