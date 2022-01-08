@@ -154,6 +154,7 @@ input[type="checkbox"] {
 	padding-right: 1rem;
 	padding: 0.7rem 0 0.7rem 0;
 	border-bottom: 1px solid rgba(165, 166, 167, 0.2);
+	transition: all 0.3s ease;
 }
 
 /* Main */

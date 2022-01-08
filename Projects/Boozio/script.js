@@ -59,7 +59,27 @@ const famousGrouse = {
 	img: "img/famousGrouse.png",
 };
 
-const whiskey = [jamersons, JD, famousGrouse];
+const bells = {
+	name: "Bells",
+	img: "img/bells.jpeg",
+};
+
+const glenlivet = {
+	name: "Glenlivet",
+	img: "img/glenlivet.jpeg",
+};
+
+const highland = {
+	name: "Highland Park",
+	img: "img/highlandPark.jpeg",
+};
+
+const jura = {
+	name: "Jura",
+	img: "img/jura.jpeg",
+};
+
+const whiskey = [jamersons, JD, famousGrouse, bells, jura, highland, glenlivet];
 
 /////   GIN   /////
 const gordons = {
@@ -72,7 +92,22 @@ const bombaySapphire = {
 	img: "img/bombaySapphire.png",
 };
 
-const gin = [gordons, bombaySapphire];
+const gordonsPink = {
+	name: "Gordons Pink",
+	img: "img/gordonsPink.jpeg",
+};
+
+const tanqueray = {
+	name: "Tanqueray",
+	img: "img/tanqueray.jpeg",
+};
+
+const whitleyRhubarb = {
+	name: "Whitley Rhubarb",
+	img: "img/whitleyRhubarb.jpeg",
+};
+
+const gin = [gordons, bombaySapphire, gordonsPink, tanqueray, whitleyRhubarb];
 
 /////   RUM   /////
 const bacardi = {
@@ -141,7 +176,12 @@ const jager = {
 	img: "img/jager.jpg",
 };
 
-const shots = [tequila, sourzApple, sourzCherry, sourzRaspberry];
+const sambuca = {
+	name: "Sambuca",
+	img: "img/sambuca.png",
+};
+
+const shots = [tequila, sourzApple, sourzCherry, sourzRaspberry, sambuca];
 
 let data = [vodka, whiskey, gin, rum, shots];
 let dataFlat = data.flat(1);
@@ -388,8 +428,27 @@ groups.forEach(function (group, i) {
 	group.classList.add("hidden");
 });
 
+const closeAll = function (x) {
+	if (x != 1) {
+		group1.classList.add("hidden");
+	}
+	if (x != 2) {
+		group2.classList.add("hidden");
+	}
+	if (x != 3) {
+		group3.classList.add("hidden");
+	}
+	if (x != 4) {
+		group4.classList.add("hidden");
+	}
+	if (x != 5) {
+		group5.classList.add("hidden");
+	}
+};
+
 button1.addEventListener("click", () => {
 	if (!btn1) {
+		closeAll(1);
 		group1.classList.remove("hidden");
 		btn1 = true;
 	} else {
@@ -400,6 +459,7 @@ button1.addEventListener("click", () => {
 
 button2.addEventListener("click", () => {
 	if (!btn2) {
+		closeAll(2);
 		group2.classList.remove("hidden");
 		btn2 = true;
 	} else {
@@ -410,6 +470,7 @@ button2.addEventListener("click", () => {
 
 button3.addEventListener("click", () => {
 	if (!btn3) {
+		closeAll(3);
 		group3.classList.remove("hidden");
 		btn3 = true;
 	} else {
@@ -420,6 +481,7 @@ button3.addEventListener("click", () => {
 
 button4.addEventListener("click", () => {
 	if (!btn4) {
+		closeAll(4);
 		group4.classList.remove("hidden");
 		btn4 = true;
 	} else {
@@ -430,6 +492,7 @@ button4.addEventListener("click", () => {
 
 button5.addEventListener("click", () => {
 	if (!btn5) {
+		closeAll(5);
 		group5.classList.remove("hidden");
 		btn5 = true;
 	} else {
