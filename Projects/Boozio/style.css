@@ -413,3 +413,8 @@ main img {
 		transform: translateX(0px) scale(1);
 	}
 }
+
+/* Spinwheel animation */
+.spinwheel {
+	animation: up 3s;
+}

@@ -5,7 +5,7 @@
 
 /////   VODKA   /////
 const absolut = {
-	name: "absolut",
+	name: "Absolut",
 	img: "img/vodka.png",
 };
 
@@ -36,11 +36,11 @@ const absolutWatermelon = {
 
 const vodka = [
 	absolut,
+	absolutWatermelon,
+	absolutRaspberry,
 	smirnoff,
 	russianStandard,
 	valdivar,
-	absolutWatermelon,
-	absolutRaspberry,
 ];
 
 /////   WHISKEY   /////
@@ -169,7 +169,7 @@ const toggle4 = document.getElementById("toggle-4");
 const toggle5 = document.getElementById("toggle-5");
 let groups = [group1, group2, group3, group4, group5];
 
-let delayInMilliseconds = 3000;
+let delay = 2500;
 
 const init = function (data) {
 	// check group checkboxes
@@ -273,6 +273,44 @@ toggle5.addEventListener("change", setGroups);
 
 let drinks = [];
 
+// spinwheel animation
+const spinwheel = function (drinks) {
+	let html = [];
+	imgContainer.innerHTML = "";
+
+	drinks.forEach(function (drink, i) {
+		html.push(
+			`<img src="${drink.img}" id="img" class="finalImg spinwheel"/>`
+		);
+	});
+
+	function shuffle(array) {
+		let currentIndex = array.length,
+			randomIndex;
+
+		// While there remain elements to shuffle...
+		while (currentIndex != 0) {
+			// Pick a remaining element...
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex--;
+
+			// And swap it with the current element.
+			[array[currentIndex], array[randomIndex]] = [
+				array[randomIndex],
+				array[currentIndex],
+			];
+		}
+
+		return array;
+	}
+
+	shuffle(html);
+	console.log(html);
+
+	imgContainer.insertAdjacentHTML("afterbegin", html.flat());
+};
+
+// add drinks to array based on checkboxes
 const whatDrinks = function (data) {
 	drinks = [];
 	dataFlat.forEach(function (drink, i) {
@@ -280,10 +318,16 @@ const whatDrinks = function (data) {
 			drinks.push(drink);
 		}
 	});
-	return drinks;
+
+	spinwheel(drinks);
+
+	setTimeout(() => {
+		return drinks;
+	}, delay);
 };
 
-function getTakeaways() {
+// show the random drink
+function getDrink() {
 	whatDrinks(data);
 	let position;
 	position = Math.trunc(Math.random() * drinks.length);
@@ -291,15 +335,8 @@ function getTakeaways() {
 
 	drinkName.textContent = `. . .`;
 
-	imgContainer.innerHTML = `
-        <img src="img/questionMark.png" id="img" class="finalImg"/>
-    `;
 	// imgContainer.innerHTML = `
-	//     ${checkDominos.checked ? imgDominos : ""}
-	//     ${checkKFC.checked ? imgKFC : ""}
-	//     ${checkSubWay.checked ? imgSubWay : ""}
-	//     ${checkPapaJhons.checked ? imgPapaJohns : ""}
-	//     ${checkMcDonalds.checked ? imgMcDonalds : ""}
+	//     <img src="img/questionMark.png" id="img" class="finalImg"/>
 	// `;
 
 	setTimeout(function () {
@@ -313,11 +350,11 @@ function getTakeaways() {
 		again.classList.remove("hidden");
 
 		img.src = `${picked.img}`;
-	}, delayInMilliseconds);
+	}, 2800);
 }
 
-spin.addEventListener("click", getTakeaways);
-again.addEventListener("click", getTakeaways);
+spin.addEventListener("click", getDrink);
+again.addEventListener("click", getDrink);
 
 // open sidebar
 sidebar.style.transform = "translate(-120vw, 0)";
