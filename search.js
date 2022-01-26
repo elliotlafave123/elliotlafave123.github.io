@@ -219,6 +219,18 @@ const dataProject19 = {
 	tags: ["html", "css", "js"],
 };
 
+const dataProject20 = {
+            title: "Fylo - File Storage App",
+            paragraph:
+                "I created a file storage landing page and app component using HTML, SCSS & JS. The design is from a frontend mentor challenge",
+            linkLivePreview: "https://fylo.elliotlafave.com/",
+            linkGit:
+                "https://github.com/elliotlafave123/Flyo",
+            linkImg:
+                "img/Projects/Fylo.png",
+            tags: ["html","css","js",],
+        };
+
 const featuredProjects = [
 	dataProject18,
 	dataProject16,
@@ -227,6 +239,7 @@ const featuredProjects = [
 	dataProject11,
 	dataProject17,
 	dataProject0,
+	dataProject20,
 ];
 // const featuredData = [dataProject18, dataProject16, dataProject19];
 
@@ -253,6 +266,7 @@ const data = [
 	dataProject11,
 	dataProject12,
 	dataProject16,
+	dataProject20
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
