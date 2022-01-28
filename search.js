@@ -220,16 +220,25 @@ const dataProject19 = {
 };
 
 const dataProject20 = {
-            title: "Fylo - File Storage App",
-            paragraph:
-                "I created a file storage landing page and app component using HTML, SCSS & JS. The design is from a frontend mentor challenge",
-            linkLivePreview: "https://fylo.elliotlafave.com/",
-            linkGit:
-                "https://github.com/elliotlafave123/Flyo",
-            linkImg:
-                "img/Projects/Fylo.png",
-            tags: ["html","css","js",],
-        };
+	title: "Fylo - File Storage App",
+	paragraph:
+		"I created a file storage landing page and app component using HTML, SCSS & JS. The design is from a frontend mentor challenge",
+	linkLivePreview: "https://fylo.elliotlafave.com/",
+	linkGit: "https://github.com/elliotlafave123/Flyo",
+	linkImg: "img/Projects/Fylo.png",
+	tags: ["html", "css", "js"],
+};
+
+const dataProject21 = {
+	title: "Sunnyside Agency Landing Page",
+	paragraph:
+		"I coded a design agency landing page using HTML, CSS and JS. I used a design from a frontend mentor challenge and created it with scss in 4 hours.",
+	linkLivePreview: "https://elliotlafave.com/projects/sunnyside/index.html",
+	linkGit:
+		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/sunnyside",
+	linkImg: "img/Projects/sunnyside.png",
+	tags: ["html", "css", "js"],
+};
 
 const featuredProjects = [
 	dataProject18,
@@ -237,36 +246,37 @@ const featuredProjects = [
 	dataProject19,
 	dataProject12,
 	dataProject11,
-	dataProject17,
-	dataProject0,
 	dataProject20,
+	dataProject21,
 ];
 // const featuredData = [dataProject18, dataProject16, dataProject19];
 
 const data = [
 	dataProject1,
 	dataProject2,
+	dataProject7,
 	dataProject13,
 	dataProject14,
 	dataProject3,
 	dataProject4,
+
 	dataProject5,
-	dataProject7,
 	dataProject10,
 	dataProject9,
-	dataProject17,
-	dataProject18,
-
-	dataProject19,
-	dataProject8,
 	dataProject15,
-	dataProject6,
+	dataProject8,
 
+	dataProject17,
+	dataProject6,
 	dataProject0,
 	dataProject11,
 	dataProject12,
+
+	dataProject18,
+	dataProject19,
 	dataProject16,
-	dataProject20
+	dataProject20,
+	dataProject21,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
