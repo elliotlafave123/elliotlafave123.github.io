@@ -1,0 +1,115 @@
+.section__hero {
+	width: 100vw;
+	height: 80vh;
+
+	background: url("../images/desktop/image-header.jpg");
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	background-color: #3dbefe;
+
+	@include respond(tab-port) {
+		background-size: 200vw 60vh;
+		background-position: center bottom;
+		text-align: center;
+	}
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h1 {
+		margin-top: 10vh;
+		margin-bottom: 12vh;
+
+		@include respond(tab-port) {
+			margin-top: 20vh;
+			margin-bottom: 6rem;
+		}
+	}
+
+	img {
+		height: 13vh;
+	}
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+
+	padding: 5rem 5rem;
+
+	@include respond(tab-port) {
+		padding: 0;
+	}
+
+	img {
+		height: 4rem;
+
+		@include respond(tab-port) {
+			height: 3.4rem;
+			position: absolute;
+			top: 3rem;
+			left: 3rem;
+		}
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+
+		@include respond(tab-port) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			width: 100vw;
+
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 3;
+		}
+	}
+
+	&__link {
+		color: #fff;
+		font-family: "Barlow";
+		font-weight: 600;
+		margin-right: 4rem;
+
+		@include respond(tab-port) {
+			color: #3dbefe;
+			margin-right: 0;
+			margin-bottom: 5rem;
+			font-size: 3.5rem;
+		}
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.5);
+
+			@include respond(tab-port) {
+				color: rgba(61, 190, 254, 0.6);
+			}
+		}
+	}
+}
+
+.mobile-nav-toggle {
+	background-color: transparent;
+	position: fixed;
+	top: 3rem;
+	right: 3rem;
+	z-index: 1000;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		height: 2.8rem;
+	}
+}

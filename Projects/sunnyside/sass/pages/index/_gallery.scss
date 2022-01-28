@@ -1,0 +1,16 @@
+.section__gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100vw;
+	img {
+		width: 100%;
+
+		@include respond(tab-port) {
+			height: 50vw;
+		}
+	}
+
+	@include respond(tab-port) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
