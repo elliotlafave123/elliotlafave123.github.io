@@ -407,7 +407,7 @@ h6 {
 
 .section__hero {
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   background: url("../images/desktop/image-header.jpg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
