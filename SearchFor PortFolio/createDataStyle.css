@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #212529;
+	font-family: "Open Sans", sans-serif;
+	padding: 8vh 20vw 0 20vw;
+}
+
+input {
+	background-color: #495057;
+	border: none;
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	color: #adb5bd;
+}
+
+h2 {
+	font-size: 2.4rem;
+	color: #fff;
+	margin-bottom: 0.4rem;
+	margin-top: 2.5rem;
+}
+
+#title {
+	width: 60vw;
+}
+
+#paragraph {
+	width: 60vw;
+	height: 15rem;
+	background-color: #495057;
+	border: none;
+	padding: 0.8rem;
+	color: #fff;
+}
+
+#linkImg {
+	width: 60vw;
+}
+
+#linkGit {
+	width: 60vw;
+}
+
+#linkLivePreview {
+	width: 60vw;
+}
+
+.checkboxes {
+	display: flex;
+	flex-direction: row;
+	font-size: 1.6rem;
+	margin-top: 2rem;
+}
+
+.checkbox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 1rem;
+}
+
+.checkbox input {
+	width: 2rem;
+	height: 2rem;
+	margin-right: 0.8rem;
+}
+
+.checkbox h3 {
+	margin-right: 2rem;
+	color: #fff;
+}
+
+#button {
+	background-color: #adb5bd;
+	border: none;
+	padding: 1rem 4rem;
+	font-size: 1.8rem;
+	margin-top: 2rem;
+}
