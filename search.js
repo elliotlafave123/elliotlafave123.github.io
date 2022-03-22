@@ -240,6 +240,17 @@ const dataProject21 = {
 	tags: ["html", "css", "js"],
 };
 
+const dataProject22 = {
+	title: "Advice Generator",
+	paragraph:
+		"I designed an application with JavaScript that gets data from an external API and renders it on the website.",
+	linkLivePreview: "https://elliotlafave.com/projects/adviceapp/",
+	linkGit:
+		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/adviceApp",
+	linkImg: "img/Projects/adviceApp.png",
+	tags: ["html", "css", "js", "api"],
+};
+
 const featuredProjects = [
 	dataProject18,
 	dataProject16,
@@ -277,6 +288,7 @@ const data = [
 	dataProject16,
 	dataProject20,
 	dataProject21,
+	dataProject22,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
