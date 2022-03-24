@@ -1,4 +1,3 @@
-// "use strict";
 import Grid from "./grid.js";
 import Tile from "./tile.js";
 
