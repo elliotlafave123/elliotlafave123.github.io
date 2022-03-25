@@ -258,7 +258,7 @@ const dataProject24 = {
 	linkLivePreview: "https://elliotlafave.com/projects/rating/",
 	linkGit:
 		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/rating",
-	linkImg: "img/Projects/rating.png",
+	linkImg: "https://elliotlafave.com/img/Projects/rating.png",
 	tags: ["html", "css", "js"],
 };
 
