@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-	width: 25%;
+	width: 50vmin;
 	background-color: hsl(217, 19%, 24%);
 
 	padding: 5rem;
@@ -76,4 +76,24 @@ button {
 	position: absolute;
 	bottom: -3rem;
 	left: calc(50% - 3rem);
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		width: 70vmin;
+	}
+
+	html {
+		font-size: 50%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	html {
+		font-size: 40%;
+	}
+
+	button img {
+		transform: scale(0.7);
+	}
 }
