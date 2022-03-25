@@ -68,12 +68,23 @@ const darkMode = function () {
 	wave5Light.classList.add("hidden");
 };
 
-toggle.checked = true;
+if (localStorage.getItem("darkMode") == "true") {
+	toggle.checked = true;
+}
+
+if (localStorage.getItem("darkMode") == "true") {
+	darkMode();
+} else {
+	lightMode();
+}
+
 toggle.addEventListener("change", () => {
 	if (toggle.checked) {
 		darkMode();
+		localStorage.setItem("darkMode", "true");
 	} else {
 		console.log("Light Mode");
 		lightMode();
+		localStorage.setItem("darkMode", "false");
 	}
 });
