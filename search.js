@@ -251,7 +251,7 @@ const dataProject22 = {
 	tags: ["html", "css", "js", "api"],
 };
 
-const dataProject23 = {
+const dataProject24 = {
 	title: "Rating Component",
 	paragraph:
 		"I created a design using HTML and CSS using a challenge from frontend mentor.",
@@ -300,7 +300,7 @@ const data = [
 	dataProject20,
 	dataProject21,
 	dataProject22,
-	dataProject23,
+	dataProject24,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
