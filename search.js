@@ -251,6 +251,17 @@ const dataProject22 = {
 	tags: ["html", "css", "js", "api"],
 };
 
+const dataProject23 = {
+	title: "Rating Component",
+	paragraph:
+		"I created a design using HTML and CSS using a challenge from frontend mentor.",
+	linkLivePreview: "https://elliotlafave.com/projects/rating/",
+	linkGit:
+		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/rating",
+	linkImg: "img/Projects/rating.png",
+	tags: ["html", "css", "js"],
+};
+
 const featuredProjects = [
 	dataProject18,
 	dataProject16,
