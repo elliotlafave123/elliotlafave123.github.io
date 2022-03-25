@@ -1,4 +1,5 @@
 const dataProject0 = {
+	date: "10 Dec 2021",
 	title: "Social Media Dashboard",
 	paragraph:
 		"I created a social media dashboard using HTML, CSS and JS to add data to the webpage.",
@@ -11,6 +12,7 @@ const dataProject0 = {
 };
 
 const dataProject1 = {
+	date: "7 Dec 2021",
 	title: "Toast Notification",
 	paragraph:
 		"I creates a toast notification (Popup) using JavaScript event listeners.",
@@ -22,6 +24,7 @@ const dataProject1 = {
 };
 
 const dataProject2 = {
+	date: "7 Dec 2021",
 	title: "Blurry Loading",
 	paragraph:
 		"Blurry loading animation using CSS animation along with JavaScript timing functions.",
@@ -33,6 +36,7 @@ const dataProject2 = {
 };
 
 const dataProject3 = {
+	date: "7 Dec 2021",
 	title: "Rotating Navigation",
 	paragraph:
 		"I created an animated navigation menu that spins out from the side of the page.",
@@ -44,6 +48,7 @@ const dataProject3 = {
 };
 
 const dataProject4 = {
+	date: "7 Dec 2021",
 	title: "Hidden Search Widget",
 	paragraph:
 		"I created a mini hidden search widget that reveals a searchbar when clicked.",
@@ -55,6 +60,7 @@ const dataProject4 = {
 };
 
 const dataProject5 = {
+	date: "7 Dec 2021",
 	title: "Scroll Animation",
 	paragraph:
 		"I created a scroll animation that detects when a user is scrolling and shows cards as you scroll.",
@@ -66,6 +72,7 @@ const dataProject5 = {
 };
 
 const dataProject6 = {
+	date: "7 Dec 2021",
 	title: "Double Vertical Slider",
 	paragraph:
 		"I created a JavaScript double slider which slides in new content from the top and bottom.",
@@ -77,6 +84,7 @@ const dataProject6 = {
 };
 
 const dataProject7 = {
+	date: "7 Dec 2021",
 	title: "Expanding Cards",
 	paragraph:
 		"I made different cards that collapse to show only the card which is in focus. ",
@@ -88,6 +96,7 @@ const dataProject7 = {
 };
 
 const dataProject8 = {
+	date: "4 Jan 2022",
 	title: "Random Takeaway Picker",
 	paragraph:
 		"I created a random takeaway picker to help me decide what food too order when I'm hungry.",
@@ -99,6 +108,7 @@ const dataProject8 = {
 };
 
 const dataProject9 = {
+	date: "7 Dec 2021",
 	title: "Progress Steps",
 	paragraph:
 		"I created progress steps which can be used in a sign up process or a shopping basket.",
@@ -110,6 +120,7 @@ const dataProject9 = {
 };
 
 const dataProject10 = {
+	date: "7 Jan 2022",
 	title: "Checkbox Slider",
 	paragraph:
 		"I designed an animated checkbox slider that can be used anywhere i might need a toggle. I use this for dark mode sliders.",
@@ -121,6 +132,7 @@ const dataProject10 = {
 };
 
 const dataProject11 = {
+	date: "7 Dec 2021",
 	title: "Live User Filter",
 	paragraph:
 		"I used a free API to get random user data such as names and profile pictures and used JS to sort through them.",
@@ -132,6 +144,7 @@ const dataProject11 = {
 };
 
 const dataProject12 = {
+	date: "7 Dec 2021",
 	title: "Movie Search App",
 	paragraph:
 		"I used an API from the movie database to create a movie app which displays the most popular movies and can be searched through by the user.",
@@ -143,6 +156,7 @@ const dataProject12 = {
 };
 
 const dataProject13 = {
+	date: "28 Dec 2021",
 	title: "Testimonials Grid",
 	paragraph:
 		"I coded a testimonials page using CSS(3) Grid to display the items in an interesting way. I added images and borders around them aswel as complimentary colors.",
@@ -154,6 +168,7 @@ const dataProject13 = {
 };
 
 const dataProject14 = {
+	date: "28 Dec 2021",
 	title: "Order Completion Page",
 	paragraph:
 		"I designed a order completion page using HTML(5) and CSS(3). I used a variety of DIV elements and positioning to complete the design.",
@@ -165,6 +180,7 @@ const dataProject14 = {
 };
 
 const dataProject15 = {
+	date: "28 Dec 2021/",
 	title: "Guess My Number Game",
 	paragraph:
 		"I coded a number guessing game using Javascript, used Javascript functions and DOM manipulation to make the game functional in the browser",
@@ -176,6 +192,7 @@ const dataProject15 = {
 };
 
 const dataProject16 = {
+	date: "27 Dec 2021",
 	title: "Nexter - Real Estate Site",
 	paragraph:
 		"I coded a website that sells luxury homes from the top trusted realtors. Across the site i used CSS grid to place the content.",
@@ -187,6 +204,7 @@ const dataProject16 = {
 };
 
 const dataProject17 = {
+	date: "28 Dec 2021",
 	title: "Dice Game",
 	paragraph:
 		"I created a dice game using Javascript, HTML and CSS. You can chose to hold your score or keep rolling but get 0 points when a 1 is rolled. First to 100 score wins.",
@@ -198,6 +216,7 @@ const dataProject17 = {
 };
 
 const dataProject18 = {
+	date: "12 Dec 2021",
 	title: "Rock Paper Scissors",
 	paragraph:
 		"I created a Rock Paper Scissors game using html and javascript page manipulation.",
@@ -209,6 +228,7 @@ const dataProject18 = {
 };
 
 const dataProject19 = {
+	date: "22 Dec 2021",
 	title: "Bankist - Bank Application",
 	paragraph:
 		"I created a banking application using vanilla JavaScript. Users can log in and transfer money between the different accounts along with closing the account and getting loans.",
@@ -220,6 +240,7 @@ const dataProject19 = {
 };
 
 const dataProject20 = {
+	date: "25 Jan 2022",
 	title: "Fylo - File Storage App",
 	paragraph:
 		"I created a file storage landing page and app component using HTML, SCSS & JS. The design is from a frontend mentor challenge",
@@ -230,6 +251,7 @@ const dataProject20 = {
 };
 
 const dataProject21 = {
+	date: "28 Jan 2022",
 	title: "Sunnyside Agency Landing Page",
 	paragraph:
 		"I coded a design agency landing page using HTML, CSS and JS. I used a design from a frontend mentor challenge and created it with scss in 4 hours.",
@@ -241,6 +263,7 @@ const dataProject21 = {
 };
 
 const dataProject22 = {
+	date: "24 Mar 2022",
 	title: "Advice Generator",
 	paragraph:
 		"I designed an application with JavaScript that gets data from an external API and renders it on the website.",
@@ -252,6 +275,7 @@ const dataProject22 = {
 };
 
 const dataProject24 = {
+	date: "25 Mar 2022",
 	title: "Rating Component",
 	paragraph:
 		"I created a design using HTML and CSS using a challenge from frontend mentor.",
@@ -347,6 +371,7 @@ const displayFeaturedHome = function (data) {
                     <h4 class="card__title u-margin-bottom-medium">${
 						project.title
 					}</h4>
+					<span>${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
                     ${
@@ -365,6 +390,7 @@ const displayFeaturedHome = function (data) {
 							: ""
 					}
                     </div> 
+					
                     <div class="card__buttons">
                         <a href="${
 							project.linkLivePreview
@@ -396,6 +422,7 @@ const displayFeatured = function (data) {
                     <h4 class="card__title u-margin-bottom-medium">${
 						project.title
 					}</h4>
+					<span>${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
                     ${
@@ -414,6 +441,7 @@ const displayFeatured = function (data) {
 							: ""
 					}
                     </div> 
+					
                     <div class="card__buttons">
                         <a href="${
 							project.linkLivePreview
@@ -456,6 +484,7 @@ const displayMovements = function (data) {
 						${project.tags.includes("js") ? '<div class="tag tag-js">JS</div>' : ""}
 						${project.tags.includes("api") ? '<div class="tag tag-api">API</div>' : ""}
 					</div>
+					<span>${project.date}</span>
 					<p>
 						${project.paragraph}
 					</p>
