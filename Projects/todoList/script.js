@@ -2,6 +2,9 @@ const form = document.getElementById("form");
 const input = document.getElementById("input");
 const todosUL = document.getElementById("todos");
 
+const toggleText = document.getElementById("toggleText");
+const deleteText = document.getElementById("deleteText");
+
 const todos = JSON.parse(localStorage.getItem("todos"));
 
 if (todos) {
@@ -62,4 +65,9 @@ function updateLS() {
 	});
 
 	localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+if (window.innerWidth < 400) {
+	toggleText.innerText = "Tap to complete todo";
+	deleteText.innerText = "Hold down to delete todo";
 }
