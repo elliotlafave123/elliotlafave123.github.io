@@ -144,7 +144,6 @@ const dataProject11 = {
 };
 
 const dataProject12 = {
-	date: "7 Dec 2021",
 	title: "Movie Search App",
 	paragraph:
 		"I used an API from the movie database to create a movie app which displays the most popular movies and can be searched through by the user.",
@@ -286,6 +285,17 @@ const dataProject24 = {
 	tags: ["html", "css", "js"],
 };
 
+const dataProject25 = {
+	title: "Todo App",
+	paragraph:
+		"I created a JavaScript to-do application that stores the users input in the browsers local storage.",
+	linkLivePreview: "https://elliotlafave.com/projects/todolist/",
+	linkGit:
+		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/todoList",
+	linkImg: "img/Projects/todo.png",
+	tags: ["html", "css", "js"],
+};
+
 const featuredProjects = [
 	dataProject18,
 	dataProject16,
@@ -325,6 +335,7 @@ const data = [
 	dataProject21,
 	dataProject22,
 	dataProject24,
+	dataProject25,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
