@@ -14,6 +14,12 @@ const wave3Dark = document.getElementById("wave3-dark");
 const wave4Dark = document.getElementById("wave4-dark");
 const wave5Dark = document.getElementById("wave5-dark");
 
+if (!localStorage.getItem("newUser")) {
+	localStorage.setItem("newUser", "true");
+	localStorage.setItem("darkMode", "true");
+	darkMode();
+}
+
 const lightMode = function () {
 	console.log("Light Mode");
 
