@@ -296,6 +296,16 @@ const dataProject25 = {
 	tags: ["html", "css", "js"],
 };
 
+const dataProject26 = {
+	title: "Netflix Navigation",
+	paragraph: "I created a Netflix navigation clone with CSS animations.",
+	linkLivePreview: "https://elliotlafave.com/projects/netflixnav/",
+	linkGit:
+		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/NetflixNav",
+	linkImg: "img/Projects/netflixNav.png",
+	tags: ["html", "css", "js"],
+};
+
 const featuredProjects = [
 	dataProject18,
 	dataProject16,
@@ -336,6 +346,7 @@ const data = [
 	dataProject22,
 	dataProject24,
 	dataProject25,
+	dataProject26,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
