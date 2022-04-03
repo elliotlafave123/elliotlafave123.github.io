@@ -207,7 +207,7 @@ const dataProject17 = {
 	title: "Dice Game",
 	paragraph:
 		"I created a dice game using Javascript, HTML and CSS. You can chose to hold your score or keep rolling but get 0 points when a 1 is rolled. First to 100 score wins.",
-	linkLivePreview: "DiceGame/index.html",
+	linkLivePreview: "Projects/DiceGame/index.html",
 	linkGit:
 		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/DiceGame",
 	linkImg: "img/DiceGame.png",
