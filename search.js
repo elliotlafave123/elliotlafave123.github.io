@@ -312,7 +312,7 @@ const dataProject27 = {
 		"I created a workout tracker from a course on Udemy. I learned about object oriented programming (OOP) and working with asynchronous JavaScript.",
 	linkLivePreview: "https://mapty.elliotlafave.com/",
 	linkGit: "https://github.com/elliotlafave123/Mapty",
-	linkImg: "img/Projexts/mapty.png",
+	linkImg: "img/Projects/mapty.png",
 	tags: ["html", "css", "js", "api"],
 };
 
