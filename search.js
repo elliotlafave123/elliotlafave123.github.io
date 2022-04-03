@@ -324,6 +324,7 @@ const featuredProjects = [
 	dataProject11,
 	dataProject20,
 	dataProject21,
+	dataProject27,
 ];
 // const featuredData = [dataProject18, dataProject16, dataProject19];
 
