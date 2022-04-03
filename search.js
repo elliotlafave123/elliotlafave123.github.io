@@ -306,6 +306,16 @@ const dataProject26 = {
 	tags: ["html", "css", "js"],
 };
 
+const dataProject27 = {
+	title: "Mapty - Workout Tracker",
+	paragraph:
+		"I created a workout tracker from a course on Udemy. I learned about object oriented programming (OOP) and working with asynchronous JavaScript.",
+	linkLivePreview: "https://mapty.elliotlafave.com/",
+	linkGit: "https://github.com/elliotlafave123/Mapty",
+	linkImg: "img/Projexts/mapty.png",
+	tags: ["html", "css", "js", "api"],
+};
+
 const featuredProjects = [
 	dataProject18,
 	dataProject16,
@@ -347,6 +357,7 @@ const data = [
 	dataProject24,
 	dataProject25,
 	dataProject26,
+	dataProject27,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
