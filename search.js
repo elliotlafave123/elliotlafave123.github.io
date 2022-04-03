@@ -286,6 +286,7 @@ const dataProject24 = {
 };
 
 const dataProject25 = {
+	date: "2 Apr 2022",
 	title: "Todo App",
 	paragraph:
 		"I created a JavaScript to-do application that stores the users input in the browsers local storage.",
@@ -297,6 +298,7 @@ const dataProject25 = {
 };
 
 const dataProject26 = {
+	date: "3 Apr 2022",
 	title: "Netflix Navigation",
 	paragraph: "I created a Netflix navigation clone with CSS animations.",
 	linkLivePreview: "https://elliotlafave.com/projects/netflixnav/",
@@ -307,6 +309,7 @@ const dataProject26 = {
 };
 
 const dataProject27 = {
+	date: "10 Mar 2022",
 	title: "Mapty - Workout Tracker",
 	paragraph:
 		"I created a workout tracker from a course on Udemy. I learned about object oriented programming (OOP) and working with asynchronous JavaScript.",

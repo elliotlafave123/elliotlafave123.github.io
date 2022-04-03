@@ -1,6 +1,7 @@
-const projectsIndex = [0,1,3];
+const projectsIndex = [0, 1, 3];
 
 const title = document.getElementById("title");
+const date = document.getElementById("date");
 const paragraph = document.getElementById("paragraph");
 const linkImg = document.getElementById("linkImg");
 const linkGit = document.getElementById("linkGit");
@@ -18,6 +19,7 @@ button.addEventListener("click", (e) => {
 	console.log(`
         const dataProject${projectsIndex.length} = {
             title: "${title.value}",
+			date: "${date.value}",
             paragraph:
                 "${paragraph.value}",
             linkLivePreview: "${linkLivePreview.value}",
@@ -32,11 +34,12 @@ button.addEventListener("click", (e) => {
     `);
 
 	title.value = "";
+	date.value = "";
 	paragraph.value = "";
 	linkGit.value = "";
 	linkImg.value = "";
 	linkLivePreview.value = "";
-	
+
 	projectsIndex.push(projectsIndex.length);
 
 	// tagHTML.checked = false;
