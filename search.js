@@ -319,6 +319,18 @@ const dataProject27 = {
 	tags: ["html", "css", "js", "api"],
 };
 
+const dataProject28 = {
+	title: "Tip Calculator",
+	date: "6 Apr 2022",
+	paragraph:
+		"I created a tip calculator using a design from a frontend mentor challenge. I coded the app and logic using JavaScript.",
+	linkLivePreview: "https://elliotlafave.com/projects/tip-calculator/",
+	linkGit:
+		"https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/tip-calculator",
+	linkImg: "img/Projects/tipCalculator.png",
+	tags: ["html", "css", "js"],
+};
+
 const featuredProjects = [
 	dataProject18,
 	dataProject16,
@@ -362,6 +374,7 @@ const data = [
 	dataProject25,
 	dataProject26,
 	dataProject27,
+	dataProject28,
 ];
 
 const cardsContainer = document.getElementById("cardsContainer");
