@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #c5e4e7;
+	font-family: "Space Mono";
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	margin-bottom: 8rem;
+}
+
+h1 {
+	color: #26c2ae;
+	font-size: 4.8rem;
+}
+
+span {
+	font-size: 1.3rem;
+	color: #7f9d9f;
+}
+
+h2 {
+	color: #5e7a7d;
+	font-size: 1.6rem;
+	margin-bottom: 0.8rem;
+	margin-top: 0.6rem;
+}
+
+.container {
+	width: 64vw;
+	height: 46vh;
+
+	background-color: #ffffff;
+	border-radius: 2.5rem;
+	padding: 3rem;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+}
+
+/***************************************/
+/* Inputs Container */
+.inputs-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: #f3f9fa;
+	border-radius: 0.5rem;
+
+	padding: 1rem 2.2rem;
+}
+
+input {
+	height: 4rem;
+	background-color: #f3f9fa;
+	font-family: "Space Mono";
+	color: #9ebbbd;
+	font-size: 2.4rem;
+	width: 100%;
+	text-align: right;
+}
+
+input:focus {
+	outline: none;
+}
+
+/* Select tip section */
+.tip-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.tip-buttons {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.btn {
+	background-color: #00474b;
+	border-radius: 0.5rem;
+	font-family: "Space Mono";
+	font-size: 2.4rem;
+	color: #ffffff;
+	height: 5rem;
+	cursor: pointer;
+}
+
+.btn-custom {
+	border-radius: 0.5rem;
+	font-family: "Space Mono";
+	font-size: 2.4rem;
+	height: 5rem;
+	cursor: pointer;
+	width: 100%;
+	background-color: #f3f9fa;
+	color: #547878;
+	text-align: center;
+}
+
+.btn:hover {
+	background-color: #9fe8df;
+	color: #00474b;
+}
+
+.active {
+	background-color: #26c2ae;
+}
+.input-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#warning {
+	font-size: 1.6rem;
+	color: #e17457;
+}
+
+.focusedGreen {
+	outline: 2px solid #26c2ae;
+}
+
+.focusedRed {
+	outline: 2px solid #e17457;
+}
+
+/***************************************/
+/* Results Container */
+
+.results-container {
+	background-color: #00474b;
+	padding: 5rem;
+	border-radius: 1.5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.results-container h2 {
+	color: #ffffff;
+}
+
+.tip-amount-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.results-info-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 50%;
+}
+
+#reset {
+	background-color: #0d686d;
+	border-radius: 0.5rem;
+	font-family: "Space Mono";
+	font-size: 2rem;
+	padding: 1rem;
+	color: #00474b;
+}
+
+.allowed {
+	cursor: pointer;
+	background-color: #26c2ae !important;
+	color: #00474b;
+}
+
+.allowed:hover {
+	background-color: #9fe8df !important;
+}
+@media only screen and (min-width: 1700px) {
+	html {
+		font-size: 70%;
+	}
+	.container {
+		width: 45vw;
+		height: unset;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.container {
+		width: 85vw;
+	}
+
+	.results-container {
+		padding: 3rem;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.container {
+		width: 90vw;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	body {
+		background: linear-gradient(180deg, #c5e4e7, #fff);
+	}
+
+	.container {
+		width: 100vw;
+		height: fit-content;
+		border-radius: 2.5rem 2.5rem 0 0;
+
+		grid-template-columns: 1fr;
+	}
+
+	#buttons {
+		margin-bottom: 3rem;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	body {
+		background: linear-gradient(180deg, #c5e4e7, #fff);
+	}
+
+	.container {
+		width: 100vw;
+		height: fit-content;
+		border-radius: 2.5rem 2.5rem 0 0;
+
+		grid-template-columns: 1fr;
+	}
+
+	.results-container {
+		padding: 3rem;
+	}
+
+	#buttons {
+		margin-bottom: 3rem;
+	}
+
+	.logo {
+		margin-bottom: 5rem;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	body {
+		background: linear-gradient(180deg, #c5e4e7, #fff);
+		height: unset;
+	}
+
+	.container {
+		width: 100vw;
+		height: fit-content;
+		border-radius: 2.5rem 2.5rem 0 0;
+
+		grid-template-columns: 1fr;
+	}
+
+	#buttons {
+		margin-bottom: 3rem;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.tip-container h2 {
+		margin-top: 3rem;
+	}
+
+	.results-container {
+		padding: 3rem;
+	}
+
+	.tip-amount-container {
+		margin-bottom: 2rem;
+	}
+
+	.logo {
+		margin-bottom: 5rem;
+		margin-top: 5rem;
+	}
+}
