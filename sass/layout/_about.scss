@@ -1,25 +1,25 @@
 .section-about {
-    position: relative;
-    background-color: $color-grey-dark-2;
-    text-align: center;
-    color: $text-light;
-    display: block;
+	position: relative;
+	background-color: $color-grey-dark-2;
+	text-align: center;
+	color: $text-light;
+	display: block;
 
-    &__heading {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    }
+	&__heading {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
 
-    &__paragraph {
-        margin: 0 auto 6rem auto;
-        width: 50vw;
-        font-family: $font-zen;
-        font-size: 3rem;
-        font-weight: 900;
+	&__paragraph {
+		margin: 0 auto 6rem auto;
+		width: 50vw;
+		font-family: $font-zen;
+		font-size: 3rem;
+		font-weight: 900;
 
-        @include respond(phone) {
-            font-size: 2.8rem;
-            width: 90%;
-        }
-    }
+		@include respond(phone) {
+			font-size: 2.8rem;
+			width: 90%;
+		}
+	}
 }

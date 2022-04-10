@@ -13,6 +13,22 @@
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
 	}
 
+	&--middle {
+		transform: scale(1.1);
+
+		&:hover {
+			transform: scale(1.13) !important;
+
+			@include respond(phone) {
+				transform: scale(1.03) !important;
+			}
+		}
+
+		@include respond(phone) {
+			transform: scale(1);
+		}
+	}
+
 	&--3 {
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
 		max-width: 30rem;

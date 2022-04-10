@@ -82,10 +82,11 @@
 		background-color: $color-card-git;
 		color: $color-white;
 		padding: 1rem 6rem;
-		// margin-right: 2rem;
+		margin-right: 2rem;
 
-		@include respond(tab-land) {
-			// margin-bottom: 2rem;
+		@include respond(phone) {
+			margin-bottom: 2rem;
+			padding: 0.56rem 6rem;
 		}
 
 		&::after {

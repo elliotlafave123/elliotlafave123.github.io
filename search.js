@@ -415,7 +415,7 @@ const displayFeaturedHome = function (data) {
 
 	data.forEach(function (project, i) {
 		const html = `
-        <div class="card">
+        <div class="card ${i === 1 ? "card--middle" : ""}">
                 <img src="${project.linkImg}" alt="" class="card__img">
                 <div class="card__content">
                     <h4 class="card__title u-margin-bottom-medium">${
@@ -466,7 +466,7 @@ const displayFeatured = function (data) {
 
 	data.forEach(function (project, i) {
 		const html = `
-        <div class="card card--2">
+        <div class="card card--2 ${i === 1 ? "card--middle" : ""}">
                 <img src="${project.linkImg}" alt="" class="card__img">
                 <div class="card__content">
                     <h4 class="card__title u-margin-bottom-medium">${

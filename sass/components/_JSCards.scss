@@ -26,6 +26,8 @@
 
 	@include respond(phone) {
 		grid-template-columns: 1fr;
+		width: 91vw;
+		align-content: center;
 	}
 }
 
@@ -109,10 +111,10 @@
 	border-radius: 0 0 0 5px;
 
 	font-size: 1.8rem;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: 2px;
 	text-decoration: none;
-	color: #fff;
+	color: rgba(255, 255, 255, 0.95);
 
 	display: flex;
 	flex-direction: row;
@@ -123,6 +125,10 @@
 
 	&:hover {
 		background-color: #5f3dc4;
+	}
+
+	i {
+		opacity: 0.95;
 	}
 }
 
@@ -186,6 +192,13 @@
 		width: 100%;
 		transform: scale(1);
 		margin-bottom: 2rem;
+	}
+
+	&::placeholder {
+		color: #fff;
+		opacity: 0.95; /* Firefox */
+		letter-spacing: 1px;
+		font-weight: 600;
 	}
 }
 
