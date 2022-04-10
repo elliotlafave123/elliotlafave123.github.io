@@ -1,7 +1,6 @@
 const projectsIndex = [0, 1, 3];
 
 const title = document.getElementById("title");
-const date = document.getElementById("date");
 const paragraph = document.getElementById("paragraph");
 const linkImg = document.getElementById("linkImg");
 const linkGit = document.getElementById("linkGit");
@@ -13,13 +12,15 @@ const tagJS = document.getElementById("tagJS");
 const tagAPI = document.getElementById("tagAPI");
 
 const button = document.getElementById("button");
+const d = String(new Date()).split(" ");
+const dateString = `${d[2]} ${d[1]} ${d[3]}`;
 
 button.addEventListener("click", (e) => {
 	e.preventDefault();
 	console.log(`
         const dataProject${projectsIndex.length} = {
             title: "${title.value}",
-			date: "${date.value}",
+			date: "${dateString}",
             paragraph:
                 "${paragraph.value}",
             linkLivePreview: "${linkLivePreview.value}",
