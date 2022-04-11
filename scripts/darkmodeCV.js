@@ -3,6 +3,11 @@ if (!localStorage.getItem("newUser")) {
 	localStorage.setItem("darkMode", "true");
 }
 
+const deleteMobileDarkModeToggle = document.querySelector(".deleteMobile");
+if (window.innerWidth < 400) {
+	deleteMobileDarkModeToggle.innerHTML = "";
+}
+
 const toggle = document.querySelector(".toggle");
 const slider = document.getElementById("checkboxSlider");
 const root = document.documentElement;
