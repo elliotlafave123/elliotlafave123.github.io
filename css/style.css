@@ -1358,7 +1358,7 @@ button:focus {
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.903);
+  color: rgba(255, 255, 255, 0.931);
   border-radius: 3rem;
   box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
@@ -1369,12 +1369,14 @@ button:focus {
   @media (max-width: 37.5em) {
     .search-input {
       width: 100%;
-      margin-bottom: 2rem; } }
+      margin-bottom: 2rem;
+      color: rgba(255, 255, 255, 0.931); } }
   .search-input::placeholder {
     opacity: 0.95;
     /* Firefox */
     letter-spacing: 1px;
-    font-weight: 600; }
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.931); }
 
 .search-input:focus {
   box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px; }
