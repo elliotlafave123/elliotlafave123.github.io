@@ -1517,13 +1517,10 @@ button:focus {
   transform-origin: bottom right;
   transition: transform 0.3s; }
 
-.hover-12:hover:before {
-  transform-origin: top right;
-  transform: scaleX(1); }
-
 .hover-12:hover:after {
   transform-origin: bottom left;
-  transform: scaleX(1); }
+  transform: scaleX(1);
+  margin-top: 0.5rem; }
 
 .link {
   display: inline-block;
@@ -1549,7 +1546,11 @@ button:focus {
 .link-text {
   position: relative;
   font-size: 2.5rem;
-  display: inline-block; }
+  display: inline-block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .navigation__checkbox {
   display: none; }
