@@ -23,6 +23,10 @@
 	&--middle {
 		transform: scale(1.1);
 
+		&__text {
+			letter-spacing: 1px;
+		}
+
 		&:hover {
 			transform: scale(1.13) !important;
 
@@ -56,11 +60,12 @@
 	&__text {
 		font-family: $font-lato;
 		font-weight: 500;
-		letter-spacing: 1.5%;
+		letter-spacing: 1px;
 		font-size: 1.6rem;
 		margin-bottom: 1.6rem;
 		margin-top: 1.2rem;
-		line-height: 2.1rem;
+		line-height: 2.3rem;
+
 		min-height: 7rem;
 		color: $text-light;
 

@@ -21,6 +21,7 @@ h2 {
 	font-family: $font-zen;
 	font-weight: 500;
 	font-size: 5rem;
+	letter-spacing: 3px;
 
 	@include respond(phone) {
 		font-size: 4rem;
@@ -31,6 +32,8 @@ h3 {
 	font-family: $font-zen;
 	font-weight: 500;
 	font-size: 6rem;
+	letter-spacing: 2px;
+
 	position: relative;
 	width: fit-content;
 	color: $text-light;
@@ -104,6 +107,7 @@ h5 {
 	position: relative;
 	color: $text-light;
 	width: max-content;
+	letter-spacing: 2px;
 
 	&::after {
 		content: "";

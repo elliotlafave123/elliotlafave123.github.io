@@ -138,7 +138,8 @@ hr {
 h2 {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 500;
-  font-size: 5rem; }
+  font-size: 5rem;
+  letter-spacing: 3px; }
   @media (max-width: 37.5em) {
     h2 {
       font-size: 4rem; } }
@@ -147,6 +148,7 @@ h3 {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 500;
   font-size: 6rem;
+  letter-spacing: 2px;
   position: relative;
   width: fit-content;
   color: var(--text-light); }
@@ -207,7 +209,8 @@ h5 {
   font-size: 5rem;
   position: relative;
   color: var(--text-light);
-  width: max-content; }
+  width: max-content;
+  letter-spacing: 2px; }
   h5::after {
     content: "";
     background: var(--text-light);
@@ -540,6 +543,8 @@ a:before, a:after {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px; }
   .card--middle {
     transform: scale(1.1); }
+    .card--middle__text {
+      letter-spacing: 1px; }
     .card--middle:hover {
       transform: scale(1.13) !important; }
       @media (max-width: 37.5em) {
@@ -563,11 +568,11 @@ a:before, a:after {
   .card__text {
     font-family: "lato", sans-serif;
     font-weight: 500;
-    letter-spacing: 1.5%;
+    letter-spacing: 1px;
     font-size: 1.6rem;
     margin-bottom: 1.6rem;
     margin-top: 1.2rem;
-    line-height: 2.1rem;
+    line-height: 2.3rem;
     min-height: 7rem;
     color: var(--text-light); }
     @media (max-width: 37.5em) {
@@ -695,7 +700,7 @@ a:before, a:after {
 .form__input {
   font-size: 1.5rem;
   font-family: inherit;
-  color: var(--color-white);
+  color: var(--text-light);
   padding: 1.5rem 2rem;
   border-radius: 2px;
   background-color: var(--color-grey-dark-2);
@@ -703,7 +708,7 @@ a:before, a:after {
   border-bottom: 3px solid transparent;
   width: 100%;
   display: block;
-  transition: all .3s; }
+  transition: all 0.3s; }
   @media (max-width: 56.25em) {
     .form__input {
       width: 100%; } }
@@ -728,7 +733,7 @@ a:before, a:after {
   margin-left: 1rem;
   margin-top: 0.7rem;
   display: block;
-  transition: all .3s; }
+  transition: all 0.3s; }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
@@ -760,7 +765,7 @@ a:before, a:after {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -.4rem; }
+  top: -0.4rem; }
   .form__radio-button::after {
     content: "";
     display: block;
@@ -773,7 +778,7 @@ a:before, a:after {
     transform: translate(-50%, -50%);
     background-color: var(--color-primary);
     opacity: 0;
-    transition: opacity .2s; }
+    transition: opacity 0.2s; }
 
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
@@ -1827,9 +1832,13 @@ button:focus {
   position: relative;
   background-color: transparent;
   text-align: center;
-  color: var(--color-white);
   margin: 0 20vw 20rem 20vw;
   text-align: left; }
+  .contact label {
+    color: var(--text-light);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.8rem; }
   @media (max-width: 56.25em) {
     .contact {
       margin: 0 5rem 20rem 5rem; } }
@@ -2228,6 +2237,11 @@ button:focus {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    .tech-stack__item p {
+      color: var(--text-light);
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: 2px; }
     .tech-stack__item-1 {
       animation: moveInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1); }
     .tech-stack__item-2 {

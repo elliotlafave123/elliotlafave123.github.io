@@ -1,29 +1,35 @@
 .contact {
-    position: relative;
-    background-color: transparent;
-    text-align: center;
-    color: $color-white;
-    margin:0 20vw 20rem 20vw;
-    text-align: left;
+	position: relative;
+	background-color: transparent;
+	text-align: center;
+	margin: 0 20vw 20rem 20vw;
+	text-align: left;
 
-    @include respond(tab-port) {
-        margin:0 5rem 20rem 5rem;
-    }
+	label {
+		color: $text-light;
+		font-family: inherit;
+		font-weight: 700;
+		font-size: 1.8rem;
+	}
 
-    &__img {
-        position: absolute;
-        right:-5vw;
-        top:8rem;
-        z-index: -1; 
+	@include respond(tab-port) {
+		margin: 0 5rem 20rem 5rem;
+	}
 
-        @include respond(tab-port) {
-            right:-5rem;
-            top:0rem;
-            height: 30rem;
-        }
-        
-        @include respond(phone) {
-            display: none;
-        }
-    }
+	&__img {
+		position: absolute;
+		right: -5vw;
+		top: 8rem;
+		z-index: -1;
+
+		@include respond(tab-port) {
+			right: -5rem;
+			top: 0rem;
+			height: 30rem;
+		}
+
+		@include respond(phone) {
+			display: none;
+		}
+	}
 }
