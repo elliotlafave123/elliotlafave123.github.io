@@ -530,7 +530,7 @@ a:before, a:after {
   background-color: var(--color-card-dark);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
   transition: all 0.2s; }
-  .card span {
+  .card__date {
     color: var(--text-light);
     font-weight: 700;
     font-size: 1.2rem;

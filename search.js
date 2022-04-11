@@ -84,7 +84,7 @@ const displayFeaturedHome = function (data) {
                     <h4 class="card__title u-margin-bottom-medium">${
 						project.title
 					}</h4>
-					<span>${project.date}</span>
+					<span class="card__date">${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
                     ${
@@ -138,7 +138,7 @@ const displayFeatured = function (data) {
                     <h4 class="card__title u-margin-bottom-medium">${
 						project.title
 					}</h4>
-					<span>${project.date}</span>
+					<span class="card__date">${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
                     ${
