@@ -8,6 +8,13 @@
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
 	transition: all 0.2s;
 
+	span {
+		color: $text-light;
+		font-weight: 700;
+		font-size: 1.2rem;
+		font-family: inherit;
+	}
+
 	&--2 {
 		background-color: $color-card;
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
@@ -20,12 +27,20 @@
 			transform: scale(1.13) !important;
 
 			@include respond(phone) {
-				transform: scale(1.03) !important;
+				transform: unset !important;
+			}
+
+			@include respond(tab-land) {
+				transform: unset !important;
 			}
 		}
 
 		@include respond(phone) {
-			transform: scale(1);
+			transform: unset;
+		}
+
+		@include respond(tab-land) {
+			transform: unset !important;
 		}
 	}
 
@@ -42,8 +57,10 @@
 		font-family: $font-lato;
 		font-weight: 500;
 		letter-spacing: 1.5%;
-		font-size: 1.3rem;
+		font-size: 1.6rem;
 		margin-bottom: 1.6rem;
+		margin-top: 1.2rem;
+		line-height: 2.1rem;
 		min-height: 7rem;
 		color: $text-light;
 
@@ -79,6 +96,10 @@
 	&--2:hover {
 		transform: scale(1.02);
 		box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 20px 0px;
+
+		@include respond(tab-land) {
+			transform: unset;
+		}
 	}
 }
 

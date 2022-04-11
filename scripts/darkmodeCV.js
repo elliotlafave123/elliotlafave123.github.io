@@ -1,3 +1,8 @@
+if (!localStorage.getItem("newUser")) {
+	localStorage.setItem("newUser", "true");
+	localStorage.setItem("darkMode", "true");
+}
+
 const toggle = document.querySelector(".toggle");
 const slider = document.getElementById("checkboxSlider");
 const root = document.documentElement;

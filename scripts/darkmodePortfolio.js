@@ -1,3 +1,8 @@
+if (!localStorage.getItem("newUser")) {
+	localStorage.setItem("newUser", "true");
+	localStorage.setItem("darkMode", "true");
+}
+
 const toggle = document.querySelector(".toggle");
 const slider = document.getElementById("checkboxSlider");
 const root = document.documentElement;
@@ -12,8 +17,8 @@ const lightMode = function () {
 	root.style.setProperty("--color-grey-dark", "#F2F2F2");
 	root.style.setProperty("--color-grey-dark-2", "#CED4DA");
 
-	root.style.setProperty("--color-card", "#E9ECEF");
-	root.style.setProperty("--color-card-dark", "#E9ECEF");
+	root.style.setProperty("--color-card", "#d6dadd");
+	root.style.setProperty("--color-card-dark", "#d6dadd");
 
 	root.style.setProperty("--text-light", "#212529");
 	root.style.setProperty("--text-dark", "#212529");

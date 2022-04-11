@@ -26,8 +26,7 @@
 
 	@include respond(phone) {
 		grid-template-columns: 1fr;
-		width: 91vw;
-		align-content: center;
+		width: 100%;
 	}
 }
 
@@ -35,6 +34,7 @@
 	background-color: $color-card;
 	position: relative;
 	border-radius: 5px;
+	width: 100%;
 }
 
 .cardjs-img {
@@ -47,6 +47,13 @@
 	padding: 1.5rem 2rem;
 	display: flex;
 	flex-direction: column;
+
+	span {
+		color: $text-light;
+		font-weight: 500;
+		font-size: 1.2rem;
+		font-family: inherit;
+	}
 }
 
 .JScard-content p {
@@ -93,6 +100,10 @@
 
 .tag-api {
 	color: #e1de56;
+}
+
+.tag-scss {
+	color: #cc6699;
 }
 
 .buttons-container {
@@ -167,35 +178,32 @@
 }
 
 .search-input {
-	width: 18vw;
+	width: 28vw;
 	border: none;
 	outline: none;
 	cursor: text;
 	background-color: #495057;
-	padding: 1rem 4rem 1rem 4rem;
-	font-size: 1.7rem;
-	font-weight: 700;
-	color: #fff;
+	padding: 1rem 3rem 1rem 3rem;
+	font-size: 2rem;
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: rgba(255, 255, 255, 0.903);
 	border-radius: 3rem;
 
 	box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
-	transform: scale(0.98);
 	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 	@include respond(tab-port) {
 		width: 100%;
-		transform: scale(1);
 		margin-bottom: 2rem;
 	}
 
 	@include respond(phone) {
 		width: 100%;
-		transform: scale(1);
 		margin-bottom: 2rem;
 	}
 
 	&::placeholder {
-		color: #fff;
 		opacity: 0.95; /* Firefox */
 		letter-spacing: 1px;
 		font-weight: 600;
@@ -203,17 +211,13 @@
 }
 
 .search-input:focus {
-	width: 25vw;
-	transform: scale(1);
 	box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
 
 	@include respond(tab-port) {
-		transform: scale(1.01);
 		width: 100%;
 	}
 
 	@include respond(phone) {
-		transform: scale(1.01);
 		width: 100%;
 	}
 }

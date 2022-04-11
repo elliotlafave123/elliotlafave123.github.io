@@ -15,23 +15,29 @@ const button = document.getElementById("button");
 const d = String(new Date()).split(" ");
 const dateString = `${d[2]} ${d[1]} ${d[3]}`;
 
+// ***************** Pre Check Checkboxes ****************** //
+tagHTML.checked = true;
+tagCSS.checked = true;
+tagJS.checked = true;
+
+// ***************** Create JSON Data Function ****************** //
 button.addEventListener("click", (e) => {
 	e.preventDefault();
 	console.log(`
-        const dataProject${projectsIndex.length} = {
-            title: "${title.value}",
-			date: "${dateString}",
-            paragraph:
+        {${projectsIndex.length} = {
+            "title": "${title.value}",
+			"date": "${dateString}",
+            "paragraph":
                 "${paragraph.value}",
-            linkLivePreview: "${linkLivePreview.value}",
-            linkGit:
+            "linkLivePreview": "${linkLivePreview.value}",
+            "linkGit":
                 "${linkGit.value}",
-            linkImg:
+            "linkImg":
                 "${linkImg.value}",
-            tags: [${tagHTML.checked ? `"html",` : ""}${
+            "tags": [${tagHTML.checked ? `"html",` : ""}${
 		tagCSS.checked ? `"css",` : ""
 	}${tagJS.checked ? `"js",` : ""}${tagAPI.checked ? `"api"` : ""}],
-        };
+        },
     `);
 
 	title.value = "";

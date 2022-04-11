@@ -17,6 +17,11 @@
 			width: 0px;
 		}
 
+		div {
+			display: flex;
+			align-items: center;
+		}
+
 		&-item {
 			a {
 				color: $text-light;

@@ -3,7 +3,7 @@
   --color-primary: hsl(255, 78%, 60%);
   --primary-light: #9c82e7;
   --color-primary-dark: rgb(41, 23, 94);
-  --color-secondary: hsl(0, 72%, 65%);
+  --color-secondary: hsla(0, 72%, 65%, 0.942);
   --color-secondary-light: #f23f7b;
   --color-secondary-dark: #f54559;
   --color-form-false: rgb(255, 119, 48);
@@ -530,6 +530,11 @@ a:before, a:after {
   background-color: var(--color-card-dark);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
   transition: all 0.2s; }
+  .card span {
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: inherit; }
   .card--2 {
     background-color: var(--color-card);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px; }
@@ -539,10 +544,16 @@ a:before, a:after {
       transform: scale(1.13) !important; }
       @media (max-width: 37.5em) {
         .card--middle:hover {
-          transform: scale(1.03) !important; } }
+          transform: unset !important; } }
+      @media (max-width: 75em) {
+        .card--middle:hover {
+          transform: unset !important; } }
     @media (max-width: 37.5em) {
       .card--middle {
-        transform: scale(1); } }
+        transform: unset; } }
+    @media (max-width: 75em) {
+      .card--middle {
+        transform: unset !important; } }
   .card--3 {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
     max-width: 30rem; }
@@ -553,8 +564,10 @@ a:before, a:after {
     font-family: "lato", sans-serif;
     font-weight: 500;
     letter-spacing: 1.5%;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     margin-bottom: 1.6rem;
+    margin-top: 1.2rem;
+    line-height: 2.1rem;
     min-height: 7rem;
     color: var(--text-light); }
     @media (max-width: 37.5em) {
@@ -579,6 +592,9 @@ a:before, a:after {
   .card--2:hover {
     transform: scale(1.02);
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 20px 0px; }
+    @media (max-width: 75em) {
+      .card--2:hover {
+        transform: unset; } }
 
 .tags {
   width: 100%;
@@ -1214,13 +1230,13 @@ button:focus {
   @media (max-width: 37.5em) {
     #cardsContainer {
       grid-template-columns: 1fr;
-      width: 91vw;
-      align-content: center; } }
+      width: 100%; } }
 
 .cardjs {
   background-color: var(--color-card);
   position: relative;
-  border-radius: 5px; }
+  border-radius: 5px;
+  width: 100%; }
 
 .cardjs-img {
   width: 100%;
@@ -1231,6 +1247,11 @@ button:focus {
   padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column; }
+  .JScard-content span {
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family: inherit; }
 
 .JScard-content p {
   color: var(--text-light);
@@ -1269,6 +1290,9 @@ button:focus {
 
 .tag-api {
   color: #e1de56; }
+
+.tag-scss {
+  color: #cc6699; }
 
 .buttons-container {
   width: 100%;
@@ -1325,47 +1349,40 @@ button:focus {
       align-items: start; } }
 
 .search-input {
-  width: 18vw;
+  width: 28vw;
   border: none;
   outline: none;
   cursor: text;
   background-color: #495057;
-  padding: 1rem 4rem 1rem 4rem;
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: #fff;
+  padding: 1rem 3rem 1rem 3rem;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.903);
   border-radius: 3rem;
   box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
-  transform: scale(0.98);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   @media (max-width: 56.25em) {
     .search-input {
       width: 100%;
-      transform: scale(1);
       margin-bottom: 2rem; } }
   @media (max-width: 37.5em) {
     .search-input {
       width: 100%;
-      transform: scale(1);
       margin-bottom: 2rem; } }
   .search-input::placeholder {
-    color: #fff;
     opacity: 0.95;
     /* Firefox */
     letter-spacing: 1px;
     font-weight: 600; }
 
 .search-input:focus {
-  width: 25vw;
-  transform: scale(1);
   box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px; }
   @media (max-width: 56.25em) {
     .search-input:focus {
-      transform: scale(1.01);
       width: 100%; } }
   @media (max-width: 37.5em) {
     .search-input:focus {
-      transform: scale(1.01);
       width: 100%; } }
 
 .search select {
@@ -1454,6 +1471,9 @@ button:focus {
     .desktop__nav {
       display: none;
       width: 0px; } }
+  .desktop__nav div {
+    display: flex;
+    align-items: center; }
   .desktop__nav-item {
     font-size: 2.5rem;
     font-family: "lato", sans-serif;
