@@ -5,41 +5,78 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="createDataStyle.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<script defer src="createData.js"></script>
 		<title>Document</title>
 	</head>
 	<body>
-		<form>
-			<h2>Title</h2>
-			<input type="text" id="title" />
-			<h2>Paragraph</h2>
-			<textarea type="text" id="paragraph"></textarea>
-			<h2>Link Img: 1280 x 768</h2>
-			<input type="text" id="linkImg" />
-			<h2>Link Git</h2>
-			<input type="text" id="linkGit" />
-			<h2>Link Live Preview</h2>
-			<input type="text" id="linkLivePreview" />
+		<div class="grid-2-col">
+			<div>
+				<form>
+					<h4>Title</h4>
+					<input type="text" id="title" class="input" />
+					<h4>Paragraph</h4>
+					<input
+						type="text"
+						id="paragraph"
+						class="input"
+					></input>
+					<h4>Link Img: 1280 x 768</h4>
+					<input type="text" id="linkImg" class="input" />
+					<h4>Link Git</h4>
+					<input type="text" id="linkGit" class="input" />
+					<h4>Link Live Preview</h4>
+					<input type="text" id="linkLivePreview" class="input" />
 
-			<div class="checkboxes">
-				<div class="checkbox">
-					<input type="checkbox" id="tagHTML" />
-					<h3>HTML?</h3>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" id="tagCSS" />
-					<h3>CSS?</h3>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" id="tagJS" />
-					<h3>JS?</h3>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" id="tagAPI" />
-					<h3>API?</h3>
+					<div class="checkboxes">
+						<div class="checkbox">
+							<input type="checkbox" class="checkboxBox" id="tagHTML" />
+							<h4 class="tagHeader">HTML</h3>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" class="checkboxBox" id="tagCSS" />
+							<h4 class="tagHeader">CSS</h3>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" class="checkboxBox" id="tagJS" />
+							<h4 class="tagHeader">JS</h3>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" class="checkboxBox" id="tagAPI" />
+							<h4 class="tagHeader">API</h3>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" class="checkboxBox" id="tagSCSS" />
+							<h4 class="tagHeader">SCSS</h3>
+						</div>
+					</div>
+				</form>
+				<button id="button">Create Object</button>
+			</div>
+
+			<div>
+				<div class="cardjs">
+					<img src="" alt="" class="cardjs-img" id="cardImg"/>
+					<div class="JScard-content">
+						<h4 id="cardTitle"></h4>
+						<div class="tags-container" id="tags"></div>
+						<span id="cardDate"></span>
+						<p id="cardPara"></p>
+					</div>
+					<div class="buttons-container">
+						<a href="#" class="JSbtn-live-preview" target="_blank" id="cardPreview"
+							>Live Preview
+							<i class="fa-solid fa-up-right-from-square"></i>
+						</a>
+						<a href="#" class="btn-git" target="_blank" id="cardGit">
+							<img
+								src="https://d33wubrfki0l68.cloudfront.net/f78349611e6cb9ec98b8b2851b3b1e616e7e4ea3/1c471/img/github-logo.png"
+								alt=""
+							/>
+						</a>
+					</div>
 				</div>
 			</div>
-		</form>
-		<button id="button">Create Object</button>
-		<script src="createData.js"></script>
+		</div>
 	</body>
 </html>

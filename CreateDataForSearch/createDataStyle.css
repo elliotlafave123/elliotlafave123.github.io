@@ -22,6 +22,8 @@ input {
 	padding: 1rem 2rem;
 	font-size: 2rem;
 	color: #adb5bd;
+	margin-top: 1.3rem;
+	margin-bottom: 2rem;
 }
 
 h2 {
@@ -31,13 +33,33 @@ h2 {
 	margin-top: 2.5rem;
 }
 
+.tagHeader::after {
+	display: none !important;
+}
+
+.grid-2-col {
+	width: 80vw;
+	height: 80vh;
+
+	margin: 10vh 10vw;
+
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 4rem;
+
+	/* align-items: center; */
+}
+
+.cardjs {
+	margin-top: 8rem;
+}
+
 #title {
 	width: 60vw;
 }
 
 #paragraph {
 	width: 60vw;
-	height: 15rem;
 	background-color: #495057;
 	border: none;
 	padding: 0.8rem;
@@ -87,4 +109,5 @@ h2 {
 	padding: 1rem 4rem;
 	font-size: 1.8rem;
 	margin-top: 2rem;
+	color: #212529;
 }
