@@ -277,5 +277,15 @@
 		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/tip-calculator",
 		"linkImg": "img/Projects/tipCalculator.png",
 		"tags": ["html", "css", "js"]
+	},
+
+	{
+		"title": "Planet Facts App",
+		"date": "14 Apr 2022",
+		"paragraph": "I created a planet facts app using JavaScript to read data from a json file and display it dynamically on the page. The design is a challenge by Frontent Mentor.",
+		"linkLivePreview": "https://elliotlafave.com/Projects/planets/index.html",
+		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/planets",
+		"linkImg": "img/Projects/planets.png",
+		"tags": ["html", "css", "js"]
 	}
 ]
