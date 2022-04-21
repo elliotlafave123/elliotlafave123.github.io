@@ -137,9 +137,4 @@ button.addEventListener("click", (e) => {
 	linkGit.value = "";
 	linkImg.value = "";
 	linkLivePreview.value = "";
-
-	// tagHTML.checked = false;
-	// tagCSS.checked = false;
-	// tagJS.checked = false;
-	// tagAPI.checked = false;
 });

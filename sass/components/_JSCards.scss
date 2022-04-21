@@ -190,7 +190,6 @@
 	color: rgba(255, 255, 255, 0.931);
 	border-radius: 3rem;
 
-	box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
 	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 	@include respond(tab-port) {
@@ -209,18 +208,6 @@
 		letter-spacing: 1px;
 		font-weight: 600;
 		color: rgba(255, 255, 255, 0.931);
-	}
-}
-
-.search-input:focus {
-	box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px;
-
-	@include respond(tab-port) {
-		width: 100%;
-	}
-
-	@include respond(phone) {
-		width: 100%;
 	}
 }
 
