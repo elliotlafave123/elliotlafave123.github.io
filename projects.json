@@ -1,5 +1,35 @@
 [
 	{
+		"date": "28 Dec 2021",
+		"title": "Testimonials Grid",
+		"paragraph": "I coded a testimonials page using CSS(3) Grid to display the items in an interesting way. I added images and borders around them aswel as complimentary colors.",
+		"linkLivePreview": "Projects/testimonials-grid/index.html",
+		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/testimonials-grid",
+		"linkImg": "img/Projects/testimonials.png",
+		"tags": ["html", "css"]
+	},
+
+	{
+		"date": "28 Dec 2021",
+		"title": "Order Completion Page",
+		"paragraph": "I designed a order completion page using HTML(5) and CSS(3). I used a variety of DIV elements and positioning to complete the design.",
+		"linkLivePreview": "Projects/order-page/index.html",
+		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/order-page",
+		"linkImg": "img/Projects/order.png",
+		"tags": ["html", "css"]
+	},
+
+	{
+		"date": "28 Dec 2021",
+		"title": "Guess My Number Game",
+		"paragraph": "I coded a number guessing game using Javascript, used Javascript functions and DOM manipulation to make the game functional in the browser",
+		"linkLivePreview": "guessNumber/index.html",
+		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/guessNumber",
+		"linkImg": "img/card-guessNumber.png",
+		"tags": ["html", "css", "js"]
+	},
+
+	{
 		"date": "10 Dec 2021",
 		"title": "Social Media Dashboard",
 		"paragraph": "I created a social media dashboard using HTML, CSS and JS to add data to the webpage.",
@@ -127,36 +157,6 @@
 		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/MovieApp",
 		"linkImg": "img/Projects/Movie App.png",
 		"tags": ["html", "css", "js", "api"]
-	},
-
-	{
-		"date": "28 Dec 2021",
-		"title": "Testimonials Grid",
-		"paragraph": "I coded a testimonials page using CSS(3) Grid to display the items in an interesting way. I added images and borders around them aswel as complimentary colors.",
-		"linkLivePreview": "Projects/testimonials-grid/index.html",
-		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/testimonials-grid",
-		"linkImg": "img/Projects/testimonials.png",
-		"tags": ["html", "css"]
-	},
-
-	{
-		"date": "28 Dec 2021",
-		"title": "Order Completion Page",
-		"paragraph": "I designed a order completion page using HTML(5) and CSS(3). I used a variety of DIV elements and positioning to complete the design.",
-		"linkLivePreview": "Projects/order-page/index.html",
-		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/order-page",
-		"linkImg": "img/Projects/order.png",
-		"tags": ["html", "css"]
-	},
-
-	{
-		"date": "28 Dec 2021/",
-		"title": "Guess My Number Game",
-		"paragraph": "I coded a number guessing game using Javascript, used Javascript functions and DOM manipulation to make the game functional in the browser",
-		"linkLivePreview": "guessNumber/index.html",
-		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/guessNumber",
-		"linkImg": "img/card-guessNumber.png",
-		"tags": ["html", "css", "js"]
 	},
 
 	{

@@ -14,6 +14,13 @@ const lastPage = document.getElementById("lastPage");
 const pageNumberCurrent = document.getElementById("pageNumberCurrent");
 const pageNumberTotal = document.getElementById("pageNumberTotal");
 
+const nextPageMobile = document.getElementById("nextPageMobile");
+const lastPageMobile = document.getElementById("lastPageMobile");
+const pageNumberCurrentMobile = document.getElementById(
+	"pageNumberCurrentMobile"
+);
+const pageNumberTotalMobile = document.getElementById("pageNumberTotalMobile");
+
 let mobile = false;
 if (window.innerWidth < 500) {
 	mobile = true;
@@ -39,9 +46,9 @@ const displayProjectsOnPages = function (data) {
 		perChunk = columns * 4;
 	}
 
-	const inputArray = data.reverse();
+	// const inputArray = data.reverse();
 
-	var result = inputArray.reduce((resultArray, item, index) => {
+	const result = data.reduce((resultArray, item, index) => {
 		const chunkIndex = Math.floor(index / perChunk);
 
 		if (!resultArray[chunkIndex]) {
@@ -53,10 +60,17 @@ const displayProjectsOnPages = function (data) {
 		return resultArray;
 	}, []);
 	pageNumberTotal.innerText = result.length;
+	if (pageNumberTotalMobile) {
+		pageNumberTotalMobile.innerText = result.length;
+	}
 
 	if (result[page]) {
 		displayProjects(result[page]);
 		pageNumberCurrent.innerText = page + 1;
+
+		if (pageNumberCurrentMobile) {
+			pageNumberCurrentMobile.innerText = page + 1;
+		}
 	} else {
 		page = result.length - 1;
 	}
@@ -70,21 +84,22 @@ fetch("projects.json")
 	.then((jsondata) => {
 		data = jsondata;
 		featuredData = [
+			jsondata[28],
+			jsondata[27],
+			jsondata[26],
+			jsondata[23],
+			jsondata[24],
+			jsondata[21],
+			jsondata[22],
+			jsondata[19],
 			jsondata[18],
 			jsondata[16],
-			jsondata[19],
-			jsondata[12],
-			jsondata[11],
-			jsondata[20],
-			jsondata[21],
-			jsondata[23],
-			jsondata[26],
-			jsondata[27],
-			jsondata[29],
+			jsondata[15],
+			jsondata[14],
 		];
 
 		if (cardsContainer) {
-			displayProjectsOnPages(data);
+			displayProjectsOnPages(data.reverse());
 		}
 
 		getFeaturedData(featuredData);
@@ -302,6 +317,8 @@ refreshBtn.addEventListener("click", function () {
 if (refreshBtnAllProjects) {
 	refreshBtnAllProjects.addEventListener("click", function () {
 		page = 0;
+		dropdown.value = "";
+		pageNumberCurrent.innerText = 1;
 		displayProjectsOnPages(data);
 	});
 }
@@ -359,6 +376,25 @@ if (nextPage) {
 
 if (lastPage) {
 	lastPage.addEventListener("click", function (e) {
+		e.preventDefault();
+		if (page == 0) {
+			return;
+		} else {
+			page--;
+		}
+		displayProjectsOnPages(data);
+	});
+}
+if (nextPageMobile) {
+	nextPageMobile.addEventListener("click", function (e) {
+		e.preventDefault();
+		page++;
+		displayProjectsOnPages(data);
+	});
+}
+
+if (lastPageMobile) {
+	lastPageMobile.addEventListener("click", function (e) {
 		e.preventDefault();
 		if (page == 0) {
 			return;
