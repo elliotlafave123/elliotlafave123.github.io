@@ -312,6 +312,10 @@ const displayProjects = function (data) {
 /* *********** Search functionality *********** */
 refreshBtn.addEventListener("click", function () {
 	getFeaturedData(featuredData);
+	refreshBtn.style.animation = "spin 0.7s linear";
+	setTimeout(() => {
+		refreshBtn.style.animation = "";
+	}, 700);
 });
 
 if (refreshBtnAllProjects) {
@@ -320,6 +324,10 @@ if (refreshBtnAllProjects) {
 		dropdown.value = "";
 		pageNumberCurrent.innerText = 1;
 		displayProjectsOnPages(data);
+		refreshBtnAllProjects.style.animation = "spin 0.7s linear";
+		setTimeout(() => {
+			refreshBtnAllProjects.style.animation = "";
+		}, 700);
 	});
 }
 

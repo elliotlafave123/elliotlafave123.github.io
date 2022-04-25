@@ -124,6 +124,11 @@ body {
     body {
       padding: 0; } }
 
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 body {
   font-family: "lato", sans-serif;
   /** Used google fonts to import this font **/
