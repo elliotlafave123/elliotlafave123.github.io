@@ -144,3 +144,9 @@ a {
 		transition: transform 0.5s ease;
 	}
 }
+
+.title-container-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

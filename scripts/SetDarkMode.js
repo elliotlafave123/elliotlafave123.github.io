@@ -3,13 +3,12 @@ if (!localStorage.getItem("newUser")) {
 	localStorage.setItem("darkMode", "true");
 }
 
-const toggle = document.querySelector(".toggle");
+// const toggle = document.querySelector(".toggle");
 
 toggle.addEventListener("change", () => {
 	if (toggle.checked) {
 		localStorage.setItem("darkMode", "true");
 	} else {
-		console.log("Light Mode");
 		localStorage.setItem("darkMode", "false");
 	}
 });

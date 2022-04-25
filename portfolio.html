@@ -263,7 +263,10 @@
     </section>
 
     <section class="portfolio portfolio--2 u-margin-top-large">
-        <h3 class="skills__header u-margin-bottom-large" >Featured</h3>
+        <div class="title-container-flex">
+            <h3 class="skills__header u-margin-bottom-large" >Featured</h3>
+            <button class="btn-refresh" id="refreshBtn"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
 
         <div class="card__grid u-margin-bottom-medium" id="cardGrid3">
             <!-- JavaScript Inserted Data Here -->
@@ -273,7 +276,11 @@
     </section>
 
     <section class="portfolio portfolio--2 u-margin-top-small">
-        <h3 class="skills__header u-margin-bottom-medium" id="all-projects">All Projects</h3>
+        <div class="title-container-flex">
+            <h3 class="skills__header " id="all-projects">All Projects</h3>
+            <button class="btn-refresh " id="refreshBtnAllProjects"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+
         <nav class="search-container">
             <form class="search">
                 <input
@@ -281,13 +288,28 @@
                     type="text"
                     placeholder="Search projects..."
                 />
-                <select id="dropdown">
-                    <option value="html">HTML</option>
-                    <option value="api">API</option>
-                    <option value="css">CSS</option>
-                    <option value="js">JS</option> 
-                    <option value="scss">SCSS</option> 
-                </select>
+
+                <div class="searchInteractionsContainer">
+                    <div class="pageNumbers">
+                        <button id="lastPage"><i class="fas fa-arrow-left"></i></button>
+                        <p>
+                            Page <span id="pageNumberCurrent">1</span> of <span id="pageNumberTotal">2</span>
+                        </p>
+                        <button id="nextPage"><i class="fas fa-arrow-right"></i></button>
+    
+                        
+                    </div>
+    
+                    <select id="dropdown">
+                        <option value="html">HTML</option>
+                        <option value="api">API</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JS</option> 
+                        <option value="scss">SCSS</option> 
+                    </select>
+                </div>
+                
+                
             </form>
         </nav>
         <main id="cardsContainer"></main>

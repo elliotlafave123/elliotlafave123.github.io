@@ -1,12 +1,66 @@
 let data;
 let featuredData;
-let featuredProjects;
 
 const cardsContainer = document.getElementById("cardsContainer");
 const searchInput = document.querySelector(".search-input");
 const dropdown = document.getElementById("dropdown");
 const featured = document.getElementById("cardGrid3");
 const featuredHome = document.getElementById("cardGrid3-home");
+const refreshBtn = document.getElementById("refreshBtn");
+const refreshBtnAllProjects = document.getElementById("refreshBtnAllProjects");
+
+const nextPage = document.getElementById("nextPage");
+const lastPage = document.getElementById("lastPage");
+const pageNumberCurrent = document.getElementById("pageNumberCurrent");
+const pageNumberTotal = document.getElementById("pageNumberTotal");
+
+let mobile = false;
+if (window.innerWidth < 500) {
+	mobile = true;
+}
+
+const getGridColumnCount = function () {
+	const gridComputedStyle = window.getComputedStyle(cardsContainer);
+
+	return gridComputedStyle
+		.getPropertyValue("grid-template-columns")
+		.split(" ").length;
+};
+
+let page = 0;
+
+const displayProjectsOnPages = function (data) {
+	const columns = getGridColumnCount();
+
+	let perChunk;
+	if (mobile) {
+		perChunk = 10;
+	} else {
+		perChunk = columns * 4;
+	}
+
+	const inputArray = data.reverse();
+
+	var result = inputArray.reduce((resultArray, item, index) => {
+		const chunkIndex = Math.floor(index / perChunk);
+
+		if (!resultArray[chunkIndex]) {
+			resultArray[chunkIndex] = []; // start a new chunk
+		}
+
+		resultArray[chunkIndex].push(item);
+
+		return resultArray;
+	}, []);
+	pageNumberTotal.innerText = result.length;
+
+	if (result[page]) {
+		displayProjects(result[page]);
+		pageNumberCurrent.innerText = page + 1;
+	} else {
+		page = result.length - 1;
+	}
+};
 
 /* *********** Get Json Data *********** */
 fetch("projects.json")
@@ -23,29 +77,41 @@ fetch("projects.json")
 			jsondata[11],
 			jsondata[20],
 			jsondata[21],
+			jsondata[23],
+			jsondata[26],
 			jsondata[27],
+			jsondata[29],
 		];
-		featuredProjects = featuredData;
-		console.log(jsondata);
-		console.log(featuredData);
 
 		if (cardsContainer) {
-			displayMovements(data);
+			displayProjectsOnPages(data);
 		}
 
 		getFeaturedData(featuredData);
 	});
 
 /* *********** Generate random featured data then call show functions *********** */
-const getFeaturedData = function (data) {
-	let picked = [];
-	let data1 = [];
+const displayFeaturedData = function (pickedData) {
+	if (featuredHome) {
+		displayFeaturedHome(pickedData);
+	}
+
+	if (featured) {
+		displayFeatured(pickedData);
+	}
+};
+
+const getFeaturedData = function () {
+	const picked = [];
+	const data1 = [];
 
 	const getRandomPositions = function () {
-		let i = Math.floor(Math.random() * featuredProjects.length);
+		let i = Math.floor(Math.random() * featuredData.length);
 
 		if (!picked.includes(i)) {
 			picked.push(i);
+		} else {
+			getRandomPositions();
 		}
 	};
 
@@ -55,20 +121,15 @@ const getFeaturedData = function (data) {
 
 	const addData = function (picked) {
 		for (let i = 0; i < 3; i++) {
-			data1.push(featuredProjects[picked[i]]);
+			data1.push(featuredData[picked[i]]);
 		}
 	};
 	addData(picked);
-	console.log(picked);
 
-	featuredProjects = data1;
-
-	if (featuredHome) {
-		displayFeaturedHome(featuredProjects);
-	}
-
-	if (featured) {
-		displayFeatured(featuredProjects);
+	if (data1[0] && data1[1] && data1[2]) {
+		displayFeaturedData(data1);
+	} else {
+		getFeaturedData();
 	}
 };
 
@@ -79,7 +140,9 @@ const displayFeaturedHome = function (data) {
 	data.forEach(function (project, i) {
 		const html = `
         <div class="card ${i === 1 ? "card--middle" : ""}">
-                <img src="${project.linkImg}" alt="" class="card__img">
+                <img src="${project.linkImg}" alt="" class="card__img" ${
+			mobile ? 'loading="lazy"' : ""
+		}>
                 <div class="card__content">
                     <h4 class="card__title u-margin-bottom-medium">${
 						project.title
@@ -128,12 +191,13 @@ const displayFeaturedHome = function (data) {
 /* *********** Featured portfolio display function *********** */
 const displayFeatured = function (data) {
 	featured.innerHTML = "";
-	console.log(data);
 
 	data.forEach(function (project, i) {
 		const html = `
         <div class="card card--2 ${i === 1 ? "card--middle" : ""}">
-                <img src="${project.linkImg}" alt="" class="card__img">
+                <img src="${project.linkImg}" alt="" class="card__img" ${
+			mobile ? 'loading="lazy"' : ""
+		}>
                 <div class="card__content">
                     <h4 class="card__title u-margin-bottom-medium">${
 						project.title
@@ -181,7 +245,7 @@ const displayFeatured = function (data) {
 };
 
 /* *********** Projects portfolio display function *********** */
-const displayMovements = function (data) {
+const displayProjects = function (data) {
 	cardsContainer.innerHTML = "";
 
 	data.forEach(function (project, i) {
@@ -191,6 +255,7 @@ const displayMovements = function (data) {
 					src="${project.linkImg}"
 					alt="A Project Card Image" 
                     class="cardjs-img"
+					${mobile ? 'loading="lazy"' : ""}
 				/>
 				<div class="JScard-content">
 					<h4>${project.title}</h4>
@@ -225,9 +290,21 @@ const displayMovements = function (data) {
 			</div>
       `;
 
-		cardsContainer.insertAdjacentHTML("afterbegin", html);
+		cardsContainer.insertAdjacentHTML("beforeend", html);
 	});
 };
+
+/* *********** Search functionality *********** */
+refreshBtn.addEventListener("click", function () {
+	getFeaturedData(featuredData);
+});
+
+if (refreshBtnAllProjects) {
+	refreshBtnAllProjects.addEventListener("click", function () {
+		page = 0;
+		displayProjectsOnPages(data);
+	});
+}
 
 /* *********** Search functionality *********** */
 if (searchInput) {
@@ -251,10 +328,13 @@ const search = function (input) {
 		}
 	});
 
-	displayMovements(isThere);
+	displayProjects(isThere);
 };
 
 let selection = [];
+if (dropdown) {
+	dropdown.value = "";
+}
 if (dropdown) {
 	dropdown.addEventListener("input", (e) => {
 		e.preventDefault();
@@ -263,8 +343,28 @@ if (dropdown) {
 		data.forEach(function (project, i) {
 			if (project.tags.includes(dropdown.value)) {
 				selection.push(project);
-				displayMovements(selection);
+				displayProjects(selection);
 			}
 		});
+	});
+}
+
+if (nextPage) {
+	nextPage.addEventListener("click", function (e) {
+		e.preventDefault();
+		page++;
+		displayProjectsOnPages(data);
+	});
+}
+
+if (lastPage) {
+	lastPage.addEventListener("click", function (e) {
+		e.preventDefault();
+		if (page == 0) {
+			return;
+		} else {
+			page--;
+		}
+		displayProjectsOnPages(data);
 	});
 }

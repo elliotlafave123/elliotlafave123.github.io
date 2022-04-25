@@ -8,7 +8,7 @@
 	width: 80vw;
 	margin: 5vh 0vw 5vh 0vw;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, minmax(300px, 1fr));
 	gap: 4rem;
 
 	@include respond(large-desktop) {
@@ -27,6 +27,44 @@
 	@include respond(phone) {
 		grid-template-columns: 1fr;
 		width: 100%;
+	}
+}
+
+.searchInteractionsContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 30%;
+
+	@include respond(phone) {
+		width: 100%;
+	}
+}
+
+.pageNumbers {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 260px;
+
+	@include respond(phone) {
+		width: 50%;
+	}
+
+	p {
+		font-size: 1.8rem;
+		opacity: 0.7;
+		letter-spacing: 1px;
+	}
+
+	button {
+		background-color: transparent;
+		font-size: 2.4rem;
+
+		&:hover {
+			color: #fff;
+		}
 	}
 }
 
@@ -213,6 +251,7 @@
 
 .search select {
 	width: 10rem;
+	height: 4rem;
 	padding: 1rem 2rem 1rem 2rem;
 	background-color: $color-card;
 	border: none;

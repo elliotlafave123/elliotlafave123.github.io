@@ -6,7 +6,7 @@
 		"linkLivePreview": "https://elliotlafave.com/projects/socialmediadashboard/",
 		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/SocialMediaDashboard",
 		"linkImg": "https://elliotlafave.com/img/Projects/Social%20Media%20Dashboard.png",
-		"tags": ["html", "css", "js", "scss"]
+		"tags": ["html", "js", "scss"]
 	},
 
 	{
@@ -166,7 +166,7 @@
 		"linkLivePreview": "Projects/Nexter/",
 		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/Nexter",
 		"linkImg": "img/Projects/nexter.png",
-		"tags": ["html", "css", "scss"]
+		"tags": ["html", "scss"]
 	},
 
 	{
@@ -266,7 +266,7 @@
 		"linkLivePreview": "https://mapty.elliotlafave.com/",
 		"linkGit": "https://github.com/elliotlafave123/Mapty",
 		"linkImg": "img/Projects/Mapty.png",
-		"tags": ["html", "css", "js", "api", "scss"]
+		"tags": ["html", "js", "api", "scss"]
 	},
 
 	{

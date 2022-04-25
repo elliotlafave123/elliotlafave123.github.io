@@ -32,8 +32,6 @@ const container = document.getElementById("container");
 const btnNext = document.getElementById("mobile-slider-btn-next");
 const btnLast = document.getElementById("mobile-slider-btn-last");
 
-console.log(btnNext);
-
 const displayData = function (data) {
 	container.innerHTML = "";
 

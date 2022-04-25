@@ -17,8 +17,6 @@ const wave5Light = document.getElementById("wave5-light");
 const wave5Dark = document.getElementById("wave5-dark");
 
 const lightMode = function () {
-	console.log("Light Mode");
-
 	root.style.setProperty("--color-grey-dark", "#F2F2F2");
 	root.style.setProperty("--color-grey-dark-2", "#CED4DA");
 
@@ -38,8 +36,6 @@ const lightMode = function () {
 };
 
 const darkMode = function () {
-	console.log("Dark Mode");
-
 	root.style.setProperty("--color-grey-dark", "#212529");
 	root.style.setProperty("--color-grey-dark-2", "#343a40");
 
@@ -73,7 +69,6 @@ toggle.addEventListener("change", () => {
 		darkMode();
 		localStorage.setItem("darkMode", "true");
 	} else {
-		console.log("Light Mode");
 		lightMode();
 		localStorage.setItem("darkMode", "false");
 	}

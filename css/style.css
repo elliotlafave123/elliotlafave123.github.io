@@ -238,6 +238,11 @@ a:before, a:after {
   position: absolute;
   transition: transform 0.5s ease; }
 
+.title-container-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
 ::-webkit-scrollbar {
   width: 18px;
   margin: 1px; }
@@ -337,6 +342,20 @@ a:before, a:after {
     transform: translate(-50%, -50%); }
   .btn--github::after {
     background-color: var(--color-card-git); }
+
+.btn-refresh {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-top: 3rem;
+  background-color: var(--color-card);
+  font-size: 2.5rem;
+  padding: 0; }
+  @media (max-width: 37.5em) {
+    .btn-refresh {
+      margin-top: 2rem; } }
+  .btn-refresh:hover {
+    color: #fff; }
 
 .btn-purple-landing {
   background-color: var(--color-primary);
@@ -1220,7 +1239,7 @@ button:focus {
   width: 80vw;
   margin: 5vh 0vw 5vh 0vw;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
   gap: 4rem; }
   @media (min-width: 150em) {
     #cardsContainer {
@@ -1236,6 +1255,34 @@ button:focus {
     #cardsContainer {
       grid-template-columns: 1fr;
       width: 100%; } }
+
+.searchInteractionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%; }
+  @media (max-width: 37.5em) {
+    .searchInteractionsContainer {
+      width: 100%; } }
+
+.pageNumbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px; }
+  @media (max-width: 37.5em) {
+    .pageNumbers {
+      width: 50%; } }
+  .pageNumbers p {
+    font-size: 1.8rem;
+    opacity: 0.7;
+    letter-spacing: 1px; }
+  .pageNumbers button {
+    background-color: transparent;
+    font-size: 2.4rem; }
+    .pageNumbers button:hover {
+      color: #fff; }
 
 .cardjs {
   background-color: var(--color-card);
@@ -1384,6 +1431,7 @@ button:focus {
 
 .search select {
   width: 10rem;
+  height: 4rem;
   padding: 1rem 2rem 1rem 2rem;
   background-color: var(--color-card);
   border: none;
