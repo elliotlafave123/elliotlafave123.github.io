@@ -166,7 +166,7 @@ const displayFeaturedHome = function (data) {
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
                     ${
-						project.tags.includes("css")
+						project.tags.includes("html")
 							? '<span class="tags__tag tags__tag--html">HTML</span>'
 							: ""
 					}
@@ -221,7 +221,7 @@ const displayFeatured = function (data) {
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
                     ${
-						project.tags.includes("css")
+						project.tags.includes("html")
 							? '<span class="tags__tag tags__tag--html">HTML</span>'
 							: ""
 					}

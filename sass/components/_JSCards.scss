@@ -35,7 +35,11 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	width: 30%;
+	width: 38%;
+
+	@include respond(tab-port) {
+		width: 100%;
+	}
 
 	@include respond(phone) {
 		width: 100%;
@@ -46,16 +50,24 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 260px;
+	width: 300px;
+
+	@include respond(tab-port) {
+		width: 40%;
+	}
 
 	@include respond(phone) {
-		width: 50%;
+		width: 60%;
 	}
 
 	p {
 		font-size: 1.8rem;
 		opacity: 0.7;
 		letter-spacing: 1px;
+
+		@include respond(phone) {
+			letter-spacing: 0px;
+		}
 	}
 
 	button {
