@@ -287,5 +287,15 @@
 		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/planets",
 		"linkImg": "img/Projects/planets.png",
 		"tags": ["html", "css", "js"]
+	},
+
+	{
+		"title": "GitHub User Search",
+		"date": "26 Apr 2022",
+		"paragraph": "I used the github API to fetch user data and display it within the application.",
+		"linkLivePreview": "Projects/GithubUserSearch",
+		"linkGit": "https://github.com/elliotlafave123/elliotlafave123.github.io/tree/master/Projects/GithubUserSearch",
+		"linkImg": "img/Projects/GithubUserSearch.png",
+		"tags": ["html", "css", "js", "api"]
 	}
 ]
