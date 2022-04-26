@@ -81,6 +81,9 @@
 .hidden {
   display: none; }
 
+.invisible {
+  visibility: hidden; }
+
 .u-align-center {
   width: 100%;
   display: flex;
@@ -1250,7 +1253,7 @@ button:focus {
   width: 80vw;
   margin: 5vh 0vw 5vh 0vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.248fr));
   gap: 4rem; }
   @media (min-width: 150em) {
     #cardsContainer {

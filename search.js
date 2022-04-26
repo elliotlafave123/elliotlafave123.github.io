@@ -13,6 +13,7 @@ const nextPage = document.getElementById("nextPage");
 const lastPage = document.getElementById("lastPage");
 const pageNumberCurrent = document.getElementById("pageNumberCurrent");
 const pageNumberTotal = document.getElementById("pageNumberTotal");
+const pageNumbers = document.querySelectorAll(".pageNumbers");
 
 const nextPageMobile = document.getElementById("nextPageMobile");
 const lastPageMobile = document.getElementById("lastPageMobile");
@@ -20,6 +21,15 @@ const pageNumberCurrentMobile = document.getElementById(
 	"pageNumberCurrentMobile"
 );
 const pageNumberTotalMobile = document.getElementById("pageNumberTotalMobile");
+
+let hidePageChangeButtons = false;
+function togglePageChangeButtons() {
+	if (hidePageChangeButtons) {
+		pageNumbers.forEach((el) => el.classList.add("invisible"));
+	} else {
+		pageNumbers.forEach((el) => el.classList.remove("invisible"));
+	}
+}
 
 let mobile = false;
 if (window.innerWidth < 500) {
@@ -322,7 +332,10 @@ if (refreshBtnAllProjects) {
 	refreshBtnAllProjects.addEventListener("click", function () {
 		page = 0;
 		dropdown.value = "";
+		searchInput.value = "";
 		pageNumberCurrent.innerText = 1;
+		hidePageChangeButtons = false;
+		togglePageChangeButtons();
 		displayProjectsOnPages(data);
 		refreshBtnAllProjects.style.animation = "spin 0.7s linear";
 		setTimeout(() => {
@@ -336,7 +349,16 @@ if (searchInput) {
 	searchInput.addEventListener("input", (e) => {
 		e.preventDefault();
 
-		search(searchInput.value);
+		if (searchInput.value) {
+			hidePageChangeButtons = true;
+			togglePageChangeButtons();
+
+			search(searchInput.value);
+		} else {
+			hidePageChangeButtons = false;
+			togglePageChangeButtons();
+			displayProjects(data);
+		}
 	});
 }
 
@@ -364,6 +386,8 @@ if (dropdown) {
 	dropdown.addEventListener("input", (e) => {
 		e.preventDefault();
 		selection = [];
+		hidePageChangeButtons = true;
+		togglePageChangeButtons();
 
 		data.forEach(function (project, i) {
 			if (project.tags.includes(dropdown.value)) {
