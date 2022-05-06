@@ -150,7 +150,7 @@ p {
 	left: calc(
 		var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap)
 	);
-	/* background-color: red; */
+	background-color: hsl(200, 50%, 60%);
 	background-color: hsl(200, 50%, var(--background-lightness));
 	color: hsl(200, 50%, var(--text-lightness));
 	border-radius: 1vmin;
