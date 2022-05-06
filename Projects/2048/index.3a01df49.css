@@ -1,0 +1,164 @@
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  background-color: #333;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial;
+  font-size: 7.5vmin;
+  display: flex;
+}
+
+header {
+  color: #ccc;
+  width: calc( (var(--cell-size) * var(--grid-size) )  + (var(--cell-gap) * var(--grid-size) ) );
+  border-bottom: 1px solid #ccc;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  padding-bottom: .2rem;
+  display: flex;
+  position: relative;
+}
+
+.icons {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+button {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #333;
+  background-color: #ccc;
+  border: none;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  padding: .2rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  height: auto;
+  margin: 0;
+  font-size: 4rem;
+  position: absolute;
+  top: -.3rem;
+  left: calc(50% - 4.3rem);
+}
+
+.score-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+span {
+  color: #a2a2a2;
+  font-size: 1.6rem;
+}
+
+#score {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  color: #ccc;
+  z-index: 0;
+  background-color: #0d0d0dd8;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.modal {
+  width: 55%;
+  height: 90%;
+  z-index: 100;
+  background-color: #111;
+  border: .1px solid #4b4b4b;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 2rem;
+  font-size: 2.4rem;
+}
+
+p {
+  margin: 0 0 1.2rem;
+  font-size: 1.5rem;
+}
+
+#closeModal {
+  z-index: 8;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+#game-board {
+  grid-template-columns: repeat(var(--grid-size), var(--cell-size) );
+  grid-template-rows: repeat(var(--grid-size), var(--cell-size) );
+  gap: var(--cell-gap);
+  padding: var(--cell-gap);
+  background-color: #ccc;
+  border-radius: 1vmin;
+  display: grid;
+  position: relative;
+}
+
+.cell {
+  background-color: #aaa;
+  border-radius: 1vmin;
+}
+
+.tile {
+  --x: 1;
+  --y: 0;
+  --background-lightness: 80%;
+  --text-lightness: 20%;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  top: calc( var(--y) * (var(--cell-size)  + var(--cell-gap) )  + var(--cell-gap) );
+  left: calc( var(--x) * (var(--cell-size)  + var(--cell-gap) )  + var(--cell-gap) );
+  background-color: red;
+  background-color: hsl(200, 50%, var(--background-lightness) );
+  color: hsl(200, 50%, var(--text-lightness) );
+  border-radius: 1vmin;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: all .1s ease-in-out;
+  animation: show .2s ease-in-out;
+  display: flex;
+  position: absolute;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */

@@ -30,6 +30,31 @@ async function getRepos(username) {
 }
 
 function createUserCard(user) {
+	const date = new Date(user.created_at);
+	// const day = date.getDay();
+	// const month = date.getMonth();
+
+	function dateToYMD(date) {
+		var strArray = [
+			"Jan",
+			"Feb",
+			"Mar",
+			"Apr",
+			"May",
+			"Jun",
+			"Jul",
+			"Aug",
+			"Sep",
+			"Oct",
+			"Nov",
+			"Dec",
+		];
+		var d = date.getDate();
+		var m = strArray[date.getMonth()];
+		var y = date.getFullYear();
+		return "" + (d <= 9 ? "0" + d : d) + " " + m + " " + y;
+	}
+
 	const cardHTML = `
         <div class="card">
             <div>
@@ -40,15 +65,18 @@ function createUserCard(user) {
                 />
             </div>
             <div class="user-info">
-                <h2>${user.name}</h2>
+				<div class="name-date">
+                	<h2>${user.name ? user.name : "No username"}</h2>
+					<span>Joined ${dateToYMD(date)}</span> 
+				</div>
                 <p>
-                    ${user.bio}
+                    ${user.bio ? user.bio : "This profile has no bio"}
                 </p>
 
                 <ul>
+					<li>${user.public_repos}<strong>Repos</strong></li>
                     <li>${user.followers}<strong>Followers</strong></li>
-                    <li>${user.following}<strong>Following</strong></li>
-                    <li>${user.public_repos}<strong>Repos</strong></li>
+                    <li>${user.following}<strong>Following</strong></li> 
                 </ul>
 
                 <div id="repos"></div>
