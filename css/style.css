@@ -2243,9 +2243,14 @@ button:focus {
 
 .certificate {
   width: 100%;
+  height: 100%;
   padding: 2rem 0rem;
   text-align: center;
-  background-color: transparent; }
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column; }
   .certificate:hover {
     background-color: var(--color-grey-dark-2);
     cursor: pointer; }
@@ -2256,7 +2261,7 @@ button:focus {
     position: relative;
     width: fit-content;
     color: var(--text-light);
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     width: 100%; }
     @media (max-width: 75em) {
       .certificate--title {
