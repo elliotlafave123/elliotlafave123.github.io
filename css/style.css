@@ -1253,18 +1253,12 @@ button:focus {
   width: 80vw;
   margin: 5vh 0vw 5vh 0vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 0.248fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 4rem; }
   @media (min-width: 150em) {
     #cardsContainer {
       width: 80vw;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
-  @media (max-width: 75em) {
-    #cardsContainer {
-      grid-template-columns: 1fr 1fr 1fr; } }
-  @media (max-width: 56.25em) {
-    #cardsContainer {
-      grid-template-columns: 1fr 1fr; } }
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); } }
   @media (max-width: 37.5em) {
     #cardsContainer {
       grid-template-columns: 1fr;

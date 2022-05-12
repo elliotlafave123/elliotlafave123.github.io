@@ -8,20 +8,20 @@
 	width: 80vw;
 	margin: 5vh 0vw 5vh 0vw;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 0.248fr));
+	grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 	gap: 4rem;
 
 	@include respond(large-desktop) {
 		width: 80vw;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	}
 
 	@include respond(tab-land) {
-		grid-template-columns: 1fr 1fr 1fr;
+		// grid-template-columns: 1fr 1fr 1fr;
 	}
 
 	@include respond(tab-port) {
-		grid-template-columns: 1fr 1fr;
+		// grid-template-columns: 1fr 1fr;
 	}
 
 	@include respond(phone) {

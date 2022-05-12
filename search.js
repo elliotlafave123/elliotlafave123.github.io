@@ -96,6 +96,7 @@ fetch("https://get-projects-api-elliotlafave123.vercel.app/api/projects")
 		console.log(jsondata);
 		data = jsondata;
 		featuredData = [
+			jsondata[30],
 			jsondata[28],
 			jsondata[27],
 			jsondata[26],
