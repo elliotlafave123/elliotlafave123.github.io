@@ -17,9 +17,7 @@ const pageNumbers = document.querySelectorAll(".pageNumbers");
 
 const nextPageMobile = document.getElementById("nextPageMobile");
 const lastPageMobile = document.getElementById("lastPageMobile");
-const pageNumberCurrentMobile = document.getElementById(
-	"pageNumberCurrentMobile"
-);
+const pageNumberCurrentMobile = document.getElementById("pageNumberCurrentMobile");
 const pageNumberTotalMobile = document.getElementById("pageNumberTotalMobile");
 
 let hidePageChangeButtons = false;
@@ -39,9 +37,7 @@ if (window.innerWidth < 500) {
 const getGridColumnCount = function () {
 	const gridComputedStyle = window.getComputedStyle(cardsContainer);
 
-	return gridComputedStyle
-		.getPropertyValue("grid-template-columns")
-		.split(" ").length;
+	return gridComputedStyle.getPropertyValue("grid-template-columns").split(" ").length;
 };
 
 let page = 0;
@@ -168,45 +164,23 @@ const displayFeaturedHome = function (data) {
 	data.forEach(function (project, i) {
 		const html = `
         <div class="card ${i === 1 ? "card--middle" : ""}">
-                <img src="${project.linkImg}" alt="" class="card__img" ${
-			mobile ? 'loading="lazy"' : ""
-		}>
+                <img src="${project.linkImg}" alt="" class="card__img" ${mobile ? 'loading="lazy"' : ""}>
                 <div class="card__content">
-                    <h4 class="card__title u-margin-bottom-medium">${
-						project.title
-					}</h4>
+                    <h4 class="card__title u-margin-bottom-medium">${project.title}</h4>
 					<span class="card__date">${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
-                    ${
-						project.tags.includes("html")
-							? '<span class="tags__tag tags__tag--html">HTML</span>'
-							: ""
-					}
-                    ${
-						project.tags.includes("css")
-							? '<span class="tags__tag tags__tag--css">CSS</span>'
-							: ""
-					}
-                    ${
-						project.tags.includes("js")
-							? '<span class="tags__tag tags__tag--js">JS</span>'
-							: ""
-					}
-					${
-						project.tags.includes("scss")
-							? '<span class="tags__tag tags__tag--scss">SCSS</span>'
-							: ""
-					}
+                    ${project.tags.includes("html") ? '<span class="tags__tag tags__tag--html">HTML</span>' : ""}
+                    ${project.tags.includes("css") ? '<span class="tags__tag tags__tag--css">CSS</span>' : ""}
+                    ${project.tags.includes("js") ? '<span class="tags__tag tags__tag--js">JS</span>' : ""}
+					${project.tags.includes("scss") ? '<span class="tags__tag tags__tag--scss">SCSS</span>' : ""}
                     </div> 
 					
                     <div class="card__buttons">
                         <a href="${
 							project.linkLivePreview
 						}" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-                        <a href="${
-							project.linkGit
-						}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                        <a href="${project.linkGit}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
                     </div>                  
                 </div>
             </div> 
@@ -223,46 +197,24 @@ const displayFeatured = function (data) {
 	data.forEach(function (project, i) {
 		const html = `
         <div class="card card--2 ${i === 1 ? "card--middle" : ""}">
-                <img src="${project.linkImg}" alt="" class="card__img" ${
-			mobile ? 'loading="lazy"' : ""
-		}>
+                <img src="${project.linkImg}" alt="" class="card__img" ${mobile ? 'loading="lazy"' : ""}>
                 <div class="card__content">
-                    <h4 class="card__title u-margin-bottom-medium">${
-						project.title
-					}</h4>
+                    <h4 class="card__title u-margin-bottom-medium">${project.title}</h4>
 					<span class="card__date">${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
-                    ${
-						project.tags.includes("html")
-							? '<span class="tags__tag tags__tag--html">HTML</span>'
-							: ""
-					}
-                    ${
-						project.tags.includes("css")
-							? '<span class="tags__tag tags__tag--css">CSS</span>'
-							: ""
-					}
-                    ${
-						project.tags.includes("js")
-							? '<span class="tags__tag tags__tag--js">JS</span>'
-							: ""
-					}
+                    ${project.tags.includes("html") ? '<span class="tags__tag tags__tag--html">HTML</span>' : ""}
+                    ${project.tags.includes("css") ? '<span class="tags__tag tags__tag--css">CSS</span>' : ""}
+                    ${project.tags.includes("js") ? '<span class="tags__tag tags__tag--js">JS</span>' : ""}
 
-					${
-						project.tags.includes("scss")
-							? '<span class="tags__tag tags__tag--scss">SCSS</span>'
-							: ""
-					}
+					${project.tags.includes("scss") ? '<span class="tags__tag tags__tag--scss">SCSS</span>' : ""}
                     </div> 
 					
                     <div class="card__buttons">
                         <a href="${
 							project.linkLivePreview
 						}" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-                        <a href="${
-							project.linkGit
-						}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                        <a href="${project.linkGit}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
                     </div>                  
                 </div>
             </div> 
@@ -288,11 +240,7 @@ const displayProjects = function (data) {
 				<div class="JScard-content">
 					<h4>${project.title}</h4>
 					<div class="tags-container">
-                        ${
-							project.tags.includes("html")
-								? '<div class="tag tag-html">HTML</div>'
-								: ""
-						}
+                        ${project.tags.includes("html") ? '<div class="tag tag-html">HTML</div>' : ""}
 						${project.tags.includes("css") ? '<div class="tag tag-css">CSS</div>' : ""}
 						${project.tags.includes("js") ? '<div class="tag tag-js">JS</div>' : ""}
 						${project.tags.includes("api") ? '<div class="tag tag-api">API</div>' : ""}
