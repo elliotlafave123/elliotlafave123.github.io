@@ -1,0 +1,35 @@
+.footer {
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: $white;
+
+	@include respond(phone) {
+		padding: 2rem;
+
+		button {
+			width: 88vw;
+			align-self: flex-end;
+		}
+	}
+
+	&-content {
+		padding: 3rem;
+		width: 35%;
+
+		@include respond(tab-land) {
+			width: 60%;
+		}
+
+		p {
+			color: $grey-dark;
+		}
+	}
+}

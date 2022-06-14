@@ -1,0 +1,26 @@
+.headerImg {
+	width: 100vw;
+	height: 16.2rem;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+
+.app {
+	padding: 5rem $section-padding-x;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4rem;
+
+	@include respond(tab-land) {
+		padding: 4rem $section-padding-tap-land-x;
+
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
+	}
+
+	@include respond(phone) {
+		padding: 4rem $section-padding-phone-x;
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,53 @@
+:root {
+	--violet: #5964e0;
+	--violet-light: #939bf4;
+
+	--dark-blue: #19202d;
+	--midnight: #121721;
+
+	--white: #ffffff;
+	--grey-light: #f4f6f8;
+	--gray: #9daec2;
+	--grey-dark: rgb(110, 128, 152);
+
+	--color-background: #f4f6f8;
+
+	--text-light: #f1f3f5;
+	--text-dark: #212529;
+
+	--btn-text: #5964e0;
+	--btn-bg: #rgba(89, 100, 224, 1);
+}
+
+$font: "kumbh sans", sans-serif;
+
+$violet: var(--violet);
+$violet-light: var(--violet-light);
+
+$dark-blue: var(--dark-blue);
+$midnight: var(--midnight);
+
+$white: var(--white);
+$grey-light: var(--grey-light);
+$gray: var(--gray);
+$grey-dark: var(--grey-dark);
+
+$color-background: var(--color-background);
+
+$text-light: var(--text-light);
+$text-dark: var(--text-dark);
+
+$btn-text: var(--btn-text);
+$btn-bg: var(--btn-bg);
+
+$section-padding-x: 10vw;
+$section-padding-y: 10rem;
+
+$section-padding-tap-land-x: 4vw;
+$section-padding-tab-land-y: 10rem;
+
+$section-padding-tab-port-x: 10vw;
+$section-padding-tab-port-y: 10rem;
+
+$section-padding-phone-x: 6vw;
+$section-padding-phone-y: 10rem;
