@@ -527,6 +527,7 @@ state.data = [
 	},
 ];
 
+const body = document.getElementById("body");
 const container = document.querySelector(".app");
 const search = document.querySelector(".search");
 
@@ -645,6 +646,10 @@ const showJobInfomation = (id) => {
     `;
 
 	container.innerHTML = markup;
+
+	window.setTimeout(function () {
+		window.scrollTo(0, 0);
+	}, 1);
 };
 
 function locationHashChanged() {
@@ -652,10 +657,10 @@ function locationHashChanged() {
 	search.classList.add("invisible");
 	showJobInfomation(id);
 }
-
 window.onhashchange = locationHashChanged;
+
 const init = () => {
-	if (location.hash === undefined || location.hash === null || location.hash === "#") {
+	if (location.hash == undefined || location.hash == null || location.hash === "#" || location.hash === "") {
 		showAllJobs();
 	} else {
 		id = parseInt(location.hash.slice(1));

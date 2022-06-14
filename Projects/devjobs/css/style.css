@@ -79,8 +79,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  /** changes rem to 10px   (defualt is 16px)**/
-  overflow-x: hidden; }
+  /** changes rem to 10px   (defualt is 16px)**/ }
   @media (max-width: 38.125em) {
     html {
       font-size: 45%; } }
@@ -97,6 +96,8 @@ body {
   padding: 0rem;
   background-color: var(--color-background);
   font-family: "kumbh sans", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
   transition: background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
   @media (max-width: 38.125em) {
     body {
