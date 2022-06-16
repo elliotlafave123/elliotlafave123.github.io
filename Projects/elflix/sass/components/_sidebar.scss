@@ -1,0 +1,93 @@
+.sidebar {
+	&-container {
+		background-color: $color-sidebar;
+		justify-self: center;
+		padding: 2.5rem 2.3rem;
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+
+		height: 94vh;
+		width: 10rem;
+		margin: 4vh 0 4vh 2rem;
+		border-radius: 2rem;
+
+		@include respond(tab-port) {
+			flex-direction: row;
+			align-items: center;
+			width: 96vw;
+			height: 10rem;
+			margin: 2vh 0 2vh 2rem;
+		}
+
+		@include respond(phone) {
+			width: 100vw;
+			padding: 2.5rem 3rem;
+			margin: 0;
+			border-radius: 0;
+		}
+
+		&-logo {
+			margin-bottom: 6rem;
+
+			@include respond(tab-port) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__actions-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 16rem;
+
+		@include respond(tab-port) {
+			flex-direction: row;
+			height: 10rem;
+			width: 15rem;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&-top {
+		@include respond(tab-port) {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&-icon {
+		width: 2rem;
+		height: 2rem;
+
+		&-active {
+		}
+	}
+}
+
+.user-container {
+	background-color: #fff;
+	padding: 2px;
+	border-radius: 50%;
+
+	height: 4rem;
+	width: 4rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		height: 4rem;
+		width: 4rem;
+	}
+}
