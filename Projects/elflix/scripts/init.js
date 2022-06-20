@@ -486,4 +486,4 @@ const data = [
 ];
 
 localStorage.setItem("Data", JSON.stringify(data));
-window.location.replace("/app.html");
+window.location.replace("../app.html");
