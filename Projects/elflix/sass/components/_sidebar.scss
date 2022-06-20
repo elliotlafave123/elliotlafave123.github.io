@@ -54,6 +54,15 @@
 			left: 50%;
 			transform: translateX(-50%);
 		}
+
+		@include respond(phone) {
+			flex-direction: row;
+			height: 10rem;
+			width: 18rem;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 
 	&-top {
@@ -69,14 +78,22 @@
 		width: 2rem;
 		height: 2rem;
 
+		@include respond(phone) {
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+
 		&-active {
 		}
 	}
 }
 
 .user-container {
-	background-color: #fff;
+	background-color: $color-background;
+	color: $color-grey-light-2;
+	font-size: 1.8rem;
 	padding: 2px;
+	padding-bottom: 4px;
 	border-radius: 50%;
 
 	height: 4rem;

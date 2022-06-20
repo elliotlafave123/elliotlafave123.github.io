@@ -52,6 +52,18 @@
 		top: 1.5rem;
 		right: 1.7rem;
 
+		transition: background 0.1s ease-in;
+
+		&:hover {
+			background-color: $color-white;
+			cursor: pointer;
+		}
+
+		&:hover &-img {
+			-webkit-filter: invert(100%); /* Safari/Chrome */
+			filter: invert(100%);
+		}
+
 		&-img {
 			border-radius: 0;
 		}
@@ -138,6 +150,18 @@
 		position: absolute;
 		top: 1.5rem;
 		right: 1.7rem;
+
+		transition: background 0.1s ease-in;
+
+		&:hover {
+			background-color: $color-white;
+			cursor: pointer;
+		}
+
+		&:hover &-img {
+			-webkit-filter: invert(100%); /* Safari/Chrome */
+			filter: invert(100%);
+		}
 
 		&-img {
 			border-radius: 0;
