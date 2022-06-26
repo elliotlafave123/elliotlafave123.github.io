@@ -173,7 +173,10 @@ const displayFeaturedHome = function (data) {
                     ${project.tags.includes("html") ? '<span class="tags__tag tags__tag--html">HTML</span>' : ""}
                     ${project.tags.includes("css") ? '<span class="tags__tag tags__tag--css">CSS</span>' : ""}
                     ${project.tags.includes("js") ? '<span class="tags__tag tags__tag--js">JS</span>' : ""}
+					${project.tags.includes("api") ? '<span class="tags__tag tags__tag--api">API</span>' : ""}
 					${project.tags.includes("scss") ? '<span class="tags__tag tags__tag--scss">SCSS</span>' : ""}
+					${project.tags.includes("course") ? '<span class="tags__tag tags__tag--course">Course</span>' : ""}
+					${project.tags.includes("challenge") ? '<span class="tags__tag tags__tag--challenge">Challenge</span>' : ""}
                     </div> 
 					
                     <div class="card__buttons">
@@ -206,8 +209,10 @@ const displayFeatured = function (data) {
                     ${project.tags.includes("html") ? '<span class="tags__tag tags__tag--html">HTML</span>' : ""}
                     ${project.tags.includes("css") ? '<span class="tags__tag tags__tag--css">CSS</span>' : ""}
                     ${project.tags.includes("js") ? '<span class="tags__tag tags__tag--js">JS</span>' : ""}
-
+					${project.tags.includes("api") ? '<span class="tags__tag tags__tag--api">API</span>' : ""}
 					${project.tags.includes("scss") ? '<span class="tags__tag tags__tag--scss">SCSS</span>' : ""}
+					${project.tags.includes("course") ? '<span class="tags__tag tags__tag--course">Course</span>' : ""}
+					${project.tags.includes("challenge") ? '<span class="tags__tag tags__tag--challenge">Challenge</span>' : ""}
                     </div> 
 					
                     <div class="card__buttons">
@@ -245,6 +250,8 @@ const displayProjects = function (data) {
 						${project.tags.includes("js") ? '<div class="tag tag-js">JS</div>' : ""}
 						${project.tags.includes("api") ? '<div class="tag tag-api">API</div>' : ""}
 						${project.tags.includes("scss") ? '<div class="tag tag-scss">SCSS</div>' : ""}
+						${project.tags.includes("course") ? '<div class="tag tag-course">Course</div>' : ""}
+						${project.tags.includes("challenge") ? '<div class="tag tag-challenge">Challenge</div>' : ""}
 					</div>
 					<span>${project.date}</span>
 					<p>

@@ -636,18 +636,18 @@ a:before, a:after {
 
 .tags {
   width: 100%;
-  margin-bottom: 1rem; }
+  height: auto; }
   @media (max-width: 37.5em) {
     .tags {
       margin-bottom: 2rem;
       margin-top: 0.5rem; } }
   .tags__tag {
     background-color: var(--color-tag);
-    width: 20%;
     height: 2rem;
     padding: 0.2rem 1.2rem;
     margin-right: 1rem;
-    border-radius: 2px; }
+    border-radius: 2px;
+    margin-bottom: 0.8rem; }
     .tags__tag--html {
       color: #f0582f; }
     .tags__tag--css {
@@ -658,6 +658,10 @@ a:before, a:after {
       color: #cc6699; }
     .tags__tag--api {
       color: #f5f258; }
+    .tags__tag--challenge {
+      color: #66cc92; }
+    .tags__tag--course {
+      color: #8d66cc; }
   @media (max-width: 37.5em) {
     .tags__tag {
       background-color: #3f4348;
@@ -665,7 +669,8 @@ a:before, a:after {
       height: 2rem;
       padding: 0.2rem 1.7rem;
       margin-right: 1rem;
-      border-radius: 2px; }
+      border-radius: 2px;
+      margin-bottom: 0.8rem; }
       .tags__tag--html {
         color: #f0582f;
         font-size: 1.6rem; }
@@ -680,6 +685,12 @@ a:before, a:after {
         font-size: 1.6rem; }
       .tags__tag--api {
         color: #f5f258;
+        font-size: 1.6rem; }
+      .tags__tag---challenge {
+        color: #66cc92;
+        font-size: 1.6rem; }
+      .tags__tag---course {
+        color: #8d66cc;
         font-size: 1.6rem; } }
 
 .card__grid {
@@ -1335,9 +1346,10 @@ button:focus {
       margin-bottom: 8rem; } }
 
 .tags-container {
-  width: 100%;
+  min-width: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 2rem 0 1.2rem 0; }
 
 .tag {
@@ -1346,7 +1358,8 @@ button:focus {
   border-radius: 0.4rem;
   margin-right: 1rem;
   font-size: 0.9rem;
-  font-weight: 500; }
+  font-weight: 500;
+  margin-bottom: 0.8rem; }
 
 .tag-html {
   color: #f0582f; }
@@ -1362,6 +1375,12 @@ button:focus {
 
 .tag-scss {
   color: #cc6699; }
+
+.tag-challenge {
+  color: #66cc92; }
+
+.tag-course {
+  color: #8d66cc; }
 
 .buttons-container {
   width: 100%;

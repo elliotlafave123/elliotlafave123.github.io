@@ -110,7 +110,7 @@
 
 .tags {
 	width: 100%;
-	margin-bottom: 1rem;
+	height: auto;
 
 	@include respond(phone) {
 		margin-bottom: 2rem;
@@ -119,11 +119,11 @@
 
 	&__tag {
 		background-color: $color-tag;
-		width: 20%;
 		height: 2rem;
 		padding: 0.2rem 1.2rem;
 		margin-right: 1rem;
 		border-radius: 2px;
+		margin-bottom: 0.8rem;
 
 		&--html {
 			color: #f0582f;
@@ -144,6 +144,14 @@
 		&--api {
 			color: #f5f258;
 		}
+
+		&--challenge {
+			color: #66cc92;
+		}
+
+		&--course {
+			color: #8d66cc;
+		}
 	}
 
 	@include respond(phone) {
@@ -154,6 +162,7 @@
 			padding: 0.2rem 1.7rem;
 			margin-right: 1rem;
 			border-radius: 2px;
+			margin-bottom: 0.8rem;
 
 			&--html {
 				color: #f0582f;
@@ -177,6 +186,16 @@
 
 			&--api {
 				color: #f5f258;
+				font-size: 1.6rem;
+			}
+
+			&---challenge {
+				color: #66cc92;
+				font-size: 1.6rem;
+			}
+
+			&---course {
+				color: #8d66cc;
 				font-size: 1.6rem;
 			}
 		}
