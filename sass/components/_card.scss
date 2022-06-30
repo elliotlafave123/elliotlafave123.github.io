@@ -122,6 +122,16 @@
 		height: 2rem;
 		padding: 0.2rem 1.2rem;
 		border-radius: 2px;
+		font-size: 1rem;
+
+		display: flex;
+		min-width: 2rem;
+		align-items: center;
+
+		svg {
+			height: 1.4rem;
+			margin-right: 0.5rem;
+		}
 
 		&--html {
 			color: #f0582f;
@@ -154,45 +164,37 @@
 
 	@include respond(phone) {
 		&__tag {
-			background-color: #3f4348;
-			width: 20%;
-			height: 2rem;
 			padding: 0.2rem 1.7rem;
 			border-radius: 2px;
+			font-size: 1.2rem;
+			min-width: 1rem;
 
 			&--html {
 				color: #f0582f;
-				font-size: 1.6rem;
 			}
 
 			&--css {
 				color: #007cc4;
-				font-size: 1.6rem;
 			}
 
 			&--js {
 				color: #f48031;
-				font-size: 1.6rem;
 			}
 
 			&--scss {
 				color: #cc6699;
-				font-size: 1.6rem;
 			}
 
 			&--api {
 				color: #f5f258;
-				font-size: 1.6rem;
 			}
 
-			&---challenge {
+			&--challenge {
 				color: #66cc92;
-				font-size: 1.6rem;
 			}
 
-			&---course {
+			&--course {
 				color: #8d66cc;
-				font-size: 1.6rem;
 			}
 		}
 	}
@@ -201,6 +203,7 @@
 .tags {
 	--gap: 6px;
 	display: inline-flex;
+
 	flex-wrap: wrap;
 	margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
 	width: calc(100% + var(--gap));

@@ -649,7 +649,14 @@ a:before, a:after {
     background-color: var(--color-tag);
     height: 2rem;
     padding: 0.2rem 1.2rem;
-    border-radius: 2px; }
+    border-radius: 2px;
+    font-size: 1rem;
+    display: flex;
+    min-width: 2rem;
+    align-items: center; }
+    .tags__tag svg {
+      height: 1.4rem;
+      margin-right: 0.5rem; }
     .tags__tag--html {
       color: #f0582f; }
     .tags__tag--css {
@@ -666,32 +673,24 @@ a:before, a:after {
       color: #8d66cc; }
   @media (max-width: 37.5em) {
     .tags__tag {
-      background-color: #3f4348;
-      width: 20%;
-      height: 2rem;
       padding: 0.2rem 1.7rem;
-      border-radius: 2px; }
+      border-radius: 2px;
+      font-size: 1.2rem;
+      min-width: 1rem; }
       .tags__tag--html {
-        color: #f0582f;
-        font-size: 1.6rem; }
+        color: #f0582f; }
       .tags__tag--css {
-        color: #007cc4;
-        font-size: 1.6rem; }
+        color: #007cc4; }
       .tags__tag--js {
-        color: #f48031;
-        font-size: 1.6rem; }
+        color: #f48031; }
       .tags__tag--scss {
-        color: #cc6699;
-        font-size: 1.6rem; }
+        color: #cc6699; }
       .tags__tag--api {
-        color: #f5f258;
-        font-size: 1.6rem; }
-      .tags__tag---challenge {
-        color: #66cc92;
-        font-size: 1.6rem; }
-      .tags__tag---course {
-        color: #8d66cc;
-        font-size: 1.6rem; } }
+        color: #f5f258; }
+      .tags__tag--challenge {
+        color: #66cc92; }
+      .tags__tag--course {
+        color: #8d66cc; } }
 
 .tags {
   --gap: 6px;
@@ -1368,12 +1367,18 @@ button:focus {
 
 .tag {
   background-color: var(--color-tag);
-  padding: 0.2rem 1.6rem;
+  padding: 0.15rem 1.5rem;
   border-radius: 0.4rem;
   margin-right: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  margin-bottom: 0.8rem; }
+  margin-bottom: 0.8rem;
+  display: flex;
+  min-width: 2rem;
+  align-items: center; }
+  .tag svg {
+    height: 1.35rem;
+    margin-right: 0.5rem; }
 
 .tag-html {
   color: #f0582f; }

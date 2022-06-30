@@ -130,12 +130,21 @@
 
 .tag {
 	background-color: $color-tag;
-	padding: 0.2rem 1.6rem;
+	padding: 0.15rem 1.5rem;
 	border-radius: 0.4rem;
 	margin-right: 1rem;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	font-weight: 500;
 	margin-bottom: 0.8rem;
+
+	display: flex;
+	min-width: 2rem;
+	align-items: center;
+
+	svg {
+		height: 1.35rem;
+		margin-right: 0.5rem;
+	}
 }
 
 .tag-html {
