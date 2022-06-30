@@ -160,6 +160,14 @@
 		&--course {
 			color: #8d66cc;
 		}
+
+		&--nodejs {
+			color: #379922;
+		}
+
+		&--mongodb {
+			color: #4e763b;
+		}
 	}
 
 	@include respond(phone) {
@@ -168,34 +176,6 @@
 			border-radius: 2px;
 			font-size: 1.2rem;
 			min-width: 1rem;
-
-			&--html {
-				color: #f0582f;
-			}
-
-			&--css {
-				color: #007cc4;
-			}
-
-			&--js {
-				color: #f48031;
-			}
-
-			&--scss {
-				color: #cc6699;
-			}
-
-			&--api {
-				color: #f5f258;
-			}
-
-			&--challenge {
-				color: #66cc92;
-			}
-
-			&--course {
-				color: #8d66cc;
-			}
 		}
 	}
 }

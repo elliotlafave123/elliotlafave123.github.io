@@ -671,26 +671,16 @@ a:before, a:after {
       color: #66cc92; }
     .tags__tag--course {
       color: #8d66cc; }
+    .tags__tag--nodejs {
+      color: #379922; }
+    .tags__tag--mongodb {
+      color: #4e763b; }
   @media (max-width: 37.5em) {
     .tags__tag {
       padding: 0.2rem 1.7rem;
       border-radius: 2px;
       font-size: 1.2rem;
-      min-width: 1rem; }
-      .tags__tag--html {
-        color: #f0582f; }
-      .tags__tag--css {
-        color: #007cc4; }
-      .tags__tag--js {
-        color: #f48031; }
-      .tags__tag--scss {
-        color: #cc6699; }
-      .tags__tag--api {
-        color: #f5f258; }
-      .tags__tag--challenge {
-        color: #66cc92; }
-      .tags__tag--course {
-        color: #8d66cc; } }
+      min-width: 1rem; } }
 
 .tags {
   --gap: 6px;
@@ -1400,6 +1390,12 @@ button:focus {
 
 .tag-course {
   color: #8d66cc; }
+
+.tag-nodejs {
+  color: #379922; }
+
+.tag-mongodb {
+  color: #4e763b; }
 
 .buttons-container {
   width: 100%;
