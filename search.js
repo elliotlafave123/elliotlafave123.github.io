@@ -92,19 +92,18 @@ fetch("https://get-projects-api-elliotlafave123.vercel.app/api/projects")
 		console.log(jsondata);
 		data = jsondata;
 		featuredData = [
-			jsondata[30],
-			jsondata[28],
-			jsondata[27],
-			jsondata[26],
-			jsondata[23],
-			jsondata[24],
-			jsondata[21],
-			jsondata[22],
-			jsondata[19],
-			jsondata[18],
-			jsondata[16],
+			jsondata[2],
+			jsondata[4],
+			jsondata[6],
+			jsondata[7],
+			jsondata[9],
+			jsondata[10],
+			// jsondata[14],
 			jsondata[15],
-			jsondata[14],
+			jsondata[16],
+			jsondata[18],
+			jsondata[19],
+			jsondata[20],
 		];
 
 		if (cardsContainer) {

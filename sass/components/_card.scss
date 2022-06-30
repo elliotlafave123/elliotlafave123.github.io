@@ -1,7 +1,5 @@
 .card {
 	position: relative;
-	// max-width: 40rem;
-	width: minmax(40rem, 1fr);
 	border-radius: 1rem;
 	overflow: hidden;
 	background-color: $color-card-dark;
@@ -82,6 +80,8 @@
 	&__content {
 		padding: 2rem;
 		position: relative;
+		flex: 1 1 auto;
+
 		@include respond(phone) {
 			padding: 3rem;
 		}
@@ -91,6 +91,7 @@
 		width: 100%;
 		position: relative;
 		height: 5rem;
+		align-self: end;
 	}
 
 	&:hover {
@@ -110,7 +111,6 @@
 
 .tags {
 	width: 100%;
-	height: auto;
 
 	@include respond(phone) {
 		margin-bottom: 2rem;
@@ -121,9 +121,7 @@
 		background-color: $color-tag;
 		height: 2rem;
 		padding: 0.2rem 1.2rem;
-		margin-right: 1rem;
 		border-radius: 2px;
-		margin-bottom: 0.8rem;
 
 		&--html {
 			color: #f0582f;
@@ -160,9 +158,7 @@
 			width: 20%;
 			height: 2rem;
 			padding: 0.2rem 1.7rem;
-			margin-right: 1rem;
 			border-radius: 2px;
-			margin-bottom: 0.8rem;
 
 			&--html {
 				color: #f0582f;
@@ -202,6 +198,18 @@
 	}
 }
 
+.tags {
+	--gap: 6px;
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+	width: calc(100% + var(--gap));
+}
+
+.tags > * {
+	margin: var(--gap) 0 0 var(--gap);
+}
+
 .card__grid {
 	max-width: 100%;
 	display: grid;
@@ -220,7 +228,7 @@
 	@include respond(tab-port) {
 		grid-template-columns: auto;
 		grid-row-gap: 4rem;
-		width: 70%;
+		width: 60%;
 	}
 
 	@include respond(phone) {

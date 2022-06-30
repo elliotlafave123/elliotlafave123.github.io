@@ -103,7 +103,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  /** changes rem to 10px   (defualt is 16px)**/ }
+  /** changes rem to 10px   (defualt is 16px)**/
+  overflow-x: hidden; }
   @media (max-width: 37.5em) {
     html {
       font-size: 45%; } }
@@ -122,6 +123,9 @@ body {
   /** Change Box model so padding and width dont effect box size **/
   padding: 0rem;
   background-color: var(--color-grey-dark);
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
   transition: background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
   @media (max-width: 37.5em) {
     body {
@@ -560,7 +564,6 @@ a:before, a:after {
 
 .card {
   position: relative;
-  width: minmax(40rem, 1fr);
   border-radius: 1rem;
   overflow: hidden;
   background-color: var(--color-card-dark);
@@ -616,14 +619,16 @@ a:before, a:after {
     height: 18rem; }
   .card__content {
     padding: 2rem;
-    position: relative; }
+    position: relative;
+    flex: 1 1 auto; }
     @media (max-width: 37.5em) {
       .card__content {
         padding: 3rem; } }
   .card__buttons {
     width: 100%;
     position: relative;
-    height: 5rem; }
+    height: 5rem;
+    align-self: end; }
   .card:hover {
     transform: scale(1.02);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 0px; }
@@ -635,8 +640,7 @@ a:before, a:after {
         transform: unset; } }
 
 .tags {
-  width: 100%;
-  height: auto; }
+  width: 100%; }
   @media (max-width: 37.5em) {
     .tags {
       margin-bottom: 2rem;
@@ -645,9 +649,7 @@ a:before, a:after {
     background-color: var(--color-tag);
     height: 2rem;
     padding: 0.2rem 1.2rem;
-    margin-right: 1rem;
-    border-radius: 2px;
-    margin-bottom: 0.8rem; }
+    border-radius: 2px; }
     .tags__tag--html {
       color: #f0582f; }
     .tags__tag--css {
@@ -668,9 +670,7 @@ a:before, a:after {
       width: 20%;
       height: 2rem;
       padding: 0.2rem 1.7rem;
-      margin-right: 1rem;
-      border-radius: 2px;
-      margin-bottom: 0.8rem; }
+      border-radius: 2px; }
       .tags__tag--html {
         color: #f0582f;
         font-size: 1.6rem; }
@@ -693,6 +693,16 @@ a:before, a:after {
         color: #8d66cc;
         font-size: 1.6rem; } }
 
+.tags {
+  --gap: 6px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap)); }
+
+.tags > * {
+  margin: var(--gap) 0 0 var(--gap); }
+
 .card__grid {
   max-width: 100%;
   display: grid;
@@ -709,7 +719,7 @@ a:before, a:after {
     .card__grid {
       grid-template-columns: auto;
       grid-row-gap: 4rem;
-      width: 70%; } }
+      width: 60%; } }
   @media (max-width: 37.5em) {
     .card__grid {
       grid-template-columns: auto;
@@ -861,6 +871,10 @@ a:before, a:after {
     font-size: 8rem;
     font-weight: 400;
     letter-spacing: 6px; }
+    @media (max-width: 100em) {
+      .liquid h1 {
+        font-size: 6.5rem;
+        letter-spacing: 9px; } }
     @media (max-width: 75em) {
       .liquid h1 {
         font-size: 7rem;
@@ -1780,14 +1794,19 @@ button:focus {
   .header__background-img {
     position: absolute;
     width: initial;
-    height: 60vh;
-    right: 0;
+    height: 60rem;
+    right: -8rem;
     top: 0;
     z-index: -1; }
+    @media (max-width: 100em) {
+      .header__background-img {
+        width: auto;
+        height: 55rem; } }
     @media (max-width: 75em) {
       .header__background-img {
         width: auto;
-        height: 60vh; } }
+        height: 50rem;
+        right: -12rem; } }
     @media (max-width: 56.25em) {
       .header__background-img {
         height: 40vh;
@@ -1859,10 +1878,14 @@ button:focus {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-size: 3rem;
     font-weight: 900; }
+    @media (max-width: 100em) {
+      .section-about__paragraph {
+        font-size: 2.5rem;
+        width: 50vw; } }
     @media (max-width: 37.5em) {
       .section-about__paragraph {
-        font-size: 2.8rem;
-        width: 90%; } }
+        font-size: 2.4rem;
+        width: 80%; } }
 
 .skills {
   box-sizing: border-box;

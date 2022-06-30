@@ -4,14 +4,20 @@
 	&__background-img {
 		position: absolute;
 		width: initial;
-		height: 60vh;
-		right: 0;
+		height: 60rem;
+		right: -8rem;
 		top: 0;
 		z-index: -1;
 
+		@include respond(laptop) {
+			width: auto;
+			height: 55rem;
+		}
+
 		@include respond(tab-land) {
 			width: auto;
-			height: 60vh;
+			height: 50rem;
+			right: -12rem;
 		}
 
 		@include respond(tab-port) {
@@ -55,6 +61,10 @@
 		}
 
 		&--title {
+			// @include respond(laptop) {
+			// 	width: 50rem;
+			// }
+
 			@include respond(tab-land) {
 				height: fit-content;
 			}
