@@ -86,11 +86,9 @@ const displayProjectsOnPages = function (data) {
 /* *********** Get Json Data *********** */
 fetch("https://get-projects-api-elliotlafave123.vercel.app/api/projects")
 	.then((response) => {
-		console.log(response);
 		return response.json();
 	})
 	.then((jsondata) => {
-		console.log(jsondata);
 		data = jsondata;
 		featuredData = [
 			jsondata[2],
