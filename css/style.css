@@ -2401,6 +2401,8 @@ button:focus {
       animation: moveInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.2s; }
     .tech-stack__item-11 {
       animation: moveInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.4s; }
+    .tech-stack__item-12 {
+      animation: moveInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.6s; }
   .tech-stack__text {
     font-family: "lato", sans-serif;
     font-size: 1.5rem;
@@ -2428,6 +2430,8 @@ button:focus {
       animation: opacityText 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.2s forwards; }
     .tech-stack__text-11 {
       animation: opacityText 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.4s forwards; }
+    .tech-stack__text-12 {
+      animation: opacityText 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.6s forwards; }
   .tech-stack__img {
     height: 8rem;
     opacity: 0%;
@@ -2455,6 +2459,8 @@ button:focus {
       animation: opacity 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.2s forwards; }
     .tech-stack__img-11 {
       animation: opacity 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.4s forwards; }
+    .tech-stack__img-12 {
+      animation: opacity 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.6s forwards; }
 
 .production {
   width: 80%;
