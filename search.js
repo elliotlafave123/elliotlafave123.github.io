@@ -42,6 +42,7 @@ const getGridColumnCount = function () {
 
 let page = 0;
 
+const allProjectsTop = document.getElementById("all-projects");
 const displayProjectsOnPages = function (data) {
 	const columns = getGridColumnCount();
 
@@ -474,6 +475,7 @@ if (dropdown) {
 if (nextPage) {
 	nextPage.addEventListener("click", function (e) {
 		e.preventDefault();
+		allProjectsTop.scrollIntoView();
 		page++;
 		displayProjectsOnPages(data);
 	});
@@ -482,6 +484,7 @@ if (nextPage) {
 if (lastPage) {
 	lastPage.addEventListener("click", function (e) {
 		e.preventDefault();
+		allProjectsTop.scrollIntoView();
 		if (page == 0) {
 			return;
 		} else {
@@ -493,6 +496,7 @@ if (lastPage) {
 if (nextPageMobile) {
 	nextPageMobile.addEventListener("click", function (e) {
 		e.preventDefault();
+		allProjectsTop.scrollIntoView();
 		page++;
 		displayProjectsOnPages(data);
 	});
@@ -501,6 +505,7 @@ if (nextPageMobile) {
 if (lastPageMobile) {
 	lastPageMobile.addEventListener("click", function (e) {
 		e.preventDefault();
+		allProjectsTop.scrollIntoView();
 		if (page == 0) {
 			return;
 		} else {
