@@ -465,9 +465,9 @@ if (dropdown) {
 		data.forEach(function (project, i) {
 			if (project.tags.includes(dropdown.value)) {
 				selection.push(project);
-				displayProjects(selection);
 			}
 		});
+		displayProjects(selection);
 	});
 }
 
