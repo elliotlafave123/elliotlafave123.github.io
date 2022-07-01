@@ -17,7 +17,9 @@ const pageNumbers = document.querySelectorAll(".pageNumbers");
 
 const nextPageMobile = document.getElementById("nextPageMobile");
 const lastPageMobile = document.getElementById("lastPageMobile");
-const pageNumberCurrentMobile = document.getElementById("pageNumberCurrentMobile");
+const pageNumberCurrentMobile = document.getElementById(
+	"pageNumberCurrentMobile"
+);
 const pageNumberTotalMobile = document.getElementById("pageNumberTotalMobile");
 
 let hidePageChangeButtons = false;
@@ -37,7 +39,9 @@ if (window.innerWidth < 500) {
 const getGridColumnCount = function () {
 	const gridComputedStyle = window.getComputedStyle(cardsContainer);
 
-	return gridComputedStyle.getPropertyValue("grid-template-columns").split(" ").length;
+	return gridComputedStyle
+		.getPropertyValue("grid-template-columns")
+		.split(" ").length;
 };
 
 let page = 0;
@@ -84,7 +88,7 @@ const displayProjectsOnPages = function (data) {
 };
 
 /* *********** Get Json Data *********** */
-fetch("http://212.111.43.6:3000/")
+fetch("https://get-projects-api-elliotlafave123.vercel.app/api/projects")
 	.then((response) => {
 		return response.json();
 	})
@@ -163,9 +167,13 @@ const displayFeaturedHome = function (data) {
 	data.forEach(function (project, i) {
 		const html = `
         <div class="card ${i === 1 ? "card--middle" : ""}">
-                <img src="${project.linkImg}" alt="" class="card__img" ${mobile ? 'loading="lazy"' : ""}>
+                <img src="${project.linkImg}" alt="" class="card__img" ${
+			mobile ? 'loading="lazy"' : ""
+		}>
                 <div class="card__content">
-                    <h4 class="card__title u-margin-bottom-medium">${project.title}</h4>
+                    <h4 class="card__title u-margin-bottom-medium">${
+						project.title
+					}</h4>
 					<span class="card__date">${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
@@ -220,7 +228,9 @@ const displayFeaturedHome = function (data) {
                         <a href="${
 							project.linkLivePreview
 						}" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-                        <a href="${project.linkGit}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                        <a href="${
+							project.linkGit
+						}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
                     </div>                  
                 </div>
             </div> 
@@ -237,9 +247,13 @@ const displayFeatured = function (data) {
 	data.forEach(function (project, i) {
 		const html = `
         <div class="card card--2 ${i === 1 ? "card--middle" : ""}">
-                <img src="${project.linkImg}" alt="" class="card__img" ${mobile ? 'loading="lazy"' : ""}>
+                <img src="${project.linkImg}" alt="" class="card__img" ${
+			mobile ? 'loading="lazy"' : ""
+		}>
                 <div class="card__content">
-                    <h4 class="card__title u-margin-bottom-medium">${project.title}</h4>
+                    <h4 class="card__title u-margin-bottom-medium">${
+						project.title
+					}</h4>
 					<span class="card__date">${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
@@ -294,7 +308,9 @@ const displayFeatured = function (data) {
                         <a href="${
 							project.linkLivePreview
 						}" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-                        <a href="${project.linkGit}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                        <a href="${
+							project.linkGit
+						}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
                     </div>                  
                 </div>
             </div> 
