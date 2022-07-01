@@ -84,7 +84,7 @@ const displayProjectsOnPages = function (data) {
 };
 
 /* *********** Get Json Data *********** */
-fetch("https://get-projects-api-elliotlafave123.vercel.app/api/projects")
+fetch("http://212.111.43.6:3000/")
 	.then((response) => {
 		return response.json();
 	})
