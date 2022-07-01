@@ -8,7 +8,7 @@
 	width: 80vw;
 	margin: 5vh 0vw 5vh 0vw;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
 	gap: 4rem;
 
 	@include respond(large-desktop) {
@@ -16,12 +16,9 @@
 		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	}
 
-	@include respond(tab-land) {
-		// grid-template-columns: 1fr 1fr 1fr;
-	}
-
 	@include respond(tab-port) {
-		// grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(1, minmax(400px, 400px));
+		justify-content: center;
 	}
 
 	@include respond(phone) {
@@ -95,6 +92,11 @@
 	position: relative;
 	border-radius: 5px;
 	width: 100%;
+	// height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .cardjs-img {
@@ -107,6 +109,8 @@
 	padding: 1.5rem 2rem;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	height: 32rem;
 
 	span {
 		color: $text-light;
@@ -118,15 +122,19 @@
 
 .JScard-content p {
 	color: $text-light;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
+	line-height: 2.3rem;
 	font-weight: 500;
-	margin-bottom: 6rem;
 	margin-top: 1rem;
-	-webkit-line-clamp: 3;
+	margin-bottom: 2rem;
+	height: 12rem;
+
+	@include respond(tab-land) {
+		font-size: 1.9rem;
+	}
 
 	@include respond(tab-port) {
 		font-size: 1.7rem;
-		margin-bottom: 8rem;
 	}
 }
 
@@ -135,7 +143,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin: 2rem 0 1.2rem 0;
+	margin: 2rem 0 0.3rem 0;
 }
 
 .tag {
@@ -198,8 +206,8 @@
 	padding: 0;
 	display: flex;
 	flex-direction: row;
-	position: absolute;
-	bottom: 0;
+	// position: absolute;
+	// bottom: 0;
 }
 
 .JSbtn-live-preview {
@@ -221,6 +229,10 @@
 
 	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
+	@include respond(tab-land) {
+		font-size: 2rem;
+	}
+
 	&:hover {
 		background-color: #5f3dc4;
 	}
@@ -236,6 +248,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 0.8rem;
+	margin-top: 0.4rem;
 
 	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
@@ -245,7 +258,11 @@
 }
 
 .btn-git img {
-	width: 70%;
+	width: 3.5rem;
+
+	@include respond(tab-land) {
+		font-size: 4rem;
+	}
 }
 
 /* Search Bar */

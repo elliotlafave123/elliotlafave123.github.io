@@ -318,6 +318,7 @@ const displayProjects = function (data) {
 					${mobile ? 'loading="lazy"' : ""}
 				/>
 				<div class="JScard-content">
+				<div>
 					<h4>${project.title}</h4>
 					<div class="tags-container">
 					${
@@ -368,9 +369,13 @@ const displayProjects = function (data) {
 					
 					</div>
 					<span>${project.date}</span>
+				</div>
+				<div>
+					
 					<p>
 						${project.paragraph}
 					</p>
+					</div>
 				</div>
 				<div class="buttons-container">
 					<a href="${project.linkLivePreview}" class="JSbtn-live-preview"

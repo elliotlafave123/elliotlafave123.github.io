@@ -68,3 +68,14 @@ $color-card-dark: var(--color-card-dark);
 $color-card-git: var(--color-card-git);
 $color-tag: var(--color-tag);
 // fonts
+
+/* ********************************* */
+/*         Section Padding           */
+/* ********************************* */
+$section-padding-x: 15vw;
+$section-padding-y: 15rem;
+
+$section-padding-x-laptop: 14vw;
+$section-padding-x-tap-land: 15vw;
+$section-padding-x-tab-port: 15vw;
+$section-padding-x-phone: 0;
