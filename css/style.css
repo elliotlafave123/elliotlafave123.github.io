@@ -651,6 +651,7 @@ a:before, a:after {
     padding: 0.2rem 1.2rem;
     border-radius: 2px;
     font-size: 1rem;
+    color: var(--text-light);
     display: flex;
     min-width: 2rem;
     align-items: center; }
@@ -1277,7 +1278,8 @@ button:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px; }
+  width: 300px;
+  color: var(--text-light); }
   @media (max-width: 56.25em) {
     .pageNumbers {
       width: 40%; } }
@@ -1285,7 +1287,7 @@ button:focus {
     .pageNumbers {
       width: 60%; } }
   .pageNumbers a {
-    color: rgba(255, 255, 255, 0.6); }
+    color: var(--text-light); }
     .pageNumbers a:hover {
       color: #fff; }
   .pageNumbers p {
@@ -1297,7 +1299,8 @@ button:focus {
         letter-spacing: 0px; } }
   .pageNumbers button {
     background-color: transparent;
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    color: var(--text-light); }
     .pageNumbers button:hover {
       color: #fff; }
 
@@ -1580,7 +1583,7 @@ button:focus {
   height: 3px;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: var(--text-light);
   transform: scaleX(0);
   transform-origin: top left;
   transition: transform 0.3s; }
@@ -1592,7 +1595,7 @@ button:focus {
   height: 3px;
   bottom: 0;
   right: 0;
-  background-color: #fff;
+  background-color: var(--text-light);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s; }

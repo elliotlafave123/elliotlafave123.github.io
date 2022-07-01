@@ -51,6 +51,7 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 300px;
+	color: var(--text-light);
 
 	@include respond(tab-port) {
 		width: 40%;
@@ -61,7 +62,7 @@
 	}
 
 	a {
-		color: rgba(255, 255, 255, 0.6);
+		color: var(--text-light);
 
 		&:hover {
 			color: #fff;
@@ -81,6 +82,7 @@
 	button {
 		background-color: transparent;
 		font-size: 2.4rem;
+		color: var(--text-light);
 
 		&:hover {
 			color: #fff;

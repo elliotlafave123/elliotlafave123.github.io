@@ -57,7 +57,7 @@
 		height: 3px;
 		top: 0;
 		left: 0;
-		background-color: #fff;
+		background-color: var(--text-light);
 		transform: scaleX(0);
 		transform-origin: top left;
 
@@ -71,7 +71,7 @@
 		height: 3px;
 		bottom: 0;
 		right: 0;
-		background-color: #fff;
+		background-color: var(--text-light);
 		transform: scaleX(0);
 		transform-origin: bottom right;
 
@@ -175,10 +175,7 @@
 		position: fixed;
 		top: 5rem;
 		right: 6.5rem;
-		background-image: radial-gradient(
-			rgb(110, 76, 212),
-			$color-primary-dark
-		);
+		background-image: radial-gradient(rgb(110, 76, 212), $color-primary-dark);
 		z-index: 5;
 		transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
 		visibility: hidden;
@@ -238,12 +235,7 @@
 			color: $color-white;
 			text-decoration: none;
 			text-transform: uppercase;
-			background-image: linear-gradient(
-				120deg,
-				transparent 0%,
-				transparent 50%,
-				$color-white 50%
-			);
+			background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
 			background-size: 240%;
 			transition: all 0.4s;
 
