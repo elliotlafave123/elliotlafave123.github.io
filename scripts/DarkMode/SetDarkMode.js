@@ -7,8 +7,6 @@ if (!localStorage.getItem("newUser")) {
 	localStorage.setItem("darkMode", "true");
 }
 
-// const toggle = document.querySelectorAll(".toggle");
-
 toggle.addEventListener("change", () => {
 	if (toggle.checked) {
 		localStorage.setItem("darkMode", "true");

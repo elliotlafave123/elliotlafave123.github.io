@@ -1196,6 +1196,7 @@ button:focus {
 
 /*  Dark Mode Slider  */
 .toggle-container {
+  margin-right: 2rem;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -1591,7 +1592,7 @@ button:focus {
   .desktop__nav-item {
     font-size: 2.5rem;
     font-family: "lato", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     display: inline-block; }
     .desktop__nav-item a {
       color: var(--text-light); }
