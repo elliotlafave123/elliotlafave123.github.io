@@ -93,6 +93,10 @@
   justify-content: center;
   align-items: center; }
 
+.u-flex-row {
+  display: flex;
+  align-items: center; }
+
 *,
 *::after,
 *::before {
@@ -2208,7 +2212,13 @@ button:focus {
     .education__schools--school {
       font-size: 3rem;
       color: var(--text-light);
-      font-family: "Zen Kaku Gothic New", sans-serif; }
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      display: flex;
+      align-items: center; }
+      .education__schools--school img {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 1.3rem; }
     .education__schools--date {
       font-size: 2.5rem;
       color: var(--text-light);
