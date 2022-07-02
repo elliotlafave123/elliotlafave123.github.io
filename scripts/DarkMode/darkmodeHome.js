@@ -56,7 +56,7 @@ const darkMode = function () {
 	root.style.setProperty("--color-grey-dark-2", "#343a40");
 
 	root.style.setProperty("--color-card", "#343a40");
-	root.style.setProperty("--color-card--dark", "#212529");
+	root.style.setProperty("--color-card-dark", "#212529");
 
 	root.style.setProperty("--text-light", "#CED4DA");
 	root.style.setProperty("--text-dark", "#212529");
