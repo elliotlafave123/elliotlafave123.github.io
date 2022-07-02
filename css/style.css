@@ -10,6 +10,7 @@
   --color-form-true: rgb(85, 197, 122);
   --color-grey-light-1: rgb(222, 226, 230);
   --color-grey-light-2: rgb(73, 80, 87);
+  --color-grey--extra-dark: #15181991;
   --color-grey-dark: #212529;
   --color-grey-dark-2: #343a40;
   --color-grey-dark-3: rgb(51, 51, 51);
@@ -1194,41 +1195,44 @@ button:focus {
     background-color: #b92657; }
 
 /*  Dark Mode Slider  */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .toggle-container-sun {
+    width: 2rem;
+    height: 1.86rem; }
+  .toggle-container-moon {
+    width: 1.2rem;
+    height: 1.2rem; }
+
 .toggle {
   display: none; }
 
-.toggle-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 5.5rem; }
-
 .label {
   position: relative;
-  background: linear-gradient(60deg, #7149e9 0%, #e66565 60%, #e66565 100%);
+  background-color: #ffffff;
   border-radius: 50px;
   cursor: pointer;
   display: inline-block;
-  margin-left: 1rem;
-  width: 65px;
-  height: 30px;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  margin: 0 1.2rem 0;
+  width: 48px;
+  height: 24px; }
 
 .toggle:checked + .label {
-  background: linear-gradient(60deg, #e66565 0%, #e66565 40%, #7149e9 100%); }
+  background-color: #ffffff; }
 
 .ball {
-  background: var(--color-white);
-  height: 24px;
-  width: 24px;
+  background: var(--color-primary);
+  height: 14px;
+  width: 14px;
   border-radius: 50%;
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 5px;
+  left: 5px;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 16px;
   animation: slideOff 0.3s linear forwards; }
 
 .toggle:checked + .label .ball {
@@ -1236,19 +1240,19 @@ button:focus {
 
 @keyframes slideOn {
   0% {
-    transform: translateX(0) scale(1); }
+    transform: translateX(0); }
   50% {
-    transform: translateX(17.5px) scale(1.05); }
+    transform: translateX(12px); }
   100% {
-    transform: translateX(35px) scale(1); } }
+    transform: translateX(24px); } }
 
 @keyframes slideOff {
   0% {
-    transform: translateX(35px) scale(1); }
+    transform: translateX(24px); }
   50% {
-    transform: translateX(17.5px) scale(1.05); }
+    transform: translateX(12px); }
   100% {
-    transform: translateX(0px) scale(1); } }
+    transform: translateX(0px); } }
 
 .app-container {
   padding: 5vh 10vw 5vh 10vw; }
@@ -1570,7 +1574,8 @@ button:focus {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem 5rem 0rem 3rem; }
+  padding: 0 14rem 0rem 14rem;
+  background-color: var(--color-grey--extra-dark); }
   @media (max-width: 56.25em) {
     .desktop__nav {
       width: 100%;

@@ -25,6 +25,7 @@ const wave4Dark = document.getElementById("wave4-dark");
 const wave5Dark = document.getElementById("wave5-dark");
 
 const lightMode = function () {
+	root.style.setProperty("--color-grey--extra-dark", "rgba(84, 97, 102, 0.3)");
 	root.style.setProperty("--color-grey-dark", "#F2F2F2");
 	root.style.setProperty("--color-grey-dark-2", "#CED4DA");
 
@@ -50,6 +51,7 @@ const lightMode = function () {
 };
 
 const darkMode = function () {
+	root.style.setProperty("--color-grey--extra-dark", "#15181991");
 	root.style.setProperty("--color-grey-dark", "#212529");
 	root.style.setProperty("--color-grey-dark-2", "#343a40");
 
