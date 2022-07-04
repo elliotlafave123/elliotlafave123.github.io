@@ -173,7 +173,7 @@
         <img src="img/contact.png" alt="" class="contact__img" >
         <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
         <div class="contact__form">
-            <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" action="pages/success/index.html">
+            <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" action="pages/success/index.html" netlify>
                 <div class="form__group">
                     <input type="text" class="form__input form__input-small" placeholder="Full name" id="name" required>
                     <label for="name" class="form__label">Full name</label>
@@ -189,7 +189,7 @@
                     <textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" required></textarea>
                 </div>
 
-                <button class="btn btn-purple-post u-margin-top-small">Send Message! &nbsp; &rarr;</button>
+                <button class="btn btn-purple-post u-margin-top-small" type="submit">Send Message! &nbsp; &rarr;</button>
             </form>
         </div>
     </section>

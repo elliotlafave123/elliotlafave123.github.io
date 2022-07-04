@@ -37,17 +37,37 @@ const lightMode = function () {
 
 	root.style.setProperty("--color-footer", "#7048e8");
 
-	wave1Dark.classList.add("hidden");
-	wave2Dark.classList.add("hidden");
-	wave3Dark.classList.add("hidden");
-	wave4Dark.classList.add("hidden");
-	wave5Dark.classList.add("hidden");
+	if (wave1Dark) {
+		wave1Dark.classList.add("hidden");
+	}
+	if (wave2Dark) {
+		wave2Dark.classList.add("hidden");
+	}
+	if (wave3Dark) {
+		wave3Dark.classList.add("hidden");
+	}
+	if (wave4Dark) {
+		wave4Dark.classList.add("hidden");
+	}
+	if (wave5Dark) {
+		wave5Dark.classList.add("hidden");
+	}
 
-	wave1Light.classList.remove("hidden");
-	wave2Light.classList.remove("hidden");
-	wave3Light.classList.remove("hidden");
-	wave4Light.classList.remove("hidden");
-	wave5Light.classList.remove("hidden");
+	if (wave1Light) {
+		wave1Light.classList.remove("hidden");
+	}
+	if (wave2Light) {
+		wave2Light.classList.remove("hidden");
+	}
+	if (wave3Light) {
+		wave3Light.classList.remove("hidden");
+	}
+	if (wave4Light) {
+		wave4Light.classList.remove("hidden");
+	}
+	if (wave5Light) {
+		wave5Light.classList.remove("hidden");
+	}
 };
 
 const darkMode = function () {
@@ -63,17 +83,37 @@ const darkMode = function () {
 
 	root.style.setProperty("--color-footer", "#101214");
 
-	wave1Dark.classList.remove("hidden");
-	wave2Dark.classList.remove("hidden");
-	wave3Dark.classList.remove("hidden");
-	wave4Dark.classList.remove("hidden");
-	wave5Dark.classList.remove("hidden");
+	if (wave1Dark) {
+		wave1Dark.classList.remove("hidden");
+	}
+	if (wave2Dark) {
+		wave2Dark.classList.remove("hidden");
+	}
+	if (wave3Dark) {
+		wave3Dark.classList.remove("hidden");
+	}
+	if (wave4Dark) {
+		wave4Dark.classList.remove("hidden");
+	}
+	if (wave5Dark) {
+		wave5Dark.classList.remove("hidden");
+	}
 
-	wave1Light.classList.add("hidden");
-	wave2Light.classList.add("hidden");
-	wave3Light.classList.add("hidden");
-	wave4Light.classList.add("hidden");
-	wave5Light.classList.add("hidden");
+	if (wave1Light) {
+		wave1Light.classList.add("hidden");
+	}
+	if (wave2Light) {
+		wave2Light.classList.add("hidden");
+	}
+	if (wave3Light) {
+		wave3Light.classList.add("hidden");
+	}
+	if (wave4Light) {
+		wave4Light.classList.add("hidden");
+	}
+	if (wave5Light) {
+		wave5Light.classList.add("hidden");
+	}
 };
 
 if (localStorage.getItem("darkMode") == "true") {

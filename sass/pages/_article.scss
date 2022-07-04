@@ -1,0 +1,80 @@
+.article {
+	padding: $section-padding-y $section-padding-x;
+	color: $text-light;
+
+	&__header {
+		h2 {
+			font-size: 4.2rem;
+			line-height: 5.4rem;
+		}
+
+		&-info {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			margin-bottom: 5rem;
+
+			span,
+			p {
+				font-size: 1.6rem;
+				margin-right: 1rem;
+			}
+
+			p {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	&__section {
+		margin-bottom: 4.5rem;
+		h2 {
+			font-size: 3.8rem;
+			margin-bottom: 2.4rem;
+		}
+
+		p {
+			font-size: 1.9rem;
+			margin-bottom: 2.6rem;
+			letter-spacing: 1.2px;
+		}
+
+		ul,
+		ol {
+			margin-left: 2rem;
+
+			p {
+				margin: 0 0 0 1rem;
+			}
+		}
+
+		li {
+			font-size: 1.9rem;
+			margin-bottom: 0.6rem;
+		}
+	}
+
+	&__image {
+		padding: 2rem 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		img {
+			width: 90%;
+		}
+
+		p {
+			font-size: 1.6rem;
+			margin-top: 1rem;
+			align-self: flex-start;
+		}
+
+		&-thin {
+			img {
+				width: 60%;
+			}
+		}
+	}
+}
