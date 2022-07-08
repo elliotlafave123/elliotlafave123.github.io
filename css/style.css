@@ -21,6 +21,7 @@
   --text-dark: #212529;
   --color-tag: #495057;
   --color-card: #343a40;
+  --color-card-hover: #40484f;
   --color-card-dark: #212529;
   --color-card-git: #33373a; }
 
@@ -268,6 +269,24 @@ a:before, a:after {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
+
+.link-card {
+  color: var(--text-light);
+  background-color: var(--color-card);
+  border-radius: 0.5rem;
+  padding: 4rem 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+  .link-card i {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-top: 0.2rem;
+    margin-left: 0.5rem; }
+  .link-card:hover {
+    background-color: var(--color-card-hover); }
 
 ::-webkit-scrollbar {
   width: 18px;
@@ -1569,6 +1588,22 @@ button:focus {
 
 .slider1 {
   transform: translateY(1000vh); }
+
+.o-row-4-col {
+  width: 100%;
+  padding: 15rem 15vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; }
+  @media (max-width: 75em) {
+    .o-row-4-col {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 56.25em) {
+    .o-row-4-col {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 37.5em) {
+    .o-row-4-col {
+      grid-template-columns: 1fr; } }
 
 .desktop__nav {
   display: flex;

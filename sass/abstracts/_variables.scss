@@ -28,9 +28,9 @@
 	--text-light: #f1f3f5;
 	--text-dark: #212529;
 
-	// --color-card: #495057;
 	--color-tag: #495057;
 	--color-card: #343a40;
+	--color-card-hover: #40484f;
 	--color-card-dark: #212529;
 	--color-card-git: #33373a;
 }
@@ -65,6 +65,7 @@ $text-light: var(--text-light);
 $text-dark: var(--text-dark);
 
 $color-card: var(--color-card);
+$color-card-hover: var(--color-card-hover);
 $color-card-dark: var(--color-card-dark);
 $color-card-git: var(--color-card-git);
 $color-tag: var(--color-tag);
