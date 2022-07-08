@@ -2,6 +2,14 @@
 	padding: $section-padding-y $section-padding-x;
 	color: $text-light;
 
+	a {
+		color: #b923ff;
+
+		&:hover {
+			color: #d06cffd0;
+		}
+	}
+
 	&__header {
 		h2 {
 			font-size: 4.2rem;
