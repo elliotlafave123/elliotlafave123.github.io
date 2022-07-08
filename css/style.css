@@ -279,7 +279,7 @@ a:before, a:after {
   background-color: var(--color-card);
   border-radius: 0 0.5rem 0.5rem 0.5rem;
   padding: 4rem 5rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -289,6 +289,12 @@ a:before, a:after {
     line-height: 1.8rem;
     margin-top: 0.2rem;
     margin-left: 0.5rem; }
+  @media (max-width: 56.25em) {
+    .link-card {
+      margin-bottom: 4rem; } }
+  @media (max-width: 37.5em) {
+    .link-card {
+      margin-bottom: 3rem; } }
   .link-card:hover {
     background-color: var(--color-card-hover); }
     .link-card:hover::before {

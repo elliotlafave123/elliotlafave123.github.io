@@ -6,7 +6,7 @@
 	border-radius: 0 0.5rem 0.5rem 0.5rem;
 	padding: 4rem 5rem;
 
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-weight: 700;
 
 	display: flex;
@@ -19,6 +19,14 @@
 		line-height: 1.8rem;
 		margin-top: 0.2rem;
 		margin-left: 0.5rem;
+	}
+
+	@include respond(tab-port) {
+		margin-bottom: 4rem;
+	}
+
+	@include respond(phone) {
+		margin-bottom: 3rem;
 	}
 
 	&:hover {
