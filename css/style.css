@@ -2471,6 +2471,9 @@ button:focus {
       align-self: flex-start; }
     .article__image-thin img {
       width: 60%; }
+      @media (max-width: 37.5em) {
+        .article__image-thin img {
+          width: 90%; } }
 
 .tech-stack {
   display: flex;

@@ -82,6 +82,10 @@
 		&-thin {
 			img {
 				width: 60%;
+
+				@include respond(phone) {
+					width: 90%;
+				}
 			}
 		}
 	}
