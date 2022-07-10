@@ -1,6 +1,10 @@
 .section-education {
 	width: 100%;
 	padding: 10rem $section-padding-x 0 $section-padding-x;
+
+	@include respond(phone) {
+		padding: 10rem 3rem 0 3rem;
+	}
 }
 
 .education {

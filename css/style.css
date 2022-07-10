@@ -2153,6 +2153,9 @@ button:focus {
 
 .work {
   padding: 10rem 15vw 0 15vw; }
+  @media (max-width: 37.5em) {
+    .work {
+      padding: 10rem 3rem 0 3rem; } }
   .work__title {
     width: 100%;
     height: auto;
@@ -2180,6 +2183,9 @@ button:focus {
   @media (max-width: 100em) {
     .experience {
       padding: 10rem 14vw 0 14vw; } }
+  @media (max-width: 37.5em) {
+    .experience {
+      padding: 10rem 3rem 0 3rem; } }
   .experience__main--title {
     margin-bottom: 10rem;
     height: max-content; }
@@ -2238,14 +2244,23 @@ button:focus {
     grid-row: 1/2;
     display: flex;
     align-items: center; }
+    @media (max-width: 37.5em) {
+      .experience__title-container {
+        flex-direction: column; } }
     .experience__title-container img {
       width: 8rem;
       height: 8rem;
       margin-right: 3rem; }
+      @media (max-width: 37.5em) {
+        .experience__title-container img {
+          margin: 0 0 2rem 0; } }
   .experience__title {
     font-family: "lato", sans-serif;
     font-size: 3.7rem;
     color: var(--text-light); }
+    @media (max-width: 37.5em) {
+      .experience__title {
+        font-size: 3rem; } }
   .experience__paragraph {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -2255,6 +2270,9 @@ button:focus {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media (max-width: 37.5em) {
+      .experience__paragraph {
+        font-size: 2rem; } }
   .experience__won {
     padding-left: 4rem;
     grid-column: 1/3;
@@ -2310,6 +2328,9 @@ button:focus {
 .section-education {
   width: 100%;
   padding: 10rem 15vw 0 15vw; }
+  @media (max-width: 37.5em) {
+    .section-education {
+      padding: 10rem 3rem 0 3rem; } }
 
 .education {
   position: relative;
@@ -2381,6 +2402,9 @@ button:focus {
 .section-achievements {
   width: 100%;
   padding: 10rem 15vw 0 15vw; }
+  @media (max-width: 37.5em) {
+    .section-achievements {
+      padding: 10rem 3rem 0 3rem; } }
 
 .achievements__paragraph {
   width: 60%;
@@ -2420,6 +2444,9 @@ button:focus {
 .section-certifications {
   width: 100%;
   padding: 10rem 15vw 0 15vw; }
+  @media (max-width: 37.5em) {
+    .section-certifications {
+      padding: 10rem 3rem 0 3rem; } }
 
 .certificates {
   width: 100%;

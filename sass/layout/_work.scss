@@ -1,6 +1,10 @@
 .work {
 	padding: 10rem $section-padding-x 0 $section-padding-x;
 
+	@include respond(phone) {
+		padding: 10rem 3rem 0 3rem;
+	}
+
 	&__title {
 		width: 100%;
 		height: auto;
@@ -36,6 +40,10 @@
 
 	@include respond(laptop) {
 		padding: 10rem $section-padding-x-laptop 0 $section-padding-x-laptop;
+	}
+
+	@include respond(phone) {
+		padding: 10rem 3rem 0 3rem;
 	}
 
 	&__main {
@@ -118,10 +126,19 @@
 		display: flex;
 		align-items: center;
 
+		@include respond(phone) {
+			flex-direction: column;
+			// align-items: flex-start;
+		}
+
 		img {
 			width: 8rem;
 			height: 8rem;
 			margin-right: 3rem;
+
+			@include respond(phone) {
+				margin: 0 0 2rem 0;
+			}
 		}
 	}
 
@@ -129,6 +146,10 @@
 		font-family: $font-lato;
 		font-size: 3.7rem;
 		color: $text-light;
+
+		@include respond(phone) {
+			font-size: 3rem;
+		}
 	}
 
 	&__paragraph {
@@ -141,6 +162,10 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+
+		@include respond(phone) {
+			font-size: 2rem;
+		}
 	}
 
 	&__won {
