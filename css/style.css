@@ -2534,6 +2534,9 @@ button:focus {
     align-items: center; }
     .article__image img {
       width: 90%; }
+      @media (max-width: 37.5em) {
+        .article__image img {
+          width: 100%; } }
     .article__image p {
       font-size: 1.6rem;
       margin-top: 1rem;
@@ -2542,7 +2545,7 @@ button:focus {
       width: 60%; }
       @media (max-width: 37.5em) {
         .article__image-thin img {
-          width: 90%; } }
+          width: 100%; } }
 
 #video {
   width: 80%;
