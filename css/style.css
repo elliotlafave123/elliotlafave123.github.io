@@ -284,6 +284,8 @@ a:before, a:after {
   display: flex;
   align-items: center;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+  .link-card:focus {
+    outline: none; }
   .link-card p {
     font-size: 1.75rem; }
     @media (max-width: 75em) {
@@ -2469,6 +2471,9 @@ button:focus {
 .article {
   padding: 15rem 15vw;
   color: var(--text-light); }
+  @media (max-width: 37.5em) {
+    .article {
+      padding: 10rem 3.5rem 0 3.5rem; } }
   .article__container {
     padding: 10rem 15vw 0 15vw; }
     @media (max-width: 37.5em) {
@@ -2479,6 +2484,10 @@ button:focus {
   .article__header h2 {
     font-size: 4.2rem;
     line-height: 5.4rem; }
+    @media (max-width: 37.5em) {
+      .article__header h2 {
+        font-size: 3rem;
+        line-height: 3.8rem; } }
   .article__header-info {
     width: 100%;
     display: flex;
@@ -2495,6 +2504,10 @@ button:focus {
     .article__section h2 {
       font-size: 3.8rem;
       margin-bottom: 2.4rem; }
+      @media (max-width: 37.5em) {
+        .article__section h2 {
+          font-size: 3rem;
+          line-height: 3.8rem; } }
     .article__section p {
       font-size: 1.9rem;
       margin-bottom: 2.6rem;
@@ -2530,6 +2543,16 @@ button:focus {
       @media (max-width: 37.5em) {
         .article__image-thin img {
           width: 90%; } }
+
+#video {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 10rem; }
+  @media (max-width: 37.5em) {
+    #video {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 5rem; } }
 
 .tech-stack {
   display: flex;
