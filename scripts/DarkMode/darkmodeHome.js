@@ -37,6 +37,8 @@ const lightMode = function () {
 
 	root.style.setProperty("--color-footer", "#7048e8");
 
+	root.style.setProperty("--colour-btn-expand-img", "rgba(255,255,255, 0.6)");
+
 	if (wave1Dark) {
 		wave1Dark.classList.add("hidden");
 	}
@@ -82,6 +84,8 @@ const darkMode = function () {
 	root.style.setProperty("--text-dark", "#212529");
 
 	root.style.setProperty("--color-footer", "#101214");
+
+	root.style.setProperty("--colour-btn-expand-img", "rgba(0, 0, 0, 0.6)");
 
 	if (wave1Dark) {
 		wave1Dark.classList.remove("hidden");

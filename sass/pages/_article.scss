@@ -100,6 +100,7 @@
 
 		&:hover {
 			&::before {
+				color: $text-light;
 				position: absolute;
 				top: 6rem;
 				right: 10rem;
@@ -109,7 +110,7 @@
 
 				font-size: 1.6rem;
 				line-height: 1.6rem;
-				background-color: rgba(0, 0, 0, 0.6);
+				background-color: var(--colour-btn-expand-img);
 				width: 4rem;
 				height: 4rem;
 				border-radius: 50%;
@@ -122,6 +123,7 @@
 
 		@include respond(tab-port) {
 			&::before {
+				color: $text-light;
 				position: absolute;
 				top: 6rem;
 				right: 4rem;
@@ -131,7 +133,7 @@
 
 				font-size: 1.6rem;
 				line-height: 1.6rem;
-				background-color: rgba(0, 0, 0, 0.6);
+				background-color: var(--colour-btn-expand-img);
 				width: 4rem;
 				height: 4rem;
 				border-radius: 50%;
@@ -142,6 +144,7 @@
 			}
 
 			&:hover {
+				color: $text-light;
 				&::before {
 					position: absolute;
 					top: 6rem;
@@ -152,7 +155,7 @@
 
 					font-size: 1.6rem;
 					line-height: 1.6rem;
-					background-color: rgba(0, 0, 0, 0.6);
+					background-color: var(--colour-btn-expand-img);
 					width: 4rem;
 					height: 4rem;
 					border-radius: 50%;
@@ -166,6 +169,7 @@
 
 		@include respond(tab-port) {
 			&::before {
+				color: $text-light;
 				position: absolute;
 				top: 3.5rem;
 				right: 1rem;
@@ -175,7 +179,7 @@
 
 				font-size: 1.6rem;
 				line-height: 1.6rem;
-				background-color: rgba(0, 0, 0, 0.6);
+				background-color: var(--colour-btn-expand-img);
 				width: 4rem;
 				height: 4rem;
 				border-radius: 50%;
@@ -187,6 +191,7 @@
 
 			&:hover {
 				&::before {
+					color: $text-light;
 					position: absolute;
 					top: 3.5rem;
 					right: 1rem;
@@ -196,7 +201,7 @@
 
 					font-size: 1.6rem;
 					line-height: 1.6rem;
-					background-color: rgba(0, 0, 0, 0.6);
+					background-color: var(--colour-btn-expand-img);
 					width: 4rem;
 					height: 4rem;
 					border-radius: 50%;

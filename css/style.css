@@ -23,7 +23,8 @@
   --color-card: #343a40;
   --color-card-hover: #40484f;
   --color-card-dark: #212529;
-  --color-card-git: #33373a; }
+  --color-card-git: #33373a;
+  --colour-btn-expand-img: rgba(0, 0, 0, 0.6); }
 
 /* ********************************* */
 /*         Section Padding           */
@@ -2561,6 +2562,7 @@ button:focus {
     align-items: center;
     position: relative; }
     .article__image:hover::before {
+      color: var(--text-light);
       position: absolute;
       top: 6rem;
       right: 10rem;
@@ -2569,7 +2571,7 @@ button:focus {
       font-weight: 900;
       font-size: 1.6rem;
       line-height: 1.6rem;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: var(--colour-btn-expand-img);
       width: 4rem;
       height: 4rem;
       border-radius: 50%;
@@ -2578,6 +2580,7 @@ button:focus {
       justify-content: center; }
     @media (max-width: 56.25em) {
       .article__image::before {
+        color: var(--text-light);
         position: absolute;
         top: 6rem;
         right: 4rem;
@@ -2586,31 +2589,34 @@ button:focus {
         font-weight: 900;
         font-size: 1.6rem;
         line-height: 1.6rem;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: var(--colour-btn-expand-img);
         width: 4rem;
         height: 4rem;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center; }
-      .article__image:hover::before {
-        position: absolute;
-        top: 6rem;
-        right: 4rem;
-        content: "\f424";
-        font-family: "Font Awesome\ 5 Free";
-        font-weight: 900;
-        font-size: 1.6rem;
-        line-height: 1.6rem;
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center; } }
+      .article__image:hover {
+        color: var(--text-light); }
+        .article__image:hover::before {
+          position: absolute;
+          top: 6rem;
+          right: 4rem;
+          content: "\f424";
+          font-family: "Font Awesome\ 5 Free";
+          font-weight: 900;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          background-color: var(--colour-btn-expand-img);
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center; } }
     @media (max-width: 56.25em) {
       .article__image::before {
+        color: var(--text-light);
         position: absolute;
         top: 3.5rem;
         right: 1rem;
@@ -2619,7 +2625,7 @@ button:focus {
         font-weight: 900;
         font-size: 1.6rem;
         line-height: 1.6rem;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: var(--colour-btn-expand-img);
         width: 4rem;
         height: 4rem;
         border-radius: 50%;
@@ -2627,6 +2633,7 @@ button:focus {
         align-items: center;
         justify-content: center; }
       .article__image:hover::before {
+        color: var(--text-light);
         position: absolute;
         top: 3.5rem;
         right: 1rem;
@@ -2635,7 +2642,7 @@ button:focus {
         font-weight: 900;
         font-size: 1.6rem;
         line-height: 1.6rem;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: var(--colour-btn-expand-img);
         width: 4rem;
         height: 4rem;
         border-radius: 50%;
