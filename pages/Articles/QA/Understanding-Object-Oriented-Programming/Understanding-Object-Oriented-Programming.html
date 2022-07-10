@@ -21,7 +21,7 @@
 		<script defer src="../../../../scripts/DarkMode/SetDarkMode.js"></script>
 		<script defer src="../../../../scripts/currentYear.js"></script>
 
-		<title>Developing Awareness of Democracy in the UK | SG</title>
+		<title>Understanding Object Oriented Programming</title>
 	</head>
 	<body>
 		<!-- --- Navigation --- -->
@@ -104,70 +104,95 @@
 
 		<!-- --- Article --- -->
 		<section class="article" role="top">
+			<!-- Interactions -->
 			<div class="article__interactions">
 				<a href="../index.html" class="btn-back"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
 			</div>
-
 			<div class="article__header">
-				<h2>Developing Awareness of Democracy in the UK | SG</h2>
+				<h2>Practice: Understanding Object-Oriented Programming | SDTL3 A2.1</h2>
 
 				<div class="article__header-info">
 					<span>Elliot La Fave</span>
 					<p>&#183;</p>
-					<span>08/07/2022</span>
+					<span>04/07/2022</span>
 					<p>&#183;</p>
-					<span>15:33pm</span>
+					<span>14:22pm</span>
 				</div>
 			</div>
 
 			<div class="article__section">
-				<h2>How could this work in the UK?</h2>
+				<h2>My IDE</h2>
 
-				<div class="article__section">
-					<p>
-						This type of government would not work in the modern age as democracy is viewed by almost everybody as the best way
-						to run a country and to make decisions. Having a single person or group of people running the country just because
-						they believe that their views/ideas of how to run the country are better doesn’t make for a free and open society.
-					</p>
-					<p>
-						Having philosophers running the country would be similar to when the royal family were in control of the country.
-						This form of government usually leads to revolts/civil wars within the country in which they rule.
-					</p>
+				<div class="article__image">
+					<img src="img/ide.png" alt="" />
+					<p>I am using the Eclipse IDE by IBM.</p>
 				</div>
 
 				<div class="article__section">
-					<h2>What difference would this make to the NHS?</h2>
-
 					<p>
-						This could make a difference to the NHS, but it would depend on exactly who’s in charge and what they believe in. If
-						they liked the NHS, they would likely pour more funding into the organisation and therefore improving patient care.
-						On the other hand, they might be against the idea of free healthcare and scrap the NHS all together.
+						I have decided to create a fighting game where players can be damaged, healed and when all health is lost the game
+						ends. Certain players can have shields to help them take less damage.
 					</p>
 				</div>
 
-				<div class="article__section">
-					<h2>What would this mean for our class system?</h2>
+				<div class="article__image article__image-thin">
+					<img src="img/program.png" alt="" />
+					<p>An image of my program running and the main method.</p>
+				</div>
 
+				<div class="article__section">
 					<p>
-						The class system would remain the same other than the fact that the philosophers who are in charge would be
-						automatically placed at the top of the class system with the rest of the country below. There would be no fairness
-						within the government and no hope of normal citizens ever being involved in political processes somewhat like in
-						China where the communist party always control the country.
+						The image below shows the base class a player, this will be used by other classes to inherit the base functionality.
+					</p>
+					<p>
+						The class contains a constructor that is used to set the values of the variables, methods to deal damage: either
+						simple damage or critical damage and getter/setter methods to retrieve data from the player class.
 					</p>
 				</div>
-				<div class="article__section">
-					<h2>Would things be better or worse?</h2>
 
+				<div class="article__image article__image-thin">
+					<img src="img/carbon(1).png" alt="" />
+					<p>An image of the base Player class.</p>
+				</div>
+
+				<div class="article__section">
 					<p>
-						I believe if our government was run in this way the country would be much worse off. This is because having a group
-						of people running a country who all have the same views and ideals is a recipe for civil war and anger within the
-						population. Also, the fact there are no democratic elections and no way to influence the government would leave
-						citizens wanting to leave the country for a place with real freedom such as America.
+						I then created another class for a player with a shield equipped. This class inherited the base functionality of the
+						player class, but the damage and critical methods have been overridden with a lower damage value.
 					</p>
 
+					<p>I have added a super method to the constructor so the values in the parent class can be changed.</p>
+				</div>
+
+				<div class="article__image article__image-thin">
+					<img src="img/carbon(2).png" alt="" />
+					<p>An image of the Player with Shield class.</p>
+				</div>
+
+				<div class="article__section">
 					<p>
-						Allowing a country to be run in this way would end up destroying the rights of the people, also by this logic you
-						wouldn’t have the public serving on a jury, you would have a jury full of judges and so on…
+						Recently in work I have been working with C# to create a login audit API. I have used many object-oriented
+						programming concepts such as using interfaces to abstract my code, using getter/setter classes to store data in a
+						structured way. I have then used the entity framework in .Net to pull data from a database and return the results as
+						a JSON result with multiple API endpoints.
+					</p>
+					<p>
+						I have recently learned about how to use OOP and the MVC pattern to create components that use data and update data
+						sources and then render the data within a view. I have used this in some of my own projects/challenges I have worked
+						on.
+					</p>
+					<p>
+						I have learned that OOP is a way of ensuring that you don’t have to constantly repeat lines of code or functions to
+						work on a set of data. It seems to be a better approach to the old way of writing multiple functions that change
+						variables which can end up being messy or ‘spaghetti code’.
+					</p>
+					<p>
+						I am looking forward to practicing OOP in JavaScript as I see it as a much better way of working with a collection
+						of data and maintaining the state of an application.
+					</p>
+					<p>
+						I want to learn more about interfaces in C# and how they can abstract the functionality of my programs and make it
+						easier for other developers to work on my program.
 					</p>
 				</div>
 			</div>

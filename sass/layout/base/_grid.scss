@@ -1,6 +1,6 @@
 .o-row-4-col {
 	width: 100%;
-	padding: $section-padding-y $section-padding-x;
+	padding: 2rem $section-padding-x;
 
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -8,6 +8,8 @@
 
 	@include respond(tab-land) {
 		grid-template-columns: repeat(3, 1fr);
+
+		gap: 5rem 2rem;
 	}
 
 	@include respond(tab-port) {
@@ -16,5 +18,6 @@
 
 	@include respond(phone) {
 		grid-template-columns: 1fr;
+		padding: 2rem 3rem;
 	}
 }
