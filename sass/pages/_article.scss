@@ -96,6 +96,117 @@
 		flex-direction: column;
 		align-items: center;
 
+		position: relative;
+
+		&:hover {
+			&::before {
+				position: absolute;
+				top: 6rem;
+				right: 10rem;
+				content: "\f424";
+				font-family: "Font Awesome\ 5 Free";
+				font-weight: 900;
+
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+				background-color: rgba(0, 0, 0, 0.6);
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		@include respond(tab-port) {
+			&::before {
+				position: absolute;
+				top: 6rem;
+				right: 4rem;
+				content: "\f424";
+				font-family: "Font Awesome\ 5 Free";
+				font-weight: 900;
+
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+				background-color: rgba(0, 0, 0, 0.6);
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&:hover {
+				&::before {
+					position: absolute;
+					top: 6rem;
+					right: 4rem;
+					content: "\f424";
+					font-family: "Font Awesome\ 5 Free";
+					font-weight: 900;
+
+					font-size: 1.6rem;
+					line-height: 1.6rem;
+					background-color: rgba(0, 0, 0, 0.6);
+					width: 4rem;
+					height: 4rem;
+					border-radius: 50%;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+
+		@include respond(tab-port) {
+			&::before {
+				position: absolute;
+				top: 3.5rem;
+				right: 1rem;
+				content: "\f424";
+				font-family: "Font Awesome\ 5 Free";
+				font-weight: 900;
+
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+				background-color: rgba(0, 0, 0, 0.6);
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&:hover {
+				&::before {
+					position: absolute;
+					top: 3.5rem;
+					right: 1rem;
+					content: "\f424";
+					font-family: "Font Awesome\ 5 Free";
+					font-weight: 900;
+
+					font-size: 1.6rem;
+					line-height: 1.6rem;
+					background-color: rgba(0, 0, 0, 0.6);
+					width: 4rem;
+					height: 4rem;
+					border-radius: 50%;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
 		img {
 			width: 90%;
 
@@ -119,6 +230,45 @@
 				}
 			}
 		}
+
+		&-enlarged {
+			z-index: 1000;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 0;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				z-index: 1200;
+				max-height: 100vh;
+
+				@include respond(phone) {
+					width: 100%;
+				}
+			}
+
+			p {
+				visibility: hidden;
+				display: none;
+			}
+
+			&-thin {
+				img {
+					width: 60%;
+
+					@include respond(phone) {
+						width: 100%;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -132,4 +282,7 @@
 		margin-left: 0;
 		margin-bottom: 5rem;
 	}
+}
+
+.articleImg {
 }
