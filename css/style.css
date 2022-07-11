@@ -328,6 +328,23 @@ a:before, a:after {
     width: 40%;
     border-radius: 0.4rem 0.4rem 0 0;
     background-color: var(--link-card-before); }
+  .link-card::after {
+    --inverted-corners-background: var(--link-card-before);
+    --inverted-corners-size: 2rem;
+    content: "";
+    z-index: -1;
+    /* Absolute position */
+    top: -3rem;
+    left: calc(40% + 0.9rem);
+    position: absolute;
+    transform: rotate(270deg);
+    /* Size */
+    height: calc(2 * var(--inverted-corners-size));
+    width: var(--inverted-corners-size);
+    /* Border */
+    background-color: transparent;
+    border-top-left-radius: var(--inverted-corners-size);
+    box-shadow: var(--inverted-corners-background) 0px calc(-1 * var(--inverted-corners-size)) 0px 0px; }
 
 ::-webkit-scrollbar {
   width: 18px;
