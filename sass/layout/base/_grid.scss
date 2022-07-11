@@ -6,6 +6,12 @@
 	grid-template-columns: repeat(4, 1fr);
 	gap: 6rem 2rem;
 
+	@include respond(laptop) {
+		grid-template-columns: repeat(3, 1fr);
+
+		gap: 5rem 2rem;
+	}
+
 	@include respond(tab-land) {
 		grid-template-columns: repeat(3, 1fr);
 

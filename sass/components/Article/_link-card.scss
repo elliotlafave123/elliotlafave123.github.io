@@ -11,6 +11,7 @@
 
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 
 	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
@@ -20,7 +21,13 @@
 	}
 
 	p {
-		font-size: 1.75rem;
+		font-size: 1.8rem;
+		line-height: 2.5rem;
+
+		@include respond(laptop) {
+			font-size: 1.7rem;
+			height: 5rem;
+		}
 
 		@include respond(tab-land) {
 			font-size: 1.7rem;
@@ -36,6 +43,14 @@
 		line-height: 1.8rem;
 		margin-top: 0.2rem;
 		margin-left: 0.5rem;
+
+		@include respond(laptop) {
+			margin-left: 1rem;
+		}
+	}
+
+	@include respond(laptop) {
+		padding: 2rem 3rem;
 	}
 
 	@include respond(tab-port) {

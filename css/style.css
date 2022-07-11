@@ -292,12 +292,18 @@ a:before, a:after {
   font-weight: 700;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px; }
   .link-card:focus {
     outline: none; }
   .link-card p {
-    font-size: 1.75rem; }
+    font-size: 1.8rem;
+    line-height: 2.5rem; }
+    @media (max-width: 100em) {
+      .link-card p {
+        font-size: 1.7rem;
+        height: 5rem; } }
     @media (max-width: 75em) {
       .link-card p {
         font-size: 1.7rem; } }
@@ -309,6 +315,12 @@ a:before, a:after {
     line-height: 1.8rem;
     margin-top: 0.2rem;
     margin-left: 0.5rem; }
+    @media (max-width: 100em) {
+      .link-card i {
+        margin-left: 1rem; } }
+  @media (max-width: 100em) {
+    .link-card {
+      padding: 2rem 3rem; } }
   @media (max-width: 56.25em) {
     .link-card {
       margin-bottom: 4rem; } }
@@ -1897,6 +1909,10 @@ button:focus {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 6rem 2rem; }
+  @media (max-width: 100em) {
+    .o-row-4-col {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem 2rem; } }
   @media (max-width: 75em) {
     .o-row-4-col {
       grid-template-columns: repeat(3, 1fr);
