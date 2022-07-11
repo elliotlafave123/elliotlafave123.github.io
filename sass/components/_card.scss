@@ -13,6 +13,21 @@
 		font-family: inherit;
 	}
 
+	h4 {
+		font-size: 2rem;
+		line-height: 2.9rem;
+
+		@include respond(laptop) {
+			height: 4.4rem;
+			line-height: 2.6rem;
+			margin-bottom: 1.3rem !important;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
 	&--2 {
 		background-color: $color-card;
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
@@ -63,9 +78,33 @@
 		margin-bottom: 1.6rem;
 		margin-top: 1.2rem;
 		line-height: 2.3rem;
-
-		min-height: 7rem;
 		color: $text-light;
+
+		height: 11.5rem;
+
+		@include respond(laptop) {
+			font-size: 1.5rem;
+			line-height: 1.9rem;
+
+			margin: 1rem 0 0 0;
+			height: 13.7rem;
+		}
+
+		@include respond(tab-land) {
+			font-size: 1.6rem;
+			line-height: 2rem;
+
+			margin: 1rem 0 0 0;
+			height: 15.6rem;
+		}
+
+		@include respond(tab-port) {
+			font-size: 1.8rem;
+			line-height: 2.1rem;
+
+			margin: 1rem 0 2.4rem 0;
+			height: 13.2rem;
+		}
 
 		@include respond(phone) {
 			font-size: 1.9rem;
@@ -81,6 +120,10 @@
 		padding: 2rem;
 		position: relative;
 		flex: 1 1 auto;
+
+		@include respond(laptop) {
+			padding: 1rem 2rem;
+		}
 
 		@include respond(phone) {
 			padding: 3rem;

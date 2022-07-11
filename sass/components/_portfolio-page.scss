@@ -17,6 +17,16 @@
 		align-items: center;
 		justify-content: stretch;
 		flex-wrap: wrap;
+
+		@include respond(laptop) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		@include respond(tab-land) {
+			flex-direction: unset;
+			align-items: center;
+		}
 	}
 
 	&__project {
