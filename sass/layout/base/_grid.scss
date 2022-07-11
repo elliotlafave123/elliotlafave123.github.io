@@ -21,3 +21,25 @@
 		padding: 2rem 3rem;
 	}
 }
+
+.o-row-2-col {
+	width: 100%;
+	padding: 2rem 10vw;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 6rem 2rem;
+
+	@include respond(tab-land) {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 5rem 2rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 2rem 0rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 2rem 0rem;
+	}
+}

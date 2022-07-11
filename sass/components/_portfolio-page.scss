@@ -1,11 +1,11 @@
 .portfolio-page {
 	box-sizing: border-box;
-	padding: 0vh 10vw 0rem 10vw;
+	// padding: 0vh 10vw 0rem 10vw;
 	color: $color-white;
 	position: relative;
 
-	@include respond(tab-land) {
-		padding: 0vh 5rem 0rem 5rem;
+	@include respond(tab-port) {
+		padding: 0vh 10vw 0rem 10vw;
 	}
 
 	@include respond(phone) {

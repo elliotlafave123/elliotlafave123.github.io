@@ -74,15 +74,17 @@
 	}
 
 	&--github {
+		line-height: 2rem;
 		font-size: 2rem;
 		background-color: $color-card-git;
 		color: $color-white;
-		padding: 1rem 6rem;
+		padding: 1.6rem 4rem;
 		margin-right: 2rem;
+		margin-bottom: 1rem;
 
-		@include respond(phone) {
-			margin-bottom: 2rem;
-			padding: 0.56rem 6rem;
+		@include respond(tab-land) {
+			padding: 1.4rem 3rem;
+			font-size: 1.7rem;
 		}
 
 		&::after {
@@ -138,14 +140,16 @@
 
 		&-small {
 			font-size: 2rem;
+			line-height: 2rem;
 			background-color: $color-primary;
 			color: $color-white;
-			padding: 1rem 5rem;
+			padding: 1.6rem 4rem;
 			margin-right: 2rem;
+			margin-bottom: 1rem;
 
 			@include respond(tab-land) {
-				margin-bottom: 2rem;
-				padding: 0.7rem 4rem;
+				padding: 1.4rem 3rem;
+				font-size: 1.7rem;
 			}
 
 			&::after {
