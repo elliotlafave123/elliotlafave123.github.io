@@ -17,7 +17,9 @@ const pageNumbers = document.querySelectorAll(".pageNumbers");
 
 const nextPageMobile = document.getElementById("nextPageMobile");
 const lastPageMobile = document.getElementById("lastPageMobile");
-const pageNumberCurrentMobile = document.getElementById("pageNumberCurrentMobile");
+const pageNumberCurrentMobile = document.getElementById(
+	"pageNumberCurrentMobile"
+);
 const pageNumberTotalMobile = document.getElementById("pageNumberTotalMobile");
 
 let hidePageChangeButtons = false;
@@ -37,7 +39,9 @@ if (window.innerWidth < 500) {
 const getGridColumnCount = function () {
 	const gridComputedStyle = window.getComputedStyle(cardsContainer);
 
-	return gridComputedStyle.getPropertyValue("grid-template-columns").split(" ").length;
+	return gridComputedStyle
+		.getPropertyValue("grid-template-columns")
+		.split(" ").length;
 };
 
 let page = 0;
@@ -91,7 +95,20 @@ fetch("https://warm-caverns-73488.herokuapp.com/api/v1/projects")
 	.then((jsondata) => {
 		data = jsondata.data.response;
 
-		featuredData = [data[2], data[4], data[6], data[7], data[9], data[10], data[15], data[16], data[18], data[19], data[20], data[21]];
+		featuredData = [
+			data[2],
+			data[4],
+			data[6],
+			data[7],
+			data[9],
+			data[10],
+			data[15],
+			data[16],
+			data[18],
+			data[19],
+			data[20],
+			data[21],
+		];
 
 		if (cardsContainer) {
 			displayProjectsOnPages(data.reverse());
@@ -150,9 +167,13 @@ const displayFeaturedHome = function (data) {
 	data.forEach(function (project, i) {
 		const html = `
         <div class="card ${i === 1 ? "card--middle" : ""}">
-                <img src="${project.linkImg}" alt="" class="card__img" ${mobile ? 'loading="lazy"' : ""}>
+                <img src="${project.linkImg}" alt="" class="card__img" ${
+			mobile ? 'loading="lazy"' : ""
+		}>
                 <div class="card__content">
-                    <h4 class="card__title u-margin-bottom-medium">${project.title}</h4>
+                    <h4 class="card__title u-margin-bottom-medium">${
+						project.title
+					}</h4>
 					<span class="card__date">${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
@@ -207,7 +228,9 @@ const displayFeaturedHome = function (data) {
                         <a href="${
 							project.linkLivePreview
 						}" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-                        <a href="${project.linkGit}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                        <a href="${
+							project.linkGit
+						}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
                     </div>                  
                 </div>
             </div> 
@@ -224,9 +247,13 @@ const displayFeatured = function (data) {
 	data.forEach(function (project, i) {
 		const html = `
         <div class="card card--2 ${i === 1 ? "card--middle" : ""}">
-                <img src="${project.linkImg}" alt="" class="card__img" ${mobile ? 'loading="lazy"' : ""}>
+                <img src="${project.linkImg}" alt="" class="card__img" ${
+			mobile ? 'loading="lazy"' : ""
+		}>
                 <div class="card__content">
-                    <h4 class="card__title u-margin-bottom-medium">${project.title}</h4>
+                    <h4 class="card__title u-margin-bottom-medium">${
+						project.title
+					}</h4>
 					<span class="card__date">${project.date}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
@@ -281,7 +308,9 @@ const displayFeatured = function (data) {
                         <a href="${
 							project.linkLivePreview
 						}" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-                        <a href="${project.linkGit}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+                        <a href="${
+							project.linkGit
+						}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
                     </div>                  
                 </div>
             </div> 
@@ -449,6 +478,21 @@ if (dropdown) {
 if (dropdown) {
 	dropdown.addEventListener("input", (e) => {
 		e.preventDefault();
+		if (!dropdown.value) {
+			page = 0;
+			dropdown.value = "";
+			searchInput.value = "";
+			pageNumberCurrent.innerText = 1;
+			hidePageChangeButtons = false;
+			togglePageChangeButtons();
+			displayProjectsOnPages(data);
+			refreshBtnAllProjects.style.animation = "spin 0.7s linear";
+			setTimeout(() => {
+				refreshBtnAllProjects.style.animation = "";
+			}, 700);
+			return;
+		}
+
 		selection = [];
 		hidePageChangeButtons = true;
 		togglePageChangeButtons();
@@ -458,6 +502,7 @@ if (dropdown) {
 				selection.push(project);
 			}
 		});
+
 		displayProjects(selection);
 	});
 }
