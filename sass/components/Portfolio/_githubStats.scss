@@ -41,8 +41,13 @@
 		color: $color-primary;
 		font-size: 2.4rem;
 		font-weight: 600;
-		top: 4rem;
+		top: 1rem;
 		right: 4rem;
+
+		@include respond(laptop) {
+			top: 4rem;
+			right: 4rem;
+		}
 	}
 
 	img {
