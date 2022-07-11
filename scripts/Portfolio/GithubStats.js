@@ -11,7 +11,7 @@ const init = () => {
 	fetch("https://api.github.com/users/elliotlafave123", {
 		method: "GET",
 		headers: {
-			Authorization: `token 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 `,
+			Authorization: `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 `,
 		},
 	})
 		.then((res) => res.json())
