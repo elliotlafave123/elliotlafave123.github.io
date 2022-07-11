@@ -434,6 +434,51 @@ a:before, a:after {
       .githubStats-info-section p {
         font-size: 1.6rem; }
 
+.tooltip {
+  background-color: var(--color-card);
+  padding: 0rem 1.2rem 1rem 1.2rem;
+  width: 20ch;
+  border-radius: 0.7rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: flex-start !important;
+  flex-direction: column;
+  position: absolute;
+  top: 6.5rem;
+  right: 50rem; }
+  @media (max-width: 75em) {
+    .tooltip {
+      top: 7.8rem;
+      right: 50.4rem; } }
+  @media (max-width: 56.25em) {
+    .tooltip {
+      display: none; } }
+  .tooltip h3 {
+    font-size: 1.95rem;
+    font-weight: 900;
+    letter-spacing: 0.8px; }
+    .tooltip h3::after {
+      display: none; }
+  .tooltip p {
+    font-size: 1.4rem; }
+  .tooltip i {
+    font-size: 1.7rem;
+    top: 0.5rem;
+    right: 0.8rem;
+    position: absolute; }
+  .tooltip::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    transform: rotate(90deg);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid var(--color-card);
+    top: -1rem;
+    left: 24.4rem; }
+
 ::-webkit-scrollbar {
   width: 18px;
   margin: 1px; }

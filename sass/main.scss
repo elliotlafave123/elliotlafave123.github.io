@@ -1,15 +1,23 @@
+// Abstracts
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/functions";
 
+// Base
 @import "base/utilities";
 @import "base/base";
 @import "base/animations";
 @import "base/typography";
 
+// Components - Organised
+// Article
 @import "components/Article/link-card";
+// Portfolio
 @import "components/Portfolio/githubStats";
+// Tooltips
+@import "components/Tooltips/tooltip";
 
+// Components - Assorted
 @import "components/scrollbar";
 @import "components/button";
 @import "components/wave";
@@ -25,7 +33,11 @@
 @import "components/JSCards";
 @import "components/mobile-slider";
 
+// Layout - Organised
+// Base
 @import "layout/base/grid";
+
+// Layour - Assorted
 @import "layout/navigation";
 @import "layout/header";
 @import "layout/about";
@@ -39,6 +51,7 @@
 @import "layout/message.scss";
 @import "layout/certifications";
 
+// Page Types
 @import "pages/home";
 @import "pages/article";
 @import "pages/TechStack";
