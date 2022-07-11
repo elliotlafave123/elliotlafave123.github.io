@@ -2750,6 +2750,9 @@ button:focus {
     color: var(--text-light);
     margin-bottom: 4rem;
     width: 100%; }
+    @media (max-width: 100em) {
+      .certificate--title {
+        font-size: 2.4rem; } }
     @media (max-width: 75em) {
       .certificate--title {
         font-size: 2.3rem; } }
