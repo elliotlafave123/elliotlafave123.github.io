@@ -359,6 +359,7 @@ a:before, a:after {
     box-shadow: var(--inverted-corners-background) 0px calc(-1 * var(--inverted-corners-size)) 0px 0px; }
 
 .githubStats {
+  position: relative;
   background-color: var(--color-card);
   border-radius: 0.8rem;
   padding: 4rem 4rem;
@@ -385,6 +386,13 @@ a:before, a:after {
       .githubStats img {
         margin-top: 0;
         margin-bottom: 1.6rem; } }
+  .githubStats-NameOfComponent {
+    position: absolute;
+    color: var(--color-primary);
+    font-size: 2.4rem;
+    font-weight: 600;
+    top: 4rem;
+    right: 4rem; }
   .githubStats img {
     border-radius: 50%;
     width: 10rem;
@@ -1273,7 +1281,9 @@ a:before, a:after {
     @media (max-width: 100em) {
       .portfolio-page__buttons {
         flex-direction: column;
-        align-items: flex-start; } }
+        align-items: flex-start; }
+        .portfolio-page__buttons a {
+          margin-bottom: 2.4rem; } }
     @media (max-width: 75em) {
       .portfolio-page__buttons {
         flex-direction: unset;
