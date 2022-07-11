@@ -16,6 +16,10 @@
 
 	&__interactions {
 		padding: 0 0 8rem 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__header {

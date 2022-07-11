@@ -38,6 +38,18 @@ const lightMode = function () {
 	root.style.setProperty("--color-footer", "#7048e8");
 
 	root.style.setProperty("--colour-btn-expand-img", "rgba(255,255,255, 0.6)");
+	root.style.setProperty("--colour-btn-jump-to-top", "#a2a6ab");
+	root.style.setProperty("--colour-btn-git", "#a2a6ab");
+
+	root.style.setProperty("--color-tag", "#DEE2E6");
+
+	root.style.setProperty("--tech-stack-img-opacity", "85%");
+
+	// Link card (FOLDER)
+	root.style.setProperty("--link-card-background", "#CED4DA");
+	root.style.setProperty("--link-card-hover", "#c2c7cd");
+	root.style.setProperty("--link-card-before", "#b1b6bb");
+	root.style.setProperty("--link-card-before-hover", "#a2a6ab");
 
 	if (wave1Dark) {
 		wave1Dark.classList.add("hidden");
@@ -86,6 +98,18 @@ const darkMode = function () {
 	root.style.setProperty("--color-footer", "#101214");
 
 	root.style.setProperty("--colour-btn-expand-img", "rgba(0, 0, 0, 0.6)");
+	root.style.setProperty("--colour-btn-jump-to-top", "#343a40");
+	root.style.setProperty("--colour-btn-git", "#33373a");
+
+	root.style.setProperty("--color-tag", "#495057");
+
+	root.style.setProperty("--tech-stack-img-opacity", "60%");
+
+	// Link card (FOLDER)
+	root.style.setProperty("--link-card-background", "#343a40");
+	root.style.setProperty("--link-card-hover", "#40484f");
+	root.style.setProperty("--link-card-before", "#2e3338");
+	root.style.setProperty("--link-card-before-hover", "#2e3338");
 
 	if (wave1Dark) {
 		wave1Dark.classList.remove("hidden");

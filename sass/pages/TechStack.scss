@@ -465,7 +465,7 @@
 	}
 
 	100% {
-		opacity: 60%;
+		opacity: var(--tech-stack-img-opacity);
 	}
 }
 

@@ -92,6 +92,7 @@
 		position: relative;
 		height: 5rem;
 		align-self: end;
+		margin-top: 1rem;
 	}
 
 	&:hover {
@@ -133,42 +134,6 @@
 			height: 1.4rem;
 			margin-right: 0.5rem;
 		}
-
-		// &--html {
-		// 	color: #f0582f;
-		// }
-
-		// &--css {
-		// 	color: #007cc4;
-		// }
-
-		// &--js {
-		// 	color: #f48031;
-		// }
-
-		// &--scss {
-		// 	color: #cc6699;
-		// }
-
-		// &--api {
-		// 	color: #f5f258;
-		// }
-
-		// &--challenge {
-		// 	color: #66cc92;
-		// }
-
-		// &--course {
-		// 	color: #8d66cc;
-		// }
-
-		// &--nodejs {
-		// 	color: #379922;
-		// }
-
-		// &--mongodb {
-		// 	color: #4e763b;
-		// }
 	}
 
 	@include respond(phone) {

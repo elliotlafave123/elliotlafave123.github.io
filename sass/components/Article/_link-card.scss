@@ -1,7 +1,7 @@
 .link-card {
 	position: relative;
 	color: $text-light;
-	background-color: $color-card;
+	background-color: var(--link-card-background);
 
 	border-radius: 0 0.5rem 0.5rem 0.5rem;
 	padding: 4rem 5rem;
@@ -13,6 +13,7 @@
 	align-items: center;
 
 	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 
 	&:focus {
 		outline: none;
@@ -46,10 +47,10 @@
 	}
 
 	&:hover {
-		background-color: $color-card-hover;
+		background-color: var(--link-card-hover);
 
 		&::before {
-			background-color: #32383d;
+			background-color: var(--link-card-before-hover);
 		}
 	}
 
@@ -65,6 +66,6 @@
 
 		border-radius: 0.4rem 0.4rem 0 0;
 
-		background-color: #2e3338;
+		background-color: var(--link-card-before);
 	}
 }

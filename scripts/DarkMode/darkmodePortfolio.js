@@ -31,6 +31,8 @@ const lightMode = function () {
 
 	root.style.setProperty("--color-tag", "#DEE2E6");
 
+	root.style.setProperty("--colour-btn-git", "#a2a6ab");
+
 	wave5Dark.classList.add("hidden");
 
 	wave5Light.classList.remove("hidden");
@@ -51,6 +53,8 @@ const darkMode = function () {
 	root.style.setProperty("--color-footer", "#101214");
 
 	root.style.setProperty("--color-tag", "#495057");
+
+	root.style.setProperty("--colour-btn-git", "#33373a");
 
 	wave5Dark.classList.remove("hidden");
 

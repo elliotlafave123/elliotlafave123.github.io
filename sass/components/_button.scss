@@ -57,7 +57,7 @@
 	}
 
 	&--git {
-		background-color: $color-card-git;
+		background-color: var(--colour-btn-git);
 		position: absolute !important;
 		bottom: 0;
 		right: 0;
@@ -70,10 +70,6 @@
 			left: 50%;
 			width: 2.5rem;
 			transform: translate(-50%, -50%);
-		}
-
-		&::after {
-			background-color: $color-card-git;
 		}
 	}
 
@@ -100,10 +96,6 @@
 			width: 2.5rem;
 			transform: translate(-50%, -50%);
 		}
-
-		&::after {
-			background-color: $color-card-git;
-		}
 	}
 
 	&-refresh {
@@ -114,13 +106,14 @@
 		background-color: $color-card;
 		font-size: 2.5rem;
 		padding: 0;
+		color: $text-light;
 
 		@include respond(phone) {
 			margin-top: 2rem;
 		}
 
 		&:hover {
-			color: #fff;
+			color: $text-light;
 		}
 	}
 
@@ -219,6 +212,7 @@
 	padding: 0.9rem 3rem;
 	border: 2px solid $text-light;
 	color: $text-light;
+	line-height: 2.9rem;
 
 	font-size: 1.7rem;
 	font-weight: 700;
@@ -234,16 +228,63 @@
 		opacity: 1;
 		outline: 1px solid $text-light;
 	}
+
+	@include respond(phone) {
+		padding: 0.6rem 1.5rem;
+		font-size: 1.6rem;
+	}
+}
+
+.btn-square {
+	border-radius: 0.7rem;
+	background-color: transparent;
+	padding: 0.9rem 3rem;
+	border: 2px solid $text-light;
+	color: $text-light;
+	line-height: 2.9rem;
+
+	font-size: 1.7rem;
+	font-weight: 700;
+	letter-spacing: 0.6px;
+
+	opacity: 0.8;
+
+	i {
+		margin-right: 0.5em;
+	}
+
+	&:hover {
+		color: inherit;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&--green {
+		border: 2px solid rgb(85, 197, 122);
+		color: $text-light;
+	}
+
+	&--orange {
+		border: 2px solid rgb(255, 119, 48);
+		color: $text-light;
+	}
+
+	@include respond(phone) {
+		padding: 0.6rem 1.5rem;
+		font-size: 1.6rem;
+	}
 }
 
 .btn-top {
 	position: fixed;
-	z-index: 1000;
+	z-index: 3;
 
 	bottom: 10rem;
 	right: 10rem;
 
-	background-color: $color-card;
+	background-color: var(--colour-btn-jump-to-top);
 	border-radius: 50%;
 	width: 6rem;
 	height: 6rem;
