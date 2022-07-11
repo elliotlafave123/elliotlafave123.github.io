@@ -40,9 +40,10 @@
 	}
 
 	&--title {
-		font-family: $font-zen;
-		font-weight: 500;
-		font-size: 3.5rem;
+		font-family: $font-lato;
+		font-weight: 600;
+		font-size: 2.8rem;
+		line-height: 3.4rem;
 		position: relative;
 		width: fit-content;
 		color: $text-light;
