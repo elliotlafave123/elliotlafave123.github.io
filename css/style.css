@@ -522,6 +522,30 @@ a:before, a:after {
     top: -1rem;
     left: 24.4rem; }
 
+.jumpToSectionLinks a {
+  font-size: 2em;
+  display: block;
+  color: var(--primary-light); }
+  .jumpToSectionLinks a:hover {
+    color: var(--color-primary); }
+  .jumpToSectionLinks a h2 {
+    color: #7154c8;
+    margin-top: 3rem;
+    margin-bottom: 1rem; }
+    .jumpToSectionLinks a h2:hover {
+      color: var(--color-primary); }
+    @media (max-width: 37.5em) {
+      .jumpToSectionLinks a h2 {
+        font-size: 3.2rem; } }
+
+@media (max-width: 100em) {
+  .jumpToSectionLinks h2 {
+    font-size: 2.6rem; } }
+
+@media (max-width: 37.5em) {
+  .jumpToSectionLinks h2 {
+    font-size: 2.4rem; } }
+
 ::-webkit-scrollbar {
   width: 18px;
   margin: 1px; }
@@ -2804,6 +2828,10 @@ button:focus {
     @media (max-width: 37.5em) {
       .certificate img {
         width: 80%; } }
+
+.default {
+  padding: 0rem 15vw 10rem 15vw;
+  color: var(--text-light); }
 
 .section-header {
   margin: 0; }
