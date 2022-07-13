@@ -2750,9 +2750,12 @@ button:focus {
 .certificates {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   padding: 5rem 0 0 0; }
+  @media (max-width: 100em) {
+    .certificates {
+      grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 56.25em) {
     .certificates {
       grid-template-columns: repeat(2, 1fr); } }
@@ -2776,8 +2779,8 @@ button:focus {
   .certificate--title {
     font-family: "lato", sans-serif;
     font-weight: 600;
-    font-size: 2.8rem;
-    line-height: 3.4rem;
+    font-size: 2.2rem;
+    line-height: 3rem;
     position: relative;
     width: fit-content;
     color: var(--text-light);
@@ -2785,15 +2788,22 @@ button:focus {
     width: 100%; }
     @media (max-width: 100em) {
       .certificate--title {
-        font-size: 2.4rem; } }
+        font-size: 1.8rem; } }
     @media (max-width: 75em) {
       .certificate--title {
-        font-size: 2.3rem; } }
+        font-size: 1.9rem; } }
     @media (max-width: 56.25em) {
       .certificate--title {
-        font-size: 3rem; } }
+        font-size: 2rem; } }
+    @media (max-width: 37.5em) {
+      .certificate--title {
+        font-size: 2.2rem; } }
   .certificate img {
-    width: 80%; }
+    width: 95%;
+    aspect-ratio: 12 / 9; }
+    @media (max-width: 37.5em) {
+      .certificate img {
+        width: 80%; } }
 
 .section-header {
   margin: 0; }
