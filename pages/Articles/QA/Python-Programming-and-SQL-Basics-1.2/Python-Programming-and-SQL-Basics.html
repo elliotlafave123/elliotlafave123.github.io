@@ -1,317 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" type="image/png" href="../../../../img/logo.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<script src="https://kit.fontawesome.com/873062b8ef.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../../../../css/style.css" />
-		<meta name="description" content="Elliot La Fave's personal website / portfolio. A collection of all my projects" />
-		<meta name="keywords" content="Elliotlafave, Elliot, la, fave, web, design, cv, portfolio, projects, javascript, manchester" />
-		<meta name="author" content="Elliot La Fave" />
-		<link rel="shortcut icon" type="image/png" href="../../../../img/favicon.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../../img/logo.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/873062b8ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../../../css/style.css" />
+    <meta
+      name="description"
+      content="Elliot La Fave's personal website / portfolio. A collection of all my projects"
+    />
+    <meta
+      name="keywords"
+      content="Elliotlafave, Elliot, la, fave, web, design, cv, portfolio, projects, javascript, manchester"
+    />
+    <meta name="author" content="Elliot La Fave" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../../img/favicon.png"
+    />
 
-		<script defer src="../../../../scripts/DarkMode/darkmodeHome.js"></script>
-		<script defer src="../../../../scripts/DarkMode/SetDarkMode.js"></script>
-		<script defer src="../../../../scripts/currentYear.js"></script>
-		<script defer src="../../../enlargeImage.js"></script>
-		<script defer src="../../../../scripts/tooltip/tooltip.js"></script>
+    <script defer src="../../../../scripts/DarkMode/darkmodeHome.js"></script>
+    <script defer src="../../../../scripts/DarkMode/SetDarkMode.js"></script>
+    <script defer src="../../../../scripts/currentYear.js"></script>
+    <script defer src="../../../enlargeImage.js"></script>
+    <script defer src="../../../../scripts/tooltip/tooltip.js"></script>
 
-		<title>Python Programming and SQL Basics | Activity 1.2</title>
-	</head>
-	<body>
-		<!-- --- Navigation --- -->
-		<div class="navigation">
-			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
-			<label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
-			<div class="navigation__background">&nbsp;</div>
+    <title>Python Programming and SQL Basics | Activity 1.2</title>
+  </head>
+  <body>
+    <!-- --- Navigation --- -->
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button"
+        ><span class="navigation__icon">&nbsp;</span></label
+      >
+      <div class="navigation__background">&nbsp;</div>
 
-			<ul class="desktop__nav">
-				<div class="logo">
-					<a href="../../../../index.html"><img src="../../../../img/logo.png" alt="Logo" class="logo-img" /></a>
-				</div>
+      <ul class="desktop__nav">
+        <div class="logo">
+          <a href="../../../../index.html"
+            ><img src="../../../../img/logo.png" alt="Logo" class="logo-img"
+          /></a>
+        </div>
 
-				<div>
-					<li class="desktop__nav-item deleteMobile">
-						<div class="toggle-container">
-							<img src="../../../../img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun" />
-							<div>
-								<input type="checkbox" id="checkboxSlider" class="toggle" />
-								<label for="checkboxSlider" class="label">
-									<div class="ball"></div>
-								</label>
-							</div>
-							<img src="../../../../img/icons/icon-moon.svg" alt="moon icon" class="toggle-container-moon" />
-							<!-- Tooltips -->
-							<div class="tooltip">
-								<h3>Dark Mode</h3>
-								<p>Change screen mode based on your preference by toggling the switch above.</p>
-								<i class="fa-solid fa-xmark closeTooltip"></i>
-							</div>
-						</div>
-					</li>
+        <div>
+          <li class="desktop__nav-item deleteMobile">
+            <div class="toggle-container">
+              <img
+                src="../../../../img/icons/icon-sun.svg"
+                alt="sun icon"
+                class="toggle-container-sun"
+              />
+              <div>
+                <input type="checkbox" id="checkboxSlider" class="toggle" />
+                <label for="checkboxSlider" class="label">
+                  <div class="ball"></div>
+                </label>
+              </div>
+              <img
+                src="../../../../img/icons/icon-moon.svg"
+                alt="moon icon"
+                class="toggle-container-moon"
+              />
+              <!-- Tooltips -->
+              <div class="tooltip">
+                <h3>Dark Mode</h3>
+                <p>
+                  Change screen mode based on your preference by toggling the
+                  switch above.
+                </p>
+                <i class="fa-solid fa-xmark closeTooltip"></i>
+              </div>
+            </div>
+          </li>
 
-					<li class="desktop__nav-item">
-						<div class="link-wrapper">
-							<a href="../../../../index.html" class="link hover-12"><p class="link-text">Home</p></a>
-						</div>
-					</li>
-					<li class="desktop__nav-item">
-						<div class="link-wrapper">
-							<a href="../../../../CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
-						</div>
-					</li>
-					<li class="desktop__nav-item">
-						<div class="link-wrapper">
-							<a href="../../../../portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
-						</div>
-					</li>
-				</div>
-			</ul>
+          <li class="desktop__nav-item">
+            <div class="link-wrapper">
+              <a href="../../../../index.html" class="link hover-12"
+                ><p class="link-text">Home</p></a
+              >
+            </div>
+          </li>
+          <li class="desktop__nav-item">
+            <div class="link-wrapper">
+              <a href="../../../../CV.html" class="link hover-12"
+                ><p class="link-text">My CV</p></a
+              >
+            </div>
+          </li>
+          <li class="desktop__nav-item">
+            <div class="link-wrapper">
+              <a href="../../../../portfolio.html" class="link hover-12"
+                ><p class="link-text">Portfolio</p></a
+              >
+            </div>
+          </li>
+        </div>
+      </ul>
 
-			<nav class="navigation__nav">
-				<ul class="navigation__list">
-					<li class="navigation__item">
-						<a href="../../../../index.html" class="navigation__link">Home</a>
-					</li>
-					<li class="navigation__item">
-						<a href="contact-me.html" class="navigation__link">Contact Me</a>
-					</li>
-					<li class="navigation__item">
-						<a href="../../../../CV.html" class="navigation__link">My CV</a>
-					</li>
-					<li class="navigation__item">
-						<a href="../../../../portfolio.html" class="navigation__link">Portfolio</a>
-					</li>
-					<li class="navigation__item">
-						<div class="toggle-container">
-							<img src="../../../../img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun" />
-							<div>
-								<input type="checkbox" id="checkboxSlider" class="toggle" />
-								<label for="checkboxSlider" class="label">
-									<div class="ball"></div>
-								</label>
-							</div>
-							<img src="../../../../img/icons/icon-moon.svg" alt="moon icon" class="toggle-container-moon" />
-						</div>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<section class="logo mobile-only">
-			<a href="../../../../index.html"><img src="../../../../img/logo.png" alt="Logo" class="logo-img mobile-only" /></a>
-		</section>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="../../../../index.html" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="contact-me.html" class="navigation__link">Contact Me</a>
+          </li>
+          <li class="navigation__item">
+            <a href="../../../../CV.html" class="navigation__link">My CV</a>
+          </li>
+          <li class="navigation__item">
+            <a href="../../../../portfolio.html" class="navigation__link"
+              >Portfolio</a
+            >
+          </li>
+          <li class="navigation__item">
+            <div class="toggle-container">
+              <img
+                src="../../../../img/icons/icon-sun.svg"
+                alt="sun icon"
+                class="toggle-container-sun"
+              />
+              <div>
+                <input type="checkbox" id="checkboxSlider" class="toggle" />
+                <label for="checkboxSlider" class="label">
+                  <div class="ball"></div>
+                </label>
+              </div>
+              <img
+                src="../../../../img/icons/icon-moon.svg"
+                alt="moon icon"
+                class="toggle-container-moon"
+              />
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section class="logo mobile-only">
+      <a href="../../../../index.html"
+        ><img
+          src="../../../../img/logo.png"
+          alt="Logo"
+          class="logo-img mobile-only"
+      /></a>
+    </section>
 
-		<a href="#top" class="btn-top"><i class="fa-solid fa-chevron-up"></i></a>
+    <a href="#top" class="btn-top"><i class="fa-solid fa-chevron-up"></i></a>
 
-		<!-- --- Article --- -->
-		<section class="article" role="top">
-			<div class="article__interactions">
-				<a href="../index.html" class="btn-back"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
-				<button class="btn-square btn-square--green"><i class="fa-solid fa-check"></i>Approved</button>
-			</div>
+    <!-- --- Article --- -->
+    <section class="article" role="top">
+      <!-- Interactions -->
+      <div class="article__interactions">
+        <div class="article__interactions--section">
+          <a href="../index.html" class="btn-square btn-square--back"
+            ><i class="fa-solid fa-arrow-left-long"></i>Back</a
+          >
+        </div>
+        <div class="article__interactions--section">
+          <a
+            href="../../../../Files/PDF/QA/Practice Python Programming 1.pdf"
+            target="_blank"
+            class="btn-square btn-square--pdf u-margin-right-small"
+          >
+            <img src="../../../../img/icons/icon-pdf.png" alt="" /> Download
+          </a>
+          <button class="btn-square btn-square--green">
+            <i class="fa-solid fa-check"></i>Approved
+          </button>
+        </div>
+      </div>
 
-			<div class="article__header">
-				<h2>Python Programming and SQL Basics | Activity 1.2</h2>
+      <div class="article__header">
+        <h2>Python Programming and SQL Basics | Activity 1.2</h2>
 
-				<div class="article__header-info">
-					<span>Elliot La Fave</span>
-					<p>&#183;</p>
-					<span>23/05/2022</span>
-					<p>&#183;</p>
-					<span>09:40am</span>
-				</div>
-			</div>
+        <div class="article__header-info">
+          <span>Elliot La Fave</span>
+          <p>&#183;</p>
+          <span>23/05/2022</span>
+          <p>&#183;</p>
+          <span>09:40am</span>
+        </div>
+      </div>
 
-			<div class="article__section">
-				<h2>The task:</h2>
+      <div class="article__section">
+        <h2>The task:</h2>
 
-				<div class="article__image">
-					<img src="img/task.png" alt="" class="articleImg" />
-					<p>An image of the task.</p>
-				</div>
-			</div>
+        <div class="article__image">
+          <img src="img/task.png" alt="" class="articleImg" />
+          <p>An image of the task.</p>
+        </div>
+      </div>
 
-			<div class="article__section">
-				<h2>My program</h2>
+      <div class="article__section">
+        <h2>My program</h2>
 
-				<p>
-					I created a password strength checker that takes in a password using the input() method, breaks down the password into
-					its individual characters and then loops over the characters creating a score for the strength of the password.
-				</p>
-				<p>The score is based on the type of characters inputted and the number of characters within the password.</p>
+        <p>
+          I created a password strength checker that takes in a password using
+          the input() method, breaks down the password into its individual
+          characters and then loops over the characters creating a score for the
+          strength of the password.
+        </p>
+        <p>
+          The score is based on the type of characters inputted and the number
+          of characters within the password.
+        </p>
 
-				<div class="article__image">
-					<img src="img/code.png" alt="" class="articleImg" />
-					<p>An image of the code for my program.</p>
-				</div>
-			</div>
+        <div class="article__image">
+          <img src="img/code.png" alt="" class="articleImg" />
+          <p>An image of the code for my program.</p>
+        </div>
+      </div>
 
-			<div class="article__section">
-				<h2>The result of running the program</h2>
+      <div class="article__section">
+        <h2>The result of running the program</h2>
 
-				<div class="article__image article__image-thin">
-					<img src="img/result.png" alt="" class="articleImg" />
-					<p>An image of the program running in the console.</p>
-				</div>
-			</div>
+        <div class="article__image article__image-thin">
+          <img src="img/result.png" alt="" class="articleImg" />
+          <p>An image of the program running in the console.</p>
+        </div>
+      </div>
 
-			<div class="article__section">
-				<h2>Projects I've been involved in</h2>
-				<p>
-					I have been coding challenges from frontend mentor which is an online service which provides frontend website
-					development challenges that you can complete using the design files. I use HTML, CSS, and JavaScript to complete these
-					challenges and sometimes use a pre-processor like SCSS for the styling.
-				</p>
-				<p>
-					I have also been maintaining my own website which has my CV and portfolio on it with a section to search through all my
-					existing projects. <a href="../../../../portfolio.html">Portfolio</a>
-				</p>
-			</div>
+      <div class="article__section">
+        <h2>Projects I've been involved in</h2>
+        <p>
+          I have been coding challenges from frontend mentor which is an online
+          service which provides frontend website development challenges that
+          you can complete using the design files. I use HTML, CSS, and
+          JavaScript to complete these challenges and sometimes use a
+          pre-processor like SCSS for the styling.
+        </p>
+        <p>
+          I have also been maintaining my own website which has my CV and
+          portfolio on it with a section to search through all my existing
+          projects. <a href="../../../../portfolio.html">Portfolio</a>
+        </p>
+      </div>
 
-			<div class="article__section">
-				<h2>What I've recently learned</h2>
-				<p>
-					I have recently learned how to use web API’s using JavaScript fetch method to create applications that use real time
-					data from the internet within my own webpages.
-				</p>
-				<p>
-					I have used web APIs to create a Map workouts application and a movie search application which uses data from The Movie
-					Database to search for a user’s inputted request and display the response on the screen.
-				</p>
-				<p>
-					I did this by parsing the JSON response from the server and using the ForEach() method to loop through the data and
-					display it on the screen.
-				</p>
-			</div>
+      <div class="article__section">
+        <h2>What I've recently learned</h2>
+        <p>
+          I have recently learned how to use web API’s using JavaScript fetch
+          method to create applications that use real time data from the
+          internet within my own webpages.
+        </p>
+        <p>
+          I have used web APIs to create a Map workouts application and a movie
+          search application which uses data from The Movie Database to search
+          for a user’s inputted request and display the response on the screen.
+        </p>
+        <p>
+          I did this by parsing the JSON response from the server and using the
+          ForEach() method to loop through the data and display it on the
+          screen.
+        </p>
+      </div>
 
-			<div class="article__section">
-				<h2>Tech Stacks</h2>
+      <div class="article__section">
+        <h2>Tech Stacks</h2>
 
-				<p>At work we use a complex tech stack which includes:</p>
-				<ul class="u-margin-bottom-medium">
-					<li>HTML</li>
-					<li>SCSS</li>
-					<li>JavaScript</li>
-					<li>Siebel CRM</li>
-					<li>VUE JS</li>
-					<li>SiteCore CMS</li>
-				</ul>
+        <p>At work we use a complex tech stack which includes:</p>
+        <ul class="u-margin-bottom-medium">
+          <li>HTML</li>
+          <li>SCSS</li>
+          <li>JavaScript</li>
+          <li>Siebel CRM</li>
+          <li>VUE JS</li>
+          <li>SiteCore CMS</li>
+        </ul>
 
-				<p>They use the following software:</p>
-				<ul class="u-margin-bottom-medium">
-					<li>VisualStudio 2022</li>
-					<li>VSCode</li>
-					<li>SQL Server Management Studio 2019</li>
-					<li>Siebel CRM</li>
-				</ul>
+        <p>They use the following software:</p>
+        <ul class="u-margin-bottom-medium">
+          <li>VisualStudio 2022</li>
+          <li>VSCode</li>
+          <li>SQL Server Management Studio 2019</li>
+          <li>Siebel CRM</li>
+        </ul>
 
-				<p>At home my personal tech stack is:</p>
-				<ul>
-					<li>Netlify</li>
-					<li>HTML</li>
-					<li>CSS / SCSS</li>
-					<li>JavaScript</li>
-					<li>JavaScript</li>
-					<li>Git</li>
-					<li>Node JS</li>
-					<li>MongoDB</li>
-					<li>Post CSS</li>
-					<li>Docker</li>
-					<li>APIs</li>
-				</ul>
+        <p>At home my personal tech stack is:</p>
+        <ul>
+          <li>Netlify</li>
+          <li>HTML</li>
+          <li>CSS / SCSS</li>
+          <li>JavaScript</li>
+          <li>JavaScript</li>
+          <li>Git</li>
+          <li>Node JS</li>
+          <li>MongoDB</li>
+          <li>Post CSS</li>
+          <li>Docker</li>
+          <li>APIs</li>
+        </ul>
 
-				<p>View my <a href="../../../../index.html#tech-stack"> Tech Stack</a></p>
-			</div>
-		</section>
+        <p>
+          View my <a href="../../../../index.html#tech-stack"> Tech Stack</a>
+        </p>
+      </div>
+    </section>
 
-		<!-- --- Footer --- -->
-		<section class="contact u-margin-top-large">
-			<img src="../../../../img/contact.png" alt="" class="contact__img" />
-			<h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
-			<div class="contact__form">
-				<form
-					name="contact"
-					method="POST"
-					data-netlify="true"
-					class="form"
-					id="form-contact"
-					action="../../pages/success/index.html"
-					netlify
-				>
-					<div class="form__group">
-						<input type="text" class="form__input form__input-small" placeholder="Full name" id="name" name="name" required />
-						<label for="name" class="form__label">Full name</label>
-					</div>
+    <!-- --- Footer --- -->
+    <section class="contact u-margin-top-large">
+      <img src="../../../../img/contact.png" alt="" class="contact__img" />
+      <h3 class="skills__header u-margin-bottom-large" id="contactme">
+        Contact Me
+      </h3>
+      <div class="contact__form">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          class="form"
+          id="form-contact"
+          action="../../pages/success/index.html"
+          netlify
+        >
+          <div class="form__group">
+            <input
+              type="text"
+              class="form__input form__input-small"
+              placeholder="Full name"
+              id="name"
+              name="name"
+              required
+            />
+            <label for="name" class="form__label">Full name</label>
+          </div>
 
-					<div class="form__group">
-						<input
-							type="email"
-							class="form__input form__input-small"
-							placeholder="Email address"
-							id="email"
-							name="email"
-							required
-						/>
-						<label for="email" class="form__label">Email address</label>
-					</div>
+          <div class="form__group">
+            <input
+              type="email"
+              class="form__input form__input-small"
+              placeholder="Email address"
+              id="email"
+              name="email"
+              required
+            />
+            <label for="email" class="form__label">Email address</label>
+          </div>
 
-					<div class="form__group">
-						<label for="message" class="form__label u-margin-bottom-small">Your message</label>
-						<textarea
-							class="form__input form__input-textarea"
-							id="message"
-							rows="8"
-							form="form-contact"
-							name="message"
-							required
-						></textarea>
-					</div>
+          <div class="form__group">
+            <label for="message" class="form__label u-margin-bottom-small"
+              >Your message</label
+            >
+            <textarea
+              class="form__input form__input-textarea"
+              id="message"
+              rows="8"
+              form="form-contact"
+              name="message"
+              required
+            ></textarea>
+          </div>
 
-					<button class="btn btn-purple-post u-margin-top-small" type="submit">Send Message! &nbsp; &rarr;</button>
-				</form>
-			</div>
-		</section>
+          <button class="btn btn-purple-post u-margin-top-small" type="submit">
+            Send Message! &nbsp; &rarr;
+          </button>
+        </form>
+      </div>
+    </section>
 
-		<div class="wave-top">
-			<img src="../../../../img/wave5.png" alt="" class="wave-bottom__img" id="wave5-dark" />
-			<img src="../../../../img/wave5-light.png" alt="" class="wave-top__img hidden" id="wave5-light" />
-		</div>
+    <div class="wave-top">
+      <img
+        src="../../../../img/wave5.png"
+        alt=""
+        class="wave-bottom__img"
+        id="wave5-dark"
+      />
+      <img
+        src="../../../../img/wave5-light.png"
+        alt=""
+        class="wave-top__img hidden"
+        id="wave5-light"
+      />
+    </div>
 
-		<footer class="footer">
-			<div class="footer__logo">
-				<a href="../../../../index.html"><img src="../../../../img/logo.png" alt="Footer Logo" /></a>
-			</div>
-			<ul class="footer__nav">
-				<li class="footer__nav-item">
-					<a href="#contactme">Contact Me</a>
-				</li>
-				<li class="footer__nav-item">
-					<a href="../../../../CV.html">CV</a>
-				</li>
-				<li class="footer__nav-item">
-					<a href="../../../../portfolio.html">Portfolio</a>
-				</li>
-			</ul>
-			<div class="footer__icons">
-				<a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" target="blank"
-					><img src="../../../../img/linkedin-brands.svg" alt="Linkedin Logo"
-				/></a>
-				<a href="https://github.com/elliotlafave123/elliotlafave123.github.io"
-					><img src="../../../../img/github-brands.svg" alt="GitHub Logo" target="blank"
-				/></a>
-				<a href="https://codepen.io/elliotlafave123" target="_blank"
-					><img src="../../../../img/codepen-brands.svg" alt="Codepen Logo"
-				/></a>
-			</div>
-			<p class="footer__paragraph">Designed and coded by Elliot La Fave using SCSS, JS, NodeJS and MongoDB.</p>
-			<p class="footer__paragraph">Copyright © Elliot La Fave <span id="currentYear">0000</span>.</p>
-		</footer>
-	</body>
+    <footer class="footer">
+      <div class="footer__logo">
+        <a href="../../../../index.html"
+          ><img src="../../../../img/logo.png" alt="Footer Logo"
+        /></a>
+      </div>
+      <ul class="footer__nav">
+        <li class="footer__nav-item">
+          <a href="#contactme">Contact Me</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="../../../../CV.html">CV</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="../../../../portfolio.html">Portfolio</a>
+        </li>
+      </ul>
+      <div class="footer__icons">
+        <a
+          href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES"
+          target="blank"
+          ><img src="../../../../img/linkedin-brands.svg" alt="Linkedin Logo"
+        /></a>
+        <a href="https://github.com/elliotlafave123/elliotlafave123.github.io"
+          ><img
+            src="../../../../img/github-brands.svg"
+            alt="GitHub Logo"
+            target="blank"
+        /></a>
+        <a href="https://codepen.io/elliotlafave123" target="_blank"
+          ><img src="../../../../img/codepen-brands.svg" alt="Codepen Logo"
+        /></a>
+      </div>
+      <p class="footer__paragraph">
+        Designed and coded by Elliot La Fave using SCSS, JS, NodeJS and MongoDB.
+      </p>
+      <p class="footer__paragraph">
+        Copyright © Elliot La Fave <span id="currentYear">0000</span>.
+      </p>
+    </footer>
+  </body>
 </html>

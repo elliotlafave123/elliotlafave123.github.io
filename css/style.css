@@ -41,6 +41,12 @@
 .u-center-text {
   text-align: center !important; }
 
+.u-margin-right-small {
+  margin-right: 1.2rem !important; }
+
+.u-margin-left-small {
+  margin-left: 1.2rem !important; }
+
 .u-margin-top-small {
   margin-top: 1.2rem !important; }
 
@@ -734,27 +740,6 @@ a:before, a:after {
   animation-fill-mode: backwards;
   /** automatically hides btn **/ }
 
-.btn-back {
-  border-radius: 0.7rem;
-  background-color: transparent;
-  padding: 0.9rem 3rem;
-  border: 2px solid var(--text-light);
-  color: var(--text-light);
-  line-height: 2.9rem;
-  font-size: 1.7rem;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  opacity: 0.8; }
-  .btn-back i {
-    margin-right: 0.5em; }
-  .btn-back:hover {
-    opacity: 1;
-    outline: 1px solid var(--text-light); }
-  @media (max-width: 37.5em) {
-    .btn-back {
-      padding: 0.6rem 1.5rem;
-      font-size: 1.6rem; } }
-
 .btn-square {
   border-radius: 0.7rem;
   background-color: transparent;
@@ -765,21 +750,34 @@ a:before, a:after {
   font-size: 1.7rem;
   font-weight: 700;
   letter-spacing: 0.6px;
-  opacity: 0.8; }
+  opacity: 0.8;
+  display: flex;
+  align-items: center; }
   .btn-square i {
+    margin-right: 0.5em; }
+  .btn-square img {
+    height: 1.9rem;
     margin-right: 0.5em; }
   .btn-square:hover {
     color: inherit; }
   .btn-square:focus {
     outline: none; }
   .btn-square--green {
-    border: 2px solid #55c57a;
-    color: var(--text-light); }
+    border: 2px solid #55c57a; }
   .btn-square--orange {
-    border: 2px solid #ff7730;
-    color: var(--text-light); }
+    border: 2px solid #ff7730; }
+  .btn-square--pdf {
+    border: 2px solid #ed1c24; }
   @media (max-width: 37.5em) {
     .btn-square {
+      padding: 0.6rem 1.5rem;
+      font-size: 1.6rem; } }
+  .btn-square--back:hover {
+    color: var(--text-light);
+    outline: 2px solid var(--text-light);
+    opacity: 1; }
+  @media (max-width: 37.5em) {
+    .btn-square--back {
       padding: 0.6rem 1.5rem;
       font-size: 1.6rem; } }
 
@@ -2856,6 +2854,10 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    .article__interactions--section {
+      height: 100%;
+      display: flex;
+      align-items: center; }
   .article__header h2 {
     font-size: 4.2rem;
     line-height: 5.4rem; }

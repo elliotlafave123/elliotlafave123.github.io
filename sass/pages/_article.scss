@@ -1,300 +1,306 @@
 .article {
-	padding: $section-padding-y 20vw;
-	color: $text-light;
+  padding: $section-padding-y 20vw;
+  color: $text-light;
 
-	@include respond(laptop) {
-		padding: $section-padding-y 18vw;
-	}
+  @include respond(laptop) {
+    padding: $section-padding-y 18vw;
+  }
 
-	@include respond(phone) {
-		padding: 10rem 3.5rem 0 3.5rem;
-	}
+  @include respond(phone) {
+    padding: 10rem 3.5rem 0 3.5rem;
+  }
 
-	&__container {
-		padding: 10rem $section-padding-x 0 $section-padding-x;
+  &__container {
+    padding: 10rem $section-padding-x 0 $section-padding-x;
 
-		@include respond(phone) {
-			padding: 10rem 3rem 0 3rem;
-		}
-	}
+    @include respond(phone) {
+      padding: 10rem 3rem 0 3rem;
+    }
+  }
 
-	&__interactions {
-		padding: 0 0 8rem 0;
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+  &__interactions {
+    padding: 0 0 8rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-	&__header {
-		h2 {
-			font-size: 4.2rem;
-			line-height: 5.4rem;
+    &--section {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
 
-			@include respond(phone) {
-				font-size: 3rem;
-				line-height: 3.8rem;
-			}
-		}
+  &__header {
+    h2 {
+      font-size: 4.2rem;
+      line-height: 5.4rem;
 
-		&-info {
-			width: 100%;
-			display: flex;
-			align-items: center;
-			margin-bottom: 5rem;
+      @include respond(phone) {
+        font-size: 3rem;
+        line-height: 3.8rem;
+      }
+    }
 
-			span,
-			p {
-				font-size: 1.6rem;
-				margin-right: 1rem;
-			}
+    &-info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 5rem;
 
-			p {
-				font-size: 3rem;
-			}
-		}
-	}
+      span,
+      p {
+        font-size: 1.6rem;
+        margin-right: 1rem;
+      }
 
-	&__section {
-		margin-bottom: 4.5rem;
-		h2 {
-			font-size: 3.8rem;
-			margin-bottom: 2.4rem;
+      p {
+        font-size: 3rem;
+      }
+    }
+  }
 
-			@include respond(phone) {
-				font-size: 3rem;
-				line-height: 3.8rem;
-			}
-		}
+  &__section {
+    margin-bottom: 4.5rem;
+    h2 {
+      font-size: 3.8rem;
+      margin-bottom: 2.4rem;
 
-		p {
-			font-size: 1.9rem;
-			margin-bottom: 2.6rem;
-			letter-spacing: 1.2px;
-		}
+      @include respond(phone) {
+        font-size: 3rem;
+        line-height: 3.8rem;
+      }
+    }
 
-		ul,
-		ol {
-			margin-left: 2rem;
+    p {
+      font-size: 1.9rem;
+      margin-bottom: 2.6rem;
+      letter-spacing: 1.2px;
+    }
 
-			p {
-				margin: 0 0 0 1rem;
-			}
-		}
+    ul,
+    ol {
+      margin-left: 2rem;
 
-		li {
-			font-size: 1.9rem;
-			margin-bottom: 0.6rem;
-		}
+      p {
+        margin: 0 0 0 1rem;
+      }
+    }
 
-		a {
-			transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-			color: #dd94ff;
+    li {
+      font-size: 1.9rem;
+      margin-bottom: 0.6rem;
+    }
 
-			&:hover {
-				color: #d06cffd0;
-			}
-		}
-	}
+    a {
+      transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      color: #dd94ff;
 
-	&__image {
-		padding: 2rem 0;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+      &:hover {
+        color: #d06cffd0;
+      }
+    }
+  }
 
-		position: relative;
+  &__image {
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-		&:hover {
-			&::before {
-				color: $text-light;
-				position: absolute;
-				top: 6rem;
-				right: 10rem;
-				content: "\f424";
-				font-family: "Font Awesome\ 5 Free";
-				font-weight: 900;
+    position: relative;
 
-				font-size: 1.6rem;
-				line-height: 1.6rem;
-				background-color: var(--colour-btn-expand-img);
-				width: 4rem;
-				height: 4rem;
-				border-radius: 50%;
+    &:hover {
+      &::before {
+        color: $text-light;
+        position: absolute;
+        top: 6rem;
+        right: 10rem;
+        content: "\f424";
+        font-family: "Font Awesome\ 5 Free";
+        font-weight: 900;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-		}
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        background-color: var(--colour-btn-expand-img);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
 
-		@include respond(tab-port) {
-			&::before {
-				color: $text-light;
-				position: absolute;
-				top: 6rem;
-				right: 4rem;
-				content: "\f424";
-				font-family: "Font Awesome\ 5 Free";
-				font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
 
-				font-size: 1.6rem;
-				line-height: 1.6rem;
-				background-color: var(--colour-btn-expand-img);
-				width: 4rem;
-				height: 4rem;
-				border-radius: 50%;
+    @include respond(tab-port) {
+      &::before {
+        color: $text-light;
+        position: absolute;
+        top: 6rem;
+        right: 4rem;
+        content: "\f424";
+        font-family: "Font Awesome\ 5 Free";
+        font-weight: 900;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        background-color: var(--colour-btn-expand-img);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
 
-			&:hover {
-				color: $text-light;
-				&::before {
-					position: absolute;
-					top: 6rem;
-					right: 4rem;
-					content: "\f424";
-					font-family: "Font Awesome\ 5 Free";
-					font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-					font-size: 1.6rem;
-					line-height: 1.6rem;
-					background-color: var(--colour-btn-expand-img);
-					width: 4rem;
-					height: 4rem;
-					border-radius: 50%;
+      &:hover {
+        color: $text-light;
+        &::before {
+          position: absolute;
+          top: 6rem;
+          right: 4rem;
+          content: "\f424";
+          font-family: "Font Awesome\ 5 Free";
+          font-weight: 900;
 
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				}
-			}
-		}
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          background-color: var(--colour-btn-expand-img);
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
 
-		@include respond(tab-port) {
-			&::before {
-				color: $text-light;
-				position: absolute;
-				top: 3.5rem;
-				right: 1rem;
-				content: "\f424";
-				font-family: "Font Awesome\ 5 Free";
-				font-weight: 900;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
 
-				font-size: 1.6rem;
-				line-height: 1.6rem;
-				background-color: var(--colour-btn-expand-img);
-				width: 4rem;
-				height: 4rem;
-				border-radius: 50%;
+    @include respond(tab-port) {
+      &::before {
+        color: $text-light;
+        position: absolute;
+        top: 3.5rem;
+        right: 1rem;
+        content: "\f424";
+        font-family: "Font Awesome\ 5 Free";
+        font-weight: 900;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        background-color: var(--colour-btn-expand-img);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
 
-			&:hover {
-				&::before {
-					color: $text-light;
-					position: absolute;
-					top: 3.5rem;
-					right: 1rem;
-					content: "\f424";
-					font-family: "Font Awesome\ 5 Free";
-					font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-					font-size: 1.6rem;
-					line-height: 1.6rem;
-					background-color: var(--colour-btn-expand-img);
-					width: 4rem;
-					height: 4rem;
-					border-radius: 50%;
+      &:hover {
+        &::before {
+          color: $text-light;
+          position: absolute;
+          top: 3.5rem;
+          right: 1rem;
+          content: "\f424";
+          font-family: "Font Awesome\ 5 Free";
+          font-weight: 900;
 
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				}
-			}
-		}
-		img {
-			width: 90%;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          background-color: var(--colour-btn-expand-img);
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
 
-			@include respond(phone) {
-				width: 100%;
-			}
-		}
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    img {
+      width: 90%;
 
-		p {
-			font-size: 1.6rem;
-			margin-top: 1rem;
-			align-self: flex-start;
-		}
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
 
-		&-thin {
-			img {
-				width: 60%;
+    p {
+      font-size: 1.6rem;
+      margin-top: 1rem;
+      align-self: flex-start;
+    }
 
-				@include respond(phone) {
-					width: 100%;
-				}
-			}
-		}
+    &-thin {
+      img {
+        width: 60%;
 
-		&-enlarged {
-			z-index: 1000;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			background-color: rgba(0, 0, 0, 0.7);
-			padding: 0;
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+    }
 
-			display: flex;
-			align-items: center;
-			justify-content: center;
+    &-enlarged {
+      z-index: 1000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 0;
 
-			img {
-				z-index: 1200;
-				max-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-				@include respond(phone) {
-					width: 100%;
-				}
-			}
+      img {
+        z-index: 1200;
+        max-height: 100vh;
 
-			p {
-				visibility: hidden;
-				display: none;
-			}
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
 
-			&-thin {
-				img {
-					width: 60%;
+      p {
+        visibility: hidden;
+        display: none;
+      }
 
-					@include respond(phone) {
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
+      &-thin {
+        img {
+          width: 60%;
+
+          @include respond(phone) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 #video {
-	width: 80%;
-	margin-left: 10%;
-	margin-bottom: 10rem;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 10rem;
 
-	@include respond(phone) {
-		width: 100%;
-		margin-left: 0;
-		margin-bottom: 5rem;
-	}
+  @include respond(phone) {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5rem;
+  }
 }
 
 .articleImg {
