@@ -1,0 +1,62 @@
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  &-img {
+    width: 100%;
+    height: 18rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  &-tag {
+    width: 15%;
+    height: 1.4rem;
+    margin-bottom: 2rem;
+    margin-right: 0.8rem;
+    border-radius: 1.4rem;
+  }
+
+  &-text {
+    width: 100%;
+    height: 1.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1.4rem;
+
+    &-small {
+      width: 60%;
+      height: 1.4rem;
+      margin-bottom: 0.5rem;
+      border-radius: 1.4rem;
+    }
+
+    &-large {
+      height: 1.8rem;
+      border-radius: 1.8rem;
+    }
+  }
+
+  &-paragraph {
+    width: 100%;
+    height: 1.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.4rem;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(210, 9%, 31%);
+  }
+  100% {
+    background-color: hsl(210, 9%, 40%);
+  }
+}
