@@ -22,6 +22,33 @@ const pageNumberCurrentMobile = document.getElementById(
 );
 const pageNumberTotalMobile = document.getElementById("pageNumberTotalMobile");
 
+// Sort by date function
+(function () {
+  if (typeof Object.defineProperty === "function") {
+    try {
+      Object.defineProperty(Array.prototype, "sortBy", { value: sb });
+    } catch (e) {}
+  }
+  if (!Array.prototype.sortBy) Array.prototype.sortBy = sb;
+
+  function sb(f) {
+    for (var i = this.length; i; ) {
+      var o = this[--i];
+      this[i] = [].concat(f.call(o, o, i), o);
+    }
+    this.sort(function (a, b) {
+      for (var i = 0, len = a.length; i < len; ++i) {
+        if (a[i] != b[i]) return a[i] < b[i] ? -1 : 1;
+      }
+      return 0;
+    });
+    for (var i = this.length; i; ) {
+      this[--i] = this[i][this[i].length - 1];
+    }
+    return this;
+  }
+})();
+
 let hidePageChangeButtons = false;
 function togglePageChangeButtons() {
   if (hidePageChangeButtons) {
@@ -56,8 +83,6 @@ const displayProjectsOnPages = function (data) {
     perChunk = columns * 4;
   }
 
-  // const inputArray = data.reverse();
-
   const result = data.reduce((resultArray, item, index) => {
     const chunkIndex = Math.floor(index / perChunk);
 
@@ -74,6 +99,7 @@ const displayProjectsOnPages = function (data) {
     pageNumberTotalMobile.innerText = result.length;
   }
 
+  console.log(result[page]);
   if (result[page]) {
     displayProjects(result[page]);
     pageNumberCurrent.innerText = page + 1;
@@ -110,7 +136,14 @@ fetch("https://warm-caverns-73488.herokuapp.com/api/v1/projects")
     ];
 
     if (cardsContainer) {
-      displayProjectsOnPages(data.reverse());
+      // sort by date
+      displayProjectsOnPages(
+        data
+          .sortBy(function (o) {
+            return new Date(o.date);
+          })
+          .reverse()
+      );
     }
 
     getFeaturedData(featuredData);
