@@ -18,6 +18,68 @@
 		}
 	}
 
+	&__grid {
+		display: grid;
+		grid-template-columns: 6fr 2fr;
+		gap: 0rem 5rem;
+
+		@include respond(tab-port) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__sidebar {
+		background-color: $color-card;
+		height: min-content;
+		padding: 3rem;
+		position: fixed;
+		right: 18vw;
+		width: 14vw;
+
+		@include respond(laptop) {
+			right: 10vw;
+			width: 20vw;
+		}
+		@include respond(tab-land) {
+			right: 10vw;
+			width: 20vw;
+		}
+
+		li a {
+			text-decoration: none;
+			display: block;
+			padding: 0.125rem 0;
+			color: #ccc;
+			font-size: 1.6rem;
+			transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+			color: rgb(130, 121, 137);
+
+			&:hover,
+			&:focus {
+				color: $text-light;
+			}
+		}
+
+		ul,
+		ol {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			margin-left: 1rem;
+
+			&.active > a {
+				color: $text-light;
+				font-weight: 500;
+			}
+		}
+
+		h1 {
+			font-weight: 300;
+		}
+	}
+
 	&__interactions {
 		padding: 0 0 8rem 0;
 		width: 100%;

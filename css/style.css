@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 :root {
@@ -2916,6 +2917,51 @@ button:focus {
     @media (max-width: 37.5em) {
       .article__container {
         padding: 10rem 3rem 0 3rem; } }
+  .article__grid {
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    gap: 0rem 5rem; }
+    @media (max-width: 56.25em) {
+      .article__grid {
+        grid-template-columns: 1fr; } }
+  .article__sidebar {
+    background-color: var(--color-card);
+    height: min-content;
+    padding: 3rem;
+    position: fixed;
+    right: 18vw;
+    width: 14vw; }
+    @media (max-width: 100em) {
+      .article__sidebar {
+        right: 10vw;
+        width: 20vw; } }
+    @media (max-width: 75em) {
+      .article__sidebar {
+        right: 10vw;
+        width: 20vw; } }
+    .article__sidebar li a {
+      text-decoration: none;
+      display: block;
+      padding: 0.125rem 0;
+      color: #ccc;
+      font-size: 1.6rem;
+      transition: all 50ms ease-in-out;
+      /* 💡 This small transition makes setting of the active state smooth */
+      color: #827989; }
+      .article__sidebar li a:hover, .article__sidebar li a:focus {
+        color: var(--text-light); }
+    .article__sidebar ul,
+    .article__sidebar ol {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    .article__sidebar li {
+      margin-left: 1rem; }
+      .article__sidebar li.active > a {
+        color: var(--text-light);
+        font-weight: 500; }
+    .article__sidebar h1 {
+      font-weight: 300; }
   .article__interactions {
     padding: 0 0 8rem 0;
     width: 100%;
