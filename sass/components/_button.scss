@@ -1,308 +1,316 @@
 .btn {
-  &,
-  &:link,
-  &:visited {
-    /** Pseudoelement for links **/
-    text-transform: uppercase;
-    text-decoration: none;
+	&,
+	&:link,
+	&:visited {
+		/** Pseudoelement for links **/
+		text-transform: uppercase;
+		text-decoration: none;
 
-    font-weight: 400;
+		font-weight: 400;
 
-    display: inline-block;
-    border-radius: 5rem;
-    transition: all 0.2s; /** Edits transition speed **/
-    position: relative;
+		display: inline-block;
+		border-radius: 5rem;
+		transition: all 0.2s; /** Edits transition speed **/
+		position: relative;
 
-    border: none; // buttons have a border by defualt.
-    cursor: pointer;
-  }
+		border: none; // buttons have a border by defualt.
+		cursor: pointer;
+	}
 
-  &:hover {
-    /** hover pseudoclass **/
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2); /** box shadow property  (x y blur color) **/
+	&:hover {
+		/** hover pseudoclass **/
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba($color-black, 0.2); /** box shadow property  (x y blur color) **/
 
-    &::after {
-      transform: scale(1.4, 1.6); /** Changes the size of the element **/
-      opacity: 0;
-    }
-  }
+		&::after {
+			transform: scale(1.4, 1.6); /** Changes the size of the element **/
+			opacity: 0;
+		}
+	}
 
-  &:active {
-    /** clicked pseudoclass **/
-    transform: translateY(-2px);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-  }
+	&:active {
+		/** clicked pseudoclass **/
+		transform: translateY(-2px);
+		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+	}
 
-  &--card {
-    background-color: $color-primary;
-    color: $color-white;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-    width: 75%;
-    position: absolute !important;
-    bottom: 0;
-    left: 0;
+	&--card {
+		background-color: $color-primary;
+		color: $color-white;
+		padding: 1rem 3rem;
+		font-size: 1.2rem;
+		width: 75%;
+		position: absolute !important;
+		bottom: 0;
+		left: 0;
 
-    &-icon {
-      position: absolute;
-      right: 2rem;
-      top: 0.25rem;
-      font-size: 2rem;
-    }
+		&-icon {
+			position: absolute;
+			right: 2rem;
+			top: 0.25rem;
+			font-size: 2rem;
+		}
 
-    &::after {
-      background-color: $color-primary-dark;
-    }
-  }
+		&::after {
+			background-color: $color-primary-dark;
+		}
+	}
 
-  &--git {
-    background-color: var(--colour-btn-git);
-    position: absolute !important;
-    bottom: 0;
-    right: 0;
-    width: 4.2rem;
-    height: 4.2rem;
+	&--git {
+		background-color: var(--colour-btn-git);
+		position: absolute !important;
+		bottom: 0;
+		right: 0;
+		width: 4.2rem;
+		height: 4.2rem;
 
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 2.5rem;
-      transform: translate(-50%, -50%);
-    }
-  }
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 2.5rem;
+			transform: translate(-50%, -50%);
+		}
+	}
 
-  &--github {
-    line-height: 2rem;
-    font-size: 2rem;
-    background-color: $color-card-git;
-    color: $color-white;
-    padding: 1.6rem 4rem;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+	&--github {
+		line-height: 2rem;
+		font-size: 2rem;
+		background-color: $color-card-git;
+		color: $color-white;
+		padding: 1.6rem 4rem;
+		margin-right: 2rem;
+		margin-bottom: 1rem;
 
-    @include respond(tab-land) {
-      padding: 1.4rem 3rem;
-      font-size: 1.7rem;
-    }
+		@include respond(tab-land) {
+			padding: 1.4rem 3rem;
+			font-size: 1.7rem;
+		}
 
-    &::after {
-      background-color: $color-card-git;
-    }
+		&::after {
+			background-color: $color-card-git;
+		}
 
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 2.5rem;
-      transform: translate(-50%, -50%);
-    }
-  }
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 2.5rem;
+			transform: translate(-50%, -50%);
+		}
+	}
 
-  &-refresh {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    margin-top: 3rem;
-    background-color: $color-card;
-    font-size: 2.5rem;
-    padding: 0;
-    color: $text-light;
+	&-refresh {
+		width: 6rem;
+		height: 6rem;
+		border-radius: 50%;
+		margin-top: 3rem;
+		background-color: $color-card;
+		font-size: 2.5rem;
+		padding: 0;
+		color: $text-light;
 
-    @include respond(phone) {
-      margin-top: 2rem;
-    }
+		@include respond(phone) {
+			margin-top: 2rem;
+		}
 
-    &:hover {
-      color: $text-light;
-    }
-  }
+		&:hover {
+			color: $text-light;
+		}
+	}
 
-  &-purple {
-    &-landing {
-      background-color: $color-primary;
-      color: $color-white;
-      font-size: 3rem;
-      padding: 1rem 6rem;
-      margin: 10rem 0 10rem 0;
+	&-purple {
+		&-landing {
+			background-color: $color-primary;
+			color: $color-white;
+			font-size: 3rem;
+			padding: 1rem 6rem;
+			margin: 10rem 0 10rem 0;
 
-      @include respond(tab-land) {
-        margin: 4rem 0 10rem 0;
-        padding: 0.7rem 4rem;
-        font-size: 2.5rem;
-      }
-    }
+			@include respond(tab-land) {
+				margin: 4rem 0 10rem 0;
+				padding: 0.7rem 4rem;
+				font-size: 2.5rem;
+			}
+		}
 
-    &::after {
-      background-color: $color-primary-dark;
-    }
+		&::after {
+			background-color: $color-primary-dark;
+		}
 
-    &-small {
-      font-size: 2rem;
-      line-height: 2rem;
-      background-color: $color-primary;
-      color: $color-white;
-      padding: 1.6rem 4rem;
-      margin-right: 2rem;
-      margin-bottom: 1rem;
+		&-small {
+			font-size: 2rem;
+			line-height: 2rem;
+			background-color: $color-primary;
+			color: $color-white;
+			padding: 1.6rem 4rem;
+			margin-right: 2rem;
+			margin-bottom: 1rem;
 
-      @include respond(tab-land) {
-        padding: 1.4rem 3rem;
-        font-size: 1.7rem;
-      }
+			@include respond(tab-land) {
+				padding: 1.4rem 3rem;
+				font-size: 1.7rem;
+			}
 
-      &::after {
-        background-color: $color-primary-dark;
-      }
-    }
+			&::after {
+				background-color: $color-primary-dark;
+			}
+		}
 
-    &-cv {
-      font-size: 2rem;
-      background-color: $color-primary;
-      color: $color-white;
-      padding: 1rem 6rem;
+		&-cv {
+			font-size: 2rem;
+			background-color: $color-primary;
+			color: $color-white;
+			padding: 1rem 6rem;
 
-      &::after {
-        background-color: $color-primary-dark;
-      }
-      margin-left: 2rem;
+			&::after {
+				background-color: $color-primary-dark;
+			}
+			margin-left: 2rem;
 
-      @include respond(phone) {
-        text-align: center;
-        width: 100%;
-        margin-left: 0;
-        margin-top: 3rem;
-        display: block;
-        margin-bottom: 1.5rem;
-      }
-    }
+			@include respond(phone) {
+				text-align: center;
+				width: 100%;
+				margin-left: 0;
+				margin-top: 3rem;
+				display: block;
+				margin-bottom: 1.5rem;
+			}
+		}
 
-    &-post {
-      font-size: 2.2rem;
-      background-color: $color-primary;
-      color: $color-white;
-      padding: 1.5rem 4rem;
+		&-post {
+			font-size: 2.2rem;
+			background-color: $color-primary;
+			color: $color-white;
+			padding: 1.5rem 4rem;
 
-      &::after {
-        background-color: $color-primary-dark;
-      }
-    }
-  }
+			&::after {
+				background-color: $color-primary-dark;
+			}
+		}
+	}
 
-  &::after {
-    /** add element behind button **/
-    content: ""; /** must specify content for it to appear, can be empty **/
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /** Makes element behind previous element **/
-    transition: all 0.4s;
-  }
+	&::after {
+		/** add element behind button **/
+		content: ""; /** must specify content for it to appear, can be empty **/
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		border-radius: 5rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1; /** Makes element behind previous element **/
+		transition: all 0.4s;
+	}
 
-  &-animated {
-    animation: moveInBtn 1.2s ease-in-out 0.75s;
-    animation-fill-mode: backwards; /** automatically hides btn **/
-  }
+	&-animated {
+		animation: moveInBtn 1.2s ease-in-out 0.75s;
+		animation-fill-mode: backwards; /** automatically hides btn **/
+	}
 }
 
 .btn-square {
-  border-radius: 0.7rem;
-  background-color: transparent;
-  padding: 0.9rem 3rem;
-  border: 2px solid $text-light;
-  color: $text-light;
-  line-height: 2.9rem;
+	border-radius: 0.7rem;
+	background-color: transparent;
+	padding: 0.9rem 3rem;
+	border: 2px solid $text-light;
+	color: $text-light;
+	line-height: 2.9rem;
 
-  font-size: 1.7rem;
-  font-weight: 700;
-  letter-spacing: 0.6px;
+	font-size: 1.7rem;
+	font-weight: 700;
+	letter-spacing: 0.6px;
 
-  opacity: 0.8;
+	opacity: 0.8;
 
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  i {
-    margin-right: 0.5em;
-  }
+	i {
+		margin-right: 0.5em;
+	}
 
-  img {
-    height: 1.9rem;
-    margin-right: 0.5em;
-  }
+	img {
+		height: 1.9rem;
+		margin-right: 0.5em;
+	}
 
-  &:hover {
-    color: inherit;
-  }
+	&:hover {
+		color: inherit;
+	}
 
-  &:focus {
-    outline: none;
-  }
+	&:focus {
+		outline: none;
+	}
 
-  &--green {
-    border: 2px solid rgb(85, 197, 122);
-  }
+	&--green {
+		border: 2px solid rgb(85, 197, 122);
+	}
 
-  &--orange {
-    border: 2px solid rgb(255, 119, 48);
-  }
+	&--orange {
+		border: 2px solid rgb(255, 119, 48);
+	}
 
-  &--pdf {
-    border: 2px solid #ed1c24;
-  }
+	&--pdf {
+		border: 2px solid #ed1c24;
 
-  @include respond(phone) {
-    padding: 0.6rem 1.5rem;
-    font-size: 1.6rem;
-  }
+		&:hover {
+			color: $text-light;
+			outline: 2px solid #ed1c24;
+			font-weight: 900;
+			opacity: 1;
+			transform: scale(0.98);
+			transform: translatex(-1px);
+		}
+	}
 
-  &--back {
-    &:hover {
-      color: $text-light;
-      outline: 2px solid $text-light;
-      opacity: 1;
-    }
+	@include respond(phone) {
+		padding: 0.6rem 1.5rem;
+		font-size: 1.6rem;
+	}
 
-    @include respond(phone) {
-      padding: 0.6rem 1.5rem;
-      font-size: 1.6rem;
-    }
-  }
+	&--back {
+		&:hover {
+			color: $text-light;
+			outline: 2px solid $text-light;
+			opacity: 1;
+		}
+
+		@include respond(phone) {
+			padding: 0.6rem 1.5rem;
+			font-size: 1.6rem;
+		}
+	}
 }
 
 .btn-top {
-  position: fixed;
-  z-index: 3;
+	position: fixed;
+	z-index: 3;
 
-  bottom: 10rem;
-  right: 10rem;
+	bottom: 10rem;
+	right: 10rem;
 
-  background-color: var(--colour-btn-jump-to-top);
-  border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
+	background-color: var(--colour-btn-jump-to-top);
+	border-radius: 50%;
+	width: 6rem;
+	height: 6rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  color: $text-light;
-  font-size: 2.4rem;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	color: $text-light;
+	font-size: 2.4rem;
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
-  &:focus {
-    outline: none;
-  }
+	&:focus {
+		outline: none;
+	}
 
-  @include respond(phone) {
-    bottom: 4rem;
-    right: 3rem;
-  }
+	@include respond(phone) {
+		bottom: 4rem;
+		right: 3rem;
+	}
 }

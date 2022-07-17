@@ -829,6 +829,13 @@ a:before, a:after {
     border: 2px solid #ff7730; }
   .btn-square--pdf {
     border: 2px solid #ed1c24; }
+    .btn-square--pdf:hover {
+      color: var(--text-light);
+      outline: 2px solid #ed1c24;
+      font-weight: 900;
+      opacity: 1;
+      transform: scale(0.98);
+      transform: translatex(-1px); }
   @media (max-width: 37.5em) {
     .btn-square {
       padding: 0.6rem 1.5rem;
