@@ -67,6 +67,22 @@
 			}
 		}
 
+		h3 {
+			font-size: 2.3rem;
+			margin-bottom: 1rem;
+			font-weight: 600;
+		}
+
+		h3,
+		h4,
+		h5,
+		h6 {
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
+
 		p {
 			font-size: 1.9rem;
 			margin-bottom: 2.6rem;
@@ -94,6 +110,23 @@
 			&:hover {
 				color: #d06cffd0;
 			}
+		}
+	}
+
+	&__user-story {
+		margin-bottom: 4rem;
+
+		p {
+			margin-bottom: 0.6rem;
+		}
+
+		ul {
+			margin-top: 1rem;
+		}
+
+		li {
+			font-size: 2.2rem;
+			line-height: 2.7rem;
 		}
 	}
 
@@ -260,7 +293,8 @@
 
 			img {
 				z-index: 1200;
-				max-height: 100vh;
+				max-height: 95vh;
+				object-fit: contain;
 
 				@include respond(phone) {
 					width: 100%;

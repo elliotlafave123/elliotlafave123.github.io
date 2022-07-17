@@ -2845,6 +2845,18 @@ button:focus {
         .article__section h2 {
           font-size: 3rem;
           line-height: 3.8rem; } }
+    .article__section h3 {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+      font-weight: 600; }
+    .article__section h3::after, .article__section h3::before,
+    .article__section h4::after,
+    .article__section h4::before,
+    .article__section h5::after,
+    .article__section h5::before,
+    .article__section h6::after,
+    .article__section h6::before {
+      display: none; }
     .article__section p {
       font-size: 1.9rem;
       margin-bottom: 2.6rem;
@@ -2863,6 +2875,15 @@ button:focus {
       color: #dd94ff; }
       .article__section a:hover {
         color: #d06cffd0; }
+  .article__user-story {
+    margin-bottom: 4rem; }
+    .article__user-story p {
+      margin-bottom: 0.6rem; }
+    .article__user-story ul {
+      margin-top: 1rem; }
+    .article__user-story li {
+      font-size: 2.2rem;
+      line-height: 2.7rem; }
   .article__image {
     padding: 2rem 0;
     width: 100%;
@@ -2986,7 +3007,8 @@ button:focus {
       justify-content: center; }
       .article__image-enlarged img {
         z-index: 1200;
-        max-height: 100vh; }
+        max-height: 95vh;
+        object-fit: contain; }
         @media (max-width: 37.5em) {
           .article__image-enlarged img {
             width: 100%; } }
