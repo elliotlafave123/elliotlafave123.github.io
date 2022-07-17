@@ -1,0 +1,34 @@
+.jumpToSectionLinks {
+  a {
+    font-size: 2em;
+    display: block;
+    color: $color-primary-light;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    h2 {
+      color: #7154c8;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+
+      &:hover {
+        color: $color-primary;
+      }
+
+      @include respond(phone) {
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  h2 {
+    @include respond(laptop) {
+      font-size: 2.6rem;
+    }
+    @include respond(phone) {
+      font-size: 2.4rem;
+    }
+  }
+}

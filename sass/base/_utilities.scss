@@ -1,82 +1,90 @@
 .u-center-text {
-	text-align: center !important;
+  text-align: center !important;
+}
+
+.u-margin-right-small {
+  margin-right: 1.2rem !important;
+}
+
+.u-margin-left-small {
+  margin-left: 1.2rem !important;
 }
 
 .u-margin-top-small {
-	margin-top: 1.2rem !important;
+  margin-top: 1.2rem !important;
 }
 .u-margin-top-medium {
-	margin-top: 4rem !important;
+  margin-top: 4rem !important;
 }
 .u-margin-top-large {
-	margin-top: 10rem !important;
+  margin-top: 10rem !important;
 }
 .u-margin-top-xlarge {
-	margin-top: 12rem !important;
+  margin-top: 12rem !important;
 }
 
 .u-margin-bottom-small {
-	margin-bottom: 1.2rem !important;
+  margin-bottom: 1.2rem !important;
 }
 .u-margin-bottom-medium {
-	margin-bottom: 4rem !important;
+  margin-bottom: 4rem !important;
 
-	@include respond(tab-port) {
-		margin-bottom: 5rem !important;
-	}
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 .u-margin-bottom-large {
-	margin-bottom: 10rem !important;
+  margin-bottom: 10rem !important;
 
-	@include respond(tab-port) {
-		margin-bottom: 5rem !important;
-	}
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 .u-margin-bottom-xlarge {
-	margin-bottom: 12rem !important;
+  margin-bottom: 12rem !important;
 }
 .u-margin-bottom-xxlarge {
-	margin-bottom: 15rem !important;
+  margin-bottom: 15rem !important;
 }
 .u-margin-bottom-xxxlarge {
-	margin-bottom: 20rem !important;
+  margin-bottom: 20rem !important;
 }
 
 .mobile-only {
-	display: none;
-	@include respond(tab-port) {
-		display: block;
-	}
+  display: none;
+  @include respond(tab-port) {
+    display: block;
+  }
 }
 
 .hide-mobile {
-	display: block;
-	@include respond(tab-port) {
-		display: none;
-	}
+  display: block;
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .u-align-self {
-	align-self: center;
-	justify-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 .invisible {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .u-align-center {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .u-flex-row {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }

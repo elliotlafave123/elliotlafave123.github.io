@@ -41,6 +41,12 @@
 .u-center-text {
   text-align: center !important; }
 
+.u-margin-right-small {
+  margin-right: 1.2rem !important; }
+
+.u-margin-left-small {
+  margin-left: 1.2rem !important; }
+
 .u-margin-top-small {
   margin-top: 1.2rem !important; }
 
@@ -301,6 +307,67 @@ a:before, a:after {
   font-size: 50px;
   color: #fff; }
 
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate; }
+  .skeleton::before, .skeleton::after {
+    display: none; }
+  .skeleton-img {
+    width: 100%;
+    height: 18rem;
+    border-radius: 0.5rem 0.5rem 0 0; }
+  .skeleton-tag {
+    width: 15%;
+    height: 1.4rem;
+    margin-bottom: 2rem;
+    margin-right: 0.8rem;
+    border-radius: 1.4rem; }
+  .skeleton-text {
+    width: 100%;
+    height: 1.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1.4rem; }
+    .skeleton-text-small {
+      width: 60%;
+      height: 1.4rem;
+      margin-bottom: 0.5rem;
+      border-radius: 1.4rem; }
+    .skeleton-text-large {
+      height: 1.8rem;
+      border-radius: 1.8rem; }
+  .skeleton-paragraph {
+    width: 100%;
+    height: 1.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.4rem; }
+    .skeleton-paragraph::before, .skeleton-paragraph::after {
+      display: none; }
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #484f56; }
+  100% {
+    background-color: #5d666f; } }
+
+.loader {
+  border: 0.8rem solid var(--color-card);
+  /* Light grey */
+  border-top: 0.8rem solid var(--color-primary);
+  /* Blue */
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  animation: spin 1.4s linear infinite;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 .link-card {
   position: relative;
   color: var(--text-light);
@@ -522,6 +589,30 @@ a:before, a:after {
     top: -1rem;
     left: 24.4rem; }
 
+.jumpToSectionLinks a {
+  font-size: 2em;
+  display: block;
+  color: var(--primary-light); }
+  .jumpToSectionLinks a:hover {
+    color: var(--color-primary); }
+  .jumpToSectionLinks a h2 {
+    color: #7154c8;
+    margin-top: 3rem;
+    margin-bottom: 1rem; }
+    .jumpToSectionLinks a h2:hover {
+      color: var(--color-primary); }
+    @media (max-width: 37.5em) {
+      .jumpToSectionLinks a h2 {
+        font-size: 3.2rem; } }
+
+@media (max-width: 100em) {
+  .jumpToSectionLinks h2 {
+    font-size: 2.6rem; } }
+
+@media (max-width: 37.5em) {
+  .jumpToSectionLinks h2 {
+    font-size: 2.4rem; } }
+
 ::-webkit-scrollbar {
   width: 18px;
   margin: 1px; }
@@ -710,27 +801,6 @@ a:before, a:after {
   animation-fill-mode: backwards;
   /** automatically hides btn **/ }
 
-.btn-back {
-  border-radius: 0.7rem;
-  background-color: transparent;
-  padding: 0.9rem 3rem;
-  border: 2px solid var(--text-light);
-  color: var(--text-light);
-  line-height: 2.9rem;
-  font-size: 1.7rem;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  opacity: 0.8; }
-  .btn-back i {
-    margin-right: 0.5em; }
-  .btn-back:hover {
-    opacity: 1;
-    outline: 1px solid var(--text-light); }
-  @media (max-width: 37.5em) {
-    .btn-back {
-      padding: 0.6rem 1.5rem;
-      font-size: 1.6rem; } }
-
 .btn-square {
   border-radius: 0.7rem;
   background-color: transparent;
@@ -741,21 +811,34 @@ a:before, a:after {
   font-size: 1.7rem;
   font-weight: 700;
   letter-spacing: 0.6px;
-  opacity: 0.8; }
+  opacity: 0.8;
+  display: flex;
+  align-items: center; }
   .btn-square i {
+    margin-right: 0.5em; }
+  .btn-square img {
+    height: 1.9rem;
     margin-right: 0.5em; }
   .btn-square:hover {
     color: inherit; }
   .btn-square:focus {
     outline: none; }
   .btn-square--green {
-    border: 2px solid #55c57a;
-    color: var(--text-light); }
+    border: 2px solid #55c57a; }
   .btn-square--orange {
-    border: 2px solid #ff7730;
-    color: var(--text-light); }
+    border: 2px solid #ff7730; }
+  .btn-square--pdf {
+    border: 2px solid #ed1c24; }
   @media (max-width: 37.5em) {
     .btn-square {
+      padding: 0.6rem 1.5rem;
+      font-size: 1.6rem; } }
+  .btn-square--back:hover {
+    color: var(--text-light);
+    outline: 2px solid var(--text-light);
+    opacity: 1; }
+  @media (max-width: 37.5em) {
+    .btn-square--back {
       padding: 0.6rem 1.5rem;
       font-size: 1.6rem; } }
 
@@ -2750,9 +2833,12 @@ button:focus {
 .certificates {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   padding: 5rem 0 0 0; }
+  @media (max-width: 100em) {
+    .certificates {
+      grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 56.25em) {
     .certificates {
       grid-template-columns: repeat(2, 1fr); } }
@@ -2776,8 +2862,8 @@ button:focus {
   .certificate--title {
     font-family: "lato", sans-serif;
     font-weight: 600;
-    font-size: 2.8rem;
-    line-height: 3.4rem;
+    font-size: 2.2rem;
+    line-height: 3rem;
     position: relative;
     width: fit-content;
     color: var(--text-light);
@@ -2785,15 +2871,26 @@ button:focus {
     width: 100%; }
     @media (max-width: 100em) {
       .certificate--title {
-        font-size: 2.4rem; } }
+        font-size: 1.8rem; } }
     @media (max-width: 75em) {
       .certificate--title {
-        font-size: 2.3rem; } }
+        font-size: 1.9rem; } }
     @media (max-width: 56.25em) {
       .certificate--title {
-        font-size: 3rem; } }
+        font-size: 2rem; } }
+    @media (max-width: 37.5em) {
+      .certificate--title {
+        font-size: 2.2rem; } }
   .certificate img {
-    width: 80%; }
+    width: 95%;
+    aspect-ratio: 12 / 9; }
+    @media (max-width: 37.5em) {
+      .certificate img {
+        width: 80%; } }
+
+.default {
+  padding: 0rem 15vw 10rem 15vw;
+  color: var(--text-light); }
 
 .section-header {
   margin: 0; }
@@ -2818,6 +2915,10 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    .article__interactions--section {
+      height: 100%;
+      display: flex;
+      align-items: center; }
   .article__header h2 {
     font-size: 4.2rem;
     line-height: 5.4rem; }

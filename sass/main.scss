@@ -12,12 +12,16 @@
 // Components - Organised
 // Base
 @import "components/base/pageLoad";
+@import "components/base/skeleton";
+@import "components/base/loadingSpinner";
 // Article
 @import "components/Article/link-card";
 // Portfolio
 @import "components/Portfolio/githubStats";
 // Tooltips
 @import "components/Tooltips/tooltip";
+// Base
+@import "components/JumpToSection/JumpToSectionLinks";
 
 // Components - Assorted
 @import "components/scrollbar";
@@ -54,6 +58,7 @@
 @import "layout/certifications";
 
 // Page Types
+@import "pages/defaultSection";
 @import "pages/home";
 @import "pages/article";
 @import "pages/TechStack";
