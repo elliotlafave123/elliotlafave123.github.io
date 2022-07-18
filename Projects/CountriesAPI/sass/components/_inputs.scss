@@ -1,0 +1,58 @@
+.inputs {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include respond(tab-port) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+input {
+	width: 30%;
+	background-color: $color-card;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1.8rem 6rem;
+	color: $text-light;
+
+	@include respond(tab-port) {
+		width: 100%;
+	}
+
+	&::placeholder {
+		color: $text-light;
+	}
+}
+
+.input-icons i {
+	position: absolute;
+}
+
+.input-icons {
+	width: 100%;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.icon {
+	padding: 10px;
+	color: $text-light;
+	font-size: 1.6rem;
+	min-width: 50px;
+	text-align: center;
+	top: 0.8rem;
+	left: 0.8rem;
+}
+
+select {
+	width: auto;
+	color: $text-light;
+	background-color: $color-card;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1.8rem 2rem;
+}

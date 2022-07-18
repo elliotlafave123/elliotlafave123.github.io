@@ -1,0 +1,21 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+@import "base/utilities";
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+
+@import "components/scrollbar.scss";
+@import "components/btn.scss";
+@import "components/inputs.scss";
+@import "components/dark-mode.scss";
+@import "components/card.scss";
+
+@import "layout/inner-page.scss";
+@import "layout/header.scss";
+@import "layout/app.scss";
+
+@import "pages/index/index.scss";
+@import "pages/index/hero.scss";

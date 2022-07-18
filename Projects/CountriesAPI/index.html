@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script defer src="scripts/index.js"></script>
+		<script defer src="scripts/darkmode.js"></script>
+		<title>Where in the world?</title>
+	</head>
+	<body>
+		<nav class="header">
+			<h2>Where in the world?</h2>
+
+			<div class="dark-mode" id="darkmodetoggle">
+				<i class="fa-solid fa-moon"></i>
+				Dark Mode
+			</div>
+		</nav>
+
+		<section class="hero">
+			<button class="btn" id="back">
+				<i class="fa-solid fa-arrow-left-long"></i>
+				Back
+			</button>
+			<div class="inputs">
+				<div class="input-icons">
+					<i class="fa-solid fa-magnifying-glass icon"></i>
+					<input type="text" placeholder="Search for a country..." id="search" />
+				</div>
+
+				<select id="Region" required>
+					<option value="" default disabled>Filter by region...</option>
+					<option value="All">All</option>
+					<option value="Africa">Africa</option>
+					<option value="America">America</option>
+					<option value="Asia">Asia</option>
+					<option value="Europe">Europe</option>
+					<option value="Oceania">Oceania</option>
+				</select>
+			</div>
+
+			<main class="app" id="app">
+				<div class="cards"></div>
+				<!-- <div class="card">
+					<img src="https://flagcdn.com/w320/ng.png" alt="Flag of " />
+
+					<div class="card-content">
+						<h2>Nigeria</h2>
+						<span>Population:</span>
+						<p>81,000,283</p>
+						<br />
+						<span>Region:</span>
+						<p>Africa</p>
+						<br />
+						<span>Capital:</span>
+						<p>Lagos</p>
+					</div>
+				</div> -->
+
+				<!-- <div class="inner-page">
+					<div class="inner-page__image">
+						<img src="https://flagcdn.com/w320/ng.png" alt="Flag of" />
+					</div>
+
+					<div class="inner-page__content">
+						<h1>Nigeria</h1>
+
+						<div class="inner-page__data">
+							<div class="inner-page__data-row">
+								<span>Native Name:</span>
+								<p>81,000,283</p>
+							</div>
+							<div class="inner-page__data-row">
+								<span>Top Level Domain:</span>
+								<p>81,000,283</p>
+							</div>
+							<div class="inner-page__data-row">
+								<span>Population:</span>
+								<p>81,000,283</p>
+							</div>
+							<div class="inner-page__data-row">
+								<span>Currencies:</span>
+								<p>81,000,283</p>
+							</div>
+							<div class="inner-page__data-row">
+								<span>Region:</span>
+								<p>81,000,283</p>
+							</div>
+							<div class="inner-page__data-row">
+								<span>Languages:</span>
+								<p>81,000,283</p>
+							</div>
+							<div class="inner-page__data-row">
+								<span>Sub Region:</span>
+								<p>81,000,283</p>
+							</div>
+							<div class="inner-page__data-row">
+								<span>Capital:</span>
+								<p>81,000,283</p>
+							</div>
+						</div>
+
+						<div class="inner-page__border-countries">
+							<span>Border Countries: </span>
+							<div class="tag">South Africa</div>
+						</div>
+					</div>
+				</div> -->
+			</main>
+		</section>
+	</body>
+</html>

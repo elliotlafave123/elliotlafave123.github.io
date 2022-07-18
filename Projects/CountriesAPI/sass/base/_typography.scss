@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+body {
+	font-family: $font;
+	font-weight: 400;
+}
+
+a {
+	font-size: 2.2rem;
+	font-weight: 500;
+	text-decoration: none;
+
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+	color: $link-color;
+
+	&:hover,
+	&:active {
+		color: $link-color-hover;
+	}
+}
+
+p {
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+
+span {
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 3.2rem;
+	font-weight: 800;
+}
+
+h2 {
+	font-size: 1.8rem;
+	font-weight: 800;
+}
+
+h3 {
+	font-size: 3.8rem;
+	font-weight: 400;
+}
+
+h4 {
+	font-size: 3.4rem;
+	font-weight: 500;
+}
+
+h5 {
+	font-size: 3rem;
+	font-weight: 500;
+}
+
+h6 {
+	font-size: 2.6rem;
+	font-weight: 500;
+}
