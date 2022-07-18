@@ -135,7 +135,8 @@
 						</div>
 					</div>
 
-					<div class="article__section" id="Outline">
+					<div class="article__section">
+						<div id="Outline"></div>
 						<h2>The Software Outline</h2>
 
 						<div class="article__section">
@@ -177,78 +178,85 @@
 							</div>
 						</div>
 
-						<div class="article__section" id="Approach">
-							<h2>My approach</h2>
-							<p>
-								Firstly I took a course on Pluralsight Building Your First API with ASP.NET Core 2 using Entity Framework
-								Core from scratch.
-							</p>
+						<div class="article__section">
+							<div id="Approach">
+								<h2>My approach</h2>
+								<p>
+									Firstly I took a course on Pluralsight Building Your First API with ASP.NET Core 2 using Entity
+									Framework Core from scratch.
+								</p>
 
-							<p>
-								This gave me the base knowledge I needed to start building the API. I scaffolded the database using EFCore
-								to connect my application to the database. This created a file which I called GMCContext that acts as the
-								gateway to the database:
-							</p>
-							<div class="article__image">
-								<img src="img/img1.png" alt="" class="articleImg" />
-								<p></p>
+								<p>
+									This gave me the base knowledge I needed to start building the API. I scaffolded the database using
+									EFCore to connect my application to the database. This created a file which I called GMCContext that
+									acts as the gateway to the database:
+								</p>
+								<div class="article__image">
+									<img src="img/img1.png" alt="" class="articleImg" />
+									<p></p>
+								</div>
+
+								<p>
+									I then created a data model so I can extract the data I need for the API from the database as shown
+									below:
+								</p>
+								<div class="article__image">
+									<img src="img/img2.png" alt="" class="articleImg" />
+									<p></p>
+								</div>
+
+								<p>I created an interface for the GetLoginAuditReports( ) method called ILoginAuditReportService:</p>
+								<div class="article__image">
+									<img src="img/img3.png" alt="" class="articleImg" />
+									<p></p>
+								</div>
+
+								<p>
+									I set up the program.cs file using a template provided by the GMC so my API was in line with their
+									testing requirements and their guidelines. The file includes middleware that creates logs and adds
+									health checks along with other methods.
+								</p>
+								<p>It also enables swagger which is a browser GUI for testing APIs in a development environment:</p>
+								<div class="article__image">
+									<img src="img/img4.png" alt="" class="articleImg" />
+									<p></p>
+								</div>
 							</div>
 
-							<p>
-								I then created a data model so I can extract the data I need for the API from the database as shown below:
-							</p>
-							<div class="article__image">
-								<img src="img/img2.png" alt="" class="articleImg" />
-								<p></p>
-							</div>
+							<div id="Endpoints">
+								<p>I then created 3 endpoints for my API.</p>
+								<ul class="u-margin-bottom-medium">
+									<li>Get by name</li>
+									<li>Get by date</li>
+									<li>Get all</li>
+								</ul>
 
-							<p>I created an interface for the GetLoginAuditReports( ) method called ILoginAuditReportService:</p>
-							<div class="article__image">
-								<img src="img/img3.png" alt="" class="articleImg" />
-								<p></p>
-							</div>
+								<div id="Endpoints--all">
+									<h3>Get All</h3>
+									<p>Get all gets all users information that’s stored in the last login database.</p>
+									<div class="article__image">
+										<img src="img/img5.png" alt="" class="articleImg" />
+										<p></p>
+									</div>
+								</div>
 
-							<p>
-								I set up the program.cs file using a template provided by the GMC so my API was in line with their testing
-								requirements and their guidelines. The file includes middleware that creates logs and adds health checks
-								along with other methods.
-							</p>
-							<p>It also enables swagger which is a browser GUI for testing APIs in a development environment:</p>
-							<div class="article__image">
-								<img src="img/img4.png" alt="" class="articleImg" />
-								<p></p>
-							</div>
+								<div id="Endpoints--name">
+									<h3>Get by date</h3>
+									<p>Get by date gets all users within an inputted date range.</p>
+									<div class="article__image">
+										<img src="img/img6.png" alt="" class="articleImg" />
+										<p></p>
+									</div>
+								</div>
 
-							<div id="Endpoints"></div>
-							<p>I then created 3 endpoints for my API.</p>
-							<ul class="u-margin-bottom-medium">
-								<li>Get by name</li>
-								<li>Get by date</li>
-								<li>Get all</li>
-							</ul>
-
-							<div id="Endpoints--all"></div>
-							<h3>Get All</h3>
-							<p>Get all gets all users information that’s stored in the last login database.</p>
-							<div class="article__image">
-								<img src="img/img5.png" alt="" class="articleImg" />
-								<p></p>
-							</div>
-
-							<div id="Endpoints--name"></div>
-							<h3>Get by date</h3>
-							<p>Get by date gets all users within an inputted date range.</p>
-							<div class="article__image">
-								<img src="img/img6.png" alt="" class="articleImg" />
-								<p></p>
-							</div>
-
-							<div id="Endpoints--date"></div>
-							<h3>Get by name</h3>
-							<p>Get by name gets all users with the inputted name or a partial name match.</p>
-							<div class="article__image">
-								<img src="img/img7.png" alt="" class="articleImg" />
-								<p></p>
+								<div id="Endpoints--date">
+									<h3>Get by name</h3>
+									<p>Get by name gets all users with the inputted name or a partial name match.</p>
+									<div class="article__image">
+										<img src="img/img7.png" alt="" class="articleImg" />
+										<p></p>
+									</div>
+								</div>
 							</div>
 						</div>
 

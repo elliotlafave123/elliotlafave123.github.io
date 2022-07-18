@@ -135,88 +135,93 @@
 						</div>
 					</div>
 
-					<div class="article__section" id="Outline">
-						<h2>The Software Outline</h2>
+					<div class="article__section">
+						<div id="Outline">
+							<h2>The Software Outline</h2>
 
-						<div class="article__section">
-							<h3>User story</h3>
+							<div class="article__section">
+								<h3>User story</h3>
 
-							<div class="article__user-story">
-								<p>As a member of DTT</p>
-								<p>I want to see when a user last logged into Sitecore</p>
-								<p>So that I can manage Sitecore licences</p>
-							</div>
+								<div class="article__user-story">
+									<p>As a member of DTT</p>
+									<p>I want to see when a user last logged into Sitecore</p>
+									<p>So that I can manage Sitecore licences</p>
+								</div>
 
-							<div class="article__user-story">
-								<h3>Acceptance criteria</h3>
-								<p>AC1 - Data</p>
-								<p>GIVEN I want to find out the last login date for all Sitecore users</p>
-								<p>WHEN I run the report</p>
-								<p>THEN the following information is returned for each Sitecore user as a csv file:</p>
+								<div class="article__user-story">
+									<h3>Acceptance criteria</h3>
+									<p>AC1 - Data</p>
+									<p>GIVEN I want to find out the last login date for all Sitecore users</p>
+									<p>WHEN I run the report</p>
+									<p>THEN the following information is returned for each Sitecore user as a csv file:</p>
 
-								<ul class="u-margin-bottom-medium">
-									<li>Full name</li>
-									<li>Last login date</li>
-								</ul>
+									<ul class="u-margin-bottom-medium">
+										<li>Full name</li>
+										<li>Last login date</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
-						<div class="article__section" id="Approach">
-							<h2>My approach</h2>
-							<p>
-								I started by learning basic C# syntax and got the basics of .NET Core 6 using the Microsoft documentation. I
-								then took this knowledge and used my previous coding knowledge to build an application that takes the last
-								login dates from my API and converts the resulting data into a csv file.
-							</p>
+						<div class="article__section">
+							<div id="Approach">
+								<h2>My approach</h2>
+								<p>
+									I started by learning basic C# syntax and got the basics of .NET Core 6 using the Microsoft
+									documentation. I then took this knowledge and used my previous coding knowledge to build an application
+									that takes the last login dates from my API and converts the resulting data into a csv file.
+								</p>
 
-							<p>
-								This code loops over the data from the data that is returned from the API/getall endpoint and writes a line
-								for each person:
-							</p>
-							<div class="article__image">
-								<img src="img/img1.png" alt="" class="articleImg" />
-								<p>An image of Program.cs.</p>
+								<p>
+									This code loops over the data from the data that is returned from the API/getall endpoint and writes a
+									line for each person:
+								</p>
+								<div class="article__image">
+									<img src="img/img1.png" alt="" class="articleImg" />
+									<p>An image of Program.cs.</p>
+								</div>
+
+								<p>I created a model for the data that should be returned in the CSV file:</p>
+								<div class="article__image">
+									<img src="img/img2.png" alt="" class="articleImg" />
+									<p>An image of the data model.</p>
+								</div>
+
+								<p>
+									I created an interface with methods to generate a CSV file with a unique name (using the system DateTime
+									method), Add a title row to show what data is held in each column and a method to add a single line of
+									data to the file:
+								</p>
+								<div class="article__image">
+									<img src="img/img3.png" alt="" class="articleImg" />
+									<p>An image of the programs interface.</p>
+								</div>
+
+								<p>The methods are shown below and are stored in the .services folder:</p>
+								<div class="article__image">
+									<img src="img/img4.png" alt="" class="articleImg" />
+									<p>An image of the programs methods.</p>
+								</div>
 							</div>
 
-							<p>I created a model for the data that should be returned in the CSV file:</p>
-							<div class="article__image">
-								<img src="img/img2.png" alt="" class="articleImg" />
-								<p>An image of the data model.</p>
-							</div>
+							<div id="Tests">
+								<p>
+									Finally I created unit tests to check my program generated the correct results/data types and various
+									other tests:
+								</p>
+								<div class="article__image">
+									<img src="img/img5.png" alt="" class="articleImg" />
+									<p></p>
+								</div>
 
-							<p>
-								I created an interface with methods to generate a CSV file with a unique name (using the system DateTime
-								method), Add a title row to show what data is held in each column and a method to add a single line of data
-								to the file:
-							</p>
-							<div class="article__image">
-								<img src="img/img3.png" alt="" class="articleImg" />
-								<p>An image of the programs interface.</p>
-							</div>
-
-							<p>The methods are shown below and are stored in the .services folder:</p>
-							<div class="article__image">
-								<img src="img/img4.png" alt="" class="articleImg" />
-								<p>An image of the programs methods.</p>
-							</div>
-
-							<div id="Tests"></div>
-							<p>
-								Finally I created unit tests to check my program generated the correct results/data types and various other
-								tests:
-							</p>
-							<div class="article__image">
-								<img src="img/img5.png" alt="" class="articleImg" />
-								<p></p>
-							</div>
-
-							<p>
-								In total I created a total of 8 tests to ensure my program works effectively and has no errors, the results
-								of the tests can be seen below:
-							</p>
-							<div class="article__image">
-								<img src="img/img6.png" alt="" class="articleImg" />
-								<p></p>
+								<p>
+									In total I created a total of 8 tests to ensure my program works effectively and has no errors, the
+									results of the tests can be seen below:
+								</p>
+								<div class="article__image">
+									<img src="img/img6.png" alt="" class="articleImg" />
+									<p></p>
+								</div>
 							</div>
 
 							<div id="Result"></div>
