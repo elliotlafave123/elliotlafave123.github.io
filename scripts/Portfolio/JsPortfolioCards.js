@@ -20,6 +20,22 @@ const lastPageMobile = document.getElementById("lastPageMobile");
 const pageNumberCurrentMobile = document.getElementById("pageNumberCurrentMobile");
 const pageNumberTotalMobile = document.getElementById("pageNumberTotalMobile");
 
+/* ********************** */
+/* Helper Functions       */
+/* ********************** */
+function GenerateDateString(isoDate) {
+	const date = new Date(isoDate);
+	var strArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+	var d = date.getDate();
+	var m = strArray[date.getMonth()];
+	var y = date.getFullYear();
+	return "" + (d <= 9 ? "0" + d : d) + ",  " + m + " " + y;
+}
+
+/* ********************** */
+/* Pagination             */
+/* ********************** */
+
 let hidePageChangeButtons = false;
 function togglePageChangeButtons() {
 	if (hidePageChangeButtons) {
@@ -155,7 +171,7 @@ const displayFeaturedHome = function (data) {
                 <img src="${project.linkImg}" alt="" class="card__img" ${mobile ? 'loading="lazy"' : ""}>
                 <div class="card__content">
                     <h4 class="card__title u-margin-bottom-medium">${project.title}</h4>
-					<span class="card__date">${project.date}</span>
+					<span class="card__date">${GenerateDateString(project.date)}</span>
                     <p class="card__text">${project.paragraph}</p>
                     <div class="tags">
                     ${
@@ -228,7 +244,7 @@ const displayFeatured = function (data) {
 			  <img src="${project.linkImg}" alt="" class="card__img" ${mobile ? 'loading="lazy"' : ""}>
 			  <div class="card__content">
 				  <h4 class="card__title u-margin-bottom-medium">${project.title}</h4>
-				  <span class="card__date">${project.date}</span>
+				  <span class="card__date">${GenerateDateString(project.date)}</span>
 				  <p class="card__text">${project.paragraph}</p>
 				  <div class="tags">
 				  ${
@@ -356,7 +372,7 @@ const displayProjects = function (data) {
 					}
 				  
 				  </div>
-				  <span>${project.date}</span>
+				  <span>${GenerateDateString(project.date)}</span>
 			  </div>
 			  <div>
 				  
