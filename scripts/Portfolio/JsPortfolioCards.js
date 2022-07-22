@@ -20,33 +20,6 @@ const lastPageMobile = document.getElementById("lastPageMobile");
 const pageNumberCurrentMobile = document.getElementById("pageNumberCurrentMobile");
 const pageNumberTotalMobile = document.getElementById("pageNumberTotalMobile");
 
-// Sort by date function
-(function () {
-	if (typeof Object.defineProperty === "function") {
-		try {
-			Object.defineProperty(Array.prototype, "sortBy", { value: sb });
-		} catch (e) {}
-	}
-	if (!Array.prototype.sortBy) Array.prototype.sortBy = sb;
-
-	function sb(f) {
-		for (var i = this.length; i; ) {
-			var o = this[--i];
-			this[i] = [].concat(f.call(o, o, i), o);
-		}
-		this.sort(function (a, b) {
-			for (var i = 0, len = a.length; i < len; ++i) {
-				if (a[i] != b[i]) return a[i] < b[i] ? -1 : 1;
-			}
-			return 0;
-		});
-		for (var i = this.length; i; ) {
-			this[--i] = this[i][this[i].length - 1];
-		}
-		return this;
-	}
-})();
-
 let hidePageChangeButtons = false;
 function togglePageChangeButtons() {
 	if (hidePageChangeButtons) {
@@ -109,6 +82,7 @@ const displayProjectsOnPages = function (data) {
 	}
 };
 
+// http://localhost:3000/api/v1/projects
 /* *********** Get Json Data *********** */
 fetch("https://warm-caverns-73488.herokuapp.com/api/v1/projects")
 	.then((response) => {
@@ -116,18 +90,13 @@ fetch("https://warm-caverns-73488.herokuapp.com/api/v1/projects")
 	})
 	.then((jsondata) => {
 		data = jsondata;
+		console.log(data);
 
 		featuredData = [data[2], data[4], data[6], data[7], data[9], data[10], data[15], data[16], data[18], data[19], data[20], data[21]];
 
 		if (cardsContainer) {
 			// sort by date
-			displayProjectsOnPages(
-				data
-					.sortBy(function (o) {
-						return new Date(o.date);
-					})
-					.reverse()
-			);
+			displayProjectsOnPages(data);
 		}
 
 		getFeaturedData(featuredData);
