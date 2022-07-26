@@ -1,99 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
-.app-container {
-	padding: 5vh 10vw 5vh 10vw;
-}
-
-#cardsContainer {
-	width: 80vw;
-	margin: 5vh 0vw 5vh 0vw;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-	gap: 4rem;
-
-	@include respond(large-desktop) {
-		width: 80vw;
-		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-	}
-
-	@include respond(tab-port) {
-		grid-template-columns: repeat(1, minmax(400px, 400px));
-		justify-content: center;
-	}
-
-	@include respond(phone) {
-		grid-template-columns: 1fr;
-		width: 100%;
-	}
-}
-
-.searchInteractionsContainer {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	width: 38%;
-
-	@include respond(tab-port) {
-		width: 100%;
-	}
-
-	@include respond(phone) {
-		width: 100%;
-	}
-}
-
-.pageNumbers {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 300px;
-	color: var(--text-light);
-
-	@include respond(tab-port) {
-		width: 40%;
-	}
-
-	@include respond(phone) {
-		width: 60%;
-	}
-
-	a {
-		color: var(--text-light);
-
-		&:hover {
-			color: #fff;
-		}
-	}
-
-	p {
-		font-size: 1.8rem;
-		opacity: 0.7;
-		letter-spacing: 1px;
-
-		@include respond(phone) {
-			letter-spacing: 0px;
-		}
-	}
-
-	button {
-		background-color: transparent;
-		font-size: 2.4rem;
-		color: var(--text-light);
-
-		&:hover {
-			color: #fff;
-		}
-	}
-}
-
 .cardjs {
 	background-color: $color-card;
 	position: relative;
 	border-radius: 5px;
 	width: 100%;
-	// height: 100%;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -112,29 +23,42 @@
 	justify-content: space-between;
 	height: 32rem;
 
-	span {
+	&-date {
 		color: $text-light;
 		font-weight: 500;
-		font-size: 1.2rem;
+		font-size: 1.55rem;
 		font-family: inherit;
 	}
 }
 
 .JScard-content p {
 	color: $text-light;
-	font-size: 1.5rem;
-	line-height: 2.3rem;
+	font-size: 1.6rem;
+	letter-spacing: 0.5px;
+	line-height: 2.5rem;
 	font-weight: 500;
 	margin-top: 1rem;
 	margin-bottom: 2rem;
 	height: 12rem;
 
+	@include respond(laptop) {
+		font-size: 1.5rem;
+		line-height: 2.3rem;
+	}
+
 	@include respond(tab-land) {
-		font-size: 1.9rem;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
 	}
 
 	@include respond(tab-port) {
-		font-size: 1.7rem;
+		font-size: 2rem;
+		line-height: 2.9rem;
+	}
+
+	@include respond(phone) {
+		font-size: 2rem;
+		line-height: 2.9rem;
 	}
 }
 
@@ -148,57 +72,24 @@
 
 .tag {
 	background-color: $color-tag;
-	padding: 0.15rem 1.5rem;
-	border-radius: 0.4rem;
+	padding: 0.25rem 1.5rem;
 	margin-right: 1rem;
-	font-size: 0.8rem;
-	font-weight: 500;
 	margin-bottom: 0.8rem;
+	border-radius: 0.4rem;
+
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	letter-spacing: 0.6px;
+	font-weight: 500;
 
 	display: flex;
 	min-width: 2rem;
 	align-items: center;
 
 	svg {
-		height: 1.35rem;
+		height: 1.4rem;
 		margin-right: 0.5rem;
 	}
-}
-
-.tag-html {
-	color: #f0582f;
-}
-
-.tag-css {
-	color: #007cc4;
-}
-
-.tag-js {
-	color: #f48031;
-}
-
-.tag-api {
-	color: #e1de56;
-}
-
-.tag-scss {
-	color: #cc6699;
-}
-
-.tag-challenge {
-	color: #66cc92;
-}
-
-.tag-course {
-	color: #8d66cc;
-}
-
-.tag-nodejs {
-	color: #379922;
-}
-
-.tag-mongodb {
-	color: #4e763b;
 }
 
 .buttons-container {
@@ -247,8 +138,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0.8rem;
-	margin-top: 0.4rem;
+	padding: 0.3rem;
+	// margin-top: 0.4rem;
 
 	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
@@ -262,69 +153,5 @@
 
 	@include respond(tab-land) {
 		font-size: 4rem;
-	}
-}
-
-/* Search Bar */
-.search {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-
-	margin: 4rem 0 2rem 0vw;
-
-	@include respond(tab-port) {
-		flex-direction: column;
-		align-items: start;
-	}
-}
-
-.search-input {
-	width: 28vw;
-	border: none;
-	outline: none;
-	cursor: text;
-	background-color: #495057;
-	padding: 1rem 3rem 1rem 3rem;
-	font-size: 2rem;
-	font-weight: 900;
-	letter-spacing: 2px;
-	color: rgba(255, 255, 255, 0.931);
-	border-radius: 3rem;
-
-	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-	@include respond(tab-port) {
-		width: 100%;
-		margin-bottom: 2rem;
-	}
-
-	@include respond(phone) {
-		width: 100%;
-		margin-bottom: 2rem;
-		color: rgba(255, 255, 255, 0.931);
-	}
-
-	&::placeholder {
-		opacity: 0.95; /* Firefox */
-		letter-spacing: 1px;
-		font-weight: 600;
-		color: rgba(255, 255, 255, 0.931);
-	}
-}
-
-.search select {
-	width: 10rem;
-	height: 4rem;
-	padding: 1rem 2rem 1rem 2rem;
-	background-color: $color-card;
-	border: none;
-	border-radius: 5px;
-	color: #fff;
-
-	@include respond(tab-port) {
-		width: 40%;
 	}
 }
