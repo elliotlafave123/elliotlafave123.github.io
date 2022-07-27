@@ -99,11 +99,11 @@ const displayProjectsOnPages = function (data) {
 };
 
 var LOCAL_IP = "http://localhost:3000/api/v1/projects";
-var DIGITAL_OCEAN_IP = "http://142.93.42.62:3000/api/v1/projects";
-// var HEROKU_IP = "https://warm-caverns-73488.herokuapp.com/api/v1/projects";
+var DIGITAL_OCEAN_IP = "https://142.93.42.62:3000/api/v1/projects";
+var HEROKU_IP = "https://warm-caverns-73488.herokuapp.com/api/v1/projects";
 
 /* *********** Get Json Data *********** */
-fetch(DIGITAL_OCEAN_IP)
+fetch(HEROKU_IP)
 	.then((response) => {
 		return response.json();
 	})
