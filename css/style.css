@@ -1773,6 +1773,7 @@ button:focus {
 
 .tag {
   background-color: var(--color-tag);
+  color: var(--text-light);
   padding: 0.25rem 1.5rem;
   margin-right: 1rem;
   margin-bottom: 0.8rem;
