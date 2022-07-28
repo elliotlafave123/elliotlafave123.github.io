@@ -3423,6 +3423,11 @@ button:focus {
       color: var(--text-light);
       cursor: pointer; }
 
+.ProjectsAppInputsBottom {
+  width: 100%;
+  height: 4.4rem;
+  margin-top: 1.7rem; }
+
 .ProjectsAppNotFound {
   position: absolute;
   top: 0;
@@ -3451,6 +3456,10 @@ button:focus {
   height: 4.5rem;
   margin-left: 3rem;
   display: flex; }
+  .ProjectsAppPagination-bottom {
+    margin-left: 0;
+    height: 4.4rem;
+    display: flex; }
   .ProjectsAppPagination-button {
     height: 4.5rem;
     color: var(--text-light);
@@ -3485,6 +3494,8 @@ button:focus {
     border: none;
     padding: 0 1.5rem 0 1.5rem;
     width: 7rem; }
+    .ProjectsAppPagination-number:focus {
+      outline: none !important; }
 
 /* Search Bar */
 .search {
