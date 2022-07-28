@@ -3376,9 +3376,12 @@ button:focus {
 .ProjectsAppContainer {
   width: 100%;
   display: grid;
-  min-height: 40rem;
+  min-height: 60vh;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 3rem;
+  position: relative; }
+
+.ProjectsAppContainerWithError {
   position: relative; }
 
 .ProjectsAppInputs {
@@ -3408,7 +3411,7 @@ button:focus {
         width: 100%;
         justify-content: flex-end !important; } }
   .ProjectsAppInputs a {
-    color: var(--primary-light);
+    color: var(--color-primary);
     font-size: 1.6rem;
     letter-spacing: 0.3px;
     text-decoration: underline;
@@ -3416,7 +3419,7 @@ button:focus {
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1); }
     .ProjectsAppInputs a:hover {
       text-decoration: none;
-      color: white;
+      color: var(--text-light);
       cursor: pointer; }
 
 .ProjectsAppNotFound {
@@ -3427,7 +3430,7 @@ button:focus {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 95vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3495,7 +3498,6 @@ button:focus {
   width: 28vw;
   height: 100%;
   border: none;
-  outline: none;
   cursor: text;
   background-color: var(--color-card);
   padding: 1rem 3rem 1rem 3rem;
@@ -3503,9 +3505,8 @@ button:focus {
   line-height: 2.5rem;
   font-weight: 500;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.931);
-  border-radius: 5px;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  color: var(--text-light);
+  border-radius: 5px; }
   @media (max-width: 56.25em) {
     .search-input {
       width: 100%; } }
@@ -3515,7 +3516,7 @@ button:focus {
     letter-spacing: 1px;
     font-weight: 500;
     font-size: 2rem;
-    color: rgba(255, 255, 255, 0.931); }
+    color: var(--text-light); }
 
 #dropdown {
   height: 100%;
@@ -3524,6 +3525,6 @@ button:focus {
   background-color: var(--color-card);
   border: none;
   border-radius: 5px;
-  color: #fff; }
+  color: var(--text-light); }
   #dropdown:hover {
     cursor: pointer; }

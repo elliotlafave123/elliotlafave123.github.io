@@ -22,7 +22,6 @@ const init = () => {
 init();
 
 const ShowGithubStats = (data) => {
-	console.log(data);
 	let markup = `
     <p class="githubStats-NameOfComponent">GitHub Statistics</p>
     <img src="./img/logo-dark.png" alt="" />
