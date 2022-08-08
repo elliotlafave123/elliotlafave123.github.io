@@ -1785,7 +1785,8 @@ button:focus {
   display: flex;
   min-width: 2rem;
   align-items: center; }
-  .tag svg {
+  .tag svg,
+  .tag img {
     height: 1.4rem;
     margin-right: 0.5rem; }
 
