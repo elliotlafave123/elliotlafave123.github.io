@@ -12,11 +12,11 @@
 }
 
 .green {
-    color:hsl(163, 72%, 41%) !important;
+	color: hsl(163, 72%, 41%) !important;
 }
 
 .red {
-    color:hsl(356, 69%, 56%) !important;
+	color: hsl(356, 69%, 56%) !important;
 }
 
 * {
@@ -52,7 +52,7 @@ h2 {
 }
 
 hr {
-    display: none;
+	display: none;
 }
 
 /* HEADER */
@@ -65,7 +65,7 @@ header {
 }
 
 .slider {
-    width: fit-content;
+	width: fit-content;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -128,22 +128,21 @@ header {
 }
 
 .overview-container {
-    padding: 2.5rem 2rem 2rem 2rem;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--card-bg-color);
+	padding: 2.5rem 2rem 2rem 2rem;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--card-bg-color);
 }
 
 /* CARDS */
 
 .card {
-
 	border-radius: 6px;
 }
 
 .account {
 	padding: 2.5rem 2rem 2.4rem 2rem;
-    background-color: var(--card-bg-color);
+	background-color: var(--card-bg-color);
 	display: flex;
 	height: 100%;
 	flex-direction: column;
@@ -177,33 +176,32 @@ header {
 }
 
 .overview {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 4rem;
-    margin: 4rem 0 3rem 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 4rem;
+	margin: 4rem 0 3rem 0;
 }
 
 .overview-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin:0 0 2rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0 2rem 0;
 }
 
 .overview-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .overview-number {
-    font-size: 3rem;
+	font-size: 3rem;
 	font-weight: 700;
 	color: var(--text-color-white);
 }
-
 
 /*  Dark Mode Slider  */
 
@@ -213,12 +211,7 @@ header {
 
 .label {
 	position: relative;
-	background: linear-gradient(
-		60deg,
-		hsl(210, 78%, 56%) 0%,
-		hsl(146, 68%, 55%) 70%,
-		hsl(146, 68%, 55%) 100%
-	);
+	background: linear-gradient(60deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 70%, hsl(146, 68%, 55%) 100%);
 	border-radius: 50px;
 	cursor: pointer;
 	display: inline-block;
@@ -250,63 +243,58 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 20px;
+		font-weight: 700;
+		color: var(--text-color-white);
+	}
 
+	h2 {
+		font-size: 18px;
+		font-weight: 700;
+		color: var(--text-color);
+	}
 
-h1 {
-	font-size: 20px;
-	font-weight: 700;
-	color: var(--text-color-white);
+	hr {
+		display: block;
+		height: 1px;
+		width: 100%;
+		background-color: var(--text-color);
+		opacity: 0.2;
+		margin-top: 2rem;
+	}
+
+	/* HEADER */
+
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 2rem;
+	}
+
+	.slider {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	/* CONTAINERS */
+
+	.accounts {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		margin: 4rem 0 3rem 0;
+	}
+
+	.overview {
+		grid-template-columns: 1fr;
+	}
 }
-
-h2 {
-	font-size: 18px;
-	font-weight: 700;
-	color: var(--text-color);
-}
-
-hr {
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-color: var(--text-color);
-    opacity: 0.2;
-    margin-top: 2rem;
-}
-
-    /* HEADER */
-
-header {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-    margin-bottom: 2rem;
-}
-
-.slider {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-    width: 100%;
-    margin-top: 2rem;
-}
-
-/* CONTAINERS */
-
-.accounts {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 4rem;
-	margin: 4rem 0 3rem 0;
-}
-
-.overview {
-    grid-template-columns: 1fr;
-}
-
-
-}
-
 
 @keyframes slideOn {
 	0% {
@@ -330,4 +318,32 @@ header {
 	100% {
 		transform: translateX(0) scale(1);
 	}
+}
+
+.challenge-overlay {
+	text-decoration: none;
+	color: #212529;
+	background-color: #ffffff;
+
+	display: flex;
+	align-items: center;
+
+	width: max-content;
+	padding: 0 0.6rem 0 0;
+	border-radius: 0 2rem 0 0;
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10000;
+}
+
+.challenge-overlay img {
+	height: 2rem;
+	width: 2rem;
+	margin-right: 0.5rem;
+}
+
+.challenge-overlay p {
+	font-size: 1.5rem;
 }
