@@ -4,3 +4,8 @@
 		transform: rotate(360deg);
 	}
 }
+
+.spin {
+	animation-name: spin;
+	animation-duration: 1s;
+}

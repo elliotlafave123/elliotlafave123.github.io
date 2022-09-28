@@ -158,12 +158,20 @@ body {
       padding: 0; } }
 
 *:focus {
-  outline: 3px solid var(--text-light); }
+  outline: 3px solid var(--text-light) !important; }
+
+img:not([src]) {
+  font-size: 0;
+  position: relative; }
 
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+.spin {
+  animation-name: spin;
+  animation-duration: 1s; }
 
 body {
   font-family: "lato", sans-serif;

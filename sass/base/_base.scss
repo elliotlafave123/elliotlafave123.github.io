@@ -50,5 +50,10 @@ body {
 }
 
 *:focus {
-	outline: 3px solid $text-light;
+	outline: 3px solid $text-light !important;
+}
+
+img:not([src]) {
+	font-size: 0;
+	position: relative;
 }
