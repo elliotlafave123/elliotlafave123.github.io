@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 var myInterval = setInterval(function () {
 	let sectionHovered = false;
-	console.log(document.querySelectorAll(`ol li a`)[0].parentElement.classList.contains("active"));
+	//console.log(document.querySelectorAll(`ol li a`)[0].parentElement.classList.contains("active"));
 	document.querySelectorAll(`ol li a`).forEach((el) => {
 		if (el.parentElement.classList.contains("active")) {
 			sectionHovered = true;

@@ -1,5 +1,4 @@
 let played = localStorage.getItem("counterPlayed");
-console.log(played);
 
 if (localStorage.getItem("counterPlayed") === played) {
 	window.location.href = "counter.html";

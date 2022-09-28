@@ -13,7 +13,6 @@ const getData = function (x) {
 			return res.json();
 		})
 		.then((data) => {
-			console.log(data.slip);
 			showData(data.slip);
 		});
 };
