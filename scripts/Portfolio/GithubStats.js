@@ -22,6 +22,7 @@ const init = () => {
 init();
 
 const ShowGithubStats = (data) => {
+	console.log(data);
 	let markup = `
     <p class="githubStats-NameOfComponent">GitHub Statistics</p>
     <img src="./img/logo-dark.png" alt="" />
@@ -41,11 +42,11 @@ const ShowGithubStats = (data) => {
             </div>
             <div class="githubStats-stats-section">
                 <p>Following</p>
-                <span>${data.followers}</span>
+                <span>${data.following}</span>
             </div>
             <div class="githubStats-stats-section">
                 <p>Commits</p>
-                <span>879</span>
+                <span>894</span>
             </div>
         </div>
 
