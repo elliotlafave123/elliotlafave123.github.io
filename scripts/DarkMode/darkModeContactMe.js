@@ -71,3 +71,20 @@ toggle.addEventListener("change", () => {
 		localStorage.setItem("darkMode", "false");
 	}
 });
+
+const checkboxLabelElements = document.querySelectorAll("label");
+
+checkboxLabelElements.forEach((el) =>
+	el.addEventListener("keyup", (e) => {
+		if (e.key === "Enter") {
+			toggle.checked = !toggle.checked;
+			if (toggle.checked) {
+				darkMode();
+				localStorage.setItem("darkMode", "true");
+			} else {
+				lightMode();
+				localStorage.setItem("darkMode", "false");
+			}
+		}
+	})
+);

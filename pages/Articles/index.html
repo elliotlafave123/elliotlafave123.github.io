@@ -24,14 +24,15 @@
 		<title>Articles</title>
 	</head>
 	<body>
+		<!-- --- Navigation --- -->
 		<div class="navigation">
-			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1" />
 			<label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
 			<div class="navigation__background">&nbsp;</div>
 
 			<ul class="desktop__nav">
 				<div class="logo">
-					<a href="../../index.html"><img src="../../img/logo.png" alt="Logo" class="logo-img" /></a>
+					<a href="index.html"><img src="../../img/logo.png" alt="Logo" class="logo-img" /></a>
 				</div>
 
 				<div>
@@ -39,8 +40,8 @@
 						<div class="toggle-container">
 							<img src="../../img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun" />
 							<div>
-								<input type="checkbox" id="checkboxSlider" class="toggle" />
-								<label for="checkboxSlider" class="label">
+								<input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1" />
+								<label for="checkboxSlider" class="label" tabindex="0">
 									<div class="ball"></div>
 								</label>
 							</div>
@@ -69,22 +70,22 @@
 			<nav class="navigation__nav">
 				<ul class="navigation__list">
 					<li class="navigation__item">
-						<a href="../../index.html" class="navigation__link">Home</a>
+						<a href="../../index.html" class="navigation__link" tabindex="-1">Home</a>
 					</li>
 					<li class="navigation__item">
-						<a href="contact-me.html" class="navigation__link">Contact Me</a>
+						<a href="contact-me.html" class="navigation__link" tabindex="-1">Contact Me</a>
 					</li>
 					<li class="navigation__item">
-						<a href="../../CV.html" class="navigation__link">My CV</a>
+						<a href="../../CV.html" class="navigation__link" tabindex="-1">My CV</a>
 					</li>
 					<li class="navigation__item">
-						<a href="../../portfolio.html" class="navigation__link">Portfolio</a>
+						<a href="../../portfolio.html" class="navigation__link" tabindex="-1">Portfolio</a>
 					</li>
 					<li class="navigation__item">
 						<div class="toggle-container">
 							<img src="../../img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun" />
 							<div>
-								<input type="checkbox" id="checkboxSlider" class="toggle" />
+								<input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1" />
 								<label for="checkboxSlider" class="label">
 									<div class="ball"></div>
 								</label>
@@ -97,7 +98,7 @@
 		</div>
 
 		<section class="logo mobile-only">
-			<a href="../../index.html"><img src="../../img/logo.png" alt="Logo" class="logo-img mobile-only" /></a>
+			<a href="index.html" tabindex="-1"><img src="../../img/logo.png" alt="Logo" class="logo-img mobile-only" /></a>
 		</section>
 
 		<section class="article__container" role="top">
