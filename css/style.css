@@ -3056,6 +3056,23 @@ button:focus {
       display: flex;
       align-items: center;
       justify-content: center; }
+      .article__image-enlarged::before {
+        color: var(--text-light);
+        position: absolute;
+        top: 6rem;
+        right: 10rem;
+        content: "\f78c" !important;
+        font-family: "Font Awesome 6 free";
+        font-weight: 900;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        background-color: var(--colour-btn-expand-img);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
       .article__image-enlarged img {
         z-index: 1200;
         object-fit: contain;
