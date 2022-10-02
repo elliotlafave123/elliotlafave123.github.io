@@ -38,6 +38,14 @@
 			border-bottom: 3px solid $color-form-false;
 		}
 
+		&:not(textarea):not(:focus):not(:placeholder-shown):invalid {
+			border-bottom: 3px solid $color-form-false;
+		}
+
+		&:not(:focus):not(:placeholder-shown):valid {
+			border-bottom: 3px solid $color-form-true;
+		}
+
 		&::-webkit-input-placeholder {
 			color: $text-light;
 		}

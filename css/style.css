@@ -1251,6 +1251,10 @@ a:before, a:after {
     border-bottom: 3px solid var(--color-form-true); }
   .form__input:focus:invalid {
     border-bottom: 3px solid var(--color-form-false); }
+  .form__input:not(textarea):not(:focus):not(:placeholder-shown):invalid {
+    border-bottom: 3px solid var(--color-form-false); }
+  .form__input:not(:focus):not(:placeholder-shown):valid {
+    border-bottom: 3px solid var(--color-form-true); }
   .form__input::-webkit-input-placeholder {
     color: var(--text-light); }
 
