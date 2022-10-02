@@ -27,6 +27,16 @@
 		<title>Portfolio</title>
 	</head>
 	<body>
+		<nav aria-label="Skip Links">
+			<ul class="off-screen">
+				<li>
+					<a href="#navigation" class="skip-link"> Skip to Primary Navigation </a>
+				</li>
+				<li>
+					<a href="#first-section" class="skip-link"> Skip to Primary Content </a>
+				</li>
+			</ul>
+		</nav>
 		<img src="img/header-image.png" alt="" class="header__background-img" />
 		<div class="navigation">
 			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1" />
@@ -35,7 +45,7 @@
 
 			<ul class="desktop__nav">
 				<div class="logo">
-					<a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img" /></a>
+					<a href="index.html" id="navigation"><img src="img/logo.png" alt="Logo" class="logo-img" /></a>
 				</div>
 
 				<div>
@@ -95,7 +105,7 @@
 			<a href="index.html" tabindex="-1"><img src="img/logo.png" alt="Logo" class="logo-img mobile-only" /></a>
 		</section>
 
-		<section class="section-header">
+		<section class="section-header" id="first-section">
 			<div class="header__content">
 				<div class="liquid-desktop">
 					<div class="liquid">

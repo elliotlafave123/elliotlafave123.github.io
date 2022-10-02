@@ -18,7 +18,16 @@
         <title>Portfolio</title>
     </head>
 <body>
-
+    <nav aria-label="Skip Links">
+        <ul class="off-screen">
+            <li>
+                <a href="#navigation" class="skip-link"> Skip to Primary Navigation </a>
+            </li>
+            <li>
+                <a href="#first-section" class="skip-link"> Skip to Primary Content </a>
+            </li>
+        </ul>
+    </nav>
     <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1">
         <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
@@ -26,7 +35,7 @@
         <ul class="desktop__nav">
 
             <section class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+                <a href="index.html" id="navigation"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
             </section>
 
             <div>
@@ -89,7 +98,7 @@
         <a href="index.html" tabindex="-1"><img src="img/logo.png" alt="Logo" class="logo-img mobile-only"></a>
     </section>
 
-    <section class="work" >
+    <section class="work" id="first-section">
         <div class="work__title u-margin-bottom-medium">
             <h3 class="work__title--title u-margin-bottom-large">My CV</h3>
             <div class="work__title--buttons">

@@ -380,6 +380,29 @@ a:before, a:after {
   100% {
     transform: rotate(360deg); } }
 
+.off-screen {
+  left: -100vw;
+  position: absolute; }
+
+.skip-link {
+  background: var(--color-primary);
+  color: var(--text-light);
+  left: 0;
+  padding: 1.2em;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  width: 100%;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  z-index: 1000;
+  transform: translateY(-10em);
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out; }
+  .skip-link:focus {
+    opacity: 1;
+    transform: translateY(0em);
+    outline: 1px solid var(--color-primary) !important; }
+
 .link-card {
   position: relative;
   color: var(--text-light);

@@ -45,7 +45,7 @@ const ShowGithubStats = (data) => {
             </div>
             <div class="githubStats-stats-section">
                 <p>Commits</p>
-                <span>894</span>
+                <span>944</span>
             </div>
         </div>
 

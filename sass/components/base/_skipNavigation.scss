@@ -1,0 +1,26 @@
+.off-screen {
+	left: -100vw;
+	position: absolute;
+}
+
+.skip-link {
+	background: $color-primary;
+	color: $text-light;
+	left: 0;
+	padding: 1.2em;
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	width: 100%;
+	font-size: 2.2rem;
+	line-height: 2.2rem;
+	z-index: 1000;
+	transform: translateY(-10em);
+	transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+	&:focus {
+		opacity: 1;
+		transform: translateY(0em);
+		outline: 1px solid $color-primary !important;
+	}
+}
