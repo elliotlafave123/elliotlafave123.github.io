@@ -1,0 +1,21 @@
+.breadcrumb {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+
+	i,
+	p {
+		margin-right: 0.7rem;
+	}
+
+	p {
+		font-size: 1.3rem;
+		letter-spacing: 1px;
+		color: $text-light;
+	}
+
+	i {
+		font-size: 1rem;
+		color: $color-primary;
+	}
+}

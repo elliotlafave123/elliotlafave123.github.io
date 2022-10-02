@@ -3,7 +3,7 @@
 	color: $text-light;
 
 	@include respond(laptop) {
-		padding: $section-padding-y 18vw;
+		padding: 15rem 18vw;
 	}
 
 	@include respond(phone) {
@@ -84,8 +84,14 @@
 		padding: 0 0 8rem 0;
 		width: 100%;
 		display: flex;
+
 		align-items: center;
 		justify-content: space-between;
+
+		&-menu {
+			flex-direction: column !important;
+			align-items: flex-start;
+		}
 
 		&--section {
 			height: 100%;

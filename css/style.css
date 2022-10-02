@@ -159,6 +159,9 @@ body {
 
 *:focus {
   outline: 3px solid var(--text-light) !important; }
+  @media (max-width: 37.5em) {
+    *:focus {
+      outline: none !important; } }
 
 img:not([src]) {
   font-size: 0;
@@ -452,6 +455,21 @@ a:before, a:after {
     background-color: transparent;
     border-top-left-radius: var(--inverted-corners-size);
     box-shadow: var(--inverted-corners-background) 0px calc(-1 * var(--inverted-corners-size)) 0px 0px; }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem; }
+  .breadcrumb i,
+  .breadcrumb p {
+    margin-right: 0.7rem; }
+  .breadcrumb p {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: var(--text-light); }
+  .breadcrumb i {
+    font-size: 1rem;
+    color: var(--color-primary); }
 
 .githubStats {
   position: relative;
@@ -2864,6 +2882,9 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    .article__interactions-menu {
+      flex-direction: column !important;
+      align-items: flex-start; }
     .article__interactions--section {
       height: 100%;
       display: flex;
