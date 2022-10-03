@@ -23,10 +23,21 @@
 		<script defer src="../../../enlargeImage.js"></script>
 		<script defer src="../../../../scripts/tooltip/tooltip.js"></script>
 		<script defer src="../../../../scripts/breadcrumb.js"></script>
+		<script defer src="../../../../scripts/Accessibility/headerNavigationArrowKey.js"></script>
 
 		<title>Understanding Object Oriented Programming</title>
 	</head>
 	<body>
+		<nav aria-label="Skip Links">
+			<ul class="off-screen">
+				<li>
+					<a href="#navigation" class="skip-link"> Skip to Primary Navigation </a>
+				</li>
+				<li>
+					<a href="#first-section" class="skip-link"> Skip to Primary Content </a>
+				</li>
+			</ul>
+		</nav>
 		<!-- --- Navigation --- -->
 		<div class="navigation">
 			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1" />
@@ -35,7 +46,7 @@
 
 			<ul class="desktop__nav">
 				<div class="logo">
-					<a href="../../../../index.html"><img src="../../../../img/logo.png" alt="Logo" class="logo-img" /></a>
+					<a href="../../../../index.html" id="navigation"><img src="../../../../img/logo.png" alt="Logo" class="logo-img" /></a>
 				</div>
 
 				<div>
@@ -112,7 +123,9 @@
 			<div class="breadcrumb"></div>
 			<div class="article__interactions">
 				<div class="article__interactions--section">
-					<a href="../index.html" class="btn-square btn-square--back"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
+					<a href="../index.html" class="btn-square btn-square--back" id="first-section"
+						><i class="fa-solid fa-arrow-left-long"></i>Back</a
+					>
 				</div>
 				<div class="article__interactions--section">
 					<a
