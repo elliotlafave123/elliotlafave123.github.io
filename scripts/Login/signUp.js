@@ -105,8 +105,11 @@ const verifyInputs = () => {
 	filter.test(email.value) ? (state.inputErrors.email = false) : (state.inputErrors.email = true);
 
 	if (password.value !== "") {
-		if (!validatePassword()) return displayErrors();
-		else return displayErrors();
+		if (!validatePassword()) {
+			return displayErrors();
+		} else {
+			displayErrors();
+		}
 	}
 
 	if (!state.inputErrors.fullName && !state.inputErrors.email && validatePassword()) {
