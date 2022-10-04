@@ -1,0 +1,29 @@
+.signedInStrip {
+	background-color: $color-primary;
+	height: 30px;
+	display: none;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 6rem;
+
+	div {
+		display: flex;
+	}
+
+	p,
+	a {
+		color: #ced4da;
+		text-decoration: underline;
+		margin-left: 2rem;
+		font-size: 1.6rem;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+
+	&.shown {
+		display: flex;
+	}
+}

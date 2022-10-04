@@ -24,6 +24,7 @@
 		<script defer src="../../../../scripts/tooltip/tooltip.js"></script>
 		<script defer src="../../../../scripts/breadcrumb.js"></script>
 		<script defer src="../../../../scripts/Accessibility/headerNavigationArrowKey.js"></script>
+		<script defer src="../../../../scripts/Login/signedInStrip.js"></script>
 
 		<title>Python Programming and SQL Basics | Activity 1.3</title>
 	</head>
@@ -38,6 +39,12 @@
 				</li>
 			</ul>
 		</nav>
+		<div class="signedInStrip" id="signedInStrip">
+			<div>
+				<p id="logOutButton">Log Out</p>
+				<a href="../../../../account.html">Account Details</a>
+			</div>
+		</div>
 		<!-- --- Navigation --- -->
 		<div class="navigation">
 			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1" />
@@ -123,7 +130,9 @@
 			<div class="breadcrumb"></div>
 			<div class="article__interactions">
 				<div class="article__interactions--section">
-					<a href="../index.html" class="btn-square btn-square--back" id="first-section"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
+					<a href="../index.html" class="btn-square btn-square--back" id="first-section"
+						><i class="fa-solid fa-arrow-left-long"></i>Back</a
+					>
 				</div>
 				<div class="article__interactions--section">
 					<a

@@ -25,6 +25,7 @@
 		<script defer src="../../../sidebar.js"></script>
 		<script defer src="../../../../scripts/Accessibility/headerNavigationArrowKey.js"></script>
 		<script defer src="../../../../scripts/breadcrumb.js"></script>
+		<script defer src="../../../../scripts/Login/signedInStrip.js"></script>
 
 		<title>Login Audit API</title>
 	</head>
@@ -39,6 +40,12 @@
 				</li>
 			</ul>
 		</nav>
+		<div class="signedInStrip" id="signedInStrip">
+			<div>
+				<p id="logOutButton">Log Out</p>
+				<a href="../../../../account.html">Account Details</a>
+			</div>
+		</div>
 		<!-- --- Navigation --- -->
 		<div class="navigation">
 			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1" />
@@ -329,7 +336,7 @@
 					</div>
 				</div>
 
-				<div class="article__sidebar hide-mobile">
+				<nav role="navigation" aria-label="Article Navigation" class="article__sidebar hide-mobile">
 					<ol>
 						<li><a href="#Outline">Outline</a></li>
 						<li><a href="#Approach">My Approach</a></li>
@@ -344,7 +351,7 @@
 						<li><a href="#Result">Result</a></li>
 						<li><a href="#Challenges">Challenges</a></li>
 					</ol>
-				</div>
+				</nav>
 			</div>
 		</section>
 		<!-- --- Footer --- -->

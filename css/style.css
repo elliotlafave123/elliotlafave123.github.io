@@ -479,6 +479,112 @@ a:before, a:after {
     border-top-left-radius: var(--inverted-corners-size);
     box-shadow: var(--inverted-corners-background) 0px calc(-1 * var(--inverted-corners-size)) 0px 0px; }
 
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .login form {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    .login form input {
+      width: 100%;
+      margin-bottom: 2rem; }
+    .login form label {
+      font-size: 1.7rem;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 1rem; }
+  .login p {
+    font-size: 2.8rem;
+    color: var(--text-light);
+    margin-bottom: 2rem; }
+  .login h1 {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-size: 4.5rem;
+    letter-spacing: 2px;
+    position: relative;
+    width: fit-content;
+    color: var(--text-light);
+    margin-bottom: 2rem; }
+    .login h1::after {
+      content: "";
+      background: var(--text-light);
+      position: absolute;
+      bottom: -0.1rem;
+      left: 0;
+      height: 4px;
+      width: 70%;
+      border-radius: 0 4px 4px 0; }
+    @media (max-width: 37.5em) {
+      .login h1 {
+        font-size: 4rem; }
+        .login h1::after {
+          content: "";
+          background: var(--color-primary);
+          position: absolute;
+          bottom: -0.6rem;
+          left: 0;
+          height: 5px;
+          width: 60%;
+          border-radius: 0 4px 4px 0; } }
+
+.pinBox {
+  --width: 296px;
+  --height: 74px;
+  --spacing: 48.5px;
+  display: inline-block;
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  background-image: url(https://i.stack.imgur.com/JbkZl.png); }
+
+.pinEntry {
+  position: absolute;
+  padding-left: 21px;
+  font-family: inherit, monospaced;
+  font-size: var(--spacing);
+  height: var(--height);
+  letter-spacing: var(--spacing);
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  clip: circ(0px, calc(var(--width) - 21px), var(--height), 0px); }
+
+.pinEntry::-webkit-outer-spin-button,
+.pinEntry::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.pinEntry[type="number"] {
+  -moz-appearance: textfield; }
+
+.signedInStrip {
+  background-color: var(--color-primary);
+  height: 30px;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 6rem; }
+  .signedInStrip div {
+    display: flex; }
+  .signedInStrip p,
+  .signedInStrip a {
+    color: #ced4da;
+    text-decoration: underline;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+    cursor: pointer; }
+    .signedInStrip p:hover,
+    .signedInStrip a:hover {
+      color: var(--color-white); }
+  .signedInStrip.shown {
+    display: flex; }
+
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -1967,6 +2073,29 @@ button:focus {
 
 .slider1 {
   transform: translateY(1000vh); }
+
+.lds-dual-ring {
+  margin: 12rem 0;
+  display: inline-block;
+  width: 80px;
+  height: 80px; }
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--color-primary);
+  border-color: var(--color-primary) transparent var(--color-primary) transparent;
+  animation: lds-dual-ring 1.2s linear infinite; }
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 .o-row-4-col {
   width: 100%;

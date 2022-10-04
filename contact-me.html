@@ -14,10 +14,11 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
 
-        <script defer src="scripts//DarkMode/darkModeContactMe.js"></script>
-        <script defer src="scripts//DarkMode/SetDarkMode.js"></script>
+        <script defer src="scripts/DarkMode/darkModeContactMe.js"></script>
+        <script defer src="scripts/DarkMode/SetDarkMode.js"></script>
         <script defer src="scripts/Accessibility/headerNavigationArrowKey.js"></script>
         <script src="scripts/currentYear.js"></script>
+        <script defer src="scripts/Login/signedInStrip.js"></script>
 
         <title>Portfolio</title>
     </head>
@@ -32,6 +33,12 @@
 				</li>
 			</ul>
 		</nav>
+        <div class="signedInStrip" id="signedInStrip">
+			<div>
+				<p id="logOutButton">Log Out</p>
+				<a href="account.html">Account Details</a>
+			</div>
+		</div>
         <div class="navigation">
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
             <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
