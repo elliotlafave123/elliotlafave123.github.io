@@ -491,17 +491,33 @@ a:before, a:after {
     justify-content: flex-start; }
     .login form input {
       width: 100%;
-      margin-bottom: 2rem; }
+      margin-bottom: 0.7rem; }
     .login form label {
       font-size: 1.7rem;
       letter-spacing: 1.2px;
       font-weight: 600;
       color: var(--text-light);
+      margin-top: 2rem;
       margin-bottom: 1rem; }
+  .login form:invalid input[type="submit"] {
+    background-color: var(--color-card); }
   .login p {
     font-size: 2.8rem;
     color: var(--text-light);
-    margin-bottom: 2rem; }
+    margin-bottom: 0.6rem; }
+  .login span {
+    border-radius: 0.2rem;
+    padding: 1.2rem;
+    margin: 0.2rem;
+    color: var(--color-grey-dark) !important;
+    background-color: #c6ae27;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--text-light);
+    display: none; }
+    .login span i {
+      margin-right: 0.5rem; }
   .login h1 {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
@@ -562,6 +578,36 @@ a:before, a:after {
 
 .pinEntry[type="number"] {
   -moz-appearance: textfield; }
+
+.PasswordRequirements {
+  margin-top: 1rem;
+  display: flex;
+  padding: 0 0 1rem 0; }
+  .PasswordRequirements p,
+  .PasswordRequirements i {
+    font-size: 1.6rem;
+    color: var(--text-light);
+    margin-bottom: 0; }
+  .PasswordRequirements ul > li {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem; }
+    .PasswordRequirements ul > li .checkMark {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #c6c7cb; }
+      .PasswordRequirements ul > li .checkMark i {
+        font-size: 1rem;
+        line-height: 1rem;
+        color: #ffffff; }
+      .PasswordRequirements ul > li .checkMark.active {
+        background-color: var(--color-primary); }
 
 .signedInStrip {
   background-color: var(--color-primary);

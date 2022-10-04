@@ -107,10 +107,41 @@
                 <h1>Sign Up</h1>
                 <label for="email">Full Name</label>
                 <input class="form__input form__input-small" placeholder="Full Name" id="fullname" name="fullname" type="text" required>
+                <span id="errorMessageName"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your full name</span>
                 <label for="email">Email Address</label>
                 <input class="form__input form__input-small" placeholder="Email address" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" required>
+                <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
                 <label for="password">Password</label>
-                <input class="form__input form__input-small" placeholder="Password" id="password" name="password" type="password" required>
+                <input class="form__input form__input-small" minlength="8" placeholder="Password" id="password" name="password" type="password" required>
+                <span id="errorMessagePassword"><i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements</span>
+                <div class="PasswordRequirements">
+                    <ul>
+                        <li>
+                            <div class='checkMark' id="length">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <p>Password must be 8+ characters</p>
+                        </li>
+                        <li>
+                            <div class='checkMark' id="upper">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <p>Uppercase and lowercase letter (A z)</p>
+                        </li>
+                        <li>
+                            <div class='checkMark' id="number">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <p>Numeric character (0-9)</p>
+                        </li>
+                        <li>
+                            <div class='checkMark' id="special">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <p>Special character (!, %, @, #, etc.)</p>
+                        </li>
+                    </ul>
+                </div>
                 <input type="submit" class="btn btn-purple-small" value="Sign Up" id="signUpButton"></input>
             </form>
         </section>

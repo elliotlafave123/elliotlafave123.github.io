@@ -13,7 +13,7 @@
 
 		input {
 			width: 100%;
-			margin-bottom: 2rem;
+			margin-bottom: 0.7rem;
 		}
 
 		label {
@@ -21,14 +21,34 @@
 			letter-spacing: 1.2px;
 			font-weight: 600;
 			color: $text-light;
+			margin-top: 2rem;
 			margin-bottom: 1rem;
 		}
+	}
+
+	form:invalid input[type="submit"] {
+		background-color: $color-card;
 	}
 
 	p {
 		font-size: 2.8rem;
 		color: $text-light;
-		margin-bottom: 2rem;
+		margin-bottom: 0.6rem;
+	}
+	span {
+		border-radius: 0.2rem;
+		padding: 1.2rem;
+		margin: 0.2rem;
+		color: $color-grey-dark !important;
+		background-color: rgb(198, 174, 39);
+		font-size: 1.8rem;
+		font-weight: 700;
+		letter-spacing: 1.2px;
+		color: $text-light;
+		display: none;
+		i {
+			margin-right: 0.5rem;
+		}
 	}
 
 	h1 {
@@ -103,4 +123,45 @@
 
 .pinEntry[type="number"] {
 	-moz-appearance: textfield;
+}
+
+.PasswordRequirements {
+	margin-top: 1rem;
+	display: flex;
+	padding: 0 0 1rem 0;
+
+	p,
+	i {
+		font-size: 1.6rem;
+		color: $text-light;
+		margin-bottom: 0;
+	}
+
+	ul > li {
+		display: flex;
+		align-items: center;
+		font-size: 1.3rem;
+		margin-bottom: 0.5rem;
+
+		.checkMark {
+			i {
+				font-size: 1rem;
+				line-height: 1rem;
+				color: #ffffff;
+			}
+
+			width: 1.6rem;
+			height: 1.6rem;
+			margin-right: 0.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			background-color: #c6c7cb;
+
+			&.active {
+				background-color: $color-primary;
+			}
+		}
+	}
 }
