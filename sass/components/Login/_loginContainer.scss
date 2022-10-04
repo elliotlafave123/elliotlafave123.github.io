@@ -90,6 +90,21 @@
 	}
 }
 
+.terms-section {
+	p {
+		color: $text-light;
+		font-size: 1.3rem;
+
+		a {
+			color: $color-primary-light;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+}
+
 .pinBox {
 	--width: 296px;
 	--height: 74px;

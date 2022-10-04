@@ -549,6 +549,14 @@ a:before, a:after {
           width: 60%;
           border-radius: 0 4px 4px 0; } }
 
+.terms-section p {
+  color: var(--text-light);
+  font-size: 1.3rem; }
+  .terms-section p a {
+    color: var(--primary-light); }
+    .terms-section p a:hover {
+      color: var(--color-primary); }
+
 .pinBox {
   --width: 296px;
   --height: 74px;
