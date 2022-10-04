@@ -138,8 +138,7 @@ if (signUpButton) {
 	signUpButton.addEventListener("click", (e) => {
 		e.preventDefault();
 		if (verifyInputs()) {
-			console.log("inputs verified");
-			// signUp();
+			signUp();
 		}
 	});
 }
