@@ -152,6 +152,11 @@
 				font-size: 1.7rem;
 			}
 
+			&-red {
+				color: $color-grey-dark;
+				background-color: $color-form-false;
+			}
+
 			&::after {
 				background-color: $color-primary-dark;
 			}

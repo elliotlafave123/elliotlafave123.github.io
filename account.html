@@ -102,6 +102,18 @@
             <a href="../../index.html"><img src="../../img/logo.png" alt="Logo" class="logo-img mobile-only"></a>
         </section>
 
+        <div class="modal-container closeModal">
+            <div class="modal">
+                <i class="fa-solid fa-xmark closeModal"></i>
+                <h1>Delete Account</h1>
+                <p>You are about to delete your account, this action can not be reversed.</p>
+                <div class="modal-buttons">
+                    <button class="modalbtn modalbtn-cancel closeModal">Go Back</button>
+                    <button class="modalbtn modalbtn-red" id="confirmModal">Delete Account</button>
+                </div>
+            </div>
+        </div>
+        
         <section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
             <form id="signUpForm" >
                 <h1>Account Details</h1>
@@ -109,7 +121,8 @@
                 <p id="fullName"></p>
                 <label for="email">Email Address</label>
                 <p id="email"></p>
-                <button class="btn btn-purple-small" id="logOutButton">Log Out</button>
+                <button class="btn btn-purple-small u-margin-top-small" id="logOutButton">Log Out</button>
+                <button class="btn btn-purple-small btn-purple-small-red u-margin-top-small" id="DeleteAccountButton">Delete Account</button>
             </form>
         </section>
 
