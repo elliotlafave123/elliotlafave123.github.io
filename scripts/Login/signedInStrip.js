@@ -12,7 +12,7 @@ checkLogin = async () => {
 		});
 		if (res.status === 201) {
 			const data = await res.json();
-			if (signedInStrip && data.data.emailVerified) signedInStrip.classList.add("shown");
+			if (signedInStrip && data.data.emailVerified) signedInStrip.style.display = "flex";
 		} else {
 			throw new Error("Not Authenticated");
 		}
@@ -29,7 +29,7 @@ logOut = async () => {
 		body: JSON.stringify({ token: token }),
 	});
 	localStorage.setItem("token", "");
-	if (signedInStrip) signedInStrip.classList.remove("shown");
+	if (signedInStrip) signedInStrip.style.display = "none";
 };
 
 if (logOutButton) {

@@ -26,6 +26,9 @@
 		<script defer src="../../../../scripts/Accessibility/headerNavigationArrowKey.js"></script>
 		<script defer src="../../../../scripts/breadcrumb.js"></script>
 		<script defer src="../../../../scripts/Login/signedInStrip.js"></script>
+		<script defer src="../../../../scripts/Login/storeBackLink.js"></script>
+		<script defer src="../../../../scripts/Comments/CommentsBundle.js"></script>
+		<!-- <script defer src="../../../../../CommentsSectionApp/public/CommentsBundle.js"></script> -->
 
 		<title>Login Audit App</title>
 	</head>
@@ -250,7 +253,8 @@
 							</div>
 						</div>
 
-						<div class="article__section" id="Challenges">
+						<div class="article__section">
+							<div id="Challenges"></div>
 							<h2>Challenges I overcame:</h2>
 							<p>
 								I had to figure out how to fetch the data from my API and how to parse the JSON response into usable data
@@ -280,7 +284,62 @@
 				</nav>
 			</div>
 		</section>
-
+		<section class="comments-container" data-stream="633d4dbc76066edc99546269" id="commentStreamContainer">
+			<h2 id="comments">Comments</h2>
+			<div>
+				<form class="add-comment-container" onsubmit="return false">
+					<div class="add-comment-container-notAllowed">
+						<a class="btn btn-purple-small storeBackLink" href="../../../Login/login.html">Log In</a>
+						<a class="btn btn-purple-small storeBackLink" href="../../../Login/signUp.html">Sign Up</a>
+					</div>
+					<label for="commentTextarea">Enter your comment...</label>
+					<textarea
+						placeholder="Type your comment in here..."
+						name="commentTextarea"
+						id="commentTextarea"
+						minlength="3"
+						maxlength="120"
+						required
+					></textarea>
+					<input type="submit" value="Publish" id="publishCommentButton" />
+				</form>
+			</div>
+			<div id="InsertCommentsContainer"></div>
+			<!-- <div class="comment" data-commentId="1234567890">
+				<div class="comment-main">
+					<div class="comment-header">
+						<div>
+							<img src="../../../../img/logo-dark.png" alt="Profile Image" />
+							<div class="CommentHeaderDot"></div>
+							<h2>Elliot La Fave</h2>
+							<div class="CommentHeaderDot"></div>
+							<span>12m ago</span>
+							<h3>(Edited)</h3>
+						</div>
+						<div><button class="editLinkButton" tabindex="0">Edit Comment</button></div>
+					</div>
+					<p>
+						Hello, this is a test of my new comments section. Please feel free to add your comments below so I can see it in
+						action.
+					</p>
+					<div class="editComment" style="display: none">
+						<button class="deleteLinkButton u-margin-top-small" tabindex="0">Delete Comment</button>
+						<button class="publish">Publish</button>
+					</div>
+				</div>
+				<div class="comment-side">
+					<button id="upvoteComment">
+						<i class="fa-solid fa-chevron-up green"></i>
+					</button>
+					<p>12</p>
+					<div class="CommentHeaderDot"></div>
+					<p>3</p>
+					<button id="downvoteComment">
+						<i class="fa-solid fa-chevron-down red"></i>
+					</button>
+				</div>
+			</div> -->
+		</section>
 		<!-- --- Footer --- -->
 		<section class="contact u-margin-top-large">
 			<img src="../../../../img/contact.png" alt="" class="contact__img" />

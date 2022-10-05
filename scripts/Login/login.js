@@ -31,7 +31,7 @@ login = async () => {
 			.then(async (JsonData) => {
 				localStorage.setItem("EmailToVerify", data.email);
 				localStorage.setItem("token", JsonData.ACCESS_TOKEN);
-				window.location.replace("../../index.html");
+				window.location.replace(localStorage.getItem("backLink"));
 			});
 	} catch (error) {
 		state.errorMessage = error.message;

@@ -11,6 +11,10 @@
 		flex-direction: column;
 		justify-content: flex-start;
 
+		@include respond(tab-port) {
+			width: 90%;
+		}
+
 		input {
 			width: 100%;
 			margin-bottom: 0.7rem;
