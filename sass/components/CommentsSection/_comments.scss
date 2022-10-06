@@ -82,6 +82,25 @@
 		div {
 			display: flex;
 			align-items: center !important;
+
+			@include respond(tab-port) {
+				display: grid;
+				grid-template-columns: 1fr 4fr 3fr;
+
+				img {
+					margin-right: 1rem;
+				}
+
+				span {
+					grid-column: 1 / 3;
+					margin-top: 0.7rem;
+				}
+
+				h3 {
+					grid-row: 2/3;
+					grid-column: 3/4;
+				}
+			}
 		}
 
 		img {
@@ -149,6 +168,10 @@
 	border-radius: 50%;
 	background-color: var(--color-primary);
 	margin: 1.3rem;
+
+	@include respond(tab-port) {
+		display: none !important;
+	}
 }
 
 .editLinkButton {

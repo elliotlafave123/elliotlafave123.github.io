@@ -1001,6 +1001,18 @@ a:before, a:after {
     .comment-header div {
       display: flex;
       align-items: center !important; }
+      @media (max-width: 56.25em) {
+        .comment-header div {
+          display: grid;
+          grid-template-columns: 1fr 4fr 3fr; }
+          .comment-header div img {
+            margin-right: 1rem; }
+          .comment-header div span {
+            grid-column: 1 / 3;
+            margin-top: 0.7rem; }
+          .comment-header div h3 {
+            grid-row: 2/3;
+            grid-column: 3/4; } }
     .comment-header img {
       border-radius: 50%;
       width: 3.5rem;
@@ -1048,6 +1060,9 @@ a:before, a:after {
   border-radius: 50%;
   background-color: var(--color-primary);
   margin: 1.3rem; }
+  @media (max-width: 56.25em) {
+    .CommentHeaderDot {
+      display: none !important; } }
 
 .editLinkButton {
   display: none;
