@@ -954,6 +954,7 @@ a:before, a:after {
     margin-bottom: 2rem; }
 
 .comment {
+  position: relative;
   font-family: inherit;
   padding: 2.2rem 2.5rem;
   color: var(--text-light);
@@ -980,7 +981,8 @@ a:before, a:after {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 0 2rem; }
+    padding: 0 0 0 2rem;
+    height: min-content; }
     .comment-side p {
       font-size: 1.6rem;
       line-height: 1;
@@ -998,6 +1000,9 @@ a:before, a:after {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media (max-width: 56.25em) {
+      .comment-header div.CommentHeaderDot {
+        display: none !important; } }
     .comment-header div {
       display: flex;
       align-items: center !important; }
@@ -1062,9 +1067,6 @@ a:before, a:after {
   border-radius: 50%;
   background-color: var(--color-primary);
   margin: 1.3rem; }
-  @media (max-width: 56.25em) {
-    .CommentHeaderDot {
-      display: none !important; } }
 
 .editLinkButton {
   display: none;
@@ -1074,6 +1076,12 @@ a:before, a:after {
   padding: 0; }
   .editLinkButton:hover {
     color: var(--color-white); }
+  @media (max-width: 56.25em) {
+    .editLinkButton {
+      position: absolute;
+      top: 2rem;
+      right: 8rem;
+      display: block !important; } }
 
 .deleteLinkButton {
   font-size: 1.8rem;

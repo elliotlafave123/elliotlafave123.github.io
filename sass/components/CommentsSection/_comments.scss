@@ -15,6 +15,7 @@
 }
 
 .comment {
+	position: relative;
 	font-family: inherit;
 	padding: 2.2rem 2.5rem;
 	color: var(--text-light);
@@ -51,6 +52,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 0 0 2rem;
+		height: min-content;
 
 		p {
 			font-size: 1.6rem;
@@ -78,6 +80,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include respond(tab-port) {
+			div.CommentHeaderDot {
+				display: none !important;
+			}
+		}
 
 		div {
 			display: flex;
@@ -171,10 +179,6 @@
 	border-radius: 50%;
 	background-color: var(--color-primary);
 	margin: 1.3rem;
-
-	@include respond(tab-port) {
-		display: none !important;
-	}
 }
 
 .editLinkButton {
@@ -186,6 +190,13 @@
 
 	&:hover {
 		color: $color-white;
+	}
+
+	@include respond(tab-port) {
+		position: absolute;
+		top: 2rem;
+		right: 8rem;
+		display: block !important;
 	}
 }
 .deleteLinkButton {
