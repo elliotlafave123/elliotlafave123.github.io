@@ -25,7 +25,6 @@
 		<script defer src="../../../sidebar.js"></script>
 		<script defer src="../../../../scripts/Accessibility/headerNavigationArrowKey.js"></script>
 		<script defer src="../../../../scripts/breadcrumb.js"></script>
-		<script defer src="../../../../scripts/Login/signedInStrip.js"></script>
 		<script defer src="../../../../scripts/Login/storeBackLink.js"></script>
 		<script defer src="../../../../scripts/Comments/CommentsBundle.js"></script>
 		<!-- <script defer src="../../../../../CommentsSectionApp/public/CommentsBundle.js"></script> -->
@@ -47,6 +46,12 @@
 			<div>
 				<p id="logOutButton">Log Out</p>
 				<a href="../../../../account.html">Account Details</a>
+			</div>
+		</div>
+		<div class="signedInStrip signedInStrip-warning" id="signedInStripWarning">
+			<span>Please verify your email address</span>
+			<div>
+				<a href="../../../Login/verifyEmail.html">Verify email</a>
 			</div>
 		</div>
 		<!-- --- Navigation --- -->
@@ -289,8 +294,14 @@
 			<div>
 				<form class="add-comment-container" onsubmit="return false">
 					<div class="add-comment-container-notAllowed">
-						<a class="btn btn-purple-small storeBackLink" href="../../../Login/login.html">Log In</a>
-						<a class="btn btn-purple-small storeBackLink" href="../../../Login/signUp.html">Sign Up</a>
+						<a id="logInButton" class="btn btn-purple-small storeBackLink" href="../../../Login/login.html">Log In</a>
+						<a id="signUpButton" class="btn btn-purple-small storeBackLink" href="../../../Login/signUp.html">Sign Up</a>
+						<a
+							id="verifyEmailButton"
+							class="btn btn-purple-small btn-purple-small-warning storeBackLink"
+							href="../../../Login/verifyEmail.html"
+							>Verify Email</a
+						>
 					</div>
 					<label for="commentTextarea">Enter your comment...</label>
 					<textarea

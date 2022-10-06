@@ -81,7 +81,7 @@
 
 		div {
 			display: flex;
-			align-items: center;
+			align-items: center !important;
 		}
 
 		img {
@@ -92,7 +92,7 @@
 
 		h2 {
 			font-size: 2rem;
-			line-height: 2rem;
+			line-height: 0.9 !important;
 			font-weight: 600;
 			letter-spacing: 1.4px;
 			margin-bottom: 0;

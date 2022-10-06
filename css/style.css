@@ -632,6 +632,10 @@ a:before, a:after {
       padding: 0 2rem; } }
   .signedInStrip div {
     display: flex; }
+  .signedInStrip span {
+    color: #ced4da;
+    margin-left: 2rem;
+    font-size: 1.6rem; }
   .signedInStrip p,
   .signedInStrip a {
     color: #ced4da;
@@ -642,6 +646,15 @@ a:before, a:after {
     .signedInStrip p:hover,
     .signedInStrip a:hover {
       color: var(--color-white); }
+  .signedInStrip-warning {
+    background-color: var(--color-form-false);
+    justify-content: space-between; }
+    .signedInStrip-warning p,
+    .signedInStrip-warning span,
+    .signedInStrip-warning a {
+      color: var(--color-grey-dark) !important; }
+    .signedInStrip-warning a:hover {
+      color: var(--color-grey-light-2) !important; }
 
 .breadcrumb {
   display: flex;
@@ -967,14 +980,14 @@ a:before, a:after {
     justify-content: space-between; }
     .comment-header div {
       display: flex;
-      align-items: center; }
+      align-items: center !important; }
     .comment-header img {
       border-radius: 50%;
       width: 3.5rem;
       height: 3.5rem; }
     .comment-header h2 {
       font-size: 2rem;
-      line-height: 2rem;
+      line-height: 0.9 !important;
       font-weight: 600;
       letter-spacing: 1.4px;
       margin-bottom: 0; }
@@ -1230,6 +1243,9 @@ a:before, a:after {
       padding: 1.4rem 3rem;
       font-size: 1.7rem; } }
   .btn-purple-small-red {
+    color: var(--color-grey-dark);
+    background-color: var(--color-form-false); }
+  .btn-purple-small-warning {
     color: var(--color-grey-dark);
     background-color: var(--color-form-false); }
   .btn-purple-small::after {

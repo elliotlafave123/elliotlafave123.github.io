@@ -14,6 +14,12 @@
 		display: flex;
 	}
 
+	span {
+		color: #ced4da;
+		margin-left: 2rem;
+		font-size: 1.6rem;
+	}
+
 	p,
 	a {
 		color: #ced4da;
@@ -24,6 +30,23 @@
 
 		&:hover {
 			color: $color-white;
+		}
+	}
+
+	&-warning {
+		background-color: $color-form-false;
+		justify-content: space-between;
+
+		p,
+		span,
+		a {
+			color: $color-grey-dark !important;
+		}
+
+		a {
+			&:hover {
+				color: $color-grey-light-2 !important;
+			}
 		}
 	}
 }

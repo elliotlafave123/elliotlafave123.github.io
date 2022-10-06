@@ -157,6 +157,11 @@
 				background-color: $color-form-false;
 			}
 
+			&-warning {
+				color: $color-grey-dark;
+				background-color: $color-form-false;
+			}
+
 			&::after {
 				background-color: $color-primary-dark;
 			}
