@@ -20,6 +20,11 @@
 		font-size: 2rem;
 		padding: 0.8rem 1rem;
 		color: $color-white;
+		height: 12rem;
+
+		@include respond(tab-port) {
+			height: 12rem;
+		}
 	}
 
 	input[type="submit"] {
