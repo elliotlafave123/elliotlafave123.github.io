@@ -103,9 +103,13 @@
         </section>
 
         <section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
-            <form id="loginForm" class="loginForm">
+            <form id="loginForm" class="loginForm verify">
                 <h1>Verify Email</h1>
-                <div class="lds-dual-ring" id="loadingSpinner"></div>
+                <p class="verify">In order to prevent spam, we need to verify your email address.</p>
+                <p class="verify">Please enter the code we sent to your email below.</p>
+                <div class="spinner-container">
+                    <div class="lds-dual-ring" id="loadingSpinner"></div>
+                </div>
                 <div class="pinBox" id="pinBox">
                     <input
                         class="pinEntry "
@@ -115,9 +119,10 @@
                         autocomplete="off"
                         required
                         id="pinInput"
-                        @keydown="portKeydown($event)"
+                       
                     />
                 </div>
+                <p id="resendCodeContainer" class="verify verify-large">Didn't recieve the code? &nbsp;&nbsp;<a href="#" id="resendCodeButton">Resend code</a></p>
             </form>
         </section>
 

@@ -39,6 +39,25 @@
 		color: $text-light;
 		margin-bottom: 0.6rem;
 	}
+
+	p.verify {
+		text-align: center;
+		font-size: 1.8rem;
+		color: $text-light;
+		margin-bottom: 0.6rem;
+
+		&-large {
+			font-size: 2rem;
+		}
+
+		a {
+			color: $color-primary-light;
+
+			&:hover {
+				color: $text-light;
+			}
+		}
+	}
 	span {
 		border-radius: 0.2rem;
 		padding: 1.2rem;
@@ -52,6 +71,9 @@
 		display: none;
 		i {
 			margin-right: 0.5rem;
+		}
+		&.error {
+			background-color: $color-form-false;
 		}
 	}
 
@@ -94,6 +116,18 @@
 	}
 }
 
+.loginForm.verify {
+	h1 {
+		text-align: center !important;
+		margin: 0 auto 2rem auto;
+
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+}
+
 .terms-section {
 	p {
 		color: $text-light;
@@ -115,6 +149,7 @@
 	--spacing: 48.5px;
 
 	display: inline-block;
+	margin: 2rem auto;
 	position: relative;
 	width: var(--width);
 	height: var(--height);

@@ -508,6 +508,17 @@ a:before, a:after {
     font-size: 2.8rem;
     color: var(--text-light);
     margin-bottom: 0.6rem; }
+  .login p.verify {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.6rem; }
+    .login p.verify-large {
+      font-size: 2rem; }
+    .login p.verify a {
+      color: var(--primary-light); }
+      .login p.verify a:hover {
+        color: var(--text-light); }
   .login span {
     border-radius: 0.2rem;
     padding: 1.2rem;
@@ -521,6 +532,8 @@ a:before, a:after {
     display: none; }
     .login span i {
       margin-right: 0.5rem; }
+    .login span.error {
+      background-color: var(--color-form-false); }
   .login h1 {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
@@ -552,6 +565,12 @@ a:before, a:after {
           width: 60%;
           border-radius: 0 4px 4px 0; } }
 
+.loginForm.verify h1 {
+  text-align: center !important;
+  margin: 0 auto 2rem auto; }
+  .loginForm.verify h1::after, .loginForm.verify h1::before {
+    display: none; }
+
 .terms-section p {
   color: var(--text-light);
   font-size: 1.3rem; }
@@ -565,6 +584,7 @@ a:before, a:after {
   --height: 74px;
   --spacing: 48.5px;
   display: inline-block;
+  margin: 2rem auto;
   position: relative;
   width: var(--width);
   height: var(--height);
@@ -2394,7 +2414,7 @@ button:focus {
   transform: translateY(1000vh); }
 
 .lds-dual-ring {
-  margin: 12rem 0;
+  margin: 0;
   display: inline-block;
   width: 80px;
   height: 80px; }
@@ -2415,6 +2435,12 @@ button:focus {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.spinner-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0; }
 
 .o-row-4-col {
   width: 100%;

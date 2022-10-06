@@ -1,6 +1,9 @@
 const pinBox = document.getElementById("pinBox");
 const pinInput = document.getElementById("pinInput");
+const loadingSpinnerContainer = document.querySelector(".spinner-container");
 const loadingSpinner = document.getElementById("loadingSpinner");
+const resendCodeButton = document.getElementById("resendCodeButton");
+const resendCodeContainer = document.getElementById("resendCodeContainer");
 
 loadingSpinner.style.display = "none";
 
@@ -15,7 +18,6 @@ verifyEmail = async () => {
 		email: localStorage.getItem("EmailToVerify"),
 		code: pinInput.value.toString(),
 	};
-	console.log(Data);
 
 	try {
 		let res = await fetch(API_URL + "/VerifyEmail", {
@@ -46,19 +48,51 @@ verifyEmail = async () => {
 };
 
 checkPinInput = () => {
+	console.log(pinInput.value.length);
 	if (pinInput.value.length === 4) {
-		pinBox.classList.add("invisible");
+		pinBox.style.display = "none";
 		loadingSpinner.style.display = "block";
+		loadingSpinnerContainer.style.display = "flex";
+		resendCodeContainer.innerHTML = " ";
 		verifyEmail();
 	}
 };
 
 if (pinInput) {
-	pinInput.addEventListener("keyup", (e) => {
-		if (!Number.isInteger(parseInt(e.key))) {
+	pinInput.addEventListener("keydown", (e) => {
+		if (!Number.isInteger(parseInt(e.key)) && e.keyCode !== 8) {
 			e.preventDefault();
-		} else {
-			checkPinInput();
 		}
 	});
+	pinInput.addEventListener("keyup", (e) => {
+		checkPinInput();
+	});
 }
+
+// Resend code
+resendCodeButton.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	resendEmail();
+});
+
+const resendEmail = async () => {
+	try {
+		let data = {
+			email: localStorage.getItem("EmailToVerify"),
+		};
+		let res = await fetch(API_URL + "/ResendEmail", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(data),
+		});
+		if (res.status === 201) {
+			console.log("code sent");
+			resendCodeContainer.innerHTML = "Code Sent!";
+		} else if (res.status === 500) {
+			throw new Error("Cannot resend verification code, please try again later.");
+		} else if (res.status === 404) {
+			throw new Error("No user with that email");
+		}
+	} catch (error) {}
+};

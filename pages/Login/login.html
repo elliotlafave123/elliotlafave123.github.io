@@ -107,11 +107,13 @@
                 <h1>Login</h1>
                 <label for="email">Email Address</label>
                 <input class="form__input form__input-small" placeholder="Email address" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" required>
-                <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your email</span>
+                <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
                 <label for="password">Password</label>
                 <input class="form__input form__input-small" placeholder="Password" id="password" name="password" type="password" required>
-                <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your password</span>
+                <span class="error" id="errorMessagePassword"><i class="fa-solid fa-triangle-exclamation"></i>Incorrect password</span>
+                <span id="errorMessageEnterPassword"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a password</span>
                 <input type="submit" class="btn btn-purple-small u-margin-top-medium" value="Login" id="loginButton"></input>
+                <p class="verify u-margin-top-small">Dont have an account? &nbsp;&nbsp;<a href="./signUp.html">Sign Up</a></p>
             </form>
         </section>
 
