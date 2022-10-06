@@ -30,6 +30,7 @@ login = async () => {
 	if (!verifyEmail()) return;
 	if (password.value === "") {
 		state.inputErrors.enterPassword = true;
+		state.inputErrors.password = false;
 		displayErrors();
 		return;
 	}
