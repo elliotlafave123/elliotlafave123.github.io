@@ -32,6 +32,11 @@
 
 	form:invalid input[type="submit"] {
 		background-color: $color-card;
+		cursor: not-allowed;
+	}
+	input[type="submit"]:disabled {
+		background-color: $color-card !important;
+		cursor: not-allowed !important;
 	}
 
 	p {

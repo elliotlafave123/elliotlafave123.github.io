@@ -503,7 +503,11 @@ a:before, a:after {
       margin-top: 2rem;
       margin-bottom: 1rem; }
   .login form:invalid input[type="submit"] {
-    background-color: var(--color-card); }
+    background-color: var(--color-card);
+    cursor: not-allowed; }
+  .login input[type="submit"]:disabled {
+    background-color: var(--color-card) !important;
+    cursor: not-allowed !important; }
   .login p {
     font-size: 2.8rem;
     color: var(--text-light);

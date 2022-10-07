@@ -144,7 +144,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback"></div>
+                <!-- <div class="g-recaptcha" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback"></div> -->
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback"></div>
+                <span id="errorMessageCaptcha"><i class="fa-solid fa-triangle-exclamation"></i>Please verify you're not a robot</span>
                 <div class="terms-section">
                     <p>
                         By signing up, you're agreeing to our <a href="../../termsAndConditions.html">Terms & Conditions</a> and
@@ -178,9 +180,9 @@
             <p class="footer__paragraph">Designed and coded by Elliot La Fave using SCSS, JS, NodeJS and MongoDB.</p>
             <p class="footer__paragraph">Copyright © Elliot La Fave <span id="currentYear">0000</span>.</p>
         </footer>
-        <script>
+        <script defer>
             function recaptcha_callback() {
-                var regsterBtn = document.querySelector('#signUpButton');
+                var regsterBtn = document.getElementById('signUpButton');
                 regsterBtn.removeAttribute('disabled')
             }
         </script>

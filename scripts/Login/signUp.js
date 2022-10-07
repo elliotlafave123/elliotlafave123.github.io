@@ -11,6 +11,7 @@ const special = document.getElementById("special");
 const errorMessageName = document.getElementById("errorMessageName");
 const errorMessageEmail = document.getElementById("errorMessageEmail");
 const errorMessagePassword = document.getElementById("errorMessagePassword");
+const errorMessageCaptcha = document.getElementById("errorMessageCaptcha");
 
 const API_URL = "https://elliotapiserver.co.uk/Auth/signup";
 
@@ -25,6 +26,7 @@ const state = {
 		fullName: false,
 		email: false,
 		password: false,
+		captchaVerified: false,
 	},
 	errorMessage: undefined,
 	errorHidden: true,
@@ -32,6 +34,8 @@ const state = {
 
 signUp = async () => {
 	if (!signUpButton) return;
+	console.log(signUpButton.disabled);
+	if (signUpButton.disabled) return;
 
 	let data = {
 		fullName: fullName.value,
@@ -112,7 +116,7 @@ const verifyInputs = () => {
 		}
 	}
 
-	if (!state.inputErrors.fullName && !state.inputErrors.email && validatePassword()) {
+	if (!state.inputErrors.fullName && !state.inputErrors.email && validatePassword() && state.captchaVerified) {
 		return true;
 	} else {
 		displayErrors();
@@ -131,6 +135,7 @@ displayErrors = () => {
 	state.inputErrors.fullName ? (errorMessageName.style.display = "block") : (errorMessageName.style.display = "none");
 	state.inputErrors.email ? (errorMessageEmail.style.display = "block") : (errorMessageEmail.style.display = "none");
 	state.inputErrors.password ? (errorMessagePassword.style.display = "block") : (errorMessagePassword.style.display = "none");
+	state.inputErrors.captchaVerified ? (errorMessageCaptcha.style.display = "block") : (errorMessageCaptcha.style.display = "none");
 };
 
 password.addEventListener("keyup", () => {
@@ -140,6 +145,7 @@ password.addEventListener("keyup", () => {
 if (signUpButton) {
 	signUpButton.addEventListener("click", (e) => {
 		e.preventDefault();
+
 		if (verifyInputs()) {
 			signUp();
 		}
