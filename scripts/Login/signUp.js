@@ -34,14 +34,13 @@ const state = {
 
 signUp = async () => {
 	if (!signUpButton) return;
-	console.log(signUpButton.disabled);
-	if (signUpButton.disabled) return;
 
 	let data = {
 		fullName: fullName.value,
 		email: email.value,
 		password: password.value,
 	};
+	console.log(data);
 
 	try {
 		let res = await fetch(API_URL, {
@@ -116,7 +115,7 @@ const verifyInputs = () => {
 		}
 	}
 
-	if (!state.inputErrors.fullName && !state.inputErrors.email && validatePassword() && state.captchaVerified) {
+	if (!state.inputErrors.fullName && !state.inputErrors.email && validatePassword() && !signUpButton.disabled) {
 		return true;
 	} else {
 		displayErrors();
@@ -145,7 +144,6 @@ password.addEventListener("keyup", () => {
 if (signUpButton) {
 	signUpButton.addEventListener("click", (e) => {
 		e.preventDefault();
-
 		if (verifyInputs()) {
 			signUp();
 		}
