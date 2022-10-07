@@ -23,7 +23,7 @@ checkLogin = async () => {
 			throw new Error("Not Authenticated");
 		}
 	} catch (e) {
-		window.location.replace("../../index.html");
+		window.location.replace("../../pages/Login/login.html");
 	}
 };
 checkLogin();

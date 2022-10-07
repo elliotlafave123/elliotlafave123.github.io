@@ -21,6 +21,7 @@
 		padding: 0.8rem 1rem;
 		color: $color-white;
 		height: 12rem;
+		box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 		@include respond(tab-port) {
 			height: 12rem;

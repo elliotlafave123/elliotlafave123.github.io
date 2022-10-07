@@ -19,6 +19,8 @@
         <script defer src="../../scripts/Accessibility/headerNavigationArrowKey.js"></script>
         <script defer src="../../scripts/currentYear.js"></script>
         <script defer src="../../scripts/Login/signUp.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
         <title>Sign Up | Elliotlafave.com</title>
     </head>
@@ -142,13 +144,14 @@
                         </li>
                     </ul>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback"></div>
                 <div class="terms-section">
                     <p>
                         By signing up, you're agreeing to our <a href="../../termsAndConditions.html">Terms & Conditions</a> and
                         <a href="../../PrivacyPolicy.html">Privacy Policy</a>
                     </p>
                 </div>
-                <input type="submit" class="btn btn-purple-small u-margin-top-small" value="Sign Up" id="signUpButton"></input>
+                <input type="submit" class="btn btn-purple-small u-margin-top-small" value="Sign Up" id="signUpButton" disabled></input>
                 <p class="verify u-margin-top-small">Already have an account? &nbsp;&nbsp;<a href="./signUp.html">Log In</a></p>
             </form>
         </section>
@@ -175,6 +178,11 @@
             <p class="footer__paragraph">Designed and coded by Elliot La Fave using SCSS, JS, NodeJS and MongoDB.</p>
             <p class="footer__paragraph">Copyright © Elliot La Fave <span id="currentYear">0000</span>.</p>
         </footer>
+        <script>
+            function recaptcha_callback() {
+                var regsterBtn = document.querySelector('#signUpButton');
+                regsterBtn.removeAttribute('disabled')
+            }
+        </script>
     </body>
-   
 </html>

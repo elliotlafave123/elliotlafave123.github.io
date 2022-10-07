@@ -959,10 +959,20 @@ a:before, a:after {
   padding: 2.2rem 2.5rem;
   color: var(--text-light);
   background-color: var(--color-card);
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem; }
+  margin-bottom: 4rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; }
+  .comment:after {
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-card);
+    clip-path: polygon(0 0, 100% 100%, 100% 0); }
   .comment:hover .editLinkButton,
   .comment:focus-within .editLinkButton {
     display: block; }
@@ -1111,7 +1121,8 @@ a:before, a:after {
     font-size: 2rem;
     padding: 0.8rem 1rem;
     color: var(--color-white);
-    height: 12rem; }
+    height: 12rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; }
     @media (max-width: 56.25em) {
       .add-comment-container textarea {
         height: 12rem; } }
