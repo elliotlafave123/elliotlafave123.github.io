@@ -18,7 +18,8 @@ const errorMessagePassword = document.getElementById("errorMessagePassword");
 const errorMessageCaptcha = document.getElementById("errorMessageCaptcha");
 const errorMessagePin = document.getElementById("errorMessagePin");
 
-const API_URL = "https://elliotapiserver.co.uk/Auth/signup";
+const API_URL = "https://elliotapiserver.co.uk/Auth";
+// const API_URL = "http://localhost:3000/Auth";
 
 const state = {
 	passwordChecks: {
@@ -35,6 +36,7 @@ const state = {
 	errorMessage: undefined,
 	errorHidden: true,
 	emailToVerify: undefined,
+	passwordResetToken: undefined,
 };
 
 startResetPasswordButton.addEventListener("click", async (e) => {
@@ -47,7 +49,6 @@ startResetPasswordButton.addEventListener("click", async (e) => {
 
 	if (!state.inputErrors.email) {
 		try {
-			const API_URL = "https://elliotapiserver.co.uk/Auth";
 			let data = {
 				email: email.value,
 			};
@@ -75,6 +76,7 @@ const displayEmailVerification = () => {
 	const loadingSpinner = document.getElementById("loadingSpinner");
 	const resendCodeButton = document.getElementById("resendCodeButton");
 	const resendCodeContainer = document.getElementById("resendCodeContainer");
+	pinInput.focus();
 
 	pinBox.style.display = "block";
 	pinInput.value = "";
@@ -86,12 +88,13 @@ const displayEmailVerification = () => {
 		errorHidden: true,
 	};
 
-	const API_URL = "https://elliotapiserver.co.uk/Auth";
 	verifyEmail = async () => {
 		const Data = {
 			email: state.emailToVerify,
 			code: pinInput.value.toString(),
+			resetPassword: true,
 		};
+		console.log(Data);
 
 		try {
 			let res = await fetch(API_URL + "/VerifyEmail", {
@@ -99,7 +102,12 @@ const displayEmailVerification = () => {
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(Data),
 			});
+
+			console.log(res);
 			if (res.status === 200) {
+				let response = await res.json();
+				state.passwordResetToken = response.passwordResetToken;
+				console.log(state.passwordResetToken);
 				VerifyEmailContainer.style.display = "none";
 				SavePasswordContainer.style.display = "block";
 			} else if (res.status === 301) {
@@ -117,6 +125,7 @@ const displayEmailVerification = () => {
 				throw new Error("Incorrect Verification Code");
 			}
 		} catch (error) {
+			console.log(error);
 			loadingSpinner.style.display = "none";
 			State.errorHidden = false;
 			State.errorMessage = error.message;
@@ -161,6 +170,7 @@ const displayEmailVerification = () => {
 		try {
 			let data = {
 				email: state.emailToVerify,
+				resetPassword: true,
 			};
 			let res = await fetch(API_URL + "/ResendEmail", {
 				method: "POST",
@@ -263,11 +273,14 @@ if (sendNewPasswordButton) {
 // Send new password to server
 const sendNewPassword = async () => {
 	try {
-		const API_URL = "https://elliotapiserver.co.uk/Auth/SetNewPassword";
-		await fetch(API_URL, {
+		await fetch(API_URL + "/SetNewPassword", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ email: state.emailToVerify, password: password.value.toString() }),
+			body: JSON.stringify({
+				email: state.emailToVerify,
+				password: password.value.toString(),
+				passwordResetToken: state.passwordResetToken,
+			}),
 		}).then((res) => {
 			if (res.status === 404) throw new Error("No user found");
 			if (res.status === 500) throw new Error("An error occoured");
