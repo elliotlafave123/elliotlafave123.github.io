@@ -502,6 +502,12 @@ a:before, a:after {
       color: var(--text-light);
       margin-top: 2rem;
       margin-bottom: 1rem; }
+    .login form a {
+      font-size: 1.6rem;
+      text-decoration: underline;
+      color: var(--primary-light); }
+      .login form a:hover {
+        color: var(--text-light); }
   .login form:invalid input[type="submit"] {
     background-color: var(--color-card);
     cursor: not-allowed; }
@@ -520,6 +526,7 @@ a:before, a:after {
     .login p.verify-large {
       font-size: 2rem; }
     .login p.verify a {
+      font-size: inherit;
       color: var(--primary-light); }
       .login p.verify a:hover {
         color: var(--text-light); }
