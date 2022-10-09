@@ -50,6 +50,7 @@ startResetPasswordButton.addEventListener("click", async (e) => {
 		EnterEmailSection.style.display = "none";
 
 		try {
+			const API_URL = "https://elliotapiserver.co.uk/Auth";
 			let res = await fetch(API_URL + "/ResendEmail", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
