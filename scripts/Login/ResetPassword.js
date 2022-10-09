@@ -37,7 +37,7 @@ const state = {
 	emailToVerify: undefined,
 };
 
-startResetPasswordButton.addEventListener("click", (e) => {
+startResetPasswordButton.addEventListener("click", async (e) => {
 	e.preventDefault();
 	email.value == "" ? (state.inputErrors.email = true) : (state.inputErrors.email = false);
 	var filter =
@@ -48,7 +48,19 @@ startResetPasswordButton.addEventListener("click", (e) => {
 	if (!state.inputErrors.email) {
 		state.emailToVerify = email.value;
 		EnterEmailSection.style.display = "none";
-		displayEmailVerification();
+
+		try {
+			let res = await fetch(API_URL + "/ResendEmail", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(data),
+			});
+			if (res.status === 201) {
+				displayEmailVerification();
+			}
+		} catch (e) {
+			console.log(e);
+		}
 	}
 });
 
@@ -145,7 +157,7 @@ const displayEmailVerification = () => {
 	const resendEmail = async () => {
 		try {
 			let data = {
-				email: localStorage.getItem("EmailToVerify"),
+				email: state.emailToVerify,
 			};
 			let res = await fetch(API_URL + "/ResendEmail", {
 				method: "POST",
