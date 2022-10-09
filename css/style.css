@@ -529,6 +529,7 @@ a:before, a:after {
     .login p.verify-large {
       font-size: 2rem; }
     .login p.verify a {
+      font-size: inherit;
       color: var(--primary-light); }
       .login p.verify a:hover {
         color: var(--text-light); }
