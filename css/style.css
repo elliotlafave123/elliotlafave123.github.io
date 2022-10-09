@@ -483,6 +483,9 @@ a:before, a:after {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media (max-width: 56.25em) {
+    .login {
+      margin-top: 4rem !important; } }
   .login form {
     width: 30%;
     margin: 0 auto;
@@ -526,7 +529,6 @@ a:before, a:after {
     .login p.verify-large {
       font-size: 2rem; }
     .login p.verify a {
-      font-size: inherit;
       color: var(--primary-light); }
       .login p.verify a:hover {
         color: var(--text-light); }
@@ -586,6 +588,7 @@ a:before, a:after {
   color: var(--text-light);
   font-size: 1.3rem; }
   .terms-section p a {
+    font-size: inherit;
     color: var(--primary-light); }
     .terms-section p a:hover {
       color: var(--color-primary); }
