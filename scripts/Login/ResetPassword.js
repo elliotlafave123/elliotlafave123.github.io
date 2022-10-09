@@ -46,17 +46,19 @@ startResetPasswordButton.addEventListener("click", async (e) => {
 	state.inputErrors.email ? (errorMessageEmail.style.display = "block") : (errorMessageEmail.style.display = "none");
 
 	if (!state.inputErrors.email) {
-		state.emailToVerify = email.value;
-		EnterEmailSection.style.display = "none";
-
 		try {
 			const API_URL = "https://elliotapiserver.co.uk/Auth";
+			let data = {
+				email: email.value,
+			};
 			let res = await fetch(API_URL + "/ResendEmail", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(data),
 			});
 			if (res.status === 201) {
+				state.emailToVerify = email.value;
+				EnterEmailSection.style.display = "none";
 				displayEmailVerification();
 			}
 		} catch (e) {
