@@ -10,6 +10,7 @@ const special = document.getElementById("special");
 
 const errorMessageName = document.getElementById("errorMessageName");
 const errorMessageEmail = document.getElementById("errorMessageEmail");
+const errorMessageEmailExists = document.getElementById("errorMessageEmailExists");
 const errorMessagePassword = document.getElementById("errorMessagePassword");
 
 const API_URL = "https://elliotapiserver.co.uk/Auth/signup";
@@ -24,6 +25,7 @@ const state = {
 	inputErrors: {
 		fullName: false,
 		email: false,
+		emailUsed: false,
 		password: false,
 	},
 	errorMessage: undefined,
@@ -45,16 +47,16 @@ signUp = async () => {
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(data),
 		});
+		console.log(res.status);
 		if (res.status === 201) {
 			localStorage.setItem("EmailToVerify", data.email);
 			window.location.replace("../../pages/Login/verifyEmail.html");
 		} else {
-			state.errorHidden = false;
-			setTimeout(() => {
-				state.errorHidden = true;
-			}, 5000);
+			throw new Error("Email already used");
 		}
 	} catch (error) {
+		state.inputErrors.emailUsed = true;
+		displayErrors();
 		state.errorMessage = error.message;
 		state.errorHidden = false;
 		setTimeout(() => {
@@ -130,6 +132,7 @@ displayPasswordTicks = () => {
 displayErrors = () => {
 	state.inputErrors.fullName ? (errorMessageName.style.display = "block") : (errorMessageName.style.display = "none");
 	state.inputErrors.email ? (errorMessageEmail.style.display = "block") : (errorMessageEmail.style.display = "none");
+	state.inputErrors.emailUsed ? (errorMessageEmailExists.style.display = "block") : (errorMessageEmailExists.style.display = "none");
 	state.inputErrors.password ? (errorMessagePassword.style.display = "block") : (errorMessagePassword.style.display = "none");
 };
 
