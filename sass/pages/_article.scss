@@ -182,9 +182,11 @@
 		a {
 			transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 			color: #dd94ff;
+			text-decoration: underline;
 
 			&:hover {
 				color: #d06cffd0;
+				text-decoration: none;
 			}
 		}
 	}

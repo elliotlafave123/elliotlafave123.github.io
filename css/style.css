@@ -3490,9 +3490,11 @@ button:focus {
       margin-bottom: 0.6rem; }
     .article__section a {
       transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-      color: #dd94ff; }
+      color: #dd94ff;
+      text-decoration: underline; }
       .article__section a:hover {
-        color: #d06cffd0; }
+        color: #d06cffd0;
+        text-decoration: none; }
   .article__user-story {
     margin-bottom: 3rem; }
     .article__user-story p {

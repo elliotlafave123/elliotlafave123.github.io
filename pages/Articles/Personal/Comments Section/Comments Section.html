@@ -20,9 +20,7 @@
 		<script defer src="../../../../scripts/DarkMode/darkmodeHome.js"></script>
 		<script defer src="../../../../scripts/DarkMode/SetDarkMode.js"></script>
 		<script defer src="../../../../scripts/currentYear.js"></script>
-		<script defer src="../../../enlargeImage.js"></script>
 		<script defer src="../../../../scripts/tooltip/tooltip.js"></script>
-		<script defer src="../../../sidebar.js"></script>
 		<script defer src="../../../../scripts/Login/storeBackLink.js"></script>
 		<script defer src="../../../../scripts/SiteFrontendTSBundle.js"></script>
 
@@ -177,10 +175,10 @@
 						<div class="article__user-story">
 							<ul class="u-margin-bottom-medium">
 								<li>Build login / sign up forms</li>
+								<li>Verify user emails</li>
 								<li>Create a 'signed in strip' so users know when they are logged in</li>
 								<li>Design the look of a comment</li>
-								<li>Email verification</li>
-								<li>API to store and send comments</li>
+								<li>API to handle comment storage</li>
 							</ul>
 						</div>
 					</div>
@@ -204,7 +202,7 @@
 						<h2>Integrating user login</h2>
 						<p>
 							I had already created a user authentication API, it is used in this
-							<a href="https://login.elliotlafave.com">user authentication app</a>.
+							<a href="https://login.elliotlafave.com" target="_blank">user authentication app</a>.
 						</p>
 						<p>
 							The app uses JWT (JSON web token) authentication. This works by creating a random token when a user successfully
@@ -232,8 +230,8 @@
 						<p>The pages for the login/sign up pages are below:</p>
 						<div class="article__user-story">
 							<ul class="u-margin-bottom-medium">
-								<li>Log In: <a href="../../../Login/login.html">Login</a></li>
-								<li>Sign Up: <a href="../../../Login/signUp.html">Sign Up</a></li>
+								<li>Log In: <a class="storeBackLink" href="../../../Login/login.html">Login</a></li>
+								<li>Sign Up: <a class="storeBackLink" href="../../../Login/signUp.html">Sign Up</a></li>
 							</ul>
 						</div>
 					</div>
@@ -270,6 +268,11 @@
 							<img src="img/CommentsVerify.png" alt="Comments section verify email" class="articleImg" />
 							<p>Comments section verify email</p>
 						</div>
+						<p>If a user is signed in and their email is verified they see the comment input box:</p>
+						<div class="article__image">
+							<img src="img/CommentInputSignedIn.png" alt="Unlocked comment input textarea" class="articleImg" />
+							<p>Unlocked comment input textarea</p>
+						</div>
 						<p>All of the designs are responsive so they work on all devices.</p>
 					</div>
 
@@ -286,12 +289,14 @@
 							<p>Comments API Endpoints in Postman</p>
 						</div>
 						<p>
-							The API is running on a <a href="https://www.linode.com/">Linode</a> cloud based server. I have configured the
-							server to use HTTPS and with the E-Mail ports allowed so I can send email verification codes to users.
+							The API is running on a <a href="https://www.linode.com/" target="_blank">Linode</a> cloud based server. I have
+							configured the server to use HTTPS and with the E-Mail ports allowed so I can send email verification codes to
+							users.
 						</p>
 						<p>
-							The database is running on a <a href="https://www.mongodb.com/atlas/database">MongoDB Atlas Cloud</a> which is a
-							free service up to a certain amount of traffic or data stored.
+							The database is running on a
+							<a href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB Atlas Cloud</a> which is a free service
+							up to a certain amount of traffic or data stored.
 						</p>
 					</div>
 
@@ -318,11 +323,7 @@
 							<p>Editing state of a comment</p>
 						</div>
 						<p>When editing users can use the DELETE endpoint and the PUT (update) endpoint.</p>
-						<p>If a user is signed in and their email is verified they see the comment input box:</p>
-						<div class="article__image">
-							<img src="img/CommentInputSignedIn.png" alt="Unlocked comment input textarea" class="articleImg" />
-							<p>Unlocked comment input textarea</p>
-						</div>
+
 						<h3>You can try it out below...</h3>
 					</div>
 				</div>
