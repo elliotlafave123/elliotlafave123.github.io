@@ -12,6 +12,11 @@ const state = {
 	errorHidden: true,
 };
 
+if (!localStorage.getItem("EmailToVerify")) {
+	let backLinkUrl = localStorage.getItem("backLink") || "../../index.html";
+	window.location.replace(backLinkUrl);
+}
+
 const API_URL = "https://elliotapiserver.co.uk/Auth";
 verifyEmail = async () => {
 	const Data = {
@@ -27,6 +32,7 @@ verifyEmail = async () => {
 		});
 		console.log(res);
 		if (res.status === 200) {
+			localStorage.setItem("EmailToVerify", "");
 			window.location.replace("../../pages/Login/login.html");
 		} else if (res.status === 301) {
 			data.code = "";
