@@ -35,13 +35,11 @@ login = async () => {
 		return;
 	}
 
-	console.log("logging in");
-
 	let data = {
 		email: email.value,
 		password: password.value,
 	};
-
+	console.log(data);
 	try {
 		await fetch(API_URL, {
 			method: "POST",
