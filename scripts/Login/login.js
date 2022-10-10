@@ -56,7 +56,8 @@ login = async () => {
 			.then(async (JsonData) => {
 				localStorage.setItem("EmailToVerify", data.email);
 				localStorage.setItem("token", JsonData.ACCESS_TOKEN);
-				window.location.replace(localStorage.getItem("backLink"));
+				let backLink = localStorage.getItem("backLink") || "../../index.html";
+				window.location.replace(backLink);
 			});
 	} catch (error) {
 		if ((error.message = "Incorrect password")) {
