@@ -193,6 +193,12 @@ hr {
     hr {
       width: 10vw; } }
 
+h1.none {
+  text-align: center;
+  width: 100% !important; }
+  h1.none::after, h1.none::before {
+    display: none; }
+
 h2 {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 500;

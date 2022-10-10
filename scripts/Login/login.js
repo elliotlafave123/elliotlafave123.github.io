@@ -4,6 +4,7 @@ const password = document.getElementById("password");
 const errorMessageEnterPassword = document.getElementById("errorMessageEnterPassword");
 
 const API_URL = "https://elliotapiserver.co.uk/Auth/login";
+// const API_URL = "http://localhost:3000/Auth/login";
 
 const state = {
 	errorMessage: undefined,
@@ -39,7 +40,6 @@ login = async () => {
 		email: email.value,
 		password: password.value,
 	};
-	console.log(data);
 	try {
 		await fetch(API_URL, {
 			method: "POST",
@@ -48,6 +48,7 @@ login = async () => {
 		})
 			.then((data) => {
 				if (data.status === 404) throw new Error("No user with that email");
+				if (data.status === 403) throw new Error("Account locked");
 				if (data.status === 401) throw new Error("Incorrect password");
 				return data.json();
 			})
@@ -58,10 +59,19 @@ login = async () => {
 				window.location.replace(backLink);
 			});
 	} catch (error) {
-		if ((error.message = "Incorrect password")) {
+		if (error.message === "Incorrect password") {
 			state.inputErrors.enterPassword = false;
 			state.inputErrors.password = true;
 			displayErrors();
+		} else if (error.message === "Account locked") {
+			let markup = `
+				<h1 class="none">Account Locked</h1>
+				<p class="verify">Your account has been locked due to too many incorrect pin entries.</p>
+				<p class="verify">Contact the site admin from your email address: ${email.value}</p>
+				<p class="verify u-margin-top-medium">Click this link to email support: <a href="mailto:elliot@lafave.co.uk">elliot@lafave.co.uk</a></p>`;
+
+			let form = document.getElementById("loginForm");
+			form.innerHTML = markup;
 		}
 	}
 };
@@ -94,7 +104,6 @@ const checkLogin = async () => {
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({ token: token }),
 		});
-		console.log(res);
 		if (res.status === 201) {
 			window.location.replace(localStorage.getItem("backLink"));
 		}

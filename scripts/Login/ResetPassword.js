@@ -62,9 +62,7 @@ startResetPasswordButton.addEventListener("click", async (e) => {
 				EnterEmailSection.style.display = "none";
 				displayEmailVerification();
 			}
-		} catch (e) {
-			console.log(e);
-		}
+		} catch (e) {}
 	}
 });
 
@@ -94,7 +92,6 @@ const displayEmailVerification = () => {
 			code: pinInput.value.toString(),
 			resetPassword: true,
 		};
-		console.log(Data);
 
 		try {
 			let res = await fetch(API_URL + "/VerifyEmail", {
@@ -103,11 +100,9 @@ const displayEmailVerification = () => {
 				body: JSON.stringify(Data),
 			});
 
-			console.log(res);
 			if (res.status === 200) {
 				let response = await res.json();
 				state.passwordResetToken = response.passwordResetToken;
-				console.log(state.passwordResetToken);
 				VerifyEmailContainer.style.display = "none";
 				SavePasswordContainer.style.display = "block";
 			} else if (res.status === 301) {
@@ -117,15 +112,30 @@ const displayEmailVerification = () => {
 				loadingSpinnerContainer.style.display = "none";
 				errorMessagePin.style.display = "block";
 				pinInput.value = "";
-				data.code = "";
 				throw new Error("Incorrect Verification Code");
+			} else if (res.status === 403) {
+				loadingSpinner.style.display = "none";
+				loadingSpinnerContainer.style.display = "none";
+				pinInput.value = "";
+				errorMessagePin.style.display = "none";
+				document.getElementById("loginForm").querySelector("h1").style.display = "none";
+				let elements = document.querySelectorAll("p.verify");
+				elements.forEach((el) => {
+					el.style.display = "none";
+				});
+				let markup = `
+				<h1>Account Locked</h1>
+				<p class="verify">Your account has been locked due to too many incorrect pin entries.</p>
+				<p class="verify">Contact the site admin from your email address: ${Data.email}</p>
+				<p class="verify u-margin-top-medium">Click this link to email support: <a href="mailto:elliot@lafave.co.uk">elliot@lafave.co.uk</a></p>`;
+				document.getElementById("loginForm").insertAdjacentHTML("beforeend", markup);
+				throw new Error("Account Locked");
 			} else if (res.status === 404) {
 				VerifyEmailContainer.style.display = "none";
 				EnterEmailSection.style.display = "block";
 				throw new Error("Incorrect Verification Code");
 			}
 		} catch (error) {
-			console.log(error);
 			loadingSpinner.style.display = "none";
 			State.errorHidden = false;
 			State.errorMessage = error.message;

@@ -41,7 +41,6 @@ signUp = async () => {
 		email: email.value,
 		password: password.value,
 	};
-	console.log(data);
 
 	try {
 		let res = await fetch(API_URL, {
@@ -49,7 +48,6 @@ signUp = async () => {
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(data),
 		});
-		console.log(res.status);
 		if (res.status === 201) {
 			localStorage.setItem("EmailToVerify", data.email);
 			window.location.replace("../../pages/Login/verifyEmail.html");

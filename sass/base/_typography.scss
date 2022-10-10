@@ -17,6 +17,15 @@ hr {
 	}
 }
 
+h1.none {
+	text-align: center;
+	width: 100% !important;
+	&::after,
+	&::before {
+		display: none;
+	}
+}
+
 h2 {
 	font-family: $font-zen;
 	font-weight: 500;
