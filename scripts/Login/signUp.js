@@ -40,6 +40,7 @@ signUp = async () => {
 		email: email.value,
 		password: password.value,
 	};
+	console.log(data);
 
 	try {
 		let res = await fetch(API_URL, {

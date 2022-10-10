@@ -30,13 +30,18 @@ verifyEmail = async () => {
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(Data),
 		});
-		console.log(res);
+		pinInput.value = "";
 		if (res.status === 200) {
 			localStorage.setItem("EmailToVerify", "");
 			window.location.replace("../../pages/Login/login.html");
 		} else if (res.status === 301) {
+			pinBox.style.display = "block";
+			resendCodeContainer.style.display = "block";
+			loadingSpinner.style.display = "none";
+			loadingSpinnerContainer.style.display = "none";
+			errorMessagePin.style.display = "block";
 			data.code = "";
-			throw new Error("Incorrect Verification Code");
+			pinInput.focus();
 		} else if (res.status === 404) {
 			await router.push("./signUp.js");
 		}
