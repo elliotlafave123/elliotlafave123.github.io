@@ -59,12 +59,11 @@ verifyEmail = async () => {
 };
 
 checkPinInput = () => {
-	console.log(pinInput.value.length);
 	if (pinInput.value.length === 4) {
 		pinBox.style.display = "none";
 		loadingSpinner.style.display = "block";
 		loadingSpinnerContainer.style.display = "flex";
-		resendCodeContainer.innerHTML = " ";
+		resendCodeContainer.style.display = "none";
 		verifyEmail();
 	}
 };
@@ -98,7 +97,6 @@ const resendEmail = async () => {
 			body: JSON.stringify(data),
 		});
 		if (res.status === 201) {
-			console.log("code sent");
 			resendCodeContainer.innerHTML = "Code Sent!";
 		} else if (res.status === 500) {
 			throw new Error("Cannot resend verification code, please try again later.");
