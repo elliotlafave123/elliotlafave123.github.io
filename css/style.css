@@ -563,7 +563,7 @@ a:before, a:after {
   .profileImage-red {
     background-color: #de350c; }
   .profileImage-purple {
-    background-color: #5343aa; }
+    background-color: #7149e9; }
   .profileImage-darkBlue {
     background-color: #172b4e; }
 
@@ -618,7 +618,7 @@ a:before, a:after {
   .checkmark-red {
     background-color: #de350c; }
   .checkmark-purple {
-    background-color: #5343aa; }
+    background-color: #7149e9; }
   .checkmark-darkBlue {
     background-color: #172b4e; }
 
@@ -636,7 +636,7 @@ a:before, a:after {
   .checkbox-container:hover input ~ .checkmark-red {
     background-color: #de350c; }
   .checkbox-container:hover input ~ .checkmark-purple {
-    background-color: #5343aa; }
+    background-color: #7149e9; }
   .checkbox-container:hover input ~ .checkmark-darkBlue {
     background-color: #172b4e; }
 
@@ -657,7 +657,7 @@ a:before, a:after {
   background-color: #de350c; }
 
 .checkbox-container-purple {
-  background-color: #5343aa; }
+  background-color: #7149e9; }
 
 .checkbox-container-darkBlue {
   background-color: #172b4e; }
@@ -678,7 +678,7 @@ a:before, a:after {
   background-color: #de350c; }
 
 .checkbox-container input:checked ~ .checkmark-purple {
-  background-color: #5343aa; }
+  background-color: #7149e9; }
 
 .checkbox-container input:checked ~ .checkmark-darkBlue {
   background-color: #172b4e; }
