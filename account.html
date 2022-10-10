@@ -14,12 +14,13 @@
         <link rel="stylesheet" href="../../css/style.css" />
         <link rel="shortcut icon" type="image/png" href="../../img/favicon.png" />
 
-        <script defer src="../../scripts/Login/accountPage.js"></script>
+        <!-- <script defer src="../../scripts/Login/accountPage.js"></script> -->
         <script defer src="../../scripts/SiteFrontendTSBundle.js"></script>
+        <!-- <script defer src="../Elliotlafave.com Typescript/Elliotlafave.com TypeScript/public/SiteFrontendTSBundle.js"></script> -->
 
-        <title>Sign Up | Elliotlafave.com</title>
+        <title>Account Settings | Elliotlafave.com</title>
     </head>
-    <body>
+    <body >
         <nav aria-label="Skip Links">
 			<ul class="off-screen">
 				<li>
@@ -111,15 +112,69 @@
             </div>
         </div>
         
-        <section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
+        <section class="login u-margin-top-large u-margin-bottom-large" id="accountPage">            
             <form id="signUpForm" >
-                <h1>Account Details</h1>
-                <label for="email">Full Name</label>
-                <p id="fullName"></p>
+                <h1>Account Settings</h1>
+                <div class="user-info-container">
+                    <div class="profileImage profileImage-teal">
+                        <p></p>
+                    </div>
+                    <div class="user-info-text-container">
+                        <div>
+                            <p class="widgetFullName"></p>
+                        </div>
+                        <p class="widgetEmail"></p>
+                    </div>
+                </div>
+                <div class="edit-color">
+                    <div class="edit-color-row">
+                        <label>Profile Colour</label>
+                        <p class=" savedColor">saved</p>
+                    </div>
+					<div class="checkboxes">
+						<label class="checkbox-container">
+							<input type="checkbox" class="profileColorCheckbox" data-color="blue" />
+							<div class="checkmark checkmark-blue"></div>
+						</label>
+						<label class="checkbox-container">
+							<input type="checkbox" class="profileColorCheckbox" data-color="teal"/>
+							<div  class="checkmark checkmark-teal"></div>
+						</label>
+						<label class="checkbox-container">
+							<input type="checkbox" class="profileColorCheckbox" data-color="green" />
+							<div class="checkmark checkmark-green"></div>
+						</label>
+						<label class="checkbox-container">
+							<input type="checkbox" class="profileColorCheckbox" data-color="yellow"/>
+							<div class="checkmark checkmark-yellow"></div>
+						</label>
+						<label class="checkbox-container">
+							<input type="checkbox" class="profileColorCheckbox" data-color="red"/>
+							<div class="checkmark checkmark-red"></div>
+						</label>
+						<label class="checkbox-container">
+							<input type="checkbox" class="profileColorCheckbox" data-color="purple" />
+							<div  class="checkmark checkmark-purple"></div>
+						</label>
+						<label class="checkbox-container">
+							<input type="checkbox" class="profileColorCheckbox" data-color="darkBlue"/>
+							<div class="checkmark checkmark-darkBlue"></div>
+						</label>
+					</div>
+				</div>
+                <h2>Personal Infomation</h2>
+                <label for="fullname">Full Name</label>
+                <input class="form__input form__input-small" placeholder="Full Name" id="fullname" name="fullname" type="text" maxlength="94" required>
                 <label for="email">Email Address</label>
-                <p id="email"></p>
-                <button class="btn btn-purple-small u-margin-top-small" id="logOutButton">Log Out</button>
-                <button class="btn btn-purple-small btn-purple-small-red u-margin-top-small" id="DeleteAccountButton">Delete Account</button>
+                <input class="form__input form__input-small" placeholder="Email address" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email"  disabled >
+                <div class="info-save-button-container">
+                    <input class="btn btn-purple-small" id="SaveChanges" type="submit" value="Save Changes" style="width: min-content; margin-top: 2.5rem;" disabled>
+                    <p class="savedName">saved</p>
+                </div>
+                <div class="personalInfoButtonsContainer">
+                    <button class="btn btn-purple-small u-margin-top-small" id="logOutButton">Log Out</button>
+                    <button class="btn btn-purple-small btn-purple-small-red u-margin-top-small" id="DeleteAccountButton">Delete Account</button>
+                </div>
             </form>
         </section>
 
