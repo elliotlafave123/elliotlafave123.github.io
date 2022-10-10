@@ -14,6 +14,19 @@
 	}
 }
 
+.noCommentsContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	img {
+		width: 60%;
+	}
+}
+
 .comment {
 	position: relative;
 	font-family: inherit;
