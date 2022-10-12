@@ -56,6 +56,7 @@ login = async () => {
 				localStorage.setItem("EmailToVerify", data.email);
 				localStorage.setItem("token", JsonData.ACCESS_TOKEN);
 				let backLink = localStorage.getItem("backLink") || "../../index.html";
+				localStorage.setItem("BacklinkShouldScroll", "true");
 				window.location.replace(backLink);
 			});
 	} catch (error) {
