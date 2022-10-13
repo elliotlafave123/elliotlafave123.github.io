@@ -1394,6 +1394,36 @@ a:before, a:after {
   .deleteLinkButton:hover {
     color: var(--color-white); }
 
+.comment .profileImage {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .comment .profileImage p {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    margin: 0 !important; }
+  @media (max-width: 56.25em) {
+    .comment .profileImage {
+      margin-right: 1.5rem; } }
+  .comment .profileImage-blue {
+    background-color: #0052cc; }
+  .comment .profileImage-teal {
+    background-color: #00a3bf; }
+  .comment .profileImage-green {
+    background-color: #00875a; }
+  .comment .profileImage-yellow {
+    background-color: #ff991f; }
+  .comment .profileImage-red {
+    background-color: #de350c; }
+  .comment .profileImage-purple {
+    background-color: #7149e9; }
+  .comment .profileImage-darkBlue {
+    background-color: #172b4e; }
+
 .add-comment-container {
   position: relative;
   display: flex;

@@ -235,3 +235,46 @@
 		color: $color-white;
 	}
 }
+
+// profile image
+.comment .profileImage {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		font-size: 3rem;
+		font-weight: 600;
+		color: #ffffff !important;
+		margin: 0 !important;
+	}
+
+	@include respond(tab-port) {
+		margin-right: 1.5rem;
+	}
+
+	&-blue {
+		background-color: #0052cc;
+	}
+	&-teal {
+		background-color: #00a3bf;
+	}
+	&-green {
+		background-color: #00875a;
+	}
+	&-yellow {
+		background-color: #ff991f;
+	}
+	&-red {
+		background-color: #de350c;
+	}
+	&-purple {
+		background-color: #7149e9;
+	}
+	&-darkBlue {
+		background-color: #172b4e;
+	}
+}
