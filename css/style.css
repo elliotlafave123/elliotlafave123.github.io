@@ -556,7 +556,7 @@ a:before, a:after {
   .profileImage p {
     font-size: 3rem;
     font-weight: 600;
-    color: #ffffff;
+    color: #ffffff !important;
     margin: 0 !important; }
   .profileImage-blue {
     background-color: #0052cc; }
