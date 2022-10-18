@@ -1,0 +1,62 @@
+---
+import "../../public/css/style.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommentSection from "../components/CommentSection.astro";
+import BaseHead from "./BaseHead.astro";
+
+export interface Props {
+  title: string;
+  date: string;
+  time: string;
+  streamID: string;
+}
+
+const { title, date, time, streamID } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <BaseHead title={title} />
+  <body>
+    <Header />
+    <!-- --- Article --- -->
+    <section class="article">
+      <!-- Interactions -->
+      <div class="breadcrumb"></div>
+      <div class="article__interactions">
+        <div class="article__interactions--section">
+          <a href="../index.html" class="btn-square btn-square--back" id="first-section"
+            ><i class="fa-solid fa-arrow-left-long"></i>Back</a
+          >
+        </div>
+        <div class="article__interactions--section">
+          <a
+            href="../../../../Files/PDF/QA/Practice-Understanding-Object-Oriented-Programming _1.pdf"
+            target="_blank"
+            class="btn-square btn-square--pdf u-margin-right-small"
+          >
+            <img src="../../../../img/icons/icon-pdf.png" alt="" /> Download
+          </a>
+          <button class="btn-square btn-square--green"><i class="fa-solid fa-check"></i>Approved</button>
+        </div>
+      </div>
+      <div class="article__header">
+        <h2>{title}</h2>
+
+        <div class="article__header-info">
+          <span>Elliot La Fave</span>
+          <p>&#183;</p>
+          <span>{date}</span>
+          <p>&#183;</p>
+          <span>{time}</span>
+        </div>
+
+        <slot />
+      </div>
+    </section>
+
+    <CommentSection streamID={streamID} />
+    <Footer />
+  </body>
+</html>

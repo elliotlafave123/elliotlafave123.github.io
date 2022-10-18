@@ -1,0 +1,41 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all --parallel watch:sass dev",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.comp.css -o public/css/style.prefix.css",
+    "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "serve:ts": "webpack-dev-server",
+    "build:ts": "webpack",
+    "lint:ts": "eslint . --ext .ts",
+    "lint:ts:fix": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "astro": "^1.5.0",
+    "autoprefixer": "^7.2.6",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^4.1.1",
+    "@types/lodash": "^4.14.182",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.25.0",
+    "ts-loader": "^9.4.1",
+    "webpack": "^5.74.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "webpack-cli": "^4.10.0"
+  }
+}

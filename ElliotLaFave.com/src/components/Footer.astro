@@ -1,0 +1,41 @@
+---
+import ContactForm from "./ContactForm.astro";
+import FooterTags from "./Footer/FooterTags.astro";
+---
+
+<!-- Footer -->
+<ContactForm />
+
+<div class="wave-top">
+  <img src="/img/wave5.png" alt="" class="wave-bottom__img" id="wave5-dark" />
+  <img src="/img/wave5-light.png" alt="" class="wave-top__img hidden" id="wave5-light" />
+</div>
+
+<footer class="footer">
+  <div class="footer__logo">
+    <a href="/index.html"><img src="/img/logo.png" alt="Footer Logo" /></a>
+  </div>
+  <ul class="footer__nav">
+    <li class="footer__nav-item">
+      <a href="#contactme">Contact Me</a>
+    </li>
+    <li class="footer__nav-item"><a href="/CV.html">CV</a></li>
+    <li class="footer__nav-item">
+      <a href="/portfolio.html">Portfolio</a>
+    </li>
+  </ul>
+  <div class="footer__icons">
+    <a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" target="blank"
+      ><img src="/img/linkedin-brands.svg" alt="Linkedin Logo" />
+    </a>
+    <a href="https://github.com/elliotlafave123/elliotlafave123.github.io" target="_blank"
+      ><img src="/img/github-brands.svg" alt="GitHub Logo" />
+    </a>
+    <a href="https://codepen.io/elliotlafave123" target="_blank"
+      ><img src="/img/codepen-brands.svg" alt="Codepen Logo" />
+    </a>
+  </div>
+  <p class="footer__paragraph">Designed and coded by Elliot La Fave</p>
+  <FooterTags />
+  <p class="footer__paragraph">Copyright © Elliot La Fave <span id="currentYear">0000</span>.</p>
+</footer>

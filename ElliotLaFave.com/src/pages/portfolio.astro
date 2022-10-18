@@ -1,0 +1,95 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+---
+
+<DefaultLayout title="Portfolio">
+	<!-- Main Content -->
+	<!-- Floated elements -->
+	<section class="bg">
+		<div class="loading-text">0%</div>
+	</section>
+
+	<div class="o-row-2-col" id="first-section">
+		<section class="portfolio-page u-margin-top-large">
+			<h3 class="u-margin-bottom-large" id="GitHub-Stats">My Portfolio</h3>
+			<div class="portfolio-page__buttons u-margin-bottom-large">
+				<a href="https://github.com/elliotlafave123/elliotlafave123.github.io" class="btn btn--github">Github</a>
+				<a href="#all-projects" class="btn btn-purple-small">All Projects</a>
+				<a href="https://codepen.io/elliotlafave123" class="btn btn-purple-small">Codepen</a>
+			</div>
+		</section>
+
+		<div class="githubStats" id="GithubStats"><div class="loader"></div></div>
+	</div>
+
+	<section class="portfolio portfolio--2 u-margin-top-large">
+		<div class="title-container-flex">
+			<h3 class="skills__header u-margin-bottom-large" id="featuredPortfolio">Featured</h3>
+			<button class="btn-refresh" id="refreshBtn">
+				<i class="fa-solid fa-arrows-rotate"></i>
+			</button>
+		</div>
+
+		<div class="card__grid u-margin-bottom-medium" id="cardGrid3">
+			<!-- JavaScript Inserted Data Here -->
+			<div class="loader"></div>
+		</div>
+
+		<span class="u-margin-bottom-large">&nbsp;</span>
+	</section>
+
+	<section class="portfolio portfolio--2 u-margin-top-small">
+		<div class="title-container-flex">
+			<h3 class="skills__header" id="all-projects">All Projects</h3>
+		</div>
+		<section class="ProjectsAppInputs">
+			<div class="ProjectsAppInputs-side">
+				<input class="search-input" id="ProjectsAppInput" type="text" placeholder="Search projects..." />
+
+				<div class="ProjectsAppPagination" id="PaginationContainer">
+					<button class="ProjectsAppPagination-button ProjectsAppPagination-button-last" id="LastPage">
+						<i class="fa-solid fa-chevron-left"></i>
+					</button>
+					<input class="ProjectsAppPagination-number" type="number" id="PageNumberEl" />
+					<button class="ProjectsAppPagination-button ProjectsAppPagination-button-next" id="NextPage">
+						<i class="fa-solid fa-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+			<div class="ProjectsAppInputs-side ProjectsAppInputs-side-2">
+				<a id="ProjectsAppClearFiltersButton">Clear All</a>
+
+				<select id="dropdown">
+					<option value="">All</option>
+					<option value="html">HTML</option>
+					<option value="api">API</option>
+					<option value="css">CSS</option>
+					<option value="js">JS</option>
+					<option value="scss">SCSS</option>
+					<option value="nodejs">NodeJS</option>
+					<option value="mongodb">MongoDB</option>
+					<option value="challenge">Challenge</option>
+					<option value="course">Course</option>
+				</select>
+			</div>
+		</section>
+		<div class="ProjectsAppContainerWithError" id="ProjectsAppContainer">
+			<section class="ProjectsAppContainer"></section>
+			<section class="ProjectsAppInputsBottom">
+				<div class="ProjectsAppPagination-bottom" id="PaginationContainerBottom">
+					<button class="ProjectsAppPagination-button ProjectsAppPagination-button-last" id="LastPageBottom">
+						<i class="fa-solid fa-chevron-left"></i>
+					</button>
+					<input class="ProjectsAppPagination-number" type="number" id="PageNumberElBottom" />
+					<button class="ProjectsAppPagination-button ProjectsAppPagination-button-next" id="NextPageBottom">
+						<i class="fa-solid fa-chevron-right"></i>
+					</button>
+				</div>
+			</section>
+			<div class="ProjectsAppNotFound invisible">
+				<img src="img/ProjectsAppNoProjectFound.svg" alt="" />
+				<p>No projects match your criteria. Please try another search...</p>
+			</div>
+		</div>
+	</section>
+</DefaultLayout>
