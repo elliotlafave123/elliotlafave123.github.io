@@ -161,7 +161,7 @@ export const initJsPortfolioFeaturedCards = () => {
 							<a href="${
                 project.linkLivePreview
               }" class="btn btn--card" target="blank">Live Preview <span class="btn--card-icon"><i class="fa-solid fa-up-right-from-square"></i></span></a>
-							<a href="${project.linkGit}" class="btn btn--git" target="blank"><img src="img/github-logo.png" alt=""></a>
+							<a href="${project.linkGit}" class="btn btn--git" target="blank"><img src="/img/github-logo.png" alt=""></a>
 						</div>                  
 					</div>
 				</div> 
