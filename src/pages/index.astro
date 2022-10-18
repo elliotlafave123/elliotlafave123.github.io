@@ -3,144 +3,124 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
 <DefaultLayout title="Home">
-	<!-- Main Content -->
-	<section class="section-header" id="first-section">
-		<div class="header__content">
-			<div class="liquid-desktop">
-				<div class="liquid">
-					<h1 class="header__content--title">I'm Elliot La Fave</h1>
-					<h1 class="header__content--title">I'm Elliot La Fave</h1>
-					<h1 class="header__content--title">I'm Elliot La Fave</h1>
-					<h1 class="header__content--title">I'm Elliot La Fave</h1>
-				</div>
-			</div>
+  <!-- Main Content -->
+  <section class="section-header" id="first-section">
+    <div class="header__content">
+      <h1>HI THERE,<br class="mobile-only" /> IM A FONTEND WEBSITE DEVELOPER</h1>
+      <a href="#contactme" class="btn btn-purple-landing">Contact Me!</a>
+    </div>
+  </section>
 
-			<div class="liquid-mobile">
-				<div class="liquid">
-					<h1 class="header__content--title">I'm</h1>
-					<h1 class="header__content--title">I'm</h1>
-					<h1 class="header__content--title">I'm</h1>
-					<h1 class="header__content--title">I'm</h1>
-				</div>
+  <div class="wave-top wavePattern">
+    <img src="/img/WavePatternDark.svg" alt="" class="wave-top__img" id="wave1-dark" />
+    <img src="/img/WavePatternLight.svg" alt="" class="wave-top__img" id="wave1-light" />
+  </div>
 
-				<div class="liquid">
-					<h1 class="header__content--title">Elliot</h1>
-					<h1 class="header__content--title">Elliot</h1>
-					<h1 class="header__content--title">Elliot</h1>
-					<h1 class="header__content--title">Elliot</h1>
-				</div>
+  <section class="section-about" id="who-am-i">
+    <img src="img/profile-pic.svg" alt="" />
+    <h2 class="section-about__heading">Who Am I?</h2>
+    <p class="section-about__paragraph">
+      I am a front-end website developer based in Manchester, UK. I'm working as an apprentice software developer at the
+      General Medical Council learning to become a full-stack software developer.
+    </p>
+    <a href="CV.html" class="btn btn-purple btn-purple-small">View CV</a>
+  </section>
 
-				<div class="liquid">
-					<h1 class="header__content--title">La Fave</h1>
-					<h1 class="header__content--title">La Fave</h1>
-					<h1 class="header__content--title">La Fave</h1>
-					<h1 class="header__content--title">La Fave</h1>
-				</div>
-			</div>
+  <div class="wave-bottom">
+    <img src="img/wave2.png" alt="" class="wave-bottom__img" id="wave2-dark" />
+    <img src="img/wave2-light.png" alt="" class="wave-top__img hidden" id="wave2-light" />
+  </div>
 
-			<p class="header__content--subtitle" id="typingText"></p>
-			<a href="#contactme" class="btn btn-purple-landing">Contact Me!</a>
-		</div>
-	</section>
+  <section class="skills" id="tech-stack">
+    <!-- <img src="img/percentages.png" alt="" class="skills__img"> -->
+    <h2 class="skills__header u-margin-bottom-large u-center-text">My Tech Stack</h2>
+    <div class="tech-stack__grid">
+      <div class="tech-stack__item tech-stack__item-1">
+        <img src="img/TechStack/netlify.svg" alt="" class="tech-stack__img tech-stack__img-1" />
+        <p class="tech-stack__text tech-stack__text-1">Netlify</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-2">
+        <img src="img/TechStack/html5.svg" alt="" class="tech-stack__img tech-stack__img-2" />
+        <p class="tech-stack__text tech-stack__text-2">HTML</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-3">
+        <img src="img/TechStack/css.svg" alt="" class="tech-stack__img tech-stack__img-3" />
+        <p class="tech-stack__text tech-stack__text-3">CSS</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-4">
+        <img src="img/TechStack/js.svg" alt="" class="tech-stack__img tech-stack__img-4" />
+        <p class="tech-stack__text tech-stack__text-4">JavaScript</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-5">
+        <img src="img/TechStack/sass.svg" alt="" class="tech-stack__img tech-stack__img-5" />
+        <p class="tech-stack__text tech-stack__text-5">SCSS</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-6">
+        <img src="img/TechStack/git-alt.svg" alt="" class="tech-stack__img tech-stack__img-6" />
+        <p class="tech-stack__text tech-stack__text-6">GitHub</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-7">
+        <img src="img/TechStack/node-js.svg" alt="" class="tech-stack__img tech-stack__img-7" />
+        <p class="tech-stack__text tech-stack__text-7">Node JS</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-8">
+        <img src="img/TechStack/postcss.svg" alt="" class="tech-stack__img tech-stack__img-8" />
+        <p class="tech-stack__text tech-stack__text-8">Post CSS</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-9">
+        <img src="img/TechStack/mongodb.svg" alt="" class="tech-stack__img tech-stack__img-9" />
+        <p class="tech-stack__text tech-stack__text-9">mongo DB</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-10">
+        <img src="img/TechStack/api.png" alt="" class="tech-stack__img tech-stack__img-10" />
+        <p class="tech-stack__text tech-stack__text-10">API</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-11">
+        <img src="img/TechStack/figma.svg" alt="" class="tech-stack__img tech-stack__img-11" />
+        <p class="tech-stack__text tech-stack__text-11">Figma</p>
+      </div>
+      <div class="tech-stack__item tech-stack__item-12">
+        <img src="img/TechStack/docker.webp" alt="" class="tech-stack__img tech-stack__img-12" />
+        <p class="tech-stack__text tech-stack__text-12">Docker</p>
+      </div>
+    </div>
+  </section>
 
-	<div class="wave-top">
-		<img src="img/wave1.png" alt="" class="wave-top__img" id="wave1-dark" />
-		<img src="img/wave1-light.png" alt="" class="wave-top__img hidden" id="wave1-light" />
-	</div>
+  <div class="wave-top">
+    <img src="img/wave3.png" alt="" class="wave-bottom__img" id="wave3-dark" />
+    <img src="img/wave3-light.png" alt="" class="wave-top__img hidden" id="wave3-light" />
+  </div>
 
-	<section class="section-about" id="who-am-i">
-		<img src="img/profile-pic.svg" alt="" />
-		<h2 class="section-about__heading">Who Am I?</h2>
-		<p class="section-about__paragraph">
-			I am a front-end website developer based in Manchester, UK. I'm working as an apprentice software developer at the General
-			Medical Council learning to become a full-stack software developer.
-		</p>
-		<a href="CV.html" class="btn btn-purple btn-purple-small">View CV</a>
-	</section>
+  <section class="portfolio" id="featuredIndex">
+    <div class="title-container-flex">
+      <h3 class="skills__header u-margin-bottom-large">Featured Projects</h3>
+      <button class="btn-refresh" id="refreshBtn" style="background-color: var(--color-grey-dark)">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </button>
+    </div>
 
-	<div class="wave-bottom">
-		<img src="img/wave2.png" alt="" class="wave-bottom__img" id="wave2-dark" />
-		<img src="img/wave2-light.png" alt="" class="wave-top__img hidden" id="wave2-light" />
-	</div>
+    <div class="card__grid u-margin-bottom-medium" id="cardGrid3-home">
+      <!-- JavaScript Inserted Data Here -->
+    </div>
 
-	<section class="skills" id="tech-stack">
-		<!-- <img src="img/percentages.png" alt="" class="skills__img"> -->
-		<h2 class="skills__header u-margin-bottom-large u-center-text">My Tech Stack</h2>
-		<div class="tech-stack__grid">
-			<div class="tech-stack__item tech-stack__item-1">
-				<img src="img/TechStack/netlify.svg" alt="" class="tech-stack__img tech-stack__img-1" />
-				<p class="tech-stack__text tech-stack__text-1">Netlify</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-2">
-				<img src="img/TechStack/html5.svg" alt="" class="tech-stack__img tech-stack__img-2" />
-				<p class="tech-stack__text tech-stack__text-2">HTML</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-3">
-				<img src="img/TechStack/css.svg" alt="" class="tech-stack__img tech-stack__img-3" />
-				<p class="tech-stack__text tech-stack__text-3">CSS</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-4">
-				<img src="img/TechStack/js.svg" alt="" class="tech-stack__img tech-stack__img-4" />
-				<p class="tech-stack__text tech-stack__text-4">JavaScript</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-5">
-				<img src="img/TechStack/sass.svg" alt="" class="tech-stack__img tech-stack__img-5" />
-				<p class="tech-stack__text tech-stack__text-5">SCSS</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-6">
-				<img src="img/TechStack/git-alt.svg" alt="" class="tech-stack__img tech-stack__img-6" />
-				<p class="tech-stack__text tech-stack__text-6">GitHub</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-7">
-				<img src="img/TechStack/node-js.svg" alt="" class="tech-stack__img tech-stack__img-7" />
-				<p class="tech-stack__text tech-stack__text-7">Node JS</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-8">
-				<img src="img/TechStack/postcss.svg" alt="" class="tech-stack__img tech-stack__img-8" />
-				<p class="tech-stack__text tech-stack__text-8">Post CSS</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-9">
-				<img src="img/TechStack/mongodb.svg" alt="" class="tech-stack__img tech-stack__img-9" />
-				<p class="tech-stack__text tech-stack__text-9">mongo DB</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-10">
-				<img src="img/TechStack/api.png" alt="" class="tech-stack__img tech-stack__img-10" />
-				<p class="tech-stack__text tech-stack__text-10">API</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-11">
-				<img src="img/TechStack/figma.svg" alt="" class="tech-stack__img tech-stack__img-11" />
-				<p class="tech-stack__text tech-stack__text-11">Figma</p>
-			</div>
-			<div class="tech-stack__item tech-stack__item-12">
-				<img src="img/TechStack/docker.webp" alt="" class="tech-stack__img tech-stack__img-12" />
-				<p class="tech-stack__text tech-stack__text-12">Docker</p>
-			</div>
-		</div>
-	</section>
+    <span class="u-margin-bottom-large">&nbsp;</span>
+    <a href="portfolio.html" class="btn btn-purple btn-purple-small u-margin-bottom-medium">All projects</a>
+  </section>
 
-	<div class="wave-top">
-		<img src="img/wave3.png" alt="" class="wave-bottom__img" id="wave3-dark" />
-		<img src="img/wave3-light.png" alt="" class="wave-top__img hidden" id="wave3-light" />
-	</div>
-
-	<section class="portfolio" id="featuredIndex">
-		<div class="title-container-flex">
-			<h3 class="skills__header u-margin-bottom-large">Featured Projects</h3>
-			<button class="btn-refresh" id="refreshBtn" style="background-color: var(--color-grey-dark)">
-				<i class="fa-solid fa-arrows-rotate"></i>
-			</button>
-		</div>
-
-		<div class="card__grid u-margin-bottom-medium" id="cardGrid3-home">
-			<!-- JavaScript Inserted Data Here -->
-		</div>
-
-		<span class="u-margin-bottom-large">&nbsp;</span>
-		<a href="portfolio.html" class="btn btn-purple btn-purple-small u-margin-bottom-medium">All projects</a>
-	</section>
-
-	<div class="wave-bottom">
-		<img src="img/wave4.png" alt="" class="wave-bottom__img" id="wave4-dark" />
-		<img src="img/wave4-light.png" alt="" class="wave-top__img hidden" id="wave4-light" />
-	</div>
+  <div class="wave-bottom">
+    <img src="img/wave4.png" alt="" class="wave-bottom__img" id="wave4-dark" />
+    <img src="img/wave4-light.png" alt="" class="wave-top__img hidden" id="wave4-light" />
+  </div>
 </DefaultLayout>
+
+<style>
+  .wavePattern {
+    width: 100%;
+  }
+
+  .wavePattern img {
+    width: 100%;
+    height: auto !important;
+    z-index: 0;
+  }
+</style>

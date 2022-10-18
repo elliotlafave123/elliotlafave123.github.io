@@ -5,7 +5,8 @@
   "scripts": {
     "start": "npm-run-all --parallel watch:sass dev",
     "dev": "astro dev",
-    "build": "astro build",
+    "build:all": "npm-run-all build:css build:astro",
+    "build:astro": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
