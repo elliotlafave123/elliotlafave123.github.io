@@ -1,0 +1,25 @@
+.app {
+	width: 100%;
+	padding-top: 4rem;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10rem;
+
+	@include respond(tab-land) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2.8rem;
+	}
+
+	@include respond(tab-port) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2.8rem;
+	}
+
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+		gap: 2.8rem;
+	}
+}

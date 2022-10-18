@@ -1,0 +1,24 @@
+::-webkit-scrollbar {
+    width: 18px;
+    margin:1px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba($color-grey-dark, .9);
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 100vw;
+    border:3px solid  $color-grey-dark;
+
+    &:hover {
+        background: #7c50ff;
+    }
+}
+ 
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: $color-primary $color-grey-dark;
+    }
+}

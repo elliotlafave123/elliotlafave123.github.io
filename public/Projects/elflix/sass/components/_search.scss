@@ -1,0 +1,41 @@
+.search {
+	&-container {
+		display: flex;
+		align-items: center;
+		height: 4rem;
+		margin-top: 5rem;
+		margin-left: 2rem;
+		margin-bottom: 3rem;
+
+		@include respond(tab-land) {
+			margin-top: 5rem;
+		}
+
+		@include respond(tab-port) {
+			margin-top: 1rem;
+		}
+
+		@include respond(phone) {
+			margin-top: 2rem;
+		}
+
+		img {
+			height: 3.2rem;
+			width: 3.2rem;
+		}
+
+		input {
+			background-color: transparent;
+			border: none;
+			color: rgba(255, 255, 255, 0.498);
+			font-size: 2.4rem;
+			width: 90%;
+			margin-left: 2rem;
+			height: 4rem;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}

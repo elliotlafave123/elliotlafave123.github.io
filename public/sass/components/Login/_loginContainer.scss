@@ -1,0 +1,288 @@
+.login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@include respond(tab-port) {
+		margin-top: 4rem !important;
+	}
+
+	form {
+		width: 35%;
+		margin: 0 auto;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		@include respond(tab-land) {
+			width: 70%;
+		}
+		@include respond(tab-port) {
+			width: 90%;
+		}
+
+		input {
+			width: 100%;
+			margin-bottom: 0.7rem;
+		}
+
+		label {
+			font-size: 1.7rem;
+			letter-spacing: 1.2px;
+			font-weight: 600;
+			color: $text-light;
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		a {
+			font-size: 1.6rem;
+			text-decoration: underline;
+			color: $color-primary-light;
+
+			&:hover {
+				color: $text-light;
+			}
+		}
+
+		input:disabled {
+			cursor: not-allowed;
+		}
+	}
+
+	form:invalid input[type="submit"] {
+		background-color: $color-card;
+		cursor: not-allowed;
+	}
+	input[type="submit"]:disabled {
+		background-color: $color-card !important;
+		cursor: not-allowed !important;
+	}
+
+	p {
+		font-size: 2.8rem;
+		color: $text-light;
+		margin-bottom: 0.6rem;
+	}
+
+	p.verify {
+		text-align: center;
+		font-size: 1.8rem;
+		color: $text-light;
+		margin-bottom: 0.6rem;
+
+		&-large {
+			font-size: 2rem;
+		}
+
+		a {
+			font-size: inherit;
+			color: $color-primary-light;
+
+			&:hover {
+				color: $text-light;
+			}
+		}
+	}
+	span {
+		border-radius: 0.2rem;
+		padding: 1.2rem;
+		margin: 0.2rem;
+		color: $color-grey-dark !important;
+		background-color: rgb(198, 174, 39);
+		font-size: 1.8rem;
+		font-weight: 700;
+		letter-spacing: 1.2px;
+		color: $text-light;
+		display: none;
+		i {
+			margin-right: 0.5rem;
+		}
+		&.error {
+			background-color: $color-form-false;
+		}
+	}
+
+	h1 {
+		font-family: $font-zen;
+		font-weight: 500;
+		font-size: 4.5rem;
+		letter-spacing: 2px;
+
+		position: relative;
+		width: fit-content;
+		color: $text-light;
+		margin-bottom: 2rem;
+
+		&::after {
+			content: "";
+			background: $text-light;
+			position: absolute;
+			bottom: -0.1rem;
+			left: 0;
+			height: 4px;
+			width: 70%;
+			border-radius: 0 4px 4px 0;
+		}
+
+		@include respond(phone) {
+			font-size: 4rem;
+
+			&::after {
+				content: "";
+				background: $color-primary;
+				position: absolute;
+				bottom: -0.6rem;
+				left: 0;
+				height: 5px;
+				width: 60%;
+				border-radius: 0 4px 4px 0;
+			}
+		}
+	}
+	h3 {
+		display: block;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.3;
+		&::after {
+			display: none;
+		}
+	}
+	h2 {
+		font-family: $font-zen;
+		font-weight: 400;
+		font-size: 3.2rem;
+		letter-spacing: 2px;
+
+		position: relative;
+		width: fit-content;
+		color: $text-light;
+		margin-bottom: 1rem;
+
+		&::after {
+			display: none;
+		}
+
+		@include respond(phone) {
+			font-size: 4rem;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+.personalInfoButtonsContainer {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 4rem;
+	margin-top: 4rem;
+	border-top: 1px solid #15181991;
+}
+
+.loginForm.verify {
+	h1 {
+		text-align: center !important;
+		margin: 0 auto 2rem auto;
+
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+}
+
+.terms-section {
+	p {
+		color: $text-light;
+		font-size: 1.3rem;
+
+		a {
+			font-size: inherit;
+			color: $color-primary-light;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+}
+
+.pinBox {
+	--width: 296px;
+	--height: 74px;
+	--spacing: 48.5px;
+
+	display: inline-block;
+	margin: 2rem auto;
+	position: relative;
+	width: var(--width);
+	height: var(--height);
+	background-image: url(https://i.stack.imgur.com/JbkZl.png);
+}
+
+.pinEntry {
+	position: absolute;
+	padding-left: 21px;
+	font-family: inherit, monospaced;
+	font-size: var(--spacing);
+	height: var(--height);
+	letter-spacing: var(--spacing);
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	clip: circ(0px, calc(var(--width) - 21px), var(--height), 0px);
+}
+
+.pinEntry::-webkit-outer-spin-button,
+.pinEntry::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.pinEntry[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.PasswordRequirements {
+	margin-top: 1rem;
+	display: flex;
+	padding: 0 0 1rem 0;
+
+	p,
+	i {
+		font-size: 1.6rem;
+		color: $text-light;
+		margin-bottom: 0;
+	}
+
+	ul > li {
+		display: flex;
+		align-items: center;
+		font-size: 1.3rem;
+		margin-bottom: 0.5rem;
+
+		.checkMark {
+			i {
+				font-size: 1rem;
+				line-height: 1rem;
+				color: #ffffff;
+			}
+
+			width: 1.6rem;
+			height: 1.6rem;
+			margin-right: 0.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			background-color: #c6c7cb;
+
+			&.active {
+				background-color: $color-primary;
+			}
+		}
+	}
+}

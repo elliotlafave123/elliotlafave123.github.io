@@ -1,0 +1,27 @@
+.btn {
+	font-family: $font;
+	font-size: 1.6rem;
+	color: $text-light;
+	border: none;
+
+	background-color: $color-card;
+	padding: 0.4rem 3rem;
+	border-radius: 5px;
+	display: inline-block;
+
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+	i {
+		margin-right: 0.5rem;
+		font-size: 1.4rem;
+	}
+
+	&:hover {
+		background-color: #313c46;
+	}
+
+	&:active {
+		background-color: #46545f;
+		transform: scale(1.02);
+	}
+}

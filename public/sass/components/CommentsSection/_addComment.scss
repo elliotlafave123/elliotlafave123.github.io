@@ -1,0 +1,79 @@
+.add-comment-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+
+	label {
+		font-size: 2.1rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		color: $text-light;
+	}
+
+	textarea {
+		background-color: $color-card;
+		border: none;
+		border-radius: 0.5rem;
+		width: 100%;
+		resize: none;
+		font-size: 2rem;
+		padding: 0.8rem 1rem;
+		color: $text-light;
+		height: 12rem;
+		box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+		@include respond(tab-port) {
+			height: 12rem;
+		}
+	}
+
+	input[type="submit"] {
+		position: absolute;
+		bottom: 0.5rem;
+		right: 0.5rem;
+		border: none;
+		border-radius: 0.5rem;
+		background-color: $color-grey-dark;
+		cursor: not-allowed;
+		color: $text-light;
+		font-size: 1.7rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		padding: 0.8rem 1rem;
+	}
+
+	&:valid {
+		input[type="submit"] {
+			background-color: $color-primary;
+			cursor: pointer;
+
+			&:hover {
+				color: $color-white;
+				background-color: $color-primary-dark;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&-notAllowed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 100;
+
+		&.allowed {
+			display: none;
+		}
+
+		&:first-child {
+			margin-right: 4rem;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+@import "base/utilities";
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+
+@import "layout/header";
+
+@import "components/scrollbar.scss";
+@import "components/btn.scss";
+@import "components/footer.scss";
+@import "components/checkbox.scss";
+@import "components/card.scss";
+@import "components/dark-mode-slider";
+@import "components/challengeOverlay";
+
+@import "pages/index/index.scss";
+@import "pages/index/app.scss";
+@import "pages/index/info.scss";

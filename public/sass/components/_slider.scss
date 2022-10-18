@@ -1,0 +1,140 @@
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+
+    @include respond(tab-port) {
+        display: none;
+    }
+}
+
+.left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-slide-container {
+    height: 90%;
+    position: relative;
+
+    background-color: $color-card;
+    border-radius: 1rem 0 0 1rem;
+    padding: 5rem 3rem 0 2rem !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-slide > div {
+    height: 100%;
+    width: 100%;
+    padding: 0 5.5rem 0 1rem;
+    color: #fff;
+}
+
+.left-slide h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+
+    border-radius: 0 1rem 1rem 0;
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 15px 18px;
+}
+
+button:hover {
+    color: #222;
+}
+
+button:focus {
+    outline: none;
+}
+
+.slider-container .action-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 10;
+}
+
+.slider-container .action-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button {
+    transform: translatey(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.right-slide__container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 0 1rem 1rem 0;
+}
+
+.slide__img {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 90%;
+        width: auto;
+
+        &:hover {
+            transform: scale(1);
+        }
+    }
+}
+
+.slide__fonts {
+    display: flex;
+    justify-content: space-around;
+    height: 40%;
+    background-color: #4fb671;
+    display: flex;
+    padding: 2rem;
+    border-radius: 0 0 1rem 0;
+
+    &-trillo {
+        background-color: #b92657;
+    }
+}

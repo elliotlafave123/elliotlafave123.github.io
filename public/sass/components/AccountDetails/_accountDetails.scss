@@ -1,0 +1,288 @@
+.edit-color {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start !important;
+	margin-bottom: 2rem;
+
+	p {
+		margin-bottom: 1rem;
+	}
+	&-row {
+		display: flex;
+		align-items: center;
+		label {
+			margin: 0 !important;
+		}
+		p.savedColor {
+			font-size: 1.6rem;
+			color: $color-form-true;
+			margin: 0;
+			margin-left: 1rem;
+			opacity: 0;
+			transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+	}
+}
+
+.personalInfoButtonsContainer {
+	@include respond(phone) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+#SaveChanges {
+	margin: 0 !important;
+	margin-right: 1rem !important;
+}
+
+.info-save-button-container {
+	display: flex;
+	align-items: center;
+	padding: 2rem 0;
+
+	p.savedName {
+		font-size: 2.1rem;
+		color: $color-form-true;
+		margin: 0;
+		margin-left: 1rem;
+		opacity: 0;
+		transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+}
+
+.user-info {
+	&-container {
+		display: flex;
+	}
+
+	&-text-container {
+		padding: 0.2rem 0 1rem 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		div > p {
+			font-weight: 600;
+			font-size: 1.7rem;
+			line-height: 1;
+			margin: 0;
+			margin-top: 0.6rem;
+		}
+		p {
+			font-weight: 500;
+			font-size: 1.4rem !important;
+			margin-right: 0.4rem;
+			color: rgb(114, 114, 114);
+		}
+	}
+}
+
+.profileImage {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		font-size: 3rem;
+		font-weight: 600;
+		color: #ffffff !important;
+		margin: 0 !important;
+	}
+
+	&-blue {
+		background-color: #0052cc;
+	}
+	&-teal {
+		background-color: #00a3bf;
+	}
+	&-green {
+		background-color: #00875a;
+	}
+	&-yellow {
+		background-color: #ff991f;
+	}
+	&-red {
+		background-color: #de350c;
+	}
+	&-purple {
+		background-color: #7149e9;
+	}
+	&-darkBlue {
+		background-color: #172b4e;
+	}
+}
+
+// Checkboxes
+.checkboxes {
+	display: flex;
+	width: min-content;
+	// margin-bottom: 3rem;
+}
+
+/* Customize the label (the container) */
+.checkbox-container {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 100%;
+	margin-right: 4rem;
+	transform: translateY(-1.6rem);
+
+	@include respond(tab-port) {
+		margin-right: 4.5rem;
+	}
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	border-radius: 0.2rem;
+	// background-color: #eee;
+
+	&:hover {
+		background-color: initial;
+	}
+
+	&-blue {
+		background-color: #0052cc;
+	}
+	&-teal {
+		background-color: #00a3bf;
+	}
+	&-green {
+		background-color: #00875a;
+	}
+	&-yellow {
+		background-color: #ff991f;
+	}
+	&-red {
+		background-color: #de350c;
+	}
+	&-purple {
+		background-color: #7149e9;
+	}
+	&-darkBlue {
+		background-color: #172b4e;
+	}
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+	opacity: 0.8;
+	&-blue {
+		background-color: #0052cc;
+	}
+	&-teal {
+		background-color: #00a3bf;
+	}
+	&-green {
+		background-color: #00875a;
+	}
+	&-yellow {
+		background-color: #ff991f;
+	}
+	&-red {
+		background-color: #de350c;
+	}
+	&-purple {
+		background-color: #7149e9;
+	}
+	&-darkBlue {
+		background-color: #172b4e;
+	}
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container {
+	&-blue {
+		background-color: #0052cc;
+	}
+	&-teal {
+		background-color: #00a3bf;
+	}
+	&-green {
+		background-color: #00875a;
+	}
+	&-yellow {
+		background-color: #ff991f;
+	}
+	&-red {
+		background-color: #de350c;
+	}
+	&-purple {
+		background-color: #7149e9;
+	}
+	&-darkBlue {
+		background-color: #172b4e;
+	}
+}
+.checkbox-container input:checked ~ .checkmark {
+	&-blue {
+		background-color: #0052cc;
+	}
+	&-teal {
+		background-color: #00a3bf;
+	}
+	&-green {
+		background-color: #00875a;
+	}
+	&-yellow {
+		background-color: #ff991f;
+	}
+	&-red {
+		background-color: #de350c;
+	}
+	&-purple {
+		background-color: #7149e9;
+	}
+	&-darkBlue {
+		background-color: #172b4e;
+	}
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}

@@ -1,0 +1,8 @@
+.hero {
+	width: 100%;
+	padding: $section-padding-y $section-padding-x $section-padding-y $section-padding-x;
+
+	@include respond(tab-port) {
+		padding: 3rem;
+	}
+}

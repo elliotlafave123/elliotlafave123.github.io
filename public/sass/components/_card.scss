@@ -1,0 +1,257 @@
+.card {
+	position: relative;
+	border-radius: 1rem;
+	overflow: hidden;
+	background-color: $color-card-dark;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
+	transition: all 0.2s;
+
+	&__date {
+		color: $text-light;
+		font-weight: 700;
+		font-size: 1.2rem;
+		font-family: inherit;
+	}
+
+	h4 {
+		font-size: 2rem;
+		line-height: 2.9rem;
+
+		@include respond(laptop) {
+			height: 4.4rem;
+			line-height: 2.6rem;
+			margin-bottom: 1.3rem !important;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&--2 {
+		background-color: $color-card;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
+	}
+
+	&--middle {
+		transform: scale(1.1);
+
+		&__text {
+			letter-spacing: 1px;
+		}
+
+		&:hover {
+			transform: scale(1.13) !important;
+
+			@include respond(phone) {
+				transform: unset !important;
+			}
+
+			@include respond(tab-land) {
+				transform: unset !important;
+			}
+		}
+
+		@include respond(phone) {
+			transform: unset;
+		}
+
+		@include respond(tab-land) {
+			transform: unset !important;
+		}
+	}
+
+	&--3 {
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 0px;
+		max-width: 30rem;
+	}
+
+	@include respond(tab-port) {
+		max-width: 100%;
+	}
+
+	&__text {
+		font-family: $font-lato;
+		font-weight: 500;
+		letter-spacing: 1px;
+		font-size: 1.6rem;
+		margin-bottom: 1.6rem;
+		margin-top: 1.2rem;
+		line-height: 2.3rem;
+		color: $text-light;
+
+		height: 11.5rem;
+
+		@include respond(laptop) {
+			font-size: 1.5rem;
+			line-height: 1.9rem;
+
+			margin: 1rem 0 0 0;
+			height: 13.7rem;
+		}
+
+		@include respond(tab-land) {
+			font-size: 1.6rem;
+			line-height: 2rem;
+
+			margin: 1rem 0 0 0;
+			height: 15.6rem;
+		}
+
+		@include respond(tab-port) {
+			font-size: 1.8rem;
+			line-height: 2.1rem;
+
+			margin: 1rem 0 2.4rem 0;
+			height: 13.2rem;
+		}
+
+		@include respond(phone) {
+			font-size: 1.9rem;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 18rem;
+	}
+
+	&__content {
+		padding: 2rem;
+		position: relative;
+		flex: 1 1 auto;
+
+		@include respond(laptop) {
+			padding: 1rem 2rem;
+		}
+
+		@include respond(phone) {
+			padding: 3rem;
+		}
+	}
+
+	&__buttons {
+		width: 100%;
+		position: relative;
+		height: 5rem;
+		align-self: end;
+		margin-top: 1rem;
+	}
+
+	&:hover {
+		transform: scale(1.02);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 0px;
+	}
+
+	&--2:hover {
+		transform: scale(1.02);
+		box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 20px 0px;
+
+		@include respond(tab-land) {
+			transform: unset;
+		}
+	}
+}
+
+.tags {
+	width: 100%;
+
+	@include respond(phone) {
+		margin-bottom: 2rem;
+		margin-top: 0.5rem;
+	}
+
+	&__tag {
+		background-color: $color-tag;
+		height: 2rem;
+		padding: 0.2rem 1.2rem;
+		border-radius: 2px;
+		font-size: 1rem;
+		color: var(--text-light);
+
+		display: flex;
+		min-width: 2rem;
+		align-items: center;
+
+		svg {
+			height: 1.4rem;
+			margin-right: 0.5rem;
+		}
+	}
+
+	@include respond(phone) {
+		&__tag {
+			padding: 0.2rem 1.7rem;
+			border-radius: 2px;
+			font-size: 1.2rem;
+			min-width: 1rem;
+		}
+	}
+}
+
+.tags {
+	--gap: 6px;
+	display: inline-flex;
+
+	flex-wrap: wrap;
+	margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+	width: calc(100% + var(--gap));
+}
+
+.tags > * {
+	margin: var(--gap) 0 0 var(--gap);
+}
+
+.card__grid {
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 8rem;
+	margin: 0 auto 0 auto;
+
+	align-content: space-between;
+
+	@include respond(tab-land) {
+		grid-template-columns: auto auto;
+		grid-row-gap: 4rem;
+		width: 80%;
+	}
+
+	@include respond(tab-port) {
+		grid-template-columns: auto;
+		grid-row-gap: 4rem;
+		width: 60%;
+	}
+
+	@include respond(phone) {
+		grid-template-columns: auto;
+		grid-row-gap: 4rem;
+		width: 100%;
+	}
+}
+
+.card__grid--small {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 4rem;
+	margin: 0 auto 0 auto;
+
+	@include respond(tab-land) {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-row-gap: 4rem;
+		width: 80%;
+	}
+
+	@include respond(tab-port) {
+		grid-template-columns: auto auto;
+		grid-row-gap: 4rem;
+		width: 70%;
+	}
+
+	@include respond(phone) {
+		grid-template-columns: auto;
+		grid-row-gap: 4rem;
+		width: 90%;
+	}
+}

@@ -1,0 +1,239 @@
+.work {
+	padding: 10rem $section-padding-x 0 $section-padding-x;
+
+	@include respond(phone) {
+		padding: 10rem 3rem 0 3rem;
+	}
+
+	&__title {
+		width: 100%;
+		height: auto;
+		position: relative;
+		display: block;
+		&--buttons {
+			float: right;
+			margin-top: 3rem;
+			height: max-content;
+
+			@include respond(tab-port) {
+				float: left;
+				display: block;
+			}
+		}
+
+		&--title {
+			display: inline-block;
+
+			@include respond(tab-port) {
+				display: block;
+			}
+		}
+
+		@include respond(phone) {
+			height: 35rem;
+		}
+	}
+}
+
+.experience {
+	padding: 10rem $section-padding-x 0 $section-padding-x;
+
+	@include respond(laptop) {
+		padding: 10rem $section-padding-x-laptop 0 $section-padding-x-laptop;
+	}
+
+	@include respond(phone) {
+		padding: 10rem 3rem 0 3rem;
+	}
+
+	&__main {
+		&--title {
+			margin-bottom: 10rem;
+			height: max-content;
+		}
+	}
+
+	&--1 {
+		grid-template-columns: 0.5fr 7fr 3fr;
+		grid-auto-rows: max-content;
+		width: 100%;
+		padding: 3rem 4rem;
+		border: 5px solid #3f454b;
+		border-radius: 1rem;
+		display: grid;
+		gap: 4rem 1rem;
+		margin-bottom: 8rem;
+
+		@include respond(tab-port) {
+			grid-template-columns: 1fr;
+			grid-auto-rows: auto auto auto auto;
+		}
+
+		.experience__image {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 5rem;
+				height: 5rem;
+			}
+
+			@include respond(tab-port) {
+				display: none;
+			}
+		}
+	}
+
+	&--2 {
+		grid-template-columns: 1fr 7fr 3fr;
+		width: 100%;
+		padding: 3rem 4rem;
+		border: 5px solid #3f454b;
+		border-radius: 1rem;
+		display: grid;
+		gap: 4rem 0;
+
+		@include respond(tab-land) {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+		}
+
+		.experience__image {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 5rem;
+				height: 5rem;
+			}
+
+			@include respond(tab-port) {
+				display: none;
+			}
+		}
+	}
+
+	&__title-container {
+		grid-column: 1/3;
+		grid-row: 1/2;
+
+		display: flex;
+		align-items: center;
+
+		@include respond(phone) {
+			flex-direction: column;
+			// align-items: flex-start;
+		}
+
+		img {
+			width: 8rem;
+			height: 8rem;
+			margin-right: 3rem;
+
+			@include respond(phone) {
+				margin: 0 0 2rem 0;
+			}
+		}
+	}
+
+	&__title {
+		font-family: $font-lato;
+		font-size: 3.7rem;
+		color: $text-light;
+
+		@include respond(phone) {
+			font-size: 3rem;
+		}
+	}
+
+	&__paragraph {
+		grid-column: 2/3;
+		grid-row: 2/3;
+		font-family: $font-lato;
+		font-size: 2.5rem;
+		color: $text-light;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include respond(phone) {
+			font-size: 2rem;
+		}
+	}
+
+	&__won {
+		padding-left: 4rem;
+		grid-column: 1/3;
+		grid-row: 3/4;
+		font-family: $font-zen;
+		font-size: 2.5rem;
+		color: $text-light;
+	}
+
+	&__date {
+		text-align: right;
+		grid-column: 3/4;
+		grid-row: 1/2;
+		font-family: $font-zen;
+		font-size: 2.5rem;
+		color: $text-light;
+	}
+
+	@include respond(tab-port) {
+		&__title-container {
+			grid-column: 1/3;
+			grid-row: 1/2;
+
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 6.5rem;
+				height: 6.5rem;
+				margin-right: 3rem;
+			}
+		}
+
+		&__title {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			font-family: $font-lato;
+			font-size: 3rem;
+			color: $text-light;
+		}
+
+		&__paragraph {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			font-family: $font-lato;
+			font-size: 3rem;
+			color: $text-light;
+			height: fit-content;
+		}
+
+		&__won {
+			padding-left: 4rem;
+			grid-column: 1/2;
+			grid-row: 3/4;
+			font-family: $font-zen;
+			font-size: 2.5rem;
+			color: $text-light;
+		}
+
+		&__date {
+			text-align: left;
+			grid-column: 1/2;
+			grid-row: 4/5;
+			font-family: $font-zen;
+			font-size: 2.5rem;
+			color: $text-light;
+		}
+	}
+}

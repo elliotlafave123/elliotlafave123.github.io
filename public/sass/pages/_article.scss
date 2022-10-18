@@ -1,0 +1,434 @@
+.article {
+	padding: $section-padding-y 20vw;
+	color: $text-light;
+
+	@include respond(laptop) {
+		padding: 15rem 18vw;
+	}
+
+	@include respond(phone) {
+		padding: 10rem 3.5rem 0 3.5rem;
+	}
+
+	&__container {
+		padding: 10rem $section-padding-x 0 $section-padding-x;
+
+		@include respond(phone) {
+			padding: 10rem 3rem 0 3rem;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 6fr 2fr;
+		gap: 0rem 5rem;
+
+		@include respond(tab-port) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__sidebar {
+		background-color: $color-card;
+		height: min-content;
+		padding: 3rem;
+		position: fixed;
+		right: 18vw;
+		top: 30vh;
+		width: 14vw;
+
+		@include respond(laptop) {
+			right: 10vw;
+			width: 20vw;
+		}
+		@include respond(tab-land) {
+			right: 10vw;
+			width: 20vw;
+		}
+
+		li a {
+			text-decoration: none;
+			display: block;
+			padding: 0.125rem 0;
+			color: #ccc;
+			font-size: 1.6rem;
+			transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+			color: rgb(130, 121, 137);
+
+			&:hover,
+			&:focus {
+				color: $text-light;
+			}
+		}
+
+		ul,
+		ol {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			margin-left: 1rem;
+
+			&.active > a {
+				color: $text-light;
+				font-weight: 500;
+			}
+		}
+
+		h1 {
+			font-weight: 300;
+		}
+	}
+
+	&__interactions {
+		padding: 0 0 8rem 0;
+		width: 100%;
+		display: flex;
+
+		align-items: center;
+		justify-content: space-between;
+
+		&-menu {
+			flex-direction: column !important;
+			align-items: flex-start;
+		}
+
+		&--section {
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__header {
+		h2 {
+			font-size: 4.2rem;
+			line-height: 5.4rem;
+
+			@include respond(phone) {
+				font-size: 3rem;
+				line-height: 3.8rem;
+			}
+		}
+
+		&-info {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			margin-bottom: 5rem;
+
+			span,
+			p {
+				font-size: 1.6rem;
+				margin-right: 1rem;
+			}
+
+			p {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	&__section {
+		margin-bottom: 4.5rem;
+		h2 {
+			font-size: 3.8rem;
+			margin-bottom: 2.4rem;
+
+			@include respond(phone) {
+				font-size: 3rem;
+				line-height: 3.8rem;
+			}
+		}
+
+		p {
+			font-size: 1.9rem;
+			margin-bottom: 2.6rem;
+			letter-spacing: 1.2px;
+		}
+
+		h3,
+		h4,
+		h5,
+		h6 {
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
+
+		h3 {
+			font-size: 2.2rem;
+			font-weight: 600;
+			line-height: 2.4rem;
+			margin-bottom: 1.2rem;
+		}
+
+		ul,
+		ol {
+			margin-left: 2rem;
+
+			p {
+				margin: 0 0 0 1rem;
+			}
+		}
+
+		li {
+			font-size: 1.9rem;
+			margin-bottom: 0.6rem;
+		}
+
+		a {
+			transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+			color: #dd94ff;
+			text-decoration: underline;
+
+			&:hover {
+				color: #d06cffd0;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__user-story {
+		margin-bottom: 3rem;
+
+		p {
+			margin-bottom: 0.5rem;
+		}
+
+		ul {
+			margin-top: 0.6rem;
+		}
+
+		li {
+			font-size: 2rem;
+			line-height: 2.3rem;
+		}
+	}
+
+	&__image {
+		padding: 2rem 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		position: relative;
+
+		&:hover {
+			&::before {
+				color: $text-light;
+				position: absolute;
+				top: 6rem;
+				right: 10rem;
+				content: "\f424";
+				font-family: "Font Awesome\ 5 Free";
+				font-weight: 900;
+
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+				background-color: var(--colour-btn-expand-img);
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		@include respond(tab-port) {
+			&::before {
+				color: $text-light;
+				position: absolute;
+				top: 6rem;
+				right: 4rem;
+				content: "\f424";
+				font-family: "Font Awesome\ 5 Free";
+				font-weight: 900;
+
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+				background-color: var(--colour-btn-expand-img);
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&:hover {
+				color: $text-light;
+				&::before {
+					position: absolute;
+					top: 6rem;
+					right: 4rem;
+					content: "\f424";
+					font-family: "Font Awesome\ 5 Free";
+					font-weight: 900;
+
+					font-size: 1.6rem;
+					line-height: 1.6rem;
+					background-color: var(--colour-btn-expand-img);
+					width: 4rem;
+					height: 4rem;
+					border-radius: 50%;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+
+		@include respond(tab-port) {
+			&::before {
+				color: $text-light;
+				position: absolute;
+				top: 3.5rem;
+				right: 1rem;
+				content: "\f424";
+				font-family: "Font Awesome\ 5 Free";
+				font-weight: 900;
+
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+				background-color: var(--colour-btn-expand-img);
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&:hover {
+				&::before {
+					color: $text-light;
+					position: absolute;
+					top: 3.5rem;
+					right: 1rem;
+					content: "\f424";
+					font-family: "Font Awesome\ 5 Free";
+					font-weight: 900;
+
+					font-size: 1.6rem;
+					line-height: 1.6rem;
+					background-color: var(--colour-btn-expand-img);
+					width: 4rem;
+					height: 4rem;
+					border-radius: 50%;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+		img {
+			width: 90%;
+
+			@include respond(phone) {
+				width: 100%;
+			}
+		}
+
+		p {
+			font-size: 1.6rem;
+			margin-top: 1rem;
+			align-self: flex-start;
+		}
+
+		&-thin {
+			img {
+				width: 60%;
+
+				@include respond(phone) {
+					width: 100%;
+				}
+			}
+		}
+
+		&-enlarged {
+			z-index: 1000;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 0;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&::before {
+				color: $text-light;
+				position: absolute;
+				top: 6rem;
+				right: 10rem;
+				content: "\f78c" !important;
+				font-family: "Font Awesome 6 free";
+				font-weight: 900;
+
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+				background-color: var(--colour-btn-expand-img);
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			img {
+				z-index: 1200;
+				object-fit: contain;
+				max-height: 99vh;
+
+				@include respond(phone) {
+					width: 100%;
+				}
+			}
+
+			p {
+				visibility: hidden;
+				display: none;
+			}
+
+			&-thin {
+				img {
+					width: 60%;
+
+					@include respond(phone) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+#video {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 10rem;
+
+	@include respond(phone) {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 5rem;
+	}
+}
+
+.articleImg {
+}

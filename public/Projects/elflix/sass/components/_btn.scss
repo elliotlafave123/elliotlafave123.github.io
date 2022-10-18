@@ -1,0 +1,36 @@
+.btn {
+	font-family: $font-lato;
+	font-size: 2.5rem;
+	color: $link-color-hover;
+
+	background-color: $color-white;
+	padding: 1rem 4rem;
+	border-radius: 5px;
+
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+	&:hover {
+		background-color: $color-grey-light-1;
+		color: $link-color;
+	}
+
+	&:active {
+		background-color: $color-grey-light-2;
+		color: $color-white;
+	}
+}
+
+.play-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3rem;
+	border: none;
+	padding: 1rem;
+	background-color: rgba(255, 255, 255, 0.25);
+	cursor: pointer;
+
+	h2 {
+		margin: 0 2rem 0 1.6rem;
+	}
+}

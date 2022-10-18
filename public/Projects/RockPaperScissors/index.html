@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Rock, Paper, Scissors</title>
+	</head>
+	<body>
+		<a href="https://www.frontendmentor.io/" class="challenge-overlay" title="Link to FrontendMentor.io">
+			<img src="../../img/icons/FrontendMentor.jpg" alt="FrontendMentor Logo" />
+			<p>Challenge By FrontendMentor</p>
+		</a>
+		<header class="header">
+			<div class="title-container">
+				<img src="images/logo.svg" alt="" />
+			</div>
+			<div class="score-container">
+				<h2 class="score-title">Score</h2>
+				<span class="score" id="score">12</span>
+			</div>
+		</header>
+		<main id="main">
+			<div class="buttons" id="buttons">
+				<button class="btn-circle blue" id="paper">
+					<img src="images/icon-paper.svg" alt="" />
+				</button>
+				<button class="btn-circle yellow" id="scissors">
+					<img src="images/icon-scissors.svg" alt="" />
+				</button>
+				<button class="btn-circle red" id="rock">
+					<img src="images/icon-rock.svg" alt="" />
+				</button>
+			</div>
+
+			<div class="picked hidden" id="picked">
+				<div class="picked-card" id="player">
+					<h3>You picked</h3>
+					<button class="btn-circle" id="buttonPlayer">
+						<img src="images/icon-paper.svg" id="imgPlayer" alt="" />
+					</button>
+				</div>
+
+				<div class="new-game">
+					<h4 id="winText">You win</h4>
+					<button class="playAgain" id="playAgain">Play Again</button>
+				</div>
+
+				<div class="picked-card" id="house">
+					<h3>The house picked</h3>
+					<button class="btn-circle animate" id="buttonAI">
+						<img src="images/icon-rock.svg" id="imgAI" alt="" />
+					</button>
+				</div>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

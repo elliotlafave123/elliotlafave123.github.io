@@ -1,0 +1,32 @@
+.skills {
+	box-sizing: border-box;
+	padding: 15rem 20vw 5rem 20vw;
+	color: $text-light;
+	margin-bottom: 5rem;
+	position: relative;
+
+	@include respond(tab-port) {
+		padding: 15rem 5rem 5rem 5rem;
+	}
+
+	&__img {
+		position: absolute;
+		right: 18vw;
+		top: 15rem;
+
+		@include respond(tab-land) {
+			right: 5vw;
+			top: 15rem;
+		}
+
+		@include respond(tab-port) {
+			height: 30rem;
+			right: 0vw;
+			top: 10rem;
+		}
+
+		@include respond(phone) {
+			display: none;
+		}
+	}
+}

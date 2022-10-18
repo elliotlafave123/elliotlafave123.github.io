@@ -1,0 +1,21 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+@import "base/utilities";
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+
+@import "layout/app-container";
+@import "layout/main-view";
+
+@import "components/scrollbar.scss";
+@import "components/btn.scss";
+@import "components/sidebar.scss";
+@import "components/search.scss";
+@import "components/cards.scss";
+@import "components/challengeOverlay";
+
+@import "pages/index/index.scss";
+@import "pages/index/hero.scss";

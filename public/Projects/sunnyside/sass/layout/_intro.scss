@@ -1,0 +1,114 @@
+.section__intro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	@include respond(tab-port) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.intro {
+	&__content {
+		padding: 20vh 10vw 20vh 12vw;
+		height: 80vh;
+
+		@include respond(tab-port) {
+			height: 50vh;
+			padding: 4rem 3rem;
+			text-align: center;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		p {
+			margin: 4rem 0;
+			color: hsl(232, 10%, 55%);
+			font-family: "Barlow";
+			font-weight: 600;
+			line-height: 3rem;
+		}
+	}
+
+	&__img {
+		height: 80vh;
+
+		@include respond(tab-port) {
+			height: 50vh;
+		}
+		img {
+			width: 100%;
+			height: 80vh;
+
+			@include respond(tab-port) {
+				height: 50vh;
+			}
+		}
+	}
+}
+
+.intro-content-img {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	height: 80vh;
+	text-align: center;
+
+	@include respond(tab-port) {
+		height: 75vh;
+	}
+
+	p {
+		font-family: "Barlow";
+		font-weight: 600;
+		line-height: 3rem;
+		margin: 4rem 0;
+		width: 45%;
+		margin-bottom: 8rem;
+
+		@include respond(tab-port) {
+			width: 90%;
+		}
+	}
+
+	&-1 {
+		background: url("../images/desktop/image-graphic-design.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+
+		@include respond(tab-port) {
+			background-size: 200% 100%;
+			background-position: center top;
+		}
+
+		h3 {
+			color: hsl(167, 40%, 24%);
+		}
+
+		p {
+			color: hsl(167, 40%, 24%);
+		}
+	}
+
+	&-2 {
+		background: url("../images/desktop/image-photography.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 80vh;
+
+		@include respond(tab-port) {
+			background-size: 200% 100%;
+			background-position: center top;
+		}
+
+		h3 {
+			color: hsl(198, 62%, 26%);
+		}
+
+		p {
+			color: hsl(198, 62%, 26%);
+		}
+	}
+}

@@ -1,0 +1,98 @@
+// colors
+
+:root {
+	--color-primary: hsl(255, 78%, 60%);
+	--primary-light: #9c82e7;
+	--color-primary-dark: rgb(41, 23, 94);
+
+	--color-secondary: hsla(0, 72%, 65%, 0.942);
+	--color-secondary-light: #f23f7b;
+	--color-secondary-dark: #f54559;
+
+	--color-form-false: rgb(255, 119, 48);
+	--color-form-true: rgb(85, 197, 122);
+
+	--color-grey-light-1: rgb(222, 226, 230);
+	--color-grey-light-2: rgb(73, 80, 87);
+
+	--color-grey--extra-dark: #15181991;
+	--color-grey-dark: #212529;
+	--color-grey-dark-2: #343a40;
+	--color-grey-dark-3: rgb(51, 51, 51);
+
+	--color-footer: #101214;
+
+	--color-white: rgb(255, 255, 255);
+	--color-black: rgb(0, 0, 0);
+
+	--text-light: #f1f3f5;
+	--text-dark: #212529;
+
+	--color-tag: #495057;
+
+	--test: rgb(140, 144, 149);
+
+	--color-card: #343a40;
+	--color-card-hover: #40484f;
+	--color-card-dark: #212529;
+	--color-card-git: #33373a;
+
+	--colour-btn-expand-img: rgba(0, 0, 0, 0.6);
+	--colour-btn-jump-to-top: #343a40;
+	--colour-btn-git: #33373a;
+
+	--link-card-background: #343a40;
+	--link-card-hover: #40484f;
+	--link-card-before: #2e3338;
+	--link-card-before-hover: #2e3338;
+
+	--tech-stack-img-opacity: 60%;
+}
+
+$font-lato: "lato", sans-serif;
+$font-zen: "Zen Kaku Gothic New", sans-serif;
+
+$color-primary: var(--color-primary);
+$color-primary-light: var(--primary-light);
+$color-primary-dark: var(--color-primary-dark);
+
+$color-secondary: var(--color-secondary);
+$color-secondary-light: var(--color-secondary-light);
+$color-secondary-dark: var(--color-secondary-dark);
+
+$color-form-false: var(--color-form-false);
+$color-form-true: var(--color-form-true);
+
+$color-grey-light-1: var(--color-grey-light-1);
+$color-grey-light-2: var(--color-grey-light-2);
+
+$color-grey-dark: var(--color-grey-dark);
+$color-grey--extra-dark: var(color-grey--extra-dark);
+$color-grey-dark-2: var(--color-grey-dark-2);
+$color-grey-dark-3: var(--color-grey-dark-3);
+
+$color-footer: var(--color-footer);
+
+$color-white: var(--color-white);
+$color-black: var(--color-black);
+
+$text-light: var(--text-light);
+$text-dark: var(--text-dark);
+
+$color-card: var(--color-card);
+$color-card-hover: var(--color-card-hover);
+$color-card-dark: var(--color-card-dark);
+$color-card-git: var(--color-card-git);
+$color-tag: var(--color-tag);
+// fonts
+
+/* ********************************* */
+/*         Section Padding           */
+/* ********************************* */
+$section-padding-x: 15vw;
+$section-padding-y: 15rem;
+
+$section-padding-x-laptop: 14vw;
+$section-padding-x-tap-land: 15vw;
+$section-padding-x-tab-port: 15vw;
+$section-padding-x-phone: 0;

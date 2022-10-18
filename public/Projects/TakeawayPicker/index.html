@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>My Project</title>
+	</head>
+
+	<body>
+		<nav>
+			<button id="navBtn" class="navBtn">
+				<img src="img/bars-solid.svg" alt="" />
+			</button>
+
+			<div class="sidebar" id="sidebar">
+				<h2>Your takeaways</h2>
+				<form action="none">
+					<div class="form-item">
+						<input type="checkbox" id="Dominos" />
+						<label for="Dominos">Dominos</label>
+					</div>
+					<div class="form-item">
+						<input type="checkbox" id="KFC" />
+						<label for="KFC">KFC</label>
+					</div>
+					<div class="form-item">
+						<input type="checkbox" id="PapaJohns" />
+						<label for="PapaJohns">PapaJohns</label>
+					</div>
+					<div class="form-item">
+						<input type="checkbox" id="SubWay" />
+						<label for="SubWay">SubWay</label>
+					</div>
+					<div class="form-item">
+						<input type="checkbox" id="McDonald's" />
+						<label for="McDonald's">McDonald's</label>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+		<div class="title">
+			<h1>Random Takeaway Picker</h1>
+			<!-- <span><h3>2.0</h3></span> -->
+		</div>
+
+		<main class="takeaway">
+			<div class="imgContainer" id="imgContainer"></div>
+			<div class="name-container">
+				<h2 class="name">Press Button</h2>
+			</div>
+		</main>
+
+		<div class="buttons-container">
+			<button class="btn" id="spin">Spin</button>
+			<button class="btn hidden" id="again">Again!</button>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

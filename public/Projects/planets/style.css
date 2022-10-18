@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap");
+
+:root {
+	--planet-color: #419ebb;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-image: url("assets/background-stars.svg");
+	background-color: #070724;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-family: "Antonio";
+
+	height: 100vh;
+	overflow: hidden;
+
+	transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+h1 {
+	color: #fff;
+	font-family: "Antonio";
+	font-weight: 500;
+	font-size: 8rem;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: #fff;
+	font-family: "Antonio";
+	font-weight: 500;
+	font-size: 4rem;
+	line-height: 5.2rem;
+	text-transform: uppercase;
+}
+
+h3 {
+	color: #fff;
+	font-family: "Spartan";
+	font-weight: 700;
+	font-size: 1.2rem;
+	line-height: 25px;
+	letter-spacing: 2.6px;
+	text-transform: uppercase;
+}
+h4 {
+	color: #fff;
+	font-family: "Spartan";
+	font-weight: 700;
+	font-size: 1.1rem;
+	line-height: 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+p {
+	color: #fff;
+	font-family: "Spartan";
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 2.6rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.hideDesktop {
+	display: none;
+}
+
+.btn {
+	background-color: #070724;
+	color: black;
+	padding: 14px 33px;
+	width: 35rem;
+	font-size: 16px;
+	cursor: pointer;
+	font-family: "Spartan";
+	font-weight: 700;
+
+	border: 1px solid rgba(216, 216, 216, 0.3);
+	color: #fff;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+}
+
+.btn span {
+	opacity: 0.5;
+	margin-right: 3.4rem;
+}
+
+.active {
+	background-color: var(--planet-color);
+	border: 1px solid var(--planet-color);
+	color: white;
+}
+
+.btn:hover {
+	background-color: rgba(216, 216, 216, 0.2);
+	border: 1px solid rgba(216, 216, 216, 0.1);
+	color: white;
+}
+
+/* Nav and header */
+.logo {
+	color: #fff;
+	font-family: "Antonio";
+	font-weight: 500;
+	font-size: 2.8rem;
+	text-transform: uppercase;
+	letter-spacing: -1.5px;
+}
+
+button {
+	color: #fff;
+	font-family: "Spartan";
+	font-weight: 700;
+	font-size: 1.1rem;
+	line-height: 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+nav {
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 4rem;
+	border-bottom: 1px solid rgb(151, 151, 151, 0.2);
+}
+
+.planet-links-container {
+	opacity: 0.75;
+}
+
+.link {
+	margin-left: 3.5rem;
+	height: 8.2rem;
+	border-top: 4px solid rgba(0, 0, 0, 0);
+
+	letter-spacing: 1.36px;
+	line-height: 2.5rem;
+}
+
+.link:hover {
+	color: #fff;
+	border-top: 4px solid var(--hover-color);
+}
+
+.linkMob {
+	margin-top: 1rem;
+	height: 5rem;
+	font-family: "Spartan";
+	font-weight: 400;
+	font-size: 1.2rem;
+	border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+
+.linkMob:hover {
+	border-bottom: 4px solid #419ebb;
+	color: #fff;
+}
+
+.linkMobActive {
+	border-bottom: 4px solid #419ebb;
+	font-weight: 700;
+}
+
+/* Main container */
+.container {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	padding: 10rem 20rem;
+	max-width: max-content;
+}
+
+main {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.geologyImg {
+	width: 16.5rem;
+	position: absolute;
+	left: calc(50% - 8.25rem);
+	bottom: 0;
+}
+
+.info-container {
+	width: 35rem;
+}
+
+.info-container p {
+	margin-top: 3.9rem;
+}
+
+.source-container {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: "Spartan";
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 2.6rem;
+
+	display: flex;
+	align-items: center;
+}
+
+.source-container img {
+	cursor: pointer;
+	margin-left: 0.8rem;
+}
+
+a {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: "Spartan";
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 2.6rem;
+	margin: 2.8rem 1rem;
+}
+
+.buttons-container .btn {
+	margin-bottom: 1.6rem;
+}
+
+/* Data container */
+.data-container {
+	grid-column: 1 / 3;
+	margin-top: 7rem;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+}
+
+.data-container h4 {
+	opacity: 0.5;
+}
+
+.data-card {
+	border: 1px solid rgba(216, 216, 216, 0.3);
+	padding: 2.7rem 2.4rem;
+}
+
+@media only screen and (max-width: 2000px) {
+	.container {
+		margin-top: 10rem;
+	}
+
+	.info-container {
+		width: 40rem;
+	}
+
+	main {
+		height: 80%;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	h1 {
+		font-size: 4.4rem;
+	}
+	h2 {
+		font-size: 2.2rem;
+	}
+	h3 {
+		font-size: 4rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+
+	body {
+		height: max-content;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+
+	html {
+		font-size: 62.5%;
+	}
+
+	.hideDesktop {
+		display: block;
+	}
+
+	.hideMobile {
+		display: none;
+	}
+
+	.container {
+		grid-template-columns: 1fr;
+		justify-content: center;
+		width: 100vw;
+		padding: 0;
+		overflow-y: scroll;
+		margin-top: 2rem;
+	}
+
+	.image-container {
+		grid-row: 1 / 2;
+	}
+
+	.image-container img {
+		transform: scale(0.7);
+		height: 35vh;
+	}
+
+	.info-container {
+		grid-row: 2 / 3;
+		text-align: center;
+		justify-self: center;
+		margin-top: 3rem;
+		padding: 0 1rem;
+	}
+
+	.source-container {
+		justify-content: center;
+	}
+
+	.buttons-container button {
+		display: none;
+	}
+
+	.chevron {
+		height: 1.4rem;
+	}
+
+	.data-container {
+		grid-template-columns: 1fr;
+		margin-top: 1.5rem;
+		width: 88vw;
+		justify-self: center;
+		margin-bottom: 2rem;
+	}
+
+	.data-card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: 1.4rem 4rem;
+	}
+
+	.slideIn {
+		transform: translateX(-100vw);
+	}
+
+	/* .slideOff {
+		transform: translateX(100vw);
+	} */
+
+	nav {
+		height: 8vh;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		background-color: rgba(7, 7, 36, 0.8);
+	}
+
+	.link div {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+	}
+
+	.link {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 80%;
+		border-bottom: 1px solid #979797;
+		margin-left: 0;
+		font-size: 1.6rem;
+		font-weight: 700;
+	}
+
+	.link:hover {
+		border-top: 4px solid rgba(0, 0, 0, 0);
+	}
+
+	.buttons-container-mobile {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 8vh;
+		border-bottom: 1px solid rgb(151, 151, 151, 0.2);
+	}
+
+	.circle {
+		width: 2rem;
+		height: 2rem;
+		border-radius: 2rem;
+		margin-right: 3rem;
+	}
+
+	.planet-links-container {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		background-color: #070724;
+		opacity: 1;
+		padding-top: 4rem;
+
+		width: 100vw;
+		height: 92vh;
+		z-index: 100;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		transition: all 0.4s cubic-bezier(1, -0.01, 0.72, 0.26);
+	}
+
+	.geologyImg {
+		width: 28rem;
+		position: absolute;
+		left: calc(50% - 14rem);
+		scale: 0.6;
+		bottom: -10rem;
+	}
+}
+
+.challenge-overlay {
+	text-decoration: none;
+	color: #212529;
+	background-color: #ffffff;
+
+	display: flex;
+	align-items: center;
+
+	width: max-content;
+	padding: 0 1rem 0 0;
+	border-radius: 0 2rem 0 0;
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10000;
+	margin: 0;
+}
+
+.challenge-overlay img {
+	height: 2rem;
+	width: 2rem;
+	margin-right: 0.5rem;
+}
+
+.challenge-overlay p {
+	font-size: 1.5rem;
+	margin: 0;
+	color: #212529;
+	font-weight: 500;
+}
