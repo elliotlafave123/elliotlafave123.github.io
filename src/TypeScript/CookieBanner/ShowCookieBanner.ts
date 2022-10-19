@@ -13,21 +13,26 @@ const bannerMarkup = `
 
 export const HandleCookies = () => {
   if (localStorage.getItem("acceptedCookies") !== "true") {
-    const body = document.querySelector("body");
+    const loginContainer: HTMLElement = document.getElementById("loginForm");
+    const signUpContainer: HTMLElement = document.getElementById("signUpForm");
 
-    if (body) {
-      body.insertAdjacentHTML("beforeend", bannerMarkup);
-      const acceptButton = document.getElementById("AcceptCookiesButton");
+    if (loginContainer || signUpContainer) {
+      const body = document.querySelector("body");
 
-      if (acceptButton)
-        acceptButton.addEventListener("click", (e) => {
-          e.preventDefault();
+      if (body) {
+        body.insertAdjacentHTML("beforeend", bannerMarkup);
+        const acceptButton = document.getElementById("AcceptCookiesButton");
 
-          localStorage.setItem("acceptedCookies", "true");
+        if (acceptButton)
+          acceptButton.addEventListener("click", (e) => {
+            e.preventDefault();
 
-          const banner: HTMLElement = document.querySelector(".cookie-banner") as HTMLElement;
-          if (banner) banner.style.display = "none";
-        });
+            localStorage.setItem("acceptedCookies", "true");
+
+            const banner: HTMLElement = document.querySelector(".cookie-banner") as HTMLElement;
+            if (banner) banner.style.display = "none";
+          });
+      }
     }
   }
 };
