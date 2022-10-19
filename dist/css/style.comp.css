@@ -12,11 +12,11 @@
   --color-form-true: rgb(85, 197, 122);
   --color-grey-light-1: rgb(222, 226, 230);
   --color-grey-light-2: rgb(73, 80, 87);
-  --color-grey--extra-dark: #15181991;
-  --color-grey-dark: #212529;
-  --color-grey-dark-2: #343a40;
+  --color-grey--extra-dark: #000000;
+  --color-grey-dark: #0a0114;
+  --color-grey-dark-2: #302654;
   --color-grey-dark-3: rgb(51, 51, 51);
-  --color-footer: #101214;
+  --color-footer: #000000;
   --color-white: rgb(255, 255, 255);
   --color-black: rgb(0, 0, 0);
   --text-light: #f1f3f5;
@@ -24,17 +24,17 @@
   --text-dark: #212529;
   --color-tag: #495057;
   --test: rgb(140, 144, 149);
-  --color-card: #343a40;
+  --color-card: #212529;
   --color-card-hover: #40484f;
   --color-card-dark: #212529;
   --color-card-git: #33373a;
   --colour-btn-expand-img: rgba(0, 0, 0, 0.6);
   --colour-btn-jump-to-top: #343a40;
   --colour-btn-git: #33373a;
-  --link-card-background: #343a40;
-  --link-card-hover: #40484f;
-  --link-card-before: #2e3338;
-  --link-card-before-hover: #2e3338;
+  --link-card-background: #212529;
+  --link-card-hover: #282d32;
+  --link-card-before: rgb(42, 46, 51);
+  --link-card-before-hover: rgb(50, 56, 62);
   --tech-stack-img-opacity: 60%; }
 
 /* ********************************* */
@@ -3760,6 +3760,12 @@ button:focus {
 
 .section-header {
   margin: 0; }
+
+#wave2-dark {
+  transform: translateY(-0.2rem); }
+
+#wave2-light {
+  transform: translateY(-0.2rem); }
 
 .article {
   padding: 15rem 20vw;

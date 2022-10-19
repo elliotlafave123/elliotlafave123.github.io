@@ -4,12 +4,14 @@ const root = document.documentElement;
 const deleteMobileDarkModeToggle = document.querySelector(".deleteMobile");
 const checkboxLabelElements: HTMLLabelElement[] = Array.from(document.querySelectorAll("label"));
 
+const wave1LightMobile = document.getElementById("wave1-light-mob");
 const wave1Light = document.getElementById("wave1-light");
 const wave2Light = document.getElementById("wave2-light");
 const wave3Light = document.getElementById("wave3-light");
 const wave4Light = document.getElementById("wave4-light");
 const wave5Light = document.getElementById("wave5-light");
 
+const wave1DarkMobile = document.getElementById("wave1-dark-mob");
 const wave1Dark = document.getElementById("wave1-dark");
 const wave2Dark = document.getElementById("wave2-dark");
 const wave3Dark = document.getElementById("wave3-dark");
@@ -47,6 +49,9 @@ const lightMode = function () {
   if (wave1Dark) {
     wave1Dark.classList.add("hidden");
   }
+  if (wave1DarkMobile) {
+    wave1DarkMobile.classList.add("hidden");
+  }
   if (wave2Dark) {
     wave2Dark.classList.add("hidden");
   }
@@ -63,6 +68,9 @@ const lightMode = function () {
   if (wave1Light) {
     wave1Light.classList.remove("hidden");
   }
+  if (wave1LightMobile) {
+    wave1LightMobile.classList.remove("hidden");
+  }
   if (wave2Light) {
     wave2Light.classList.remove("hidden");
   }
@@ -78,17 +86,17 @@ const lightMode = function () {
 };
 
 const darkMode = function () {
-  root.style.setProperty("--color-grey--extra-dark", "#15181991");
-  root.style.setProperty("--color-grey-dark", "#212529");
-  root.style.setProperty("--color-grey-dark-2", "#343a40");
+  root.style.setProperty("--color-grey--extra-dark", "#000000");
+  root.style.setProperty("--color-grey-dark", "#0a0114");
+  root.style.setProperty("--color-grey-dark-2", "#302654");
 
-  root.style.setProperty("--color-card", "#343a40");
+  root.style.setProperty("--color-card", "#212529");
   root.style.setProperty("--color-card-dark", "#212529");
 
   root.style.setProperty("--text-light", "#CED4DA");
   root.style.setProperty("--text-dark", "#212529");
 
-  root.style.setProperty("--color-footer", "#101214");
+  root.style.setProperty("--color-footer", "#000000");
 
   root.style.setProperty("--colour-btn-expand-img", "rgba(0, 0, 0, 0.6)");
   root.style.setProperty("--colour-btn-jump-to-top", "#343a40");
@@ -100,13 +108,16 @@ const darkMode = function () {
   root.style.setProperty("--tech-stack-img-opacity", "60%");
 
   // Link card (FOLDER)
-  root.style.setProperty("--link-card-background", "#343a40");
-  root.style.setProperty("--link-card-hover", "#40484f");
-  root.style.setProperty("--link-card-before", "#2e3338");
-  root.style.setProperty("--link-card-before-hover", "#2e3338");
+  root.style.setProperty("--link-card-background", "#212529");
+  root.style.setProperty("--link-card-hover", "#282d32");
+  root.style.setProperty("--link-card-before", "rgb(42, 46, 51)");
+  root.style.setProperty("--link-card-before-hover", "rgb(50, 56, 62)");
 
   if (wave1Dark) {
     wave1Dark.classList.remove("hidden");
+  }
+  if (wave1DarkMobile) {
+    wave1DarkMobile.classList.remove("hidden");
   }
   if (wave2Dark) {
     wave2Dark.classList.remove("hidden");
@@ -123,6 +134,9 @@ const darkMode = function () {
 
   if (wave1Light) {
     wave1Light.classList.add("hidden");
+  }
+  if (wave1LightMobile) {
+    wave1LightMobile.classList.add("hidden");
   }
   if (wave2Light) {
     wave2Light.classList.add("hidden");
