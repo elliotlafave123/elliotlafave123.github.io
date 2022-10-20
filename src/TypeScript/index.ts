@@ -25,6 +25,8 @@ import { initStoreBackLink } from "./Authentication System/StoreBackLink";
 import { fetchAccountDetails } from "./Authentication System/Account Page/fetchAccountDetails";
 // Cookie Banner
 import { HandleCookies } from "./CookieBanner/ShowCookieBanner";
+// Show Contact Me Form Sent Checkmark
+import { ShowSentCheckmark } from "./ContactMeForm/ShowSentCheckmark";
 
 // Function to check if element exists
 const exists = (el: HTMLElement) => {
@@ -38,8 +40,11 @@ const yearSpan: HTMLElement = document.getElementById("currentYear") as HTMLElem
 const currentYear = new Date();
 yearSpan.textContent = currentYear.getFullYear().toString();
 
-// Show cookie banner
+// Show Contact Me Form Sent Checkmark
 HandleCookies();
+
+// Show cookie banner
+ShowSentCheckmark();
 
 // Set dark mode
 setDarkMode();

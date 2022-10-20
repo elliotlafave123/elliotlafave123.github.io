@@ -23,11 +23,12 @@
   <meta name="description" content="Elliot La Fave's personal website and portfolio. A collection of all my work and my CV.">
   <meta name="keywords" content="Elliotlafave, Elliot, la, fave, web, design, cv, portfolio, projects, javascript, nodejs, manchester, astro, software, developer, apprentice">
   <meta name="author" content="Elliot La Fave">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
 
   <title>Home | Elliotlafave.com</title>
-<link rel="stylesheet" href="/assets/Login Audit Api.427644d3.css" />
+<link rel="stylesheet" href="/assets/Login Audit Api.b52b1be2.css" />
 <link rel="stylesheet" href="/assets/index.80aadd78.css" /></head>
 
   <body>
@@ -129,7 +130,7 @@
 <section class="logo mobile-only">
 	<a href="/index.html" tabindex="-1"><img src="/img/logo.png" alt="Logo" class="logo-img mobile-only"></a>
 </section>
-    <link rel="stylesheet" href="/assets/Login Audit Api.427644d3.css" />
+    <link rel="stylesheet" href="/assets/Login Audit Api.b52b1be2.css" />
 <link rel="stylesheet" href="/assets/index.80aadd78.css" /><section class="section-header astro-A2ENMNJR" id="first-section">
     <div class="header__content astro-A2ENMNJR">
       <h1 class="astro-A2ENMNJR">HI THERE,<br class="mobile-only astro-A2ENMNJR"> IM A FONTEND WEBSITE DEVELOPER</h1>
@@ -226,29 +227,56 @@
     <img src="img/wave4-light.png" alt="" class="wave-top__img hidden astro-A2ENMNJR" id="wave4-light">
   </div>
     <!-- Footer --><section class="contact u-margin-top-large">
-	<img src="/img/contact.png" alt="" class="contact__img">
-	<h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
-	<div class="contact__form">
-		<form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" action="pages/success/index.html" netlify>
-			<div class="form__group">
-				<input type="text" class="form__input form__input-small" placeholder="Full name" id="name" name="name" required>
-				<label for="name" class="form__label">Full name</label>
-			</div>
+  <img src="/img/contact.png" alt="" class="contact__img">
+  <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
+  <div class="contact__form">
+    <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" netlify>
+      <div class="form__group">
+        <input type="text" class="form__input form__input-small" placeholder="Full name" id="name" name="name" required>
+        <label for="name" class="form__label">Full name</label>
+      </div>
 
-			<div class="form__group">
-				<input type="email" class="form__input form__input-small" placeholder="Email address" id="email" name="email" required>
-				<label for="email" class="form__label">Email address</label>
-			</div>
+      <div class="form__group">
+        <input type="email" class="form__input form__input-small" placeholder="Email address" id="email" name="email" required>
+        <label for="email" class="form__label">Email address</label>
+      </div>
 
-			<div class="form__group">
-				<label for="message" class="form__label u-margin-bottom-small">Your message</label>
-				<textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" name="message" required></textarea>
-			</div>
+      <div class="form__group">
+        <label for="message" class="form__label u-margin-bottom-small">Your message</label>
+        <textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" name="message" required></textarea>
+      </div>
 
-			<button class="btn btn-purple-post u-margin-top-small" type="submit">Send Message! &nbsp; &rarr;</button>
-		</form>
-	</div>
+      <!-- Public -->
+      <!-- <div
+        class="g-recaptcha u-margin-top-small"
+        data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
+        data-callback="recaptcha_callback"
+      >
+      </div> -->
+    </form>
+    <!-- Local -->
+    <div class="g-recaptcha u-margin-top-small" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback">
+    </div>
+
+    <input value="Send Message  →" class="btn btn-purple-post u-margin-top-small" type="submit" id="postContactMeFormButton" disabled>
+  </div>
+  <div class="message-sent hidden">
+    <h2>Message sent</h2>
+    <svg class="tick" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+      <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"></circle>
+      <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "></polyline>
+    </svg>
+    <a href="#contactme" id="SendAnotherMessage">Send another</a>
+  </div>
 </section>
+<script lang="js">
+  function recaptcha_callback() {
+    var postContactMeFormButton = document.getElementById("postContactMeFormButton");
+    if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
+  }
+</script>
+
+<section class="contact u-margin-top-large"></section>
 
 <div class="wave-top">
   <img src="/img/wave5.png" alt="" class="wave-bottom__img" id="wave5-dark">

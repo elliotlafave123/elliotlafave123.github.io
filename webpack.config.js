@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+  devtool: "eval-source-map",
   entry: "./src/TypeScript/index.ts",
   module: {
     rules: [

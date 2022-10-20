@@ -102,10 +102,10 @@
   justify-self: center; }
 
 .hidden {
-  display: none; }
+  display: none !important; }
 
 .invisible {
-  visibility: hidden; }
+  visibility: hidden !important; }
 
 .u-align-center {
   width: 100%;
@@ -2852,6 +2852,50 @@ button:focus {
     text-align: center;
     text-decoration: underline; }
 
+svg.tick {
+  width: 100px;
+  display: block;
+  margin: 40px auto 0; }
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0; }
+  .path.circle {
+    -webkit-animation: dash 0.9s ease-in-out;
+    animation: dash 0.9s ease-in-out; }
+  .path.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
+    animation: dash 0.9s 0.35s ease-in-out forwards; }
+  .path.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
+    animation: dash-check 0.9s 0.35s ease-in-out forwards; }
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100; }
+  100% {
+    stroke-dashoffset: 900; } }
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100; }
+  100% {
+    stroke-dashoffset: 900; } }
+
 .o-row-4-col {
   width: 100%;
   padding: 2rem 15vw;
@@ -3304,6 +3348,12 @@ button:focus {
     font-family: inherit;
     font-weight: 700;
     font-size: 1.8rem; }
+  .contact form:invalid input[type="submit"] {
+    background-color: var(--color-card);
+    cursor: not-allowed; }
+  .contact input[type="submit"]:disabled {
+    background-color: var(--color-card) !important;
+    cursor: not-allowed !important; }
   @media (max-width: 56.25em) {
     .contact {
       margin: 0 5rem 20rem 5rem; } }
@@ -3320,6 +3370,21 @@ button:focus {
     @media (max-width: 37.5em) {
       .contact__img {
         display: none; } }
+
+.message-sent {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .message-sent h2 {
+    color: var(--text-light); }
+  .message-sent a {
+    color: var(--text-light);
+    font-size: 1.6rem;
+    text-decoration: underline;
+    margin-top: 4rem; }
+    .message-sent a:hover {
+      color: rgba(var(--text-light), 0.9); }
 
 .footer {
   position: relative;
