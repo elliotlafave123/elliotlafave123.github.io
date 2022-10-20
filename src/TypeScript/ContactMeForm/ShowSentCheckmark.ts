@@ -42,7 +42,18 @@ const awaitFormInput = () => {
       return;
     } else {
       localStorage.setItem("hasSentMessage", "true");
+      clearInputs();
       ShowSentCheckmark();
     }
   });
+};
+
+const clearInputs = () => {
+  const nameInput: HTMLInputElement = document.getElementById("name") as HTMLInputElement;
+  const emailInput: HTMLInputElement = document.getElementById("email") as HTMLInputElement;
+  const messageInput: HTMLTextAreaElement = document.getElementById("message") as HTMLTextAreaElement;
+
+  if (nameInput) nameInput.value = "";
+  if (emailInput) emailInput.value = "";
+  if (messageInput) messageInput.value = "";
 };
