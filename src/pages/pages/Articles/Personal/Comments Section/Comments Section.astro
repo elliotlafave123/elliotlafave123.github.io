@@ -3,170 +3,173 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
 ---
 
 <ArticleLayout title="Comments Section" date="07/10/2022" time="16:35pm" streamID="633ec855c6bdedc1a0812586">
-	<!-- Main Content -->
-	<div class="article__section" id="Idea">
-		<h2>The Idea</h2>
-		<p>
-			Over the last week I have been on a course namely 'Website fundimentals' where we are learning the basics of HTML, CSS and JS.
-		</p>
-		<p>
-			As I have previously learned most of the content for the first four days I decided to give myself a challange to complete over
-			these days.
-		</p>
-		<p>In the past I had an idea to add a comments section to the articles on my website (like this one).</p>
-	</div>
+  <!-- Main Content -->
+  <div class="article__section" id="Idea">
+    <h2>The Idea</h2>
+    <p>
+      Over the last week I have been on a course namely 'Website fundimentals' where we are learning the basics of HTML,
+      CSS and JS.
+    </p>
+    <p>
+      As I have previously learned most of the content for the first four days I decided to give myself a challange to
+      complete over these days.
+    </p>
+    <p>In the past I had an idea to add a comments section to the articles on my website (like this one).</p>
+  </div>
 
-	<div class="article__section" id="Plan">
-		<h2>My Plan</h2>
-		<p>I created a list of features which would be required to complete the project:</p>
-		<div class="article__user-story">
-			<ul class="u-margin-bottom-medium">
-				<li>Build login / sign up forms</li>
-				<li>Verify user emails</li>
-				<li>Create a 'signed in strip' so users know when they are logged in</li>
-				<li>Design the look of a comment</li>
-				<li>API to handle comment storage</li>
-			</ul>
-		</div>
-	</div>
+  <div class="article__section" id="Plan">
+    <h2>My Plan</h2>
+    <p>I created a list of features which would be required to complete the project:</p>
+    <div class="article__user-story">
+      <ul class="u-margin-bottom-medium">
+        <li>Build login / sign up forms</li>
+        <li>Verify user emails</li>
+        <li>Create a 'signed in strip' so users know when they are logged in</li>
+        <li>Design the look of a comment</li>
+        <li>API to handle comment storage</li>
+      </ul>
+    </div>
+  </div>
 
-	<div class="article__section" id="API">
-		<h2>The API</h2>
-		<p>For the API to be fully functional I needed to create the following endpoints:</p>
-		<div class="article__user-story">
-			<ul class="u-margin-bottom-medium">
-				<li>Create comment stream</li>
-				<li>GET all comments from stream</li>
-				<li>POST a comment to a stream</li>
-				<li>PUT - Edit a comment</li>
-				<li>DELETE a comment</li>
-				<li>Vote - up and down</li>
-			</ul>
-		</div>
-	</div>
+  <div class="article__section" id="API">
+    <h2>The API</h2>
+    <p>For the API to be fully functional I needed to create the following endpoints:</p>
+    <div class="article__user-story">
+      <ul class="u-margin-bottom-medium">
+        <li>Create comment stream</li>
+        <li>GET all comments from stream</li>
+        <li>POST a comment to a stream</li>
+        <li>PUT - Edit a comment</li>
+        <li>DELETE a comment</li>
+        <li>Vote - up and down</li>
+      </ul>
+    </div>
+  </div>
 
-	<div class="article__section" id="UserLogin">
-		<h2>Integrating user login</h2>
-		<p>
-			I had already created a user authentication API, it is used in this
-			<a href="https://login.elliotlafave.com" target="_blank">user authentication app</a>.
-		</p>
-		<p>
-			The app uses JWT (JSON web token) authentication. This works by creating a random token when a user successfully logs in. The
-			token is saved n their browser and will allow them access for an amount of time until the token expires and they must log in
-			again.
-		</p>
-		<p>
-			I designed the pages and connected them to the API and it worked straight away, that would've been the most difficult part if I
-			hadn't created the authentication API previously. The signed in state is below:
-		</p>
-		<div class="article__image">
-			<img src="img/SignedInStrip.png" alt="Signed in strip" class="articleImg" />
-			<p>Signed in strip</p>
-		</div>
-		<p>
-			I then added a Google Recaptcha checkbox to prevent spam on my site, I also added states for when users are signed in but their
-			email is not verified:
-		</p>
-		<div class="article__image">
-			<img src="img/VerifyStrip.png" alt="Verify email strip" class="articleImg" />
-			<p>Verify email strip</p>
-		</div>
-		<!--  -->
-		<p>After logging in a user will be brought back to the page they started the login/sign up process from.</p>
-		<p>The pages for the login/sign up pages are below:</p>
-		<div class="article__user-story">
-			<ul class="u-margin-bottom-medium">
-				<li>Log In: <a class="storeBackLink" href="../../../Login/login.html">Login</a></li>
-				<li>Sign Up: <a class="storeBackLink" href="../../../Login/signUp.html">Sign Up</a></li>
-			</ul>
-		</div>
-	</div>
+  <div class="article__section" id="UserLogin">
+    <h2>Integrating user login</h2>
+    <p>
+      I had already created a user authentication API, it is used in this
+      <a href="https://login.elliotlafave.com" target="_blank">user authentication app</a>.
+    </p>
+    <p>
+      The app uses JWT (JSON web token) authentication. This works by creating a random token when a user successfully
+      logs in. The token is saved n their browser and will allow them access for an amount of time until the token
+      expires and they must log in again.
+    </p>
+    <p>
+      I designed the pages and connected them to the API and it worked straight away, that would've been the most
+      difficult part if I hadn't created the authentication API previously. The signed in state is below:
+    </p>
+    <div class="article__image">
+      <img src="img/SignedInStrip.png" alt="Signed in strip" class="articleImg" />
+      <p>Signed in strip</p>
+    </div>
+    <p>
+      I then added a Google Recaptcha checkbox to prevent spam on my site, I also added states for when users are signed
+      in but their email is not verified:
+    </p>
+    <div class="article__image">
+      <img src="img/VerifyStrip.png" alt="Verify email strip" class="articleImg" />
+      <p>Verify email strip</p>
+    </div>
+    <!--  -->
+    <p>After logging in a user will be brought back to the page they started the login/sign up process from.</p>
+    <p>The pages for the login/sign up pages are below:</p>
+    <div class="article__user-story">
+      <ul class="u-margin-bottom-medium">
+        <li>Log In: <a class="storeBackLink" href="../../../Login/login.html">Login</a></li>
+        <li>Sign Up: <a class="storeBackLink" href="../../../Login/signUp.html">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
 
-	<div class="article__section" id="CommentDesign">
-		<h2>Comments Section Design</h2>
-		<p>
-			I first had to think about what data a comment would need. This would be the data model used by MongoDB and Typescript. The data
-			model I settled with is below:
-		</p>
-		<div class="article__user-story">
-			<ul class="u-margin-bottom-medium">
-				<li>ID</li>
-				<li>Text</li>
-				<li>Full Name</li>
-				<li>Time</li>
-				<li>upvotes</li>
-				<li>downvotes</li>
-				<li>hasBeenEdited</li>
-			</ul>
-		</div>
-		<p>I then created the markup for a comment and styled it using SCSS:</p>
-		<div class="article__image">
-			<img src="img/AComment.png" alt="A Comment" class="articleImg" />
-			<p>A Comment</p>
-		</div>
-		<p>When a user is not signed in they will see this state:</p>
-		<div class="article__image">
-			<img src="img/CommentsLogIn.png" alt="Comments section login buttons" class="articleImg" />
-			<p>Comments section login buttons</p>
-		</div>
-		<p>When a user is signed in, but their email is not verified they see this state:</p>
-		<div class="article__image">
-			<img src="img/CommentsVerify.png" alt="Comments section verify email" class="articleImg" />
-			<p>Comments section verify email</p>
-		</div>
-		<p>If a user is signed in and their email is verified they see the comment input box:</p>
-		<div class="article__image">
-			<img src="img/CommentInputSignedIn.png" alt="Unlocked comment input textarea" class="articleImg" />
-			<p>Unlocked comment input textarea</p>
-		</div>
-		<p>All of the designs are responsive so they work on all devices.</p>
-	</div>
+  <div class="article__section" id="CommentDesign">
+    <h2>Comments Section Design</h2>
+    <p>
+      I first had to think about what data a comment would need. This would be the data model used by MongoDB and
+      Typescript. The data model I settled with is below:
+    </p>
+    <div class="article__user-story">
+      <ul class="u-margin-bottom-medium">
+        <li>ID</li>
+        <li>Text</li>
+        <li>Full Name</li>
+        <li>Time</li>
+        <li>upvotes</li>
+        <li>downvotes</li>
+        <li>hasBeenEdited</li>
+      </ul>
+    </div>
+    <p>I then created the markup for a comment and styled it using SCSS:</p>
+    <div class="article__image">
+      <img src="img/AComment.png" alt="A Comment" class="articleImg" />
+      <p>A Comment</p>
+    </div>
+    <p>When a user is not signed in they will see this state:</p>
+    <div class="article__image">
+      <img src="img/CommentsLogIn.png" alt="Comments section login buttons" class="articleImg" />
+      <p>Comments section login buttons</p>
+    </div>
+    <p>When a user is signed in, but their email is not verified they see this state:</p>
+    <div class="article__image">
+      <img src="img/CommentsVerify.png" alt="Comments section verify email" class="articleImg" />
+      <p>Comments section verify email</p>
+    </div>
+    <p>If a user is signed in and their email is verified they see the comment input box:</p>
+    <div class="article__image">
+      <img src="img/CommentInputSignedIn.png" alt="Unlocked comment input textarea" class="articleImg" />
+      <p>Unlocked comment input textarea</p>
+    </div>
+    <p>All of the designs are responsive so they work on all devices.</p>
+  </div>
 
-	<div class="article__section" id="CommentAPI">
-		<h2>The Comment API</h2>
-		<p>For the API, I wrote the code using Express (A NodeJS library) and Mongoose (A MongoDB library).</p>
-		<p>
-			I added a folder into my API server repository and created all of the required endpoints, I used Postman to send requests to the
-			API while developing it.
-		</p>
-		<p>All of the endpoints use the JWT token to ensure that only verified users can comment.</p>
-		<div class="article__image article__image-thin">
-			<img src="img/PostmanEndpoints.png" alt="Comments API Endpoints in Postman" class="articleImg" />
-			<p>Comments API Endpoints in Postman</p>
-		</div>
-		<p>
-			The API is running on a <a href="https://www.linode.com/" target="_blank">Linode</a> cloud based server. I have configured the server
-			to use HTTPS and with the E-Mail ports allowed so I can send email verification codes to users.
-		</p>
-		<p>
-			The database is running on a
-			<a href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB Atlas Cloud</a> which is a free service up to a certain
-			amount of traffic or data stored.
-		</p>
-	</div>
+  <div class="article__section" id="CommentAPI">
+    <h2>The Comment API</h2>
+    <p>For the API, I wrote the code using Express (A NodeJS library) and Mongoose (A MongoDB library).</p>
+    <p>
+      I added a folder into my API server repository and created all of the required endpoints, I used Postman to send
+      requests to the API while developing it.
+    </p>
+    <p>All of the endpoints use the JWT token to ensure that only verified users can comment.</p>
+    <div class="article__image article__image-thin">
+      <img src="img/PostmanEndpoints.png" alt="Comments API Endpoints in Postman" class="articleImg" />
+      <p>Comments API Endpoints in Postman</p>
+    </div>
+    <p>
+      The API is running on a <a href="https://www.linode.com/" target="_blank">Linode</a> cloud based server. I have configured
+      the server to use HTTPS and with the E-Mail ports allowed so I can send email verification codes to users.
+    </p>
+    <p>
+      The database is running on a
+      <a href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB Atlas Cloud</a> which is a free service up
+      to a certain amount of traffic or data stored.
+    </p>
+  </div>
 
-	<div class="article__section">
-		<div id="CommentTS">
-			<h2>The Frontend Logic</h2>
-			<p>
-				For the rendering of comments along with the user interface interactions, I chose to go with TypeScript (TS). I find TS to
-				be less error prone and easier to code with due to the in editor error checking.
-			</p>
-			<p>
-				I wrote logic to call the GET all on stream endpoint, then it will use the data and render it to the page using the JS
-				'InsertAdjacentHTML' method.
-			</p>
+  <div class="article__section">
+    <div id="CommentTS">
+      <h2>The Frontend Logic</h2>
+      <p>
+        For the rendering of comments along with the user interface interactions, I chose to go with TypeScript (TS). I
+        find TS to be less error prone and easier to code with due to the in editor error checking.
+      </p>
+      <p>
+        I wrote logic to call the GET all on stream endpoint, then it will use the data and render it to the page using
+        the JS 'InsertAdjacentHTML' method.
+      </p>
 
-			<p>Each rendered comment has an ID added to the DataSet property, this is used when editing or deleting a comment.</p>
-		</div>
-		<p>Users can click the edit button on their comment if they are logged in which changes the look of the comment:</p>
-		<div class="article__image">
-			<img src="img/Editing.png" alt="Editing state of a comment" class="articleImg" />
-			<p>Editing state of a comment</p>
-		</div>
-		<p>When editing users can use the DELETE endpoint and the PUT (update) endpoint.</p>
+      <p>
+        Each rendered comment has an ID added to the DataSet property, this is used when editing or deleting a comment.
+      </p>
+    </div>
+    <p>Users can click the edit button on their comment if they are logged in which changes the look of the comment:</p>
+    <div class="article__image">
+      <img src="img/Editing.png" alt="Editing state of a comment" class="articleImg" />
+      <p>Editing state of a comment</p>
+    </div>
+    <p>When editing users can use the DELETE endpoint and the PUT (update) endpoint.</p>
 
-		<h3>You can try it out below...</h3>
-	</div>
+    <h3>You can try it out below...</h3>
+  </div>
 </ArticleLayout>
