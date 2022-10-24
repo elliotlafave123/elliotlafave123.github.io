@@ -45,6 +45,7 @@
       width: 22ch;
       line-height: 1.25;
       color: $text-white;
+      margin-bottom: 5rem;
     }
 
     @include respond(big-desktop) {

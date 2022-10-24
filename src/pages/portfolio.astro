@@ -1,4 +1,5 @@
 ---
+import GenericButton from "../components/GenericButton.vue";
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
@@ -13,9 +14,16 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
     <section class="portfolio-page u-margin-top-large">
       <h3 class="u-margin-bottom-large" id="GitHub-Stats">My Portfolio</h3>
       <div class="portfolio-page__buttons u-margin-bottom-large">
-        <a href="https://github.com/elliotlafave123/elliotlafave123.github.io" class="btn btn--github">Github</a>
-        <a href="#all-projects" class="btn btn-purple-small">All Projects</a>
-        <a href="https://codepen.io/elliotlafave123" class="btn btn-purple-small">Codepen</a>
+        <GenericButton
+          href="https://github.com/elliotlafave123/elliotlafave123.github.io"
+          corner="round"
+          size="medium"
+          color="grey">Github</GenericButton
+        >
+        <GenericButton href="#all-projects" corner="round" size="medium" color="purple">All Projects</GenericButton>
+        <GenericButton href="https://codepen.io/elliotlafave123" corner="round" size="medium" color="purple"
+          >Codepen</GenericButton
+        >
       </div>
     </section>
 

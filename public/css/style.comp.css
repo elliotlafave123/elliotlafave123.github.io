@@ -2317,6 +2317,8 @@ a:before, a:after {
     align-items: center;
     justify-content: stretch;
     flex-wrap: wrap; }
+    .portfolio-page__buttons a {
+      margin-right: 1rem; }
     @media (max-width: 100em) {
       .portfolio-page__buttons {
         flex-direction: column;
@@ -3255,7 +3257,8 @@ svg.tick {
       font-size: 7rem;
       width: 22ch;
       line-height: 1.25;
-      color: var(--text-white); }
+      color: var(--text-white);
+      margin-bottom: 5rem; }
     @media (max-width: 100em) {
       .header__content {
         padding: 5rem 0 15rem 15rem;
@@ -3521,6 +3524,9 @@ svg.tick {
       float: right;
       margin-top: 3rem;
       height: max-content; }
+      .work__title--buttons a {
+        margin-right: 1.4rem;
+        margin-bottom: 2rem; }
       @media (max-width: 56.25em) {
         .work__title--buttons {
           float: left;

@@ -1,4 +1,5 @@
 ---
+import GenericButton from "../components/GenericButton.vue";
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
@@ -8,11 +9,12 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
     <div class="work__title u-margin-bottom-medium">
       <h3 class="work__title--title u-margin-bottom-large">My CV</h3>
       <div class="work__title--buttons">
-        <a href="Files/CV .docx" class="btn btn-purple btn-purple-cv">Download CV</a>
-        <a
+        <GenericButton href="Files/CV .docx" corner="round" size="medium" color="purple">Download CV</GenericButton>
+        <GenericButton
           href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES"
-          class="btn btn-purple btn-purple-cv u-margin-bottom-medium"
-          target="blank">Linkedin</a
+          corner="round"
+          size="medium"
+          color="purple">Linkedin</GenericButton
         >
       </div>
     </div>
