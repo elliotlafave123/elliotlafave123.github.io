@@ -23,6 +23,7 @@ import { initJsPortfolioFeaturedCards } from "./Portfolio Cards APP/FeaturedCard
 // Authentication System
 import { initStoreBackLink } from "./Authentication System/StoreBackLink";
 import { fetchAccountDetails } from "./Authentication System/Account Page/fetchAccountDetails";
+import { handleShowPassword } from "./Authentication System/ShowPassword";
 // Cookie Banner
 import { HandleCookies } from "./CookieBanner/ShowCookieBanner";
 // Show Contact Me Form Sent Checkmark
@@ -115,3 +116,6 @@ if (exists(GithubStatsContainer)) initGitStats();
 // Store back link
 const BackLinkButton: HTMLElement = document.querySelector(".storeBackLink") as HTMLElement;
 if (exists(BackLinkButton)) initStoreBackLink();
+
+const PasswordInput: HTMLElement = document.getElementById("password") as HTMLElement;
+if (exists(PasswordInput)) handleShowPassword();

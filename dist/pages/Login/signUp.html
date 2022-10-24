@@ -123,7 +123,12 @@
                 <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
                 <span id="errorMessageEmailExists"><i class="fa-solid fa-triangle-exclamation"></i>Email has already been used</span>
                 <label for="password">Password</label>
-                <input class="form__input form__input-small" minlength="8" placeholder="Password" id="password" name="password" type="password" required>
+                <div class="password-container">
+                    <input class="form__input form__input-small" minlength="8" placeholder="Password" id="password" name="password" type="password" required>
+                    <i class="fa-solid fa-eye passwordEye" id="ShowPasswordEye"></i>
+                    <i class="fa-solid fa-eye-slash passwordEye" id="HidePasswordEye"></i>
+                </div>
+                
                 <span id="errorMessagePassword"><i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements</span>
                 <div class="PasswordRequirements">
                     <ul>

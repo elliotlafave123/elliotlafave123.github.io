@@ -734,6 +734,16 @@ a:before, a:after {
     .login form input {
       width: 100%;
       margin-bottom: 0.7rem; }
+    .login form .password-container {
+      position: relative; }
+    .login form .passwordEye {
+      position: absolute;
+      right: 1.4rem;
+      top: 1.5rem;
+      font-size: 2rem;
+      color: var(--text-light); }
+    .login form #HidePasswordEye {
+      display: none; }
     .login form label {
       font-size: 1.7rem;
       letter-spacing: 1.2px;
