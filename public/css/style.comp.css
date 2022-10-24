@@ -2318,7 +2318,7 @@ a:before, a:after {
     justify-content: stretch;
     flex-wrap: wrap; }
     .portfolio-page__buttons a {
-      margin-right: 1rem; }
+      margin-right: 1.4rem; }
     @media (max-width: 100em) {
       .portfolio-page__buttons {
         flex-direction: column;
@@ -3330,6 +3330,8 @@ svg.tick {
   .section-about__heading {
     margin-top: 4rem;
     margin-bottom: 4rem; }
+  .section-about a {
+    margin-bottom: 1rem; }
   .section-about__paragraph {
     margin: 0 auto 6rem auto;
     width: 50vw;
@@ -3380,6 +3382,8 @@ svg.tick {
   @media (max-width: 37.5em) {
     .portfolio {
       padding: 0vh 2.5rem 0rem 2.5rem; } }
+  .portfolio a {
+    margin-bottom: 1.2rem; }
   .portfolio--2 {
     background-color: transparent; }
 

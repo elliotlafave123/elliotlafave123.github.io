@@ -34,12 +34,34 @@ button {
   border: none;
   position: relative;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 12px;
+
+  &:hover,
+  &:focus {
+    color: var(--color-black);
+    transform: scale(1.03);
+    font-weight: 600;
+  }
+  &:focus {
+    outline: 3px solid var(--color-primary) !important;
+  }
 
   &.purple {
     background-color: var(--color-primary);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-white);
+    }
   }
+
   &.grey {
     background-color: var(--color-card-git);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-white);
+    }
   }
 
   &.round {
