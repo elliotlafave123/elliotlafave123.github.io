@@ -3382,8 +3382,6 @@ svg.tick {
   @media (max-width: 37.5em) {
     .portfolio {
       padding: 0vh 2.5rem 0rem 2.5rem; } }
-  .portfolio a {
-    margin-bottom: 1.2rem; }
   .portfolio--2 {
     background-color: transparent; }
 
