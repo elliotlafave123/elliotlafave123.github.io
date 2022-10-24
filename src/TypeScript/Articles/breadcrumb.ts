@@ -11,7 +11,10 @@ const showBreadcrumb = () => {
   const splitUrl = pathname.slice(1).split("/");
   // Remove last item
   splitUrl.pop();
-  splitUrl.pop();
+
+  // If on article remove last item
+  const articleHeader: HTMLElement = document.querySelector(".article__header");
+  if (articleHeader) splitUrl.pop();
 
   // Remove - and replace with a SPACE
   splitUrl.forEach((url, i) => {
