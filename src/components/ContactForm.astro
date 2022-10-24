@@ -1,11 +1,20 @@
 ---
+import ErrorSummary from "./ErrorSummary.vue";
 ---
 
 <section class="contact u-margin-top-large">
   <img src="/img/contact.png" alt="" class="contact__img" />
   <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
+
   <div class="contact__form">
     <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" netlify>
+      <!-- <ErrorSummary
+        class="form__input-small"
+        href="#email"
+        title="There is a problem "
+        message="Enter a correct email"
+        example="example@example.com"
+      /> -->
       <div class="form__group">
         <input
           type="text"
