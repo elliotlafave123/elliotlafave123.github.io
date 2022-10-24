@@ -1085,6 +1085,39 @@ a:before, a:after {
       .githubStats-info-section p {
         font-size: 1.6rem; }
 
+.onwardStrip {
+  background-color: var(--color-primary);
+  padding: 5rem 10vw 5rem 10vw;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem; }
+  .onwardStrip-side h2 {
+    font-size: 3rem; }
+  .onwardStrip-side p {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    text-decoration: underline; }
+  .onwardStrip i {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 4rem; }
+  .onwardStrip a {
+    color: var(--text-white); }
+  .onwardStrip:hover i {
+    transform: translateX(1rem) scale(1.3); }
+  .onwardStrip:hover a {
+    text-decoration: none; }
+  @media (max-width: 37.5em) {
+    .onwardStrip {
+      padding: 5rem 2.5rem 5rem 2.5rem; }
+      .onwardStrip i {
+        margin-right: 3rem;
+        margin-left: 2rem; }
+      .onwardStrip h2 {
+        font-size: 2.2rem;
+        font-weight: 600; } }
+
 .tooltip {
   background-color: var(--color-card);
   padding: 0rem 1.2rem 1rem 1.2rem;

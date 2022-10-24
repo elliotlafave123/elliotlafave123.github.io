@@ -1,0 +1,50 @@
+.onwardStrip {
+  background-color: $color-primary;
+  padding: 5rem 10vw 5rem 10vw;
+  color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+
+  &-side {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2.2rem;
+      margin-top: 1rem;
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 4rem;
+  }
+
+  a {
+    color: $text-white;
+  }
+
+  &:hover i {
+    transform: translateX(1rem) scale(1.3);
+  }
+  &:hover a {
+    text-decoration: none;
+  }
+
+  @include respond(phone) {
+    padding: 5rem 2.5rem 5rem 2.5rem;
+    i {
+      margin-right: 3rem;
+      margin-left: 2rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+  }
+}
