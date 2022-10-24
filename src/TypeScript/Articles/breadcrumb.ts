@@ -11,6 +11,7 @@ const showBreadcrumb = () => {
   const splitUrl = pathname.slice(1).split("/");
   // Remove last item
   splitUrl.pop();
+  splitUrl.pop();
 
   // Remove - and replace with a SPACE
   splitUrl.forEach((url, i) => {
