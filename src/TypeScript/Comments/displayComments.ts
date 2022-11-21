@@ -3,8 +3,8 @@ import { State } from "./state";
 import { initEditComments } from "./handleEditComment";
 import { initVoting } from "./votingHandler";
 
-const API_URL = "https://elliotapiserver.co.uk/";
-// const API_URL = "http://localhost:3000/";
+// const API_URL = "https://elliotapiserver.co.uk/";
+const API_URL = "http://localhost:3001/";
 let streamId: string | undefined;
 const commentStreamContainer = document.getElementById("commentStreamContainer");
 if (commentStreamContainer) streamId = commentStreamContainer.dataset.stream;
@@ -29,6 +29,7 @@ export async function displayComments() {
     }
   } catch (e) {
     // do nothing
+    console.log(e);
   }
 }
 
@@ -53,6 +54,7 @@ const insertComments = (comments: [Comment]) => {
   if (!container) return;
 
   comments.forEach(async (comment) => {
+    console.log(State.displayName);
     const markup = `
         <div class="comment" data-commentId="${comment.id}">
         <div class="comment-main">
@@ -68,7 +70,8 @@ const insertComments = (comments: [Comment]) => {
                     <h3>${comment.hasBeenEdited ? "(Edited)" : ""}</h3>
                 </div>
                 <div>${
-                  State.fullName === comment.fullname && State.fullName !== undefined
+                  (State.fullName === comment.fullname && State.fullName !== undefined) ||
+                  (State.displayName === comment.fullname && State.fullName !== undefined)
                     ? `<button class="editLinkButton" tabindex="0">Edit Comment</button>`
                     : ``
                 }</div>
@@ -77,7 +80,8 @@ const insertComments = (comments: [Comment]) => {
                 ${comment.text}
             </p>
 			${
-        State.fullName === comment.fullname && State.fullName !== undefined
+        (State.fullName === comment.fullname && State.fullName !== undefined) ||
+        (State.displayName === comment.fullname && State.fullName !== undefined)
           ? `<div class="editComment" style="display: none">
 			<button class="deleteLinkButton u-margin-top-small" tabindex="0">Delete Comment</button>
 			<button class="publish">Publish</button>
