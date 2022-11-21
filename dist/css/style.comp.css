@@ -2100,6 +2100,11 @@ a:before, a:after {
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
 
+.form__two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem; }
+
 .form__input {
   font-size: 1.5rem;
   font-family: inherit;
@@ -2119,6 +2124,11 @@ a:before, a:after {
     width: 50%; }
     @media (max-width: 37.5em) {
       .form__input-small {
+        width: 100%; } }
+  .form__input-half-width {
+    width: 25% !important; }
+    @media (max-width: 37.5em) {
+      .form__input-half-width {
         width: 100%; } }
   .form__input:focus {
     outline: none;
