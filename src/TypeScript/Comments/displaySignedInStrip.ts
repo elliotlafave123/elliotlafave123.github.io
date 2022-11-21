@@ -3,8 +3,8 @@ import { hideLoginButtons, showLoginButtons } from "./hideLoginButtons";
 import { setDarkModePreferenceOnServer } from "../DarkMode/setDarkModePreferenceOnServer";
 
 const token = localStorage.getItem("token");
-const API_URL = "http://localhost:3001/Auth";
-// const API_URL = "https://elliotapiserver.co.uk/Auth";
+// const API_URL = "http://localhost:3001/Auth";
+const API_URL = "https://elliotapiserver.co.uk/Auth";
 const signedInStrip = document.getElementById("signedInStrip");
 const signedInStripWarning = document.getElementById("signedInStripWarning");
 const logOutButton = document.getElementById("logOutButton");
