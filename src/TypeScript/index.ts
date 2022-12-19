@@ -8,8 +8,6 @@ import { setDarkMode } from "./DarkMode/setDarkMode";
 import { handleDarkMode } from "./DarkMode/handleDarkMode";
 // Tooltip
 import { initTooltip } from "./Tooltip/tooltip";
-// Loading Overlay
-import { initLoadingOverlay } from "./LoadingPageOverlay/LoadingPageOverlay";
 // Articles
 import { initBreadcrumb } from "./Articles/breadcrumb";
 import { startEnlargeImage } from "./Articles/enlargeImg";
@@ -73,10 +71,6 @@ initComments();
 // init tooltip
 const tooltipContainer: HTMLElement = document.querySelector(".tooltip") as HTMLElement;
 if (exists(tooltipContainer)) initTooltip();
-
-// init Loading Overlay
-const loadingOverlayContainer: HTMLElement = document.querySelector(".loading-text") as HTMLElement;
-if (exists(loadingOverlayContainer)) initLoadingOverlay();
 
 // init keyboard navigation
 initKeyboardNavigation();

@@ -10,11 +10,13 @@ const getProjectsPerPage = function (): number {
   if (State.gridColumnCount === 1 || State.gridColumnCount === 2) {
     return 6;
   } else if (State.gridColumnCount === 3) {
-    return 9;
+    return 6;
   } else if (State.gridColumnCount === 4) {
     return 8;
   } else if (State.gridColumnCount === 5) {
-    return 15;
+    return 10;
+  } else if (State.gridColumnCount === 6) {
+    return 12;
   }
 };
 

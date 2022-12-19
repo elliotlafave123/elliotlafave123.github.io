@@ -1881,14 +1881,14 @@ a:before, a:after {
   background-color: var(--color-grey-light-1);
   width: 100%;
   height: 1.5rem;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   z-index: 1;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; }
   .skill__bar--progress {
     position: absolute;
     background-color: var(--color-primary);
     height: 1.5rem;
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     left: 0;
     top: 0;
     z-index: 5; }
@@ -1899,7 +1899,7 @@ a:before, a:after {
     .skill__bar--progress--3 {
       width: 96%; }
     .skill__bar--progress--4 {
-      width: 57%; }
+      width: 96%; }
     .skill__bar--progress--5 {
       width: 89%; }
     .skill__bar--progress--6 {
