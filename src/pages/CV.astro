@@ -1,6 +1,7 @@
 ---
 import GenericButton from "../components/GenericButton.vue";
 import DefaultLayout from "../layouts/DefaultLayout.astro";
+import CertificationComponent from "../components/CV/CertificationComponent.vue";
 ---
 
 <DefaultLayout title="CV">
@@ -116,11 +117,19 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
       </p>
     </div>
   </section>
+  <section class="section-certifications" id="Certificates">
+    <h5>Certifications</h5>
+    <CertificationComponent
+      imgUri="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/BCS_logo_2021.svg/1200px-BCS_logo_2021.svg.png"
+      title="BCS Level 3 Certificate in Programming"
+      href="/Files/PDF/Certifications/bcs-level-3-certificate-in-programming.pdf"
+    />
+  </section>
 
   <section class="section-certifications" id="Certificates">
     <h5>Certificates</h5>
     <div class="certificates">
-      <a
+      <!-- <a
         href="https://app.pluralsight.com/learner/user/courses/v2/905cfabb-a2dd-45d7-9a46-2709bef48f9b/certificate"
         target="_blank"
       >
@@ -128,7 +137,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
           <p class="certificate--title">Controlling Program Flow in C# 9</p>
           <img src="/img/certificates/ControllingProgramFlow.png" alt="Complete JavaScript Course Certificate Udemy" />
         </div>
-      </a>
+      </a> -->
 
       <a href="https://certificates.cloudacademy.com/8d7025efbaaa338843a3c34ad34fa5690e2110fe.pdf" target="_blank">
         <div class="certificate">
@@ -161,7 +170,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
         </div>
       </a>
 
-      <a
+      <!-- <a
         href="https://app.pluralsight.com/learner/user/courses/v2/0096b00d-2398-435a-82f7-3f5401408ab1/certificate"
         target="_blank"
       >
@@ -169,9 +178,9 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
           <p class="certificate--title">C# Fundimentals</p>
           <img src="/img/certificates/CSharpFundimentals.png" alt="Complete JavaScript Course Certificate Udemy" />
         </div>
-      </a>
+      </a> -->
 
-      <a
+      <!-- <a
         href="https://app.pluralsight.com/learner/user/courses/v2/ef199181-dfb5-4a66-906b-e1ca467ec5e9/certificate"
         target="_blank"
       >
@@ -179,7 +188,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
           <p class="certificate--title">C# 9: The Big Picture</p>
           <img src="/img/certificates/CSharpBigPicture.png" alt="Complete JavaScript Course Certificate Udemy" />
         </div>
-      </a>
+      </a> -->
 
       <a href="https://certificates.cloudacademy.com/baedd379c9d004b7ebc991b6d2fa0eb5d2e0c255.pdf" target="_blank">
         <div class="certificate">
