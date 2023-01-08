@@ -1,212 +1,212 @@
 .ProjectsAppContainer {
-  width: 100%;
-  display: grid;
-  min-height: 60vh;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 3rem;
-  position: relative;
+	width: 100%;
+	display: grid;
+	min-height: 60vh;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 3rem;
+	position: relative;
 }
 
 .ProjectsAppContainerWithError {
-  position: relative;
+	position: relative;
 }
 
 .ProjectsAppInputs {
-  margin-top: 1.5rem;
-  padding: 1.7rem 0;
-  display: flex;
-  justify-content: space-between;
+	margin-top: 1.5rem;
+	padding: 1.7rem 0;
+	display: flex;
+	justify-content: space-between;
 
-  @include respond(tab-port) {
-    flex-direction: column;
-  }
+	@include respond(tab-port) {
+		flex-direction: column;
+	}
 
-  &-side {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 1rem;
+	&-side {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 1rem;
 
-    @include respond(tab-port) {
-      width: 100%;
-      justify-content: space-between;
-    }
-  }
+		@include respond(tab-port) {
+			width: 100%;
+			justify-content: space-between;
+		}
+	}
 
-  &-side-2 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 1rem;
+	&-side-2 {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 1rem;
 
-    @include respond(tab-port) {
-      width: 100%;
-      justify-content: flex-end !important;
-    }
-  }
+		@include respond(tab-port) {
+			width: 100%;
+			justify-content: flex-end !important;
+		}
+	}
 
-  a {
-    color: $color-primary;
-    font-size: 1.6rem;
-    letter-spacing: 0.3px;
-    text-decoration: underline;
-    margin-right: 2rem;
-    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+	a {
+		color: $color-primary;
+		font-size: 1.6rem;
+		letter-spacing: 0.3px;
+		text-decoration: underline;
+		margin-right: 2rem;
+		transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    &:hover {
-      text-decoration: none;
-      color: $text-light;
-      cursor: pointer;
-    }
-  }
+		&:hover {
+			text-decoration: none;
+			color: $text-light;
+			cursor: pointer;
+		}
+	}
 }
 
 .ProjectsAppInputsBottom {
-  width: 100%;
-  height: 4.4rem;
-  margin-top: 1.7rem;
+	width: 100%;
+	height: 4.4rem;
+	margin-top: 1.7rem;
 }
 
 .ProjectsAppNotFound {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: -1;
 
-  img {
-    width: 30rem;
-  }
+	img {
+		width: 30rem;
+	}
 
-  p {
-    width: 30rem;
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 2rem;
-    line-height: 3rem;
-  }
+	p {
+		width: 30rem;
+		margin-top: 4rem;
+		text-align: center;
+		font-size: 2rem;
+		line-height: 3rem;
+	}
 }
 
 .ProjectsAppPagination {
-  font-size: 1.6rem;
-  height: 4.5rem;
-  margin-left: 3rem;
-  display: flex;
+	font-size: 1.6rem;
+	height: 4.5rem;
+	margin-left: 3rem;
+	display: flex;
 
-  &-bottom {
-    margin-left: 0;
-    height: 4.4rem;
-    display: flex;
-  }
+	&-bottom {
+		margin-left: 0;
+		height: 4.4rem;
+		display: flex;
+	}
 
-  &-button {
-    height: 4.5rem;
-    color: $text-light;
-    background-color: $color-card;
-    border: none;
-    padding: 0 1rem;
-    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+	&-button {
+		height: 4.5rem;
+		color: $text-light;
+		background-color: $color-card;
+		border: none;
+		padding: 0 1rem;
+		transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    &:hover {
-      cursor: pointer;
-      background-color: $text-light;
-      color: $text-dark;
-    }
+		&:hover {
+			cursor: pointer;
+			background-color: $text-light;
+			color: $text-dark;
+		}
 
-    &-last {
-      font-size: 2rem;
-      line-height: 2.5rem;
-      border-radius: 5px 0 0 5px;
-      border-right: 1px solid;
-      border-image: linear-gradient($color-card, $color-card, $text-light, $color-card, $color-card) 0 100%;
-      &:hover {
-        border-image: $color-card;
-      }
-    }
+		&-last {
+			font-size: 2rem;
+			line-height: 2.5rem;
+			border-radius: 5px 0 0 5px;
+			border-right: 1px solid;
+			border-image: linear-gradient($color-card, $color-card, $text-light, $color-card, $color-card) 0 100%;
+			&:hover {
+				border-image: $color-card;
+			}
+		}
 
-    &-next {
-      font-size: 2rem;
-      line-height: 2.5rem;
-      border-radius: 0 5px 5px 0;
-      border-left: 1px solid;
-      border-image: linear-gradient($color-card, $color-card, $text-light, $color-card, $color-card) 0 100%;
-      &:hover {
-        border-image: $color-card;
-      }
-    }
-  }
+		&-next {
+			font-size: 2rem;
+			line-height: 2.5rem;
+			border-radius: 0 5px 5px 0;
+			border-left: 1px solid;
+			border-image: linear-gradient($color-card, $color-card, $text-light, $color-card, $color-card) 0 100%;
+			&:hover {
+				border-image: $color-card;
+			}
+		}
+	}
 
-  &-number {
-    height: 4.5rem;
-    color: $text-light;
-    background-color: $color-card;
-    border: none;
-    padding: 0 1.5rem 0 1.5rem;
-    width: 7rem;
+	&-number {
+		height: 4.5rem;
+		color: $text-light;
+		background-color: $color-card;
+		border: none;
+		padding: 0 1.5rem 0 1.5rem;
+		width: 7rem;
 
-    &:focus {
-      outline: none !important;
-    }
-  }
+		&:focus {
+			outline: none !important;
+		}
+	}
 }
 
 /* Search Bar */
 .search {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 
-  margin: 4rem 0 2rem 0vw;
+	margin: 4rem 0 2rem 0vw;
 }
 
 .search-input {
-  width: 28vw;
-  height: 100%;
-  border: none;
-  // outline: none;
-  cursor: text;
-  background-color: $color-card;
-  padding: 1rem 3rem 1rem 3rem;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: $text-light;
-  border-radius: 5px;
+	width: 28vw;
+	height: 100%;
+	border: none;
+	// outline: none;
+	cursor: text;
+	background-color: $color-card;
+	padding: 1rem 3rem 1rem 3rem;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 2px;
+	color: $text-light;
+	border-radius: 5px;
 
-  @include respond(tab-port) {
-    width: 100%;
-  }
+	@include respond(tab-port) {
+		width: 100%;
+	}
 
-  &::placeholder {
-    opacity: 0.9; /* Firefox */
-    letter-spacing: 1px;
-    font-weight: 500;
-    font-size: 2rem;
-    color: $text-light;
-  }
+	&::placeholder {
+		opacity: 0.9; /* Firefox */
+		letter-spacing: 1px;
+		font-weight: 500;
+		font-size: 2rem;
+		color: $text-light;
+	}
 }
 
 #dropdown {
-  height: 100%;
-  width: 12rem;
-  padding: 1rem 2rem 1rem 2rem;
-  background-color: $color-card;
-  border: none;
-  border-radius: 5px;
-  color: $text-light;
+	height: 100%;
+	width: 12rem;
+	padding: 1rem 2rem 1rem 2rem;
+	background-color: $color-card;
+	border: none;
+	border-radius: 5px;
+	color: $text-light;
 
-  &:hover {
-    cursor: pointer;
-  }
+	&:hover {
+		cursor: pointer;
+	}
 }
