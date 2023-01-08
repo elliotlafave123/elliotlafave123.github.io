@@ -1,35 +1,49 @@
-## Hi there 👋
+# Welcome to [Astro](https://astro.build)
 
-I'm Elliot La Fave, an aspiring software deveoper based in Manchester UK. I am searching for a software development apprenticeship to start my career as a full stack software developer.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/elliotlafave123/elliotlafave123.github.io)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/elliotlafave123/elliotlafave123.github.io)
-![GitHub last commit](https://img.shields.io/github/last-commit/elliotlafave123/elliotlafave123.github.io)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-<br />
+![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=elliotlafave123&count_private=true&hide=prs,contribs&show_icons=true&theme=aura&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
-<br />
+## 🚀 Project Structure
 
-# I'm interested in 👀
-Front-end website development using HTML, CSS / SASS and JavaScript.
-I enjoy designing websited and completing coding challenges from Frontend Mentor.
-I like creating small projects which can all be found at [elliotlafave.com/portfolio].
+Inside of your Astro project, you'll see the following folders and files:
 
-<br />
+```
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-# I’m currently learning 🌱
-JavaScript and advanced SASS using npm to build css.
-Advanced DOM manipulation with JS.
-Nods JS and backend website development using Mongo DB.
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-<br />
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-# How to reach me 📫
-E-Mail - elliot@lafave.co.uk
-<br />
-website - [elliotlafave.com/contact-me]
+Any static assets, like images, can be placed in the `public/` directory.
 
-[elliotlafave.com/contact-me]: https://www.elliotlafave.com/contact-me
-[elliotlafave.com/portfolio]: https://www.elliotlafave.com/portfolio
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                | Action                                             |
+| :--------------------- | :------------------------------------------------- |
+| `npm install`          | Installs dependencies                              |
+| `npm run dev`          | Starts local dev server at `localhost:3000`        |
+| `npm run build`        | Build your production site to `./dist/`            |
+| `npm run preview`      | Preview your build locally, before deploying       |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
+| `npm run astro --help` | Get help using the Astro CLI                       |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
