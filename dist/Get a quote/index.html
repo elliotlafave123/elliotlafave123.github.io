@@ -27,7 +27,7 @@
 
   <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
 
-  <title>QA | Elliotlafave.com</title>
+  <title>Get a quote | Elliotlafave.com</title>
 <link rel="stylesheet" href="/assets/My Process.6482575d.css" /></head>
 
   <body>
@@ -129,43 +129,9 @@
 <section class="logo mobile-only">
   <a href="/index.html" tabindex="-1"><img src="/img/logo.png" alt="Logo" class="logo-img mobile-only"></a>
 </section>
-    <section class="article__container">
-	<div class="article__interactions article__interactions-menu">
-		<div class="breadcrumb"></div>
-		<a href="../index.html" class="btn-square btn-square--back" id="first-section"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
-	</div>
-</section><div class="o-row-4-col">
-		<a href="./Understanding-Object-Oriented-Programming/Understanding-Object-Oriented-Programming.html">
-			<div class="link-card">
-				<p>Understanding Object Oriented Programming</p>
-				<i class="fa-solid fa-chevron-right"></i>
-			</div>
-		</a>
-
-		<a href="./Python-Programming-and-SQL-Basics-1.3/Python-Programming-and-SQL-Basics.html">
-			<div class="link-card">
-				<p>Python Programming and SQL Basics 1.3</p>
-				<i class="fa-solid fa-chevron-right"></i>
-			</div>
-		</a>
-
-		<a href="./Python-Programming-and-SQL-Basics-1.2/Python-Programming-and-SQL-Basics.html">
-			<div class="link-card">
-				<p>Python Programming and SQL Basics 1.2</p>
-				<i class="fa-solid fa-chevron-right"></i>
-			</div>
-		</a>
-
-		<a href="./Prioritisation/Prioritisation.html">
-			<div class="link-card">
-				<p>Soft Skills: Prioritisation</p>
-				<i class="fa-solid fa-chevron-right"></i>
-			</div>
-		</a>
-	</div>
-    <!-- Footer --><section class="contact u-margin-top-large">
+    <section class="contact u-margin-top-large">
   <img src="/img/contact.png" alt="" class="contact__img">
-  <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
+  <h3 class="skills__header u-margin-bottom-large" id="contactme">Get a quote</h3>
 
   <div class="contact__form">
     <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" netlify>
@@ -186,44 +152,187 @@
         <label for="email" class="form__label">Email address</label>
       </div>
 
-      <div class="form__group">
-        <label for="message" class="form__label u-margin-bottom-small">Your message</label>
-        <textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" name="message" required></textarea>
+      <div class="form__radio-list">
+        <!-- Add a radio button list for new website/application or website redesign/maintenance -->
+        <label for="project-type" class="form__label u-margin-bottom-small">What type of work do you require?</label>
+        <div class="form__radio-group">
+          <div class="form__radio-group-section">
+            <input type="radio" id="new-project" name="project-type" value="new-project" required>
+            <label for="new-project">New website/application</label>
+          </div>
+          <div class="form__radio-group-section">
+            <input type="radio" id="maintenance-project" name="project-type" value="maintenance-project" required>
+            <label for="maintenance-project">Website redesign/maintenance</label>
+          </div>
+        </div>
       </div>
 
-      <!-- Public -->
-      <div class="g-recaptcha u-margin-top-small" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback">
+      <div id="redesign">
+        <!-- The content of the "Website redesign/maintenance" section -->
+        <div class="form__group" id="design-changes-input">
+          <label for="design-changes" class="form__label u-margin-bottom-small">What design changes or maintenance do you require?</label>
+          <textarea class="form__input form__input-textarea" id="design-changes" rows="8" form="form-contact" name="design-changes" required></textarea>
+        </div>
+
+        <div class="form__group">
+          <input type="website builder" class="form__input form__input-small" placeholder="What website builder are you using?" id="websiteBuilder" name="website builder" required>
+          <label for="website builder" class="form__label">What website builder are you using?</label>
+        </div>
       </div>
-    </form>
-    <!-- Local -->
-    <!-- <div
+
+      <div id="newSite">
+        <div class="form__radio-list">
+          <!-- Add a radio button list for website or application -->
+          <label for="message" class="form__label u-margin-bottom-small">What type of software do you require?</label>
+          <div class="form__radio-group">
+            <div class="form__radio-group-section">
+              <input type="radio" id="website" name="project-type" value="website">
+              <label for="website">Website</label>
+            </div>
+            <div class="form__radio-group-section">
+              <input type="radio" id="application" name="project-type" value="application">
+              <label for="application">Application</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label for="message" class="form__label u-margin-bottom-small">What type of <span class="js-siteorapp">project</span> do you require?</label>
+          <textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" name="message" required></textarea>
+        </div>
+
+        <div class="form__radio-list">
+          <!-- Add a radio button list for product or service -->
+          <label for="message" class="form__label u-margin-bottom-small">Are you selling a product or service?</label>
+          <div class="form__radio-group">
+            <div class="form__radio-group-section">
+              <input type="radio" id="product" name="product-service" value="product">
+              <label for="product">Product</label>
+            </div>
+            <div class="form__radio-group-section">
+              <input type="radio" id="service" name="product-service" value="service">
+              <label for="service">Service</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label for="message" class="form__label u-margin-bottom-small">Who is the target market for your <span class="js-productOrService">project</span>?</label>
+          <textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" name="message" required></textarea>
+        </div>
+
+        <div class="form__checkbox-list">
+          <input type="checkbox" id="store-data" name="store-data" value="store-data">
+          <label for="store-data">Does your <span id="js-siteorapp">project</span> need to store user or business data?</label>
+        </div>
+
+        <div class="form__group" id="user-data-input" style="display:none;">
+          <label for="user-data" class="form__label u-margin-bottom-small">What type of data do you need to store?</label>
+          <textarea class="form__input form__input-textarea" id="user-data" rows="8" form="form-contact" name="user-data" required></textarea>
+        </div>
+      </div>
+
+      <div class="form__group">
+        <label for="budget" class="form__label u-margin-bottom-small">What is your budget?</label>
+        <select name="budget" id="budget" class="form__input form__input-small">
+          <option value="0-500">£0 - £500</option>
+          <option value="500-1000">£500 - £1000</option>
+          <option value="1000-2000">£1000 - £2000</option>
+          <option value="2000-5000">£2000 - £5000</option>
+          <option value="5000-10000">£5000 - £10000</option>
+          <option value="10000+">£10000+</option>
+        </select>
+
+        <!-- Public -->
+        <div class="g-recaptcha u-margin-top-small" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback">
+        </div>
+      </div>
+      <!-- Local -->
+      <!-- <div
       class="g-recaptcha u-margin-top-small"
       data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
       data-callback="recaptcha_callback"
     >
     </div> -->
 
-    <input value="Send Message  →" class="btn btn-purple-post u-margin-top-small" type="submit" id="postContactMeFormButton" disabled>
+      <input value="Get a quote" class="btn btn-purple-post u-margin-top-small" type="submit" id="postContactMeFormButton" disabled>
+    </form>
+    <div class="message-sent hidden">
+      <h2>Message sent</h2>
+      <svg class="tick" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+        <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"></circle>
+        <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "></polyline>
+      </svg>
+      <a href="#contactme" id="SendAnotherMessage">Send another</a>
+    </div>
   </div>
-  <div class="message-sent hidden">
-    <h2>Message sent</h2>
-    <svg class="tick" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-      <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"></circle>
-      <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "></polyline>
-    </svg>
-    <a href="#contactme" id="SendAnotherMessage">Send another</a>
-  </div>
+
+  <script lang="js" defer>
+    function recaptcha_callback() {
+      var postContactMeFormButton = document.getElementById("postContactMeFormButton");
+      if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
+    }
+
+    const newProjectRadio = document.getElementById("new-project");
+    const maintenanceProjectRadio = document.getElementById("maintenance-project");
+    const newSiteSection = document.getElementById("newSite");
+    const redesignSection = document.getElementById("redesign");
+
+    // Hide the redesign section by default
+    redesignSection.style.display = "none";
+    newSiteSection.style.display = "none";
+
+    newProjectRadio.addEventListener("change", () => {
+      newSiteSection.style.display = "block";
+      redesignSection.style.display = "none";
+    });
+
+    maintenanceProjectRadio.addEventListener("change", () => {
+      newSiteSection.style.display = "none";
+      redesignSection.style.display = "block";
+    });
+
+    const siteOrApp = document.querySelector(".js-siteorapp");
+    const websiteRadio = document.getElementById("website");
+    const applicationRadio = document.getElementById("application");
+
+    function setSiteOrApp(text) {
+      siteOrApp.textContent = text;
+    }
+
+    websiteRadio.addEventListener("change", () => {
+      setSiteOrApp("website");
+    });
+
+    applicationRadio.addEventListener("change", () => {
+      setSiteOrApp("application");
+    });
+
+    const productOrService = document.querySelector(".js-productOrService");
+    const productRadio = document.getElementById("product");
+    const serviceRadio = document.getElementById("service");
+
+    productRadio.addEventListener("change", () => {
+      productOrService.textContent = "Product";
+    });
+
+    serviceRadio.addEventListener("change", () => {
+      productOrService.textContent = "Service";
+    });
+
+    const storeDataCheckbox = document.querySelector("#store-data");
+    const userDataInput = document.querySelector("#user-data-input");
+
+    storeDataCheckbox.addEventListener("change", (event) => {
+      if (event.target.checked) {
+        userDataInput.style.display = "block";
+      } else {
+        userDataInput.style.display = "none";
+      }
+    });
+  </script>
 </section>
-<script lang="js">
-  function recaptcha_callback() {
-    var postContactMeFormButton = document.getElementById("postContactMeFormButton");
-    if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
-  }
-</script>
-
-<section class="contact u-margin-top-large"></section>
-
-<div class="wave-top">
+    <!-- Footer --><div class="wave-top">
   <img src="/img/wave5.png" alt="" class="wave-bottom__img" id="wave5-dark">
   <img src="/img/wave5-light.png" alt="" class="wave-top__img hidden" id="wave5-light">
 </div>

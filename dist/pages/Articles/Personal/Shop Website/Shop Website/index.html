@@ -27,7 +27,7 @@
 
   <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
 
-  <title>Login Audit API | Elliotlafave.com</title>
+  <title>My Process | Elliotlafave.com</title>
 <link rel="stylesheet" href="/assets/My Process.6482575d.css" /></head>
 
   <body>
@@ -142,215 +142,62 @@
         </div>
       </div>
       <div class="article__header">
-        <h2>Login Audit API</h2>
+        <h2>My Process</h2>
 
         <div class="article__header-info">
           <span>Elliot La Fave</span>
           <p>&#183;</p>
-          <span>17/07/2022</span>
+          <span>dd/mm/yyyy</span>
           <p>&#183;</p>
-          <span>16:35pm</span>
+          <span>00:00pm</span>
         </div>
 
-        <link rel="stylesheet" href="/assets/My Process.6482575d.css" /><div class="article__grid">
-    <!-- Main Content -->
-    <div class="article__section">
-      <div id="Outline"></div>
-      <h2>The Software Outline</h2>
-
-      <div class="article__section">
-        <p>
-          Following on from creating a console application to export a list of users and their last login date as a CSV,
-          this project is to create an API layer to sit between the database and the console application with the
-          following end points:
-        </p>
-        <ul class="u-margin-bottom-medium">
-          <li>Get all</li>
-          <li>Get by name (Full or partial)</li>
-          <li>Get by date range</li>
-        </ul>
-
-        <h3>User story</h3>
-        <div class="article__user-story">
-          <p>As a Sitecore developer</p>
-          <p>I want to create an API layer to sit between the Sitecore database and the console application</p>
-          <p>So that I can return a list of all Sitecore users and their last login date</p>
-        </div>
-
-        <div class="article__user-story">
-          <h3>Acceptance criteria</h3>
-          <p>AC1</p>
-          <p>GIVEN I want to find out the last login date for all Sitecore users</p>
-          <p>WHEN I call the Login audit API</p>
-          <p>THEN the following data is returned as a JSON</p>
-          <ul class="u-margin-bottom-medium">
-            <li>Full name</li>
-            <li>Last login date</li>
-          </ul>
-        </div>
-
-        <div class="article__user-story">
-          <p>AC2</p>
-          <p>GIVEN I’ve called the Login audit API</p>
-          <p>WHEN I view the data returned</p>
-          <p>THEN data is returned in descending date order</p>
-        </div>
-      </div>
-
-      <div class="article__section">
-        <div id="Approach">
-          <h2>My approach</h2>
-          <p>
-            Firstly I took a course on Pluralsight Building Your First API with ASP.NET Core 2 using Entity Framework
-            Core from scratch.
-          </p>
-
-          <p>
-            This gave me the base knowledge I needed to start building the API. I scaffolded the database using EFCore
-            to connect my application to the database. This created a file which I called GMCContext that acts as the
-            gateway to the database:
-          </p>
-          <div class="article__image">
-            <img src="../img/img1.png" alt="" class="articleImg">
-            <p></p>
-          </div>
-
-          <p>
-            I then created a data model so I can extract the data I need for the API from the database as shown below:
-          </p>
-          <div class="article__image">
-            <img src="../img/img2.png" alt="" class="articleImg">
-            <p></p>
-          </div>
-
-          <p>I created an interface for the GetLoginAuditReports( ) method called ILoginAuditReportService:</p>
-          <div class="article__image">
-            <img src="../img/img3.png" alt="" class="articleImg">
-            <p></p>
-          </div>
-
-          <p>
-            I set up the program.cs file using a template provided by the GMC so my API was in line with their testing
-            requirements and their guidelines. The file includes middleware that creates logs and adds health checks
-            along with other methods.
-          </p>
-          <p>It also enables swagger which is a browser GUI for testing APIs in a development environment:</p>
-          <div class="article__image">
-            <img src="../img/img4.png" alt="" class="articleImg">
-            <p></p>
-          </div>
-        </div>
-
-        <div id="Endpoints">
-          <p>I then created 3 endpoints for my API.</p>
-          <ul class="u-margin-bottom-medium">
-            <li>Get by name</li>
-            <li>Get by date</li>
-            <li>Get all</li>
-          </ul>
-
-          <div id="Endpoints--all">
-            <h3>Get all</h3>
-            <p>Get all gets all users information that’s stored in the last login database.</p>
-            <div class="article__image">
-              <img src="../img/img5.png" alt="" class="articleImg">
-              <p></p>
-            </div>
-          </div>
-
-          <div id="Endpoints--name">
-            <h3>Get by name</h3>
-            <p>Get by name gets all users with the inputted name or a partial name match.</p>
-            <div class="article__image">
-              <img src="../img/img7.png" alt="" class="articleImg">
-              <p></p>
-            </div>
-          </div>
-
-          <div id="Endpoints--date">
-            <h3>Get by date range</h3>
-            <p>Get by date gets all users within an inputted date range.</p>
-            <div class="article__image">
-              <img src="../img/img6.png" alt="" class="articleImg">
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="article__section" id="Result">
-        <h2>Result of the program</h2>
-        <h3>Get all</h3>
-        <div class="article__image">
-          <img src="../img/img8.png" alt="" class="articleImg">
-          <p></p>
-        </div>
-
-        <h3>Get by name</h3>
-        <div class="article__image">
-          <img src="../img/img9.png" alt="" class="articleImg">
-          <p></p>
-        </div>
-
-        <h3>Get by date</h3>
-        <div class="article__image">
-          <img src="../img/img10.png" alt="" class="articleImg">
-          <p></p>
-        </div>
-      </div>
-
-      <div class="article__section" id="Challenges">
-        <h2>Challenges I overcame</h2>
-
-        <p>
-          While writing this program I have limited knowledge of C# and writing APIs with EFCore, so I spent lots of
-          time working on a course and also going through the documentation to figure out certain aspects of the code
-          and how it all links together.
-        </p>
-        <p>
-          The most difficult part was creating the data model and scaffolding the database using EFCore as I’m more
-          familiar with the classic SQL connection method.
-        </p>
-        <p>
-          I have learned lots about the C# syntax and how to link databased and also about different API features in C#.
-        </p>
-        <p>
-          I needed help getting the data out of Sitecore as this is a specialist CMS of which I have no prior knowledge.
-          Because of this to progress further with my development I will be taking a Sitecore 10 course on Pluralsight
-          to learn about Docker and Sitecore 10 Helix.
-        </p>
-        <p>I then created a presentation to demonstrate to my team what I had learned from the pluralsight courses.</p>
-      </div>
+        <link rel="stylesheet" href="/assets/My Process.6482575d.css" /><div class="article__section" id="Technologies used">
+    <h2>Technologies used</h2>
+    <p>
+      I used multiple technologies and languages to develop this application. I mainly used ASP.NET Core with Entity
+      Framework Core to connect to a MSSQL (Microsoft SQL) database.
+    </p>
+    <div class="article__user-story">
+      <ul class="u-margin-bottom-medium">
+        <li>ASP.NET Core</li>
+        <li>C#</li>
+        <li>ASP Identity</li>
+        <li>Entity Framework Core</li>
+        <li>Microsoft SQL Server</li>
+        <li>Windows Server 2019</li>
+        <li>Internet Information Services (IIS)</li>
+        <li>NodeJS</li>
+        <li>JavaScript</li>
+      </ul>
     </div>
-
-    <nav role="navigation" aria-label="Article Navigation" class="article__sidebar hide-mobile">
-      <ol>
-        <li><a href="#Outline">Outline</a></li>
-        <li><a href="#Approach">My Approach</a></li>
-        <li>
-          <a href="#Endpoints">Endpoints</a>
-          <ul>
-            <li class=""><a href="#Endpoints--all">Get all</a></li>
-            <li class=""><a href="#Endpoints--name">Get by name</a></li>
-            <li class=""><a href="#Endpoints--date">Get by date range</a></li>
-          </ul>
-        </li>
-        <li><a href="#Result">Result</a></li>
-        <li><a href="#Challenges">Challenges</a></li>
-      </ol>
-    </nav>
-  </div><div class="article__interactions">
-    <div class="article__interactions--section">
-      <a href="/Files/PowerPoint/Sitecore Helix & Docker.pptx" target="_blank" class="btn-square btn-square--pdf u-margin-right-small">
-        <img src="../img/icons/icon-powerpoint.png" alt=""> Download Presentation
-      </a>
-    </div>
-    <div class="article__interactions--section"></div>
+  </div><div class="article__section" id="Idea">
+    <h2>Development process</h2>
+    <p>
+      I follow a multiple step process to develop my software. I use an iterative approach following the Agile
+      Principles. I break development into multiple stages, starting with gathering requirements for the application.
+      Once I have the requirements I can make a start on the design phase.
+    </p>
+    <p>
+      <a href="" target="_blank">Learn more about my development process here.</a>
+    </p>
+  </div><div class="article__section" id="Idea">
+    <h2>Design Phase</h2>
+    <p></p>
+  </div><div class="article__section" id="Idea">
+    <h2>Development</h2>
+    <p></p>
+  </div><div class="article__section" id="Idea">
+    <h2>Testing</h2>
+    <p></p>
+  </div><div class="article__section" id="Idea">
+    <h2>Deployment</h2>
+    <p></p>
   </div>
       </div>
     </section>
 
-    <!-- Comments Section --><section class="comments-container" data-stream="633ec77ac6bdedc1a081257c" id="commentStreamContainer">
+    <!-- Comments Section --><section class="comments-container" data-stream="" id="commentStreamContainer">
   <h2 id="comments">Comments</h2>
   <div>
     <form class="add-comment-container" onsubmit="return false">
