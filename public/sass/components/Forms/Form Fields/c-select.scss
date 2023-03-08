@@ -17,7 +17,7 @@
   }
 
   &:focus {
-    border: 2px solid $text-light;
+    border: 2px solid $color-primary;
     padding: calc(0.625rem - 3px) calc(1.875rem - 1px) calc(0.625rem - 1px) calc(0.625rem - 1px); /* Spacing minus the extra border width we apply on focus, to keep the element and content fixed in the same place */
   }
 
