@@ -1,0 +1,14 @@
+.c-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.75rem;
+
+  .c-checkbox {
+    margin-bottom: 1rem;
+    margin-right: auto;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

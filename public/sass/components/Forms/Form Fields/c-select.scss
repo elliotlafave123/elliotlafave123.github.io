@@ -1,0 +1,41 @@
+.c-select {
+  --select-height: 46px;
+  appearance: none;
+  font-size: 16px;
+  line-height: 28px;
+  background-color: $color-grey-dark;
+  border: 1px solid $text-light;
+  border-radius: 4px;
+  height: var(--select-height);
+  padding: calc(0.625rem - 2px) 1.875rem 0.625rem 0.625rem;
+  width: 375px;
+  color: $text-light;
+  margin-top: 0.625rem;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &:focus {
+    border: 2px solid $text-light;
+    padding: calc(0.625rem - 3px) calc(1.875rem - 1px) calc(0.625rem - 1px) calc(0.625rem - 1px); /* Spacing minus the extra border width we apply on focus, to keep the element and content fixed in the same place */
+  }
+
+  &__container {
+    position: relative;
+    width: max-content;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    &:after {
+      content: "\f078";
+      font-family: "FontAwesome";
+      pointer-events: none;
+      position: absolute;
+      right: 1.4rem;
+      top: 20px;
+    }
+  }
+}

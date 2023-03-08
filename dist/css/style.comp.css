@@ -311,6 +311,246 @@ a:before, a:after {
   flex-direction: row;
   justify-content: space-between; }
 
+.c-text-input {
+  border: 1px solid var(--text-light);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-light);
+  height: 44px;
+  padding: 0.625rem;
+  width: 100%; }
+  @media (min-width: 47.9375em) {
+    .c-text-input {
+      width: calc(50% - 2px); } }
+  .c-text-input:focus {
+    border: 2px solid var(--color-primary);
+    padding: 0.625rem; }
+  .c-text-input::placeholder {
+    color: var(--text-light); }
+
+.c-text-area {
+  border: 1px solid var(--text-light);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-light);
+  max-width: 100%;
+  min-height: 88px;
+  padding: 0.625rem; }
+  .c-text-area:focus {
+    border: 2px solid var(--color-primary);
+    padding: 0.625rem; }
+  .c-text-area::placeholder {
+    color: var(--text-light); }
+
+.c-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.75rem; }
+  .c-radio-group .c-radio-button {
+    margin-bottom: 1rem;
+    margin-right: auto; }
+    .c-radio-group .c-radio-button:last-child {
+      margin-bottom: 0; }
+
+.c-radio-button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 1.25rem;
+  position: relative;
+  -ms-user-select: none;
+  user-select: none;
+  /*------------------------------------*\
+    $HIDDENRADIO - This is the input element that gets used but hidden
+    \*------------------------------------*/
+  /*------------------------------------*\
+    $CUSTOMRADIO - Custom radio button div, uses :after as the second shape
+    \*------------------------------------*/ }
+  .c-radio-button:last-child {
+    margin-bottom: 0; }
+  .c-radio-button__text {
+    color: var(--text-light);
+    display: block;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-left: 1rem; }
+  .c-radio-button--disabled {
+    cursor: not-allowed;
+    opacity: 0.35; }
+    .c-radio-button--disabled .c-radio-button__hidden-radio:hover + .c-radio-button__custom-button {
+      border: 1px solid var(--text-light); }
+    .c-radio-button--disabled .c-radio-button__text {
+      opacity: 0.35; }
+  .c-radio-button__hidden-radio {
+    cursor: pointer;
+    height: 40px;
+    opacity: 0;
+    position: absolute;
+    width: 40px; }
+    .c-radio-button__hidden-radio:checked ~ .c-radio-button__custom-button {
+      background-color: transparent;
+      border: 2px solid var(--color-primary); }
+    .c-radio-button__hidden-radio:not(:checked) + .c-radio-button__custom-button:after {
+      opacity: 0;
+      transform: scale(0); }
+    .c-radio-button__hidden-radio:hover + .c-radio-button__custom-button {
+      border: 2px solid var(--color-primary); }
+    .c-radio-button__hidden-radio:focus + .c-radio-button__custom-button {
+      border: 2px solid var(--color-primary);
+      outline: 3px solid var(--text-light); }
+    .c-radio-button__hidden-radio:checked + .c-radio-button__custom-button:after {
+      opacity: 1;
+      transform: scale(1); }
+  .c-radio-button__custom-button {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--text-light);
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: flex;
+    float: left;
+    height: 40px;
+    justify-content: center;
+    min-width: 40px;
+    position: relative;
+    width: 40px; }
+    .c-radio-button__custom-button:after {
+      background: var(--color-primary);
+      border-radius: 100%;
+      content: "";
+      height: 24px;
+      transition: all 0.3s ease;
+      width: 24px; }
+
+.c-select {
+  --select-height: 46px;
+  appearance: none;
+  font-size: 16px;
+  line-height: 28px;
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--text-light);
+  border-radius: 4px;
+  height: var(--select-height);
+  padding: calc(0.625rem - 2px) 1.875rem 0.625rem 0.625rem;
+  width: 375px;
+  color: var(--text-light);
+  margin-top: 0.625rem; }
+  @media (max-width: 37.5em) {
+    .c-select {
+      width: 100%; } }
+  .c-select:focus {
+    border: 2px solid var(--text-light);
+    padding: calc(0.625rem - 3px) calc(1.875rem - 1px) calc(0.625rem - 1px) calc(0.625rem - 1px);
+    /* Spacing minus the extra border width we apply on focus, to keep the element and content fixed in the same place */ }
+  .c-select__container {
+    position: relative;
+    width: max-content; }
+    @media (max-width: 37.5em) {
+      .c-select__container {
+        width: 100%; } }
+    .c-select__container:after {
+      content: "\f078";
+      font-family: "FontAwesome";
+      pointer-events: none;
+      position: absolute;
+      right: 1.4rem;
+      top: 20px; }
+
+.c-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.75rem; }
+  .c-checkbox-group .c-checkbox {
+    margin-bottom: 1rem;
+    margin-right: auto; }
+    .c-checkbox-group .c-checkbox:last-child {
+      margin-bottom: 0; }
+
+.c-checkbox {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  user-select: none; }
+  @media (min-width: 47.9375em) {
+    .c-checkbox {
+      margin-bottom: 1.875rem;
+      /* $gmc-spacing-6 */ } }
+  .c-checkbox:hover .c-checkbox__hidden-input ~ .c-checkbox__marker {
+    border: 2px solid #145885;
+    /* $gmc-checkbox-border-hover-colour */ }
+  .c-checkbox:last-child {
+    margin-bottom: 0; }
+  .c-checkbox__legend {
+    margin-bottom: 1.25rem;
+    /* $gmc-spacing-4 */ }
+  .c-checkbox__text {
+    color: var(--text-light);
+    /* $gmc-checkbox-text-colour */
+    display: block;
+    line-height: 1.75;
+    font-size: 16px;
+    margin-left: 1rem;
+    /* $gmc-spacing-3 */ }
+  .c-checkbox__hidden-input {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0; }
+    .c-checkbox__hidden-input:focus ~ .c-checkbox__marker {
+      border: 2px solid var(--color-primary);
+      outline: 3px solid var(--text-light); }
+    .c-checkbox__hidden-input:checked ~ .c-checkbox__marker {
+      border: 2px solid var(--color-primary); }
+      .c-checkbox__hidden-input:checked ~ .c-checkbox__marker:after {
+        opacity: 1; }
+  .c-checkbox__marker {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--text-light);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    min-width: 40px;
+    transition: background-color 0.3s ease;
+    width: 40px; }
+    .c-checkbox__marker:after {
+      border: solid var(--color-primary);
+      /* $gmc-checkbox-marker-border-after-colour */
+      border-width: 0 3px 3px 0;
+      content: "";
+      height: 17px;
+      margin-top: -2px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transform: rotate(45deg);
+      width: 9px; }
+
+.c-form__element {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin-bottom: 3.75rem; }
+
+.c-form__label, .c-form__legend {
+  color: var(--text-light);
+  margin-bottom: 0.625rem;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%; }
+
+.c-form__fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+.c-form__required {
+  color: var(--color-form-false);
+  margin-left: 0.25rem; }
+
 .bg {
   background-color: black;
   position: fixed;

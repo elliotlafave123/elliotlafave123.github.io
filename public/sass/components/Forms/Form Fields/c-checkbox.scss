@@ -1,0 +1,80 @@
+.c-checkbox {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  user-select: none;
+
+  @media (min-width: 47.9375em) {
+    margin-bottom: 1.875rem; /* $gmc-spacing-6 */
+  }
+
+  &:hover {
+    .c-checkbox__hidden-input ~ .c-checkbox__marker {
+      border: 2px solid #145885; /* $gmc-checkbox-border-hover-colour */
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__legend {
+    margin-bottom: 1.25rem; /* $gmc-spacing-4 */
+  }
+
+  &__text {
+    color: $text-light; /* $gmc-checkbox-text-colour */
+    display: block;
+    line-height: 1.75;
+    font-size: 16px;
+    margin-left: 1rem; /* $gmc-spacing-3 */
+  }
+
+  &__hidden-input {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+
+    &:focus ~ .c-checkbox__marker {
+      border: 2px solid $color-primary;
+      outline: 3px solid $text-light;
+    }
+
+    &:checked ~ .c-checkbox__marker {
+      border: 2px solid $color-primary;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__marker {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $text-light;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    min-width: 40px;
+    transition: background-color 0.3s ease;
+    width: 40px;
+
+    &:after {
+      border: solid $color-primary; /* $gmc-checkbox-marker-border-after-colour */
+      border-width: 0 3px 3px 0;
+      content: "";
+      height: 17px;
+      margin-top: -2px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transform: rotate(45deg);
+      width: 9px;
+    }
+  }
+}

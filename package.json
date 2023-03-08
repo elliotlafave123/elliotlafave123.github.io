@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "npm-run-all --parallel watch:sass dev",
+    "dev-host-all": "npm-run-all --parallel watch:sass dev-host",
     "dev": "astro dev",
+    "dev-host": "astro dev --host",
     "build:all": "npm-run-all build:css build:astro",
     "build:astro": "astro build",
     "preview": "astro preview",

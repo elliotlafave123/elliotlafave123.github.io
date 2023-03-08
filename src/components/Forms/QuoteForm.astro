@@ -1,167 +1,161 @@
----
----
-
-<section class="contact u-margin-top-large">
-  <img src="/img/contact.png" alt="" class="contact__img" />
+<section class="default u-margin-top-large">
   <h3 class="skills__header u-margin-bottom-large" id="contactme">Get a quote</h3>
 
-  <div class="contact__form">
-    <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" netlify>
-      <!-- <ErrorSummary
-        class="form__input-small"
-        href="#email"
-        title="There is a problem "
-        message="Enter a correct email"
-        example="example@example.com"
-      /> -->
-      <div class="form__group">
+  <form name="contact" method="POST" data-netlify="true" class="c-form" netlify>
+    <div class="c-form__element">
+      <label for="name" class="c-form__label">Full name<span class="c-form__required">*</span></label>
+      <input id="name" name="name" class="c-text-input" type="text" required />
+    </div>
+
+    <div class="c-form__element">
+      <label for="email" class="c-form__label">Email address<span class="c-form__required">*</span></label>
+      <input id="email" name="email" class="c-text-input" type="email" required />
+    </div>
+
+    <div class="c-radio-group">
+      <label class="c-form__label">What type of work do you require?<span class="c-form__required">*</span></label>
+      <label class="c-radio-button">
         <input
-          type="text"
-          class="form__input form__input-small"
-          placeholder="Full name"
-          id="name"
-          name="name"
+          id="new-project"
+          aria-label="aria label for the radio 1"
+          class="c-radio-button__hidden-radio"
+          type="radio"
+          name="project-type"
+          value="new-project"
           required
         />
-        <label for="name" class="form__label">Full name</label>
-      </div>
-
-      <div class="form__group">
+        <span class="c-radio-button__custom-button"></span>
+        <span for="new-project" class="c-radio-button__text">New website/application</span>
+      </label>
+      <label class="c-radio-button">
         <input
-          type="email"
-          class="form__input form__input-small"
-          placeholder="Email address"
-          id="email"
-          name="email"
+          id="maintenance-project"
+          aria-label="aria label for the radio 2"
+          class="c-radio-button__hidden-radio"
+          type="radio"
+          name="project-type"
+          value="maintenance-project"
           required
         />
-        <label for="email" class="form__label">Email address</label>
+        <span class="c-radio-button__custom-button"></span>
+        <span for="maintenance-project" class="c-radio-button__text">Website redesign/maintenance</span>
+      </label>
+    </div>
+
+    <div id="redesign">
+      <div class="c-form__element">
+        <label for="design-changes" class="c-form__label">What design changes or maintenance do you require?</label>
+        <textarea id="design-changes" name="design-changes" class="c-text-area" rows="" maxlength=""></textarea>
       </div>
 
-      <div class="form__radio-list">
-        <!-- Add a radio button list for new website/application or website redesign/maintenance -->
-        <label for="project-type" class="form__label u-margin-bottom-small">What type of work do you require?</label>
-        <div class="form__radio-group">
-          <div class="form__radio-group-section">
-            <input type="radio" id="new-project" name="project-type" value="new-project" required />
-            <label for="new-project">New website/application</label>
-          </div>
-          <div class="form__radio-group-section">
-            <input type="radio" id="maintenance-project" name="project-type" value="maintenance-project" required />
-            <label for="maintenance-project">Website redesign/maintenance</label>
-          </div>
-        </div>
+      <div class="c-form__element">
+        <label for="website-builder" class="c-form__label">What website builder are you using?</label>
+        <input id="website-builder" name="website-builder" class="c-text-input" type="text" required />
       </div>
+    </div>
 
-      <div id="redesign">
-        <!-- The content of the "Website redesign/maintenance" section -->
-        <div class="form__group" id="design-changes-input">
-          <label for="design-changes" class="form__label u-margin-bottom-small"
-            >What design changes or maintenance do you require?</label
-          >
-          <textarea
-            class="form__input form__input-textarea"
-            id="design-changes"
-            rows="8"
-            form="form-contact"
-            name="design-changes"
-            required></textarea>
-        </div>
-
-        <div class="form__group">
+    <div id="newSite">
+      <div class="c-radio-group">
+        <label class="c-form__label">What type of software do you require?<span class="c-form__required">*</span></label
+        >
+        <label class="c-radio-button">
           <input
-            type="website builder"
-            class="form__input form__input-small"
-            placeholder="What website builder are you using?"
-            id="websiteBuilder"
-            name="website builder"
+            id="website"
+            aria-label="aria label for the radio 1"
+            class="c-radio-button__hidden-radio"
+            type="radio"
+            name="website-or-application"
+            value="website"
             required
           />
-          <label for="website builder" class="form__label">What website builder are you using?</label>
-        </div>
+          <span class="c-radio-button__custom-button"></span>
+          <span for="website" class="c-radio-button__text">Website</span>
+        </label>
+        <label class="c-radio-button">
+          <input
+            id="application"
+            aria-label="aria label for the radio 2"
+            class="c-radio-button__hidden-radio"
+            type="radio"
+            name="website-or-application"
+            value="application"
+            required
+          />
+          <span class="c-radio-button__custom-button"></span>
+          <span for="application" class="c-radio-button__text">Application</span>
+        </label>
       </div>
 
-      <div id="newSite">
-        <div class="form__radio-list">
-          <!-- Add a radio button list for website or application -->
-          <label for="message" class="form__label u-margin-bottom-small">What type of software do you require?</label>
-          <div class="form__radio-group">
-            <div class="form__radio-group-section">
-              <input type="radio" id="website" name="project-type" value="website" />
-              <label for="website">Website</label>
-            </div>
-            <div class="form__radio-group-section">
-              <input type="radio" id="application" name="project-type" value="application" />
-              <label for="application">Application</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form__group">
-          <label for="message" class="form__label u-margin-bottom-small"
-            >What type of <span class="js-siteorapp">project</span> do you require?</label
-          >
-          <textarea
-            class="form__input form__input-textarea"
-            id="message"
-            rows="8"
-            form="form-contact"
-            name="message"
-            required></textarea>
-        </div>
-
-        <div class="form__radio-list">
-          <!-- Add a radio button list for product or service -->
-          <label for="message" class="form__label u-margin-bottom-small">Are you selling a product or service?</label>
-          <div class="form__radio-group">
-            <div class="form__radio-group-section">
-              <input type="radio" id="product" name="product-service" value="product" />
-              <label for="product">Product</label>
-            </div>
-            <div class="form__radio-group-section">
-              <input type="radio" id="service" name="product-service" value="service" />
-              <label for="service">Service</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form__group">
-          <label for="message" class="form__label u-margin-bottom-small"
-            >Who is the target market for your <span class="js-productOrService">project</span>?</label
-          >
-          <textarea
-            class="form__input form__input-textarea"
-            id="message"
-            rows="8"
-            form="form-contact"
-            name="message"
-            required></textarea>
-        </div>
-
-        <div class="form__checkbox-list">
-          <input type="checkbox" id="store-data" name="store-data" value="store-data" />
-          <label for="store-data"
-            >Does your <span id="js-siteorapp">project</span> need to store user or business data?</label
-          >
-        </div>
-
-        <div class="form__group" id="user-data-input" style="display:none;">
-          <label for="user-data" class="form__label u-margin-bottom-small"
-            >What type of data do you need to store?</label
-          >
-          <textarea
-            class="form__input form__input-textarea"
-            id="user-data"
-            rows="8"
-            form="form-contact"
-            name="user-data"
-            required></textarea>
-        </div>
+      <div class="c-form__element">
+        <label for="type-of-project" class="c-form__label"
+          >Describe the requirements for your <span class="js-siteorapp">project</span></label
+        >
+        <textarea id="type-of-project" name="type-of-project" class="c-text-area" rows="" maxlength=""></textarea>
       </div>
 
-      <div class="form__group">
-        <label for="budget" class="form__label u-margin-bottom-small">What is your budget?</label>
-        <select name="budget" id="budget" class="form__input form__input-small">
+      <div class="c-radio-group">
+        <label class="c-form__label"
+          >Are you selling a product or a service?<span class="c-form__required">*</span></label
+        >
+        <label class="c-radio-button">
+          <input
+            id="product"
+            aria-label="aria label for the radio 1"
+            class="c-radio-button__hidden-radio"
+            type="radio"
+            name="product-or-service"
+            value="product"
+          />
+          <span class="c-radio-button__custom-button"></span>
+          <span for="product" class="c-radio-button__text">Product</span>
+        </label>
+        <label class="c-radio-button">
+          <input
+            id="service"
+            aria-label="aria label for the radio 2"
+            class="c-radio-button__hidden-radio"
+            type="radio"
+            name="product-or-service"
+            value="service"
+          />
+          <span class="c-radio-button__custom-button"></span>
+          <span for="service" class="c-radio-button__text">Service</span>
+        </label>
+      </div>
+
+      <div class="c-form__element">
+        <label for="target-market" class="c-form__label"
+          >Who is the target market for your <span class="js-productOrService">project</span>?</label
+        >
+        <textarea id="target-market" name="target-market" class="c-text-area" rows="" maxlength=""></textarea>
+      </div>
+
+      <fieldset class="c-form__fieldset">
+        <legend class="c-form__legend"
+          >Does your <span id="js-siteorapp">project</span> need to store user or business data?</legend
+        >
+        <div class="c-checkbox-group">
+          <label for="store-data" class="c-checkbox">
+            <input id="store-data" type="checkbox" class="c-checkbox__hidden-input" name="store-data" value="" />
+            <span role="checkbox" aria-labelledby="store-data" class="c-checkbox__marker"></span>
+            <span class="c-checkbox__text">Yes, I need to store user or business data</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="c-form__element" id="user-data-input" style="display:none;">
+        <label for="user-data" class="c-form__label"
+          >What type of data do you need to store?<span class="c-form__required">*</span></label
+        >
+        <textarea id="user-data" name="user-data" class="c-text-area" rows="" maxlength=""></textarea>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <label for="budget" class="c-form__label">What is your budget?<span class="c-form__required">*</span></label>
+      <div class="c-select__container">
+        <select id="selectId" name="budget" class="c-select">
+          <option selected disabled hidden>Select an option</option>
           <option value="0-500">£0 - £500</option>
           <option value="500-1000">£500 - £1000</option>
           <option value="1000-2000">£1000 - £2000</option>
@@ -169,118 +163,95 @@
           <option value="5000-10000">£5000 - £10000</option>
           <option value="10000+">£10000+</option>
         </select>
-
-        <!-- Public -->
-        <div
-          class="g-recaptcha u-margin-top-small"
-          data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
-          data-callback="recaptcha_callback"
-        >
-        </div>
       </div>
-      <!-- Local -->
-      <!-- <div
+    </div>
+
+    <!-- Public -->
+    <!-- <div
+      class="g-recaptcha u-margin-top-small"
+      data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
+      data-callback="recaptcha_callback"
+    >
+    </div> -->
+    <!-- Local -->
+    <!-- <div
       class="g-recaptcha u-margin-top-small"
       data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
       data-callback="recaptcha_callback"
     >
     </div> -->
 
-      <input
-        value="Get a quote"
-        class="btn btn-purple-post u-margin-top-small"
-        type="submit"
-        id="postContactMeFormButton"
-        disabled
-      />
-    </form>
-    <div class="message-sent hidden">
-      <h2>Message sent</h2>
-      <svg class="tick" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-        <circle
-          class="path circle"
-          fill="none"
-          stroke="#73AF55"
-          stroke-width="6"
-          stroke-miterlimit="10"
-          cx="65.1"
-          cy="65.1"
-          r="62.1"></circle>
-        <polyline
-          class="path check"
-          fill="none"
-          stroke="#73AF55"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          points="100.2,40.2 51.5,88.8 29.8,67.5 "></polyline>
-      </svg>
-      <a href="#contactme" id="SendAnotherMessage">Send another</a>
-    </div>
-  </div>
-
-  <script lang="js" defer>
-    function recaptcha_callback() {
-      var postContactMeFormButton = document.getElementById("postContactMeFormButton");
-      if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
-    }
-
-    const newProjectRadio = document.getElementById("new-project");
-    const maintenanceProjectRadio = document.getElementById("maintenance-project");
-    const newSiteSection = document.getElementById("newSite");
-    const redesignSection = document.getElementById("redesign");
-
-    // Hide the redesign section by default
-    redesignSection.style.display = "none";
-    newSiteSection.style.display = "none";
-
-    newProjectRadio.addEventListener("change", () => {
-      newSiteSection.style.display = "block";
-      redesignSection.style.display = "none";
-    });
-
-    maintenanceProjectRadio.addEventListener("change", () => {
-      newSiteSection.style.display = "none";
-      redesignSection.style.display = "block";
-    });
-
-    const siteOrApp = document.querySelector(".js-siteorapp");
-    const websiteRadio = document.getElementById("website");
-    const applicationRadio = document.getElementById("application");
-
-    function setSiteOrApp(text) {
-      siteOrApp.textContent = text;
-    }
-
-    websiteRadio.addEventListener("change", () => {
-      setSiteOrApp("website");
-    });
-
-    applicationRadio.addEventListener("change", () => {
-      setSiteOrApp("application");
-    });
-
-    const productOrService = document.querySelector(".js-productOrService");
-    const productRadio = document.getElementById("product");
-    const serviceRadio = document.getElementById("service");
-
-    productRadio.addEventListener("change", () => {
-      productOrService.textContent = "Product";
-    });
-
-    serviceRadio.addEventListener("change", () => {
-      productOrService.textContent = "Service";
-    });
-
-    const storeDataCheckbox = document.querySelector("#store-data");
-    const userDataInput = document.querySelector("#user-data-input");
-
-    storeDataCheckbox.addEventListener("change", (event) => {
-      if (event.target.checked) {
-        userDataInput.style.display = "block";
-      } else {
-        userDataInput.style.display = "none";
-      }
-    });
-  </script>
+    <input
+      value="Get a quote"
+      class="btn btn-purple-post u-margin-top-small"
+      type="submit"
+      id="postContactMeFormButton"
+      disabled
+    />
+  </form>
 </section>
+
+<script lang="js" defer>
+  // function recaptcha_callback() {
+  //   var postContactMeFormButton = document.getElementById("postContactMeFormButton");
+  //   if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
+  // }
+
+  const newProjectRadio = document.getElementById("new-project");
+  const maintenanceProjectRadio = document.getElementById("maintenance-project");
+  const newSiteSection = document.getElementById("newSite");
+  const redesignSection = document.getElementById("redesign");
+
+  // Hide the redesign section by default
+  redesignSection.style.display = "none";
+  newSiteSection.style.display = "none";
+
+  newProjectRadio.addEventListener("change", () => {
+    newSiteSection.style.display = "block";
+    redesignSection.style.display = "none";
+  });
+
+  maintenanceProjectRadio.addEventListener("change", () => {
+    newSiteSection.style.display = "none";
+    redesignSection.style.display = "block";
+  });
+
+  const siteOrApp = document.querySelector(".js-siteorapp");
+  const websiteRadio = document.getElementById("website");
+  const applicationRadio = document.getElementById("application");
+
+  function setSiteOrApp(text) {
+    siteOrApp.textContent = text;
+  }
+
+  websiteRadio.addEventListener("change", () => {
+    setSiteOrApp("website");
+  });
+
+  applicationRadio.addEventListener("change", () => {
+    setSiteOrApp("application");
+  });
+
+  const productOrService = document.querySelector(".js-productOrService");
+  const productRadio = document.getElementById("product");
+  const serviceRadio = document.getElementById("service");
+
+  productRadio.addEventListener("change", () => {
+    productOrService.textContent = "Product";
+  });
+
+  serviceRadio.addEventListener("change", () => {
+    productOrService.textContent = "Service";
+  });
+
+  const storeDataCheckbox = document.querySelector("#store-data");
+  const userDataInput = document.querySelector("#user-data-input");
+
+  storeDataCheckbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      userDataInput.style.display = "flex";
+    } else {
+      userDataInput.style.display = "none";
+    }
+  });
+</script>
