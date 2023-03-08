@@ -2,7 +2,7 @@ const toggle: HTMLInputElement[] = Array.from(document.querySelectorAll(".toggle
 const root = document.documentElement;
 
 const deleteMobileDarkModeToggle = document.querySelector(".deleteMobile");
-const checkboxLabelElements: HTMLLabelElement[] = Array.from(document.querySelectorAll("label"));
+const checkboxLabelElements: HTMLLabelElement[] = Array.from(document.querySelectorAll("darkModeLabel"));
 
 const wave1LightMobile = document.getElementById("wave1-light-mob");
 const wave1Light = document.getElementById("wave1-light");

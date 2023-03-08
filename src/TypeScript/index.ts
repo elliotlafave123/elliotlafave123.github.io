@@ -26,6 +26,8 @@ import { handleShowPassword } from "./Authentication System/ShowPassword";
 import { HandleCookies } from "./CookieBanner/ShowCookieBanner";
 // Show Contact Me Form Sent Checkmark
 import { ShowSentCheckmark } from "./ContactMeForm/ShowSentCheckmark";
+// Initialize client screening form
+import { InitClientScreeningForm } from "./Forms/ClientScreening";
 
 // Function to check if element exists
 const exists = (el: HTMLElement) => {
@@ -67,6 +69,10 @@ async function initComments() {
   }
 }
 initComments();
+
+// init client screening form
+const ClientScreeningForm: HTMLElement = document.getElementById("js-client-screening-form") as HTMLFormElement;
+if (exists(ClientScreeningForm)) InitClientScreeningForm();
 
 // init tooltip
 const tooltipContainer: HTMLElement = document.querySelector(".tooltip") as HTMLElement;
