@@ -74,6 +74,8 @@ const InitClientScreeningForm = () => {
         .then((response) => response.json())
         .then((data) => {
           console.log("Success:", data);
+          // redirect to /pages/success/index.html
+          window.location.href = "/pages/success/index.html";
         })
         .catch((error) => {
           console.error("Error:", error);

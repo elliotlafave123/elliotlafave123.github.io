@@ -1,4 +1,8 @@
 .default {
   padding: 0rem $section-padding-x 10rem $section-padding-x;
   color: $text-light;
+
+  @include respond(phone) {
+    padding: 0rem 5rem 10rem 5rem;
+  }
 }
