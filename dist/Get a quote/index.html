@@ -132,7 +132,7 @@
     <section class="default u-margin-top-large">
   <h3 class="skills__header u-margin-bottom-large" id="contactme">Get a quote</h3>
 
-  <form name="contact" method="POST" data-netlify="true" class="c-form" netlify>
+  <form name="get-a-quote" method="POST" data-netlify="true" class="c-form" netlify>
     <div class="c-form__element">
       <label for="name" class="c-form__label">Full name<span class="c-form__required">*</span></label>
       <input id="name" name="name" class="c-text-input" type="text" required>
@@ -146,12 +146,12 @@
     <div class="c-radio-group">
       <label class="c-form__label">What type of work do you require?<span class="c-form__required">*</span></label>
       <label class="c-radio-button">
-        <input id="new-project" aria-label="aria label for the radio 1" class="c-radio-button__hidden-radio" type="radio" name="project-type" value="new-project" required>
+        <input id="new-project" aria-label="aria label for the radio 1" class="c-radio-button__hidden-radio" type="radio" name="project-type" value="new-project">
         <span class="c-radio-button__custom-button"></span>
         <span for="new-project" class="c-radio-button__text">New website/application</span>
       </label>
       <label class="c-radio-button">
-        <input id="maintenance-project" aria-label="aria label for the radio 2" class="c-radio-button__hidden-radio" type="radio" name="project-type" value="maintenance-project" required>
+        <input id="maintenance-project" aria-label="aria label for the radio 2" class="c-radio-button__hidden-radio" type="radio" name="project-type" value="maintenance-project">
         <span class="c-radio-button__custom-button"></span>
         <span for="maintenance-project" class="c-radio-button__text">Website redesign/maintenance</span>
       </label>
@@ -164,8 +164,8 @@
       </div>
 
       <div class="c-form__element">
-        <label for="website-builder" class="c-form__label">What website builder are you using?</label>
-        <input id="website-builder" name="website-builder" class="c-text-input" type="text" required>
+        <label for="website-builder" class="c-form__label">What website builder are you using?<span class="c-form__required">*</span></label>
+        <input id="website-builder" name="website-builder" class="c-text-input" type="text">
       </div>
     </div>
 
@@ -173,12 +173,12 @@
       <div class="c-radio-group">
         <label class="c-form__label">What type of software do you require?<span class="c-form__required">*</span></label>
         <label class="c-radio-button">
-          <input id="website" aria-label="aria label for the radio 1" class="c-radio-button__hidden-radio" type="radio" name="website-or-application" value="website" required>
+          <input id="website" aria-label="aria label for the radio 1" class="c-radio-button__hidden-radio" type="radio" name="website-or-application" value="website">
           <span class="c-radio-button__custom-button"></span>
           <span for="website" class="c-radio-button__text">Website</span>
         </label>
         <label class="c-radio-button">
-          <input id="application" aria-label="aria label for the radio 2" class="c-radio-button__hidden-radio" type="radio" name="website-or-application" value="application" required>
+          <input id="application" aria-label="aria label for the radio 2" class="c-radio-button__hidden-radio" type="radio" name="website-or-application" value="application">
           <span class="c-radio-button__custom-button"></span>
           <span for="application" class="c-radio-button__text">Application</span>
         </label>
@@ -241,12 +241,8 @@
     </div>
 
     <!-- Public -->
-    <!-- <div
-      class="g-recaptcha u-margin-top-small"
-      data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
-      data-callback="recaptcha_callback"
-    >
-    </div> -->
+    <div class="g-recaptcha u-margin-top-small" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback">
+    </div>
     <!-- Local -->
     <!-- <div
       class="g-recaptcha u-margin-top-small"
@@ -255,15 +251,15 @@
     >
     </div> -->
 
-    <input value="Get a quote" class="btn btn-purple-post u-margin-top-small" type="submit" id="postContactMeFormButton">
+    <input value="Get a quote" class="btn btn-purple-post u-margin-top-small" type="submit">
   </form>
 </section>
 
 <script lang="js" defer>
-  // function recaptcha_callback() {
-  //   var postContactMeFormButton = document.getElementById("postContactMeFormButton");
-  //   if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
-  // }
+  function recaptcha_callback() {
+    var postContactMeFormButton = document.getElementById("postContactMeFormButton");
+    if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
+  }
 
   const newProjectRadio = document.getElementById("new-project");
   const maintenanceProjectRadio = document.getElementById("maintenance-project");

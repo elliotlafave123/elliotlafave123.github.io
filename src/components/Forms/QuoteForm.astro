@@ -1,7 +1,7 @@
 <section class="default u-margin-top-large">
   <h3 class="skills__header u-margin-bottom-large" id="contactme">Get a quote</h3>
 
-  <form name="contact" method="POST" data-netlify="true" class="c-form" netlify>
+  <form name="get-a-quote" method="POST" data-netlify="true" class="c-form" netlify>
     <div class="c-form__element">
       <label for="name" class="c-form__label">Full name<span class="c-form__required">*</span></label>
       <input id="name" name="name" class="c-text-input" type="text" required />
@@ -22,7 +22,6 @@
           type="radio"
           name="project-type"
           value="new-project"
-          required
         />
         <span class="c-radio-button__custom-button"></span>
         <span for="new-project" class="c-radio-button__text">New website/application</span>
@@ -35,7 +34,6 @@
           type="radio"
           name="project-type"
           value="maintenance-project"
-          required
         />
         <span class="c-radio-button__custom-button"></span>
         <span for="maintenance-project" class="c-radio-button__text">Website redesign/maintenance</span>
@@ -49,8 +47,10 @@
       </div>
 
       <div class="c-form__element">
-        <label for="website-builder" class="c-form__label">What website builder are you using?</label>
-        <input id="website-builder" name="website-builder" class="c-text-input" type="text" required />
+        <label for="website-builder" class="c-form__label"
+          >What website builder are you using?<span class="c-form__required">*</span></label
+        >
+        <input id="website-builder" name="website-builder" class="c-text-input" type="text" />
       </div>
     </div>
 
@@ -66,7 +66,6 @@
             type="radio"
             name="website-or-application"
             value="website"
-            required
           />
           <span class="c-radio-button__custom-button"></span>
           <span for="website" class="c-radio-button__text">Website</span>
@@ -79,7 +78,6 @@
             type="radio"
             name="website-or-application"
             value="application"
-            required
           />
           <span class="c-radio-button__custom-button"></span>
           <span for="application" class="c-radio-button__text">Application</span>
@@ -167,12 +165,12 @@
     </div>
 
     <!-- Public -->
-    <!-- <div
+    <div
       class="g-recaptcha u-margin-top-small"
       data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
       data-callback="recaptcha_callback"
     >
-    </div> -->
+    </div>
     <!-- Local -->
     <!-- <div
       class="g-recaptcha u-margin-top-small"
@@ -181,20 +179,15 @@
     >
     </div> -->
 
-    <input
-      value="Get a quote"
-      class="btn btn-purple-post u-margin-top-small"
-      type="submit"
-      id="postContactMeFormButton"
-    />
+    <input value="Get a quote" class="btn btn-purple-post u-margin-top-small" type="submit" />
   </form>
 </section>
 
 <script lang="js" defer>
-  // function recaptcha_callback() {
-  //   var postContactMeFormButton = document.getElementById("postContactMeFormButton");
-  //   if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
-  // }
+  function recaptcha_callback() {
+    var postContactMeFormButton = document.getElementById("postContactMeFormButton");
+    if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
+  }
 
   const newProjectRadio = document.getElementById("new-project");
   const maintenanceProjectRadio = document.getElementById("maintenance-project");
