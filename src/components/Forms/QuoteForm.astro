@@ -64,6 +64,7 @@
 
     <div class="c-form__element">
       <label for="budget" class="c-form__label">What is your budget?<span class="c-form__required">*</span></label>
+      <span class="c-form__hint">Select the budget you have allocated for this project.</span>
       <div class="c-select__container">
         <select id="selectId" name="budget" class="c-select">
           <option selected disabled hidden>Select an option</option>
@@ -85,13 +86,6 @@
         >Please provide a brief description of your business, including what products or services you offer.</span
       >
       <textarea id="businessDescription" name="businessDescription" class="c-text-area" rows="" maxlength=""></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="currentSiteIssues" class="c-form__label">Why is your current site no longer meeting your needs?</label
-      >
-      <span class="c-form__hint">What are the problems with your current site that you are looking to solve?</span>
-      <textarea id="currentSiteIssues" name="currentSiteIssues" class="c-text-area" rows="" maxlength=""></textarea>
     </div>
 
     <div class="c-radio-group">
@@ -125,113 +119,6 @@
         <span class="c-radio-button__custom-button"></span>
         <span class="c-radio-button__text">Service</span>
       </label>
-    </div>
-
-    <div class="c-form__element">
-      <label for="targetAudienceMotivations" class="c-form__label"
-        >What motivates your target audience’s buying decisions?</label
-      >
-      <span class="c-form__hint">What factors influence your target audience when they make a purchasing decision?</span
-      >
-      <textarea id="targetAudienceMotivations" name="targetAudienceMotivations" class="c-text-area" rows="" maxlength=""
-      ></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="uniqueSellingPoints" class="c-form__label">What makes your products and/or services unique?</label>
-      <span class="c-form__hint">What sets your products/services apart from those of your competitors?</span>
-      <textarea id="uniqueSellingPoints" name="uniqueSellingPoints" class="c-text-area" rows="" maxlength=""></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="successMetrics" class="c-form__label">How will you measure the success of your new site?</label>
-      <span class="c-form__hint">What metrics will you use to determine if the new site is successful?</span>
-      <textarea id="successMetrics" name="successMetrics" class="c-text-area" rows="" maxlength=""></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="callToAction" class="c-form__label">What is your call to action?</label>
-      <span class="c-form__hint">What action do you want visitors to take when they visit your site?</span>
-      <textarea id="callToAction" name="callToAction" class="c-text-area" rows="" maxlength=""></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="visitorAttractionStrategy" class="c-form__label"
-        >How will you attract visitors to your new site?</label
-      >
-      <span class="c-form__hint">What strategies do you plan to use to drive traffic to your site?</span>
-      <textarea id="visitorAttractionStrategy" name="visitorAttractionStrategy" class="c-text-area" rows="" maxlength=""
-      ></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="requiredFeatures" class="c-form__label"
-        >Which features are needed for your site to be successful?<span class="c-form__required">*</span></label
-      >
-      <span class="c-form__hint"
-        >Please list the features that you believe are essential for your site to meet your business goals.</span
-      >
-      <textarea id="requiredFeatures" name="requiredFeatures" class="c-text-area" rows="" maxlength="" required
-      ></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="brandingGuidelines" class="c-form__label"
-        >Do you have established branding, messaging or style guidelines?</label
-      >
-      <span class="c-form__hint"
-        >Do you have any existing guidelines or standards that we should be aware of when designing the site?</span
-      >
-      <textarea id="brandingGuidelines" name="brandingGuidelines" class="c-text-area" rows="" maxlength=""></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="competitorAnalysis" class="c-form__label"
-        >What do you like/dislike about your top competitors’ sites and messaging?</label
-      >
-      <span class="c-form__hint"
-        >What are the strengths and weaknesses of your competitors' websites and marketing messages?</span
-      >
-      <textarea id="competitorAnalysis" name="competitorAnalysis" class="c-text-area" rows="" maxlength=""></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="favoriteSites" class="c-form__label"
-        >What are three of your favorite sites, and why do you like them?</label
-      >
-      <span class="c-form__hint">Please list three websites that you admire and describe what you like about them.</span
-      >
-      <textarea id="favoriteSites" name="favoriteSites" class="c-text-area" rows="" maxlength=""></textarea>
-    </div>
-
-    <div class="c-form__element">
-      <label for="additionalServices" class="c-form__label">Which additional services are required?</label>
-      <span class="c-form__hint"
-        >Do you need any additional services, such as copywriting, photography, or video production, to be provided as
-        part of the project?</span
-      >
-      <textarea id="additionalServices" name="additionalServices" class="c-text-area" rows="" maxlength=""></textarea>
-    </div>
-
-    <fieldset class="c-form__fieldset">
-      <legend class="c-form__legend"
-        >Does your <span id="js-siteorapp">project</span> need to store user or business data?</legend
-      >
-      <div class="c-checkbox-group">
-        <label for="willStoreData" class="c-checkbox">
-          <input id="willStoreData" type="checkbox" class="c-checkbox__hidden-input" name="willStoreData" value="" />
-          <span role="checkbox" aria-labelledby="willStoreData" class="c-checkbox__marker"></span>
-          <span class="c-checkbox__text">Yes, I need to store user or business data</span>
-        </label>
-      </div>
-    </fieldset>
-
-    <div class="c-form__element" id="user-data-input" style="display:none;">
-      <label for="dataStoreageRequirements" class="c-form__label"
-        >What type of data do you need to store?<span class="c-form__required">*</span></label
-      >
-      <textarea id="dataStoreageRequirements" name="dataStoreageRequirements" class="c-text-area" rows="" maxlength=""
-      ></textarea>
     </div>
 
     <!-- Public -->
@@ -270,15 +157,4 @@
       postContactMeFormButton.removeAttribute("aria-disabled");
     }
   }
-
-  const storeDataCheckbox = document.getElementById("willStoreData");
-  const userDataInput = document.querySelector("#user-data-input");
-
-  storeDataCheckbox.addEventListener("change", (event) => {
-    if (event.target.checked) {
-      userDataInput.style.display = "flex";
-    } else {
-      userDataInput.style.display = "none";
-    }
-  });
 </script>
