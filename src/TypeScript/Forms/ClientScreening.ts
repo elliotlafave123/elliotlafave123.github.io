@@ -33,8 +33,8 @@ const InitClientScreeningForm = () => {
       clientScreening.productOrService = clientScreeningForm.productOrService.value;
       clientScreening.websiteOrApplication = clientScreeningForm.websiteOrApplication.value;
 
-      // const API_URL = "https://freelance-api.elliotlafave.com/ClientScreening";
-      const API_URL = "https://localhost:7135/ClientScreening";
+      const API_URL = "https://freelance-api.elliotlafave.com/ClientScreening";
+      // const API_URL = "https://localhost:7135/ClientScreening";
 
       fetch(API_URL, {
         method: "POST",
