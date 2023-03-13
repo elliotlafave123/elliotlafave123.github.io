@@ -1,147 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" type="image/png" href="img/logo.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<script src="https://kit.fontawesome.com/873062b8ef.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../../css/style.css" />
-		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-		<script defer src="../../scripts/SiteFrontendTSBundle.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/873062b8ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <script defer src="../../scripts/SiteFrontendTSBundle.js"></script>
 
-		<title>Portfolio</title>
-	</head>
-	<body>
-		<div class="signedInStrip" id="signedInStrip">
-			<div>
-				<p id="logOutButton">Log Out</p>
-				<a href="../../account.html">Account Details</a>
-			</div>
-		</div>
-		<div class="signedInStrip signedInStrip-warning" id="signedInStripWarning">
-			<span>Please verify your email address</span>
-			<div>
-				<a href="../Login/verifyEmail.html">Verify email</a>
-			</div>
-		</div>
-		<!-- Navigation -->
-		<div class="navigation">
-			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1" />
-			<label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
-			<div class="navigation__background">&nbsp;</div>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="signedInStrip" id="signedInStrip">
+      <div>
+        <p id="logOutButton">Log Out</p>
+        <a href="../../account.html">Account Details</a>
+      </div>
+    </div>
+    <div class="signedInStrip signedInStrip-warning" id="signedInStripWarning">
+      <span>Please verify your email address</span>
+      <div>
+        <a href="../Login/verifyEmail.html">Verify email</a>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1" />
+      <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
+      <div class="navigation__background">&nbsp;</div>
 
-			<ul class="desktop__nav">
-				<div class="logo">
-					<a href="index.html"><img src="../../img/logo.png" alt="Logo" class="logo-img" /></a>
-				</div>
+      <ul class="desktop__nav">
+        <div class="logo">
+          <a href="index.html"><img src="../../img/logo.png" alt="Logo" class="logo-img" /></a>
+        </div>
 
-				<div>
-					<li class="desktop__nav-item deleteMobile">
-						<div class="toggle-container">
-							<img src="../../img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun" />
-							<div>
-								<input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1" />
-								<label for="checkboxSlider" class="label" tabindex="0">
-									<div class="ball"></div>
-								</label>
-							</div>
-							<img src="../../img/icons/icon-moon.svg" alt="moon icon" class="toggle-container-moon" />
-						</div>
-					</li>
+        <div>
+          <li class="desktop__nav-item deleteMobile">
+            <div class="toggle-container">
+              <img src="../../img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun" />
+              <div>
+                <input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1" />
+                <label for="checkboxSlider" class="label" tabindex="0">
+                  <div class="ball"></div>
+                </label>
+              </div>
+              <img src="../../img/icons/icon-moon.svg" alt="moon icon" class="toggle-container-moon" />
+            </div>
+          </li>
 
-					<li class="desktop__nav-item">
-						<div class="link-wrapper">
-							<a href="../../index.html" class="link hover-12"><p class="link-text">Home</p></a>
-						</div>
-					</li>
-					<li class="desktop__nav-item">
-						<div class="link-wrapper">
-							<a href="../../CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
-						</div>
-					</li>
-					<li class="desktop__nav-item">
-						<div class="link-wrapper">
-							<a href="../../portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
-						</div>
-					</li>
-				</div>
-			</ul>
+          <li class="desktop__nav-item">
+            <div class="link-wrapper">
+              <a href="../../index.html" class="link hover-12"><p class="link-text">Home</p></a>
+            </div>
+          </li>
+          <li class="desktop__nav-item">
+            <div class="link-wrapper">
+              <a href="../../CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
+            </div>
+          </li>
+          <li class="desktop__nav-item">
+            <div class="link-wrapper">
+              <a href="../../portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
+            </div>
+          </li>
+        </div>
+      </ul>
 
-			<nav class="navigation__nav">
-				<ul class="navigation__list">
-					<li class="navigation__item">
-						<a href="../../index.html" class="navigation__link" tabindex="-1">Home</a>
-					</li>
-					<li class="navigation__item">
-						<a href="contact-me.html" class="navigation__link" tabindex="-1">Contact Me</a>
-					</li>
-					<li class="navigation__item">
-						<a href="../../CV.html" class="navigation__link" tabindex="-1">My CV</a>
-					</li>
-					<li class="navigation__item">
-						<a href="../../portfolio.html" class="navigation__link" tabindex="-1">Portfolio</a>
-					</li>
-					<li class="navigation__item">
-						<div class="toggle-container">
-							<img src="../../img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun" />
-							<div>
-								<input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1" />
-								<label for="checkboxSlider" class="label">
-									<div class="ball"></div>
-								</label>
-							</div>
-							<img src="../../img/icons/icon-moon.svg" alt="moon icon" class="toggle-container-moon" />
-						</div>
-					</li>
-				</ul>
-			</nav>
-		</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="../../index.html" class="navigation__link" tabindex="-1">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="contact-me.html" class="navigation__link" tabindex="-1">Contact Me</a>
+          </li>
+          <li class="navigation__item">
+            <a href="../../CV.html" class="navigation__link" tabindex="-1">My CV</a>
+          </li>
+          <li class="navigation__item">
+            <a href="../../portfolio.html" class="navigation__link" tabindex="-1">Portfolio</a>
+          </li>
+          <li class="navigation__item">
+            <div class="toggle-container">
+              <img src="../../img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun" />
+              <div>
+                <input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1" />
+                <label for="checkboxSlider" class="label">
+                  <div class="ball"></div>
+                </label>
+              </div>
+              <img src="../../img/icons/icon-moon.svg" alt="moon icon" class="toggle-container-moon" />
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-		<section class="logo mobile-only">
-			<a href="index.html" tabindex="-1"><img src="../../img/logo.png" alt="Logo" class="logo-img mobile-only" /></a>
-		</section>
+    <section class="logo mobile-only">
+      <a href="index.html" tabindex="-1"><img src="../../img/logo.png" alt="Logo" class="logo-img mobile-only" /></a>
+    </section>
 
-		<section class="message">
-			<p class="message__title">Success! Your message has been submitted.</p>
-			<a href="../../index.html" class="btn btn-purple-landing">Back to home</a>
-		</section>
+    <section class="message">
+      <p class="message__title">Success! Your message has been submitted.</p>
+      <span>I will get back to you as soon as possible.</span>
+      <a href="../../index.html" class="btn btn-purple-landing">Back to home</a>
+    </section>
 
-		<div class="wave-top">
-			<img src="../../img/wave5.png" alt="" class="wave-bottom__img" />
-		</div>
+    <div class="wave-top">
+      <img src="../../img/wave5.png" alt="" class="wave-bottom__img" />
+    </div>
 
-		<footer class="footer">
-			<div class="footer__logo">
-				<a href="../../index.html"><img src="../../img/logo.png" alt="Footer Logo" /></a>
-			</div>
-			<ul class="footer__nav">
-				<li class="footer__nav-item">
-					<a href="../../contact-me.html">Contact Me</a>
-				</li>
-				<li class="footer__nav-item"><a href="../../CV.html">CV</a></li>
-				<li class="footer__nav-item">
-					<a href="../../portfolio.html">Portfolio</a>
-				</li>
-			</ul>
-			<div class="footer__icons">
-				<a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" target="blank"
-					><img src="../../img/linkedin-brands.svg" alt="Linkedin Logo"
-				/></a>
-				<a href="https://github.com/elliotlafave123/elliotlafave123.github.io"
-					><img src="../../img/github-brands.svg" alt="GitHub Logo" target="blank"
-				/></a>
-				<a href="https://codepen.io/elliotlafave123"
-					><img src="../../img/codepen-brands.svg" alt="Codepen Logo" target="blank"
-				/></a>
-			</div>
-			<p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
-			<p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
-		</footer>
-	</body>
+    <footer class="footer">
+      <div class="footer__logo">
+        <a href="../../index.html"><img src="../../img/logo.png" alt="Footer Logo" /></a>
+      </div>
+      <ul class="footer__nav">
+        <li class="footer__nav-item">
+          <a href="../../contact-me.html">Contact Me</a>
+        </li>
+        <li class="footer__nav-item"><a href="../../CV.html">CV</a></li>
+        <li class="footer__nav-item">
+          <a href="../../portfolio.html">Portfolio</a>
+        </li>
+      </ul>
+      <div class="footer__icons">
+        <a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" target="blank"
+          ><img src="../../img/linkedin-brands.svg" alt="Linkedin Logo"
+        /></a>
+        <a href="https://github.com/elliotlafave123/elliotlafave123.github.io"
+          ><img src="../../img/github-brands.svg" alt="GitHub Logo" target="blank"
+        /></a>
+        <a href="https://codepen.io/elliotlafave123"
+          ><img src="../../img/codepen-brands.svg" alt="Codepen Logo" target="blank"
+        /></a>
+      </div>
+      <p class="footer__paragraph">Designed and coded by Elliot La Fave using HTML, CSS and JS.</p>
+      <p class="footer__paragraph">Copyright © Elliot La Fave 2021.</p>
+    </footer>
+  </body>
 </html>

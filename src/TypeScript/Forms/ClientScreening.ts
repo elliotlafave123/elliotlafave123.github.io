@@ -17,6 +17,17 @@ const InitClientScreeningForm = () => {
   if (clientScreeningForm) {
     postContactMeFormButton.addEventListener("click", () => {
       // TODO: Validate form
+      // ensure all fields are filled out
+      const fullName = clientScreeningForm.fullName.value;
+      const email = clientScreeningForm.email.value;
+      const budget = clientScreeningForm.budget.value;
+      const productOrService = clientScreeningForm.productOrService.value;
+      const websiteOrApplication = clientScreeningForm.websiteOrApplication.value;
+
+      if (!fullName || !email || !budget || !productOrService || !websiteOrApplication) {
+        alert("Please fill out all required fields.");
+        return;
+      }
 
       // Create a new model
       const clientScreening = new ClientScreening();
@@ -33,8 +44,8 @@ const InitClientScreeningForm = () => {
       clientScreening.productOrService = clientScreeningForm.productOrService.value;
       clientScreening.websiteOrApplication = clientScreeningForm.websiteOrApplication.value;
 
-      // const API_URL = "https://freelance-api.elliotlafave.com/ClientScreening";
-      const API_URL = "https://localhost:7135/ClientScreening";
+      const API_URL = "https://freelance-api.elliotlafave.com/ClientScreening";
+      // const API_URL = "https://localhost:7135/ClientScreening";
 
       fetch(API_URL, {
         method: "POST",
@@ -44,13 +55,11 @@ const InitClientScreeningForm = () => {
         body: JSON.stringify(clientScreening),
       })
         .then((response) => response.json())
-        .then((data) => {
-          console.log("Success:", data);
-          // redirect to /pages/success/index.html
+        .then(() => {
           window.location.href = "/pages/success/index.html";
         })
-        .catch((error) => {
-          console.error("Error:", error);
+        .catch(() => {
+          console.error("Error:");
         });
     });
   }
