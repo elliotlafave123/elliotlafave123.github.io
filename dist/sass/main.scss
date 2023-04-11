@@ -9,6 +9,9 @@
 @import "base/animations";
 @import "base/typography";
 
+// COMPONENT LIBRARY
+@import "../../ComponentAssets//simpleComponents/button/button.scss";
+
 // Forms
 @import "components/Forms/Form Fields/textInput";
 @import "components/Forms/Form Fields/c-text-area.scss";
@@ -71,7 +74,7 @@
 // Base
 @import "layout/base/grid";
 
-// Layour - Assorted
+// Layout - Assorted
 @import "layout/navigation";
 @import "layout/header";
 @import "layout/about";
@@ -84,6 +87,8 @@
 @import "layout/achievements";
 @import "layout/message.scss";
 @import "layout/certifications";
+@import "layout/c-footer";
+@import "layout/c-strip";
 
 // Page Types
 @import "pages/defaultSection";

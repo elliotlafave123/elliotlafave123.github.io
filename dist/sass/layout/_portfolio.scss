@@ -1,12 +1,13 @@
 .portfolio {
   background-color: $color-grey-dark-2;
   box-sizing: border-box;
-  padding: 0vh 10vw 0rem 10vw;
+  padding: 10rem 10vw 10rem 10vw;
+
   color: $color-white;
   position: relative;
 
   @include respond(phone) {
-    padding: 0vh 2.5rem 0rem 2.5rem;
+    padding: 2rem 2.5rem 3rem 2.5rem;
   }
 
   // a {

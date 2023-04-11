@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/873062b8ef.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ecfebc6e17.js" crossorigin="anonymous"></script>
   <meta name="description" content="Elliot La Fave's personal website and portfolio. A collection of all my work and my CV.">
   <meta name="keywords" content="Elliotlafave, Elliot, la, fave, web, design, cv, portfolio, projects, javascript, nodejs, manchester, astro, software, developer, apprentice">
   <meta name="author" content="Elliot La Fave">
@@ -28,7 +28,7 @@
   <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
 
   <title>Login Audit API | Elliotlafave.com</title>
-<link rel="stylesheet" href="/assets/My Process.8ab26bbd.css" /></head>
+<link rel="stylesheet" href="/assets/My Process.e9a4dbc4.css" /></head>
 
   <body>
     <nav aria-label="Skip Links">
@@ -152,7 +152,7 @@
           <span>16:01pm</span>
         </div>
 
-        <link rel="stylesheet" href="/assets/My Process.8ab26bbd.css" /><div class="article__grid">
+        <link rel="stylesheet" href="/assets/My Process.e9a4dbc4.css" /><div class="article__grid">
     <!-- Main Content -->
     <div class="article__section">
       <div id="Outline">
@@ -300,102 +300,67 @@
   </div>
   <div id="InsertCommentsContainer"></div>
 </section>
-    <!-- Footer --><section class="contact u-margin-top-large">
-  <img src="/img/contact.png" alt="" class="contact__img">
-  <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
-
-  <div class="contact__form">
-    <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" netlify>
-      <!-- <ErrorSummary
-        class="form__input-small"
-        href="#email"
-        title="There is a problem "
-        message="Enter a correct email"
-        example="example@example.com"
-      /> -->
-      <div class="form__group">
-        <input type="text" class="form__input form__input-small" placeholder="Full name" id="name" name="name" required>
-        <label for="name" class="form__label">Full name</label>
-      </div>
-
-      <div class="form__group">
-        <input type="email" class="form__input form__input-small" placeholder="Email address" id="email" name="email" required>
-        <label for="email" class="form__label">Email address</label>
-      </div>
-
-      <div class="form__group">
-        <label for="message" class="form__label u-margin-bottom-small">Your message</label>
-        <textarea class="form__input form__input-textarea" id="message" rows="8" form="form-contact" name="message" required></textarea>
-      </div>
-
-      <!-- Public -->
-      <div class="g-recaptcha u-margin-top-small" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback">
-      </div>
-    </form>
-    <!-- Local -->
-    <!-- <div
-      class="g-recaptcha u-margin-top-small"
-      data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-      data-callback="recaptcha_callback"
-    >
-    </div> -->
-
-    <input value="Send Message  →" class="btn btn-purple-post u-margin-top-small" type="submit" id="postContactMeFormButton" disabled>
-  </div>
-  <div class="message-sent hidden">
-    <h2>Message sent</h2>
-    <svg class="tick" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-      <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"></circle>
-      <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "></polyline>
-    </svg>
-    <a href="#contactme" id="SendAnotherMessage">Send another</a>
-  </div>
-</section>
-<script lang="js">
-  function recaptcha_callback() {
-    var postContactMeFormButton = document.getElementById("postContactMeFormButton");
-    if (document.querySelector("form")) postContactMeFormButton.removeAttribute("disabled");
-  }
-</script>
-
-<section class="contact u-margin-top-large"></section>
-
-<div class="wave-top">
-  <img src="/img/wave5.png" alt="" class="wave-bottom__img" id="wave5-dark">
-  <img src="/img/wave5-light.png" alt="" class="wave-top__img hidden" id="wave5-light">
+    <!-- Footer --><div class="c-strip">
+  <h2>Need a website?</h2>
+  <a href="/Get a quote/" class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border" aria-label="Aria label">
+    Get a quote today
+  </a>
 </div>
 
-<footer class="footer">
-  <div class="footer__logo">
-    <a href="/index.html"><img src="/img/logo.png" alt="Footer Logo"></a>
+<footer class="c-footer">
+  <div class="c-footer__head">
+    <a class="c-footer__head-site-name" href="./index.html">elliotlafave.com</a>
+    <div class="c-footer__head-links">
+      <a href="/index">Home</a>
+      <a href=".CV">CV</a>
+      <a href="/portfolio">Contact</a>
+    </div>
   </div>
-  <ul class="footer__nav">
-    <li class="footer__nav-item">
-      <a href="#contactme">Contact Me</a>
-    </li>
-    <li class="footer__nav-item"><a href="/CV.html">CV</a></li>
-    <li class="footer__nav-item">
-      <a href="/portfolio.html">Portfolio</a>
-    </li>
-  </ul>
-  <div class="footer__icons">
-    <a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" target="blank"><img src="/img/linkedin-brands.svg" alt="Linkedin Logo">
-    </a>
-    <a href="https://github.com/elliotlafave123/elliotlafave123.github.io" target="_blank"><img src="/img/github-brands.svg" alt="GitHub Logo">
-    </a>
-    <a href="https://codepen.io/elliotlafave123" target="_blank"><img src="/img/codepen-brands.svg" alt="Codepen Logo">
-    </a>
+  <div class="c-footer__body">
+    <div class="c-footer__body-link-grid">
+      <div class="c-footer__body-link-group">
+        <a href="/pages/Login/login.html">Login</a>
+        <a href="/pages/Login/signUp.html">Sign up</a>
+        <a href="/account.html">My account</a>
+      </div>
+      <div class="c-footer__body-link-group">
+        <a href="https://tools.elliotlafave.com/#/">Developer tools</a>
+        <a href="https://uptime.elliotlafave.com/status/websites">Uptime</a>
+        <a href="https://components.elliotlafave.com/">Component library</a>
+        <a href="https://zeroheight.com/02f0b0962">Style guide</a>
+      </div>
+      <div class="c-footer__body-link-group">
+        <a href="/Get a quote/">Get a quote</a>
+        <a href="/pages/Articles/index.html">Articles</a>
+        <a href="/contact-me.html">Contact me</a>
+        <a href="/portfolio.html#all-projects">Projects</a>
+      </div>
+    </div>
+    <div class="c-footer__body-social">
+      <a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" class="c-button c-button--medium c-button--square c-button--ghost" aria-label="Aria label">
+        <img src="/img/linkedin-brands.svg" alt="Linkedin Logo">
+        Linkedin
+      </a>
+      <a href="https://codepen.io/elliotlafave123" class="c-button c-button--medium c-button--square c-button--ghost" aria-label="Aria label">
+        <img src="/img/codepen-brands.svg" alt="Codepen Logo">
+        Codepen
+      </a>
+      <a href="https://github.com/elliotlafave123/elliotlafave123.github.io" class="c-button c-button--medium c-button--square c-button--ghost" aria-label="Aria label">
+        <img src="/img/github-brands.svg" alt="GitHub Logo">
+        GitHub
+      </a>
+    </div>
   </div>
-  <p class="footer__paragraph">Designed and coded by Elliot La Fave</p>
-  <div class="footer__tags">
-  <span class="tag tag-firebase"><img srcset="https://camo.githubusercontent.com/80e44009afa2b2cd698de761004ee74f70cc232a9f9e1378b7620e6f3abf64df/68747470733a2f2f6a6f6e6e65616c2e6465762f617374726f2d6c6f676f2e737667" alt="Vue logo">Astro</span>
-  <span class="tag tag-firebase"><img srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="Vue logo">TypeScript</span>
-  <span class="tag tag-nodejs"><svg xmlns="http://www.w3.org/2000/svg" fill="#379922" viewBox="0 0 448 512">
-      <path d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6.4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.3c-1.8 1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V167.5c0-3 2.4-5.3 5.4-5.3h23.4c2.9 0 5.4 2.3 5.4 5.3V378c0 36.6-20 57.6-54.7 57.6-10.7 0-19.1 0-42.5-11.6l-48.4-27.9C8.1 389.2.7 376.3.7 362.4V149.3c0-13.8 7.4-26.8 19.4-33.7L204.6 9c11.7-6.6 27.2-6.6 38.8 0l184.7 106.7c12 6.9 19.4 19.8 19.4 33.7v213.1c0 13.8-7.4 26.7-19.4 33.7L243.4 502.8c-5.9 3.4-12.6 5.2-19.4 5.2zm149.1-210.1c0-39.9-27-50.5-83.7-58-57.4-7.6-63.2-11.5-63.2-24.9 0-11.1 4.9-25.9 47.4-25.9 37.9 0 51.9 8.2 57.7 33.8.5 2.4 2.7 4.2 5.2 4.2h24c1.5 0 2.9-.6 3.9-1.7s1.5-2.6 1.4-4.1c-3.7-44.1-33-64.6-92.2-64.6-52.7 0-84.1 22.2-84.1 59.5 0 40.4 31.3 51.6 81.8 56.6 60.5 5.9 65.2 14.8 65.2 26.7 0 20.6-16.6 29.4-55.5 29.4-48.9 0-59.6-12.3-63.2-36.6-.4-2.6-2.6-4.5-5.3-4.5h-23.9c-3 0-5.3 2.4-5.3 5.3 0 31.1 16.9 68.2 97.8 68.2 58.4-.1 92-23.2 92-63.4z"></path>
-    </svg>NodeJS</span>
-  <span class="tag tag-mongodb"><svg role="img" fill="#4e763b" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>MongoDB</title><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"></path>
-    </svg> MongoDB</span>
-</div>
-  <p class="footer__paragraph">Copyright © Elliot La Fave <span id="currentYear">0000</span>.</p>
+  <div class="c-footer__branding">
+    <div class="c-footer__branding-logo">
+      <a href="/index.html"><img src="/img/logo.png" alt="Footer Logo"></a>
+      <p><i class="fa-sharp fa-regular fa-copyright"></i> <span id="currentYear">0000</span> Elliot La Fave</p>
+    </div>
+    <div class="c-footer__branding-links">
+      <a href="https://elliotlafave.com/privacypolicy">Privacy policy</a>
+      <a href="https://elliotlafave.com/termsandconditions">Terms of service</a>
+      <a href="https://elliotlafave.com/cookiepolicy">Cookie policy</a>
+    </div>
+  </div>
 </footer>
   </body></html>
