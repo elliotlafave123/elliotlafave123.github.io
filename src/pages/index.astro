@@ -8,7 +8,17 @@ import GenericButton from "../components/GenericButton.vue";
   <section class="section-header" id="first-section">
     <div class="header__content">
       <h1>HI THERE,<br class="mobile-only" /> IM A FONTEND WEBSITE DEVELOPER</h1>
-      <GenericButton href="/Get a quote" corner="round" size="large" color="purple">Get a quote</GenericButton>
+      <div
+        class="c-flex-strip c-flex-strip--row c-flex-strip--align-flex-start c-flex-strip--justify-flex-start"
+        style="gap: 2rem;"
+      >
+        <GenericButton href="/Get a quote" corner="semi-round" size="large" color="primary" withBorder="true">
+          Get a quote
+        </GenericButton>
+        <GenericButton href="/Get a quote" corner="semi-round" size="large" color="primary-secondary" withBorder="true">
+          Contact me
+        </GenericButton>
+      </div>
     </div>
   </section>
 
@@ -26,7 +36,9 @@ import GenericButton from "../components/GenericButton.vue";
       I am a front-end website developer based in Manchester, UK. I'm working as an apprentice software developer at the
       General Medical Council learning to become a full-stack software developer.
     </p>
-    <GenericButton href="CV/" corner="round" size="medium" color="purple">View My CV</GenericButton>
+    <GenericButton href="CV/" corner="semi-round" size="large" color="primary" withBorder="true">
+      View My CV
+    </GenericButton>
   </section>
 
   <section class="skills" id="tech-stack">
@@ -86,18 +98,18 @@ import GenericButton from "../components/GenericButton.vue";
 
   <section class="portfolio" id="featuredIndex">
     <div class="title-container-flex">
-      <h3 class="skills__header u-margin-bottom-large">Featured Projects</h3>
-      <button class="btn-refresh" id="refreshBtn" style="background-color: var(--color-grey-dark)">
-        <i class="fa-solid fa-arrows-rotate"></i>
-      </button>
+      <h2 class="u-margin-bottom-medium">Featured Projects</h2>
     </div>
 
-    <div class="card__grid u-margin-bottom-medium" id="cardGrid3-home">
+    <div class="card__grid u-margin-bottom-medium" id="featuredCardsContainer">
       <!-- JavaScript Inserted Data Here -->
+      <div class="loader"></div>
     </div>
 
     <span class="u-margin-bottom-large">&nbsp;</span>
-    <GenericButton href="/portfolio/" corner="round" size="medium" color="purple">All projects</GenericButton>
+    <GenericButton href="/portfolio/" corner="semi-round" size="large" color="primary" withBorder="true">
+      All projects
+    </GenericButton>
   </section>
 </DefaultLayout>
 

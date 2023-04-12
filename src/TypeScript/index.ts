@@ -86,9 +86,8 @@ const ProjectsAppContainer: HTMLElement = document.getElementById("ProjectsAppCo
 if (exists(ProjectsAppContainer)) initPortfolioCardsApp();
 
 // Featured Projects initialisation
-const featuredCardsContainerPortfolio: HTMLElement = document.getElementById("cardGrid3") as HTMLElement;
-const featuredCardsContainerHomepage: HTMLElement = document.getElementById("cardGrid3-home") as HTMLElement;
-if (exists(featuredCardsContainerPortfolio) || exists(featuredCardsContainerHomepage)) initJsPortfolioFeaturedCards();
+const featuredCardsContainerPortfolio: HTMLElement = document.getElementById("featuredCardsContainer") as HTMLElement;
+if (exists(featuredCardsContainerPortfolio)) initJsPortfolioFeaturedCards();
 
 ////////////////////////////
 // Articles

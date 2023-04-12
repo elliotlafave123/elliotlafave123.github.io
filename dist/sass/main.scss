@@ -10,7 +10,8 @@
 @import "base/typography";
 
 // COMPONENT LIBRARY
-@import "../../ComponentAssets//simpleComponents/button/button.scss";
+@import "../../ComponentAssets/simpleComponents/button/button.scss";
+@import "../../ComponentAssets/simpleComponents/layout/flexStrip/c-flex-strip.scss";
 
 // Forms
 @import "components/Forms/Form Fields/textInput";
@@ -50,6 +51,7 @@
 // Comments
 @import "components/CommentsSection/comments";
 @import "components/CommentsSection/addComment";
+@import "../../ComponentAssets/simpleComponents/projectCard/projectCard.scss";
 
 // Components - Assorted
 @import "components/scrollbar";
