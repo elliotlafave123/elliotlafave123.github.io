@@ -153,7 +153,7 @@ const darkMode = function () {
 };
 
 export const handleDarkMode = () => {
-  if (window.innerWidth < 400) {
+  if (window.innerWidth < 400 && deleteMobileDarkModeToggle) {
     deleteMobileDarkModeToggle.innerHTML = "";
   }
 
