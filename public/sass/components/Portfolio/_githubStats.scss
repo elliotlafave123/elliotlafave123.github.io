@@ -37,24 +37,9 @@
 	}
 
 	&-NameOfComponent {
-		position: absolute;
 		color: $color-primary;
 		font-size: 2.4rem;
 		font-weight: 600;
-		top: 1rem;
-		right: 4rem;
-
-		@include respond(laptop) {
-			top: 4rem;
-			right: 4rem;
-		}
-	}
-
-	img {
-		border-radius: 50%;
-		width: 10rem;
-		height: 10rem;
-		margin-top: 0.6rem;
 	}
 
 	&-container {

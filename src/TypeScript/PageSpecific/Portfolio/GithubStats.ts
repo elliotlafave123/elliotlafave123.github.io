@@ -23,7 +23,6 @@ export const initGitStats = () => {
 const ShowGithubStats = (data) => {
   const markup = `
     <p class="githubStats-NameOfComponent">GitHub Statistics</p>
-    <img src="/img/logo-dark.png" alt="" />
     <div class="githubStats-container">
         <div class="githubStats-top">
             <h2>${data.name}</h2>
