@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="./index.3a01df49.css" />
-		<script defer src="./index.8cfc62b9.js"></script>
-		<script defer src="./index.c8b7409b.js"></script>
-		<script
-			src="https://kit.fontawesome.com/873062b8ef.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
-	<body>
-		<header id="header">
-			<div class="icons">
-				<button id="openModal">
-					<i class="fa-solid fa-question"></i>
-				</button>
-				<button id="reset">
-					<i class="fa-solid fa-arrow-rotate-right"></i>
-				</button>
-			</div>
-			<h1>2048</h1>
-			<div class="score-container">
-				<span>Score</span>
-				<p id="score">0,000</p>
-			</div>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.3a01df49.css" />
+    <script defer src="./index.8cfc62b9.js"></script>
+    <script defer src="./index.c8b7409b.js"></script>
+    <script src="https://kit.fontawesome.com/ecfebc6e17.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="icons">
+        <button id="openModal">
+          <i class="fa-solid fa-question"></i>
+        </button>
+        <button id="reset">
+          <i class="fa-solid fa-arrow-rotate-right"></i>
+        </button>
+      </div>
+      <h1>2048</h1>
+      <div class="score-container">
+        <span>Score</span>
+        <p id="score">0,000</p>
+      </div>
+    </header>
 
-		<div id="game-board"></div>
+    <div id="game-board"></div>
 
-		<div class="modal-container" id="modalContainer">
-			<div class="modal">
-				<button id="closeModal">
-					<i class="fa-solid fa-xmark"></i>
-				</button>
-				<h2>How To Play</h2>
-				<p>
-					Combine tiles of the same number in an attempt to create a
-					tile with the value 2048.
-				</p>
-				<p>
-					Pressing the arrow keys or swiping across the game board
-					will move all tiles in the direction of the key
-					pressed/swipe. After all the tiles are done moving a new
-					tile with the value of 2 or 4 will be created in a random
-					empty cell.
-				</p>
-				<p>
-					Two tiles with the same number will merge when they collide
-					to create a single tile with double the value.
-				</p>
-				<p>
-					The game is over when there are no valid ways for you to
-					move the tiles.
-				</p>
-			</div>
-		</div>
-	</body>
+    <div class="modal-container" id="modalContainer">
+      <div class="modal">
+        <button id="closeModal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2>How To Play</h2>
+        <p>Combine tiles of the same number in an attempt to create a tile with the value 2048.</p>
+        <p>
+          Pressing the arrow keys or swiping across the game board will move all tiles in the direction of the key
+          pressed/swipe. After all the tiles are done moving a new tile with the value of 2 or 4 will be created in a
+          random empty cell.
+        </p>
+        <p>
+          Two tiles with the same number will merge when they collide to create a single tile with double the value.
+        </p>
+        <p>The game is over when there are no valid ways for you to move the tiles.</p>
+      </div>
+    </div>
+  </body>
 </html>

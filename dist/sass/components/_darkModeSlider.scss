@@ -1,17 +1,15 @@
 .toggle-container {
-  margin-right: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 7px;
 
-  &-sun {
-    width: 2rem;
-    height: 1.86rem;
+  @include respond(tab-port) {
+    justify-content: flex-start;
   }
 
-  &-moon {
-    width: 1.2rem;
-    height: 1.2rem;
+  i {
+    font-size: 19px;
   }
 }
 
@@ -30,8 +28,8 @@
   height: 24px;
 }
 
-.toggle:checked + .label {
-  background-color: #ffffff;
+.toggle:checked + .darkModeLabel > .ball {
+  animation: slideOn 0.3s linear forwards;
 }
 
 .ball {
@@ -48,7 +46,7 @@
   animation: slideOff 0.3s linear forwards;
 }
 
-.toggle:checked + .label .ball {
+.toggle:checked + .ball {
   animation: slideOn 0.3s linear forwards;
 }
 

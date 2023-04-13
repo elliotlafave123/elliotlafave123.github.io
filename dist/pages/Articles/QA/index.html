@@ -28,107 +28,79 @@
   <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
 
   <title>QA | Elliotlafave.com</title>
-<link rel="stylesheet" href="/assets/My Process.3674ecaf.css" /></head>
+<link rel="stylesheet" href="/assets/My Process.944795bc.css" /></head>
 
   <body>
-    <nav aria-label="Skip Links">
-  <ul class="off-screen">
-    <li>
-      <a href="#navigation" class="skip-link"> Skip to Primary Navigation</a>
-    </li>
-    <li>
-      <a href="#first-section" class="skip-link"> Skip to Primary Content</a>
-    </li>
-  </ul>
-</nav>
-<div class="signedInStrip" id="signedInStrip">
-  <div>
-    <p id="logOutButton">Log Out</p>
-    <a href="/account.html">Account Details</a>
+    <div class="c-accessibility-menu">
+  <div class="c-accessibility-menu__item">
+    <a href="#main" class="c-accessibility-menu__link">Skip to main content</a>
   </div>
 </div>
-<div class="signedInStrip signedInStrip-warning" id="signedInStripWarning">
-  <span>Please verify your email address</span>
-  <div>
-    <a href="/Login/verifyEmail.html">Verify email</a>
+
+<button class="c-mobile-menu-toggle" aria-label="Open menu">
+  <i class="fa-sharp fa-regular fa-bars"></i>
+</button>
+
+<header class="c-header">
+  <div class="c-header__top">
+    <div class="c-header__logo">
+      <a href="/" class="c-header__logo-link">
+        <img src="https://d33wubrfki0l68.cloudfront.net/de4eb2840bd995fff8693e59dfbff5e8f7036730/36519/img/logo.png" alt="Elliot Lafave Logo" class="c-header__logo-image">
+        <p>elliotlafave.com</p>
+      </a>
+    </div>
+
+    <div class="c-header__authentication">
+      <a href="/pages/login/signup.html" class="c-header__authentication-link">Sign up</a>
+      <a href="/pages/login/login.html" class="c-header__authentication-link">Log in</a>
+    </div>
   </div>
-</div>
-<!-- --- Navigation --- -->
-<div class="navigation">
-  <input type="checkbox" class="navigation__checkbox" id="navi-toggle" tabindex="-1">
-  <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
-  <div class="navigation__background">&nbsp;</div>
-
-  <ul class="desktop__nav">
-    <div class="logo">
-      <a href="/index.html" id="navigation"><img src="/img/logo.png" alt="Logo" class="logo-img"></a>
+  <div class="c-header__bottom">
+    <nav class="c-header__navigation">
+      <ul class="c-header__navigation-list">
+        <li class="c-header__navigation-item">
+          <a href="/index.html" class="c-header__navigation-link storeBackLink">Home</a>
+        </li>
+        <li class="c-header__navigation-item">
+          <a href="/CV.html" class="c-header__navigation-link storeBackLink">CV</a>
+        </li>
+        <li class="c-header__navigation-item is-primary">
+          <a href="/portfolio.html" class="c-header__navigation-link storeBackLink">Portfolio <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
+          <ul class="c-header__navigation-list c-header__sub-navigation">
+            <li class="c-header__navigation-item">
+              <a href="/portfolio.html#ProjectsAppContainer" class="c-header__navigation-link storeBackLink">Projects</a>
+            </li>
+          </ul>
+        </li>
+        <li class="c-header__navigation-item is-primary">
+          <a href="/pages/articles/index.html" class="c-header__navigation-link storeBackLink">Articles <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
+          <ul class="c-header__navigation-list c-header__sub-navigation">
+            <li class="c-header__navigation-item">
+              <a href="/pages/Articles/Personal/index.html" class="c-header__navigation-link storeBackLink">Personal</a>
+            </li>
+            <li class="c-header__navigation-item">
+              <a href="/pages/articles/gmc%20work/index.html" class="c-header__navigation-link storeBackLink">Work</a>
+            </li>
+            <li class="c-header__navigation-item">
+              <a href="/pages/Articles/QA/index.html" class="c-header__navigation-link storeBackLink">Apprenticeship</a>
+            </li>
+          </ul>
+        </li>
+        <li class="c-header__navigation-item">
+          <a href="/contact-me.html" class="c-header__navigation-link storeBackLink">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="toggle-container">
+      <i class="fa-sharp fa-regular fa-sun"></i>
+      <input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1">
+      <label for="checkboxSlider" class="darkModeLabel">
+        <div class="ball"></div>
+      </label>
+      <i class="fa-sharp fa-regular fa-moon"></i>
     </div>
-
-    <div>
-      <li class="desktop__nav-item deleteMobile">
-        <div class="toggle-container">
-          <img src="/img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun">
-          <div>
-            <input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1">
-            <label for="checkboxSlider" class="darkModeLabel" tabindex="0">
-              <div class="ball"></div>
-            </label>
-          </div>
-          <img src="/img/icons/icon-moon.svg" alt="moon icon" class="toggle-container-moon">
-        </div>
-      </li>
-
-      <li class="desktop__nav-item">
-        <div class="link-wrapper">
-          <a href="/index.html" class="link hover-12"><p class="link-text">Home</p></a>
-        </div>
-      </li>
-      <li class="desktop__nav-item">
-        <div class="link-wrapper">
-          <a href="/CV.html" class="link hover-12"><p class="link-text">My CV</p></a>
-        </div>
-      </li>
-      <li class="desktop__nav-item">
-        <div class="link-wrapper">
-          <a href="/portfolio.html" class="link hover-12"><p class="link-text">Portfolio</p></a>
-        </div>
-      </li>
-    </div>
-  </ul>
-
-  <nav class="navigation__nav">
-    <ul class="navigation__list">
-      <li class="navigation__item">
-        <a href="/index.html" class="navigation__link" tabindex="-1">Home</a>
-      </li>
-      <li class="navigation__item">
-        <a href="/contact-me.html" class="navigation__link" tabindex="-1">Contact Me</a>
-      </li>
-      <li class="navigation__item">
-        <a href="/CV.html" class="navigation__link" tabindex="-1">My CV</a>
-      </li>
-      <li class="navigation__item">
-        <a href="/portfolio.html" class="navigation__link" tabindex="-1">Portfolio</a>
-      </li>
-      <li class="navigation__item">
-        <div class="toggle-container">
-          <img src="/img/icons/icon-sun.svg" alt="sun icon" class="toggle-container-sun">
-          <div>
-            <input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1">
-            <label for="checkboxSlider" class="darkModeLabel">
-              <div class="ball"></div>
-            </label>
-          </div>
-          <img src="/img/icons/icon-moon.svg" alt="moon icon" class="toggle-container-moon">
-        </div>
-      </li>
-    </ul>
-  </nav>
-</div>
-
-<section class="logo mobile-only">
-  <a href="/index.html" tabindex="-1"><img src="/img/logo.png" alt="Logo" class="logo-img mobile-only"></a>
-</section>
+  </div>
+</header>
     <section class="article__container">
 	<div class="article__interactions article__interactions-menu">
 		<div class="breadcrumb"></div>
@@ -176,7 +148,7 @@
     <div class="c-footer__head-links">
       <a href="/index">Home</a>
       <a href="/CV">CV</a>
-      <a href="/portfolio">Contact</a>
+      <a href="/portfolio">Portfolio</a>
     </div>
   </div>
   <div class="c-footer__body">

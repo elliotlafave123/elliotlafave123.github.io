@@ -2,7 +2,7 @@ import { displayComments } from "./Comments/displayComments";
 import { handlePostComment } from "./Comments/handlePostComment";
 import { checkLogin } from "./Comments/displaySignedInStrip";
 import { initPortfolioCardsApp } from "./Portfolio Cards APP/InitPortfolioCardsApp";
-import { initKeyboardNavigation } from "./Accesibility/keyboardNavigation";
+// import { initKeyboardNavigation } from "./Accesibility/keyboardNavigation";
 // Set Dark Mode
 import { setDarkMode } from "./DarkMode/setDarkMode";
 import { handleDarkMode } from "./DarkMode/handleDarkMode";
@@ -28,6 +28,11 @@ import { HandleCookies } from "./CookieBanner/ShowCookieBanner";
 import { ShowSentCheckmark } from "./ContactMeForm/ShowSentCheckmark";
 // Initialize client screening form
 import { InitClientScreeningForm } from "./Forms/ClientScreening";
+// Header
+import { initHeader } from "../../ComponentAssets/simpleComponents/layout/header/header";
+
+// Init Header
+initHeader();
 
 // Function to check if element exists
 const exists = (el: HTMLElement) => {
@@ -79,7 +84,7 @@ const tooltipContainer: HTMLElement = document.querySelector(".tooltip") as HTML
 if (exists(tooltipContainer)) initTooltip();
 
 // init keyboard navigation
-initKeyboardNavigation();
+// initKeyboardNavigation();
 
 // Projects app initialisation
 const ProjectsAppContainer: HTMLElement = document.getElementById("ProjectsAppContainer") as HTMLElement;
