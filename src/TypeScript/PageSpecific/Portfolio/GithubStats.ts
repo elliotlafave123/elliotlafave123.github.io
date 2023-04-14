@@ -30,7 +30,6 @@ const ShowGithubStats = (data) => {
         </div>
 
         <span>@${data.login}</span>
-        <p>${data.bio.slice(0, 142)}.</p>
 
         <div class="githubStats-stats">
             <div class="githubStats-stats-section">

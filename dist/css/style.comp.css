@@ -456,7 +456,6 @@ body {
   color: #ffffff; }
 
 .c-header {
-  z-index: 100;
   display: flex;
   flex-direction: column;
   background-color: #000000;
@@ -509,24 +508,19 @@ body {
       align-items: center;
       text-decoration: none;
       color: #ffffff; }
-      .c-header__logo-link p {
-        font-size: 1.8rem; }
       .c-header__logo-link:hover {
-        text-decoration: underline;
-        color: #ffffff; }
+        text-decoration: underline; }
     .c-header__logo-image {
       width: 40px;
       height: auto;
       margin-right: 10px; }
   .c-header__authentication {
     display: flex;
-    align-items: center;
-    gap: 10px; }
+    align-items: center; }
     .c-header__authentication-link {
       color: #ffffff;
       text-decoration: none;
-      margin-left: 15px;
-      font-size: 18px; }
+      margin-left: 15px; }
       @media (max-width: 56.25em) {
         .c-header__authentication-link {
           display: none;
@@ -537,8 +531,7 @@ body {
           .c-header--open .c-header__authentication-link {
             display: block; } }
       .c-header__authentication-link:hover {
-        text-decoration: underline;
-        color: #ffffff; }
+        text-decoration: underline; }
   .c-header__navigation-list {
     display: flex;
     list-style: none;
@@ -547,8 +540,7 @@ body {
     @media (max-width: 56.25em) {
       .c-header__navigation-list {
         flex-direction: column;
-        justify-content: flex-start;
-        margin-bottom: 30px; } }
+        justify-content: flex-start; } }
     .c-header__navigation-list.c-header__sub-navigation {
       display: none;
       position: absolute;
@@ -573,12 +565,8 @@ body {
   .c-header__navigation-link {
     color: #ffffff;
     text-decoration: none;
-    padding: 11px 25px;
-    display: block;
-    font-size: 16px !important;
-    line-height: 1;
-    border-bottom: 1px solid transparent;
-    height: 100%; }
+    padding: 10px 25px;
+    display: block; }
     @media (max-width: 56.25em) {
       .c-header__navigation-link {
         padding: 10px 0; } }
@@ -590,11 +578,9 @@ body {
         .c-header__navigation-link .c-header__chevron {
           display: none; } }
     .c-header__navigation-link:hover {
-      background-color: #0e0e0e;
-      color: #ffffff; }
+      background-color: #2c2c2c; }
   .c-header__navigation-item {
-    position: relative;
-    border-bottom: 1px solid transparent; }
+    position: relative; }
     .c-header__navigation-item:hover .c-header__sub-navigation, .c-header__navigation-item:focus-within .c-header__sub-navigation, .c-header__navigation-item:focus-visible .c-header__sub-navigation {
       display: flex;
       flex-direction: column; }
@@ -607,7 +593,7 @@ body {
         display: flex;
         flex-direction: column; }
       .c-header__navigation-item.is-primary {
-        margin: 15px 0 0 0; }
+        margin: 15px 0; }
       .c-header__navigation-item.is-primary > .c-header__navigation-link .c-header__chevron {
         transform: rotate(-180deg); } }
 
@@ -633,19 +619,18 @@ body {
     padding: 10px 0; }
 
 .c-mobile-menu-toggle {
-  z-index: 110;
   position: absolute;
   top: 21px;
   right: 2.5rem;
   background-color: transparent;
+  color: #ffffff;
   border: none;
   cursor: pointer;
   padding: 0;
   margin: 0;
-  display: none; }
-  .c-mobile-menu-toggle i {
-    font-size: 25px;
-    color: #ffffff; }
+  display: none;
+  font-size: 25px;
+  z-index: 2; }
   @media (max-width: 56.25em) {
     .c-mobile-menu-toggle {
       display: block; } }
@@ -1602,21 +1587,9 @@ body {
         margin-top: 0;
         margin-bottom: 1.6rem; } }
   .githubStats-NameOfComponent {
-    position: absolute;
     color: var(--color-primary);
     font-size: 2.4rem;
-    font-weight: 600;
-    top: 1rem;
-    right: 4rem; }
-    @media (max-width: 100em) {
-      .githubStats-NameOfComponent {
-        top: 4rem;
-        right: 4rem; } }
-  .githubStats img {
-    border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-    margin-top: 0.6rem; }
+    font-weight: 600; }
   .githubStats-container {
     display: flex;
     flex-direction: column; }
