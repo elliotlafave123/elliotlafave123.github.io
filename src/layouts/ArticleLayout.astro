@@ -20,34 +20,36 @@ const { title, date, time, streamID } = Astro.props;
   <BaseHead title={title} />
   <body>
     <Header />
-    <!-- --- Article --- -->
-    <section class="article">
-      <!-- Interactions -->
-      <div class="breadcrumb"></div>
-      <div class="article__interactions">
-        <div class="article__interactions--section">
-          <a href="../../index.html" class="btn-square btn-square--back" id="first-section"
-            ><i class="fa-solid fa-arrow-left-long"></i>Back</a
-          >
+    <main id="main">
+      <!-- --- Article --- -->
+      <section class="article">
+        <!-- Interactions -->
+        <div class="breadcrumb"></div>
+        <div class="article__interactions">
+          <div class="article__interactions--section">
+            <a href="../../index.html" class="btn-square btn-square--back" id="first-section"
+              ><i class="fa-solid fa-arrow-left-long"></i>Back</a
+            >
+          </div>
+          <div class="article__interactions--section">
+            <button class="btn-square btn-square--green"><i class="fa-solid fa-check"></i>Approved</button>
+          </div>
         </div>
-        <div class="article__interactions--section">
-          <button class="btn-square btn-square--green"><i class="fa-solid fa-check"></i>Approved</button>
-        </div>
-      </div>
-      <div class="article__header">
-        <h2>{title}</h2>
+        <div class="article__header">
+          <h1>{title}</h1>
 
-        <div class="article__header-info">
-          <span>Elliot La Fave</span>
-          <p>&#183;</p>
-          <span>{date}</span>
-          <p>&#183;</p>
-          <span>{time}</span>
-        </div>
+          <div class="article__header-info">
+            <span>Elliot La Fave</span>
+            <p>&#183;</p>
+            <span>{date}</span>
+            <p>&#183;</p>
+            <span>{time}</span>
+          </div>
 
-        <slot />
-      </div>
-    </section>
+          <slot />
+        </div>
+      </section>
+    </main>
 
     <CommentSection streamID={streamID} />
     <Footer />

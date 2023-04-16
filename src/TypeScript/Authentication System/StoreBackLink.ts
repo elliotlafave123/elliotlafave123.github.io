@@ -1,6 +1,8 @@
 export const initStoreBackLink = () => {
   const storeBackLinkButton: HTMLAnchorElement[] = Array.from(document.querySelectorAll(".storeBackLink"));
-  const verifyEmailStripButton: HTMLAnchorElement = document.getElementById("signedInStripWarning")?.querySelector("a") as HTMLAnchorElement;
+  const verifyEmailStripButton: HTMLAnchorElement = document
+    .getElementById("signedInStripWarning")
+    ?.querySelector("a") as HTMLAnchorElement;
   const verifyEmailButton: HTMLAnchorElement = document.getElementById("verifyEmailButton") as HTMLAnchorElement;
 
   if (localStorage.getItem("BacklinkShouldScroll") === "true") {
@@ -8,7 +10,7 @@ export const initStoreBackLink = () => {
     localStorage.setItem("BacklinkShouldScroll", "false");
   }
 
-  if(storeBackLinkButton) {
+  if (storeBackLinkButton) {
     storeBackLinkButton.forEach((el: HTMLAnchorElement) => {
       el.addEventListener("click", (e) => {
         e.preventDefault();
@@ -19,14 +21,16 @@ export const initStoreBackLink = () => {
     });
   }
 
-  if(verifyEmailButton) {
+  if (verifyEmailButton) {
     verifyEmailButton.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.setItem("backLink", window.location.href);
       localStorage.setItem("scrollPosition", window.scrollY.toString());
       window.location.replace(verifyEmailButton.href);
     });
-  
+  }
+
+  if (verifyEmailStripButton) {
     verifyEmailStripButton.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.setItem("backLink", window.location.href);

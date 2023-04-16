@@ -6,28 +6,29 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
 
 <DefaultLayout title="CV">
   <!-- Main Content -->
-  <section class="work" id="first-section">
-    <div class="work__title u-margin-bottom-medium">
-      <h3 class="work__title--title u-margin-bottom-large">My CV</h3>
-      <div class="work__title--buttons">
-        <GenericButton href="../Files/CV .docx" corner="semi-round" size="large" color="primary" withBorder="true">
-          Download CV
-        </GenericButton>
-        <GenericButton
-          href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES"
-          corner="semi-round"
-          size="large"
-          color="gray"
-          withBorder="true"
-        >
-          Linkedin
-        </GenericButton>
-      </div>
+  <section
+    class="c-container c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-space-between"
+    id="first-section"
+  >
+    <h1>My CV</h1>
+    <div class="work__title--buttons">
+      <GenericButton href="../Files/CV .docx" corner="semi-round" size="large" color="primary" withBorder="true">
+        Download CV
+      </GenericButton>
+      <GenericButton
+        href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES"
+        corner="semi-round"
+        size="large"
+        color="gray"
+        withBorder="true"
+      >
+        Linkedin
+      </GenericButton>
     </div>
   </section>
 
   <section class="experience" id="workExperience">
-    <div class="experience__main--title"><h5>Work experience</h5></div>
+    <h2>Work experience</h2>
 
     <div class="experience--1">
       <div class="experience__title-container">
@@ -71,11 +72,11 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
   <section class="section-education" id="education">
     <div class="education">
       <div class="education__schools">
-        <h5 class="education__title--title u-margin-bottom-large">Education</h5>
+        <h2>Education</h2>
 
         <div class="education__schools--school">
           <img src="/img/CV Logos/QA.jpg" />
-          <p>QA Apprenticeships</p>
+          <p class="education__schools--school">QA Apprenticeships</p>
         </div>
         <p class="education__schools--date">2022 - present</p>
 
@@ -110,7 +111,7 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
 
   <section class="section-achievements" id="Achievements">
     <div class="achievements">
-      <h5 class="achievements__title u-margin-bottom-large">Achievements</h5>
+      <h2>Achievements</h2>
       <p class="education__grades--title u-margin-bottom-medium">Eco Award</p>
       <p class="achievements__paragraph u-margin-bottom-medium">
         Won the Eco Award from Greater Manchester Youth Council for a clean air project I helped work on. Our spray
@@ -124,7 +125,7 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
     </div>
   </section>
   <section class="section-certifications" id="Certificates">
-    <h5>Certifications</h5>
+    <h2>Certifications</h2>
     <div class="certificates">
       <CertificationComponent
         imgUri="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/BCS_logo_2021.svg/1200px-BCS_logo_2021.svg.png"
@@ -140,9 +141,9 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
   </section>
 
   <section class="section-certifications" id="Certificates">
-    <h5>Certificates</h5>
+    <h2>Certificates</h2>
     <div class="certificates">
-      <!-- <a
+      <a
         href="https://app.pluralsight.com/learner/user/courses/v2/905cfabb-a2dd-45d7-9a46-2709bef48f9b/certificate"
         target="_blank"
       >
@@ -150,7 +151,7 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
           <p class="certificate--title">Controlling Program Flow in C# 9</p>
           <img src="/img/certificates/ControllingProgramFlow.png" alt="Complete JavaScript Course Certificate Udemy" />
         </div>
-      </a> -->
+      </a>
 
       <a href="https://certificates.cloudacademy.com/8d7025efbaaa338843a3c34ad34fa5690e2110fe.pdf" target="_blank">
         <div class="certificate">
@@ -183,7 +184,7 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
         </div>
       </a>
 
-      <!-- <a
+      <a
         href="https://app.pluralsight.com/learner/user/courses/v2/0096b00d-2398-435a-82f7-3f5401408ab1/certificate"
         target="_blank"
       >
@@ -191,7 +192,7 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
           <p class="certificate--title">C# Fundimentals</p>
           <img src="/img/certificates/CSharpFundimentals.png" alt="Complete JavaScript Course Certificate Udemy" />
         </div>
-      </a> -->
+      </a>
 
       <!-- <a
         href="https://app.pluralsight.com/learner/user/courses/v2/ef199181-dfb5-4a66-906b-e1ca467ec5e9/certificate"
@@ -221,7 +222,7 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
 
   <section class="skills">
     <img src="/img/percentages.png" alt="" class="skills__img" />
-    <h3 class="skills__header u-margin-bottom-large" id="Skills">My Skills</h3>
+    <h2 id="Skills">My Skills</h2>
     <div class="skill-grid">
       <div class="skill-grid__item--0">
         <p class="skill__name">HTML</p>

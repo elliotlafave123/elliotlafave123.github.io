@@ -1,20 +1,9 @@
 .portfolio {
+  @include centered-container;
   background-color: $color-grey-dark-2;
   box-sizing: border-box;
-  padding-left: calc((100vw - 1140px) / 2);
-  padding-right: calc((100vw - 1140px) / 2);
-  padding-top: 75px;
-  padding-bottom: 120px;
   color: $color-white;
   position: relative;
-
-  h2 {
-    color: $text-light;
-  }
-
-  @include respond(tab-port) {
-    padding: 2rem 2.5rem 3rem 2.5rem;
-  }
 
   &--2 {
     background-color: transparent;

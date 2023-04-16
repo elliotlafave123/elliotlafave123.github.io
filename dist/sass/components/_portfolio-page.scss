@@ -3,14 +3,6 @@
   color: $color-white;
   position: relative;
 
-  @include respond(tab-port) {
-    padding: 0vh 10vw 0rem 10vw;
-  }
-
-  @include respond(phone) {
-    padding: 0vh 2.5rem 0rem 2.5rem;
-  }
-
   &__buttons {
     display: flex;
     align-items: center;

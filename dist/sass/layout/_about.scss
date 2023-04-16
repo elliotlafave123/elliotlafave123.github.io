@@ -6,11 +6,6 @@
   color: $text-light;
   display: block;
 
-  &__heading {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
-
   a {
     margin-bottom: 1rem;
   }
@@ -18,9 +13,6 @@
   &__paragraph {
     margin: 0 auto 6rem auto;
     width: 50vw;
-    font-family: $font-zen;
-    font-size: 3rem;
-    font-weight: 900;
 
     @include respond(laptop) {
       font-size: 2.5rem;

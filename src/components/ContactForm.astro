@@ -2,12 +2,11 @@
 import ErrorSummary from "./ErrorSummary.vue";
 ---
 
-<section class="contact u-margin-top-large">
-  <img src="/img/contact.png" alt="" class="contact__img" />
-  <h3 class="skills__header u-margin-bottom-large" id="contactme">Contact Me</h3>
+<section class="c-container">
+  <h1 id="contactme">Contact Me</h1>
 
   <div class="contact__form">
-    <form name="contact" method="POST" data-netlify="true" class="form" id="form-contact" netlify>
+    <form name="contact" method="POST" data-netlify="true" class="c-form" id="form-contact" netlify>
       <!-- <ErrorSummary
         class="form__input-small"
         href="#email"
@@ -15,39 +14,21 @@ import ErrorSummary from "./ErrorSummary.vue";
         message="Enter a correct email"
         example="example@example.com"
       /> -->
-      <div class="form__group">
-        <input
-          type="text"
-          class="form__input form__input-small"
-          placeholder="Full name"
-          id="name"
-          name="name"
-          required
-        />
-        <label for="name" class="form__label">Full name</label>
+
+      <div class="c-form__element">
+        <label for="name" class="c-form__label">Full name<span class="c-form__required">*</span></label>
+        <input type="text" id="name" name="name" required class="c-text-input" required />
       </div>
 
-      <div class="form__group">
-        <input
-          type="email"
-          class="form__input form__input-small"
-          placeholder="Email address"
-          id="email"
-          name="email"
-          required
-        />
-        <label for="email" class="form__label">Email address</label>
+      <div class="c-form__element">
+        <label for="email" class="c-form__label">Email address<span class="c-form__required">*</span></label>
+        <input type="email" id="email" name="email" required class="c-text-input" required />
       </div>
 
-      <div class="form__group">
-        <label for="message" class="form__label u-margin-bottom-small">Your message</label>
-        <textarea
-          class="form__input form__input-textarea"
-          id="message"
-          rows="8"
-          form="form-contact"
-          name="message"
-          required></textarea>
+      <div class="c-form__element">
+        <label for="message" class="c-form__label">Your message <span class="c-form__required">*</span></label>
+        <span class="c-form__hint">Enter your message in the textbox below.</span>
+        <textarea id="message" rows="8" form="form-contact" name="message" required class="c-text-area"></textarea>
       </div>
 
       <!-- Public -->
@@ -68,7 +49,7 @@ import ErrorSummary from "./ErrorSummary.vue";
 
     <input
       value="Send Message  →"
-      class="btn btn-purple-post u-margin-top-small"
+      class="u-margin-top-medium c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border"
       type="submit"
       id="postContactMeFormButton"
       disabled

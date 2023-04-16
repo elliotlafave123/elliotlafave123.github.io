@@ -1,126 +1,125 @@
 .githubStats {
-	position: relative;
-	background-color: $color-card;
-	border-radius: 0.8rem;
-	padding: 4rem 4rem;
+  position: relative;
+  background-color: $color-card;
+  border-radius: 0.8rem;
+  padding: 4rem 4rem;
 
-	display: grid;
-	grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 
-	font-family: $font-lato;
-	letter-spacing: 0px;
-	color: $text-light;
+  font-family: $font-lato;
+  letter-spacing: 0px;
+  color: $text-light;
 
-	height: max-content;
-	margin-top: 10rem;
+  height: max-content;
 
-	@include respond(tab-land) {
-		margin: 0 10vw;
-	}
+  @include respond(tab-land) {
+    margin: 0 10vw;
+  }
 
-	@include respond(tab-port) {
-		margin: 0 10rem;
-	}
+  @include respond(tab-port) {
+    margin: 0 10rem;
+  }
 
-	@include respond(phone) {
-		grid-template-columns: 1fr;
-		margin: 0 2rem;
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    margin: 0 2rem;
 
-		img {
-			margin-top: 0;
-			margin-bottom: 1.6rem;
-		}
-	}
+    img {
+      margin-top: 0;
+      margin-bottom: 1.6rem;
+    }
+  }
 
-	&-NameOfComponent {
-		color: $color-primary;
-		font-size: 2.4rem;
-		font-weight: 600;
-	}
+  &-NameOfComponent {
+    color: $color-primary;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
 
-	&-container {
-		display: flex;
-		flex-direction: column;
+  &-container {
+    display: flex;
+    flex-direction: column;
 
-		span {
-			color: $color-primary;
-			font-size: 1.6rem;
-			font-weight: 600;
-			margin-bottom: 2rem;
-		}
+    span {
+      color: $color-primary;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
 
-		p {
-			font-size: 1.8rem;
-			font-weight: 500;
-		}
-	}
+    p {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  }
 
-	&-top {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-		@include respond(phone) {
-			flex-direction: column;
-			align-items: flex-start;
-		}
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-		h2 {
-			font-size: 2.8rem;
-			font-weight: 600;
-		}
-	}
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+  }
 
-	&-stats {
-		background-color: $color-grey-dark;
-		border-radius: 0.5rem;
-		padding: 1rem 2.6rem;
+  &-stats {
+    background-color: $color-grey-dark;
+    border-radius: 0.5rem;
+    padding: 1rem 2.6rem;
 
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-		margin-top: 2rem;
+    margin-top: 2rem;
 
-		&-section {
-			p {
-				font-size: 1.6rem;
-			}
+    &-section {
+      p {
+        font-size: 1.6rem;
+      }
 
-			span {
-				font-size: 2.4rem;
-				letter-spacing: 2px;
-				font-weight: 800;
-			}
-		}
-	}
+      span {
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        font-weight: 800;
+      }
+    }
+  }
 
-	&-info {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		margin-top: 2rem;
-		gap: 1rem;
+  &-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    gap: 1rem;
 
-		@include respond(phone) {
-			grid-template-columns: 1fr;
-		}
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
 
-		&-section {
-			display: flex;
-			align-items: center;
+    &-section {
+      display: flex;
+      align-items: center;
 
-			@include respond(phone) {
-				margin-bottom: 0.5rem;
-			}
+      @include respond(phone) {
+        margin-bottom: 0.5rem;
+      }
 
-			i {
-				font-size: 1.6rem;
-				margin-right: 0.8rem;
-			}
+      i {
+        font-size: 1.6rem;
+        margin-right: 0.8rem;
+      }
 
-			p {
-				font-size: 1.6rem;
-			}
-		}
-	}
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }

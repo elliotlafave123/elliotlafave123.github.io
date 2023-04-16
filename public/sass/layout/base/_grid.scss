@@ -1,39 +1,63 @@
 .o-row-4-col {
   width: 100%;
-  padding: 2rem $section-padding-x;
+  @include centered-container;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 6rem 2rem;
 
   @include respond(laptop) {
-    grid-template-columns: repeat(3, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
     gap: 5rem 2rem;
   }
 
   @include respond(tab-land) {
-    grid-template-columns: repeat(3, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
     gap: 5rem 2rem;
   }
 
   @include respond(tab-port) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 2rem;
   }
 
   @include respond(phone) {
     grid-template-columns: 1fr;
-    padding: 2rem 3rem;
+  }
+}
+
+// 3 col
+.o-row-3-col {
+  width: 100%;
+  @include centered-container;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem 2rem;
+
+  @include respond(laptop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 2rem;
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 2rem;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 2rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
   }
 }
 
 .o-row-2-col {
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: calc((100vw - 1140px) / 2);
-  padding-right: calc((100vw - 1140px) / 2);
+  @include centered-container;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -42,13 +66,5 @@
   @include respond(tab-land) {
     grid-template-columns: repeat(1, 1fr);
     gap: 5rem 2rem;
-  }
-
-  @include respond(tab-port) {
-    padding: 2rem 0rem;
-  }
-
-  @include respond(tab-port) {
-    padding: 2rem 0rem;
   }
 }

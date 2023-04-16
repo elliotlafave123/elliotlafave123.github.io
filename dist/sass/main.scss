@@ -8,22 +8,24 @@
 @import "base/utilities";
 @import "base/base";
 @import "base/animations";
-@import "base/typography";
+@import "../../ComponentAssets/sass/variables/typography.scss";
 
 // COMPONENT LIBRARY
 @import "../../ComponentAssets/simpleComponents/button/button.scss";
 @import "../../ComponentAssets/simpleComponents/layout/flexStrip/c-flex-strip.scss";
 @import "../../ComponentAssets/simpleComponents/layout/header/header.scss";
+@import "../../ComponentAssets/simpleComponents/layout/footer/c-footer.scss";
+@import "../../ComponentAssets/simpleComponents/layout/strip/c-strip.scss";
 
 // Forms
-@import "components/Forms/Form Fields/textInput";
-@import "components/Forms/Form Fields/c-text-area.scss";
-@import "components/Forms/Form Fields/c-radio-group.scss";
-@import "components/Forms/Form Fields/c-radio-button.scss";
-@import "components/Forms/Form Fields/c-select.scss";
-@import "components/Forms/Form Fields/c-checkbox-group.scss";
-@import "components/Forms/Form Fields/c-checkbox.scss";
-@import "components/Forms/c-form";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/textInput";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-text-area.scss";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-radio-group.scss";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-radio-button.scss";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-select.scss";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-checkbox-group.scss";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-checkbox.scss";
+@import "../../ComponentAssets/simpleComponents/Forms/c-form";
 
 // Components - Organised
 // Base
@@ -85,14 +87,11 @@
 @import "layout/skills";
 @import "layout/portfolio";
 @import "layout/contact";
-@import "layout/footer";
 @import "layout/work";
 @import "layout/education";
 @import "layout/achievements";
 @import "layout/message.scss";
 @import "layout/certifications";
-@import "layout/c-footer";
-@import "layout/c-strip";
 
 // Page Types
 @import "pages/defaultSection";
