@@ -34,7 +34,7 @@ verifyEmail = async () => {
     pinInput.value = "";
     if (res.status === 200) {
       localStorage.setItem("EmailToVerify", "");
-      window.location.replace("../../pages/Login/login.html");
+      window.location.replace("../../pages/login/login.html");
     } else if (res.status === 301) {
       pinBox.style.display = "block";
       resendCodeContainer.style.display = "block";

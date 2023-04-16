@@ -1,9 +1,9 @@
 const signUpButton = document.getElementById("signUpButton");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const firstName = document.getElementById("firstname");
-const lastName = document.getElementById("lastname");
-const displayName = document.getElementById("displayname");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const firstNameInput = document.getElementById("firstname");
+const lastNameInput = document.getElementById("lastname");
+const displayNameInput = document.getElementById("displayname");
 
 const length = document.getElementById("length");
 const upper = document.getElementById("upper");
@@ -17,7 +17,6 @@ const errorMessageEmail = document.getElementById("errorMessageEmail");
 const errorMessageEmailExists = document.getElementById("errorMessageEmailExists");
 const errorMessagePassword = document.getElementById("errorMessagePassword");
 
-// const API_URL = "http://localhost:3001/Auth/signup";
 const API_URL = "https://elliotapiserver.co.uk/Auth/signup";
 
 const state = {
@@ -35,105 +34,83 @@ const state = {
     emailUsed: false,
     password: false,
   },
-  errorMessage: undefined,
-  errorHidden: true,
 };
 
-signUp = async () => {
+const isValidEmail = (email) => {
+  const filter =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return filter.test(email);
+};
+
+const isEmpty = (value) => value === "";
+
+const signUp = async () => {
   if (!signUpButton) return;
 
-  let data = {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    displayName: displayName.value,
-    email: email.value,
-    password: password.value,
+  const data = {
+    firstName: firstNameInput.value,
+    lastName: lastNameInput.value,
+    displayName: displayNameInput.value,
+    email: emailInput.value,
+    password: passwordInput.value,
   };
 
   try {
-    let res = await fetch(API_URL, {
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
+
     if (res.status === 201) {
       localStorage.setItem("EmailToVerify", data.email);
-      window.location.replace("../../pages/Login/verifyEmail.html");
+      window.location.replace("../../pages/login/verifyemail.html");
     } else {
       throw new Error("Email already used");
     }
   } catch (error) {
     state.inputErrors.emailUsed = true;
     displayErrors();
-    state.errorMessage = error.message;
-    state.errorHidden = false;
-    setTimeout(() => {
-      state.errorHidden = true;
-    }, 5000);
   }
 };
 
-function hasLowerCase(str) {
-  return /[a-z]/.test(str);
-}
-function hasCapital(str) {
-  return /[A-Z]/.test(str);
-}
-function hasNumber(str) {
-  return /\d/.test(str);
-}
 const checkPassword = () => {
-  var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-  let val = password.value.toString();
+  const hasLowerCase = (str) => /[a-z]/.test(str);
+  const hasCapital = (str) => /[A-Z]/.test(str);
+  const hasNumber = (str) => /\d/.test(str);
 
-  val.length >= 8 ? (state.passwordChecks.passwordLength = true) : (state.passwordChecks.passwordLength = false);
-  hasLowerCase(val) && hasCapital(val)
-    ? (state.passwordChecks.upperAndLower = true)
-    : (state.passwordChecks.upperAndLower = false);
-  hasNumber(val) ? (state.passwordChecks.number = true) : (state.passwordChecks.number = false);
-  val.match(format) ? (state.passwordChecks.specialCharacter = true) : (state.passwordChecks.specialCharacter = false);
+  const val = passwordInput.value.toString();
+  const format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+  state.passwordChecks.passwordLength = val.length >= 8;
+  state.passwordChecks.upperAndLower = hasLowerCase(val) && hasCapital(val);
+  state.passwordChecks.number = hasNumber(val);
+  state.passwordChecks.specialCharacter = val.match(format) !== null;
+
   displayPasswordTicks();
 };
+
 const validatePassword = () => {
   checkPassword();
-  if (
-    state.passwordChecks.passwordLength &&
-    state.passwordChecks.number &&
-    state.passwordChecks.upperAndLower &&
-    state.passwordChecks.specialCharacter
-  ) {
-    state.inputErrors.password = false;
-    return true;
-  } else {
-    state.inputErrors.password = true;
+  const { passwordLength, upperAndLower, number, specialCharacter } = state.passwordChecks;
+  state.inputErrors.password = !(passwordLength && upperAndLower && number && specialCharacter);
+  return !state.inputErrors.password;
+};
+
+const verifyInputs = () => {
+  state.inputErrors.firstName = isEmpty(firstNameInput.value);
+  state.inputErrors.lastName = isEmpty(lastNameInput.value);
+  state.inputErrors.displayName = isEmpty(displayNameInput.value);
+  state.inputErrors.email = !isValidEmail(emailInput.value);
+
+  if (!isEmpty(passwordInput.value) && !validatePassword()) {
+    displayErrors();
     return false;
   }
-};
-const verifyInputs = () => {
-  firstName.value == "" ? (state.inputErrors.firstName = true) : (state.inputErrors.firstName = false);
-  lastName.value == "" ? (state.inputErrors.lastName = true) : (state.inputErrors.lastName = false);
-  displayName.value == "" ? (state.inputErrors.displayName = true) : (state.inputErrors.displayName = false);
-  email.value == "" ? (state.inputErrors.email = true) : (state.inputErrors.email = false);
-  var filter =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  filter.test(email.value) ? (state.inputErrors.email = false) : (state.inputErrors.email = true);
 
-  if (password.value !== "") {
-    if (!validatePassword()) {
-      return displayErrors();
-    } else {
-      displayErrors();
-    }
-  }
-
-  if (
-    !state.inputErrors.firstName &&
-    !state.inputErrors.lastName &&
-    !state.inputErrors.displayName &&
-    !state.inputErrors.email &&
-    validatePassword() &&
-    !signUpButton.disabled
-  ) {
+  const noErrors = Object.values(state.inputErrors).every((error) => !error);
+  if (noErrors && !signUpButton.disabled) {
+    displayErrors();
     return true;
   } else {
     displayErrors();
@@ -141,33 +118,23 @@ const verifyInputs = () => {
   }
 };
 
-displayPasswordTicks = () => {
-  state.passwordChecks.passwordLength ? length.classList.add("active") : length.classList.remove("active");
-  state.passwordChecks.upperAndLower ? upper.classList.add("active") : upper.classList.remove("active");
-  state.passwordChecks.number ? number.classList.add("active") : number.classList.remove("active");
-  state.passwordChecks.specialCharacter ? special.classList.add("active") : special.classList.remove("active");
+const displayPasswordTicks = () => {
+  length.classList.toggle("active", state.passwordChecks.passwordLength);
+  upper.classList.toggle("active", state.passwordChecks.upperAndLower);
+  number.classList.toggle("active", state.passwordChecks.number);
+  special.classList.toggle("active", state.passwordChecks.specialCharacter);
 };
 
-displayErrors = () => {
-  state.inputErrors.firstName
-    ? (errorMessageFirstName.style.display = "block")
-    : (errorMessageFirstName.style.display = "none");
-  state.inputErrors.lastName
-    ? (errorMessageLastName.style.display = "block")
-    : (errorMessageLastName.style.display = "none");
-  state.inputErrors.displayName
-    ? (errorMessageDisplayName.style.display = "block")
-    : (errorMessageDisplayName.style.display = "none");
-  state.inputErrors.email ? (errorMessageEmail.style.display = "block") : (errorMessageEmail.style.display = "none");
-  state.inputErrors.emailUsed
-    ? (errorMessageEmailExists.style.display = "block")
-    : (errorMessageEmailExists.style.display = "none");
-  state.inputErrors.password
-    ? (errorMessagePassword.style.display = "block")
-    : (errorMessagePassword.style.display = "none");
+const displayErrors = () => {
+  errorMessageFirstName.style.display = state.inputErrors.firstName ? "block" : "none";
+  errorMessageLastName.style.display = state.inputErrors.lastName ? "block" : "none";
+  errorMessageDisplayName.style.display = state.inputErrors.displayName ? "block" : "none";
+  errorMessageEmail.style.display = state.inputErrors.email ? "block" : "none";
+  errorMessageEmailExists.style.display = state.inputErrors.emailUsed ? "block" : "none";
+  errorMessagePassword.style.display = state.inputErrors.password ? "block" : "none";
 };
 
-password.addEventListener("keyup", () => {
+passwordInput.addEventListener("keyup", () => {
   validatePassword();
 });
 
