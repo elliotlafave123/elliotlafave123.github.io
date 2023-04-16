@@ -2,13 +2,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  @include respond(tab-port) {
-    margin-top: 4rem !important;
-  }
+  @include centered-container;
 
   form {
-    width: 35%;
+    width: 450px;
+    max-width: 100%;
     margin: 0 auto;
 
     display: flex;
@@ -68,40 +66,13 @@
   }
 
   form:invalid input[type="submit"] {
-    background-color: $color-card;
     cursor: not-allowed;
   }
   input[type="submit"]:disabled {
-    background-color: $color-card !important;
-    cursor: not-allowed !important;
+    cursor: not-allowed;
   }
 
-  p {
-    font-size: 2.8rem;
-    color: $text-light;
-    margin-bottom: 0.6rem;
-  }
-
-  p.verify {
-    text-align: center;
-    font-size: 1.8rem;
-    color: $text-light;
-    margin-bottom: 0.6rem;
-
-    &-large {
-      font-size: 2rem;
-    }
-
-    a {
-      font-size: inherit;
-      color: $color-primary-light;
-
-      &:hover {
-        color: $text-light;
-      }
-    }
-  }
-  span {
+  span:not(.c-form__hint) {
     border-radius: 0.2rem;
     padding: 1.2rem;
     margin: 0.2rem;
@@ -119,83 +90,6 @@
       background-color: $color-form-false;
     }
   }
-
-  h1 {
-    font-family: $font-zen;
-    font-weight: 500;
-    font-size: 4.5rem;
-    letter-spacing: 2px;
-
-    position: relative;
-    width: fit-content;
-    color: $text-light;
-    margin-bottom: 2rem;
-
-    &::after {
-      content: "";
-      background: $text-light;
-      position: absolute;
-      bottom: -0.1rem;
-      left: 0;
-      height: 4px;
-      width: 70%;
-      border-radius: 0 4px 4px 0;
-    }
-
-    @include respond(phone) {
-      font-size: 4rem;
-
-      &::after {
-        content: "";
-        background: $color-primary;
-        position: absolute;
-        bottom: -0.6rem;
-        left: 0;
-        height: 5px;
-        width: 60%;
-        border-radius: 0 4px 4px 0;
-      }
-    }
-  }
-  h3 {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1.3;
-    &::after {
-      display: none;
-    }
-  }
-  h2 {
-    font-family: $font-zen;
-    font-weight: 400;
-    font-size: 3.2rem;
-    letter-spacing: 2px;
-
-    position: relative;
-    width: fit-content;
-    color: $text-light;
-    margin-bottom: 1rem;
-
-    &::after {
-      display: none;
-    }
-
-    @include respond(phone) {
-      font-size: 4rem;
-
-      &::after {
-        display: none;
-      }
-    }
-  }
-}
-.personalInfoButtonsContainer {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 4rem;
-  margin-top: 4rem;
-  border-top: 1px solid #15181991;
 }
 
 .loginForm.verify {

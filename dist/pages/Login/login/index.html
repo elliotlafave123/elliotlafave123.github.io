@@ -30,7 +30,7 @@
   <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
 
   <title>Login | Elliotlafave.com</title>
-<link rel="stylesheet" href="/assets/My Process.1c079bd3.css" /></head>
+<link rel="stylesheet" href="/assets/My Process.0f0a545b.css" /></head>
 
   <body>
     <div class="c-accessibility-menu">
@@ -52,44 +52,48 @@
       </a>
     </div>
 
-    <div class="c-header__authentication">
-      <a href="/pages/login/signup.html" class="c-header__authentication-link">Sign up</a>
-      <a href="/pages/login/login.html" class="c-header__authentication-link">Log in</a>
+    <div class="c-header__authentication" id="headerAuthLoggedOut">
+      <a href="/pages/login/signup.html" class="c-header__authentication-link storeBackLink">Sign up</a>
+      <a href="/pages/login/login.html" class="c-header__authentication-link storeBackLink">Log in</a>
+    </div>
+    <div class="c-header__authentication" id="headerAuthLoggedIn" style="display: none;">
+      <a href="/account.html" class="c-header__authentication-link">My account</a>
+      <a href="/pages/login/login.html" class="c-header__authentication-link" id="logOutButton">Log out</a>
     </div>
   </div>
   <div class="c-header__bottom">
     <nav class="c-header__navigation">
       <ul class="c-header__navigation-list">
         <li class="c-header__navigation-item">
-          <a href="/index.html" class="c-header__navigation-link storeBackLink">Home</a>
+          <a href="/index.html" class="c-header__navigation-link">Home</a>
         </li>
         <li class="c-header__navigation-item">
-          <a href="/CV.html" class="c-header__navigation-link storeBackLink">CV</a>
+          <a href="/CV.html" class="c-header__navigation-link">CV</a>
         </li>
         <li class="c-header__navigation-item is-primary">
-          <a href="/portfolio.html" class="c-header__navigation-link storeBackLink">Portfolio <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
+          <a href="/portfolio.html" class="c-header__navigation-link">Portfolio <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
           <ul class="c-header__navigation-list c-header__sub-navigation">
             <li class="c-header__navigation-item">
-              <a href="/portfolio.html#ProjectsAppContainer" class="c-header__navigation-link storeBackLink">Projects</a>
+              <a href="/portfolio.html#ProjectsAppContainer" class="c-header__navigation-link">Projects</a>
             </li>
           </ul>
         </li>
         <li class="c-header__navigation-item is-primary">
-          <a href="/pages/Articles/index.html" class="c-header__navigation-link storeBackLink">Articles <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
+          <a href="/pages/Articles/index.html" class="c-header__navigation-link">Articles <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
           <ul class="c-header__navigation-list c-header__sub-navigation">
             <li class="c-header__navigation-item">
-              <a href="/pages/Articles/Personal/index.html" class="c-header__navigation-link storeBackLink">Personal</a>
+              <a href="/pages/Articles/Personal/index.html" class="c-header__navigation-link">Personal</a>
             </li>
             <li class="c-header__navigation-item">
-              <a href="/pages/articles/gmc%20work/index.html" class="c-header__navigation-link storeBackLink">Work</a>
+              <a href="/pages/articles/gmc%20work/index.html" class="c-header__navigation-link">Work</a>
             </li>
             <li class="c-header__navigation-item">
-              <a href="/pages/Articles/QA/index.html" class="c-header__navigation-link storeBackLink">Apprenticeship</a>
+              <a href="/pages/Articles/QA/index.html" class="c-header__navigation-link">Apprenticeship</a>
             </li>
           </ul>
         </li>
         <li class="c-header__navigation-item">
-          <a href="/contact-me.html" class="c-header__navigation-link storeBackLink">Contact</a>
+          <a href="/contact-me.html" class="c-header__navigation-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -104,25 +108,31 @@
   </div>
 </header>
     <main id="main">
-      <link rel="stylesheet" href="/assets/My Process.1c079bd3.css" /><section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
-        <form id="loginForm" onsubmit="return false">
-            <h1>Login</h1>
-            <label for="email">Email Address</label>
-            <input class="form__input form__input-small" placeholder="Email address" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" required>
-            <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
-            <label for="password">Password</label>
-            <div class="password-container">
-                <input class="form__input form__input-small" placeholder="Password" id="password" name="password" type="password" required>
-                <i class="fa-solid fa-eye passwordEye" id="ShowPasswordEye"></i>
-                <i class="fa-solid fa-eye-slash passwordEye" id="HidePasswordEye"></i>
-            </div>
-            <span class="error" id="errorMessagePassword"><i class="fa-solid fa-triangle-exclamation"></i>Incorrect password</span>
-            <a href="./ResetPassword.html">Forgot Password?</a>
-            <span id="errorMessageEnterPassword"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a password</span>
-            <input type="submit" class="btn btn-purple-small u-margin-top-medium" value="Login" id="loginButton">
-            <p class="verify u-margin-top-small">Dont have an account? &nbsp;&nbsp;<a href="./signUp.html">Sign Up</a></p>
-        </form>
-    </section>
+      <link rel="stylesheet" href="/assets/My Process.0f0a545b.css" /><section class="login u-margin-bottom-large" id="first-section">
+    <form id="loginForm" onsubmit="return false">
+      <h1>Login</h1>
+      <p>
+        Dont have an account? &nbsp;&nbsp;<a href="/pages/login/signup.html">Sign Up</a>
+      </p>
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="email" class="c-form__label">Email address</label>
+        <input id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" required class="c-text-input" required>
+        <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
+      </div>
+
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="email" class="c-form__label">Password</label>
+        <input id="password" name="password" type="password" required class="c-text-input" required>
+        <i class="fa-solid fa-eye passwordEye" id="ShowPasswordEye"></i>
+        <i class="fa-solid fa-eye-slash passwordEye" id="HidePasswordEye"></i>
+        <span class="error" id="errorMessagePassword"><i class="fa-solid fa-triangle-exclamation"></i>Incorrect password</span>
+      </div>
+
+      <a href="./ResetPassword.html">Forgot Password?</a>
+      <span id="errorMessageEnterPassword"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a password</span>
+      <input type="submit" class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border c-button--full-width c-button--center-text u-margin-top-medium" value="Login" id="loginButton">
+    </form>
+  </section>
     </main>
     <!-- Footer --><!-- Footer --><div class="c-strip">
   <h2>Need a website?</h2>

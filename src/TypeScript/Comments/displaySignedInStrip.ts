@@ -5,10 +5,10 @@ import { setDarkModePreferenceOnServer } from "../DarkMode/setDarkModePreference
 const token = localStorage.getItem("token");
 // const API_URL = "http://localhost:3001/Auth";
 const API_URL = "https://elliotapiserver.co.uk/Auth";
-const signedInStrip = document.getElementById("signedInStrip");
-const signedInStripWarning = document.getElementById("signedInStripWarning");
 const logOutButton = document.getElementById("logOutButton");
 const verifyEmailButton = document.getElementById("verifyEmailButton");
+const headerAuthLoggedOut = document.getElementById("headerAuthLoggedOut");
+const headerAuthLoggedIn = document.getElementById("headerAuthLoggedIn");
 
 const checkLogin = async () => {
   try {
@@ -28,12 +28,7 @@ const checkLogin = async () => {
       State.id = data.data.id;
       State.profileImgColor = data.data.profileImgColor;
 
-      if (signedInStrip && State.emailVerified) {
-        signedInStrip.style.display = "flex";
-      } else if (signedInStrip && signedInStripWarning) {
-        signedInStripWarning.style.display = "flex";
-      }
-      fixMobileNavMargin("loggedIn");
+      showHeaderAuth();
 
       if (
         document.getElementById("commentStreamContainer") !== null ||
@@ -53,18 +48,13 @@ const checkLogin = async () => {
   }
 };
 
-const fixMobileNavMargin = (type: string) => {
-  const mobileNavToggle: HTMLElement = document.querySelector(".navigation__button") as HTMLElement;
-  const mobileNavBackground: HTMLElement = document.querySelector(".navigation__background") as HTMLElement;
-  if (mobileNavToggle && mobileNavBackground) {
-    if (type === "loggedIn") {
-      mobileNavToggle.style.top = "8.5rem";
-      mobileNavBackground.style.top = "8.5rem";
-    } else if (type === "signedOut") {
-      mobileNavToggle.style.top = "5rem";
-      mobileNavBackground.style.top = "5.4rem";
-    }
-  }
+const showHeaderAuth = () => {
+  if (headerAuthLoggedOut) headerAuthLoggedOut.style.display = "none";
+  if (headerAuthLoggedIn) headerAuthLoggedIn.style.display = "flex";
+};
+const hideHeaderAuth = () => {
+  if (headerAuthLoggedOut) headerAuthLoggedOut.style.display = "flex";
+  if (headerAuthLoggedIn) headerAuthLoggedIn.style.display = "none";
 };
 
 const logOut = async () => {
@@ -74,13 +64,13 @@ const logOut = async () => {
     body: JSON.stringify({ token: token }),
   });
   localStorage.setItem("token", "");
-  if (signedInStrip) signedInStrip.style.display = "none";
   State.emailAddress = undefined;
   State.fullName = undefined;
   State.id = undefined;
   State.emailVerified = undefined;
   State.profileImgColor = undefined;
-  fixMobileNavMargin("signedOut");
+
+  hideHeaderAuth();
   showLoginButtons();
 };
 
@@ -91,4 +81,4 @@ if (logOutButton) {
   });
 }
 
-export { checkLogin };
+export { checkLogin, showHeaderAuth, hideHeaderAuth };

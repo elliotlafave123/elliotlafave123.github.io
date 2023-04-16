@@ -4,22 +4,22 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
 
 <script defer src="../../scripts/Login/verifyEmail.js"></script>
 
-<DefaultLayout title="Login">
-    <section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
-        <form id="loginForm" class="loginForm verify">
-          <h1>Verify Email</h1>
-          <p class="verify">In order to prevent spam, we need to verify your email address.</p>
-          <p class="verify">Please enter the code we sent to your email below.</p>
-          <div class="spinner-container">
-            <div class="lds-dual-ring" id="loadingSpinner"></div>
-          </div>
-          <div class="pinBox" id="pinBox">
-            <input class="pinEntry" name="token" type="number" maxlength="4" autocomplete="off" required id="pinInput" />
-          </div>
-          <span id="errorMessagePin"><i class="fa-solid fa-triangle-exclamation"></i>Incorrect Pin</span>
-          <p id="resendCodeContainer" class="verify verify-large">
-            Didn't recieve the code? &nbsp;&nbsp;<a href="#" id="resendCodeButton">Resend code</a>
-          </p>
-        </form>
-      </section>
+<DefaultLayout title="Verify email">
+  <section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
+    <form id="loginForm" class="loginForm verify">
+      <h1>Verify Email</h1>
+      <p class="verify">In order to prevent spam, we need to verify your email address.</p>
+      <p class="verify">Please enter the code we sent to your email below.</p>
+      <div class="spinner-container">
+        <div class="lds-dual-ring" id="loadingSpinner"></div>
+      </div>
+      <div class="pinBox" id="pinBox">
+        <input class="pinEntry" name="token" type="number" maxlength="4" autocomplete="off" required id="pinInput" />
+      </div>
+      <span id="errorMessagePin"><i class="fa-solid fa-triangle-exclamation"></i>Incorrect Pin</span>
+      <p id="resendCodeContainer" class="verify verify-large">
+        Didn't recieve the code? &nbsp;&nbsp;<a href="#" id="resendCodeButton">Resend code</a>
+      </p>
+    </form>
+  </section>
 </DefaultLayout>

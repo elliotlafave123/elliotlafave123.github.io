@@ -28,7 +28,7 @@
   <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
 
   <title>Python Programming and SQL Basics | Activity 1.3 | Elliotlafave.com</title>
-<link rel="stylesheet" href="/assets/My Process.1c079bd3.css" /></head>
+<link rel="stylesheet" href="/assets/My Process.0f0a545b.css" /></head>
 
   <body>
     <div class="c-accessibility-menu">
@@ -50,44 +50,48 @@
       </a>
     </div>
 
-    <div class="c-header__authentication">
-      <a href="/pages/login/signup.html" class="c-header__authentication-link">Sign up</a>
-      <a href="/pages/login/login.html" class="c-header__authentication-link">Log in</a>
+    <div class="c-header__authentication" id="headerAuthLoggedOut">
+      <a href="/pages/login/signup.html" class="c-header__authentication-link storeBackLink">Sign up</a>
+      <a href="/pages/login/login.html" class="c-header__authentication-link storeBackLink">Log in</a>
+    </div>
+    <div class="c-header__authentication" id="headerAuthLoggedIn" style="display: none;">
+      <a href="/account.html" class="c-header__authentication-link">My account</a>
+      <a href="/pages/login/login.html" class="c-header__authentication-link" id="logOutButton">Log out</a>
     </div>
   </div>
   <div class="c-header__bottom">
     <nav class="c-header__navigation">
       <ul class="c-header__navigation-list">
         <li class="c-header__navigation-item">
-          <a href="/index.html" class="c-header__navigation-link storeBackLink">Home</a>
+          <a href="/index.html" class="c-header__navigation-link">Home</a>
         </li>
         <li class="c-header__navigation-item">
-          <a href="/CV.html" class="c-header__navigation-link storeBackLink">CV</a>
+          <a href="/CV.html" class="c-header__navigation-link">CV</a>
         </li>
         <li class="c-header__navigation-item is-primary">
-          <a href="/portfolio.html" class="c-header__navigation-link storeBackLink">Portfolio <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
+          <a href="/portfolio.html" class="c-header__navigation-link">Portfolio <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
           <ul class="c-header__navigation-list c-header__sub-navigation">
             <li class="c-header__navigation-item">
-              <a href="/portfolio.html#ProjectsAppContainer" class="c-header__navigation-link storeBackLink">Projects</a>
+              <a href="/portfolio.html#ProjectsAppContainer" class="c-header__navigation-link">Projects</a>
             </li>
           </ul>
         </li>
         <li class="c-header__navigation-item is-primary">
-          <a href="/pages/Articles/index.html" class="c-header__navigation-link storeBackLink">Articles <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
+          <a href="/pages/Articles/index.html" class="c-header__navigation-link">Articles <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
           <ul class="c-header__navigation-list c-header__sub-navigation">
             <li class="c-header__navigation-item">
-              <a href="/pages/Articles/Personal/index.html" class="c-header__navigation-link storeBackLink">Personal</a>
+              <a href="/pages/Articles/Personal/index.html" class="c-header__navigation-link">Personal</a>
             </li>
             <li class="c-header__navigation-item">
-              <a href="/pages/articles/gmc%20work/index.html" class="c-header__navigation-link storeBackLink">Work</a>
+              <a href="/pages/articles/gmc%20work/index.html" class="c-header__navigation-link">Work</a>
             </li>
             <li class="c-header__navigation-item">
-              <a href="/pages/Articles/QA/index.html" class="c-header__navigation-link storeBackLink">Apprenticeship</a>
+              <a href="/pages/Articles/QA/index.html" class="c-header__navigation-link">Apprenticeship</a>
             </li>
           </ul>
         </li>
         <li class="c-header__navigation-item">
-          <a href="/contact-me.html" class="c-header__navigation-link storeBackLink">Contact</a>
+          <a href="/contact-me.html" class="c-header__navigation-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -125,7 +129,7 @@
             <span>09:42am</span>
           </div>
 
-          <link rel="stylesheet" href="/assets/My Process.1c079bd3.css" /><div class="article__section">
+          <link rel="stylesheet" href="/assets/My Process.0f0a545b.css" /><div class="article__section">
     <h2>The task:</h2>
 
     <div class="article__image">

@@ -2,6 +2,7 @@ import { State } from "./state";
 import { displayDataInWidget } from "./displayDataInWidget";
 import { addDataToInputs } from "./addDataToInputs";
 import { controller } from "./controller";
+import { showHeaderAuth } from "../../Comments/displaySignedInStrip";
 
 const token = localStorage.getItem("token");
 const API_URL = "https://elliotapiserver.co.uk/Auth";
@@ -22,7 +23,6 @@ export const fetchAccountDetails = async () => {
       State.emailVerified = data.data.emailVerified;
       State.id = data.data.id;
       State.profileImgColor = data.data.profileImgColor;
-      console.log(State);
 
       // Display data in widget
       displayDataInWidget();
@@ -32,6 +32,8 @@ export const fetchAccountDetails = async () => {
 
       // Event listeners
       controller();
+
+      showHeaderAuth();
 
       // Error handling
       // - Inputs not valid
