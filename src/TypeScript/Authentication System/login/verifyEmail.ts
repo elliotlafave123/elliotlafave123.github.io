@@ -1,25 +1,29 @@
-const pinBox = document.getElementById("pinBox");
-const pinInput = document.getElementById("pinInput");
-const loadingSpinnerContainer = document.querySelector(".spinner-container");
-const loadingSpinner = document.getElementById("loadingSpinner");
-const resendCodeButton = document.getElementById("resendCodeButton");
-const resendCodeContainer = document.getElementById("resendCodeContainer");
+const pinBox = document.getElementById("pinBox") as HTMLDivElement;
+const pinInput = document.getElementById("pinInput") as HTMLInputElement;
+const loadingSpinnerContainer = document.querySelector(".spinner-container") as HTMLDivElement;
+const loadingSpinner = document.getElementById("loadingSpinner") as HTMLDivElement;
+const resendCodeButton = document.getElementById("resendCodeButton") as HTMLButtonElement;
+const resendCodeContainer = document.getElementById("resendCodeContainer") as HTMLDivElement;
 
-loadingSpinner.style.display = "none";
-
-const state = {
-  errorMessage: undefined,
-  errorHidden: true,
-};
-
-if (!localStorage.getItem("EmailToVerify")) {
-  let backLinkUrl = localStorage.getItem("backLink") || "../../index.html";
-  window.location.replace(backLinkUrl);
+if (loadingSpinner) {
+  loadingSpinner.style.display = "none";
 }
 
+interface State {
+  errorMessage: string | undefined;
+  errorHidden: boolean;
+  formShown: boolean;
+}
+
+const state: State = {
+  errorMessage: undefined,
+  errorHidden: true,
+  formShown: true,
+};
+
 const API_URL = "https://elliotapiserver.co.uk/Auth";
-// const API_URL = "http://localhost:3000/Auth";
-verifyEmail = async () => {
+
+const verifyEmail = async (): Promise<void> => {
   const Data = {
     email: localStorage.getItem("EmailToVerify"),
     code: pinInput.value.toString(),
@@ -40,11 +44,10 @@ verifyEmail = async () => {
       resendCodeContainer.style.display = "block";
       loadingSpinner.style.display = "none";
       loadingSpinnerContainer.style.display = "none";
-      errorMessagePin.style.display = "block";
-      data.code = "";
+      errorMessageEmail.style.display = "block";
       pinInput.focus();
     } else if (res.status === 404) {
-      await router.push("./signUp.js");
+      await window.location.replace("/pages/login/signup.html");
     }
   } catch (error) {
     loadingSpinner.style.display = "none";
@@ -59,7 +62,7 @@ verifyEmail = async () => {
   }
 };
 
-checkPinInput = () => {
+const checkPinInput = (): void => {
   if (pinInput.value.length === 4) {
     pinBox.style.display = "none";
     loadingSpinner.style.display = "block";
@@ -80,19 +83,20 @@ if (pinInput) {
   });
 }
 
-// Resend code
-resendCodeButton.addEventListener("click", (e) => {
-  e.preventDefault();
+if (resendCodeButton) {
+  resendCodeButton.addEventListener("click", (e) => {
+    e.preventDefault();
 
-  resendEmail();
-});
+    resendEmail();
+  });
+}
 
-const resendEmail = async () => {
+const resendEmail = async (): Promise<void> => {
   try {
-    let data = {
+    const data = {
       email: localStorage.getItem("EmailToVerify"),
     };
-    let res = await fetch(API_URL + "/ResendEmail", {
+    const res = await fetch(API_URL + "/ResendEmail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -104,5 +108,13 @@ const resendEmail = async () => {
     } else if (res.status === 404) {
       throw new Error("No user with that email");
     }
-  } catch (error) {}
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const emailVerified = () => {
+  if (localStorage.getItem("EmailToVerify") === "") {
+    window.location.replace("../../pages/login/login.html");
+  }
 };

@@ -22,6 +22,11 @@ import { initJsPortfolioFeaturedCards } from "./Portfolio Cards APP/FeaturedCard
 import { initStoreBackLink } from "./Authentication System/StoreBackLink";
 import { fetchAccountDetails } from "./Authentication System/Account Page/fetchAccountDetails";
 import { handleShowPassword } from "./Authentication System/ShowPassword";
+import { CheckLoginOnLoginForm } from "./Authentication System/login/login";
+import "./Authentication System/login/signUp";
+import "./Authentication System/login/verifyEmail";
+import { emailVerified } from "./Authentication System/login/verifyEmail";
+
 // Cookie Banner
 import { HandleCookies } from "./CookieBanner/ShowCookieBanner";
 // Show Contact Me Form Sent Checkmark
@@ -34,12 +39,17 @@ import { initHeader } from "../../ComponentAssets/simpleComponents/layout/header
 // Init Header
 initHeader();
 
+// Login and sign uo
+CheckLoginOnLoginForm();
+
 // Function to check if element exists
 const exists = (el: HTMLElement) => {
   if (typeof el !== "undefined" && el !== null) {
     return true;
   } else return false;
 };
+
+if (exists(document.querySelector(".loginForm.verify"))) emailVerified();
 
 // Set current year in footer
 const yearSpan: HTMLElement = document.getElementById("currentYear") as HTMLElement;
