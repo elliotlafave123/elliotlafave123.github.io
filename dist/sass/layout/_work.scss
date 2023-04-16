@@ -1,15 +1,11 @@
 .work {
-  padding: 10rem $section-padding-x 0 $section-padding-x;
-
-  @include respond(phone) {
-    padding: 10rem 3rem 0 3rem;
-  }
+  @include centered-container;
 
   &__title {
-    width: 100%;
     height: auto;
     position: relative;
     display: block;
+
     &--buttons {
       float: right;
       margin-top: 3rem;
@@ -41,15 +37,7 @@
 }
 
 .experience {
-  padding: 10rem $section-padding-x 0 $section-padding-x;
-
-  @include respond(laptop) {
-    padding: 10rem $section-padding-x-laptop 0 $section-padding-x-laptop;
-  }
-
-  @include respond(phone) {
-    padding: 10rem 3rem 0 3rem;
-  }
+  @include centered-container;
 
   &__main {
     &--title {

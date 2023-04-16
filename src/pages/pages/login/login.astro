@@ -1,0 +1,27 @@
+---
+import DefaultLayout from "../../../layouts/DefaultLayout.astro";
+---
+
+<script defer src="../../scripts/Login/login.js"></script>
+
+<DefaultLayout title="Login">
+    <section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
+        <form id="loginForm" onsubmit="return false">
+            <h1>Login</h1>
+            <label for="email">Email Address</label>
+            <input class="form__input form__input-small" placeholder="Email address" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" required>
+            <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input class="form__input form__input-small" placeholder="Password" id="password" name="password" type="password" required>
+                <i class="fa-solid fa-eye passwordEye" id="ShowPasswordEye"></i>
+                <i class="fa-solid fa-eye-slash passwordEye" id="HidePasswordEye"></i>
+            </div>
+            <span class="error" id="errorMessagePassword"><i class="fa-solid fa-triangle-exclamation"></i>Incorrect password</span>
+            <a href="./ResetPassword.html">Forgot Password?</a>
+            <span id="errorMessageEnterPassword"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a password</span>
+            <input type="submit" class="btn btn-purple-small u-margin-top-medium" value="Login" id="loginButton"></input>
+            <p class="verify u-margin-top-small">Dont have an account? &nbsp;&nbsp;<a href="./signUp.html">Sign Up</a></p>
+        </form>
+    </section>
+</DefaultLayout>

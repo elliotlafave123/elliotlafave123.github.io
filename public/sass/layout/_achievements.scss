@@ -1,22 +1,18 @@
 .section-achievements {
-	width: 100%;
-	padding: 10rem $section-padding-x 0 $section-padding-x;
-
-	@include respond(phone) {
-		padding: 10rem 3rem 0 3rem;
-	}
+  width: 100%;
+  @include centered-container;
 }
 
 .achievements {
-	&__paragraph {
-		width: 60%;
-		font-family: $font-lato;
-		color: $text-light;
-		font-size: 3rem;
-		font-weight: 400;
+  &__paragraph {
+    width: 60%;
+    font-family: $font-lato;
+    color: $text-light;
+    font-size: 3rem;
+    font-weight: 400;
 
-		@include respond(phone) {
-			width: 100%;
-		}
-	}
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
 }

@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<script defer src="../../scripts/Login/signUp.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script defer>
+    function recaptcha_callback() {
+        var regsterBtn = document.getElementById('signUpButton');
+        regsterBtn.removeAttribute('disabled')
+    }
+</script>
+
 <html lang="en">
   <head>
   <!-- Google tag (gtag.js) -->
@@ -27,7 +36,7 @@
 
   <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
 
-  <title>My Process | Elliotlafave.com</title>
+  <title>Login | Elliotlafave.com</title>
 <link rel="stylesheet" href="/assets/My Process.c920592c.css" /></head>
 
   <body>
@@ -101,90 +110,78 @@
     </div>
   </div>
 </header>
-    <!-- --- Article --- -->
-    <section class="article">
-      <!-- Interactions -->
-      <div class="breadcrumb"></div>
-      <div class="article__interactions">
-        <div class="article__interactions--section">
-          <a href="../../index.html" class="btn-square btn-square--back" id="first-section"><i class="fa-solid fa-arrow-left-long"></i>Back</a>
-        </div>
-        <div class="article__interactions--section">
-          <button class="btn-square btn-square--green"><i class="fa-solid fa-check"></i>Approved</button>
-        </div>
-      </div>
-      <div class="article__header">
-        <h2>My Process</h2>
-
-        <div class="article__header-info">
-          <span>Elliot La Fave</span>
-          <p>&#183;</p>
-          <span>dd/mm/yyyy</span>
-          <p>&#183;</p>
-          <span>00:00pm</span>
-        </div>
-
-        <link rel="stylesheet" href="/assets/My Process.c920592c.css" /><div class="article__section" id="Technologies used">
-    <h2>Technologies used</h2>
-    <p>
-      I used multiple technologies and languages to develop this application. I mainly used ASP.NET Core with Entity
-      Framework Core to connect to a MSSQL (Microsoft SQL) database.
-    </p>
-    <div class="article__user-story">
-      <ul class="u-margin-bottom-medium">
-        <li>ASP.NET Core</li>
-        <li>C#</li>
-        <li>ASP Identity</li>
-        <li>Entity Framework Core</li>
-        <li>Microsoft SQL Server</li>
-        <li>Windows Server 2019</li>
-        <li>Internet Information Services (IIS)</li>
-        <li>NodeJS</li>
-        <li>JavaScript</li>
-      </ul>
-    </div>
-  </div><div class="article__section" id="Idea">
-    <h2>Development process</h2>
-    <p>
-      I follow a multiple step process to develop my software. I use an iterative approach following the Agile
-      Principles. I break development into multiple stages, starting with gathering requirements for the application.
-      Once I have the requirements I can make a start on the design phase.
-    </p>
-    <p>
-      <a href="" target="_blank">Learn more about my development process here.</a>
-    </p>
-  </div><div class="article__section" id="Idea">
-    <h2>Design Phase</h2>
-    <p></p>
-  </div><div class="article__section" id="Idea">
-    <h2>Development</h2>
-    <p></p>
-  </div><div class="article__section" id="Idea">
-    <h2>Testing</h2>
-    <p></p>
-  </div><div class="article__section" id="Idea">
-    <h2>Deployment</h2>
-    <p></p>
-  </div>
-      </div>
+    <link rel="stylesheet" href="/assets/My Process.c920592c.css" /><section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
+        <form id="signUpForm" onsubmit="return false">
+            <h1>Sign Up</h1>
+            <div class="form__two-column u-margin-bottom-small">
+                <div class="form__column">
+                    <label for="firstname">First Name</label>
+                    <input class="form__input form__input-small" placeholder="First Name" id="firstname" name="firstname" type="text" maxlength="94" required></div>
+                    <span id="errorMessageFirstName"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your first name</span>
+                <div class="form__column">
+                    <label for="lastname">Last Name</label>
+                    <input class="form__input form__input-small" placeholder="Last Name" id="lastname" name="lastname" type="text" maxlength="94" required>
+                    <span id="errorMessageLastName"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your last name</span>
+                </div>
+            </div>
+            <label for="displayname">Display Name</label>
+            <input class="form__input form__input-small" placeholder="Display Name" id="displayname" name="displayname" type="text" maxlength="94" required>
+            <span id="errorMessageDisplayName"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your display name</span>
+            <label for="email">Email Address</label>
+            <input class="form__input form__input-small" placeholder="Email address" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" required>
+            <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
+            <span id="errorMessageEmailExists"><i class="fa-solid fa-triangle-exclamation"></i>Email has already been used</span>
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input class="form__input form__input-small" minlength="8" placeholder="Password" id="password" name="password" type="password" required>
+                <i class="fa-solid fa-eye passwordEye" id="ShowPasswordEye"></i>
+                <i class="fa-solid fa-eye-slash passwordEye" id="HidePasswordEye"></i>
+            </div>
+            
+            <span id="errorMessagePassword"><i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements</span>
+            <div class="PasswordRequirements">
+                <ul>
+                    <li>
+                        <div class="checkMark" id="length">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Password must be 8+ characters</p>
+                    </li>
+                    <li>
+                        <div class="checkMark" id="upper">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Uppercase and lowercase letter (A z)</p>
+                    </li>
+                    <li>
+                        <div class="checkMark" id="number">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Numeric character (0-9)</p>
+                    </li>
+                    <li>
+                        <div class="checkMark" id="special">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Special character (!, %, @, #, etc.)</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Public -->
+            <div class="g-recaptcha" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback"></div>
+            <!-- Local -->
+            <!-- <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback"></div> -->
+            <span id="errorMessageCaptcha"><i class="fa-solid fa-triangle-exclamation"></i>Please verify you're not a robot</span>
+            <div class="terms-section">
+                <p>
+                    By signing up, you're agreeing to our <a href="../../termsAndConditions.html">Terms & Conditions</a> and
+                    <a href="../../PrivacyPolicy.html">Privacy Policy</a>
+                </p>
+            </div>
+            <input type="submit" class="btn btn-purple-small u-margin-top-small" value="Sign Up" id="signUpButton" disabled>
+            <p class="verify u-margin-top-small">Already have an account? &nbsp;&nbsp;<a href="./login.html">Log In</a></p>
+        </form>
     </section>
-
-    <!-- Comments Section --><section class="comments-container" data-stream="" id="commentStreamContainer">
-  <h2 id="comments">Comments</h2>
-  <div>
-    <form class="add-comment-container" onsubmit="return false">
-      <div class="add-comment-container-notAllowed">
-        <a id="logInButton" class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border storeBackLink u-margin-right-small" href="/pages/Login/login.html">Log In</a>
-        <a id="signUpButton" class="c-button c-button--large c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border storeBackLink" href="/pages/Login/signUp.html">Sign Up</a>
-        <a id="verifyEmailButton" class="btn btn-purple-small btn-purple-small-warning storeBackLink" href="/pages/Login/verifyEmail.html">Verify Email</a>
-      </div>
-      <label for="commentTextarea">Enter your comment...</label>
-      <textarea placeholder="Type your comment in here..." name="commentTextarea" id="commentTextarea" minlength="3" maxlength="120" required></textarea>
-      <input type="submit" value="Publish" id="publishCommentButton">
-    </form>
-  </div>
-  <div id="InsertCommentsContainer"></div>
-</section>
     <!-- Footer --><div class="c-strip">
   <h2>Need a website?</h2>
   <a href="/Get a quote/" class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border" aria-label="Aria label">

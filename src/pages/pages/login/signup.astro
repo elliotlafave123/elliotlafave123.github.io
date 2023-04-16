@@ -1,0 +1,87 @@
+---
+import DefaultLayout from "../../../layouts/DefaultLayout.astro";
+---
+
+<script defer src="../../scripts/Login/signUp.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script defer>
+    function recaptcha_callback() {
+        var regsterBtn = document.getElementById('signUpButton');
+        regsterBtn.removeAttribute('disabled')
+    }
+</script>
+
+<DefaultLayout title="Login">
+    <section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
+        <form id="signUpForm" onsubmit="return false">
+            <h1>Sign Up</h1>
+            <div class="form__two-column u-margin-bottom-small">
+                <div class="form__column">
+                    <label for="firstname">First Name</label>
+                    <input class="form__input form__input-small" placeholder="First Name" id="firstname" name="firstname" type="text" maxlength="94" required></div>
+                    <span id="errorMessageFirstName"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your first name</span>
+                <div class="form__column">
+                    <label for="lastname">Last Name</label>
+                    <input class="form__input form__input-small" placeholder="Last Name" id="lastname" name="lastname" type="text" maxlength="94" required>
+                    <span id="errorMessageLastName"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your last name</span>
+                </div>
+            </div>
+            <label for="displayname">Display Name</label>
+            <input class="form__input form__input-small" placeholder="Display Name" id="displayname" name="displayname" type="text" maxlength="94" required>
+            <span id="errorMessageDisplayName"><i class="fa-solid fa-triangle-exclamation"></i>Please enter your display name</span>
+            <label for="email">Email Address</label>
+            <input class="form__input form__input-small" placeholder="Email address" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" required>
+            <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
+            <span id="errorMessageEmailExists"><i class="fa-solid fa-triangle-exclamation"></i>Email has already been used</span>
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input class="form__input form__input-small" minlength="8" placeholder="Password" id="password" name="password" type="password" required>
+                <i class="fa-solid fa-eye passwordEye" id="ShowPasswordEye"></i>
+                <i class="fa-solid fa-eye-slash passwordEye" id="HidePasswordEye"></i>
+            </div>
+            
+            <span id="errorMessagePassword"><i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements</span>
+            <div class="PasswordRequirements">
+                <ul>
+                    <li>
+                        <div class='checkMark' id="length">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Password must be 8+ characters</p>
+                    </li>
+                    <li>
+                        <div class='checkMark' id="upper">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Uppercase and lowercase letter (A z)</p>
+                    </li>
+                    <li>
+                        <div class='checkMark' id="number">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Numeric character (0-9)</p>
+                    </li>
+                    <li>
+                        <div class='checkMark' id="special">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Special character (!, %, @, #, etc.)</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Public -->
+            <div class="g-recaptcha" data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E" data-callback="recaptcha_callback"></div>
+            <!-- Local -->
+            <!-- <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback"></div> -->
+            <span id="errorMessageCaptcha"><i class="fa-solid fa-triangle-exclamation"></i>Please verify you're not a robot</span>
+            <div class="terms-section">
+                <p>
+                    By signing up, you're agreeing to our <a href="../../termsAndConditions.html">Terms & Conditions</a> and
+                    <a href="../../PrivacyPolicy.html">Privacy Policy</a>
+                </p>
+            </div>
+            <input type="submit" class="btn btn-purple-small u-margin-top-small" value="Sign Up" id="signUpButton" disabled></input>
+            <p class="verify u-margin-top-small">Already have an account? &nbsp;&nbsp;<a href="./login.html">Log In</a></p>
+        </form>
+    </section>
+</DefaultLayout>
