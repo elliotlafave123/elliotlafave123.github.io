@@ -38,7 +38,7 @@ const verifyEmail = async (): Promise<void> => {
     pinInput.value = "";
     if (res.status === 200) {
       localStorage.setItem("EmailToVerify", "");
-      window.location.replace("../../pages/login/login.html");
+      window.location.replace("/pages/login/login.html");
     } else if (res.status === 301) {
       pinBox.style.display = "block";
       resendCodeContainer.style.display = "block";
@@ -115,6 +115,6 @@ const resendEmail = async (): Promise<void> => {
 
 export const emailVerified = () => {
   if (localStorage.getItem("EmailToVerify") === "") {
-    window.location.replace("../../pages/login/login.html");
+    window.location.replace("/pages/login/login.html");
   }
 };
