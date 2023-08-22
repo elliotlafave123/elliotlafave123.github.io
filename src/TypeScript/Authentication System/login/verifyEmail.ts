@@ -21,7 +21,7 @@ const state: State = {
   formShown: true,
 };
 
-const API_URL = "https://elliotapiserver.co.uk/Auth";
+const API_URL = "https://elliotapiserver.com/Auth";
 
 const verifyEmail = async (): Promise<void> => {
   const Data = {

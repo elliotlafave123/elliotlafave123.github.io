@@ -3,7 +3,7 @@ import { displayComments } from "./displayComments";
 const publishCommentButton = document.getElementById("publishCommentButton");
 const commentStreamContainer = document.getElementById("commentStreamContainer");
 const commentTextarea = document.getElementById("commentTextarea") as HTMLTextAreaElement;
-const API_URL = "https://elliotapiserver.co.uk/Comments";
+const API_URL = "https://elliotapiserver.com/Comments";
 // const API_URL = "http://localhost:3000/Comments";
 const token = localStorage.getItem("token");
 

@@ -2,7 +2,7 @@ export const setDarkModePreferenceOnServer = async () => {
   if (localStorage.getItem("HasSentDarkModePreference") === "true") return;
 
   const token = localStorage.getItem("token");
-  const API_URL = "https://elliotapiserver.co.uk/Auth";
+  const API_URL = "https://elliotapiserver.com/Auth";
 
   const darkModePreference = localStorage.getItem("darkMode");
   let preferenceBoolean;

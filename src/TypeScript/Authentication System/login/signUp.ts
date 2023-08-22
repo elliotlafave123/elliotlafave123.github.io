@@ -17,7 +17,7 @@ const errorMessageEmail = document.getElementById("errorMessageEmail") as HTMLEl
 const errorMessageEmailExists = document.getElementById("errorMessageEmailExists") as HTMLElement;
 const errorMessagePassword = document.getElementById("errorMessagePassword") as HTMLElement;
 
-const API_URL_SIGN_UP = "https://elliotapiserver.co.uk/Auth/signup";
+const API_URL_SIGN_UP = "https://elliotapiserver.com/Auth/signup";
 
 const StateSignUp = {
   passwordChecks: {

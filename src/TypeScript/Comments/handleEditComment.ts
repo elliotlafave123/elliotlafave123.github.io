@@ -1,6 +1,6 @@
 import { displayComments } from "./displayComments";
 
-const API_URL = "https://elliotapiserver.co.uk/Comments";
+const API_URL = "https://elliotapiserver.com/Comments";
 // const API_URL = "http://localhost:3000/Comments";
 const token = localStorage.getItem("token");
 

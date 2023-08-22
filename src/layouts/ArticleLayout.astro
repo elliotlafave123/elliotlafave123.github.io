@@ -27,12 +27,15 @@ const { title, date, time, streamID } = Astro.props;
         <div class="breadcrumb"></div>
         <div class="article__interactions">
           <div class="article__interactions--section">
-            <a href="../../index.html" class="btn-square btn-square--back" id="first-section"
-              ><i class="fa-solid fa-arrow-left-long"></i>Back</a
+            <a
+              href="../index.html"
+              id="first-section"
+              class="c-button c-button--large c-button--semi-round c-button--gray-secondary c-button--gray-secondary--with-border"
+              aria-label="Go to previous page"
             >
-          </div>
-          <div class="article__interactions--section">
-            <button class="btn-square btn-square--green"><i class="fa-solid fa-check"></i>Approved</button>
+              <i class="fa-sharp fa-regular fa-arrow-left" aria-hidden="true"></i>
+              Go back
+            </a>
           </div>
         </div>
         <div class="article__header">

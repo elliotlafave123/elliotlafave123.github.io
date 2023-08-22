@@ -3,7 +3,7 @@ import { State } from "./state";
 import { initEditComments } from "./handleEditComment";
 import { initVoting } from "./votingHandler";
 
-const API_URL = "https://elliotapiserver.co.uk/";
+const API_URL = "https://elliotapiserver.com/";
 // const API_URL = "http://localhost:3001/";
 let streamId: string | undefined;
 const commentStreamContainer = document.getElementById("commentStreamContainer");

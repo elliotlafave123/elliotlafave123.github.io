@@ -5,7 +5,7 @@ import { controller } from "./controller";
 import { showHeaderAuth } from "../../Comments/displaySignedInStrip";
 
 const token = localStorage.getItem("token");
-const API_URL = "https://elliotapiserver.co.uk/Auth";
+const API_URL = "https://elliotapiserver.com/Auth";
 
 export const fetchAccountDetails = async () => {
   const saveButton: HTMLInputElement = document.getElementById("SaveChanges") as HTMLInputElement;

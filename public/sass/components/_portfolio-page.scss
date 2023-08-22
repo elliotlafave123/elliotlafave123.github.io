@@ -5,21 +5,16 @@
 
   &__buttons {
     display: flex;
-    align-items: center;
-    justify-content: stretch;
+    flex-direction: row;
     flex-wrap: wrap;
 
     a {
       margin-right: 1.4rem;
     }
 
-    @include respond(laptop) {
+    @include respond(tab-port) {
       flex-direction: column;
       align-items: flex-start;
-
-      a {
-        margin-bottom: 2.4rem;
-      }
     }
 
     @include respond(tab-land) {

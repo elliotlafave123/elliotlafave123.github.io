@@ -3,7 +3,7 @@ const emailInputLogin = document.getElementById("email") as HTMLInputElement;
 const passwordInputLogin = document.getElementById("password") as HTMLInputElement;
 const errorMessageEnterPassword = document.getElementById("errorMessageEnterPassword") as HTMLElement;
 
-const API_URL_LOGIN = "https://elliotapiserver.co.uk/Auth/login";
+const API_URL_LOGIN = "https://elliotapiserver.com/Auth/login";
 const initialState = {
   inputErrors: {
     email: false,
@@ -77,7 +77,7 @@ export const CheckLoginOnLoginForm = async () => {
     initLoginform();
 
     try {
-      const res = await fetch("https://elliotapiserver.co.uk/Auth", {
+      const res = await fetch("https://elliotapiserver.com/Auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token }),

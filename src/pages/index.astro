@@ -5,20 +5,18 @@ import GenericButton from "../components/GenericButton.vue";
 
 <DefaultLayout title="Home">
   <!-- Main Content -->
-  <section class="section-header" id="first-section">
-    <div class="header__content">
-      <h1>HI THERE,<br class="mobile-only" /> IM A FONTEND WEBSITE DEVELOPER</h1>
-      <div
-        class="c-flex-strip c-flex-strip--row c-flex-strip--align-flex-start c-flex-strip--justify-flex-start"
-        style="gap: 2rem;"
-      >
-        <GenericButton href="/Get a quote" corner="semi-round" size="large" color="primary" withBorder="true">
-          Get a quote
-        </GenericButton>
-        <GenericButton href="/contact-me" corner="semi-round" size="large" color="primary-secondary" withBorder="true">
-          Contact me
-        </GenericButton>
-      </div>
+  <section class="c-container" id="first-section">
+    <h1>HI THERE,<br class="mobile-only" /> IM A FONTEND WEBSITE DEVELOPER</h1>
+    <div
+      class="c-flex-strip c-flex-strip--row c-flex-strip--align-flex-start c-flex-strip--justify-flex-start u-margin-bottom-large"
+      style="gap: 2rem;"
+    >
+      <GenericButton href="/Get a quote" corner="semi-round" size="large" color="primary" withBorder="true">
+        Get a quote
+      </GenericButton>
+      <GenericButton href="/contact-me" corner="semi-round" size="large" color="primary-secondary" withBorder="true">
+        Contact me
+      </GenericButton>
     </div>
   </section>
 
@@ -29,10 +27,10 @@ import GenericButton from "../components/GenericButton.vue";
     <img src="/img/WavePatternLightMob.svg" alt="" class="wave-top__img mobile-only" id="wave1-light-mob" />
   </div>
 
-  <section class="section-about" id="who-am-i">
+  <section class="c-container" id="who-am-i">
     <img src="img/profile-pic.svg" alt="" />
     <h2>Who am I?</h2>
-    <p class="section-about__paragraph">
+    <p>
       I am a front-end website developer based in Manchester, UK. I'm working as an apprentice software developer at the
       General Medical Council learning to become a full-stack software developer.
     </p>
@@ -41,9 +39,9 @@ import GenericButton from "../components/GenericButton.vue";
     </GenericButton>
   </section>
 
-  <section class="skills" id="tech-stack">
+  <section class="c-container" id="tech-stack">
     <!-- <img src="img/percentages.png" alt="" class="skills__img"> -->
-    <h2 class="u-center-text">My tech stack</h2>
+    <h2>My tech stack</h2>
     <div class="tech-stack__grid">
       <div class="tech-stack__item tech-stack__item-1">
         <img src="img/TechStack/netlify.svg" alt="" class="tech-stack__img tech-stack__img-1" />
@@ -96,17 +94,14 @@ import GenericButton from "../components/GenericButton.vue";
     </div>
   </section>
 
-  <section class="portfolio" id="featuredIndex">
-    <div class="title-container-flex">
-      <h2>Featured projects</h2>
-    </div>
+  <section class="c-container" id="featuredIndex">
+    <h2>Featured projects</h2>
 
-    <div class="card__grid u-margin-bottom-medium" id="featuredCardsContainer">
+    <div class="c-grid u-margin-bottom-medium" style="--gap: 3rem" id="featuredCardsContainer">
       <!-- JavaScript Inserted Data Here -->
       <div class="loader"></div>
     </div>
 
-    <span class="u-margin-bottom-large">&nbsp;</span>
     <GenericButton href="/portfolio/" corner="semi-round" size="large" color="primary" withBorder="true">
       All projects
     </GenericButton>

@@ -1,88 +1,81 @@
-interface Tag {
-  id: number;
-  name: string;
-  color: string;
-  fontAwesomeIconClass: string;
-}
+import { DisplayCardWithinContainer } from "../displayCards";
 
-interface ProjectDto {
-  id: number;
-  title: string;
-  paragraph: string;
-  linkLivePreview: string;
-  linkImg: string;
-  linkGit: string | null;
-  tags: Tag[];
-  createdAt: string;
-  updatedAt: string;
-}
+export const initJsPortfolioFeaturedCards = () => {
+  let data;
+  let featuredData;
 
-const API_URL = "https://projectsapi.elliotapiserver.com/api/Projects";
+  const featured: HTMLElement = document.getElementById("featuredCardsContainer") as HTMLElement;
+  const LINODE_IP = "https://elliotapiserver.com/api/v1/projects";
 
-const getCards = async (pageNumber: number, pageSize: number): Promise<ProjectDto[]> => {
-  const res = await fetch(`${API_URL}?pageNumber=${pageNumber}&pageSize=${pageSize}`);
-  const data = await res.json();
-  return data.items;
-};
+  /* *********** Get Json Data *********** */
+  fetch(LINODE_IP)
+    .then((response) => {
+      return response.json();
+    })
+    .then((jsondata) => {
+      data = jsondata;
 
-const generateTagMarkup = (tag: Tag): string => `
-  <div class="c-tag">
-    <i class="${tag.fontAwesomeIconClass}" style="color: #${tag.color};"></i>
-    <span class="tag__text">${tag.name}</span>
-  </div>
-`;
+      featuredData = [
+        data[2],
+        data[4],
+        data[6],
+        data[7],
+        data[9],
+        data[10],
+        data[15],
+        data[16],
+        data[18],
+        data[19],
+        data[20],
+        data[21],
+      ];
 
-const generateCardMarkup = (card: ProjectDto): string => `
-  <div class="c-project-card c-project-card--semi-round" tabindex="0">
-    <div class="c-project-card__content">
-      <img class="c-project-card__image" src="${card.linkImg}" />
-      <h3 class="c-project-card__title">${card.title}</h3>
-      <p class="c-project-card__paragraph">${card.paragraph}</p>
-      <div class="c-project-card__tags">
-        ${card.tags.map((tag) => generateTagMarkup(tag)).join("")}
-      </div>
-    </div>
-    <div class="c-project-card__hover">
-      <div class="c-project-card__hover-content">
-        <a class="c-button c-button--medium c-button--primary c-button--semi-round c-button--primary--with-border" href="${
-          card.linkLivePreview
-        }">View live preview<i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
-      
-      </div>
-    </div>
-  </div>
-`;
+      getFeaturedData();
+    });
 
-// ${
-//   card.linkGit
-//     ? `<a class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border" href="${card.linkGit}">View GitHub code<i class="fa-brands fa-github"></i></a>`
-//     : ""
-// }
+  /* *********** Generate random featured data then call show functions *********** */
+  const displayFeaturedData = function (pickedData) {
+    if (featured) {
+      displayFeatured(pickedData);
+    }
+  };
 
-const trimTags = (tagContainer: Element) => {
-  if (tagContainer.clientHeight > 20) {
-    let tags = tagContainer.querySelectorAll(".c-tag");
-    let lastTag = tags[tags.length - 1];
+  const getFeaturedData = function () {
+    const picked = [];
+    const data1 = [];
 
-    while (tagContainer.clientHeight > 20 && tags.length > 0) {
-      tagContainer.removeChild(lastTag);
-      tags = tagContainer.querySelectorAll(".c-tag");
-      lastTag = tags[tags.length - 1];
+    const getRandomPositions = function () {
+      const i = Math.floor(Math.random() * featuredData.length);
+
+      if (!picked.includes(i)) {
+        picked.push(i);
+      } else {
+        getRandomPositions();
+      }
+    };
+
+    while (picked.length < 3) {
+      getRandomPositions();
     }
 
-    tagContainer.innerHTML += `...`;
-  }
-};
+    const addData = function (picked) {
+      for (let i = 0; i < 3; i++) {
+        data1.push(featuredData[picked[i]]);
+      }
+    };
+    addData(picked);
 
-export const initJsPortfolioFeaturedCards = async () => {
-  const cards = await getCards(1, 3);
-  const cardContainer = document.getElementById("featuredCardsContainer");
+    if (data1[0] && data1[1] && data1[2]) {
+      displayFeaturedData(data1);
+    } else {
+      getFeaturedData();
+    }
+  };
 
-  if (cardContainer) {
-    cardContainer.innerHTML = cards.map((card) => generateCardMarkup(card)).join("");
-    const tags = document.querySelectorAll(".c-project-card__tags");
-    tags.forEach((tag) => {
-      trimTags(tag);
+  /* *********** Featured portfolio display function *********** */
+  const displayFeatured = function (data) {
+    data.forEach((element) => {
+      DisplayCardWithinContainer(element, featured);
     });
-  }
+  };
 };

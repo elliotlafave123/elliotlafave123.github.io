@@ -70,17 +70,12 @@
   }
 
   &__interactions {
-    padding: 0 0 8rem 0;
+    padding: 0 0 2rem 0;
     width: 100%;
     display: flex;
 
     align-items: center;
     justify-content: space-between;
-
-    &-menu {
-      flex-direction: column !important;
-      align-items: flex-start;
-    }
 
     &--section {
       height: 100%;
@@ -114,7 +109,7 @@
 
       p {
         font-size: 3rem;
-        margin-bottom: 0;
+        margin: 0;
       }
     }
   }
@@ -129,12 +124,6 @@
         font-size: 3rem;
         line-height: 3.8rem;
       }
-    }
-
-    p {
-      font-size: 1.9rem;
-      margin-bottom: 2.6rem;
-      letter-spacing: 1.2px;
     }
 
     h3,
@@ -417,7 +406,4 @@
     margin-left: 0;
     margin-bottom: 5rem;
   }
-}
-
-.articleImg {
 }

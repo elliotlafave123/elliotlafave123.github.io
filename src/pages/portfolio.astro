@@ -12,7 +12,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
   >
     <section>
       <h1 id="GitHub-Stats">My portfolio</h1>
-      <div class="portfolio-page__buttons u-margin-bottom-large">
+      <div class="portfolio-page__buttons">
         <GenericButton
           href="https://github.com/elliotlafave123/elliotlafave123.github.io"
           corner="semi-round"
@@ -37,15 +37,15 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
       </div>
     </section>
 
-    <div class="githubStats" id="GithubStats"><div class="loader"></div></div>
+    <!-- <div class="githubStats" id="GithubStats"><div class="loader"></div></div> -->
   </div>
 
-  <section class="portfolio portfolio--2">
+  <section class="c-container">
     <div class="title-container-flex">
       <h2 id="featuredPortfolio">Featured projects</h2>
     </div>
 
-    <div class="card__grid u-margin-bottom-medium" id="featuredCardsContainer">
+    <div class="c-grid u-margin-bottom-medium" style="--gap: 3rem" id="featuredCardsContainer">
       <!-- JavaScript Inserted Data Here -->
       <div class="loader"></div>
     </div>
@@ -53,7 +53,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
     <span class="u-margin-bottom-large">&nbsp;</span>
   </section>
 
-  <section class="portfolio portfolio--2">
+  <section class="c-container">
     <div class="title-container-flex">
       <h2 id="all-projects">All projects</h2>
     </div>

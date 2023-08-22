@@ -46,7 +46,7 @@ export function DisplayMultipleCards(cards: Array<Project>) {
   }
 }
 
-function DisplayCardWithinContainer(project: Project, container: Element) {
+export function DisplayCardWithinContainer(project: Project, container: Element) {
   const HTML = `<div class="cardjs">
     <img
         src="${project.linkImg}"

@@ -1,6 +1,6 @@
 export const logOut = async () => {
   const token = localStorage.getItem("token");
-  await fetch("https://elliotapiserver.co.uk/Auth/logout", {
+  await fetch("https://elliotapiserver.com/Auth/logout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ token: token }),

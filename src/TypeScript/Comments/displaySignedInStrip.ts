@@ -4,7 +4,7 @@ import { setDarkModePreferenceOnServer } from "../DarkMode/setDarkModePreference
 
 const token = localStorage.getItem("token");
 // const API_URL = "http://localhost:3001/Auth";
-const API_URL = "https://elliotapiserver.co.uk/Auth";
+const API_URL = "https://elliotapiserver.com/Auth";
 const logOutButton = document.getElementById("logOutButton");
 const verifyEmailButton = document.getElementById("verifyEmailButton");
 const headerAuthLoggedOut = document.getElementById("headerAuthLoggedOut");
@@ -58,7 +58,7 @@ const hideHeaderAuth = () => {
 };
 
 const logOut = async () => {
-  await fetch("https://elliotapiserver.co.uk/Auth/logout", {
+  await fetch("https://elliotapiserver.com/Auth/logout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ token: token }),

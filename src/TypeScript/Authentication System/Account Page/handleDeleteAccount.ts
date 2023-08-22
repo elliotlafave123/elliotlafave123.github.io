@@ -16,7 +16,7 @@ export const openDeleteAccountModal = () => {
 };
 
 export const deleteAccount = async () => {
-  const API_URL = "https://elliotapiserver.co.uk/Auth";
+  const API_URL = "https://elliotapiserver.com/Auth";
   // const API_URL = "http://localhost:3000/Auth";
   const token = localStorage.getItem("token");
   try {
