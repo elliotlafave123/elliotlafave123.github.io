@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFS3PHN0E0"></script>
+  <script lang="js">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-ZFS3PHN0E0");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="../image/png" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ecfebc6e17.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Elliot La Fave's personal website and portfolio. A collection of all my work and my CV.">
+  <meta name="keywords" content="Elliotlafave, Elliot, la, fave, web, design, cv, portfolio, projects, javascript, nodejs, manchester, astro, software, developer, apprentice">
+  <meta name="author" content="Elliot La Fave">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
+
+  <title>Practice: Understanding Object-Oriented Programming | SDTL3 A2.1 | Elliotlafave.com</title>
+<link rel="stylesheet" href="/assets/My Process.cfe4881a.css" /></head>
+
+  <body>
+    <div class="c-accessibility-menu">
+  <div class="c-accessibility-menu__item">
+    <a href="#main" class="c-accessibility-menu__link">Skip to main content</a>
+  </div>
+</div>
+
+<button class="c-mobile-menu-toggle" aria-label="Open menu">
+  <i class="fa-sharp fa-regular fa-bars"></i>
+</button>
+
+<header class="c-header">
+  <div class="c-header__top">
+    <div class="c-header__logo">
+      <a href="/" class="c-header__logo-link">
+        <img src="https://d33wubrfki0l68.cloudfront.net/de4eb2840bd995fff8693e59dfbff5e8f7036730/36519/img/logo.png" alt="Elliot Lafave Logo" class="c-header__logo-image">
+        <p>elliotlafave.com</p>
+      </a>
+    </div>
+
+    <div class="c-header__authentication" id="headerAuthLoggedOut">
+      <a href="/pages/login/signup.html" class="c-header__authentication-link storeBackLink">Sign up</a>
+      <a href="/pages/login/login.html" class="c-header__authentication-link storeBackLink">Log in</a>
+    </div>
+    <div class="c-header__authentication" id="headerAuthLoggedIn" style="display: none;">
+      <a href="/account.html" class="c-header__authentication-link">My account</a>
+      <a href="/pages/login/login.html" class="c-header__authentication-link" id="logOutButton">Log out</a>
+    </div>
+  </div>
+  <div class="c-header__bottom">
+    <nav class="c-header__navigation">
+      <ul class="c-header__navigation-list">
+        <li class="c-header__navigation-item">
+          <a href="/index.html" class="c-header__navigation-link">Home</a>
+        </li>
+        <li class="c-header__navigation-item">
+          <a href="/CV.html" class="c-header__navigation-link">CV</a>
+        </li>
+        <li class="c-header__navigation-item is-primary">
+          <a href="/portfolio.html" class="c-header__navigation-link">Portfolio <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
+          <ul class="c-header__navigation-list c-header__sub-navigation">
+            <li class="c-header__navigation-item">
+              <a href="/portfolio.html#ProjectsAppContainer" class="c-header__navigation-link">Projects</a>
+            </li>
+          </ul>
+        </li>
+        <li class="c-header__navigation-item is-primary">
+          <a href="/pages/Articles/index.html" class="c-header__navigation-link">Articles <i class="c-header__chevron fa-sharp fa-regular fa-chevron-down"></i></a>
+          <ul class="c-header__navigation-list c-header__sub-navigation">
+            <li class="c-header__navigation-item">
+              <a href="/pages/Articles/Personal/index.html" class="c-header__navigation-link">Personal</a>
+            </li>
+            <li class="c-header__navigation-item">
+              <a href="/pages/articles/gmc%20work/index.html" class="c-header__navigation-link">Work</a>
+            </li>
+            <li class="c-header__navigation-item">
+              <a href="/pages/Articles/QA/index.html" class="c-header__navigation-link">Apprenticeship</a>
+            </li>
+          </ul>
+        </li>
+        <li class="c-header__navigation-item">
+          <a href="/contact-me.html" class="c-header__navigation-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="toggle-container">
+      <i class="fa-sharp fa-regular fa-sun"></i>
+      <input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1">
+      <label for="checkboxSlider" class="darkModeLabel">
+        <div class="ball"></div>
+      </label>
+      <i class="fa-sharp fa-regular fa-moon"></i>
+    </div>
+  </div>
+</header>
+    <main id="main">
+      <!-- --- Article --- -->
+      <section class="article">
+        <!-- Interactions -->
+        <div class="breadcrumb"></div>
+        <div class="article__interactions">
+          <div class="article__interactions--section">
+            <a href="../index.html" id="first-section" class="c-button c-button--large c-button--semi-round c-button--gray-secondary c-button--gray-secondary--with-border" aria-label="Go to previous page">
+              <i class="fa-sharp fa-regular fa-arrow-left" aria-hidden="true"></i>
+              Go back
+            </a>
+          </div>
+        </div>
+        <div class="article__header">
+          <h1>Practice: Understanding Object-Oriented Programming | SDTL3 A2.1</h1>
+
+          <div class="article__header-info">
+            <span>Elliot La Fave</span>
+            <p>&#183;</p>
+            <span>04/07/2022</span>
+            <p>&#183;</p>
+            <span>14:22pm</span>
+          </div>
+
+          <link rel="stylesheet" href="/assets/My Process.cfe4881a.css" /><div class="article__section">
+    <h2>My IDE</h2>
+
+    <div class="article__image">
+      <img src="../img/ide.png" alt="" class="articleImg">
+      <p>I am using the Eclipse IDE by IBM.</p>
+    </div>
+
+    <div class="article__section">
+      <p>
+        I have decided to create a fighting game where players can be damaged, healed and when all health is lost the
+        game ends.
+      </p>
+      <p>Certain players can have shields to help them take less damage.</p>
+    </div>
+
+    <div class="article__image article__image-thin">
+      <img src="../img/program.png" alt="" class="articleImg">
+      <p>An image of my program running and the main method.</p>
+    </div>
+
+    <div class="article__section">
+      <p>
+        The class contains a constructor that is used to set the values of the variables, methods to deal damage: either
+        simple damage or critical damage and getter/setter methods to retrieve data from the player class.
+      </p>
+      <p>
+        The image below shows the base class a player, this will be used by other classes to inherit the base
+        functionality.
+      </p>
+    </div>
+
+    <div class="article__image article__image-thin">
+      <img src="../img/carbon(1).png" alt="" class="articleImg">
+      <p>An image of the base Player class.</p>
+    </div>
+
+    <div class="article__section">
+      <p>I then created another class for a player with a shield equipped.</p>
+      <p>
+        This class inherited the base functionality of the player class, but the damage and critical methods have been
+        overridden with a lower damage value.
+      </p>
+
+      <p>I have added a super method to the constructor so the values in the parent class can be changed.</p>
+    </div>
+
+    <div class="article__image article__image-thin">
+      <img src="../img/carbon(2).png" alt="" class="articleImg">
+      <p>An image of the Player with Shield class.</p>
+    </div>
+
+    <div class="article__section">
+      <h2>What OOP means to me</h2>
+      <p>
+        I have learned that OOP is a way of ensuring that you don’t have to constantly repeat lines of code or functions
+        to work on a set of data.
+      </p>
+      <p>
+        It seems to be a better approach to the old way of writing multiple functions that change variables which can
+        end up being messy or ‘spaghetti code’.
+      </p>
+
+      <h2>OOP at work</h2>
+
+      <p>Recently in work I have been working with C# to create a login audit API.</p>
+      <p>
+        I have used many object-oriented programming concepts such as using interfaces to abstract my code, using
+        getter/setter classes to store data in a structured way.
+      </p>
+      <p>
+        I have then used the entity framework in .Net to pull data from a database and return the results as a JSON
+        result with multiple API endpoints.
+      </p>
+      <p>
+        I want to learn more about interfaces in C# and how they can abstract the functionality of my programs and make
+        it easier for other developers to work on my program.
+      </p>
+
+      <h2>What i'm learning</h2>
+      <p>
+        I have recently learned about how to use OOP and the MVC pattern to create components that use data and update
+        data sources and then render the data within a view.
+      </p>
+      <p>I have used this in some of my own projects/challenges I have worked on.</p>
+      <p>
+        I am looking forward to practicing OOP in JavaScript as I see it as a much better way of working with a
+        collection of data and maintaining the state of an application.
+      </p>
+    </div>
+  </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Comments Section --><section class="comments-container" data-stream="633ec855c6bdedc1a0812586" id="commentStreamContainer">
+  <h2 id="comments">Comments</h2>
+  <div>
+    <form class="add-comment-container" onsubmit="return false">
+      <div class="add-comment-container-notAllowed">
+        <a id="logInButton" class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border storeBackLink u-margin-right-small" href="/pages/Login/login.html">Log In</a>
+        <a id="signUpButton" class="c-button c-button--large c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border storeBackLink" href="/pages/Login/signUp.html">Sign Up</a>
+        <a id="verifyEmailButton" class="btn btn-purple-small btn-purple-small-warning storeBackLink" href="/pages/Login/verifyEmail.html">Verify Email</a>
+      </div>
+      <label for="commentTextarea">Enter your comment...</label>
+      <textarea placeholder="Type your comment in here..." name="commentTextarea" id="commentTextarea" minlength="3" maxlength="120" required></textarea>
+      <input type="submit" value="Publish" id="publishCommentButton">
+    </form>
+  </div>
+  <div id="InsertCommentsContainer"></div>
+</section>
+    <!-- Footer --><!-- <div class="c-strip">
+  <h2>Need a website?</h2>
+  <a
+    href="/Get a quote/"
+    class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border"
+    aria-label="Aria label"
+  >
+    Get a quote today
+  </a>
+</div> --><footer class="c-footer">
+  <div class="c-footer__head">
+    <a class="c-footer__head-site-name" href="./index.html">elliotlafave.com</a>
+    <div class="c-footer__head-links">
+      <a href="/index">Home</a>
+      <a href="/CV">CV</a>
+      <a href="/portfolio">Portfolio</a>
+    </div>
+  </div>
+  <div class="c-footer__body">
+    <div class="c-footer__body-link-grid">
+      <div class="c-footer__body-link-group">
+        <a href="/pages/Login/login.html">Login</a>
+        <a href="/pages/Login/signUp.html">Sign up</a>
+        <a href="/account.html">My account</a>
+      </div>
+      <!-- <div class="c-footer__body-link-group">
+        <a href="https://tools.elliotlafave.com/#/">Developer tools</a>
+        <a href="https://uptime.elliotlafave.com/status/websites">Uptime</a>
+        <a href="https://components.elliotlafave.com/">Component library</a>
+        <a href="https://zeroheight.com/02f0b0962">Style guide</a>
+      </div> -->
+      <div class="c-footer__body-link-group">
+        <!-- <a href="/Get a quote/">Get a quote</a> -->
+        <a href="/pages/Articles/index.html">Articles</a>
+        <a href="/contact-me.html">Contact me</a>
+        <a href="/portfolio.html#all-projects">Projects</a>
+      </div>
+    </div>
+    <div class="c-footer__body-social">
+      <a href="https://www.linkedin.com/in/elliot-la-fave-4215b6222/?locale=es_ES" class="c-button c-button--medium c-button--square c-button--ghost" aria-label="Aria label">
+        <img src="/img/linkedin-brands.svg" alt="Linkedin Logo">
+        Linkedin
+      </a>
+      <a href="https://codepen.io/elliotlafave123" class="c-button c-button--medium c-button--square c-button--ghost" aria-label="Aria label">
+        <img src="/img/codepen-brands.svg" alt="Codepen Logo">
+        Codepen
+      </a>
+      <a href="https://github.com/elliotlafave123/elliotlafave123.github.io" class="c-button c-button--medium c-button--square c-button--ghost" aria-label="Aria label">
+        <img src="/img/github-brands.svg" alt="GitHub Logo">
+        GitHub
+      </a>
+    </div>
+  </div>
+  <div class="c-footer__branding">
+    <div class="c-footer__branding-logo">
+      <a href="/index.html"><img src="/img/logo.png" alt="Footer Logo"></a>
+      <p><i class="fa-sharp fa-regular fa-copyright"></i> <span id="currentYear">0000</span> Elliot La Fave</p>
+    </div>
+    <div class="c-footer__branding-links">
+      <a href="https://elliotlafave.com/privacypolicy">Privacy policy</a>
+      <a href="https://elliotlafave.com/termsandconditions">Terms of service</a>
+      <a href="https://elliotlafave.com/cookiepolicy">Cookie policy</a>
+    </div>
+  </div>
+</footer>
+  </body></html>
