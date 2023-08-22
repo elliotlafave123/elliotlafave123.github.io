@@ -16,6 +16,11 @@
 @import "../../ComponentAssets/simpleComponents/layout/header/header.scss";
 @import "../../ComponentAssets/simpleComponents/layout/footer/c-footer.scss";
 @import "../../ComponentAssets/simpleComponents/layout/strip/c-strip.scss";
+@import "../../ComponentAssets/simpleComponents/layout/grid/c-grid.scss";
+@import "../../ComponentAssets/simpleComponents/layout/divider/c-divider.scss";
+@import "../../ComponentAssets/simpleComponents/history/c-history.scss";
+@import "../../ComponentAssets/simpleComponents/certification/c-certification.scss";
+@import "../../ComponentAssets/simpleComponents/certificate/c-certificate.scss";
 
 // Forms
 @import "../../ComponentAssets/simpleComponents/Forms/Form Fields/textInput";
@@ -29,22 +34,16 @@
 
 // Components - Organised
 // Base
-@import "components/base/pageLoad";
 @import "components/base/skeleton";
 @import "components/base/loadingSpinner";
-@import "components/base/skipNavigation";
 // Article
 @import "components/Article/link-card";
 // Account details
 @import "components/AccountDetails/accountDetails";
 // Login
 @import "components/Login/loginContainer";
-@import "components/Login/signedInStrip";
-// Breadcrumb
-@import "components/breadcrumb/breadcrumb";
 // Portfolio
 @import "components/Portfolio/githubStats";
-@import "components/Portfolio/onwardStrip";
 // Tooltips
 @import "components/Tooltips/tooltip";
 @import "components/Tooltips/challengeOverlay";
@@ -59,10 +58,10 @@
 
 // Components - Assorted
 @import "components/scrollbar";
+@import "components/breadcrumb/breadcrumb";
 @import "components/button";
 @import "components/wave";
 @import "components/skill-grid";
-@import "components/skill";
 @import "components/card";
 @import "components/form";
 @import "components/liquid";
@@ -81,17 +80,7 @@
 @import "layout/base/grid";
 
 // Layout - Assorted
-@import "layout/navigation";
-@import "layout/header";
-@import "layout/about";
-@import "layout/skills";
-@import "layout/portfolio";
 @import "layout/contact";
-@import "layout/work";
-@import "layout/education";
-@import "layout/achievements";
-@import "layout/message.scss";
-@import "layout/certifications";
 
 // Page Types
 @import "pages/defaultSection";

@@ -17,11 +17,10 @@
 }
 
 .JScard-content {
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 32rem;
 
   &-date {
     color: $text-light;
@@ -33,13 +32,13 @@
 
 .JScard-content p {
   color: $text-light;
-  font-size: 1.6rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
-  line-height: 2.5rem;
+  line-height: 2;
   font-weight: 500;
   margin-top: 1rem;
-  margin-bottom: 2rem;
-  height: 12rem;
+  margin-bottom: 1rem;
+  height: 10rem;
 
   @include respond(laptop) {
     font-size: 1.5rem;
@@ -73,12 +72,12 @@
 .tag {
   background-color: $color-tag;
   color: $text-light;
-  padding: 0.25rem 1.3rem 0.25rem 0.7rem;
+  padding: 0.25rem 0.7rem;
   margin-right: 1rem;
   margin-bottom: 0.8rem;
   border-radius: 0.4rem;
 
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   line-height: 1.2rem;
   letter-spacing: 0.6px;
   font-weight: 500;
@@ -89,7 +88,7 @@
 
   svg,
   img {
-    height: 1.4rem;
+    height: 0.8rem;
     margin-right: 0.6rem;
   }
 }
@@ -109,7 +108,7 @@
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 0 0 0 5px;
 
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-decoration: none;
@@ -118,7 +117,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.7rem;
 
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
@@ -131,7 +130,7 @@
   }
 
   i {
-    opacity: 0.95;
+    margin-top: 1px;
   }
 }
 
@@ -141,7 +140,6 @@
   justify-content: center;
   align-items: center;
   padding: 0.3rem;
-  // margin-top: 0.4rem;
 
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
@@ -151,7 +149,7 @@
 }
 
 .btn-git img {
-  width: 3.5rem;
+  width: 2rem;
 
   @include respond(tab-land) {
     font-size: 4rem;
