@@ -57,7 +57,7 @@
 
 .o-row-2-col {
   width: 100%;
-  @include centered-container;
+  @include container-x;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
