@@ -130,13 +130,10 @@ export function DisplayCardWithinContainer(project: Project, container: Element)
         <div class="buttons-container">
             <a href="${project.linkLivePreview}" class="JSbtn-live-preview"
                 >Live Preview
-                <i class="fa-solid fa-up-right-from-square"></i>
+                <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
             </a>
-            <a href="${project.linkGit}" class="btn-git">
-                <img
-                    src="https://d33wubrfki0l68.cloudfront.net/f78349611e6cb9ec98b8b2851b3b1e616e7e4ea3/1c471/img/github-logo.png"
-                    alt=""
-                />
+            <a href="${project.linkGit}" class="btn-git" title="View code">
+              <i class="fa-brands fa-github"></i>
             </a>
         </div>
     </div>
