@@ -6,6 +6,9 @@ import { initPortfolioCardsApp } from "./Portfolio Cards APP/InitPortfolioCardsA
 // Set Dark Mode
 import { setDarkMode } from "./DarkMode/setDarkMode";
 import { handleDarkMode } from "./DarkMode/handleDarkMode";
+// breadcrumb
+import { createBreadcrumb } from "./breadcrumb/breadcrumb";
+
 // Tooltip
 import { initTooltip } from "./Tooltip/tooltip";
 // Articles
@@ -65,6 +68,9 @@ ShowSentCheckmark();
 // Set dark mode
 setDarkMode();
 handleDarkMode();
+
+// init breadcrumb
+createBreadcrumb();
 
 // Init comments section
 async function initComments() {

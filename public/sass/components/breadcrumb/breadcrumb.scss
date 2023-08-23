@@ -1,20 +1,24 @@
-.breadcrumb {
+.c-breadcrumb {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 2rem;
 
-  i,
-  p {
+  i {
     margin: 0;
     margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
 
+  a,
   p {
     font-size: 1rem;
     letter-spacing: 1px;
-    color: $text-light;
     margin-bottom: 0;
+  }
+
+  p {
+    color: $text-light;
   }
 
   i {
