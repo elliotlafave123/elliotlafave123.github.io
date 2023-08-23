@@ -6,7 +6,7 @@ const bannerMarkup = `
         </div>
         <div class="cookie-banner-interactions">
             <button id="AcceptCookiesButton">Continue</button>
-            <a href="https://elliotlafave.com/CookiePolicy.html" target="_blank">See our cookies policy</a>
+            <a href="/CookiePolicy.html" target="_blank">See our cookies policy</a>
         </div>
     </div>
 `;
