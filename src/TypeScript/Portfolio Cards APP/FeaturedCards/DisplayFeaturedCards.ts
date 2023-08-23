@@ -1,5 +1,7 @@
 import { DisplayCardWithinContainer } from "../displayCards";
 
+const loader = document.querySelector(".loader") as HTMLElement;
+
 export const initJsPortfolioFeaturedCards = () => {
   let data;
   let featuredData;
@@ -74,6 +76,10 @@ export const initJsPortfolioFeaturedCards = () => {
 
   /* *********** Featured portfolio display function *********** */
   const displayFeatured = function (data) {
+    if (loader) {
+      loader.style.display = "none";
+    }
+
     data.forEach((element) => {
       DisplayCardWithinContainer(element, featured);
     });

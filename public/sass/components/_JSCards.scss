@@ -103,6 +103,7 @@
 
   &:hover {
     background-color: #5f3dc4;
+    text-decoration: none;
   }
 
   i {
@@ -116,18 +117,15 @@
   justify-content: center;
   align-items: center;
   padding: 0.3rem;
-
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: $color-white;
 
   &:hover {
     background-color: $color-grey-dark;
+    text-decoration: none;
   }
-}
 
-.btn-git img {
-  width: 2rem;
-
-  @include respond(tab-land) {
-    font-size: 4rem;
+  i {
+    font-size: 1.4rem;
   }
 }

@@ -14,6 +14,7 @@
     ]"
   >
     <slot></slot>
+    <i v-if="icon" :class="['fa', icon]" aria-hidden="true"></i>
   </button>
   <a
     v-else
@@ -31,6 +32,7 @@
     ]"
   >
     <slot></slot>
+    <i v-if="icon" :class="['fa', icon]" aria-hidden="true"></i>
   </a>
 </template>
 
@@ -58,6 +60,7 @@ export default {
     fullWidth: Boolean,
     centerText: Boolean,
     withBorder: Boolean,
+    icon: String, // New prop for FontAwesome icon class
   },
   setup() {},
 };
