@@ -8,7 +8,7 @@ export interface Props {
   title: string;
 }
 
-const isTestSubdomain = process.env?.NETLIFY_ENV === "test";
+const isTestSubdomain = import.meta.env.VITE_NETLIFY_ENV === "test";
 
 const { title } = Astro.props;
 ---
