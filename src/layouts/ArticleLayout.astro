@@ -12,15 +12,14 @@ export interface Props {
   streamID: string;
 }
 
-const hostname = typeof window !== "undefined" ? window.location.hostname : "";
-const isTestSubdomain = hostname.startsWith("test.");
+const isTestSubdomain = process.env?.NETLIFY_ENV === "test";
 
 const { title, date, time, streamID } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <BaseHead title={isTestSubdomain ? "Test - " : "" + title} />
+  <BaseHead title={isTestSubdomain ? "Test - " + title : title} />
   <body>
     <Header />
     <main id="main">
