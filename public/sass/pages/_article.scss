@@ -1,6 +1,6 @@
 .article {
   color: $text-light;
-  @include centered-container;
+  @include container-x;
 
   &__container {
     @include centered-container;
