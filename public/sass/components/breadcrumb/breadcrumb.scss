@@ -4,6 +4,10 @@
   align-items: center;
   margin-bottom: 2rem;
 
+  &__margin {
+    @include container-x;
+  }
+
   i {
     margin: 0;
     margin-right: 0.5rem;
