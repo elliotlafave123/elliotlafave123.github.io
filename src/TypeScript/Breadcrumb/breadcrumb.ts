@@ -24,7 +24,7 @@ export function createBreadcrumb() {
     // Check if wrapping occurred
     const afterAppendHeight = breadcrumbNav?.offsetHeight || 0;
 
-    if (afterAppendHeight > 26) {
+    if (afterAppendHeight > 30) {
       breadcrumbNav.innerHTML = ""; // Clear the breadcrumbNav
       appendReducedBreadcrumbItems(pathnames);
     }
