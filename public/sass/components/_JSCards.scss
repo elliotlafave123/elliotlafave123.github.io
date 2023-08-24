@@ -119,6 +119,7 @@
   padding: 0.3rem;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   color: $color-white;
+  background-color: $oc-black;
 
   &:hover {
     background-color: $color-grey-dark;
