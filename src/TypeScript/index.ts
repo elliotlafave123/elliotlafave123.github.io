@@ -6,13 +6,13 @@ import { initPortfolioCardsApp } from "./Portfolio Cards APP/InitPortfolioCardsA
 // Set Dark Mode
 import { setDarkMode } from "./DarkMode/setDarkMode";
 import { handleDarkMode } from "./DarkMode/handleDarkMode";
+
 // breadcrumb
 import { createBreadcrumb } from "./breadcrumb/breadcrumb";
 
 // Tooltip
 import { initTooltip } from "./Tooltip/tooltip";
 // Articles
-import { initBreadcrumb } from "./Articles/breadcrumb";
 import { startEnlargeImage } from "./Articles/enlargeImg";
 import { startArticleSidebar } from "./Articles/articleSidebar";
 // Page Specific
@@ -38,6 +38,9 @@ import { ShowSentCheckmark } from "./ContactMeForm/ShowSentCheckmark";
 import { InitClientScreeningForm } from "./Forms/ClientScreening";
 // Header
 import { initHeader } from "../../ComponentAssets/simpleComponents/layout/header/header";
+import { setMainElementTopPadding } from "./Header/MainElementTopPadding";
+
+setMainElementTopPadding();
 
 // Init Header
 initHeader();
@@ -112,8 +115,6 @@ if (exists(featuredCardsContainerPortfolio)) initJsPortfolioFeaturedCards();
 
 ////////////////////////////
 // Articles
-// init breadcrumb
-initBreadcrumb();
 // Article Enlarge Image
 const articleImgContainer: HTMLElement = document.querySelector(".article__image") as HTMLElement;
 if (exists(articleImgContainer)) startEnlargeImage();

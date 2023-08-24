@@ -4,6 +4,10 @@
   align-items: center;
   margin-bottom: 2rem;
 
+  &__margin {
+    @include container-x;
+  }
+
   i {
     margin: 0;
     margin-right: 0.5rem;
@@ -11,19 +15,24 @@
   }
 
   a,
-  p {
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin-bottom: 0;
+  span {
+    margin-bottom: 8px;
   }
 
-  p {
+  a,
+  span {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  span {
     color: $text-light;
   }
 
   i {
     font-size: 15px;
     color: $color-primary;
+    margin-bottom: 0;
   }
 
   a {
