@@ -17,9 +17,7 @@ const { title } = Astro.props;
   <body>
     <Header />
     <main id="main">
-      <div class="c-container" style="padding-bottom: 0;">
-        <nav class="c-breadcrumb" id="breadcrumbNav"></nav>
-      </div>
+      <nav class="c-breadcrumb c-breadcrumb__margin" id="breadcrumbNav"></nav>
       <slot />
     </main>
     <Footer />
