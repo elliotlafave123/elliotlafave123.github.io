@@ -132,9 +132,6 @@ export function DisplayCardWithinContainer(project: Project, container: Element)
                 >Live Preview
                 <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
             </a>
-            <a href="${project.linkGit}" class="btn-git" title="View code">
-              <i class="fa-brands fa-github"></i>
-            </a>
         </div>
     </div>
     `;
