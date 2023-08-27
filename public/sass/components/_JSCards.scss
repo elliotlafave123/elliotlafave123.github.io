@@ -38,7 +38,7 @@
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  height: 10rem;
+  height: 11rem;
 }
 
 .tags-container {
@@ -78,15 +78,13 @@
   padding: 0;
   display: flex;
   flex-direction: row;
-  // position: absolute;
-  // bottom: 0;
 }
 
 .JSbtn-live-preview {
-  width: 80%;
+  width: 100%;
   background-color: #7048e8;
-  padding: 1rem 2rem 1rem 2rem;
-  border-radius: 0 0 0 5px;
+  padding: 1rem 2rem 1rem 1.25rem;
+  border-radius: 0 0 5px 5px;
 
   font-size: 1.1rem;
   font-weight: 600;

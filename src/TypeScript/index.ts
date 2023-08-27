@@ -39,11 +39,13 @@ import { InitClientScreeningForm } from "./Forms/ClientScreening";
 // Header
 import { initHeader } from "../../ComponentAssets/simpleComponents/layout/header/header";
 import { setMainElementTopPadding } from "./Header/MainElementTopPadding";
+import { initHeaderNavigation } from "./Header/headerNavigation";
 
 setMainElementTopPadding();
 
 // Init Header
 initHeader();
+initHeaderNavigation();
 
 // Login and sign uo
 CheckLoginOnLoginForm();
