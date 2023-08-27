@@ -36,6 +36,10 @@
   margin-bottom: 4rem;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
+  @include respond(tab-port) {
+    padding: 1.2rem 1.5rem;
+  }
+
   &:hover .editLinkButton,
   &:focus-within .editLinkButton {
     display: block;
@@ -110,7 +114,7 @@
         }
 
         span {
-          grid-column: 1 / 3;
+          grid-column: 1 / 4;
           margin-top: 0.7rem;
         }
 
@@ -205,8 +209,8 @@
 
   @include respond(tab-port) {
     position: absolute;
-    top: 2rem;
-    right: 8rem;
+    bottom: 1rem;
+    right: 1rem;
     display: block !important;
   }
 }
