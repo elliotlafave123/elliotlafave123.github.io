@@ -1,27 +1,30 @@
-<div class="c-accessibility-menu">
+<!-- Accessibility Menu -->
+<nav class="c-accessibility-menu">
   <div class="c-accessibility-menu__item">
     <a href="#main" class="c-accessibility-menu__link">Skip to main content</a>
   </div>
-</div>
+</nav>
 
+<!-- Mobile Menu Toggle -->
 <button class="c-mobile-menu-toggle" aria-label="Open menu">
   <i class="fa-sharp fa-regular fa-bars"></i>
 </button>
 
+<!-- Main Header -->
 <header class="c-header">
   <div class="c-header__top">
     <div class="c-header__logo">
-      <a href="/" class="c-header__logo-link">
+      <a href="/" aria-label="Go to Home Page" class="c-header__logo-link">
         <img
           src="https://d33wubrfki0l68.cloudfront.net/de4eb2840bd995fff8693e59dfbff5e8f7036730/36519/img/logo.png"
           alt="Elliot Lafave Logo"
           class="c-header__logo-image"
         />
-        <p>elliotlafave.com</p>
+        <span>elliotlafave.com</span>
       </a>
     </div>
-
-    <div class="c-header__authentication" id="headerAuthLoggedOut">
+    <!-- Authentication -->
+    <div aria-label="User Authentication Options" class="c-header__authentication" id="headerAuthLoggedOut">
       <a href="/pages/login/signup.html" class="c-header__authentication-link storeBackLink">Sign up</a>
       <a href="/pages/login/login.html" class="c-header__authentication-link storeBackLink">Log in</a>
     </div>
@@ -31,7 +34,8 @@
     </div>
   </div>
   <div class="c-header__bottom">
-    <nav class="c-header__navigation">
+    <!-- Navigation -->
+    <nav class="c-header__navigation" aria-label="Main navigation">
       <ul class="c-header__navigation-list">
         <li class="c-header__navigation-item">
           <a href="/index.html" class="c-header__navigation-link">Home</a>
@@ -70,13 +74,14 @@
         </li>
       </ul>
     </nav>
+    <!-- Dark Mode Toggle -->
     <div class="toggle-container">
-      <i class="fa-sharp fa-regular fa-sun"></i>
-      <input type="checkbox" id="checkboxSlider" class="toggle" tabindex="-1" />
+      <span id="sunIcon" aria-hidden="true"><i class="fa-sharp fa-regular fa-sun"></i></span>
+      <input type="checkbox" id="checkboxSlider" class="toggle" tabindex="0" aria-labelledby="sunIcon moonIcon" />
       <label for="checkboxSlider" class="darkModeLabel">
         <div class="ball"></div>
       </label>
-      <i class="fa-sharp fa-regular fa-moon"></i>
+      <span id="moonIcon" aria-hidden="true"><i class="fa-sharp fa-regular fa-moon"></i></span>
     </div>
   </div>
 </header>
