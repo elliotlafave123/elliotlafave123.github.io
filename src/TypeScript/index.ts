@@ -140,3 +140,63 @@ if (exists(BackLinkButton)) initStoreBackLink();
 
 const PasswordInput: HTMLElement = document.getElementById("password") as HTMLElement;
 if (exists(PasswordInput)) handleShowPassword();
+
+// testin
+
+if (window.innerWidth < 900) {
+  // Select all primary navigation items
+  const primaryNavItems = document.querySelectorAll(".c-header__navigation-item.is-primary");
+
+  const subNavigations = document.querySelectorAll(".c-header__sub-navigation") as NodeListOf<HTMLElement>;
+
+  // Hide all sub-navigation lists
+  subNavigations.forEach((subNav) => {
+    subNav.style.display = "none";
+
+    // if there are child items, add a chevron icon
+    if (subNav.children.length > 0) {
+      const chevron = document.createElement("i");
+      chevron.classList.add("c-header__mobile-chevron", "fa-sharp", "fa-chevron-down");
+      subNav.parentElement.querySelector(".c-header__navigation-link").appendChild(chevron);
+    }
+  });
+
+  // Add click event listener for each primary navigation item
+  primaryNavItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // close all other sub-navigation lists
+      subNavigations.forEach((subNav) => {
+        if (subNav !== item.querySelector(".c-header__sub-navigation")) {
+          subNav.style.display = "none";
+        }
+      });
+
+      // Toggle the 'active' class to show or hide the sub-navigation
+      item.classList.toggle("active");
+
+      // Find the corresponding secondary navigation list
+      const subNavList = item.querySelector(".c-header__sub-navigation") as HTMLElement;
+
+      // Toggle the display of the sub-navigation list
+      if (subNavList) {
+        if (subNavList.style.display === "flex") {
+          subNavList.style.display = "none";
+        } else {
+          subNavList.style.display = "flex";
+        }
+      }
+
+      // Optionally, change the chevron icon's direction
+      const chevron = item.querySelector(".c-header__chevron") as HTMLElement;
+      if (chevron) {
+        if (chevron.style.transform === "rotate(-180deg)") {
+          chevron.style.transform = "rotate(0deg)";
+        } else {
+          chevron.style.transform = "rotate(-180deg)";
+        }
+      }
+    });
+  });
+}
