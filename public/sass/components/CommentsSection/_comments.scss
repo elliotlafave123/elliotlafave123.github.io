@@ -30,22 +30,11 @@
   padding: 2.2rem 2.5rem;
   color: var(--text-light);
   background-color: var(--color-card);
-  border-radius: 0.5rem 0.5rem 0 0.5rem;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
   display: flex;
   justify-content: space-between;
   margin-bottom: 4rem;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
-  &:after {
-    position: absolute;
-    bottom: -2rem;
-    right: 0;
-    content: "";
-    width: 2rem;
-    height: 2rem;
-    background-color: $color-card;
-    clip-path: polygon(0 0, 100% 100%, 100% 0);
-  }
 
   &:hover .editLinkButton,
   &:focus-within .editLinkButton {
@@ -53,9 +42,8 @@
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-top: 1rem;
-    letter-spacing: 0.9px;
   }
 
   button {
@@ -77,13 +65,13 @@
     height: min-content;
 
     p {
-      font-size: 1.6rem;
+      font-size: 1rem;
       line-height: 1;
       font-weight: 600;
       margin: 0;
     }
     i {
-      font-size: 2.6rem;
+      font-size: 1rem;
 
       &.red {
         color: var(--color-form-false);
@@ -143,15 +131,17 @@
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.2rem;
       line-height: 0.9 !important;
       font-weight: 600;
       letter-spacing: 1.4px;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     h3 {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0;
       margin-left: 1rem;
 
       &:after,
@@ -161,7 +151,7 @@
     }
 
     span {
-      font-size: 1.6rem;
+      font-size: 0.9rem;
     }
   }
 
@@ -171,7 +161,7 @@
     border-radius: 0.5rem;
     width: 100%;
     resize: none;
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 0.8rem 1rem;
     color: $color-white;
     margin-top: 1rem;
@@ -182,9 +172,8 @@
     border-radius: 0.5rem;
     background-color: $color-primary;
     color: $text-light;
-    font-size: 1.7rem;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 1px;
     padding: 0.8rem 1rem;
 
     &:hover {
@@ -196,16 +185,16 @@
 }
 
 .CommentHeaderDot {
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   background-color: var(--color-primary);
-  margin: 1.3rem;
+  margin: 1rem;
 }
 
 .editLinkButton {
   display: none;
-  font-size: 1.8rem;
+  font-size: 1rem;
   color: var(--text-light);
   text-decoration: underline;
   padding: 0;
@@ -222,7 +211,7 @@
   }
 }
 .deleteLinkButton {
-  font-size: 1.8rem;
+  font-size: 1rem;
   color: var(--text-light);
   text-decoration: underline;
   padding: 0;
@@ -235,22 +224,19 @@
 
 // profile image
 .comment .profileImage {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 1rem;
 
   p {
-    font-size: 3rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #ffffff !important;
     margin: 0 !important;
-  }
-
-  @include respond(tab-port) {
-    margin-right: 1.5rem;
   }
 
   &-blue {
