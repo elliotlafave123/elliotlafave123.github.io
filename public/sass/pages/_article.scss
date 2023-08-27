@@ -57,6 +57,7 @@
     }
     li {
       margin-left: 1rem;
+      font-size: 1rem;
 
       &.active > a {
         color: $text-light;
@@ -159,13 +160,7 @@
 
     a {
       transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-      color: #dd94ff;
       text-decoration: underline;
-
-      &:hover {
-        color: #d06cffd0;
-        text-decoration: none;
-      }
     }
   }
 
@@ -181,8 +176,7 @@
     }
 
     li {
-      font-size: 2rem;
-      line-height: 2.3rem;
+      font-size: 1rem;
     }
   }
 
@@ -192,24 +186,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     position: relative;
 
     &:hover {
       &::before {
         color: $text-light;
         position: absolute;
-        top: 6rem;
-        right: 10rem;
-        content: "\f424";
-        font-family: "Font Awesome\ 5 Free";
-        font-weight: 900;
-
-        font-size: 1.6rem;
-        line-height: 1.6rem;
+        top: 3rem;
+        right: 4.5rem;
+        content: "\f065";
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
         background-color: var(--colour-btn-expand-img);
-        width: 4rem;
-        height: 4rem;
         border-radius: 50%;
 
         display: flex;
@@ -225,14 +217,13 @@
         top: 6rem;
         right: 4rem;
         content: "\f424";
-        font-family: "Font Awesome\ 5 Free";
-        font-weight: 900;
-
-        font-size: 1.6rem;
-        line-height: 1.6rem;
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
         background-color: var(--colour-btn-expand-img);
-        width: 4rem;
-        height: 4rem;
         border-radius: 50%;
 
         display: flex;
@@ -247,14 +238,13 @@
           top: 6rem;
           right: 4rem;
           content: "\f424";
-          font-family: "Font Awesome\ 5 Free";
-          font-weight: 900;
-
-          font-size: 1.6rem;
-          line-height: 1.6rem;
+          font-family: "Font Awesome 6 Pro";
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1rem;
+          width: 2.5rem;
+          height: 2.5rem;
           background-color: var(--colour-btn-expand-img);
-          width: 4rem;
-          height: 4rem;
           border-radius: 50%;
 
           display: flex;
@@ -271,14 +261,13 @@
         top: 3.5rem;
         right: 1rem;
         content: "\f424";
-        font-family: "Font Awesome\ 5 Free";
-        font-weight: 900;
-
-        font-size: 1.6rem;
-        line-height: 1.6rem;
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
         background-color: var(--colour-btn-expand-img);
-        width: 4rem;
-        height: 4rem;
         border-radius: 50%;
 
         display: flex;
@@ -293,14 +282,13 @@
           top: 3.5rem;
           right: 1rem;
           content: "\f424";
-          font-family: "Font Awesome\ 5 Free";
-          font-weight: 900;
-
-          font-size: 1.6rem;
-          line-height: 1.6rem;
+          font-family: "Font Awesome 6 Pro";
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1rem;
+          width: 2.5rem;
+          height: 2.5rem;
           background-color: var(--colour-btn-expand-img);
-          width: 4rem;
-          height: 4rem;
           border-radius: 50%;
 
           display: flex;
@@ -318,9 +306,10 @@
     }
 
     p {
-      font-size: 1.6rem;
+      font-size: 0.8rem;
       margin-top: 1rem;
       align-self: flex-start;
+      color: $oc-gray-4;
     }
 
     &-thin {
@@ -353,14 +342,13 @@
         top: 6rem;
         right: 10rem;
         content: "\f78c" !important;
-        font-family: "Font Awesome 6 free";
-        font-weight: 900;
-
-        font-size: 1.6rem;
-        line-height: 1.6rem;
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
         background-color: var(--colour-btn-expand-img);
-        width: 4rem;
-        height: 4rem;
         border-radius: 50%;
 
         display: flex;
