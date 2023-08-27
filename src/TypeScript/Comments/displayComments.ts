@@ -92,13 +92,13 @@ const insertComments = (comments: [Comment]) => {
         </div>
         <div class="comment-side">
             <button class="upvoteComment">
-                <i class="fa-solid fa-chevron-up green"></i>
+                <i class="fa-sharp fa-solid fa-chevron-up green"></i>
             </button>
             <p>${comment.upvotes}</p>
             <div class="CommentHeaderDot"></div>
             <p>${comment.downvotes}</p>
             <button class="downvoteComment">
-                <i class="fa-solid fa-chevron-down red"></i>
+                <i class="fa-sharp fa-solid fa-chevron-down red"></i>
             </button>
         </div>
     </div>
