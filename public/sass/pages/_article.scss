@@ -39,7 +39,6 @@
       display: block;
       padding: 0.125rem 0;
       color: #ccc;
-      font-size: 1.6rem;
       transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
       color: rgb(130, 121, 137);
 
@@ -86,16 +85,6 @@
   }
 
   &__header {
-    h2 {
-      font-size: 4.2rem;
-      line-height: 5.4rem;
-
-      @include respond(phone) {
-        font-size: 3rem;
-        line-height: 3.8rem;
-      }
-    }
-
     &-info {
       width: 100%;
       display: flex;
@@ -104,44 +93,25 @@
 
       span,
       p {
-        font-size: 1.6rem;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
+      }
+
+      span {
+        font-size: 0.85rem;
       }
 
       p {
-        font-size: 3rem;
-        margin: 0;
+        font-size: 1.2rem;
+        line-height: 0.5rem;
       }
     }
   }
 
   &__section {
     margin-bottom: 4.5rem;
+
     h2 {
-      font-size: 3.8rem;
       margin-bottom: 2.4rem;
-
-      @include respond(phone) {
-        font-size: 3rem;
-        line-height: 3.8rem;
-      }
-    }
-
-    h3,
-    h4,
-    h5,
-    h6 {
-      &::after,
-      &::before {
-        display: none;
-      }
-    }
-
-    h3 {
-      font-size: 2.2rem;
-      font-weight: 600;
-      line-height: 2.4rem;
-      margin-bottom: 1.2rem;
     }
 
     ul,
@@ -154,7 +124,7 @@
     }
 
     li {
-      font-size: 1.9rem;
+      font-size: 1rem;
       margin-bottom: 0.6rem;
     }
 

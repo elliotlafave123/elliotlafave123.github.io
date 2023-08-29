@@ -2,7 +2,7 @@ import { State } from "./state";
 import { displayDataInWidget } from "./displayDataInWidget";
 import { addDataToInputs } from "./addDataToInputs";
 import { controller } from "./controller";
-import { showHeaderAuth } from "../../Comments/displaySignedInStrip";
+import { showHeaderAuth } from "../../apps/Comments/displaySignedInStrip";
 
 const token = localStorage.getItem("token");
 const API_URL = "https://elliotapiserver.com/Auth";

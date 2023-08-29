@@ -1,15 +1,20 @@
 // Abstracts
 @import "abstracts/variables";
 @import "abstracts/mixins";
-@import "../../ComponentAssets/simpleComponents/layout/container/c-container.scss";
+@import "../../ComponentAssets/simpleComponents/layout/container/c-container";
 
 // Base
 @import "base/utilities";
 @import "base/base";
 @import "base/animations";
-@import "../../ComponentAssets/sass/variables/typography.scss";
+@import "../../ComponentAssets/sass/variables/typography";
 
 // COMPONENT LIBRARY
+// Complex Components
+@import "../../ComponentAssets/complexComponents/CommentsSection/comments";
+@import "../../ComponentAssets/complexComponents/CommentsSection/addComment";
+
+// Simple Components
 @import "../../ComponentAssets/simpleComponents/button/button.scss";
 @import "../../ComponentAssets/simpleComponents/layout/flexStrip/c-flex-strip.scss";
 @import "../../ComponentAssets/simpleComponents/layout/header/header.scss";
@@ -20,63 +25,35 @@
 @import "../../ComponentAssets/simpleComponents/history/c-history.scss";
 @import "../../ComponentAssets/simpleComponents/certification/c-certification.scss";
 @import "../../ComponentAssets/simpleComponents/certificate/c-certificate.scss";
+@import "../../ComponentAssets/simpleComponents/projectCard/projectCard.scss";
+@import "../../ComponentAssets/simpleComponents/breadcrumb/c-breadcrumb.scss";
+@import "../../ComponentAssets/simpleComponents/linkCard/link-card.scss";
+@import "../../ComponentAssets/simpleComponents/cookieBanner/cookieBanner.scss";
+@import "../../ComponentAssets/simpleComponents/jumpToSection/jumpToSectionLinks.scss";
+@import "../../ComponentAssets/simpleComponents/darkModeSlider/darkModeSlider.scss";
+@import "../../ComponentAssets/simpleComponents/loadingSpinner/loadingSpinner.scss";
+@import "../../ComponentAssets/simpleComponents/skeletonLoader/skeletonLoader.scss";
+
+// Layout
+@import "../../ComponentAssets/simpleComponents/layout/scrollbar/scrollbar";
 
 // Forms
 @import "../../ComponentAssets/simpleComponents/Forms/Form Fields/textInput";
-@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-text-area.scss";
-@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-radio-group.scss";
-@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-radio-button.scss";
-@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-select.scss";
-@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-checkbox-group.scss";
-@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-checkbox.scss";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-text-area";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-radio-group";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-radio-button";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-select";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-checkbox-group";
+@import "../../ComponentAssets/simpleComponents/Forms/Form Fields/c-checkbox";
 @import "../../ComponentAssets/simpleComponents/Forms/c-form";
 
-// Components - Organised
-// Base
-@import "components/base/skeleton";
-@import "components/base/loadingSpinner";
-// Article
-@import "components/Article/link-card";
 // Account details
 @import "components/AccountDetails/accountDetails";
 // Login
 @import "components/Login/loginContainer";
-// Portfolio
-@import "components/Portfolio/githubStats";
-// Tooltips
-@import "components/Tooltips/tooltip";
-@import "components/Tooltips/challengeOverlay";
-// Base
-@import "components/JumpToSection/JumpToSectionLinks";
-// Modal
-@import "components/Modal/ConfirmModal";
-// Comments
-@import "components/CommentsSection/comments";
-@import "components/CommentsSection/addComment";
-@import "../../ComponentAssets/simpleComponents/projectCard/projectCard.scss";
-
-// Components - Assorted
-@import "components/scrollbar";
-@import "components/breadcrumb/breadcrumb";
-@import "components/button";
 @import "components/wave";
-@import "components/skill-grid";
-@import "components/card";
-@import "components/form";
-@import "components/liquid";
-@import "components/nav";
-@import "components/portfolio-page";
-@import "components/slider";
-@import "components/darkModeSlider";
 @import "components/JSCards";
-@import "components/mobile-slider";
-@import "components/loadingSpinner";
-@import "components/cookie-banner";
 @import "components/animatedTick";
-
-// Layout - Organised
-// Base
-@import "layout/base/grid";
 
 // Layout - Assorted
 @import "layout/contact";

@@ -40,7 +40,26 @@ const { title } = Astro.props;
   <meta name="author" content="Elliot La Fave" />
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  <script defer src="/scripts/SiteFrontendTSBundle.js"></script>
+  <!-- Apps -->
+  <script defer src="/scripts/portfolioCards-TSBundle.js"></script>
+  <script defer src="/scripts/comments-TSBundle.js"></script>
+  <!-- Components -->
+  <script defer src="/scripts/breadcrumb-TSBundle.js"></script>
+  <script defer src="/scripts/header-TSBundle.js"></script>
+  <script defer src="/scripts/footer-TSBundle.js"></script>
+  <script defer src="/scripts/cookieBanner-TSBundle.js"></script>
+  <!-- Forms -->
+  <script defer src="/scripts/clientScreeningForm-TSBundle.js"></script>
+  <script defer src="/scripts/contactForm-TSBundle.js"></script>
+  <!-- Page Specific -->
+  <script defer src="/scripts/cv-TSBundle.js"></script>
+  <script defer src="/scripts/index-TSBundle.js"></script>
+  <!-- Authentication -->
+  <script defer src="/scripts/authenticationSystem-TSBundle.js"></script>
+  <!-- Other -->
+  <script defer src="/scripts/darkMode-TSBundle.js"></script>
+
+  <slot />
 
   <title>{title + " | Elliotlafave.com"}</title>
 </head>
