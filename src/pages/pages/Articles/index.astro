@@ -1,5 +1,6 @@
 ---
 import ArticleInteractions from "../../../components/ArticleInteractions.astro";
+import PromoCard from "../../../components/Promo Card/PromoCard.vue";
 import DefaultLayout from "../../../layouts/DefaultLayout.astro";
 ---
 
@@ -7,18 +8,8 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
   <!-- Main Content -->
   <ArticleInteractions />
 
-  <div class="c-container-x c-grid u-margin-bottom-medium">
-    <a href="./GMC Work/index.html">
-      <div class="link-card">
-        <p>GMC Work</p>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-    </a>
-    <a href="./Personal/index.html">
-      <div class="link-card">
-        <p>Personal Work</p>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-    </a>
+  <div class="c-container-x c-grid u-margin-bottom-large">
+    <PromoCard text="GMC Work" link="/pages/Articles/GMC Work/index.html" />
+    <PromoCard text="Personal Work" link="/pages/Articles/Personal/index.html" />
   </div>
 </DefaultLayout>

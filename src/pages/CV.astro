@@ -2,6 +2,9 @@
 import GenericButton from "../components/GenericButton.vue";
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import CertificationComponent from "../components/CV/CertificationComponent.vue";
+import CertificateCard from "../components/CV/CertificateCard.vue";
+import HistoryCard from "../components/CV/HistoryCard.vue";
+import HistoryWithGrade from "../components/CV/HistoryWithGrade.vue";
 ---
 
 <DefaultLayout title="CV">
@@ -49,273 +52,97 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
   <div class="c-container">
     <h2>Work experience</h2>
 
-    <div class="c-history">
-      <img class="c-history__image" src="/img/Logos/gmc_logo.png" alt="image" />
-      <div class="c-history__content">
-        <h3 class="c-history__title">Web developer</h3>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <h4>General Medical Council</h4>
-          <h4>•</h4>
-          <h4>Apprenticeship</h4>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p id="autoUpdateDate">Mar 2022 - Present</p>
-          <p>•</p>
-          <p id="autoUpdateDateValue">1 yr 2 mos</p>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>3 hardman street, Manchester</p>
-        </div>
-        <div class="c-history__skills">
-          <span class="bold">Skills: <span>Agile Methodologies</span></span>
-          <span> •</span>
-          <span>Scrum</span>
-          <span> •</span>
-          <span>SQL</span>
-          <span> •</span>
-          <span>C#</span>
-          <span> •</span>
-          <span>Gulp</span>
-          <span> •</span>
-          <span>Sass</span>
-          <span> •</span>
-          <span>Sitecore</span>
-          <span> •</span>
-          <span>JavaScript</span>
-          <span> •</span>
-          <span>ASP.NET Core</span>
-          <span> •</span>
-          <span>ASP.NET MVC</span>
-          <span> •</span>
-          <span>ASP.NET Web API</span>
-          <span> •</span>
-          <span>TypeScript</span>
-          <span> •</span>
-          <span>Webpack</span>
-        </div>
-        <ul>
-          <li>
-            <p class="c-history__text">Won a valued recognition award for supporting the Sitecore 10 upgrade.</p>
-          </li>
-          <li>
-            <p class="c-history__text">Won a kudos award for passing my apprenticeship exams.</p>
-          </li>
-          <li>
-            <p class="c-history__text">Won a valued award for passing my apprenticeship with a distinction grade.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <HistoryCard
+      imageSrc="/img/Logos/gmc_logo.png"
+      title="Web developer"
+      company="General Medical Council"
+      type="Apprenticeship"
+      date="Mar 2022 - Present"
+      duration="1 yr 2 mos"
+      location="3 hardman street, Manchester"
+      skills="Agile Methodologies, Scrum, SQL, C#, Gulp, Sass, Sitecore, JavaScript, ASP.NET Core, ASP.NET MVC, ASP.NET Web API, TypeScript, Webpack"
+      text="Won a valued recognition award for supporting the Sitecore 10 upgrade.,Won a kudos award for passing my apprenticeship exams.,Won a valued award for passing my apprenticeship with a distinction grade."
+    />
 
     <hr class="c-divider" />
 
-    <div class="c-history">
-      <img class="c-history__image" src="/img/Logos/mcdonalds_logo.jpg" alt="image" />
-      <div class="c-history__content">
-        <h3 class="c-history__title">Restaurant Crew Member</h3>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <h4>McDonald's</h4>
-          <h4>•</h4>
-          <h4>Full-time</h4>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>Aug 2019 - Mar 2022</p>
-          <p>•</p>
-          <p>2 yrs 8 mos</p>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>13 Rowlandsway, Wythenshawe</p>
-        </div>
-        <p class="c-history__text">Won employee of the quarter.</p>
-      </div>
-    </div>
+    <HistoryCard
+      imageSrc="/img/Logos/mcdonalds_logo.jpg"
+      title="Restaurant Crew Member"
+      company="McDonald's"
+      type="Full-time"
+      date="Aug 2019 - Mar 2022"
+      duration="2 yrs 8 mos"
+      location="13 Rowlandsway, Wythenshawe"
+      text="Won employee of the quarter."
+    />
 
     <hr class="c-divider" />
 
-    <div class="c-history">
-      <img class="c-history__image" src="/img/Logos/Hitec-logo.png" alt="image" />
-      <div class="c-history__content">
-        <h3 class="c-history__title">Consumer Electronics Repairer</h3>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <h4>Hitec Computers</h4>
-          <h4>•</h4>
-          <h4>Part-time</h4>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>Jun 2015 - Mar 2022</p>
-          <p>•</p>
-          <p>5 mos</p>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>Cheadle, Metropolitan Borough of Stockport</p>
-        </div>
-        <p class="c-history__text">
-          I repaired iPhones and laptops that had various types of damage such as screen repairs. I updated drivers and
-          optimised the peformance of old laptops. Also i gained my first experience dealing with customers within the
-          store offering them products and services to help them.
-        </p>
-      </div>
-    </div>
+    <HistoryCard
+      imageSrc="/img/Logos/Hitec-logo.png"
+      title="Consumer Electronics Repairer"
+      company="Hitec Computers"
+      type="Part-time"
+      date="Jun 2015 - Mar 2022"
+      duration="5 mos"
+      location="Cheadle, Metropolitan Borough of Stockport"
+      text="I repaired iPhones and laptops that had various types of damage such as screen repairs. I updated drivers and optimised the performance of old laptops. Also, I gained my first experience dealing with customers within the store offering them products and services to help them."
+    />
   </div>
 
   <div class="c-container">
     <h2>Education history</h2>
-    <div class="c-history">
-      <img class="c-history__image" src="/img/CV Logos/QA.jpg" alt="image" />
-      <div class="c-history__content">
-        <h3 class="c-history__title">QA Apprenticeships</h3>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <h4>General Medical Council</h4>
-          <h4>•</h4>
-          <h4>Full-time</h4>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>Mar 2022 - July 2023</p>
-          <p>•</p>
-          <p>1 yr 2 mos</p>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>3 hardman street, Manchester</p>
-        </div>
-      </div>
-    </div>
+
+    <HistoryCard
+      imageSrc="/img/CV Logos/QA.jpg"
+      title="QA Apprenticeships"
+      company="General Medical Council"
+      type="Full-time"
+      date="Mar 2022 - July 2023"
+      duration="1 yr 2 mos"
+      location="3 hardman street, Manchester"
+    />
 
     <hr class="c-divider" />
 
-    <div class="c-history">
-      <img class="c-history__image" src="/img/CV Logos/kingsway.jpg" alt="image" />
-      <div class="c-history__content">
-        <h3 class="c-history__title">The Kingsway School</h3>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>Sep 2014 - May 2019</p>
-          <p>•</p>
-          <p>4 yr 8 mos</p>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>Cheadle & Gatley, Stockport</p>
-        </div>
-      </div>
-    </div>
+    <HistoryCard
+      imageSrc="/img/CV Logos/kingsway.jpg"
+      title="The Kingsway School"
+      date="Sep 2014 - May 2019"
+      duration="4 yr 8 mos"
+      location="Cheadle & Gatley, Stockport"
+    />
 
     <hr class="c-divider" />
 
-    <div class="c-history">
-      <img class="c-history__image" src="/img/CV Logos/outwood.png" alt="image" />
-      <div class="c-history__content">
-        <h3 class="c-history__title">Outwood Primary School</h3>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>Sep 2007 - May 2014</p>
-          <p>•</p>
-          <p>6 yr 8 mos</p>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 0.6rem;"
-        >
-          <p>Heald Green, Stockport</p>
-        </div>
-      </div>
-    </div>
+    <HistoryCard
+      imageSrc="/img/CV Logos/outwood.png"
+      title="Outwood Primary School"
+      date="Sep 2007 - May 2014"
+      duration="6 yr 8 mos"
+      location="Heald Green, Stockport"
+    />
   </div>
 
   <div class="c-container">
     <h2>Apprenticeship Results</h2>
-    <div class="c-history c-history--with-grade">
-      <div class="c-history__grade c-history__grade--long"><h3>Distinction</h3></div>
-      <div class="c-history__content">
-        <h3 class="c-history__title">Level 3 software development technician</h3>
-      </div>
-    </div>
+    <HistoryWithGrade grade="Distinction" title="Level 3 software development technician" isLong="true" />
   </div>
 
   <div class="c-container">
     <h2>GCSE Grades</h2>
-    <div class="c-history c-history--with-grade">
-      <div class="c-history__grade"><h3>7</h3></div>
-      <div class="c-history__content">
-        <h3 class="c-history__title">Computer Science</h3>
-      </div>
-    </div>
+    <HistoryWithGrade grade="7" title="Computer Science" />
     <hr class="c-divider" />
-    <div class="c-history c-history--with-grade">
-      <div class="c-history__grade"><h3>5</h3></div>
-      <div class="c-history__content">
-        <h3 class="c-history__title">Business</h3>
-      </div>
-    </div>
+    <HistoryWithGrade grade="5" title="Business" />
     <hr class="c-divider" />
-    <div class="c-history c-history--with-grade">
-      <div class="c-history__grade"><h3>5</h3></div>
-      <div class="c-history__content">
-        <h3 class="c-history__title">Mathematics</h3>
-      </div>
-    </div>
+    <HistoryWithGrade grade="5" title="Mathematics" />
     <hr class="c-divider" />
-    <div class="c-history c-history--with-grade">
-      <div class="c-history__grade"><h3>5</h3></div>
-      <div class="c-history__content">
-        <h3 class="c-history__title">Combined Science Higher - 1</h3>
-      </div>
-    </div>
+    <HistoryWithGrade grade="5" title="Combined Science Higher - 1" />
     <hr class="c-divider" />
-    <div class="c-history c-history--with-grade">
-      <div class="c-history__grade"><h3>5</h3></div>
-      <div class="c-history__content">
-        <h3 class="c-history__title">Combined Science Higher - 2</h3>
-      </div>
-    </div>
+    <HistoryWithGrade grade="5" title="Combined Science Higher - 2" />
     <hr class="c-divider" />
-    <div class="c-history c-history--with-grade">
-      <div class="c-history__grade"><h3>5</h3></div>
-      <div class="c-history__content">
-        <h3 class="c-history__title">English Language</h3>
-      </div>
-    </div>
+    <HistoryWithGrade grade="5" title="English Language" />
   </div>
 
   <div class="c-container">
@@ -364,70 +191,54 @@ import CertificationComponent from "../components/CV/CertificationComponent.vue"
   <section class="c-container" id="Certificates">
     <h2>Certificates</h2>
     <div class="c-grid" style="--gap: 2rem;">
-      <a
+      <CertificateCard
         href="https://app.pluralsight.com/learner/user/courses/v2/905cfabb-a2dd-45d7-9a46-2709bef48f9b/certificate"
-        target="_blank"
-      >
-        <div class="c-certificate">
-          <img src="/img/certificates/ControllingProgramFlow.png" alt="Complete JavaScript Course Certificate Udemy" />
-          <p class="c-certificate__title">Controlling Program Flow in C# 9</p>
-        </div>
-      </a>
-
-      <a href="https://certificates.cloudacademy.com/8d7025efbaaa338843a3c34ad34fa5690e2110fe.pdf" target="_blank">
-        <div class="c-certificate">
-          <img src="/img/certificates/PracticeOOP.png" alt="Complete JavaScript Course Certificate Udemy" />
-          <p class="c-certificate__title">Practice: Understanding Object-Oriented Programming</p>
-        </div>
-      </a>
-
-      <a href="https://www.udemy.com/certificate/UC-c32f656e-cc14-4848-aced-e373184e2822/" target="_blank">
-        <div class="c-certificate">
-          <img src="/img/certificates/Advanced-CSS-Certificate.png" alt="Advanced CSS Certificate Udemy" />
-          <p class="c-certificate__title">Advanced CSS and Sass</p>
-        </div>
-      </a>
-
-      <a href="https://www.udemy.com/certificate/UC-1b0583ea-fe80-40c9-a386-0b73784e7307/" target="_blank">
-        <div class="c-certificate">
-          <img
-            src="/img/certificates/Complete-Javascript-Course.jpg"
-            alt="Complete JavaScript Course Certificate Udemy"
-          />
-          <p class="c-certificate__title">The Complete JavaScript Course</p>
-        </div>
-      </a>
-
-      <a href="https://certificates.cloudacademy.com/8f33c9ec7275ed7206cb6196cd7beab2ce6a8476.pdf" target="_blank">
-        <div class="c-certificate">
-          <img src="/img/certificates/DiscoverOOP.png" alt="Complete JavaScript Course Certificate Udemy" />
-          <p class="c-certificate__title">Discover: Object Oriented Programming</p>
-        </div>
-      </a>
-
-      <a
+        imgSrc="/img/certificates/ControllingProgramFlow.png"
+        imgAlt="Complete JavaScript Course Certificate Udemy"
+        title="Controlling Program Flow in C# 9"
+      />
+      <CertificateCard
+        href="https://certificates.cloudacademy.com/8d7025efbaaa338843a3c34ad34fa5690e2110fe.pdf"
+        imgSrc="/img/certificates/PracticeOOP.png"
+        imgAlt="Complete JavaScript Course Certificate Udemy"
+        title="Practice: Understanding Object-Oriented Programming"
+      />
+      <CertificateCard
+        href="https://www.udemy.com/certificate/UC-c32f656e-cc14-4848-aced-e373184e2822/"
+        imgSrc="/img/certificates/Advanced-CSS-Certificate.png"
+        imgAlt="Advanced CSS Certificate Udemy"
+        title="Advanced CSS and Sass"
+      />
+      <CertificateCard
+        href="https://www.udemy.com/certificate/UC-1b0583ea-fe80-40c9-a386-0b73784e7307/"
+        imgSrc="/img/certificates/Complete-Javascript-Course.jpg"
+        imgAlt="Complete JavaScript Course Certificate Udemy"
+        title="The Complete JavaScript Course"
+      />
+      <CertificateCard
+        href="https://certificates.cloudacademy.com/8f33c9ec7275ed7206cb6196cd7beab2ce6a8476.pdf"
+        imgSrc="/img/certificates/DiscoverOOP.png"
+        imgAlt="Complete JavaScript Course Certificate Udemy"
+        title="Discover: Object Oriented Programming"
+      />
+      <CertificateCard
         href="https://app.pluralsight.com/learner/user/courses/v2/0096b00d-2398-435a-82f7-3f5401408ab1/certificate"
-        target="_blank"
-      >
-        <div class="c-certificate">
-          <img src="/img/certificates/CSharpFundimentals.png" alt="Complete JavaScript Course Certificate Udemy" />
-          <p class="c-certificate__title">C# Fundimentals</p>
-        </div>
-      </a>
-
-      <a href="https://certificates.cloudacademy.com/baedd379c9d004b7ebc991b6d2fa0eb5d2e0c255.pdf" target="_blank">
-        <div class="c-certificate">
-          <img src="/img/certificates/PracticePython1.3.png" alt="Complete JavaScript Course Certificate Udemy" />
-          <p class="c-certificate__title">Practice: Python Programming 2</p>
-        </div>
-      </a>
-
-      <a href="https://certificates.cloudacademy.com/f5523a5e412ff1799f7ff4ea16a332ac34a521fd.pdf" target="_blank">
-        <div class="c-certificate">
-          <img src="/img/certificates/DiscoverPython1.2.png" alt="Complete JavaScript Course Certificate Udemy" />
-          <p class="c-certificate__title">Discover: Python Programming and SQL Basics</p>
-        </div>
-      </a>
+        imgSrc="/img/certificates/CSharpFundimentals.png"
+        imgAlt="Complete JavaScript Course Certificate Udemy"
+        title="C# Fundimentals"
+      />
+      <CertificateCard
+        href="https://certificates.cloudacademy.com/baedd379c9d004b7ebc991b6d2fa0eb5d2e0c255.pdf"
+        imgSrc="/img/certificates/PracticePython1.3.png"
+        imgAlt="Complete JavaScript Course Certificate Udemy"
+        title="Practice: Python Programming 2"
+      />
+      <CertificateCard
+        href="https://certificates.cloudacademy.com/f5523a5e412ff1799f7ff4ea16a332ac34a521fd.pdf"
+        imgSrc="/img/certificates/DiscoverPython1.2.png"
+        imgAlt="Complete JavaScript Course Certificate Udemy"
+        title="Discover: Python Programming and SQL Basics"
+      />
     </div>
   </section>
 </DefaultLayout>
