@@ -1,49 +1,75 @@
-# Welcome to [Astro](https://astro.build)
+# Elliotlafave.com - Portfolio Website
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+## Overview
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Welcome to the GitHub repository of [Elliotlafave.com](https://www.elliotlafave.com), my personal portfolio website. This website serves as a comprehensive showcase of my skills, projects, and experiences in the field of software development, web development, and more. Whether you're an employer, a fellow developer, or just someone who's interested in what I do, you'll find a variety of information laid out in an easy-to-navigate design.
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Features
 
+- **About Me**: A brief introduction and a bit about who I am and what I do.
+- **Skills**: An overview of my technical and soft skills.
+- **Projects**: Showcase of key projects with live demos and GitHub repository links.
+- **Experience**: My professional background, including work experience and education.
+- **Articles**: Articles and tutorials I’ve written to share my expertise and insights.
+- **Contact**: Multiple ways to get in touch with me.
 
-## 🚀 Project Structure
+## Technology Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+- HTML, CSS, JavaScript
+- ReactJS
+- Node.js
+- MongoDB
+- Other libraries and tools
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Local Development
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Prerequisites
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Node.js
+- npm
+- Git
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Setup Instructions
 
-## 🧞 Commands
+1. **Clone the Repository**
 
-All commands are run from the root of the project, from a terminal:
+   ```bash
+   git clone https://github.com/Elliotlafave/elliotlafave.com.git
+   ```
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+2. **Navigate to the project directory**
 
-## 👀 Want to learn more?
+   ```bash
+   cd elliotlafave.com
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the Development Server**
+
+   ```bash
+   npm start
+   ```
+
+Visit `http://localhost:3000` to see the application running.
+
+## Contributing
+
+While this is primarily a personal project, I'm open to collaborations and constructive criticisms. Feel free to open an issue or create a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Contact Information
+
+For more information, you can reach me at:
+
+- Email: [elliot@lafave.com](mailto:elliot@lafave.com)
+- LinkedIn: [https://www.linkedin.com/in/elliot-la-fave-4215b6222](https://www.linkedin.com/in/elliot-la-fave-4215b6222)
+
+Thank you for visiting my portfolio website repository!
