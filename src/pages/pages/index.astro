@@ -1,18 +1,14 @@
 ---
 import ArticleInteractions from "../../components/ArticleInteractions.astro";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import PromoCard from "../../components/Promo Card/PromoCard.vue";
 ---
 
 <DefaultLayout title="Pages">
   <!-- Main Content -->
   <ArticleInteractions />
 
-  <div class="c-container-x c-grid u-margin-bottom-medium">
-    <a href="/pages/Articles/index.html">
-      <div class="link-card">
-        <p>Articles</p>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-    </a>
+  <div class="c-container-x c-grid u-margin-bottom-large">
+    <PromoCard text="Articles" link="/pages/Articles/index.html" />
   </div>
 </DefaultLayout>
