@@ -1,6 +1,6 @@
 import { State } from "./state";
 import { hideLoginButtons, showLoginButtons } from "./hideLoginButtons";
-import { setDarkModePreferenceOnServer } from "../DarkMode/setDarkModePreferenceOnServer";
+import { setDarkModePreferenceOnServer } from "../../DarkMode/setDarkModePreferenceOnServer";
 
 const token = localStorage.getItem("token");
 // const API_URL = "http://localhost:3001/Auth";

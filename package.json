@@ -29,6 +29,7 @@
     "date-fns": "^2.30.0",
     "sass": "^1.55.0",
     "scss": "^0.2.4",
+    "terser-webpack-plugin": "^5.3.9",
     "vue": "^3.2.41"
   },
   "devDependencies": {
