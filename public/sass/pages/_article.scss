@@ -39,7 +39,6 @@
       display: block;
       padding: 0.125rem 0;
       color: #ccc;
-      font-size: 1.6rem;
       transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
       color: rgb(130, 121, 137);
 
@@ -154,7 +153,7 @@
     }
 
     li {
-      font-size: 1.9rem;
+      font-size: 1rem;
       margin-bottom: 0.6rem;
     }
 
