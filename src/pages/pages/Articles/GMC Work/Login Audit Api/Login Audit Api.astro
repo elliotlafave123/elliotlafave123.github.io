@@ -1,4 +1,5 @@
 ---
+import GenericButton from "../../../../../components/GenericButton.vue";
 import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
 ---
 
@@ -62,7 +63,7 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
             gateway to the database:
           </p>
           <div class="article__image">
-            <img src="../img/img1.png" alt="" class="articleImg" />
+            <img src="/img/articles/Login Audit Api/img1.png" alt="" class="articleImg" />
             <p></p>
           </div>
 
@@ -70,13 +71,13 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
             I then created a data model so I can extract the data I need for the API from the database as shown below:
           </p>
           <div class="article__image">
-            <img src="../img/img2.png" alt="" class="articleImg" />
+            <img src="/img/articles/Login Audit Api/img2.png" alt="" class="articleImg" />
             <p></p>
           </div>
 
           <p>I created an interface for the GetLoginAuditReports( ) method called ILoginAuditReportService:</p>
           <div class="article__image">
-            <img src="../img/img3.png" alt="" class="articleImg" />
+            <img src="/img/articles/Login Audit Api/img3.png" alt="" class="articleImg" />
             <p></p>
           </div>
 
@@ -87,7 +88,7 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
           </p>
           <p>It also enables swagger which is a browser GUI for testing APIs in a development environment:</p>
           <div class="article__image">
-            <img src="../img/img4.png" alt="" class="articleImg" />
+            <img src="/img/articles/Login Audit Api/img4.png" alt="" class="articleImg" />
             <p></p>
           </div>
         </div>
@@ -104,7 +105,7 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
             <h3>Get all</h3>
             <p>Get all gets all users information that’s stored in the last login database.</p>
             <div class="article__image">
-              <img src="../img/img5.png" alt="" class="articleImg" />
+              <img src="/img/articles/Login Audit Api/img5.png" alt="" class="articleImg" />
               <p></p>
             </div>
           </div>
@@ -113,7 +114,7 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
             <h3>Get by name</h3>
             <p>Get by name gets all users with the inputted name or a partial name match.</p>
             <div class="article__image">
-              <img src="../img/img7.png" alt="" class="articleImg" />
+              <img src="/img/articles/Login Audit Api/img7.png" alt="" class="articleImg" />
               <p></p>
             </div>
           </div>
@@ -122,7 +123,7 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
             <h3>Get by date range</h3>
             <p>Get by date gets all users within an inputted date range.</p>
             <div class="article__image">
-              <img src="../img/img6.png" alt="" class="articleImg" />
+              <img src="/img/articles/Login Audit Api/img6.png" alt="" class="articleImg" />
               <p></p>
             </div>
           </div>
@@ -133,19 +134,19 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
         <h2>Result of the program</h2>
         <h3>Get all</h3>
         <div class="article__image">
-          <img src="../img/img8.png" alt="" class="articleImg" />
+          <img src="/img/articles/Login Audit Api/img8.png" alt="" class="articleImg" />
           <p></p>
         </div>
 
         <h3>Get by name</h3>
         <div class="article__image">
-          <img src="../img/img9.png" alt="" class="articleImg" />
+          <img src="/img/articles/Login Audit Api/img9.png" alt="" class="articleImg" />
           <p></p>
         </div>
 
         <h3>Get by date</h3>
         <div class="article__image">
-          <img src="../img/img10.png" alt="" class="articleImg" />
+          <img src="/img/articles/Login Audit Api/img10.png" alt="" class="articleImg" />
           <p></p>
         </div>
       </div>
@@ -192,15 +193,15 @@ import ArticleLayout from "../../../../../layouts/ArticleLayout.astro";
     </nav>
   </div>
   <div class="article__interactions">
-    <div class="article__interactions--section">
-      <a
-        href="/Files/PowerPoint/Sitecore Helix & Docker.pptx"
-        target="_blank"
-        class="btn-square btn-square--pdf u-margin-right-small"
-      >
-        <img src="../img/icons/icon-powerpoint.png" alt="" /> Download Presentation
-      </a>
-    </div>
-    <div class="article__interactions--section"></div>
+    <GenericButton
+      href="/Files/PowerPoint/Sitecore Helix & Docker.pptx"
+      corner="semi-round"
+      size="large"
+      color="red"
+      withBorder="true"
+      icon="fa-sharp fa-regular fa-file-powerpoint"
+    >
+      Download Presentation
+    </GenericButton>
   </div>
 </ArticleLayout>
