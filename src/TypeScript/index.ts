@@ -18,6 +18,9 @@ import { startArticleSidebar } from "./Articles/articleSidebar";
 // Page Specific
 // Homepage
 import { writeText } from "./PageSpecific/Homepage/typingTextEffect";
+import { updateWorkExperienceDates } from "./PageSpecific/CV/updateWorkExperienceDates";
+updateWorkExperienceDates();
+
 // Portfolio
 import { initGitStats } from "./PageSpecific/Portfolio/GithubStats";
 import { initJsPortfolioFeaturedCards } from "./Portfolio Cards APP/FeaturedCards/DisplayFeaturedCards";
