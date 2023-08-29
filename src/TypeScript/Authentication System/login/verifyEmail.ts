@@ -30,7 +30,7 @@ const verifyEmail = async (): Promise<void> => {
   };
 
   try {
-    let res = await fetch(API_URL + "/VerifyEmail", {
+    const res = await fetch(API_URL + "/VerifyEmail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(Data),
@@ -78,7 +78,7 @@ if (pinInput) {
       e.preventDefault();
     }
   });
-  pinInput.addEventListener("keyup", (e) => {
+  pinInput.addEventListener("keyup", () => {
     checkPinInput();
   });
 }

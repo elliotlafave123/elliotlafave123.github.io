@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "suppressImplicitAnyIndexErrors": true,
     "strictNullChecks": false,
     "lib": ["es5", "ES2021", "dom"],
     "module": "commonjs",

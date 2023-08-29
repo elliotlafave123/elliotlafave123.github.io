@@ -80,7 +80,7 @@ const checkPassword = (): void => {
   const hasNumber = (str: string): boolean => /\d/.test(str);
 
   const val = passwordInput.value.toString();
-  const format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+  const format = /[ `!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~]/;
 
   StateSignUp.passwordChecks.passwordLength = val.length >= 8;
   StateSignUp.passwordChecks.upperAndLower = hasLowerCase(val) && hasCapital(val);
