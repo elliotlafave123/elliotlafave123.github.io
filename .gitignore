@@ -3,4 +3,3 @@ package-lock.json
 .vscode/settings.json
 debug.log
 dist/
-public/css/
