@@ -29,6 +29,13 @@ export function updateWorkExperienceDates() {
     }
   }
 
-  document.getElementById("autoUpdateDate").innerText = "Mar 2022 - Present";
-  document.getElementById("autoUpdateDateValue").innerText = durationString;
+  const autoUpdateDate = document.getElementById("autoUpdateDate");
+  if (autoUpdateDate) {
+    autoUpdateDate.innerText = "Mar 2022 - Present";
+  }
+
+  const autoUpdateDateValue = document.getElementById("autoUpdateDateValue");
+  if (autoUpdateDateValue) {
+    autoUpdateDateValue.innerText = durationString;
+  }
 }
