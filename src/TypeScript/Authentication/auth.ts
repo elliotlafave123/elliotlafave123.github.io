@@ -1,9 +1,9 @@
 import { Login } from "./Controllers/Login/Login";
-import { UserModel } from "./Models/UserModel";
-import { SignUp } from "./Controllers/Sign up/SignUp";
-import { ResetPassword } from "./Controllers/Reset Password/ResetPassword";
-import { ResetPasswordModel } from "./Models/ResetPasswordModel";
-import { RequestPasswordReset } from "./Controllers/Reset Password/RequestPasswordReset";
+// import { UserModel } from "./Models/UserModel";
+// import { SignUp } from "./Controllers/Sign up/SignUp";
+// import { ResetPassword } from "./Controllers/Reset Password/ResetPassword";
+// import { ResetPasswordModel } from "./Models/ResetPasswordModel";
+// import { RequestPasswordReset } from "./Controllers/Reset Password/RequestPasswordReset";
 import { RefreshAccessToken } from "./Controllers/Login/RefreshAccessToken";
 
 async function init() {

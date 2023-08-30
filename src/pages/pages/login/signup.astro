@@ -95,31 +95,52 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
           </li>
         </ul>
       </div>
-      <!-- Public -->
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
-        data-callback="recaptcha_callback"
-      >
+      <!-- confirm password -->
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="confirmPassword" class="c-form__label">Confirm Password</label>
+        <div class="password-container">
+          <input
+            class="c-text-input"
+            minlength="8"
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            required
+          />
+          <i class="fa-solid fa-eye passwordEye" id="ShowConfirmPasswordEye"></i>
+          <i class="fa-solid fa-eye-slash passwordEye" id="HideConfirmPasswordEye"></i>
+        </div>
+        <span id="errorMessageConfirmPassword"
+          ><i class="fa-solid fa-triangle-exclamation"></i>Passwords do not match</span
+        >
+        <!-- Public -->
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
+          data-callback="recaptcha_callback"
+        >
+        </div>
+        <!-- Local -->
+        <!-- <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback"></div> -->
+        <span id="errorMessageCaptcha"
+          ><i class="fa-solid fa-triangle-exclamation"></i>Please verify you're not a robot</span
+        >
+        <div class="terms-section">
+          <p>
+            By signing up, you're agreeing to our <a href="../../termsAndConditions.html">Terms & Conditions</a> and
+            <a href="../../PrivacyPolicy.html">Privacy Policy</a>
+          </p>
+        </div>
+        <input
+          type="submit"
+          class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border c-button--full-width c-button--center-text u-margin-top-medium"
+          value="Sign Up"
+          id="signUpButton"
+          disabled
+        />
       </div>
-      <!-- Local -->
-      <!-- <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback"></div> -->
-      <span id="errorMessageCaptcha"
-        ><i class="fa-solid fa-triangle-exclamation"></i>Please verify you're not a robot</span
-      >
-      <div class="terms-section">
-        <p>
-          By signing up, you're agreeing to our <a href="../../termsAndConditions.html">Terms & Conditions</a> and
-          <a href="../../PrivacyPolicy.html">Privacy Policy</a>
-        </p>
-      </div>
-      <input
-        type="submit"
-        class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border c-button--full-width c-button--center-text u-margin-top-medium"
-        value="Sign Up"
-        id="signUpButton"
-        disabled
-      />
     </form>
+
+    <script type="module" src="/scripts/signUp-TSBundle.js"></script>
   </section>
 </DefaultLayout>

@@ -2,7 +2,7 @@ import { Constants } from "../../Constants/Constants";
 
 export async function Login(email: string, password: string): Promise<boolean> {
   try {
-    await fetch(`${Constants.API_BASE_URL}/api/sessions`, {
+    return await fetch(`${Constants.API_BASE_URL}/api/sessions`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

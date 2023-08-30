@@ -1,8 +1,7 @@
 // Authentication System
 import { exists } from "../helpers/exists";
 import { initStoreBackLink } from "./StoreBackLink";
-import { handleShowPassword } from "./ShowPassword";
-import { CheckLoginOnLoginForm } from "./login/login";
+// import { handleShowPassword } from "./ShowPassword";
 import { emailVerified } from "./login/verifyEmail";
 
 //////////////////////////
@@ -13,8 +12,5 @@ if (exists(document.querySelector(".loginForm.verify"))) emailVerified();
 const BackLinkButton = document.querySelector(".storeBackLink") as HTMLElement;
 if (exists(BackLinkButton)) initStoreBackLink();
 
-const PasswordInput = document.getElementById("password") as HTMLElement;
-if (exists(PasswordInput)) handleShowPassword();
-
-// Login and sign uo
-CheckLoginOnLoginForm();
+// const PasswordInput = document.getElementById("password") as HTMLElement;
+// if (exists(PasswordInput)) handleShowPassword();
