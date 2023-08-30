@@ -16,6 +16,7 @@ module.exports = {
     footer: "./src/TypeScript/components/Footer/index.ts",
     comments: "./src/TypeScript/apps/Comments/index.ts",
     portfolioCards: "./src/TypeScript/apps/Portfolio Cards/index.ts",
+    signUp: "./src/TypeScript/Authentication/auth.ts",
   },
   module: {
     rules: [
