@@ -8,8 +8,10 @@ async function init() {
   if (id && token) {
     const verified = await VerifyEmail(id, token);
     console.log(verified);
+
     if (verified) {
       console.log("Email verified");
+      window.location.replace("/pages/login/login.html");
     }
   } else {
     console.log("Invalid URL");

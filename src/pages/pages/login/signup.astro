@@ -11,10 +11,12 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
 </script>
 
 <DefaultLayout title="Sign up">
-  <section class="login u-margin-bottom-large" id="first-section">
+  <section class="login" id="first-section">
     <form id="signUpForm" onsubmit="return false">
       <h1>Sign Up</h1>
-      <p>Already have an account? &nbsp;&nbsp;<a href="./login.html">Log In</a></p>
+      <p class="u-margin-bottom-small">
+        <a href="/pages/login/login.html" id="register-link">Log in to an existing account</a>
+      </p>
       <div class="form__two-column u-margin-bottom-small">
         <div class="c-form__element c-form__element--small-margin">
           <label for="firstname" class="c-form__label">First Name</label>
@@ -67,33 +69,35 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
           ><i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements</span
         >
       </div>
-      <div class="PasswordRequirements">
-        <ul>
-          <li>
-            <div class="checkMark" id="length">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <p>Password must be 8+ characters</p>
-          </li>
-          <li>
-            <div class="checkMark" id="upper">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <p>Uppercase and lowercase letter (A z)</p>
-          </li>
-          <li>
-            <div class="checkMark" id="number">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <p>Numeric character (0-9)</p>
-          </li>
-          <li>
-            <div class="checkMark" id="special">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <p>Special character (!, %, @, #, etc.)</p>
-          </li>
-        </ul>
+      <div class="c-form__element">
+        <div class="c-password-requirements">
+          <ul>
+            <li>
+              <div class="checkMark" id="length">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Password must be 8+ characters</p>
+            </li>
+            <li>
+              <div class="checkMark" id="upper">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Uppercase and lowercase letter (A z)</p>
+            </li>
+            <li>
+              <div class="checkMark" id="number">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Numeric character (0-9)</p>
+            </li>
+            <li>
+              <div class="checkMark" id="special">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Special character (!, %, @@, #, etc.)</p>
+            </li>
+          </ul>
+        </div>
       </div>
       <!-- confirm password -->
       <div class="c-form__element c-form__element--small-margin">
@@ -107,8 +111,6 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
             type="password"
             required
           />
-          <i class="fa-solid fa-eye passwordEye" id="ShowConfirmPasswordEye"></i>
-          <i class="fa-solid fa-eye-slash passwordEye" id="HideConfirmPasswordEye"></i>
         </div>
         <span id="errorMessageConfirmPassword"
           ><i class="fa-solid fa-triangle-exclamation"></i>Passwords do not match</span
@@ -142,5 +144,6 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
     </form>
 
     <script type="module" src="/scripts/signUp-TSBundle.js"></script>
+    <script type="module" src="/scripts/passwordRequirements-TSBundle.js"></script>
   </section>
 </DefaultLayout>

@@ -83,15 +83,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         passwordConfirmation: confirmPassword,
       });
 
-      console.log(result);
-
       if (result) {
-        // Redirect or notify user that the signup was successful
-        console.log("Signup successful");
-        // window.location.replace("/login");
+        window.location.replace("/pages/login/CheckYourEmail.html");
       }
     } catch (error) {
-      // Handle signup failure, show an error message or something else
       console.log("Signup failed:", error);
     }
   });

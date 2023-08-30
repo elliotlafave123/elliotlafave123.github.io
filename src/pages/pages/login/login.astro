@@ -3,20 +3,20 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
 ---
 
 <DefaultLayout title="Login">
-  <section class="login u-margin-bottom-large" id="first-section">
-    <form id="account" method="post" class="c-form c-form__small c-form__centered u-margin-top-medium">
-      <h1 id="form-title"></h1>
+  <section class="login" id="first-section">
+    <form id="account" method="post" class="c-form c-form__small c-form__centered">
+      <h1>Log in</h1>
       <p class="u-margin-bottom-small">
-        <a href="#" id="register-link">Register as a new user</a>
+        <a href="/pages/login/signup.html" id="register-link">Register as a new user</a>
       </p>
 
       <div id="validation-summary" class="text-danger" role="alert"></div>
-      <div class="c-form__element">
+      <div class="c-form__element c-form__element--small-margin">
         <label for="email" class="c-form__label">Email</label>
         <input id="email" type="email" class="c-text-input" autocomplete="username" aria-required="true" />
         <span id="email-validation" class="text-danger"></span>
       </div>
-      <div class="c-form__element">
+      <div class="c-form__element c-form__element--small-margin">
         <label for="password" class="c-form__label">Password</label>
         <input
           id="password"
@@ -35,7 +35,14 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
         </label>
       </div>
 
-      <button id="login-submit" type="submit" class="c-button">Log in</button>
+      <a href="/pages/login/RequestPasswordReset.html">Forgot password?</a>
+
+      <button
+        id="login-submit"
+        type="submit"
+        class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border c-button--full-width c-button--center-text u-margin-top-medium"
+        >Log in</button
+      >
     </form>
   </section>
 

@@ -2,7 +2,6 @@ import { State } from "./state";
 import { displayDataInWidget } from "./displayDataInWidget";
 import { addDataToInputs } from "./addDataToInputs";
 import { controller } from "./controller";
-import { showHeaderAuth } from "../../apps/Comments/displaySignedInStrip";
 
 const token = localStorage.getItem("token");
 const API_URL = "https://elliotapiserver.com/Auth";
@@ -32,12 +31,6 @@ export const fetchAccountDetails = async () => {
 
       // Event listeners
       controller();
-
-      showHeaderAuth();
-
-      // Error handling
-      // - Inputs not valid
-      // - create external functions to check if email / name is invalid
     } else {
       throw new Error("Not Authenticated");
     }

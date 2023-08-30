@@ -1,5 +1,6 @@
 import validator from "validator";
 import { Login } from "../../Controllers/Login/Login";
+import { updateHeaderAuth } from "./UpdateHeaderAuth";
 
 document.addEventListener("DOMContentLoaded", async function () {
   const form = document.getElementById("account");
@@ -38,10 +39,17 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     if (loginSuccessful) {
       // Redirect to previous page
-      window.location.replace(localStorage.getItem("backLink"));
+      const backLink = localStorage.getItem("backLink");
+      if (backLink) {
+        window.location.replace(backLink);
+      } else {
+        window.location.href = "index.html";
+      }
+      updateHeaderAuth(true);
     } else {
       // Handle login failure, show an error message or something else
       console.log("Login failed");
+      updateHeaderAuth(false);
     }
   });
 });

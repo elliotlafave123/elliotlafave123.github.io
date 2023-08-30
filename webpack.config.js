@@ -16,16 +16,23 @@ module.exports = {
     footer: "./src/TypeScript/components/Footer/index.ts",
     comments: "./src/TypeScript/apps/Comments/index.ts",
     portfolioCards: "./src/TypeScript/apps/Portfolio Cards/index.ts",
+    auth: "./src/TypeScript/Authentication/auth.ts",
     logIn: "./src/TypeScript/Authentication/Views/Login/Login.ts",
     signUp: "./src/TypeScript/Authentication/Views/Sign Up/signUp.ts",
     verifyEmail: "./src/TypeScript/Authentication/Views/Verify Email/verifyEmail.ts",
+    requestPasswordReset: "./src/TypeScript/Authentication/Views/Reset Password/requestPasswordReset.ts",
+    resetPassword: "./src/TypeScript/Authentication/Views/Reset Password/resetPassword.ts",
+    passwordRequirements: "./ComponentAssets/simpleComponents/passwordRequirements/passwordRequirements.ts",
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
         use: "ts-loader",
-        include: [path.resolve(__dirname, "./src/TypeScript")],
+        include: [
+          path.resolve(__dirname, "./src/TypeScript"),
+          path.resolve(__dirname, "./ComponentAssets/simpleComponents/passwordRequirements"),
+        ],
       },
     ],
   },

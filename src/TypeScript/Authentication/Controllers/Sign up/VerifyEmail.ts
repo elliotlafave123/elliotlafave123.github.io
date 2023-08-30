@@ -2,7 +2,6 @@ import { Constants } from "../../Constants/Constants";
 
 export async function VerifyEmail(id: string, token: string): Promise<boolean> {
   try {
-    console.log(id, token);
     const res = await fetch(`${Constants.API_BASE_URL}/api/users/verify/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
