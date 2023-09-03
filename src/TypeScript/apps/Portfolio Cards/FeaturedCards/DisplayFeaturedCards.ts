@@ -1,3 +1,4 @@
+import { Constants } from "../../../Constants/Constants";
 import { DisplayCardWithinContainer } from "../displayCards";
 
 const loader = document.querySelector(".loader") as HTMLElement;
@@ -7,7 +8,7 @@ export const initJsPortfolioFeaturedCards = () => {
   let featuredData;
 
   const featured: HTMLElement = document.getElementById("featuredCardsContainer") as HTMLElement;
-  const LINODE_IP = "https://elliotapiserver.com/api/v1/projects";
+  const LINODE_IP = `${Constants.API_BASE_URL}/api/v1/projects`;
 
   /* *********** Get Json Data *********** */
   fetch(LINODE_IP)
