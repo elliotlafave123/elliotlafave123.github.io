@@ -1,4 +1,4 @@
-import { Constants } from "../../Constants/Constants";
+import { Constants } from "../../../Constants/Constants";
 
 export async function VerifyEmail(id: string, token: string): Promise<boolean> {
   try {

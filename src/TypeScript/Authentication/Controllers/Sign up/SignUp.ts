@@ -1,4 +1,4 @@
-import { Constants } from "../../Constants/Constants";
+import { Constants } from "../../../Constants/Constants";
 import { UserModel } from "../../Models/UserModel";
 
 export async function SignUp(user: Partial<UserModel>): Promise<boolean> {

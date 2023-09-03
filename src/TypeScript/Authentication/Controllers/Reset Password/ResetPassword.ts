@@ -1,4 +1,4 @@
-import { Constants } from "../../Constants/Constants";
+import { Constants } from "../../../Constants/Constants";
 import { ResetPasswordModel } from "../../Models/ResetPasswordModel";
 
 export async function ResetPassword(resetPassword: ResetPasswordModel): Promise<boolean> {

@@ -1,6 +1,18 @@
-import { Constants } from "../../Constants/Constants";
+import { Constants } from "../../../Constants/Constants";
 
-export async function CheckLogin(): Promise<boolean> {
+export interface LoginStatus {
+  LoggedIn: boolean;
+  EmailVerificationRequired: boolean;
+  Unauthorized: boolean;
+}
+
+export async function CheckLogin(): Promise<LoginStatus> {
+  const status: LoginStatus = {
+    LoggedIn: false,
+    EmailVerificationRequired: false,
+    Unauthorized: false,
+  };
+
   try {
     const token = localStorage.getItem("token");
     const response = await fetch(`${Constants.API_BASE_URL}/api/users/isUserAuthenticated`, {
@@ -11,14 +23,23 @@ export async function CheckLogin(): Promise<boolean> {
       },
     });
 
-    if (response.status === 401) {
-      throw new Error("Invalid token");
-    } else if (response.status === 201) {
-      return true;
-    } else {
-      return false;
+    switch (response.status) {
+      case 201:
+        status.LoggedIn = true;
+        break;
+      case 401:
+        status.EmailVerificationRequired = true;
+        break;
+      case 403:
+        status.Unauthorized = true;
+        break;
+      default:
+        throw new Error("Unknown error");
     }
   } catch (error) {
-    return false;
+    console.log(`Error checking login status: ${error}`);
+    status.Unauthorized = true;
   }
+
+  return status;
 }

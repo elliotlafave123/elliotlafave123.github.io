@@ -23,6 +23,8 @@ module.exports = {
     requestPasswordReset: "./src/TypeScript/Authentication/Views/Reset Password/requestPasswordReset.ts",
     resetPassword: "./src/TypeScript/Authentication/Views/Reset Password/resetPassword.ts",
     passwordRequirements: "./ComponentAssets/simpleComponents/passwordRequirements/passwordRequirements.ts",
+    requestEmailVerification:
+      "./src/TypeScript/Authentication/Views/Request Email Verification/requestEmailVerification.ts",
   },
   module: {
     rules: [

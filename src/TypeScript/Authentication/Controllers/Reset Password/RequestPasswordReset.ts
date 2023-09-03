@@ -1,4 +1,4 @@
-import { Constants } from "../../Constants/Constants";
+import { Constants } from "../../../Constants/Constants";
 
 export async function RequestPasswordReset(email: string): Promise<boolean> {
   try {

@@ -19,7 +19,7 @@ const init = async () => {
     }
   }
 
-  updateHeaderAuth(isSignedIn);
+  updateHeaderAuth(isSignedIn.LoggedIn);
 
   InitLogout();
 };

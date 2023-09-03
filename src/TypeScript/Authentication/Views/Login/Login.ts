@@ -35,9 +35,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const loginSuccessful = await Login(email, password);
-    console.log(loginSuccessful);
 
-    if (loginSuccessful) {
+    if (loginSuccessful.LoggedIn) {
       // Redirect to previous page
       const backLink = localStorage.getItem("backLink");
       if (backLink) {
@@ -46,9 +45,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         window.location.href = "index.html";
       }
       updateHeaderAuth(true);
+    } else if (loginSuccessful.EmailVerificationRequired) {
+      // Redirect to request email verification page
+      window.location.href = "/pages/login/RequestEmailVerification.html?email=" + email;
     } else {
       // Handle login failure, show an error message or something else
-      console.log("Login failed");
       updateHeaderAuth(false);
     }
   });
