@@ -1,33 +1,36 @@
-// const publishCommentButton = document.getElementById("publishCommentButton");
-// const commentStreamContainer = document.getElementById("commentStreamContainer");
-// const commentTextarea = document.getElementById("commentTextarea") as HTMLTextAreaElement;
-// const API_URL = "https://elliotapiserver.com/Comments";
-// // const API_URL = "http://localhost:3000/Comments";
-// const token = localStorage.getItem("token");
+import { getCurrentUser } from "../../../../Authentication/Controllers/Me/GetCurrentUser";
+import { PostComment } from "../../Controllers/Comments/PostComment";
+import { PostCommentInput } from "../../Models/PostCommentInput";
+import { UpdateComments } from "./updateComments";
 
-// export function handlePostComment() {
-//   publishCommentButton?.addEventListener("click", async (e) => {
-//     e.preventDefault();
-//     if (commentTextarea && commentTextarea.value === "") return;
+const publishCommentButton = document.getElementById("publishCommentButton");
+const commentStreamContainer = document.getElementById("commentStreamContainer");
+const commentTextarea = document.getElementById("commentTextarea") as HTMLTextAreaElement;
 
-//     const data = {
-//       token: token,
-//       text: commentTextarea.value.toString(),
-//       stream: commentStreamContainer?.dataset.stream,
-//     };
+export async function handlePostComment() {
+  if (commentTextarea && commentTextarea.value === "") return;
 
-//     try {
-//       const res = await fetch(API_URL + "?" + new URLSearchParams({ stream: "633d4dbc76066edc99546269" }).toString(), {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify(data),
-//       });
-//       if (res.status === 201) {
-//         displayComments();
-//         commentTextarea.value = "";
-//       }
-//     } catch (e) {
-//       // do nothing
-//     }
-//   });
-// }
+  const user = await getCurrentUser();
+  if (!user) return;
+
+  const data: PostCommentInput = {
+    text: commentTextarea.value.toString(),
+    stream: commentStreamContainer?.dataset.stream,
+    postedBy: user._id,
+  };
+
+  const posted = await PostComment(data);
+
+  if (posted) {
+    UpdateComments();
+  }
+}
+
+export function initPostComment() {
+  publishCommentButton?.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("Publishing comment...");
+
+    handlePostComment();
+  });
+}

@@ -1,32 +1,25 @@
 import { Constants } from "../../../../Constants/Constants";
-
-export interface PostCommentInput {
-  postedBy: string;
-  stream: string;
-  text: string;
-}
+import { PostCommentInput } from "../../Models/PostCommentInput";
 
 export async function PostComment(commentData: PostCommentInput): Promise<boolean> {
   try {
     const token = localStorage.getItem("token");
-    return await fetch(`${Constants.API_BASE_URL}/api/comments`, {
+    return await fetch(`${Constants.API_BASE_URL}/Comments`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(commentData),
-    })
-      .then((res) => {
-        if (res.status === 500) {
-          throw new Error("Error creating comment");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        console.log(`Comment posted with id: ${data._id}`);
+    }).then((res) => {
+      if (res.status === 500) {
+        throw new Error("Error creating comment");
+      } else if (res.status === 200) {
         return true;
-      });
+      } else {
+        throw new Error("Unknown error");
+      }
+    });
   } catch (error) {
     console.log(`Error posting comment: ${error}`);
     return false;
