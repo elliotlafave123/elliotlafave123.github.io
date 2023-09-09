@@ -1,49 +1,50 @@
 ---
-import DefaultLayout from "../../../layouts/DefaultLayout.astro";
+import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
 ---
 
-<DefaultLayout title="Login">
-  <section class="login u-margin-bottom-large" id="first-section">
-    <form id="loginForm" onsubmit="return false">
-      <h1>Login</h1>
-      <p>
-        Dont have an account? &nbsp;&nbsp;<a href="/pages/login/signup.html">Sign Up</a>
+<AuthenticationLayout title="Login">
+  <section class="login" id="first-section">
+    <form id="account" method="post" class="c-form c-form__small c-form__centered">
+      <h1>Log in</h1>
+      <p class="u-margin-bottom-small">
+        <a href="/pages/login/signup.html" id="register-link">Register as a new user</a>
       </p>
+
+      <div id="validation-summary" class="text-danger" role="alert"></div>
       <div class="c-form__element c-form__element--small-margin">
-        <label for="email" class="c-form__label">Email address</label>
+        <label for="email" class="c-form__label">Email</label>
+        <input id="email" type="email" class="c-text-input" autocomplete="username" aria-required="true" />
+        <span id="email-validation" class="text-danger"></span>
+      </div>
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="password" class="c-form__label">Password</label>
         <input
-          id="email"
-          name="email"
-          type="email"
-          spellcheck="false"
-          aria-describedby="email-hint"
-          autocomplete="email"
-          required
+          id="password"
+          type="password"
           class="c-text-input"
-          required
+          autocomplete="current-password"
+          aria-required="true"
         />
-        <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
+        <span id="password-validation" class="text-danger"></span>
+      </div>
+      <div class="c-checkbox-group">
+        <label for="rememberMe" class="c-checkbox">
+          <input id="rememberMe" type="checkbox" class="c-checkbox__hidden-input" />
+          <span role="checkbox" aria-labelledby="willStoreData" class="c-checkbox__marker"></span>
+          <span id="rememberMe-label" class="c-checkbox__text"></span>
+        </label>
       </div>
 
-      <div class="c-form__element c-form__element--small-margin">
-        <label for="email" class="c-form__label">Password</label>
-        <input id="password" name="password" type="password" required class="c-text-input" required />
-        <i class="fa-solid fa-eye passwordEye" id="ShowPasswordEye"></i>
-        <i class="fa-solid fa-eye-slash passwordEye" id="HidePasswordEye"></i>
-        <span class="error" id="errorMessagePassword"
-          ><i class="fa-solid fa-triangle-exclamation"></i>Incorrect password</span
-        >
-      </div>
+      <a href="/pages/login/RequestPasswordReset.html">Forgot password?</a>
 
-      <a href="/pages/login/ResetPassword.html">Forgot Password?</a>
-      <span id="errorMessageEnterPassword"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a password</span
-      >
-      <input
+      <button
+        id="login-submit"
         type="submit"
         class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border c-button--full-width c-button--center-text u-margin-top-medium"
-        value="Login"
-        id="loginButton"
-      />
+        >Log in</button
+      >
     </form>
   </section>
-</DefaultLayout>
+
+  <script type="module" src="/scripts/login-TSBundle.js"></script>
+</AuthenticationLayout>

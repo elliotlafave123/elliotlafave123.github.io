@@ -11,7 +11,7 @@
 
 // COMPONENT LIBRARY
 // Complex Components
-@import "../../ComponentAssets/complexComponents/CommentsSection/comments";
+@import "../../ComponentAssets/complexComponents/CommentsSection/c-comment.scss";
 @import "../../ComponentAssets/complexComponents/CommentsSection/addComment";
 
 // Simple Components
@@ -33,6 +33,8 @@
 @import "../../ComponentAssets/simpleComponents/darkModeSlider/darkModeSlider.scss";
 @import "../../ComponentAssets/simpleComponents/loadingSpinner/loadingSpinner.scss";
 @import "../../ComponentAssets/simpleComponents/skeletonLoader/skeletonLoader.scss";
+@import "../../ComponentAssets/simpleComponents/passwordRequirements/c-password-requirements.scss";
+@import "../../ComponentAssets/complexComponents/profile image/c-profile-image.scss";
 
 // Layout
 @import "../../ComponentAssets/simpleComponents/layout/scrollbar/scrollbar";

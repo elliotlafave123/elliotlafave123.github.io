@@ -6,9 +6,9 @@ import { DisplayMultipleCards } from "./displayCards";
 import { SortingController } from "./Sorting/sortingController";
 import { HideClearFiltersButton } from "./clearFiltersController";
 import { InitializePagination } from "./Pagination/PageController";
+import { Constants } from "../../Constants/Constants";
 
-// Heroku
-const API_URL = "https://elliotapiserver.com/api/v1/projects";
+const API_URL = `${Constants.API_BASE_URL}/api/v1/projects`;
 
 // Digital Ocean - PAID
 // const API_URL: string = "http://142.93.42.62:3000/api/v1/projects";
