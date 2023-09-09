@@ -3,7 +3,7 @@ import { Constants } from "../../../Constants/Constants";
 export async function getCurrentUser() {
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch(`${Constants}/api/users/me`, {
+    const response = await fetch(`${Constants.API_BASE_URL}/api/users/me`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -17,8 +17,16 @@ export async function getCurrentUser() {
       return null;
     }
 
-    const data = await response.json();
-    return data;
+    if (response.status === 404) {
+      return null;
+    }
+
+    try {
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw new Error("Error parsing response");
+    }
   } catch (error) {
     console.log(error);
     return null;

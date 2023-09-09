@@ -1,24 +1,23 @@
-import { downvote, upvote } from "../../Controllers/Voting/HandleVote";
+import { postVote } from "../../Controllers/Voting/PostVote";
+import { VoteType } from "../../Models/VoteType";
+import { UpdateComments } from "../Comments/updateComments";
 
-export function initVoting() {
-  const allUpvoteButtons = document.querySelectorAll<HTMLElement>(".upvoteComment");
-  const allDownvoteButtons = document.querySelectorAll<HTMLElement>(".downvoteComment");
+async function handleVote(el: HTMLElement, voteType: VoteType) {
+  const commentEl = el.closest(".c-comment") as HTMLElement | null;
 
-  if (allUpvoteButtons.length > 0) {
-    allUpvoteButtons.forEach((el: HTMLElement) => {
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
-        upvote(el);
-      });
-    });
-  }
+  if (commentEl) {
+    const commentId = commentEl.dataset.commentid;
 
-  if (allDownvoteButtons.length > 0) {
-    allDownvoteButtons.forEach((el: HTMLElement) => {
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
-        downvote(el);
-      });
-    });
+    const data = {
+      id: commentId,
+      votetype: voteType,
+    };
+
+    if (await postVote(data)) {
+      UpdateComments();
+    }
   }
 }
+
+export const upvote = (el: HTMLElement) => handleVote(el, VoteType.Up);
+export const downvote = (el: HTMLElement) => handleVote(el, VoteType.Down);
