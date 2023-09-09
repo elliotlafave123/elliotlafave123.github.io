@@ -1,5 +1,5 @@
 ---
-import DefaultLayout from "../../../layouts/DefaultLayout.astro";
+import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
 ---
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -10,7 +10,7 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
   }
 </script>
 
-<DefaultLayout title="Sign up">
+<AuthenticationLayout title="Sign up">
   <section class="login u-margin-bottom-large" id="first-section">
     <form id="signUpForm" onsubmit="return false">
       <h1>Sign Up</h1>
@@ -122,4 +122,4 @@ import DefaultLayout from "../../../layouts/DefaultLayout.astro";
       />
     </form>
   </section>
-</DefaultLayout>
+</AuthenticationLayout>
