@@ -1,121 +1,122 @@
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @include container-x;
+// .login {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   @include container-x;
 
-  form {
-    width: 450px;
-    max-width: 100%;
-    margin: 0 auto;
+//   form {
+//     width: 450px;
+//     max-width: 100%;
+//     margin: 0 auto;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
 
-    @include respond(tab-land) {
-      width: 70%;
-    }
-    @include respond(tab-port) {
-      width: 90%;
-    }
+//     @include respond(tab-land) {
+//       width: 70%;
+//     }
+//     @include respond(tab-port) {
+//       width: 90%;
+//     }
 
-    input {
-      width: 100%;
-      margin-bottom: 0.7rem;
-    }
+//     input {
+//       width: 100%;
+//       margin-bottom: 0.7rem;
+//     }
 
-    .password-container {
-      position: relative;
-    }
+//     .password-container {
+//       position: relative;
+//     }
 
-    .passwordEye {
-      position: absolute;
-      right: 1.4rem;
-      top: 0.9rem;
-      font-size: 1rem;
-      color: $text-light;
-    }
+//     .passwordEye {
+//       position: absolute;
+//       right: 1.4rem;
+//       top: 0.9rem;
+//       font-size: 1rem;
+//       color: $text-light;
+//     }
 
-    #HidePasswordEye {
-      display: none;
-    }
+//     #HidePasswordEye {
+//       display: none;
+//     }
 
-    label {
-      font-size: 1.7rem;
-      letter-spacing: 1.2px;
-      font-weight: 600;
-      color: $text-light;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
+//     label {
+//       font-size: 1.7rem;
+//       letter-spacing: 1.2px;
+//       font-weight: 600;
+//       color: $text-light;
+//       margin-top: 2rem;
+//       margin-bottom: 1rem;
+//     }
 
-    a {
-      font-size: 1.6rem;
-      text-decoration: underline;
-      color: $color-primary-light;
+//     a {
+//       font-size: 1.6rem;
+//       text-decoration: underline;
+//       color: $color-primary-light;
 
-      &:hover {
-        color: $text-light;
-      }
-    }
+//       &:hover {
+//         color: $text-light;
+//       }
+//     }
 
-    input:disabled {
-      cursor: not-allowed;
-    }
-  }
+//     input:disabled {
+//       cursor: not-allowed;
+//     }
+//   }
 
-  form:invalid input[type="submit"] {
-    cursor: not-allowed;
-  }
-  input[type="submit"]:disabled {
-    cursor: not-allowed;
-  }
+//   form:invalid input[type="submit"] {
+//     cursor: not-allowed;
+//   }
+//   input[type="submit"]:disabled {
+//     cursor: not-allowed;
+//   }
 
-  span:not(.c-form__hint) {
-    border-radius: 0.2rem;
-    padding: 1.2rem;
-    margin: 0.2rem;
-    color: $color-grey-dark !important;
-    background-color: rgb(198, 174, 39);
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    color: $text-light;
-    display: none;
-    i {
-      margin-right: 0.5rem;
-    }
-    &.error {
-      background-color: $color-form-false;
-    }
-  }
-}
+//   span:not(.c-form__hint) {
+//     border-radius: 0.2rem;
+//     padding: 1.2rem;
+//     margin: 0.2rem;
+//     color: $color-grey-dark !important;
+//     background-color: rgb(198, 174, 39);
+//     font-size: 1.8rem;
+//     font-weight: 700;
+//     letter-spacing: 1.2px;
+//     color: $text-light;
+//     display: none;
+//     i {
+//       margin-right: 0.5rem;
+//     }
+//     &.error {
+//       background-color: $color-form-false;
+//     }
+//   }
+// }
 
-.loginForm.verify {
-  h1 {
-    text-align: center !important;
-    margin: 0 auto 2rem auto;
+// .loginForm.verify {
+//   h1 {
+//     text-align: center !important;
+//     margin: 0 auto 2rem auto;
 
-    &::after,
-    &::before {
-      display: none;
-    }
-  }
-}
+//     &::after,
+//     &::before {
+//       display: none;
+//     }
+//   }
+// }
 
-.terms-section {
-  p {
-    color: $text-light;
-    font-size: 1.3rem;
+// .terms-section {
+//   p {
+//     color: $text-light;
+//     font-size: 1.3rem;
 
-    a {
-      font-size: inherit;
-      color: $color-primary-light;
+//     a {
+//       font-size: inherit;
+//       color: $color-primary-light;
 
-      &:hover {
-        color: $color-primary;
-      }
-    }
-  }
-}
+//       &:hover {
+//         color: $color-primary;
+//       }
+//     }
+//   }
+// }
+// TODO: Remove this file

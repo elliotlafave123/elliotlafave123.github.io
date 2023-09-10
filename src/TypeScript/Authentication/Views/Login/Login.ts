@@ -19,9 +19,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Clear previous validation errors
     emailValidation.textContent = "";
     passwordValidation.textContent = "";
+    emailValidation.style.display = "none";
+    passwordValidation.style.display = "none";
 
     // Input validation
     if (!validator.isEmail(email)) {
+      emailValidation.style.display = "block";
       emailValidation.textContent = "Invalid email format.";
       valid = false;
     }
@@ -40,7 +43,11 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Redirect to previous page
       const backLink = localStorage.getItem("backLink");
       if (backLink) {
-        window.location.replace(backLink);
+        if (backLink === "/pages/login/login.html") {
+          window.location.href = "index.html";
+        } else {
+          window.location.replace(backLink);
+        }
       } else {
         window.location.href = "index.html";
       }
@@ -49,7 +56,11 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Redirect to request email verification page
       window.location.href = "/pages/login/RequestEmailVerification.html?email=" + email;
     } else {
-      // Handle login failure, show an error message or something else
+      emailValidation.style.display = "block";
+      passwordValidation.style.display = "block";
+      emailValidation.textContent = "The username or password is incorrect.";
+      passwordValidation.textContent = "The username or password is incorrect.";
+      passwordInput.value = "";
       updateHeaderAuth(false);
     }
   });
