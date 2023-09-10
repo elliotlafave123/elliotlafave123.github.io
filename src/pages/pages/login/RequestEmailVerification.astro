@@ -5,9 +5,21 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
 <script defer src="/scripts/resetPassword-TSBundle.js"></script>
 
 <AuthenticationLayout title="Check your email">
-  <section class="login u-margin-top-large u-margin-bottom-large">
+  <section class="c-container" id="email-section">
+    <h1>Enter your email</h1>
+    <p>Enter the email address associated with your account and we'll send you a link to reset your password.</p>
+    <form id="email-form">
+      <input type="email" id="email-input" name="email" placeholder="Enter your email" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section class="c-container" id="check-email-section">
     <h1>Check your email</h1>
-    <p>We've sent you an email with a link to reset your password. If you don't see it, check your spam folder.</p>
+
+    <p id="email-sent-message" style="display: none;">
+      We've sent you an email with a link to reset your password. If you don't see it, check your spam folder.
+    </p>
   </section>
 
   <script type="module" src="/scripts/requestEmailVerification-TSBundle.js"></script>

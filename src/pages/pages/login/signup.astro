@@ -11,36 +11,42 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
 </script>
 
 <AuthenticationLayout title="Sign up">
-  <section class="login" id="first-section">
-    <form id="signUpForm" onsubmit="return false">
+  <section class="c-container c-container--x-small c-container--centered">
+    <form class="c-form" id="signUpForm" onsubmit="return false" novalidate>
+      <div id="validationSummary" class="c-form__validation-summary">
+        <!-- Error summary will be filled by the script -->
+      </div>
       <h1>Sign Up</h1>
+
       <p class="u-margin-bottom-small">
         <a href="/pages/login/login.html" id="register-link">Log in to an existing account</a>
       </p>
-      <div class="form__two-column u-margin-bottom-small">
-        <div class="c-form__element c-form__element--small-margin">
-          <label for="firstname" class="c-form__label">First Name</label>
-          <input class="c-text-input" id="firstname" name="firstname" type="text" maxlength="94" required />
-          <span id="errorMessageFirstName"
-            ><i class="fa-solid fa-triangle-exclamation"></i>Please enter your first name</span
-          >
-        </div>
-        <div class="c-form__element c-form__element--small-margin">
-          <label for="lastname" class="c-form__label">Last Name</label>
-          <input class="c-text-input" id="lastname" name="lastname" type="text" maxlength="94" required />
-          <span id="errorMessageLastName"
-            ><i class="fa-solid fa-triangle-exclamation"></i>Please enter your last name</span
-          >
-        </div>
+
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="firstname" class="c-form__label">First Name</label>
+        <input class="c-text-input" id="firstname" name="firstname" type="text" maxlength="94" required />
+        <span id="errorMessageFirstName" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your first name
+        </span>
       </div>
+
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="lastname" class="c-form__label">Last Name</label>
+        <input class="c-text-input" id="lastname" name="lastname" type="text" maxlength="94" required />
+        <span id="errorMessageLastName" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your last name
+        </span>
+      </div>
+
       <div class="c-form__element c-form__element--small-margin">
         <label for="displayname" class="c-form__label">Display Name</label>
         <span class="c-form__hint">This will be visible to other users.</span>
         <input class="c-text-input" id="displayname" name="displayname" type="text" maxlength="94" required />
-        <span id="errorMessageDisplayName"
-          ><i class="fa-solid fa-triangle-exclamation"></i>Please enter your display name</span
-        >
+        <span id="errorMessageDisplayName" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your display name
+        </span>
       </div>
+
       <div class="c-form__element c-form__element--small-margin">
         <label for="email" class="c-form__label">Email Address</label>
         <input
@@ -53,23 +59,29 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
           autocomplete="email"
           required
         />
-        <span id="errorMessageEmail"><i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email</span>
-        <span id="errorMessageEmailExists"
-          ><i class="fa-solid fa-triangle-exclamation"></i>Email has already been used</span
-        >
+        <span id="errorMessageEmail" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Please enter a valid email
+        </span>
+        <span id="errorMessageEmailExists" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Email has already been used
+        </span>
       </div>
+
       <div class="c-form__element c-form__element--small-margin">
         <label for="password" class="c-form__label">Password</label>
-        <div class="password-container">
+        <div class="c-password-input">
           <input class="c-text-input" minlength="8" id="password" name="password" type="password" required />
-          <i class="fa-solid fa-eye passwordEye" id="ShowPasswordEye"></i>
-          <i class="fa-solid fa-eye-slash passwordEye" id="HidePasswordEye"></i>
+          <i class="fa-solid fa-eye c-password-input__password-eye" id="ShowPasswordEye"></i>
+          <i
+            class="fa-solid fa-eye-slash c-password-input__password-eye c-password-input__password-eye--hidden"
+            id="HidePasswordEye"></i>
         </div>
-        <span id="errorMessagePassword"
-          ><i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements</span
-        >
+        <span id="errorMessagePassword" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements
+        </span>
       </div>
-      <div class="c-form__element">
+
+      <div class="c-form__element c-form__element--small-margin">
         <div class="c-password-requirements">
           <ul>
             <li>
@@ -99,10 +111,11 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
           </ul>
         </div>
       </div>
+
       <!-- confirm password -->
-      <div class="c-form__element c-form__element--small-margin">
+      <div class="c-form__element">
         <label for="confirmPassword" class="c-form__label">Confirm Password</label>
-        <div class="password-container">
+        <div class="c-password-input">
           <input
             class="c-text-input"
             minlength="8"
@@ -111,22 +124,30 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
             type="password"
             required
           />
+          <i class="fa-sharp fa-solid fa-eye c-password-input__password-eye" id="ShowPasswordEye"></i>
+          <i
+            class="fa-sharp fa-solid fa-eye-slash c-password-input__password-eye c-password-input__password-eye--hidden"
+            id="HidePasswordEye"></i>
         </div>
-        <span id="errorMessageConfirmPassword"
+        <span id="errorMessageConfirmPassword" class="c-form__error-message"
           ><i class="fa-solid fa-triangle-exclamation"></i>Passwords do not match</span
         >
+
         <!-- Public -->
-        <div
+        <!-- <div
           class="g-recaptcha"
           data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
           data-callback="recaptcha_callback"
         >
-        </div>
+        </div> -->
         <!-- Local -->
-        <!-- <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback"></div> -->
-        <span id="errorMessageCaptcha"
-          ><i class="fa-solid fa-triangle-exclamation"></i>Please verify you're not a robot</span
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+          data-callback="recaptcha_callback"
         >
+        </div>
+
         <div class="terms-section">
           <p>
             By signing up, you're agreeing to our <a href="../../termsAndConditions.html">Terms & Conditions</a> and

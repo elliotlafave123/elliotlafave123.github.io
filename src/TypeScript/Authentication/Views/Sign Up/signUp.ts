@@ -2,92 +2,137 @@ import validator from "validator";
 import { SignUp } from "../../Controllers/Sign up/SignUp";
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const form = document.getElementById("signUpForm");
-  const firstNameInput = document.getElementById("firstname") as HTMLInputElement;
-  const lastNameInput = document.getElementById("lastname") as HTMLInputElement;
-  const displayNameInput = document.getElementById("displayname") as HTMLInputElement;
-  const emailInput = document.getElementById("email") as HTMLInputElement;
-  const passwordInput = document.getElementById("password") as HTMLInputElement;
-  const confirmPasswordInput = document.getElementById("confirmPassword") as HTMLInputElement;
+  const form = document.getElementById("signUpForm") as HTMLFormElement;
+  const errorSummary = createErrorSummary();
 
-  // Validation error elements
-  const errorMessageFirstName = document.getElementById("errorMessageFirstName");
-  const errorMessageLastName = document.getElementById("errorMessageLastName");
-  const errorMessageDisplayName = document.getElementById("errorMessageDisplayName");
-  const errorMessageEmail = document.getElementById("errorMessageEmail");
-  const errorMessagePassword = document.getElementById("errorMessagePassword");
-  const errorMessageConfirmPassword = document.getElementById("errorMessageConfirmPassword");
+  form?.insertBefore(errorSummary, form.firstChild);
+  form?.addEventListener("submit", handleSubmit);
+});
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+function createErrorSummary() {
+  const errorSummary = createElement("div", "c-validation-summary");
+  errorSummary.style.display = "none"; // Initially hide the error summary
+  const errorSummaryTop = createElement("div", "c-validation-summary__top");
+  const errorSummaryIcon = createElement(
+    "div",
+    "c-validation-summary__icon",
+    `<i class="fa-sharp fa-solid fa-triangle-exclamation"></i>`
+  );
+  const errorSummaryTitle = createElement("div", "c-validation-summary__title", "Validation Errors");
 
-    // Clear previous validation errors
-    errorMessageFirstName.textContent = "";
-    errorMessageLastName.textContent = "";
-    errorMessageDisplayName.textContent = "";
-    errorMessageEmail.textContent = "";
-    errorMessagePassword.textContent = "";
-    errorMessageConfirmPassword.textContent = "";
+  errorSummaryTop.appendChild(errorSummaryIcon);
+  errorSummaryTop.appendChild(errorSummaryTitle);
+  errorSummary.appendChild(errorSummaryTop);
+  errorSummary.appendChild(createElement("ul", "c-validation-summary__list"));
 
-    const firstName = firstNameInput.value;
-    const lastName = lastNameInput.value;
-    const displayName = displayNameInput.value;
-    const email = emailInput.value;
-    const password = passwordInput.value;
-    const confirmPassword = confirmPasswordInput.value;
+  return errorSummary;
+}
 
-    let valid = true;
+function createElement(tag: string, className: string, innerHTML?: string) {
+  const element = document.createElement(tag);
+  element.className = className;
+  if (innerHTML) element.innerHTML = innerHTML;
+  return element;
+}
 
-    // Input validation
-    if (!firstName) {
-      errorMessageFirstName.textContent = "Please enter your first name";
-      valid = false;
+async function handleSubmit(e: Event) {
+  e.preventDefault();
+
+  const errorSummary = document.querySelector(".c-validation-summary") as HTMLDivElement;
+  errorSummary.style.display = "none"; // Hide the error summary at the start of form submission
+
+  const inputs = [
+    {
+      id: "firstname",
+      errorMessage: "Please enter your first name",
+      validation: (val: string) => val.trim().length > 0,
+      errorElementId: "errorMessageFirstName",
+    },
+    {
+      id: "lastname",
+      errorMessage: "Please enter your last name",
+      validation: (val: string) => val.trim().length > 0,
+      errorElementId: "errorMessageLastName",
+    },
+    {
+      id: "displayname",
+      errorMessage: "Please enter your display name",
+      validation: (val: string) => val.trim().length > 0,
+      errorElementId: "errorMessageDisplayName",
+    },
+    {
+      id: "email",
+      errorMessage: "Please enter a valid email",
+      validation: validator.isEmail,
+      errorElementId: "errorMessageEmail",
+    },
+    {
+      id: "password",
+      errorMessage: "Password must meet requirements",
+      validation: (val: string) => val && val.length >= 8,
+      errorElementId: "errorMessagePassword",
+    },
+    {
+      id: "confirmPassword",
+      errorMessage: "Passwords do not match",
+      validation: (val: string, vals: string[]) => val && val === vals[4],
+      errorElementId: "errorMessageConfirmPassword",
+    },
+  ];
+
+  const values = [];
+  const errorMessagesList = [];
+  let valid = true;
+  let firstErrorField: HTMLElement | null = null;
+
+  inputs.forEach(({ id, errorMessage, validation, errorElementId }, index) => {
+    const input = document.getElementById(id) as HTMLInputElement;
+    const errorMessageElement = document.getElementById(errorElementId);
+
+    if (errorMessageElement) {
+      errorMessageElement.style.display = "none";
+      errorMessageElement.textContent = "";
     }
 
-    if (!lastName) {
-      errorMessageLastName.textContent = "Please enter your last name";
-      valid = false;
-    }
+    const value = input.value;
+    values.push(value);
 
-    if (!displayName) {
-      errorMessageDisplayName.textContent = "Please enter your display name";
-      valid = false;
-    }
-
-    if (!validator.isEmail(email)) {
-      errorMessageEmail.textContent = "Please enter a valid email";
-      valid = false;
-    }
-
-    if (!password || password.length < 8) {
-      errorMessagePassword.textContent = "Password must meet requirements";
-      valid = false;
-    }
-
-    if (password !== confirmPassword) {
-      errorMessageConfirmPassword.textContent = "Passwords do not match";
-      valid = false;
-    }
-
-    if (!valid) {
-      return;
-    }
-
-    try {
-      const result = await SignUp({
-        firstName,
-        lastName,
-        displayName,
-        email,
-        password,
-        passwordConfirmation: confirmPassword,
-      });
-
-      if (result) {
-        window.location.replace("/pages/login/CheckYourEmail.html");
+    if (!validation(value, values)) {
+      if (errorMessageElement) {
+        errorMessageElement.style.display = "block";
+        errorMessageElement.textContent = errorMessage;
       }
-    } catch (error) {
-      console.log("Signup failed:", error);
+      errorMessagesList.push(errorMessage);
+      valid = false;
+      if (!firstErrorField) firstErrorField = input;
     }
   });
-});
+
+  if (!valid) {
+    errorSummary.style.display = "block"; // Show the error summary if there are validation errors
+    const errorSummaryList = document.querySelector(".c-validation-summary ul");
+    errorSummaryList.innerHTML = errorMessagesList
+      .map((msg, index) => `<li><a href="#${inputs[index].id}">${msg}</a></li>`)
+      .join("");
+    firstErrorField?.focus();
+    return;
+  }
+
+  try {
+    const [firstName, lastName, displayName, email, password, confirmPassword] = values;
+    const result = await SignUp({
+      firstName,
+      lastName,
+      displayName,
+      email,
+      password,
+      passwordConfirmation: confirmPassword,
+    });
+
+    if (result) {
+      window.location.replace("/pages/login/CheckYourEmail.html");
+    }
+  } catch (error) {
+    console.log("Signup failed:", error);
+  }
+}
