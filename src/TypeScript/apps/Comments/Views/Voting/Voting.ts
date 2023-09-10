@@ -15,6 +15,12 @@ async function handleVote(el: HTMLElement, voteType: VoteType) {
 
     if (await postVote(data)) {
       UpdateComments();
+    } else {
+      const loginButton = document.getElementById("logInButton");
+
+      if (loginButton) {
+        loginButton.focus();
+      }
     }
   }
 }

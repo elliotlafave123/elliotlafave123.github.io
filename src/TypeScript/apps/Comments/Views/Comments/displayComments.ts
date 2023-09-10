@@ -19,16 +19,18 @@ export async function displayComment(comment: CommentModel) {
     text = "",
     currentUser = false,
     hasBeenEdited = false,
+    currentUserHasDownvoted = false,
+    currentUserHasUpvoted = false,
   } = comment;
 
   commentDiv.innerHTML = `
     <div class="c-comment__side">
-        <button class="c-comment__button upvoteComment">
+        <button class="c-comment__button upvoteComment ${currentUserHasUpvoted ? "c-comment__button--active" : ""}">
             <i class="fa-sharp fa-solid fa-plus"></i>
         </button>
         <p>${upvotes.length - downvotes.length}</p>
-        <button class="c-comment__button downvoteComment">
-            <i class="fa-sharp fa-solid fa-minus"></i>
+        <button class="c-comment__button downvoteComment ${currentUserHasDownvoted ? "c-comment__button--active" : ""}">
+            <i class="fa-sharp fa-regular fa-minus"></i>
         </button>
     </div>
     <div class="c-comment__main">
