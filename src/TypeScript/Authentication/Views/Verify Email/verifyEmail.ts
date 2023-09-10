@@ -16,14 +16,11 @@ async function init() {
   const validation = document.getElementById("verify-validation");
 
   if (id && token && isValidObjectId(id) && isValidToken(token)) {
-    console.log("Tests");
     const verified = await VerifyEmail(id, token);
 
     if (verified === VerificationStatus.Verified) {
-      console.log("Email verified");
       window.location.replace("/pages/login/login.html");
     } else if (verified === VerificationStatus.AlreadyVerified) {
-      console.log("Email already verified");
       window.location.replace("/pages/login/login.html");
     } else {
       // Update the page to display an error message

@@ -6,6 +6,7 @@ import { hideLoginButtons } from "./Views/Authentication/hideLoginButtons";
 import { hideOverlay } from "./Views/Authentication/hideOverlay";
 import { displayComment } from "./Views/Comments/displayComments";
 import { initPostComment } from "./Views/Comments/handlePostComment";
+import { UpdateComments } from "./Views/Comments/updateComments";
 import { initDeleteComments } from "./Views/Deleting/initDeleteComment";
 import { initEditComments } from "./Views/Editing/editComment";
 import { initVoting } from "./Views/Voting/HandleVote";
@@ -22,19 +23,7 @@ async function initComments() {
     hideOverlay();
   }
 
-  const streamId = getStreamId();
-  if (streamId) {
-    const comments = await GetComments({ streamId });
-    if (comments) {
-      comments.forEach((comment: CommentModel) => {
-        displayComment(comment);
-      });
-
-      initPostComment();
-      initVoting();
-      initDeleteComments();
-      initEditComments();
-    }
-  }
+  initPostComment();
+  UpdateComments();
 }
 initComments();

@@ -29,7 +29,6 @@ export async function handlePostComment() {
 export function initPostComment() {
   publishCommentButton?.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("Publishing comment...");
 
     handlePostComment();
   });

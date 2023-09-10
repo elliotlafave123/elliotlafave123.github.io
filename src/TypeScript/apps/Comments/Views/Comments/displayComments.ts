@@ -42,7 +42,6 @@ export async function displayComment(comment: CommentModel) {
                 <h5>${displayName.toLowerCase()}</h5>
                 ${currentUser ? '<div class="c-comment__you">you</div>' : ""}
                 <span class="c-comment__date">${GenerateDateString(new Date(createdAt))}</span>
-                <span>${hasBeenEdited ? "(Edited)" : ""}</span>
             </div>
         </div>
         <p class="c-comment__text">${text}</p>
@@ -51,9 +50,11 @@ export async function displayComment(comment: CommentModel) {
   `;
 
   container.insertAdjacentElement("afterbegin", commentDiv);
+
+  return commentDiv;
 }
 
-const interactions = `
+export const interactions = `
     <div class="c-comment__interactions">
         <button class="c-comment__button c-comment__button--delete deleteComment">
             <i class="fa-sharp fa-solid fa-trash"></i>   
@@ -66,7 +67,7 @@ const interactions = `
     </div>
 `;
 
-const reply = ` 
+export const reply = ` 
     <div class="c-comment__interactions">
         <button class="c-comment__button c-comment__button--primary">
             <i class="fa-sharp fa-solid fa-reply"></i>

@@ -10,7 +10,7 @@ export const setCheckbox = async (name: string) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ token: token, color: name }),
     });
-    console.log(res);
+
     if (res.status === 200) {
       displayDataInWidget();
       // Show saved checkmark and word

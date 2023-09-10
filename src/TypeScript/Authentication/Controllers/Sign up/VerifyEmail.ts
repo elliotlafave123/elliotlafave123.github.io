@@ -3,14 +3,11 @@ import { VerificationStatus } from "../../Models/VerificationStatus";
 
 export async function VerifyEmail(id: string, token: string): Promise<VerificationStatus> {
   try {
-    console.log("verifying email");
     const res = await fetch(`${Constants.API_BASE_URL}/api/users/verify/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id, verificationCode: token }),
     });
-
-    console.log(res);
 
     if (res.status === 403) {
       throw new Error("Could not verify user");

@@ -18,7 +18,6 @@ async function InitRequestEmailVerification() {
 
       const hasRequested = await RequestEmailVerification({ email });
       if (hasRequested) {
-        console.log("Email verification requested");
         emailSection.style.display = "none";
         checkEmailSection.style.display = "block";
         emailSentMessage.style.display = "block";

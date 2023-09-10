@@ -7,6 +7,11 @@ export function initDeleteComments() {
     el.addEventListener("click", async (e) => {
       e.preventDefault();
 
+      // check if modal is already open
+      if (document.querySelector(".c-modal")) {
+        return;
+      }
+
       const modal = new Modal("Delete comment", "Are you sure you want to delete this comment?", "Delete", "Cancel");
       try {
         const result = await modal.open({
