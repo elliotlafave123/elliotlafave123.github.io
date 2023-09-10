@@ -11,4 +11,7 @@ export type CommentModel = {
   score: number;
   hasBeenEdited: boolean;
   profileImgColor: string;
+  replies?: [string];
+  replyObjects?: [CommentModel];
+  repliedTo?: string;
 };

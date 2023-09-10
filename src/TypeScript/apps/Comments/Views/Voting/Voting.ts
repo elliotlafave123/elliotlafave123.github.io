@@ -1,3 +1,4 @@
+import { CheckLogin } from "../../../../Authentication/Controllers/Login/CheckLogin";
 import { postVote } from "../../Controllers/Voting/PostVote";
 import { VoteType } from "../../Models/VoteType";
 import { UpdateComments } from "../Comments/updateComments";
@@ -6,6 +7,12 @@ let isVoting = false;
 
 async function handleVote(el: HTMLElement, voteType: VoteType) {
   if (isVoting) return;
+
+  const loginButton = document.getElementById("logInButton") as HTMLElement;
+
+  if ((await CheckLogin()).LoggedIn !== true) {
+    return loginButton.focus();
+  }
 
   isVoting = true;
 
@@ -21,12 +28,6 @@ async function handleVote(el: HTMLElement, voteType: VoteType) {
 
     if (await postVote(data)) {
       UpdateComments();
-    } else {
-      const loginButton = document.getElementById("logInButton");
-
-      if (loginButton) {
-        loginButton.focus();
-      }
     }
   }
 
