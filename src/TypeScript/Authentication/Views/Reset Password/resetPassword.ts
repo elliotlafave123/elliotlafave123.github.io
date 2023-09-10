@@ -25,19 +25,13 @@ export async function resetPassword() {
         passwordConfirmation: confirmPassword.value,
       };
 
-      console.log(resetPasswordData);
-
       const resetSuccessful = await ResetPassword(resetPasswordData);
 
-      console.log(resetSuccessful);
-
       if (resetSuccessful) {
-        console.log("Password reset successful");
         // Redirect or show some message to indicate success
         window.location.href = "login.html";
       } else {
-        console.log("Password reset failed");
-        // Handle reset password failure, show an error message, etc.
+        // TODO: Handle reset password failure, show an error message, etc.
       }
     } else {
       console.log("Missing URL parameters");

@@ -2,7 +2,6 @@ import { Constants } from "../../../../Constants/Constants";
 
 export async function EditComment(text: string, id: string): Promise<boolean> {
   try {
-    console.log(text, id);
     const response = await fetch(Constants.API_BASE_URL + `/Comments`, {
       method: "PUT",
       headers: {

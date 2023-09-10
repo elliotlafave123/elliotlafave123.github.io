@@ -1,3 +1,4 @@
+import { Modal } from "../../../../../../ComponentAssets/simpleComponents/modal/modal";
 import { DeleteComment } from "../../Controllers/Comments/DeleteComment";
 
 export function initDeleteComments() {
@@ -6,13 +7,35 @@ export function initDeleteComments() {
     el.addEventListener("click", async (e) => {
       e.preventDefault();
 
-      const result = confirm("Are you sure you want to delete this comment?");
-      if (result) {
-        const comment = el.closest(".c-comment") as HTMLElement;
-        const deleted = await DeleteComment(comment.dataset.commentid as string);
-        if (deleted) {
-          comment.remove();
+      // check if modal is already open
+      if (document.querySelector(".c-modal")) {
+        return;
+      }
+
+      const modal = new Modal("Delete comment", "Are you sure you want to delete this comment?", "Delete", "Cancel");
+      try {
+        const result = await modal.open({
+          title: "Delete comment",
+          paragraph: "Are you sure you want to delete this comment?",
+          confirmText: "Delete",
+          cancelText: "Cancel",
+          size: "medium",
+          corner: "round",
+          colour: "primary",
+          withBorder: true,
+          ariaLabel: "Delete comment modal",
+        });
+
+        if (result === "confirm") {
+          const comment = el.closest(".c-comment") as HTMLElement;
+          console.log("Deleting comment", comment.dataset.commentid);
+          const deleted = await DeleteComment(comment.dataset.commentid as string);
+          if (deleted) {
+            comment.remove();
+          }
         }
+      } catch (error) {
+        console.error("Modal action was cancelled", error);
       }
     });
   });

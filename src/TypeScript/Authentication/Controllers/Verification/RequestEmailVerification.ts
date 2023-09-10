@@ -14,8 +14,6 @@ export async function RequestEmailVerification(params: RequestVerificationInput)
       body: JSON.stringify(params),
     });
 
-    console.log(response);
-
     if (response.status === 403) {
       return "Could not verify user";
     } else if (response.status === 301) {

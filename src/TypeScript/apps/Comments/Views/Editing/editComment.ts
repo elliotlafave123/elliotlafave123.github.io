@@ -17,25 +17,34 @@ export function initEditComments() {
       const commentHeader = comment.querySelector(".c-comment__header") as HTMLElement;
       const oldText = commentText.innerText;
 
-      commentHeader.insertAdjacentHTML(
-        "afterend",
-        `
-            <form class="add-comment-container" onsubmit="return false">
-              <textarea class="c-text-area" name="commentTextarea" id="editCommentTextarea" minlength="3" required>${oldText}</textarea>
-              <input type="submit" value="Update" id="publishEditedCommentButton">
-            </form>
-            `
-      );
+      let form = comment.querySelector(".add-comment-container");
+      if (!form) {
+        commentHeader.insertAdjacentHTML(
+          "afterend",
+          `
+              <form class="add-comment-container" onsubmit="return false">
+                <textarea class="c-text-area" name="commentTextarea" id="editCommentTextarea" minlength="3" required>${oldText}</textarea>
+                <input type="submit" value="Update" id="publishEditedCommentButton">
+              </form>
+              `
+        );
 
-      const publishEditedCommentButton = document.getElementById("publishEditedCommentButton") as HTMLInputElement;
-      publishEditedCommentButton.addEventListener("click", async (e) => {
-        e.preventDefault();
-        const commentTextarea = document.getElementById("editCommentTextarea") as HTMLTextAreaElement;
-        const edited = await EditComment(commentTextarea.value, comment.dataset.commentid);
-        if (edited) {
-          UpdateComments();
-        }
-      });
+        form = comment.querySelector(".add-comment-container");
+
+        const publishEditedCommentButton = form.querySelector("#publishEditedCommentButton") as HTMLInputElement;
+        publishEditedCommentButton.addEventListener("click", async (e) => {
+          e.preventDefault();
+          const commentTextarea = form.querySelector("#editCommentTextarea") as HTMLTextAreaElement;
+          const edited = await EditComment(commentTextarea.value, comment.dataset.commentid);
+          if (edited) {
+            UpdateComments(true);
+          }
+        });
+      } else {
+        const commentTextarea = form.querySelector("#editCommentTextarea") as HTMLTextAreaElement;
+        commentTextarea.value = oldText;
+        commentTextarea.focus();
+      }
     });
   });
 }
