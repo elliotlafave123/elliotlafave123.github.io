@@ -1,11 +1,16 @@
 ---
+import GenericButton from "../../../components/GenericButton.vue";
 import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
 ---
 
 <AuthenticationLayout title="Verify email">
-  <section class="login u-margin-top-large u-margin-bottom-large" id="first-section">
+  <section class="c-container">
     <h1>Verify Email</h1>
     <p class="verify">Please wait while we verify your email.</p>
+    <span id="verify-validation" class="c-form__error-message u-margin-bottom-small"></span>
+    <GenericButton id="verify-email-button" class="c-button--primary" href="/pages/login/RequestEmailVerification.html">
+      Try again
+    </GenericButton>
   </section>
 
   <script type="module" src="/scripts/verifyEmail-TSBundle.js"></script>

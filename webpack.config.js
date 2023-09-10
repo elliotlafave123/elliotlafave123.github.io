@@ -23,6 +23,7 @@ module.exports = {
     requestPasswordReset: "./src/TypeScript/Authentication/Views/Reset Password/requestPasswordReset.ts",
     resetPassword: "./src/TypeScript/Authentication/Views/Reset Password/resetPassword.ts",
     passwordRequirements: "./ComponentAssets/simpleComponents/passwordRequirements/passwordRequirements.ts",
+    passwordInput: "./ComponentAssets/simpleComponents/Forms/Form Fields/PasswordInput.ts",
     requestEmailVerification:
       "./src/TypeScript/Authentication/Views/Request Email Verification/requestEmailVerification.ts",
   },
@@ -33,7 +34,7 @@ module.exports = {
         use: "ts-loader",
         include: [
           path.resolve(__dirname, "./src/TypeScript"),
-          path.resolve(__dirname, "./ComponentAssets/simpleComponents/passwordRequirements"),
+          path.resolve(__dirname, "./ComponentAssets/simpleComponents/"),
         ],
       },
     ],

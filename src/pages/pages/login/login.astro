@@ -3,19 +3,21 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
 ---
 
 <AuthenticationLayout title="Login">
-  <section class="login" id="first-section">
-    <form id="account" method="post" class="c-form c-form__small c-form__centered">
+  <section class="c-container c-container--x-small c-container--centered">
+    <form class="c-form" id="account" method="post" novalidate>
       <h1>Log in</h1>
       <p class="u-margin-bottom-small">
         <a href="/pages/login/signup.html" id="register-link">Register as a new user</a>
       </p>
 
       <div id="validation-summary" class="text-danger" role="alert"></div>
-      <div class="c-form__element c-form__element--small-margin">
+
+      <div class="c-form__element">
         <label for="email" class="c-form__label">Email</label>
         <input id="email" type="email" class="c-text-input" autocomplete="username" aria-required="true" />
-        <span id="email-validation" class="text-danger"></span>
+        <span id="email-validation" class="c-form__error-message"></span>
       </div>
+
       <div class="c-form__element c-form__element--small-margin">
         <label for="password" class="c-form__label">Password</label>
         <input
@@ -25,14 +27,7 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
           autocomplete="current-password"
           aria-required="true"
         />
-        <span id="password-validation" class="text-danger"></span>
-      </div>
-      <div class="c-checkbox-group">
-        <label for="rememberMe" class="c-checkbox">
-          <input id="rememberMe" type="checkbox" class="c-checkbox__hidden-input" />
-          <span role="checkbox" aria-labelledby="willStoreData" class="c-checkbox__marker"></span>
-          <span id="rememberMe-label" class="c-checkbox__text"></span>
-        </label>
+        <span id="password-validation" class="c-form__error-message"></span>
       </div>
 
       <a href="/pages/login/RequestPasswordReset.html">Forgot password?</a>
