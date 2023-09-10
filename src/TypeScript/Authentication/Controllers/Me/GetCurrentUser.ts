@@ -11,8 +11,6 @@ export async function getCurrentUser() {
       },
     });
 
-    console.log(response);
-
     if (response.status === 401) {
       return null;
     }
