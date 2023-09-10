@@ -3,6 +3,8 @@ export type CommentModel = {
   createdAt: string;
   displayName: string;
   currentUser: boolean;
+  currentUserHasUpvoted: boolean;
+  currentUserHasDownvoted: boolean;
   text: string;
   upvotes: [number];
   downvotes: [number];
