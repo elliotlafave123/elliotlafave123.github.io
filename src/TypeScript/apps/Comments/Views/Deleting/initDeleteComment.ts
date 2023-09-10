@@ -28,6 +28,7 @@ export function initDeleteComments() {
 
         if (result === "confirm") {
           const comment = el.closest(".c-comment") as HTMLElement;
+          console.log("Deleting comment", comment.dataset.commentid);
           const deleted = await DeleteComment(comment.dataset.commentid as string);
           if (deleted) {
             comment.remove();

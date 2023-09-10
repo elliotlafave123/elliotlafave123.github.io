@@ -1,5 +1,4 @@
 import { EditComment } from "../../Controllers/Comments/EditComment";
-import { clearContainer } from "../Comments/clearContainer";
 import { UpdateComments } from "../Comments/updateComments";
 
 export function initEditComments() {
