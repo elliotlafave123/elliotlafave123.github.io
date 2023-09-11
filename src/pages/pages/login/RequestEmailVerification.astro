@@ -2,16 +2,29 @@
 import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
 ---
 
-<script defer src="/scripts/resetPassword-TSBundle.js"></script>
+<script defer src="/scripts/requestEmailVerification-TSBundle.js"></script>
 
 <AuthenticationLayout title="Check your email">
   <section class="c-container" id="email-section">
-    <h1>Enter your email</h1>
-    <p>Enter the email address associated with your account and we'll send you a link to reset your password.</p>
-    <form id="email-form">
-      <input type="email" id="email-input" name="email" placeholder="Enter your email" required />
-      <button type="submit">Submit</button>
-    </form>
+    <div class="c-form">
+      <h1>Enter your email</h1>
+      <p>Enter the email address associated with your account and we'll send you a link to veriy your email address.</p>
+      <form id="email-form" class="c-input-with-button">
+        <input
+          type="email"
+          class="c-text-input"
+          id="email-input"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <button
+          type="submit"
+          class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border c-button--center-text"
+          >Submit</button
+        >
+      </form>
+    </div>
   </section>
 
   <section class="c-container" id="check-email-section">
@@ -21,6 +34,4 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
       We've sent you an email with a link to reset your password. If you don't see it, check your spam folder.
     </p>
   </section>
-
-  <script type="module" src="/scripts/requestEmailVerification-TSBundle.js"></script>
 </AuthenticationLayout>

@@ -1,10 +1,11 @@
 import { Constants } from "../../../Constants/Constants";
+import { VerificationResponse } from "../../Models/VerificationResponse";
 
 export interface RequestVerificationInput {
   email: string;
 }
 
-export async function RequestEmailVerification(params: RequestVerificationInput): Promise<string> {
+export async function RequestEmailVerification(params: RequestVerificationInput): Promise<VerificationResponse> {
   try {
     const response = await fetch(`${Constants.API_BASE_URL}/api/users/requestverification`, {
       method: "POST",
@@ -15,16 +16,16 @@ export async function RequestEmailVerification(params: RequestVerificationInput)
     });
 
     if (response.status === 403) {
-      return "Could not verify user";
+      return VerificationResponse.CouldNotVerifyUser;
     } else if (response.status === 301) {
-      return "User is already verified";
+      return VerificationResponse.UserAlreadyVerified;
     } else if (response.status === 200) {
-      return "Verification email sent";
+      return VerificationResponse.VerificationEmailSent;
     } else {
-      return "Unknown error";
+      return VerificationResponse.UnknownError;
     }
   } catch (error) {
     console.log(`Error requesting user verification: ${error}`);
-    return "An error occurred while requesting user verification";
+    return VerificationResponse.RequestError;
   }
 }
