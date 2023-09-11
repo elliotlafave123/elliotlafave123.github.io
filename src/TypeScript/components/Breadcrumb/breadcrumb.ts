@@ -1,4 +1,6 @@
 const breadcrumbNav = document.getElementById("breadcrumbNav");
+const skeletonBreadcrumb = document.createElement("div");
+skeletonBreadcrumb.className = "skeleton skeleton-breadcrumb";
 
 let resizeTimeout: ReturnType<typeof setTimeout> | null = null;
 
@@ -16,8 +18,8 @@ export function createBreadcrumb() {
     return;
   }
 
-  // Append the items normally first
-  appendBreadcrumbItems(pathnames);
+  // Append the skeleton breadcrumb as a placeholder
+  breadcrumbNav?.appendChild(skeletonBreadcrumb);
 
   // Use a promise to delay checking of wrapping
   Promise.resolve().then(() => {
@@ -27,6 +29,8 @@ export function createBreadcrumb() {
     if (afterAppendHeight > 30) {
       breadcrumbNav.innerHTML = ""; // Clear the breadcrumbNav
       appendReducedBreadcrumbItems(pathnames);
+    } else {
+      breadcrumbNav.removeChild(skeletonBreadcrumb); // Remove the skeleton breadcrumb
     }
   });
 
