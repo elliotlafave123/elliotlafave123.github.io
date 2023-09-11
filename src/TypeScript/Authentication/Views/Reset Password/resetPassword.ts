@@ -1,15 +1,28 @@
 import { ResetPassword } from "../../Controllers/Reset Password/ResetPassword";
 import { ResetPasswordModel } from "../../Models/ResetPasswordModel";
+import { ResetPasswordResult } from "../../Models/ResetPasswordResult";
 
 export async function resetPassword() {
   const form = document.getElementById("resetPasswordForm");
   const password = document.getElementById("password") as HTMLInputElement;
   const confirmPassword = document.getElementById("confirmPassword") as HTMLInputElement;
+  const errorMessagePassword = document.getElementById("errorMessagePassword");
+  const errorMessageConfirmPassword = document.getElementById("errorMessageConfirmPassword");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // get email,passwordResetCode and id from the url
+    if (password.value !== confirmPassword.value) {
+      console.log(errorMessagePassword, errorMessageConfirmPassword);
+      errorMessagePassword.style.display = "block";
+      errorMessagePassword.classList.remove("hidden");
+      errorMessageConfirmPassword.style.display = "block";
+      return;
+    } else {
+      errorMessagePassword.style.display = "none";
+      errorMessageConfirmPassword.style.display = "none";
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
 
     const id = urlParams.get("id");
@@ -25,16 +38,31 @@ export async function resetPassword() {
         passwordConfirmation: confirmPassword.value,
       };
 
-      const resetSuccessful = await ResetPassword(resetPasswordData);
+      const resetResult = await ResetPassword(resetPasswordData);
 
-      if (resetSuccessful) {
-        // Redirect or show some message to indicate success
-        window.location.href = "login.html";
-      } else {
-        // TODO: Handle reset password failure, show an error message, etc.
+      switch (resetResult) {
+        case ResetPasswordResult.Success:
+          window.location.replace("/pages/login/login.html?status=PasswordResetSuccess");
+          break;
+        case ResetPasswordResult.InvalidEmailOrPassword:
+          errorMessagePassword.innerText = "Invalid password.";
+          errorMessagePassword.style.display = "block";
+          break;
+        case ResetPasswordResult.EmailVerificationRequired:
+          window.location.replace("/pages/login/RequestEmailVerification.html?email=" + email);
+
+          break;
+        case ResetPasswordResult.Error:
+          errorMessagePassword.innerText = "An error occurred while resetting the password.";
+          errorMessagePassword.style.display = "block";
+          window.location.replace("/pages/login/login.html?status=PasswordResetFailure");
+          break;
+        default:
+          break;
       }
     } else {
       console.log("Missing URL parameters");
+      window.location.replace("/pages/login/login.html?status=PasswordResetFailure");
     }
   });
 }
