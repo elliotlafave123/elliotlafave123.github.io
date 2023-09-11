@@ -6,6 +6,8 @@ export interface Props {
 const { streamID } = Astro.props;
 ---
 
+<script defer src="/scripts/comments-TSBundle.js"></script>
+
 <!-- Comments Section -->
 <section class="c-comments-container c-container-x" data-stream={streamID} id="commentStreamContainer">
   <form class="add-comment-container" onsubmit="return false">

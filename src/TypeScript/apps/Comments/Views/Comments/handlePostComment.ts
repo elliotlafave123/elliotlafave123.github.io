@@ -1,6 +1,7 @@
 import { getCurrentUser } from "../../../../Authentication/Controllers/Me/GetCurrentUser";
 import { PostComment } from "../../Controllers/Comments/PostComment";
 import { PostCommentInput } from "../../Models/PostCommentInput";
+import { ClearCommentTextarea } from "./ClearCommentTextarea";
 import { UpdateComments } from "./updateComments";
 
 const publishCommentButton = document.getElementById("publishCommentButton");
@@ -23,6 +24,7 @@ export async function handlePostComment() {
 
   if (posted) {
     UpdateComments();
+    ClearCommentTextarea();
   }
 }
 
