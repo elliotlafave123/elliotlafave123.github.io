@@ -1,6 +1,8 @@
 import validator from "validator";
 import { Login } from "../../Controllers/Login/Login";
 import { updateHeaderAuth } from "./UpdateHeaderAuth";
+import { LoginFormStatusMessage } from "../../Models/LoginFormStatusMessage";
+import { showLoginStatusMessage } from "./showLoginStatusMessage";
 
 document.addEventListener("DOMContentLoaded", async function () {
   const form = document.getElementById("account");
@@ -8,6 +10,17 @@ document.addEventListener("DOMContentLoaded", async function () {
   const passwordInput = document.getElementById("password") as HTMLInputElement;
   const emailValidation = document.getElementById("email-validation");
   const passwordValidation = document.getElementById("password-validation");
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const status = urlParams.get("status");
+  if (status) {
+    showLoginStatusMessage(status as LoginFormStatusMessage);
+  } else {
+    const dialogue = document.querySelector(".c-dialogue") as HTMLDivElement;
+    if (dialogue) {
+      dialogue.style.display = "none";
+    }
+  }
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();

@@ -42,25 +42,27 @@ export async function resetPassword() {
 
       switch (resetResult) {
         case ResetPasswordResult.Success:
-          window.location.replace("/pages/login/login.html");
+          window.location.replace("/pages/login/login.html?status=PasswordResetSuccess");
           break;
         case ResetPasswordResult.InvalidEmailOrPassword:
           errorMessagePassword.innerText = "Invalid password.";
           errorMessagePassword.style.display = "block";
           break;
         case ResetPasswordResult.EmailVerificationRequired:
-          errorMessagePassword.innerText = "Email verification required.";
+          window.location.replace("/pages/login/RequestEmailVerification.html?email=" + email);
 
           break;
         case ResetPasswordResult.Error:
           errorMessagePassword.innerText = "An error occurred while resetting the password.";
           errorMessagePassword.style.display = "block";
+          window.location.replace("/pages/login/login.html?status=PasswordResetFailure");
           break;
         default:
           break;
       }
     } else {
       console.log("Missing URL parameters");
+      window.location.replace("/pages/login/login.html?status=PasswordResetFailure");
     }
   });
 }
