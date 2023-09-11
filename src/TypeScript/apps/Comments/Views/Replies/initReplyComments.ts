@@ -1,6 +1,7 @@
 import { CheckLogin } from "../../../../Authentication/Controllers/Login/CheckLogin";
 import { PostCommentReply } from "../../Controllers/Replies/PostCommentReply";
 import { UpdateComments } from "../Comments/updateComments";
+import { clearOtherEditingComments } from "../Editing/clearOtherEditingComments";
 
 export function initReplyComments() {
   const allReplyButtons = document.querySelectorAll<HTMLElement>(".replyComment");
@@ -31,6 +32,8 @@ export function initReplyComments() {
         }
       });
 
+      clearOtherEditingComments(comment);
+
       let form = comment.querySelector(".add-reply-container");
       if (!form) {
         form = document.createElement("form");
@@ -38,6 +41,7 @@ export function initReplyComments() {
         form.setAttribute("onsubmit", "return false");
 
         form.innerHTML = `
+          <label for="replyCommentTextarea" class="c-form__label u-margin-top-small">Enter your reply...</label>
           <textarea class="c-text-area" name="replyTextarea" id="replyCommentTextarea" minlength="3" required></textarea>
           <input type="submit" value="Reply" class="" id="publishReplyCommentButton">
         `;
@@ -56,7 +60,6 @@ export function initReplyComments() {
           }
         });
 
-        // Check if the comment is a sub-comment and add the form after the comment if true
         if (comment.classList.contains("sub-comment")) {
           comment.after(form);
         } else if (commentInteractions) {
