@@ -48,7 +48,7 @@ export async function displayComment(comment: CommentModel) {
             </div>
             <p class="c-comment__text">${
               repliedTo ? `<span class="c-comment__replied-to">@${repliedTo.toLowerCase()}</span>` : ""
-            } ${text}</p>
+            } ${text.trim()}</p>
             ${currentUser ? interactions : reply}
         </div>
     </div>
