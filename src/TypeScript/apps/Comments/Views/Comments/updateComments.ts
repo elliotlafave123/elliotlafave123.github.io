@@ -22,6 +22,7 @@ export async function UpdateComments() {
 
   if (comments) {
     clearContainer();
+    hideNoComments();
     commentsMap.clear();
 
     commentsMap = await comments.reduce(async (prevPromise, comment) => {
@@ -34,6 +35,10 @@ export async function UpdateComments() {
     isUpdating = false;
     initInteractions();
 
+    return;
+  } else {
+    isUpdating = false;
+    showNoComments();
     return;
   }
 }
@@ -50,4 +55,18 @@ export function initVoting() {
   allComments.forEach((commentElement) => {
     initVotingOnElement(commentElement);
   });
+}
+
+function showNoComments() {
+  const noComments = document.querySelector(".c-no-comments");
+  if (!noComments) return;
+
+  noComments.classList.remove("u-hidden");
+}
+
+function hideNoComments() {
+  const noComments = document.querySelector(".c-no-comments");
+  if (!noComments) return;
+
+  noComments.classList.add("u-hidden");
 }
