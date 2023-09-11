@@ -42,7 +42,7 @@ export async function resetPassword() {
 
       switch (resetResult) {
         case ResetPasswordResult.Success:
-          window.location.href = "login.html";
+          window.location.replace("/pages/login/login.html");
           break;
         case ResetPasswordResult.InvalidEmailOrPassword:
           errorMessagePassword.innerText = "Invalid password.";
