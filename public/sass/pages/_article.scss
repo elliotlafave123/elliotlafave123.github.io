@@ -116,7 +116,11 @@
 
     ul,
     ol {
-      margin-left: 2rem;
+      margin-left: 1rem;
+
+      @include respond(tab-port) {
+        margin-left: 0;
+      }
 
       p {
         margin: 0 0 0 1rem;
