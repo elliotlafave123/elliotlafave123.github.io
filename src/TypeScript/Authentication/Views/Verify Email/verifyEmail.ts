@@ -19,18 +19,20 @@ async function init() {
     const verified = await VerifyEmail(id, token);
 
     if (verified === VerificationStatus.Verified) {
-      window.location.replace("/pages/login/login.html");
+      window.location.replace("/pages/login/login.html?status=EmailVerificationSuccess");
     } else if (verified === VerificationStatus.AlreadyVerified) {
-      window.location.replace("/pages/login/login.html");
+      window.location.replace("/pages/login/login.html?status=EmailAlreadyVerified");
     } else {
       // Update the page to display an error message
       validation.textContent = "Verification failed. Please try again.";
       validation.style.display = "block";
+      window.location.replace("/pages/login/login.html?status=EmailVerificationFailure");
     }
   } else {
     // Update the page to display an error message
     validation.textContent = "Invalid URL or parameters.";
     validation.style.display = "block";
+    window.location.replace("/pages/login/login.html?status=EmailVerificationFailure");
   }
 }
 init();
