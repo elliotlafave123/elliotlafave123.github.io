@@ -15,7 +15,10 @@ export function initEditComments() {
       commentInteractions.classList.add("c-comment__interactions--editing");
 
       const commentHeader = comment.querySelector(".c-comment__header") as HTMLElement;
-      const oldText = commentText.innerText;
+      let oldText = commentText.innerText;
+
+      // Remove '@username ' from the beginning of the oldText
+      oldText = oldText.replace(/^@\w+\s/, "");
 
       let form = comment.querySelector(".add-comment-container");
       if (!form) {
@@ -37,7 +40,7 @@ export function initEditComments() {
           const commentTextarea = form.querySelector("#editCommentTextarea") as HTMLTextAreaElement;
           const edited = await EditComment(commentTextarea.value, comment.dataset.commentid);
           if (edited) {
-            UpdateComments(true);
+            UpdateComments();
           }
         });
       } else {

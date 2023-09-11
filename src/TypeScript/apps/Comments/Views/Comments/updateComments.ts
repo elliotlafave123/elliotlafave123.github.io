@@ -10,7 +10,7 @@ import { displayComment } from "./displayComments";
 let commentsMap = new Map();
 let isUpdating = false;
 
-export async function UpdateComments(clear?: boolean) {
+export async function UpdateComments() {
   if (isUpdating) {
     return;
   }
@@ -19,11 +19,6 @@ export async function UpdateComments(clear?: boolean) {
 
   const streamId = getStreamId();
   const comments = await GetComments({ streamId: streamId });
-
-  if (clear) {
-    clearContainer();
-    commentsMap.clear();
-  }
 
   if (comments) {
     clearContainer();
