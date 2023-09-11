@@ -1,6 +1,15 @@
 export function Logout() {
   localStorage.removeItem("token");
   localStorage.removeItem("refreshToken");
+
+  const backLink = localStorage.getItem("backLink");
+  if (backLink) {
+    console.log("backLink", backLink);
+    localStorage.removeItem("backLink");
+    window.location.href = backLink;
+    return;
+  }
+
   window.location.href = "/";
 }
 
