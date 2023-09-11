@@ -1,7 +1,8 @@
 import { Constants } from "../../../Constants/Constants";
 import { ResetPasswordModel } from "../../Models/ResetPasswordModel";
+import { ResetPasswordResult } from "../../Models/ResetPasswordResult";
 
-export async function ResetPassword(resetPassword: ResetPasswordModel): Promise<boolean> {
+export async function ResetPassword(resetPassword: ResetPasswordModel): Promise<ResetPasswordResult> {
   try {
     const response = await fetch(
       `${Constants.API_BASE_URL}/api/users/resetpassword/${resetPassword.id}/${resetPassword.token}`,
@@ -16,16 +17,19 @@ export async function ResetPassword(resetPassword: ResetPasswordModel): Promise<
       }
     );
 
+    if (response.status === 200) {
+      return ResetPasswordResult.Success;
+    }
     if (response.status === 403) {
-      throw new Error("Invalid email or password");
+      return ResetPasswordResult.InvalidEmailOrPassword;
     }
     if (response.status === 301) {
-      throw new Error("Email verification required");
+      return ResetPasswordResult.EmailVerificationRequired;
     }
 
-    return true;
+    return ResetPasswordResult.Error;
   } catch (error) {
     console.log(error);
-    return false;
+    return ResetPasswordResult.Error;
   }
 }
