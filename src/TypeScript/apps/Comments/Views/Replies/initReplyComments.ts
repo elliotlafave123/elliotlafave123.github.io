@@ -45,7 +45,7 @@ export function initReplyComments() {
             comment.dataset.commentid
           );
           if (posted) {
-            UpdateComments(true);
+            UpdateComments();
           }
         });
 
