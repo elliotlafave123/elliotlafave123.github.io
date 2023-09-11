@@ -20,7 +20,7 @@ export async function UpdateComments() {
   const streamId = getStreamId();
   const comments = await GetComments({ streamId: streamId });
 
-  if (comments) {
+  if (comments && comments.length > 0) {
     clearContainer();
     hideNoComments();
     commentsMap.clear();
@@ -59,14 +59,15 @@ export function initVoting() {
 
 function showNoComments() {
   const noComments = document.querySelector(".c-no-comments");
+  console.log(noComments);
   if (!noComments) return;
 
-  noComments.classList.remove("u-hidden");
+  noComments.classList.remove("hidden");
 }
 
 function hideNoComments() {
   const noComments = document.querySelector(".c-no-comments");
   if (!noComments) return;
 
-  noComments.classList.add("u-hidden");
+  noComments.classList.add("hidden");
 }

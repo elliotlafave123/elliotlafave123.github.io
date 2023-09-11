@@ -6,8 +6,6 @@ export interface Props {
 const { streamID } = Astro.props;
 ---
 
-<script defer src="/scripts/comments-TSBundle.js"></script>
-
 <!-- Comments Section -->
 <section class="c-comments-container c-container-x" data-stream={streamID} id="commentStreamContainer">
   <form class="add-comment-container" onsubmit="return false">
@@ -34,7 +32,9 @@ const { streamID } = Astro.props;
     <input type="submit" value="Publish" id="publishCommentButton" />
   </form>
   <div id="InsertCommentsContainer"></div>
-  <div class="c-no-comments">
+  <div class="c-no-comments hidden">
     <p>No comments yet.</p>
   </div>
 </section>
+
+<script defer src="/scripts/comments-TSBundle.js"></script>
