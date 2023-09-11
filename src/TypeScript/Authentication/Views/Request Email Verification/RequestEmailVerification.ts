@@ -1,4 +1,5 @@
 import { RequestEmailVerification } from "../../Controllers/Verification/RequestEmailVerification";
+import { VerificationResponse } from "../../Models/VerificationResponse";
 
 async function InitRequestEmailVerification() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -17,10 +18,16 @@ async function InitRequestEmailVerification() {
       const email = emailInput.value;
 
       const hasRequested = await RequestEmailVerification({ email });
-      if (hasRequested) {
+      if (hasRequested === VerificationResponse.UserAlreadyVerified) {
+        window.location.replace("/pages/login/login.html");
+      } else if (hasRequested === VerificationResponse.VerificationEmailSent) {
         emailSection.style.display = "none";
         checkEmailSection.style.display = "block";
         emailSentMessage.style.display = "block";
+      } else {
+        emailSection.style.display = "none";
+        checkEmailSection.style.display = "none";
+        emailSentMessage.style.display = "none";
       }
     });
   } else {

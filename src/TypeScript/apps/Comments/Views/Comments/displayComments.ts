@@ -12,13 +12,11 @@ export async function displayComment(comment: CommentModel) {
   const {
     upvotes = [],
     downvotes = [],
-    score = 0,
     displayName = "",
     profileImgColor = "purple",
     createdAt = "",
     text = "",
     currentUser = false,
-    hasBeenEdited = false,
     currentUserHasDownvoted = false,
     currentUserHasUpvoted = false,
     repliedTo = "",

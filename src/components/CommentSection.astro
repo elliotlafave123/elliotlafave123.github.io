@@ -32,4 +32,9 @@ const { streamID } = Astro.props;
     <input type="submit" value="Publish" id="publishCommentButton" />
   </form>
   <div id="InsertCommentsContainer"></div>
+  <div class="c-no-comments hidden">
+    <p>No comments yet.</p>
+  </div>
 </section>
+
+<script defer src="/scripts/comments-TSBundle.js"></script>

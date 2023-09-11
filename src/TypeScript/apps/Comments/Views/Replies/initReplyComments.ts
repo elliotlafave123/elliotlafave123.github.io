@@ -24,6 +24,13 @@ export function initReplyComments() {
         parentComment = comment;
       }
 
+      // Hide any open reply forms
+      document.querySelectorAll(".add-reply-container").forEach((openForm) => {
+        if (openForm !== comment.querySelector(".add-reply-container")) {
+          openForm.classList.add("hidden");
+        }
+      });
+
       let form = comment.querySelector(".add-reply-container");
       if (!form) {
         form = document.createElement("form");
@@ -45,18 +52,20 @@ export function initReplyComments() {
             comment.dataset.commentid
           );
           if (posted) {
-            UpdateComments(true);
+            UpdateComments();
           }
         });
 
-        if (commentInteractions) {
+        // Check if the comment is a sub-comment and add the form after the comment if true
+        if (comment.classList.contains("sub-comment")) {
+          comment.after(form);
+        } else if (commentInteractions) {
           commentMain.insertBefore(form, commentInteractions);
         } else {
           commentMain.appendChild(form);
         }
       } else {
-        const replyTextarea = form.querySelector("#replyCommentTextarea") as HTMLTextAreaElement;
-        replyTextarea.focus();
+        form.classList.toggle("hidden");
       }
     });
   });

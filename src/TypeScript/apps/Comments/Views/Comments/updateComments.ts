@@ -10,7 +10,7 @@ import { displayComment } from "./displayComments";
 let commentsMap = new Map();
 let isUpdating = false;
 
-export async function UpdateComments(clear?: boolean) {
+export async function UpdateComments() {
   if (isUpdating) {
     return;
   }
@@ -20,13 +20,9 @@ export async function UpdateComments(clear?: boolean) {
   const streamId = getStreamId();
   const comments = await GetComments({ streamId: streamId });
 
-  if (clear) {
+  if (comments && comments.length > 0) {
     clearContainer();
-    commentsMap.clear();
-  }
-
-  if (comments) {
-    clearContainer();
+    hideNoComments();
     commentsMap.clear();
 
     commentsMap = await comments.reduce(async (prevPromise, comment) => {
@@ -39,6 +35,10 @@ export async function UpdateComments(clear?: boolean) {
     isUpdating = false;
     initInteractions();
 
+    return;
+  } else {
+    isUpdating = false;
+    showNoComments();
     return;
   }
 }
@@ -55,4 +55,19 @@ export function initVoting() {
   allComments.forEach((commentElement) => {
     initVotingOnElement(commentElement);
   });
+}
+
+function showNoComments() {
+  const noComments = document.querySelector(".c-no-comments");
+  console.log(noComments);
+  if (!noComments) return;
+
+  noComments.classList.remove("hidden");
+}
+
+function hideNoComments() {
+  const noComments = document.querySelector(".c-no-comments");
+  if (!noComments) return;
+
+  noComments.classList.add("hidden");
 }
