@@ -1,5 +1,6 @@
 import { EditComment } from "../../Controllers/Comments/EditComment";
 import { UpdateComments } from "../Comments/updateComments";
+import { clearOtherEditingComments } from "./clearOtherEditingComments";
 
 export function initEditComments() {
   const allEditButtons = document.querySelectorAll<HTMLElement>(".editComment");
@@ -7,7 +8,11 @@ export function initEditComments() {
   allEditButtons.forEach((el) => {
     el.addEventListener("click", async (e) => {
       e.preventDefault();
+
+      // Clear other editing comments
       const comment = el.closest(".c-comment") as HTMLElement;
+      clearOtherEditingComments(comment);
+
       const commentText = comment.querySelector(".c-comment__text") as HTMLElement;
       commentText.style.display = "none";
 
