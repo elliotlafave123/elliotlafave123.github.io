@@ -1,7 +1,9 @@
 import { getCurrentUser } from "../../../../Authentication/Controllers/Me/GetCurrentUser";
 import { PostComment } from "../../Controllers/Comments/PostComment";
 import { PostCommentInput } from "../../Models/PostCommentInput";
+import { PostCommentResult } from "../../Models/PostCommentResult";
 import { ClearCommentTextarea } from "./ClearCommentTextarea";
+import { DisplayCommentContainerError } from "./CommentContainerError";
 import { UpdateComments } from "./updateComments";
 
 const publishCommentButton = document.getElementById("publishCommentButton");
@@ -22,9 +24,13 @@ export async function handlePostComment() {
 
   const posted = await PostComment(data);
 
-  if (posted) {
+  if (posted === PostCommentResult.Success) {
     UpdateComments();
     ClearCommentTextarea();
+  } else if (posted === PostCommentResult.Profanity) {
+    DisplayCommentContainerError("Please remove profanity from your comment");
+  } else {
+    alert("An error occurred posting your comment");
   }
 }
 
