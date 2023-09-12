@@ -1,3 +1,5 @@
+import { Constants } from "../../Constants/Constants";
+
 class ClientScreening implements ClientScreeningModel {
   id = 0;
   fullName = "";
@@ -15,7 +17,7 @@ const InitClientScreeningForm = () => {
   ) as HTMLInputElement;
 
   if (clientScreeningForm) {
-    postContactMeFormButton.addEventListener("click", () => {
+    postContactMeFormButton.addEventListener("click", async () => {
       // TODO: Validate form
       // ensure all fields are filled out
       const fullName = clientScreeningForm.fullName.value;
@@ -44,23 +46,23 @@ const InitClientScreeningForm = () => {
       clientScreening.productOrService = clientScreeningForm.productOrService.value;
       clientScreening.websiteOrApplication = clientScreeningForm.websiteOrApplication.value;
 
-      const API_URL = "https://freelance-api.elliotlafave.com/ClientScreening";
-      // const API_URL = "https://localhost:7135/ClientScreening";
-
-      fetch(API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(clientScreening),
-      })
-        .then((response) => response.json())
-        .then(() => {
-          window.location.href = "/pages/success/index.html";
-        })
-        .catch(() => {
-          console.error("Error:");
+      try {
+        const response = await fetch(Constants.API_BASE_URL + "/api/v1/get-a-quote", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(clientScreening),
         });
+
+        if (response.ok) {
+          window.location.href = "/pages/success/index.html";
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        console.log("error", error);
+      }
     });
   }
 };
