@@ -4,6 +4,7 @@ import { initDeleteComments } from "../Deleting/initDeleteComment";
 import { initEditComments } from "../Editing/editComment";
 import { initReplyComments } from "../Replies/initReplyComments";
 import { initVotingOnElement } from "../Voting/initVotingOnElement";
+import { RemoveCommentContainerError, RemoveErrorMessage } from "./CommentContainerError";
 import { clearContainer } from "./clearContainer";
 import { displayComment } from "./displayComments";
 
@@ -23,6 +24,8 @@ export async function UpdateComments() {
   if (comments && comments.length > 0) {
     clearContainer();
     hideNoComments();
+    RemoveErrorMessage();
+    RemoveCommentContainerError();
     commentsMap.clear();
 
     commentsMap = await comments.reduce(async (prevPromise, comment) => {
