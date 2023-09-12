@@ -11,6 +11,8 @@
       `c-button--${corner}`,
       fullWidth && 'c-button--full-width',
       centerText && 'c-button--center-text',
+      withShadow && `c-button--${color}--with-shadow`,
+      classString,
     ]"
   >
     <slot></slot>
@@ -29,6 +31,8 @@
       fullWidth && 'c-button--full-width',
       centerText && 'c-button--center-text',
       withBorder && `c-button--${color}--with-border`,
+      withShadow && `c-button--${color}--with-shadow`,
+      classString,
     ]"
   >
     <slot></slot>
@@ -60,7 +64,9 @@ export default {
     fullWidth: Boolean,
     centerText: Boolean,
     withBorder: Boolean,
-    icon: String, // New prop for FontAwesome icon class
+    withShadow: Boolean,
+    icon: String,
+    classString: String,
   },
   setup() {},
 };
