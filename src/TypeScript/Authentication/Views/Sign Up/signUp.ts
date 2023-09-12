@@ -1,5 +1,6 @@
 import validator from "validator";
 import { SignUp } from "../../Controllers/Sign up/SignUp";
+import { SignUpResult } from "../../Models/SignUpResult";
 
 document.addEventListener("DOMContentLoaded", async function () {
   const form = document.getElementById("signUpForm") as HTMLFormElement;
@@ -120,19 +121,69 @@ async function handleSubmit(e: Event) {
 
   try {
     const [firstName, lastName, displayName, email, password, confirmPassword] = values;
+    const trimmedDisplayName = displayName.trim();
     const result = await SignUp({
       firstName,
       lastName,
-      displayName,
+      displayName: trimmedDisplayName,
       email,
       password,
       passwordConfirmation: confirmPassword,
     });
 
-    if (result) {
+    if (result === SignUpResult.Success) {
       window.location.replace("/pages/login/CheckYourEmail.html");
+    } else {
+      handleSignUpError(result, errorSummary);
     }
   } catch (error) {
     console.log("Signup failed:", error);
+  }
+}
+
+function handleSignUpError(error: SignUpResult, errorSummary: HTMLDivElement) {
+  console.log("Signup failed:", error);
+  const errorMessages: { [key in SignUpResult]?: string } = {
+    [SignUpResult.FirstNameRequired]: "First name is required",
+    [SignUpResult.LastNameRequired]: "Last name is required",
+    [SignUpResult.PasswordRequired]: "Password is required",
+    [SignUpResult.PasswordsDoNotMatch]: "Passwords do not match",
+    [SignUpResult.InvalidEmail]: "Not a valid email",
+    [SignUpResult.PasswordTooShort]: "Password is too short - should be minimum 8 characters",
+    [SignUpResult.PasswordConfirmationRequired]: "Password confirmation is required",
+    [SignUpResult.DisplayNameRequired]: "Display name is required",
+    [SignUpResult.ProfaneDisplayName]: "Display name is not allowed",
+    [SignUpResult.EmailAlreadyInUse]: "Email is already in use",
+    [SignUpResult.UnknownError]: "Unknown error",
+  };
+
+  const errorFieldIds: { [key in SignUpResult]?: string } = {
+    [SignUpResult.FirstNameRequired]: "errorMessageFirstName",
+    [SignUpResult.LastNameRequired]: "errorMessageLastName",
+    [SignUpResult.PasswordRequired]: "errorMessagePassword",
+    [SignUpResult.PasswordsDoNotMatch]: "errorMessageConfirmPassword",
+    [SignUpResult.InvalidEmail]: "errorMessageEmail",
+    [SignUpResult.PasswordTooShort]: "errorMessagePassword",
+    [SignUpResult.PasswordConfirmationRequired]: "errorMessageConfirmPassword",
+    [SignUpResult.DisplayNameRequired]: "errorMessageDisplayName",
+    [SignUpResult.ProfaneDisplayName]: "errorMessageDisplayName",
+    [SignUpResult.EmailAlreadyInUse]: "errorMessageEmail",
+  };
+
+  const errorMessage = errorMessages[error];
+  const errorFieldId = errorFieldIds[error];
+
+  if (errorMessage) {
+    errorSummary.style.display = "block";
+    const errorSummaryList = document.querySelector(".c-validation-summary ul");
+    errorSummaryList.innerHTML = `<li>${errorMessage}</li>`;
+
+    if (errorFieldId) {
+      const errorFieldElement = document.getElementById(errorFieldId);
+      if (errorFieldElement) {
+        errorFieldElement.style.display = "block";
+        errorFieldElement.textContent = errorMessage;
+      }
+    }
   }
 }
