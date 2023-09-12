@@ -1,6 +1,6 @@
 import validator from "validator";
 import { Login } from "../../Controllers/Login/Login";
-import { updateHeaderAuth } from "./UpdateHeaderAuth";
+import { updateAuthLinks } from "./updateAuthLinks";
 import { LoginFormStatusMessage } from "../../Models/LoginFormStatusMessage";
 import { showLoginStatusMessage } from "./showLoginStatusMessage";
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       } else {
         window.location.href = "index.html";
       }
-      updateHeaderAuth(true);
+      updateAuthLinks(true);
     } else if (loginSuccessful.EmailVerificationRequired) {
       // Redirect to request email verification page
       window.location.href = "/pages/login/RequestEmailVerification.html?email=" + email;
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       emailValidation.textContent = "The username or password is incorrect.";
       passwordValidation.textContent = "The username or password is incorrect.";
       passwordInput.value = "";
-      updateHeaderAuth(false);
+      updateAuthLinks(false);
     }
   });
 });

@@ -1,0 +1,15 @@
+export enum SignUpResult {
+  InvalidEmailOrPassword = "InvalidEmailOrPassword",
+  EmailAlreadyInUse = "EmailAlreadyInUse",
+  UnknownError = "UnknownError",
+  FirstNameRequired = "FirstNameRequired",
+  LastNameRequired = "LastNameRequired",
+  PasswordRequired = "PasswordRequired",
+  PasswordTooShort = "PasswordTooShort",
+  PasswordConfirmationRequired = "PasswordConfirmationRequired",
+  InvalidEmail = "InvalidEmail",
+  PasswordsDoNotMatch = "PasswordsDoNotMatch",
+  DisplayNameRequired = "DisplayNameRequired",
+  Success = "Success",
+  ProfaneDisplayName = "ProfaneDisplayName",
+}
