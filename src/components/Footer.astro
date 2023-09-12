@@ -1,16 +1,7 @@
 ---
 ---
 
-<!-- Footer --><!-- <div class="c-strip">
-  <h2>Need a website?</h2>
-  <a
-    href="/Get a quote/"
-    class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border"
-    aria-label="Aria label"
-  >
-    Get a quote today
-  </a>
-</div> -->
+<!-- Footer -->
 <footer class="c-footer">
   <div class="c-footer__head">
     <a class="c-footer__head-site-name" href="./index.html">elliotlafave.com</a>
@@ -23,7 +14,7 @@
   <div class="c-footer__body">
     <div class="c-footer__body-link-grid">
       <div class="c-footer__body-link-group">
-        <!-- <a href="/Get a quote/">Get a quote</a> -->
+        <a href="/Get a quote/">Get a quote</a>
         <a href="/pages/Articles/index.html">Articles</a>
         <a href="/contact-me.html">Contact me</a>
         <a href="/portfolio.html#all-projects">Projects</a>
@@ -34,10 +25,13 @@
         <a href="https://component-library.elliotlafave.com/">Component library</a>
         <!-- <a href="https://zeroheight.com/02f0b0962">Style guide</a> -->
       </div>
-      <div class="c-footer__body-link-group">
-        <a href="/pages/Login/login.html">Login</a>
-        <a href="/pages/Login/signUp.html">Sign up</a>
-        <!-- <a href="/account.html">My account</a> -->
+      <div id="footerAuthLoggedOut" class="c-footer__body-link-group">
+        <a href="/pages/login/login.html">Login</a>
+        <a href="/pages/login/signUp.html">Sign up</a>
+      </div>
+      <div id="footerAuthLoggedIn" class="c-footer__body-link-group" style="display: none;">
+        <a href="/account.html">My account</a>
+        <a href="#" class="logoutLink">Log out</a>
       </div>
     </div>
     <div class="c-footer__body-social">

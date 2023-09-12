@@ -48,8 +48,18 @@ import GenericButton from "./GenericButton.vue";
       </GenericButton>
     </div>
     <div class="c-header__authentication" id="headerAuthLoggedIn" style="display: none;">
-      <a href="/account.html" class="c-header__authentication-link">My account</a>
-      <a href="#" class="c-header__authentication-link" id="logoutLink">Log out</a>
+      <!-- <GenericButton
+        classString="c-header__authentication-link storeBackLink"
+        href="/account.html"
+        withBorder="false"
+        size="small"
+        color="primary-secondary"
+      >
+        My account
+      </GenericButton> -->
+      <GenericButton classString="c-header__authentication-link logoutLink" withBorder="false" size="small">
+        Log out
+      </GenericButton>
     </div>
   </div>
   <div class="c-header__bottom">
