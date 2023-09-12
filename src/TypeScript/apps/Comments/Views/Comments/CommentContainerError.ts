@@ -1,4 +1,6 @@
 export function DisplayCommentContainerError(errorMessage: string) {
+  RemoveErrorMessage();
+
   const commentTextarea = document.getElementById("commentTextarea") as HTMLTextAreaElement;
   if (commentTextarea) {
     commentTextarea.classList.add("c-text-area--error");
