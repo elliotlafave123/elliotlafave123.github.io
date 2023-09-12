@@ -1,7 +1,7 @@
 import { CheckLogin } from "./Controllers/Login/CheckLogin";
 import { RefreshAccessToken } from "./Controllers/Login/RefreshAccessToken";
 import { InitLogout } from "./Controllers/Logout/Logout";
-import { updateHeaderAuth } from "./Views/Login/UpdateHeaderAuth";
+import { updateAuthLinks } from "./Views/Login/updateAuthLinks";
 
 const init = async () => {
   const isSignedIn = await CheckLogin();
@@ -13,13 +13,13 @@ const init = async () => {
       const tokenRefreshed = await RefreshAccessToken(refreshToken);
 
       if (tokenRefreshed) {
-        updateHeaderAuth(true);
+        updateAuthLinks(true);
         return;
       }
     }
   }
 
-  updateHeaderAuth(isSignedIn.LoggedIn);
+  updateAuthLinks(isSignedIn.LoggedIn);
 
   InitLogout();
 };

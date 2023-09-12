@@ -14,11 +14,13 @@ export function Logout() {
 }
 
 export function InitLogout() {
-  const logoutLink = document.getElementById("logoutLink");
-  if (logoutLink) {
-    logoutLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      Logout();
+  const logoutLinks = document.querySelectorAll(".logoutLink");
+  if (logoutLinks.length > 0) {
+    logoutLinks.forEach((logoutLink) => {
+      logoutLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        Logout();
+      });
     });
   }
 }
