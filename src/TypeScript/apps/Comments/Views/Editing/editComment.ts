@@ -23,7 +23,7 @@ export function initEditComments() {
       let oldText = commentText.innerText;
 
       // Remove '@username ' from the beginning of the oldText
-      oldText = oldText.replace(/^@\w+\s/, "");
+      oldText = oldText.replace(/^@\w+\s/, "").trim();
 
       let form = comment.querySelector(".add-comment-container");
       if (!form) {

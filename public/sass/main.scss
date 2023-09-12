@@ -17,12 +17,7 @@
 
 // Simple Components
 @import "../../ComponentAssets/simpleComponents/button/button.scss";
-@import "../../ComponentAssets/simpleComponents/layout/flexStrip/c-flex-strip.scss";
-@import "../../ComponentAssets/simpleComponents/layout/header/header.scss";
-@import "../../ComponentAssets/simpleComponents/layout/footer/c-footer.scss";
-@import "../../ComponentAssets/simpleComponents/layout/strip/c-strip.scss";
-@import "../../ComponentAssets/simpleComponents/layout/grid/c-grid.scss";
-@import "../../ComponentAssets/simpleComponents/layout/divider/c-divider.scss";
+
 @import "../../ComponentAssets/simpleComponents/history/c-history.scss";
 @import "../../ComponentAssets/simpleComponents/certification/c-certification.scss";
 @import "../../ComponentAssets/simpleComponents/certificate/c-certificate.scss";
@@ -40,6 +35,14 @@
 
 // Layout
 @import "../../ComponentAssets/simpleComponents/layout/scrollbar/scrollbar";
+@import "../../ComponentAssets/simpleComponents/layout/flexStrip/c-flex-strip.scss";
+@import "../../ComponentAssets/simpleComponents/layout/header/header.scss";
+@import "../../ComponentAssets/simpleComponents/layout/header/c-mobile-menu-toggle.scss";
+@import "../../ComponentAssets/simpleComponents/layout/header/c-accessibility-menu.scss";
+@import "../../ComponentAssets/simpleComponents/layout/footer/c-footer.scss";
+@import "../../ComponentAssets/simpleComponents/layout/strip/c-strip.scss";
+@import "../../ComponentAssets/simpleComponents/layout/grid/c-grid.scss";
+@import "../../ComponentAssets/simpleComponents/layout/divider/c-divider.scss";
 
 // Forms
 @import "../../ComponentAssets/simpleComponents/Forms/Form Fields/textInput";

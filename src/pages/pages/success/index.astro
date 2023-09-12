@@ -1,0 +1,21 @@
+---
+import GenericButton from "../../../components/GenericButton.vue";
+import DefaultLayout from "../../../layouts/DefaultLayout.astro";
+---
+
+<DefaultLayout title="Action Successful">
+  <div class="c-container-x">
+    <div class="c-dialogue c-dialogue--green">
+      <div class="c-dialogue__icon">
+        <i class="fas fa-check"></i>
+      </div>
+      <div class="c-dialogue__title">Submission Complete</div>
+    </div>
+
+    <div class="u-margin-top-medium u-margin-bottom-medium">
+      <h1>Thank You!</h1>
+      <p>Your submission has been successfully received. We appreciate your input!</p>
+      <GenericButton href="/">Return to Homepage</GenericButton>
+    </div>
+  </div>
+</DefaultLayout>
