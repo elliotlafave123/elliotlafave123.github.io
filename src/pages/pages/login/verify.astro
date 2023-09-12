@@ -8,7 +8,12 @@ import AuthenticationLayout from "../../../layouts/AuthenticationLayout.astro";
     <h1>Verify Email</h1>
     <p class="verify">Please wait while we verify your email.</p>
     <span id="verify-validation" class="c-form__error-message u-margin-bottom-small"></span>
-    <GenericButton id="verify-email-button" class="c-button--primary" href="/pages/login/RequestEmailVerification.html">
+    <GenericButton
+      id="verify-email-button"
+      class="c-button--primary"
+      href="/pages/login/RequestEmailVerification.html"
+      withBorder="true"
+    >
       Try again
     </GenericButton>
   </section>

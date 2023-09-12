@@ -15,9 +15,11 @@ export const initHeaderNavigation = () => {
     primaryNavItems.forEach((item) => {
       item.addEventListener("click", (e) => {
         const element = e.target as HTMLElement;
-        if (element.classList.contains("c-header__mobile-chevron")) {
-          e.preventDefault();
+        console.log("element", element);
+        console.log("!element.classList.contains", !element.classList.contains("js-subNavLink"));
 
+        if (!element.classList.contains("js-subNavLink")) {
+          e.preventDefault();
           subNavigations.forEach((subNav) => {
             if (subNav !== item.querySelector(".c-header__sub-navigation")) {
               subNav.style.display = "none";
@@ -43,6 +45,12 @@ export const initHeaderNavigation = () => {
               chevron.style.transform = "rotate(-180deg)";
             }
           }
+        } else {
+          // go to href of link - element has link
+          const href = element.getAttribute("href");
+          console.log("href", href);
+          window.location.href = href;
+          window.location.reload();
         }
       });
     });

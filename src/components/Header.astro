@@ -1,3 +1,7 @@
+---
+import GenericButton from "./GenericButton.vue";
+---
+
 <!-- Accessibility Menu -->
 <nav class="c-accessibility-menu">
   <div class="c-accessibility-menu__item">
@@ -5,14 +9,13 @@
   </div>
 </nav>
 
-<!-- Mobile Menu Toggle -->
-<button class="c-mobile-menu-toggle" aria-label="Open menu">
-  <i class="fa-sharp fa-regular fa-bars"></i>
-</button>
-
 <!-- Main Header -->
 <header class="c-header">
   <div class="c-header__top">
+    <!-- Mobile Menu Toggle -->
+    <button class="c-mobile-menu-toggle" aria-label="Open menu">
+      <i class="fa-sharp fa-regular fa-bars"></i>
+    </button>
     <div class="c-header__logo">
       <a href="/" aria-label="Go to Home Page" class="c-header__logo-link">
         <img
@@ -25,8 +28,24 @@
     </div>
     <!-- Authentication -->
     <div aria-label="User Authentication Options" class="c-header__authentication" id="headerAuthLoggedOut">
-      <a href="/pages/login/signup.html" class="c-header__authentication-link storeBackLink">Sign up</a>
-      <a href="/pages/login/login.html" class="c-header__authentication-link storeBackLink">Log in</a>
+      <GenericButton
+        classString="c-header__authentication-link storeBackLink"
+        href="/pages/login/signup.html"
+        withBorder="false"
+        size="small"
+        color="primary-secondary"
+      >
+        Sign up
+      </GenericButton>
+      <GenericButton
+        classString="c-header__authentication-link storeBackLink"
+        href="/pages/login/login.html"
+        withBorder="false"
+        size="small"
+        color="primary"
+      >
+        Log in
+      </GenericButton>
     </div>
     <div class="c-header__authentication" id="headerAuthLoggedIn" style="display: none;">
       <a href="/account.html" class="c-header__authentication-link">My account</a>
@@ -48,8 +67,11 @@
             >Portfolio <i class="c-header__chevron fa-sharp fa-solid fa-chevron-down"></i></a
           >
           <ul class="c-header__navigation-list c-header__sub-navigation">
+            <li class="c-header__navigation-item c-header__navigation-item--mobile-only">
+              <a href="/portfolio.html" class="c-header__navigation-link js-subNavLink">Portfolio home</a>
+            </li>
             <li class="c-header__navigation-item">
-              <a href="/portfolio.html#ProjectsAppContainer" class="c-header__navigation-link">Projects</a>
+              <a href="/portfolio.html#allProjects" class="c-header__navigation-link js-subNavLink">Projects</a>
             </li>
           </ul>
         </li>
@@ -58,11 +80,14 @@
             >Articles <i class="c-header__chevron fa-sharp fa-solid fa-chevron-down"></i></a
           >
           <ul class="c-header__navigation-list c-header__sub-navigation">
-            <li class="c-header__navigation-item">
-              <a href="/pages/Articles/Personal/index.html" class="c-header__navigation-link">Personal</a>
+            <li class="c-header__navigation-item c-header__navigation-item--mobile-only">
+              <a href="/pages/Articles/index.html" class="c-header__navigation-link js-subNavLink">Articles home</a>
             </li>
             <li class="c-header__navigation-item">
-              <a href="/pages/Articles/GMC Work/index.html" class="c-header__navigation-link">Work</a>
+              <a href="/pages/Articles/Personal/index.html" class="c-header__navigation-link js-subNavLink">Personal</a>
+            </li>
+            <li class="c-header__navigation-item">
+              <a href="/pages/Articles/GMC Work/index.html" class="c-header__navigation-link js-subNavLink">Work</a>
             </li>
           </ul>
         </li>
