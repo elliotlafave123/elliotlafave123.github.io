@@ -3,7 +3,7 @@ import { CommentModel } from "../../Models/CommentType";
 
 export async function displayComment(comment: CommentModel) {
   const container = document.getElementById("InsertCommentsContainer");
-  if (!container) return;
+  if (!container || !comment) return;
 
   const commentDiv = document.createElement("div");
   commentDiv.classList.add("c-comment");
@@ -58,14 +58,18 @@ export async function displayComment(comment: CommentModel) {
     const repliesDiv = document.createElement("div");
     repliesDiv.classList.add("c-comment__replies");
 
-    for (const reply of comment.replyObjects) {
-      const replyElement = await displayComment(reply);
-      if (replyElement) {
-        repliesDiv.appendChild(replyElement);
-      }
-    }
+    const validReplyObjects = comment.replyObjects.filter((reply) => reply !== null);
 
-    commentDiv.appendChild(repliesDiv);
+    if (validReplyObjects.length > 0) {
+      for (const reply of validReplyObjects) {
+        const replyElement = await displayComment(reply);
+        if (replyElement) {
+          repliesDiv.appendChild(replyElement);
+        }
+      }
+
+      commentDiv.appendChild(repliesDiv);
+    }
   }
 
   container.insertAdjacentElement("afterbegin", commentDiv);

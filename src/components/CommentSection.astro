@@ -7,7 +7,11 @@ const { streamID } = Astro.props;
 ---
 
 <!-- Comments Section -->
-<section class="c-comments-container c-container-x" data-stream={streamID} id="commentStreamContainer">
+<section
+  class="c-comments-container c-container-x u-margin-bottom-medium"
+  data-stream={streamID}
+  id="commentStreamContainer"
+>
   <form class="add-comment-container" onsubmit="return false">
     <div class="add-comment-container-notAllowed">
       <a
