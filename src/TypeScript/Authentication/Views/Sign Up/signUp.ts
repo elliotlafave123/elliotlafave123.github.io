@@ -121,7 +121,7 @@ async function handleSubmit(e: Event) {
 
   try {
     const [firstName, lastName, displayName, email, password, confirmPassword] = values;
-    const trimmedDisplayName = displayName.trim();
+    const trimmedDisplayName = displayName.replace(/\s/g, "");
     const result = await SignUp({
       firstName,
       lastName,
