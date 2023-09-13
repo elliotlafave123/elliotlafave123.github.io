@@ -1,5 +1,7 @@
 import { CheckLogin } from "../../../../Authentication/Controllers/Login/CheckLogin";
 import { PostCommentReply } from "../../Controllers/Replies/PostCommentReply";
+import { PostCommentReplyStatus } from "../../Models/PostCommentReplyStatus";
+import { DisplayReplyContainerError } from "../Comments/ReplyContainerError";
 import { UpdateComments } from "../Comments/updateComments";
 import { clearOtherEditingComments } from "../Editing/clearOtherEditingComments";
 
@@ -55,8 +57,13 @@ export function initReplyComments() {
             parentComment.dataset.commentid,
             comment.dataset.commentid
           );
-          if (posted) {
+          if (posted === PostCommentReplyStatus.Success) {
             UpdateComments();
+          } else if (posted === PostCommentReplyStatus.Profanity) {
+            DisplayReplyContainerError(
+              "Your comment contains profanity. Please remove it and try again.",
+              form as HTMLFormElement
+            );
           }
         });
 
