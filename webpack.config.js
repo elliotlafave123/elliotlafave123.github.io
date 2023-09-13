@@ -9,7 +9,6 @@ module.exports = {
     clientScreeningForm: "./src/TypeScript/Forms/Client Screening Form/index.ts",
     contactForm: "./src/TypeScript/Forms/ContactMeForm/index.ts",
     darkMode: "./src/TypeScript/DarkMode/index.ts",
-    authenticationSystem: "./src/TypeScript/Authentication System/index.ts",
     breadcrumb: "./src/TypeScript/components/Breadcrumb/index.ts",
     cookieBanner: "./src/TypeScript/components/CookieBanner/index.ts",
     header: "./src/TypeScript/components/Header/index.ts",
@@ -22,6 +21,7 @@ module.exports = {
     verifyEmail: "./src/TypeScript/Authentication/Views/Verify Email/verifyEmail.ts",
     requestPasswordReset: "./src/TypeScript/Authentication/Views/Reset Password/requestPasswordReset.ts",
     resetPassword: "./src/TypeScript/Authentication/Views/Reset Password/resetPassword.ts",
+    accountPage: "./src/TypeScript/Authentication/Views/Account/AccountPage.ts",
     passwordRequirements: "./ComponentAssets/simpleComponents/passwordRequirements/passwordRequirements.ts",
     passwordInput: "./ComponentAssets/simpleComponents/Forms/Form Fields/PasswordInput.ts",
     requestEmailVerification:
