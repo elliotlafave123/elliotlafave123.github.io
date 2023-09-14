@@ -1,3 +1,4 @@
+import { initDotMenus } from "../../../../../../ComponentAssets/simpleComponents/dotMenu/dotMenu";
 import { GetComments } from "../../Controllers/Comments/GetComments";
 import { getStreamId } from "../../Controllers/Streams/GetStreamId";
 import { initDeleteComments } from "../Deleting/initDeleteComment";
@@ -5,6 +6,7 @@ import { initEditComments } from "../Editing/editComment";
 import { initReplyComments } from "../Replies/initReplyComments";
 import { initVotingOnElement } from "../Voting/initVotingOnElement";
 import { RemoveCommentContainerError, RemoveErrorMessage } from "./CommentContainerError";
+import { initCopyCommentLink } from "./CopyCommentLink";
 import { clearContainer } from "./clearContainer";
 import { displayComment } from "./displayComments";
 
@@ -51,6 +53,8 @@ function initInteractions() {
   initDeleteComments();
   initEditComments();
   initReplyComments();
+  initDotMenus();
+  initCopyCommentLink();
 }
 
 export function initVoting() {
