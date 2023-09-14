@@ -1,9 +1,11 @@
+import { log } from "astro/dist/core/logger/core";
 import { CheckLogin } from "../../../../Authentication/Controllers/Login/CheckLogin";
 import { PostCommentReply } from "../../Controllers/Replies/PostCommentReply";
 import { PostCommentReplyStatus } from "../../Models/PostCommentReplyStatus";
 import { DisplayReplyContainerError } from "../Comments/ReplyContainerError";
 import { UpdateComments } from "../Comments/updateComments";
 import { clearOtherEditingComments } from "../Editing/clearOtherEditingComments";
+import { scrollToAuthentication } from "../Authentication/scrollToAuthentication";
 
 export function initReplyComments() {
   const allReplyButtons = document.querySelectorAll<HTMLElement>(".replyComment");
@@ -12,10 +14,8 @@ export function initReplyComments() {
     el.addEventListener("click", async (e) => {
       e.preventDefault();
 
-      const loginButton = document.getElementById("logInButton") as HTMLElement;
-
       if ((await CheckLogin()).LoggedIn !== true) {
-        return loginButton.focus();
+        return scrollToAuthentication();
       }
 
       const comment = el.closest(".c-comment") as HTMLElement;
