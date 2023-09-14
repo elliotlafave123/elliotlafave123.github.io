@@ -38,35 +38,38 @@ import AuthenticationLayout from "../layouts/AuthenticationLayout.astro";
 
       <div class="c-form__element c-form__element--small-margin">
         <label for="email" class="c-form__label">Email Address</label>
-        <input
-          class="c-text-input"
-          id="email"
-          name="email"
-          type="email"
-          spellcheck="false"
-          aria-describedby="email-hint"
-          autocomplete="email"
-          disabled
-        />
-      </div>
-      <div class="info-save-button-container">
-        <input
-          class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border u-margin-top-small"
-          id="SaveChanges"
-          type="submit"
-          value="Save Changes"
-        />
-        <p class="savedName">saved</p>
-      </div>
-      <div
-        class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-        style="gap: 1rem;"
-      >
-        <GenericButton withBorder="true" classString="logoutLink">Log Out</GenericButton>
-        <GenericButton id="DeleteAccountButton" withBorder="true" color="red">Delete Account</GenericButton>
+        <div class="c-input-container">
+          <input
+            class="c-text-input"
+            id="email"
+            name="email"
+            type="email"
+            spellcheck="false"
+            aria-describedby="email-hint"
+            autocomplete="email"
+            disabled
+          />
+          <i class="fa-regular fa-lock c-input-icon"></i>
+        </div>
+        <div class="info-save-button-container">
+          <input
+            class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border u-margin-top-small"
+            id="SaveChanges"
+            type="submit"
+            value="Save Changes"
+          />
+          <p class="savedName">saved</p>
+        </div>
+        <div
+          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
+          style="gap: 1rem;"
+        >
+          <GenericButton withBorder="true" classString="logoutLink">Log Out</GenericButton>
+          <GenericButton id="DeleteAccountButton" withBorder="true" color="red">Delete Account</GenericButton>
+        </div>
       </div>
     </form>
-  </section>
 
-  <script type="module" src="/scripts/accountPage-TSBundle.js"></script>
+    <script type="module" src="/scripts/accountPage-TSBundle.js"></script>
+  </section>
 </AuthenticationLayout>
