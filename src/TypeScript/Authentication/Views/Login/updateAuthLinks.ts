@@ -1,3 +1,6 @@
+import { getCurrentUser } from "../../Controllers/Me/GetCurrentUser";
+import { UserProfileInput, initUserProfile, insertUserProfileData } from "../../Controllers/Profile/userProfile";
+
 const headerAuthLoggedOut = document.getElementById("headerAuthLoggedOut");
 const headerAuthLoggedIn = document.getElementById("headerAuthLoggedIn");
 
@@ -6,10 +9,21 @@ export const updateAuthLinks = (isLoggedIn: boolean) => {
   updateFooterAuth(isLoggedIn);
 };
 
-const UpdateHeaderAuth = (isLoggedIn: boolean) => {
+const UpdateHeaderAuth = async (isLoggedIn: boolean) => {
   if (isLoggedIn) {
     headerAuthLoggedOut.style.display = "none";
     headerAuthLoggedIn.style.display = "flex";
+
+    initUserProfile();
+    const userProfile = await getCurrentUser();
+    console.log(userProfile);
+
+    const userProfileInput: UserProfileInput = {
+      fullName: userProfile.firstName + " " + userProfile.lastName,
+      displayName: userProfile.displayName,
+      letter: userProfile.displayName.charAt(0),
+    };
+    insertUserProfileData(userProfileInput);
   } else {
     headerAuthLoggedOut.style.display = "flex";
     headerAuthLoggedIn.style.display = "none";
