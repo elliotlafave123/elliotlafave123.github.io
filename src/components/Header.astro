@@ -1,4 +1,5 @@
 ---
+import UserProfileMenu from "./Account/userProfileMenu.astro";
 import GenericButton from "./GenericButton.vue";
 ---
 
@@ -48,18 +49,7 @@ import GenericButton from "./GenericButton.vue";
       </GenericButton>
     </div>
     <div class="c-header__authentication" id="headerAuthLoggedIn" style="display: none;">
-      <GenericButton
-        classString="c-header__authentication-link storeBackLink"
-        href="/account.html"
-        withBorder="false"
-        size="small"
-        color="primary-secondary"
-      >
-        My account
-      </GenericButton>
-      <GenericButton classString="c-header__authentication-link logoutLink" withBorder="false" size="small">
-        Log out
-      </GenericButton>
+      <UserProfileMenu />
     </div>
   </div>
   <div class="c-header__bottom">
