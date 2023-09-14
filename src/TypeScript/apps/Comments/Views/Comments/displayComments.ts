@@ -3,7 +3,7 @@ import { CommentModel } from "../../Models/CommentType";
 
 export async function displayComment(comment: CommentModel) {
   const container = document.getElementById("InsertCommentsContainer");
-  if (!container) return;
+  if (!container || !comment) return;
 
   const commentDiv = document.createElement("div");
   commentDiv.classList.add("c-comment");
@@ -20,6 +20,8 @@ export async function displayComment(comment: CommentModel) {
     currentUserHasDownvoted = false,
     currentUserHasUpvoted = false,
     repliedTo = "",
+    repliedToUserId = "",
+    postedBy = "",
   } = comment;
 
   commentDiv.innerHTML = `
@@ -37,17 +39,23 @@ export async function displayComment(comment: CommentModel) {
         </div>
         <div class="c-comment__main">
             <div class="c-comment__header">
-                <div class="c-profile-image c-profile-image--${profileImgColor}">
-                    <p>${displayName.slice(0, 1).toUpperCase()}</p>
-                </div>
+                <a href="/users/profile.html?userId=${postedBy}">
+                    <div class="c-profile-image c-profile-image--${profileImgColor}">
+                        <p>${displayName.slice(0, 1).toUpperCase()}</p>
+                    </div>
+                </a>
                 <div class="c-comment__header__info">
-                    <h5>${displayName.toLowerCase()}</h5>
+                    <a href="/users/profile.html?userId=${postedBy}">
+                        <h5>${displayName.toLowerCase()}</h5>
+                    </a>
                     ${currentUser ? '<div class="c-comment__you">you</div>' : ""}
                     <span class="c-comment__date">${GenerateDateString(new Date(createdAt))}</span>
                 </div>
             </div>
             <p class="c-comment__text">${
-              repliedTo ? `<span class="c-comment__replied-to">@${repliedTo.toLowerCase()}</span>` : ""
+              repliedTo
+                ? `<a href="/users/profile.html?userId=${repliedToUserId}"><span class="c-comment__replied-to">@${repliedTo.toLowerCase()}</span></a>`
+                : ""
             } ${text.trim()}</p>
             ${currentUser ? interactions : reply}
         </div>
@@ -58,14 +66,18 @@ export async function displayComment(comment: CommentModel) {
     const repliesDiv = document.createElement("div");
     repliesDiv.classList.add("c-comment__replies");
 
-    for (const reply of comment.replyObjects) {
-      const replyElement = await displayComment(reply);
-      if (replyElement) {
-        repliesDiv.appendChild(replyElement);
-      }
-    }
+    const validReplyObjects = comment.replyObjects.filter((reply) => reply !== null);
 
-    commentDiv.appendChild(repliesDiv);
+    if (validReplyObjects.length > 0) {
+      for (const reply of validReplyObjects) {
+        const replyElement = await displayComment(reply);
+        if (replyElement) {
+          repliesDiv.appendChild(replyElement);
+        }
+      }
+
+      commentDiv.appendChild(repliesDiv);
+    }
   }
 
   container.insertAdjacentElement("afterbegin", commentDiv);
@@ -73,7 +85,25 @@ export async function displayComment(comment: CommentModel) {
   return commentDiv;
 }
 
-export const interactions = `
+const threeDotMenu = `
+    <div class="c-dot-menu">
+        <button class="c-dot-menu__toggle">
+          <i class="fa-sharp fa-regular fa-ellipsis-vertical"></i>
+        </button>
+        <div class="c-dot-menu__content">
+            <button class="c-dot-menu__button copyCommentLink">
+                <i class="fa-sharp fa-solid fa-copy"></i> 
+                <span>Copy link</span>
+            </button>
+            <button class="c-dot-menu__button reportCommentLink">
+                <i class="fa-sharp fa-solid fa-flag"></i> 
+                <span>Report</span>
+            </button>
+        </div>
+    </div>
+`;
+
+const interactions = `
     <div class="c-comment__interactions">
         <button class="c-comment__button c-comment__button--delete deleteComment">
             <i class="fa-sharp fa-solid fa-trash"></i>   
@@ -83,14 +113,16 @@ export const interactions = `
             <i class="fa-sharp fa-solid fa-pen"></i>
             <span>Edit</span>
         </button>
+        ${threeDotMenu}
     </div>
 `;
 
-export const reply = ` 
+const reply = ` 
     <div class="c-comment__interactions">
         <button class="c-comment__button c-comment__button--primary replyComment">
             <i class="fa-sharp fa-solid fa-reply"></i>
             <span>Reply</span>
         </button>
+        ${threeDotMenu}
     </div>
 `;

@@ -1,10 +1,11 @@
 import { Constants } from "../../../../Constants/Constants";
+import { PostCommentReplyStatus } from "../../Models/PostCommentReplyStatus";
 
 export async function PostCommentReply(
   commentText: string,
   parentId: string,
   repliedToCommentId: string
-): Promise<boolean> {
+): Promise<PostCommentReplyStatus> {
   const token = localStorage.getItem("token");
   console.log(repliedToCommentId);
 
@@ -19,16 +20,18 @@ export async function PostCommentReply(
     });
 
     if (response.status === 200) {
-      return true;
+      return PostCommentReplyStatus.Success;
+    }
+
+    if (response.status === 401) {
+      return PostCommentReplyStatus.Unauthorized;
     }
 
     if (response.status === 400) {
-      throw new Error("Bad request");
+      return PostCommentReplyStatus.Profanity;
     }
-
-    // You can add other status code checks if needed
   } catch (error) {
     console.log(`Error posting comment reply: ${error}`);
-    return false;
+    return PostCommentReplyStatus.CreationError;
   }
 }
