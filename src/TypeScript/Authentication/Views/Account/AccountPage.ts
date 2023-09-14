@@ -55,15 +55,15 @@ async function InitAccountPage() {
 
       try {
         const result = await modal.open({
-          title: "Delete comment",
-          paragraph: "Are you sure you want to delete this comment?",
+          title: "Delete account",
+          paragraph: "Are you sure you want to delete your account?",
           confirmText: "Delete",
           cancelText: "Cancel",
           size: "medium",
           corner: "round",
           colour: "primary",
           withBorder: true,
-          ariaLabel: "Delete comment modal",
+          ariaLabel: "Delete account modal",
         });
 
         if (result === "confirm") {
