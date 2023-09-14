@@ -1,6 +1,7 @@
 import { CheckLogin, LoginStatus } from "../../Authentication/Controllers/Login/CheckLogin";
 import { hideLoginButtons } from "./Views/Authentication/hideLoginButtons";
 import { hideOverlay } from "./Views/Authentication/hideOverlay";
+import { ScrollToComment } from "./Views/Comments/ScrollToComment";
 import { initPostComment } from "./Views/Comments/handlePostComment";
 import { UpdateComments } from "./Views/Comments/updateComments";
 
@@ -17,6 +18,10 @@ async function initComments() {
   }
 
   initPostComment();
-  UpdateComments();
+  await UpdateComments();
+  ScrollToComment();
 }
-initComments();
+
+window.onload = () => {
+  initComments();
+};

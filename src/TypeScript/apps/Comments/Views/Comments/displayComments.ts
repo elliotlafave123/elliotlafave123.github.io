@@ -85,7 +85,21 @@ export async function displayComment(comment: CommentModel) {
   return commentDiv;
 }
 
-export const interactions = `
+const threeDotMenu = `
+    <div class="c-dot-menu">
+        <button class="c-dot-menu__toggle">
+          <i class="fa-sharp fa-regular fa-ellipsis-vertical"></i>
+        </button>
+        <div class="c-dot-menu__content">
+            <button class="c-dot-menu__button copyCommentLink">
+                <i class="fa-sharp fa-solid fa-copy"></i> 
+                <span>Copy link</span>
+            </button>
+        </div>
+    </div>
+`;
+
+const interactions = `
     <div class="c-comment__interactions">
         <button class="c-comment__button c-comment__button--delete deleteComment">
             <i class="fa-sharp fa-solid fa-trash"></i>   
@@ -95,14 +109,16 @@ export const interactions = `
             <i class="fa-sharp fa-solid fa-pen"></i>
             <span>Edit</span>
         </button>
+        ${threeDotMenu}
     </div>
 `;
 
-export const reply = ` 
+const reply = ` 
     <div class="c-comment__interactions">
         <button class="c-comment__button c-comment__button--primary replyComment">
             <i class="fa-sharp fa-solid fa-reply"></i>
             <span>Reply</span>
         </button>
+        ${threeDotMenu}
     </div>
 `;
