@@ -2,6 +2,8 @@ export function showAccountStatusMessage(status: boolean) {
   const dialogue = document.querySelector(".c-dialogue");
   if (!dialogue) return;
 
+  dialogue.innerHTML = "";
+
   const iconElement = document.createElement("i");
   iconElement.classList.add("c-dialogue__icon");
 

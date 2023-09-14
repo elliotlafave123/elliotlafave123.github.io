@@ -40,6 +40,7 @@ async function InitAccountPage() {
         if (updated) {
           showAccountStatusMessage(true);
           addDataToInputs(updated.firstName, updated.lastName, updated.displayName, updated.email);
+          window.scrollTo(0, 0);
         } else {
           showAccountStatusMessage(false);
         }
