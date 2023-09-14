@@ -95,6 +95,10 @@ const threeDotMenu = `
                 <i class="fa-sharp fa-solid fa-copy"></i> 
                 <span>Copy link</span>
             </button>
+            <button class="c-dot-menu__button reportCommentLink">
+                <i class="fa-sharp fa-solid fa-flag"></i> 
+                <span>Report</span>
+            </button>
         </div>
     </div>
 `;

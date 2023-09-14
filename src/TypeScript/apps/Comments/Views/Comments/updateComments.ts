@@ -7,6 +7,7 @@ import { initReplyComments } from "../Replies/initReplyComments";
 import { initVotingOnElement } from "../Voting/initVotingOnElement";
 import { RemoveCommentContainerError, RemoveErrorMessage } from "./CommentContainerError";
 import { initCopyCommentLink } from "./CopyCommentLink";
+import { initReportComments } from "./ReportComment";
 import { clearContainer } from "./clearContainer";
 import { displayComment } from "./displayComments";
 
@@ -55,6 +56,7 @@ function initInteractions() {
   initReplyComments();
   initDotMenus();
   initCopyCommentLink();
+  initReportComments();
 }
 
 export function initVoting() {
