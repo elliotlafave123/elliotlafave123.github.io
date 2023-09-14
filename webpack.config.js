@@ -18,6 +18,7 @@ module.exports = {
     auth: "./src/TypeScript/Authentication/auth.ts",
     logIn: "./src/TypeScript/Authentication/Views/Login/Login.ts",
     signUp: "./src/TypeScript/Authentication/Views/Sign Up/signUp.ts",
+    profile: "./src/TypeScript/Authentication/Views/Profile/Profile.ts",
     verifyEmail: "./src/TypeScript/Authentication/Views/Verify Email/verifyEmail.ts",
     requestPasswordReset: "./src/TypeScript/Authentication/Views/Reset Password/requestPasswordReset.ts",
     resetPassword: "./src/TypeScript/Authentication/Views/Reset Password/resetPassword.ts",

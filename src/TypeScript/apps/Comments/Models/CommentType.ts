@@ -14,4 +14,6 @@ export type CommentModel = {
   replies?: [string];
   replyObjects?: [CommentModel];
   repliedTo?: string;
+  repliedToUserId?: string;
+  postedBy: string;
 };

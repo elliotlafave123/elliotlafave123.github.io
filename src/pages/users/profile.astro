@@ -1,0 +1,21 @@
+---
+import GenericButton from "../../components/GenericButton.vue";
+import AuthenticationLayout from "../../layouts/AuthenticationLayout.astro";
+---
+
+<AuthenticationLayout title="Sign up">
+  <section class="c-container c-container--x-small c-container--centered">
+    <div class="c-dialogue"></div>
+
+    <h1>User Details</h1>
+
+    <div class="c-form__element c-form__element--small-margin">
+      <h4>Joined on</h4>
+      <p id="joinedon"></p>
+      <h4>Display Name</h4>
+      <p id="displayname"></p>
+    </div>
+  </section>
+
+  <script type="module" src="/scripts/profile-TSBundle.js"></script>
+</AuthenticationLayout>
