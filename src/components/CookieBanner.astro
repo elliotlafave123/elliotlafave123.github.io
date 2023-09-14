@@ -1,0 +1,38 @@
+---
+import GenericButton from "./GenericButton.vue";
+---
+
+<div class="c-cookie-banner c-cookie-banner--hidden">
+  <div class="c-cookie-banner__header">
+    <h3 class="c-cookie-banner__title">We value your privacy</h3>
+    <div class="c-cookie-banner__toggle">
+      <button class="c-cookie-banner__minimize" type="button" id="js-minimize-banner"
+        ><i class="fas fa-minus"></i></button
+      >
+      <button class="c-cookie-banner__expand" type="button" id="js-expand-banner"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+  <p class="c-cookie-banner__text">
+    We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
+  </p>
+  <p class="c-cookie-banner__text">
+    Some of these cookies are essential for the proper functioning of our website and cannot be switched off.
+  </p>
+  <p class="c-cookie-banner__text">
+    For more information, please read our <a href="/CookiePolicy.html" class="c-link c-link--primary">Cookie Policy</a>, <a
+      href="/pages/PrivacyPolicy.html"
+      class="c-link c-link--primary">Privacy Policy</a
+    > and <a href="/pages/termsAndConditions.html" class="c-link c-link--primary">Terms of Service</a>.
+  </p>
+  <p class="c-cookie-banner__text no-hide">
+    By clicking "Accept All", you consent to our use of non-essential cookies.
+  </p>
+  <div class="c-cookie-banner__actions">
+    <GenericButton withBorder="true" color="primary" size="small" button="true" id="js-accept-cookies">
+      Accept All
+    </GenericButton>
+    <GenericButton withBorder="true" color="primary-secondary" size="small" button="true" id="js-deny-cookies">
+      Deny
+    </GenericButton>
+  </div>
+</div>
