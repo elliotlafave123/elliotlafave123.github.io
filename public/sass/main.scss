@@ -16,6 +16,7 @@
 @import "../../ComponentAssets/complexComponents/profile image/c-profile-image.scss";
 @import "../../ComponentAssets/complexComponents/user profile/c-user-profile.scss";
 @import "../../ComponentAssets/complexComponents/user profile/c-profile.scss";
+@import "../../ComponentAssets/complexComponents/Account/c-account-menu.scss";
 
 // Simple Components
 @import "../../ComponentAssets/simpleComponents/button/button.scss";
@@ -70,6 +71,7 @@
 
 // Layout - Assorted
 @import "layout/contact";
+@import "layout/account-layout";
 
 // Page Types
 @import "pages/defaultSection";

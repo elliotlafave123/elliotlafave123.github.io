@@ -1,9 +1,14 @@
 ---
-import GenericButton from "../components/GenericButton.vue";
-import AuthenticationLayout from "../layouts/AuthenticationLayout.astro";
+import AccountLayout from "../layouts/AccountLayout.astro";
 ---
 
-<AuthenticationLayout title="Sign up">
+<AccountLayout title="My account">
+  <h1>My profile</h1>
+
+  <script type="module" src="/scripts/accountPage-TSBundle.js"></script>
+</AccountLayout>
+
+<!-- <AuthenticationLayout title="Sign up">
   <section class="c-container c-container--x-small c-container--centered">
     <form class="c-form" id="accountPage" onsubmit="return false" novalidate>
       <div class="c-dialogue"></div>
@@ -70,6 +75,5 @@ import AuthenticationLayout from "../layouts/AuthenticationLayout.astro";
       </div>
     </form>
 
-    <script type="module" src="/scripts/accountPage-TSBundle.js"></script>
   </section>
-</AuthenticationLayout>
+</AuthenticationLayout> -->
