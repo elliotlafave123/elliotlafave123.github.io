@@ -11,6 +11,14 @@ export function initUserProfile() {
         ? "fa-sharp fa-solid fa-circle-user"
         : "fa-sharp fa-solid fa-circle-xmark";
     });
+
+    document.addEventListener("click", (event) => {
+      const eventTarget = event.target as HTMLElement;
+      if (!profileMenu.contains(eventTarget) && !toggleButton.contains(eventTarget)) {
+        profileMenu.classList.add("c-profile--hidden");
+        icon.className = "fa-sharp fa-solid fa-circle-user";
+      }
+    });
   }
 }
 
