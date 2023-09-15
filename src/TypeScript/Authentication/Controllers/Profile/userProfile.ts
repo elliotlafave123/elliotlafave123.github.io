@@ -26,6 +26,7 @@ export interface UserProfileInput {
   fullName: string;
   displayName: string;
   letter: string;
+  joinedOn?: string;
 }
 
 export function insertUserProfileData(userProfile: UserProfileInput) {

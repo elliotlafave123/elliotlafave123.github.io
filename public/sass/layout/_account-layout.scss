@@ -2,7 +2,7 @@
   @include centered-container;
   display: flex;
   gap: 120px;
-  justify-content: flex-start;
+  justify-content: center;
 
   @include respond(tab-port) {
     .c-account-menu {
@@ -10,13 +10,35 @@
     }
   }
 
+  &--anchor {
+    position: relative;
+
+    .editButton {
+      position: absolute;
+      top: -15px;
+      right: 0;
+    }
+  }
+
   &__content {
-    flex: 1;
+    min-width: 500px;
+
+    @include respond(tab-port) {
+      min-width: 100%;
+    }
 
     h1 {
       font-family: "Poppins", sans-serif;
       font-weight: 600;
       font-size: 24px;
+      margin: 0;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
       margin: 0;
       margin-bottom: 34px;
     }
