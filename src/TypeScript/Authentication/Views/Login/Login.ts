@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Redirect to previous page
       const backLink = localStorage.getItem("backLink");
       if (backLink) {
-        console.log("backLink", backLink);
         if (backLink.includes("/pages/login/")) {
           window.location.replace("/index.html");
         } else {

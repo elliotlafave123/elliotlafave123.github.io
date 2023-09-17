@@ -24,7 +24,6 @@ export async function PostComment(commentData: PostCommentInput): Promise<PostCo
       }
     });
   } catch (error) {
-    console.log(`Error posting comment: ${error}`);
     return error.message === "Error creating comment"
       ? PostCommentResult.CreationError
       : PostCommentResult.UnknownError;

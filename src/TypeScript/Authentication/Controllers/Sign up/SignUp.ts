@@ -23,7 +23,6 @@ export async function SignUp(user: Partial<UserModel>): Promise<SignUpResult> {
       return SignUpResult.UnknownError;
     }
   } catch (error) {
-    console.log(error);
     return SignUpResult.UnknownError;
   }
 }

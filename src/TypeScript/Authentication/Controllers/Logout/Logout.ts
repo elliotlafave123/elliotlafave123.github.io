@@ -4,7 +4,6 @@ export function Logout() {
 
   const backLink = localStorage.getItem("backLink");
   if (backLink) {
-    console.log("backLink", backLink);
     localStorage.removeItem("backLink");
     window.location.href = backLink;
     return;

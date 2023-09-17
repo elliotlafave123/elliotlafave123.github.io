@@ -13,11 +13,9 @@ export async function DeleteComment(id: string): Promise<boolean> {
     if (response.ok) {
       return true;
     } else {
-      console.log(`Error deleting comment: ${response.statusText}`);
       return false;
     }
   } catch (error) {
-    console.log(`Error deleting comment: ${error}`);
     return false;
   }
 }

@@ -23,7 +23,6 @@ export async function VerifyEmail(id: string, token: string): Promise<Verificati
 
     throw new Error("Unknown error");
   } catch (error) {
-    console.log(error);
     return VerificationStatus.UnknownError;
   }
 }
