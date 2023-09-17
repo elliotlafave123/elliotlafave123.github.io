@@ -25,6 +25,7 @@ module.exports = {
     accountPage: "./src/TypeScript/Authentication/Views/Account/AccountPage.ts",
     deleteAccountPage: "./src/TypeScript/Authentication/Views/Account/Delete account/deleteAccount.ts",
     changePassword: "./src/TypeScript/Authentication/Views/Account/Change password/changePassword.ts",
+    notificationsView: "./src/TypeScript/Authentication/Views/Notifications/notificationsView.ts",
     accountMenu: "./src/TypeScript/Authentication/Views/Account/Menu/AccountMenu.ts",
     editAccount: "./src/TypeScript/Authentication/Views/Account/Edit account details/editAccount.ts",
     passwordRequirements: "./ComponentAssets/simpleComponents/passwordRequirements/passwordRequirements.ts",
