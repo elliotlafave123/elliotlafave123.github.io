@@ -29,7 +29,6 @@ export async function ResetPassword(resetPassword: ResetPasswordModel): Promise<
 
     return ResetPasswordResult.Error;
   } catch (error) {
-    console.log(error);
     return ResetPasswordResult.Error;
   }
 }

@@ -13,7 +13,6 @@ export async function resetPassword() {
     e.preventDefault();
 
     if (password.value !== confirmPassword.value) {
-      console.log(errorMessagePassword, errorMessageConfirmPassword);
       errorMessagePassword.style.display = "block";
       errorMessagePassword.classList.remove("hidden");
       errorMessageConfirmPassword.style.display = "block";
@@ -61,7 +60,6 @@ export async function resetPassword() {
           break;
       }
     } else {
-      console.log("Missing URL parameters");
       window.location.replace("/pages/login/login.html?status=PasswordResetFailure");
     }
   });

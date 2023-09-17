@@ -37,7 +37,6 @@ export async function CheckLogin(): Promise<LoginStatus> {
         throw new Error("Unknown error");
     }
   } catch (error) {
-    console.log(`Error checking login status: ${error}`);
     status.Unauthorized = true;
   }
 

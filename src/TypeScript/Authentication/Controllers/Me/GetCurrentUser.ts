@@ -26,7 +26,6 @@ export async function getCurrentUser() {
       throw new Error("Error parsing response");
     }
   } catch (error) {
-    console.log(error);
     return null;
   }
 }

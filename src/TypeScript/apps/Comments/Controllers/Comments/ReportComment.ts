@@ -18,7 +18,6 @@ export async function ReportComment(commentId: string): Promise<boolean> {
 
     return true;
   } catch (error) {
-    console.log(`Error posting comment: ${error}`);
     return false;
   }
 }

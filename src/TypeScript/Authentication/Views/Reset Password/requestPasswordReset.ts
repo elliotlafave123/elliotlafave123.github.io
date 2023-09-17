@@ -10,7 +10,6 @@ async function handleFormSubmit() {
     if (result) {
       window.location.href = "/pages/login/CheckYourEmail.html";
     } else {
-      console.log("Failure");
     }
   }
 }

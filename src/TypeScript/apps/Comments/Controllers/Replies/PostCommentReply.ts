@@ -7,7 +7,6 @@ export async function PostCommentReply(
   repliedToCommentId: string
 ): Promise<PostCommentReplyStatus> {
   const token = localStorage.getItem("token");
-  console.log(repliedToCommentId);
 
   try {
     const response = await fetch(Constants.API_BASE_URL + "/Comments/Reply", {
@@ -31,7 +30,6 @@ export async function PostCommentReply(
       return PostCommentReplyStatus.Profanity;
     }
   } catch (error) {
-    console.log(`Error posting comment reply: ${error}`);
     return PostCommentReplyStatus.CreationError;
   }
 }

@@ -25,7 +25,6 @@ export async function RequestEmailVerification(params: RequestVerificationInput)
       return VerificationResponse.UnknownError;
     }
   } catch (error) {
-    console.log(`Error requesting user verification: ${error}`);
     return VerificationResponse.RequestError;
   }
 }

@@ -22,7 +22,6 @@ export async function postVote(vote: PostVoteInput): Promise<boolean> {
       throw new Error("User already voted");
     }
   } catch (error) {
-    console.log(`Error posting vote: ${error}`);
     return false;
   }
 }

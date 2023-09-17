@@ -68,7 +68,6 @@ export function initVoting() {
 
 function showNoComments() {
   const noComments = document.querySelector(".c-no-comments");
-  console.log(noComments);
   if (!noComments) return;
 
   noComments.classList.remove("hidden");

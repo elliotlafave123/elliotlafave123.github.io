@@ -30,7 +30,6 @@ export class CookieBanner {
   };
 
   public acceptCookies = async (): Promise<void> => {
-    console.log("Accepting cookies");
     localStorage.setItem("cookiesAccepted", "true");
     this.cookieBanner.classList.add("c-cookie-banner--hidden");
     window.location.reload();

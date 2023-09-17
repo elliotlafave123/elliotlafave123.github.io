@@ -1,7 +1,6 @@
 import { updateUser } from "../../../Controllers/Account/updateUser";
 import { getCurrentUser } from "../../../Controllers/Me/GetCurrentUser";
 import { addDataToInputs } from "../addDataToInputs";
-import { showAccountStatusMessage } from "../showAccountStatusMessage";
 
 async function initEditUserDetails() {
   const user = await getCurrentUser();
@@ -26,12 +25,11 @@ async function initEditUserDetails() {
 
       if (user) {
         const updated = await updateUser(user);
-        console.log(updated);
 
         if (updated) {
-          window.location.href = "/account.html#profile";
+          window.location.href = "/account.html?status=true#profile";
         } else {
-          showAccountStatusMessage(false);
+          window.location.href = "/account.html?status=false#profile";
         }
       }
     });

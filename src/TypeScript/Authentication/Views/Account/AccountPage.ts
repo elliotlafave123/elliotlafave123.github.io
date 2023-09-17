@@ -2,6 +2,7 @@ import { GenerateDateString } from "../../../helpers/generateDateString";
 import { CheckLogin } from "../../Controllers/Login/CheckLogin";
 import { getCurrentUser } from "../../Controllers/Me/GetCurrentUser";
 import { UserProfileInput } from "../../Controllers/Profile/userProfile";
+import { showAccountStatusMessage } from "./showAccountStatusMessage";
 
 async function InitAccountPage() {
   const hash = window.location.hash;
@@ -26,11 +27,18 @@ async function InitAccountPage() {
 
   fillUserProfile(userProfile);
   fillPersonalInformation(user);
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const status = urlParams.get("status");
+  console.log("status", status);
+
+  if (status) {
+    showAccountStatusMessage(status === "true");
+  }
 }
 InitAccountPage();
 
 function fillPersonalInformation(userProfile) {
-  console.log(userProfile);
   document.querySelector(".js-userDetails-firstName").textContent = userProfile.firstName;
   document.querySelector(".js-userDetails-lastName").textContent = userProfile.lastName;
   document.querySelector(".js-userDetails-displayName").textContent = userProfile.displayName.toLowerCase();

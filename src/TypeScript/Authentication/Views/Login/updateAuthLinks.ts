@@ -16,7 +16,6 @@ const UpdateHeaderAuth = async (isLoggedIn: boolean) => {
 
     initUserProfile();
     const userProfile = await getCurrentUser();
-    console.log(userProfile);
 
     const userProfileInput: UserProfileInput = {
       fullName: userProfile.firstName + " " + userProfile.lastName,

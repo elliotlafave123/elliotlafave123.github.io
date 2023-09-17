@@ -14,7 +14,6 @@ export async function EditComment(text: string, id: string): Promise<boolean> {
     if (response.ok) {
       return true;
     } else {
-      console.log(`Error deleting comment: ${response.statusText}`);
       return false;
     }
   } catch (error) {

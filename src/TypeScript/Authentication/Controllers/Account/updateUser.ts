@@ -18,7 +18,6 @@ export async function updateUser(user: Partial<UserModel>): Promise<Partial<User
       throw new Error("Cannot update name, please try again later");
     }
   } catch (error) {
-    console.log(error);
     return null;
   }
 }

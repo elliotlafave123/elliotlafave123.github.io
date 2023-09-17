@@ -34,9 +34,7 @@ export async function Login(email: string, password: string): Promise<LoginStatu
       status.Unauthorized = true;
       throw new Error("Unknown error occurred");
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 
   return status;
 }
