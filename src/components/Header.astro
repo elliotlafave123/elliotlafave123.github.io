@@ -28,7 +28,12 @@ import GenericButton from "./GenericButton.vue";
       </a>
     </div>
     <!-- Authentication -->
-    <div aria-label="User Authentication Options" class="c-header__authentication" id="headerAuthLoggedOut">
+    <div
+      aria-label="User Authentication Options"
+      class="c-header__authentication"
+      id="headerAuthLoggedOut"
+      style="display: none;"
+    >
       <GenericButton
         classString="c-header__authentication-link storeBackLink"
         href="/pages/login/signup.html"

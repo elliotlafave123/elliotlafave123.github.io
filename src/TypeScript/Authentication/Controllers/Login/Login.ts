@@ -29,14 +29,13 @@ export async function Login(email: string, password: string): Promise<LoginStatu
       const data = await response.json();
       localStorage.setItem("token", data.accessToken);
       localStorage.setItem("refreshToken", data.refreshToken);
+      localStorage.setItem("BacklinkShouldScroll", "true");
       status.LoggedIn = true;
     } else {
       status.Unauthorized = true;
       throw new Error("Unknown error occurred");
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 
   return status;
 }

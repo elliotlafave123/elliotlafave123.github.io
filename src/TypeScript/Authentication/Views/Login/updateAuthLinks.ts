@@ -12,11 +12,10 @@ export const updateAuthLinks = (isLoggedIn: boolean) => {
 const UpdateHeaderAuth = async (isLoggedIn: boolean) => {
   if (isLoggedIn) {
     headerAuthLoggedOut.style.display = "none";
-    headerAuthLoggedIn.style.display = "flex";
+    headerAuthLoggedIn.style.display = "block";
 
     initUserProfile();
     const userProfile = await getCurrentUser();
-    console.log(userProfile);
 
     const userProfileInput: UserProfileInput = {
       fullName: userProfile.firstName + " " + userProfile.lastName,

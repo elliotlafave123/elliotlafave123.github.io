@@ -15,8 +15,6 @@ export const initHeaderNavigation = () => {
     primaryNavItems.forEach((item) => {
       item.addEventListener("click", (e) => {
         const element = e.target as HTMLElement;
-        console.log("element", element);
-        console.log("!element.classList.contains", !element.classList.contains("js-subNavLink"));
 
         if (!element.classList.contains("js-subNavLink")) {
           e.preventDefault();
@@ -48,7 +46,6 @@ export const initHeaderNavigation = () => {
         } else {
           // go to href of link - element has link
           const href = element.getAttribute("href");
-          console.log("href", href);
           window.location.href = href;
           window.location.reload();
         }

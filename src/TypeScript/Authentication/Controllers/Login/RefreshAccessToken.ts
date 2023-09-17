@@ -26,7 +26,6 @@ export async function RefreshAccessToken(token: string): Promise<boolean> {
 
     return true;
   } catch (error) {
-    console.log(error);
     return false;
   }
 }

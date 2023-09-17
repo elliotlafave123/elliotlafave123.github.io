@@ -137,12 +137,11 @@ async function handleSubmit(e: Event) {
       handleSignUpError(result, errorSummary);
     }
   } catch (error) {
-    console.log("Signup failed:", error);
+    //
   }
 }
 
 function handleSignUpError(error: SignUpResult, errorSummary: HTMLDivElement) {
-  console.log("Signup failed:", error);
   const errorMessages: { [key in SignUpResult]?: string } = {
     [SignUpResult.FirstNameRequired]: "First name is required",
     [SignUpResult.LastNameRequired]: "Last name is required",

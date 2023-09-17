@@ -11,6 +11,14 @@ export function initUserProfile() {
         ? "fa-sharp fa-solid fa-circle-user"
         : "fa-sharp fa-solid fa-circle-xmark";
     });
+
+    document.addEventListener("click", (event) => {
+      const eventTarget = event.target as HTMLElement;
+      if (!profileMenu.contains(eventTarget) && !toggleButton.contains(eventTarget)) {
+        profileMenu.classList.add("c-profile--hidden");
+        icon.className = "fa-sharp fa-solid fa-circle-user";
+      }
+    });
   }
 }
 
@@ -18,6 +26,7 @@ export interface UserProfileInput {
   fullName: string;
   displayName: string;
   letter: string;
+  joinedOn?: string;
 }
 
 export function insertUserProfileData(userProfile: UserProfileInput) {
@@ -27,7 +36,7 @@ export function insertUserProfileData(userProfile: UserProfileInput) {
 
   if (fullName && displayname && letter) {
     fullName.textContent = userProfile.fullName;
-    displayname.textContent = userProfile.displayName;
+    displayname.textContent = "@" + userProfile.displayName.toLowerCase();
     letter.textContent = userProfile.letter;
   }
 

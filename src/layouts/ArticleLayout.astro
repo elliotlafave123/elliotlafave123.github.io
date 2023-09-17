@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CommentSection from "../components/CommentSection.astro";
 import BaseHead from "./BaseHead.astro";
+import CookieBanner from "../components/CookieBanner.astro";
 
 export interface Props {
   title: string;
@@ -59,6 +60,8 @@ const { title, date, time, streamID } = Astro.props;
     </main>
 
     <CommentSection streamID={streamID} />
+    <CookieBanner />
+
     <Footer />
   </body>
 </html>

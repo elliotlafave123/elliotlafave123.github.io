@@ -1,0 +1,134 @@
+---
+import AccountLayout from "../../layouts/AccountLayout.astro";
+---
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script defer>
+  function recaptcha_callback() {
+    var regsterBtn = document.getElementById("changePasswordButton");
+    regsterBtn.removeAttribute("disabled");
+  }
+</script>
+
+<AccountLayout title="Security">
+  <h1>Security</h1>
+  <p>You can change your password here.</p>
+
+  <div class="account-layout--anchor u-margin-top-medium">
+    <h2>change password</h2>
+    <form id="changePasswordForm" class="c-form" onsubmit="return false" novalidate>
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="currentPassword" class="c-form__label">Current password</label>
+        <div class="c-password-input">
+          <input
+            class="c-text-input"
+            minlength="8"
+            id="currentPassword"
+            name="currentPassword"
+            type="password"
+            required
+          />
+          <i class="fa-solid fa-eye c-password-input__password-eye" id="ShowPasswordEye"></i>
+          <i
+            class="fa-solid fa-eye-slash c-password-input__password-eye c-password-input__password-eye--hidden"
+            id="HidePasswordEye"></i>
+        </div>
+        <span id="errorMessageCurrentPassword" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements
+        </span>
+      </div>
+
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="password" class="c-form__label">New password</label>
+        <div class="c-password-input">
+          <input class="c-text-input" minlength="8" id="password" name="password" type="password" required />
+          <i class="fa-solid fa-eye c-password-input__password-eye" id="ShowPasswordEye"></i>
+          <i
+            class="fa-solid fa-eye-slash c-password-input__password-eye c-password-input__password-eye--hidden"
+            id="HidePasswordEye"></i>
+        </div>
+        <span id="errorMessagePassword" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Password must meet requirements
+        </span>
+      </div>
+
+      <div class="c-form__element c-form__element--small-margin">
+        <div class="c-password-requirements">
+          <ul>
+            <li>
+              <div class="checkMark" id="length">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Password must be 8+ characters</p>
+            </li>
+            <li>
+              <div class="checkMark" id="upper">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Uppercase and lowercase letter (A z)</p>
+            </li>
+            <li>
+              <div class="checkMark" id="number">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Numeric character (0-9)</p>
+            </li>
+            <li>
+              <div class="checkMark" id="special">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Special character (!, %, @@, #, etc.)</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- confirm password -->
+      <div class="c-form__element u-margin-bottom-small">
+        <label for="confirmPassword" class="c-form__label">Confirm Password</label>
+        <div class="c-password-input">
+          <input
+            class="c-text-input"
+            minlength="8"
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            required
+          />
+          <i class="fa-sharp fa-solid fa-eye c-password-input__password-eye" id="ShowPasswordEye"></i>
+          <i
+            class="fa-sharp fa-solid fa-eye-slash c-password-input__password-eye c-password-input__password-eye--hidden"
+            id="HidePasswordEye"></i>
+        </div>
+        <span id="errorMessageConfirmPassword" class="c-form__error-message"
+          ><i class="fa-solid fa-triangle-exclamation"></i>Passwords do not match</span
+        >
+
+        <!-- Public -->
+        <!-- <div
+          class="g-recaptcha"
+          data-sitekey="6LeiJF8iAAAAAO25BEZfbxbaSEaw55cShZLI761E"
+          data-callback="recaptcha_callback"
+        >
+        </div> -->
+        <!-- Local -->
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+          data-callback="recaptcha_callback"
+        >
+        </div>
+      </div>
+      <input
+        type="submit"
+        class="c-button c-button--large c-button--semi-round c-button--primary c-button--primary--with-border"
+        value="Change password"
+        id="changePasswordButton"
+        disabled
+      />
+    </form>
+  </div>
+
+  <script type="module" src="/scripts/changePassword-TSBundle.js"></script>
+  <script type="module" src="/scripts/passwordRequirements-TSBundle.js"></script>
+</AccountLayout>

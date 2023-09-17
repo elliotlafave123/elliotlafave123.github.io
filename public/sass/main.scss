@@ -16,10 +16,11 @@
 @import "../../ComponentAssets/complexComponents/profile image/c-profile-image.scss";
 @import "../../ComponentAssets/complexComponents/user profile/c-user-profile.scss";
 @import "../../ComponentAssets/complexComponents/user profile/c-profile.scss";
+@import "../../ComponentAssets/complexComponents/Account/c-account-menu.scss";
+@import "../../ComponentAssets/complexComponents/Account/c-personal-information.scss";
 
 // Simple Components
 @import "../../ComponentAssets/simpleComponents/button/button.scss";
-
 @import "../../ComponentAssets/simpleComponents/history/c-history.scss";
 @import "../../ComponentAssets/simpleComponents/certification/c-certification.scss";
 @import "../../ComponentAssets/simpleComponents/certificate/c-certificate.scss";
@@ -35,6 +36,7 @@
 @import "../../ComponentAssets/simpleComponents/modal/modal.scss";
 @import "../../ComponentAssets/simpleComponents/dialogue/c-dialogue.scss";
 @import "../../ComponentAssets/simpleComponents/dotMenu/c-dot-menu.scss";
+@import "../../ComponentAssets/simpleComponents/skeletonLoader/skeletonLoader";
 
 // Layout
 @import "../../ComponentAssets/simpleComponents/layout/scrollbar/scrollbar";
@@ -70,6 +72,7 @@
 
 // Layout - Assorted
 @import "layout/contact";
+@import "layout/account-layout";
 
 // Page Types
 @import "pages/defaultSection";

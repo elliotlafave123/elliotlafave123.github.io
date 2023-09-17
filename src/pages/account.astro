@@ -1,75 +1,97 @@
 ---
 import GenericButton from "../components/GenericButton.vue";
-import AuthenticationLayout from "../layouts/AuthenticationLayout.astro";
+import AccountLayout from "../layouts/AccountLayout.astro";
 ---
 
-<AuthenticationLayout title="Sign up">
-  <section class="c-container c-container--x-small c-container--centered">
-    <form class="c-form" id="accountPage" onsubmit="return false" novalidate>
-      <div class="c-dialogue"></div>
+<AccountLayout title="My account">
+  <h1>My profile</h1>
 
-      <h1>Account Settings</h1>
+  <div class="account-layout--anchor c-profile__container c-profile__container--with-joinedon hidden showOnLoad">
+    <GenericButton
+      icon="fa-sharp fa-regular fa-pen-to-square"
+      withBorder="true"
+      color="ghost-gray-text"
+      classString="editButton js-edit-profile"
+      href="/account/edit"
+    >
+      Edit
+    </GenericButton>
+    <div class="c-profile-image">
+      <p class="c-profile-image__text js-userProfile-letter"></p>
+    </div>
+    <div class="c-profile__content">
+      <h4 class="c-profile__name js-userProfile-fullName"></h4>
+      <span class="c-profile__displayname js-userProfile-displayname"></span>
+      <span class="c-profile__joined js-userProfile-joinedOn"></span>
+    </div>
+  </div>
 
-      <h2>Personal Infomation</h2>
-      <div class="c-form__element c-form__element--small-margin">
-        <label for="firstname" class="c-form__label">First Name</label>
-        <input class="c-text-input" id="firstname" name="firstname" type="text" maxlength="94" required />
-        <span id="errorMessageFirstName" class="c-form__error-message" style="display: none;">
-          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your first name
-        </span>
+  <div class="account-layout--anchor c-profile__container c-profile__container--with-joinedon removeOnLoad">
+    <GenericButton
+      icon="fa-sharp fa-regular fa-pen-to-square"
+      withBorder="true"
+      color="ghost-gray-text"
+      classString="editButton js-edit-profile"
+      href="/account/edit"
+    >
+      Edit
+    </GenericButton>
+    <div class="c-profile-image loading-animation"></div>
+    <div class="c-profile__content">
+      <p class="skeleton-text-small loading-animation"></p>
+      <p class="skeleton-text loading-animation"></p>
+      <p class="skeleton-text loading-animation"></p>
+    </div>
+  </div>
+
+  <div class="account-layout--anchor u-margin-top-medium">
+    <GenericButton
+      icon="fa-sharp fa-regular fa-pen-to-square"
+      withBorder="true"
+      color="ghost-gray-text"
+      classString="editButton js-edit-personal-information"
+      href="/account/edit"
+    >
+      Edit
+    </GenericButton>
+    <h2>Personal information</h2>
+    <div class="c-personal-information hidden showOnLoad">
+      <div class="c-personal-information__card">
+        <span>First name</span>
+        <p class="js-userDetails-firstName"></p>
       </div>
-
-      <div class="c-form__element c-form__element--small-margin">
-        <label for="lastname" class="c-form__label">Last Name</label>
-        <input class="c-text-input" id="lastname" name="lastname" type="text" maxlength="94" required />
-        <span id="errorMessageLastName" class="c-form__error-message" style="display: none;">
-          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your last name
-        </span>
+      <div class="c-personal-information__card">
+        <span>Last name</span>
+        <p class="js-userDetails-lastName"></p>
       </div>
-
-      <div class="c-form__element c-form__element--small-margin">
-        <label for="displayname" class="c-form__label">Display Name</label>
-        <span class="c-form__hint">This will be visible to other users.</span>
-        <input class="c-text-input" id="displayname" name="displayname" type="text" maxlength="94" required />
-        <span id="errorMessageDisplayName" class="c-form__error-message" style="display: none;">
-          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your display name
-        </span>
+      <div class="c-personal-information__card">
+        <span>Display name</span>
+        <p class="js-userDetails-displayName"></p>
       </div>
-
-      <div class="c-form__element c-form__element--small-margin">
-        <label for="email" class="c-form__label">Email Address</label>
-        <div class="c-input-container">
-          <input
-            class="c-text-input"
-            id="email"
-            name="email"
-            type="email"
-            spellcheck="false"
-            aria-describedby="email-hint"
-            autocomplete="email"
-            disabled
-          />
-          <i class="fa-regular fa-lock c-input-icon"></i>
-        </div>
-        <div class="info-save-button-container">
-          <input
-            class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border u-margin-top-small"
-            id="SaveChanges"
-            type="submit"
-            value="Save Changes"
-          />
-          <p class="savedName">saved</p>
-        </div>
-        <div
-          class="c-flex-strip c-flex-strip--row c-flex-strip--align-center c-flex-strip--justify-flex-start"
-          style="gap: 1rem;"
-        >
-          <GenericButton withBorder="true" classString="logoutLink">Log Out</GenericButton>
-          <GenericButton id="DeleteAccountButton" withBorder="true" color="red">Delete Account</GenericButton>
-        </div>
+      <div class="c-personal-information__card">
+        <span>Email address</span>
+        <p class="js-userDetails-email"></p>
       </div>
-    </form>
+    </div>
+    <div class="c-personal-information removeOnLoad">
+      <div class="c-personal-information__card">
+        <p class="skeleton-text-small loading-animation"></p>
+        <p class="skeleton-text loading-animation"></p>
+      </div>
+      <div class="c-personal-information__card">
+        <p class="skeleton-text-small loading-animation"></p>
+        <p class="skeleton-text loading-animation"></p>
+      </div>
+      <div class="c-personal-information__card">
+        <p class="skeleton-text-small loading-animation"></p>
+        <p class="skeleton-text loading-animation"></p>
+      </div>
+      <div class="c-personal-information__card">
+        <p class="skeleton-text-small loading-animation"></p>
+        <p class="skeleton-text loading-animation"></p>
+      </div>
+    </div>
+  </div>
 
-    <script type="module" src="/scripts/accountPage-TSBundle.js"></script>
-  </section>
-</AuthenticationLayout>
+  <script type="module" src="/scripts/accountPage-TSBundle.js"></script>
+</AccountLayout>

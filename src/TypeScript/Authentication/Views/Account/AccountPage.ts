@@ -1,12 +1,16 @@
-import { Modal } from "../../../../../ComponentAssets/simpleComponents/modal/modal";
-import { updateUser } from "../../Controllers/Account/updateUser";
+import { GenerateDateString } from "../../../helpers/generateDateString";
 import { CheckLogin } from "../../Controllers/Login/CheckLogin";
-import { DeleteUser } from "../../Controllers/Me/DeleteUser";
 import { getCurrentUser } from "../../Controllers/Me/GetCurrentUser";
-import { addDataToInputs } from "./addDataToInputs";
+import { UserProfileInput } from "../../Controllers/Profile/userProfile";
 import { showAccountStatusMessage } from "./showAccountStatusMessage";
 
 async function InitAccountPage() {
+  const hash = window.location.hash;
+
+  if (!hash) {
+    window.location.hash = "#profile";
+  }
+
   const signedIn = await CheckLogin();
   if (signedIn.LoggedIn === false) {
     localStorage.setItem("backLink", window.location.href);
@@ -14,71 +18,64 @@ async function InitAccountPage() {
   }
 
   const user = await getCurrentUser();
-  if (user) {
-    addDataToInputs(user.firstName, user.lastName, user.displayName, user.email);
-  }
+  const userProfile = {
+    fullName: `${user.firstName} ${user.lastName}`,
+    displayName: user.displayName,
+    letter: user.firstName[0],
+    joinedOn: GenerateDateString(user.createdAt),
+  };
 
-  const saveChangesButton = document.getElementById("SaveChanges");
-  if (saveChangesButton) {
-    saveChangesButton.addEventListener("click", async () => {
-      const firstName = document.getElementById("firstname") as HTMLInputElement;
-      const lastName = document.getElementById("lastname") as HTMLInputElement;
-      const displayName = document.getElementById("displayname") as HTMLInputElement;
-      const email = document.getElementById("email") as HTMLInputElement;
+  fillUserProfile(userProfile);
+  fillPersonalInformation(user);
 
-      const user = {
-        firstName: firstName.value,
-        lastName: lastName.value,
-        displayName: displayName.value,
-        email: email.value,
-      };
+  const allShowOnLoad = document.querySelectorAll(".showOnLoad");
+  allShowOnLoad.forEach((element) => {
+    element.classList.remove("hidden");
+  });
 
-      if (user) {
-        const updated = await updateUser(user);
-        console.log(updated);
+  const allHideOnLoad = document.querySelectorAll(".removeOnLoad");
+  allHideOnLoad.forEach((element) => {
+    element.classList.add("hidden");
+  });
 
-        if (updated) {
-          showAccountStatusMessage(true);
-          addDataToInputs(updated.firstName, updated.lastName, updated.displayName, updated.email);
-          window.scrollTo(0, 0);
-        } else {
-          showAccountStatusMessage(false);
-        }
-      }
-    });
-  }
+  const urlParams = new URLSearchParams(window.location.search);
+  const status = urlParams.get("status");
+  console.log("status", status);
 
-  const deleteAccountButton = document.getElementById("DeleteAccountButton");
-  if (deleteAccountButton) {
-    deleteAccountButton.addEventListener("click", async () => {
-      const modal = new Modal("Delete comment", "Are you sure you want to delete this comment?", "Delete", "Cancel");
-
-      try {
-        const result = await modal.open({
-          title: "Delete account",
-          paragraph: "Are you sure you want to delete your account?",
-          confirmText: "Delete",
-          cancelText: "Cancel",
-          size: "medium",
-          corner: "round",
-          colour: "primary",
-          withBorder: true,
-          ariaLabel: "Delete account modal",
-        });
-
-        if (result === "confirm") {
-          const deleted = await DeleteUser();
-          if (deleted) {
-            localStorage.removeItem("token");
-            window.location.href = "/index.html";
-          } else {
-            alert("Error deleting account, please try again later");
-          }
-        }
-      } catch (error) {
-        console.error("Modal action was cancelled", error);
-      }
-    });
+  if (status) {
+    showAccountStatusMessage(status === "true");
   }
 }
 InitAccountPage();
+
+function fillPersonalInformation(userProfile) {
+  document.querySelector(".js-userDetails-firstName").textContent = userProfile.firstName;
+  document.querySelector(".js-userDetails-lastName").textContent = userProfile.lastName;
+  document.querySelector(".js-userDetails-displayName").textContent = userProfile.displayName.toLowerCase();
+  document.querySelector(".js-userDetails-email").textContent = userProfile.email;
+}
+
+function fillUserProfile(userProfile: UserProfileInput) {
+  const fullName = document.querySelectorAll(".js-userProfile-fullName");
+  const displayname = document.querySelectorAll(".js-userProfile-displayname");
+  const letter = document.querySelectorAll(".js-userProfile-letter");
+  const joinedOn = document.querySelectorAll(".js-userProfile-joinedOn");
+
+  fullName.forEach((element) => {
+    element.textContent = userProfile.fullName;
+  });
+
+  displayname.forEach((element) => {
+    element.textContent = "@" + userProfile.displayName.toLowerCase();
+  });
+
+  letter.forEach((element) => {
+    element.textContent = userProfile.letter;
+  });
+
+  if (userProfile.joinedOn) {
+    joinedOn.forEach((element) => {
+      element.textContent = "Joined:" + userProfile.joinedOn;
+    });
+  }
+}

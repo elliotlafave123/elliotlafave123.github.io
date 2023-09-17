@@ -1,0 +1,65 @@
+---
+import GenericButton from "../../components/GenericButton.vue";
+import AuthenticationLayout from "../../layouts/AuthenticationLayout.astro";
+---
+
+<AuthenticationLayout title="Edit personal information">
+  <section class="c-container c-container--x-small c-container--centered">
+    <form class="c-form" id="accountPage" onsubmit="return false" novalidate>
+      <div class="c-dialogue"></div>
+
+      <h2>Edit personal information</h2>
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="firstname" class="c-form__label">First Name</label>
+        <input class="c-text-input" id="firstname" name="firstname" type="text" maxlength="94" required />
+        <span id="errorMessageFirstName" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your first name
+        </span>
+      </div>
+
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="lastname" class="c-form__label">Last Name</label>
+        <input class="c-text-input" id="lastname" name="lastname" type="text" maxlength="94" required />
+        <span id="errorMessageLastName" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your last name
+        </span>
+      </div>
+
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="displayname" class="c-form__label">Display Name</label>
+        <span class="c-form__hint">This will be visible to other users.</span>
+        <input class="c-text-input" id="displayname" name="displayname" type="text" maxlength="94" required />
+        <span id="errorMessageDisplayName" class="c-form__error-message" style="display: none;">
+          <i class="fa-solid fa-triangle-exclamation"></i>Please enter your display name
+        </span>
+      </div>
+
+      <div class="c-form__element c-form__element--small-margin">
+        <label for="email" class="c-form__label">Email Address</label>
+        <div class="c-input-container">
+          <input
+            class="c-text-input"
+            id="email"
+            name="email"
+            type="email"
+            spellcheck="false"
+            aria-describedby="email-hint"
+            autocomplete="email"
+            disabled
+          />
+          <i class="fa-regular fa-lock c-input-icon"></i>
+        </div>
+        <div class="info-save-button-container">
+          <input
+            class="c-button c-button--medium c-button--semi-round c-button--primary-secondary c-button--primary-secondary--with-border u-margin-top-small"
+            id="SaveChanges"
+            type="submit"
+            value="Save Changes"
+          />
+          <p class="savedName">saved</p>
+        </div>
+      </div>
+    </form>
+  </section>
+  <script type="module" src="/scripts/editAccount-TSBundle.js"></script>
+</AuthenticationLayout>

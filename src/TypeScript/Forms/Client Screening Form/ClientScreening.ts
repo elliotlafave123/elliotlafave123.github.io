@@ -60,9 +60,7 @@ const InitClientScreeningForm = () => {
         } else {
           alert("Something went wrong. Please try again.");
         }
-      } catch (error) {
-        console.log("error", error);
-      }
+      } catch (error) {}
     });
   }
 };

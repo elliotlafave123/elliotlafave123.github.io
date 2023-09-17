@@ -16,8 +16,6 @@ export async function GetComments(params: GetCommentsInput): Promise<any> {
       },
     });
 
-    console.log(response);
-
     if (response.status === 404) {
       throw new Error("Could not find comments");
     }
@@ -26,10 +24,8 @@ export async function GetComments(params: GetCommentsInput): Promise<any> {
     }
 
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
-    console.log(`Error fetching comments: ${error}`);
     return null;
   }
 }

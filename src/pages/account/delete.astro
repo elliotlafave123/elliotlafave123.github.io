@@ -1,0 +1,13 @@
+---
+import GenericButton from "../../components/GenericButton.vue";
+import AccountLayout from "../../layouts/AccountLayout.astro";
+---
+
+<AccountLayout title="Delete account">
+  <h1>Delete account</h1>
+  <p>Are you sure you want to delete your account?</p>
+  <form action="/account/delete" method="POST" onsubmit="return false" novalidate>
+    <GenericButton color="red" button="true" id="DeleteAccountButton">Delete account</GenericButton>
+  </form>
+  <script type="module" src="/scripts/deleteAccountPage-TSBundle.js"></script>
+</AccountLayout>
