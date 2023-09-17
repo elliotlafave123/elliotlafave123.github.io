@@ -6,7 +6,7 @@ import AccountLayout from "../layouts/AccountLayout.astro";
 <AccountLayout title="My account">
   <h1>My profile</h1>
 
-  <div class="account-layout--anchor c-profile__container c-profile__container--with-joinedon">
+  <div class="account-layout--anchor c-profile__container c-profile__container--with-joinedon hidden showOnLoad">
     <GenericButton
       icon="fa-sharp fa-regular fa-pen-to-square"
       withBorder="true"
@@ -26,6 +26,24 @@ import AccountLayout from "../layouts/AccountLayout.astro";
     </div>
   </div>
 
+  <div class="account-layout--anchor c-profile__container c-profile__container--with-joinedon removeOnLoad">
+    <GenericButton
+      icon="fa-sharp fa-regular fa-pen-to-square"
+      withBorder="true"
+      color="ghost-gray-text"
+      classString="editButton js-edit-profile"
+      href="/account/edit"
+    >
+      Edit
+    </GenericButton>
+    <div class="c-profile-image loading-animation"></div>
+    <div class="c-profile__content">
+      <p class="skeleton-text-small loading-animation"></p>
+      <p class="skeleton-text loading-animation"></p>
+      <p class="skeleton-text loading-animation"></p>
+    </div>
+  </div>
+
   <div class="account-layout--anchor u-margin-top-medium">
     <GenericButton
       icon="fa-sharp fa-regular fa-pen-to-square"
@@ -37,7 +55,7 @@ import AccountLayout from "../layouts/AccountLayout.astro";
       Edit
     </GenericButton>
     <h2>Personal information</h2>
-    <div class="c-personal-information">
+    <div class="c-personal-information hidden showOnLoad">
       <div class="c-personal-information__card">
         <span>First name</span>
         <p class="js-userDetails-firstName"></p>
@@ -53,6 +71,24 @@ import AccountLayout from "../layouts/AccountLayout.astro";
       <div class="c-personal-information__card">
         <span>Email address</span>
         <p class="js-userDetails-email"></p>
+      </div>
+    </div>
+    <div class="c-personal-information removeOnLoad">
+      <div class="c-personal-information__card">
+        <p class="skeleton-text-small loading-animation"></p>
+        <p class="skeleton-text loading-animation"></p>
+      </div>
+      <div class="c-personal-information__card">
+        <p class="skeleton-text-small loading-animation"></p>
+        <p class="skeleton-text loading-animation"></p>
+      </div>
+      <div class="c-personal-information__card">
+        <p class="skeleton-text-small loading-animation"></p>
+        <p class="skeleton-text loading-animation"></p>
+      </div>
+      <div class="c-personal-information__card">
+        <p class="skeleton-text-small loading-animation"></p>
+        <p class="skeleton-text loading-animation"></p>
       </div>
     </div>
   </div>
