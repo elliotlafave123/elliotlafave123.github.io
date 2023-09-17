@@ -1,6 +1,7 @@
 import { initPasswordEye } from "../../../../../../ComponentAssets/simpleComponents/Forms/Form Fields/PasswordInput";
 import { ChangePasswordStatus, changePassword } from "../../../Controllers/Account/changePassword";
 import { CheckLogin } from "../../../Controllers/Login/CheckLogin";
+import { showAccountStatusMessage } from "../showAccountStatusMessage";
 
 document.addEventListener("DOMContentLoaded", async function () {
   const isAuth = await CheckLogin();
@@ -48,6 +49,7 @@ async function handleSubmit(e: Event) {
   const errorSummary = document.querySelector(".c-validation-summary") as HTMLDivElement;
   const currentPassword = document.getElementById("currentPassword") as HTMLInputElement;
   const newPassword = document.getElementById("password") as HTMLInputElement;
+  const confirmPassword = document.getElementById("confirmPassword") as HTMLInputElement;
   errorSummary.style.display = "none";
 
   const inputs = [
@@ -112,7 +114,12 @@ async function handleSubmit(e: Event) {
   const response = await changePassword(currentPassword.value, newPassword.value);
 
   if (response === ChangePasswordStatus.Success) {
-    console.log("Password changed successfully");
-    window.location.href = "/account/security?status=true#security";
+    showAccountStatusMessage(true);
+    currentPassword.value = "";
+    newPassword.value = "";
+    confirmPassword.value = "";
+    window.scrollTo(0, 0);
+  } else {
+    showAccountStatusMessage(false);
   }
 }
