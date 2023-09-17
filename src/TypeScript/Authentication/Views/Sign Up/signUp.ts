@@ -136,7 +136,9 @@ async function handleSubmit(e: Event) {
     } else {
       handleSignUpError(result, errorSummary);
     }
-  } catch (error) {}
+  } catch (error) {
+    //
+  }
 }
 
 function handleSignUpError(error: SignUpResult, errorSummary: HTMLDivElement) {
