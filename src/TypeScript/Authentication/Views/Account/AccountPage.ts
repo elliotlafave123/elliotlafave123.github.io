@@ -28,6 +28,16 @@ async function InitAccountPage() {
   fillUserProfile(userProfile);
   fillPersonalInformation(user);
 
+  const allShowOnLoad = document.querySelectorAll(".showOnLoad");
+  allShowOnLoad.forEach((element) => {
+    element.classList.remove("hidden");
+  });
+
+  const allHideOnLoad = document.querySelectorAll(".removeOnLoad");
+  allHideOnLoad.forEach((element) => {
+    element.classList.add("hidden");
+  });
+
   const urlParams = new URLSearchParams(window.location.search);
   const status = urlParams.get("status");
   console.log("status", status);
