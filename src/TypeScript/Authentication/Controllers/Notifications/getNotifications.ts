@@ -11,7 +11,6 @@ export async function getNotifications() {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log(response);
 
     if (response.status === 404) {
       return null;
