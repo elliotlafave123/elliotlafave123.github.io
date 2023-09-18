@@ -1,27 +1,21 @@
 ---
+import GenericButton from "../../components/GenericButton.vue";
 import AuthenticationLayout from "../../layouts/AuthenticationLayout.astro";
 ---
 
 <AuthenticationLayout title="Notifications">
   <div class="c-container">
     <div class="c-notification__header">
-      <h1>Notifications</h1>
-      <span class="c-notification__count" id="notifications-count">3</span>
+      <div class="c-notification__heading">
+        <h1>Notifications</h1>
+        <span class="c-notification__count" id="notifications-count">0</span>
+      </div>
+      <GenericButton withBorder="true" color="ghost-gray-text" id="markAllAsRead" button="true">
+        Mark all as read
+      </GenericButton>
     </div>
 
-    <div id="notifications-container">
-      <button class="c-notification c-notification--unread">
-        <div class="c-notification__profile-img" style="background-color: purple">A</div>
-        <div class="c-notification__content">
-          <div class="c-notification__details">
-            <div class="c-notification__display-name">Administrator</div>
-            <div class="c-notification__message">Administrator upvoted your comment</div>
-            <div class="c-notification__not-seen"></div>
-          </div>
-          <span class="c-notification__date">Sep 17, 2023 at 6:45 PM</span>
-        </div>
-      </button>
-    </div>
+    <div id="notifications-container"></div>
   </div>
-  <!-- <script type="module" src="/scripts/notificationsView-TSBundle.js"></script> -->
+  <script type="module" src="/scripts/notificationsView-TSBundle.js"></script>
 </AuthenticationLayout>
