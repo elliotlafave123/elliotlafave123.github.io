@@ -45,6 +45,6 @@ export function insertUserProfileData(userProfile: UserProfileInput) {
 
     if (!headerBottom) return;
 
-    headerBottom.style.top = "310px";
+    headerBottom.style.top = "350px";
   }
 }
