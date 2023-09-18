@@ -37,7 +37,7 @@ export function insertUserProfileData(userProfile: UserProfileInput) {
   if (fullName && displayname && letter) {
     fullName.textContent = userProfile.fullName;
     displayname.textContent = "@" + userProfile.displayName.toLowerCase();
-    letter.textContent = userProfile.letter;
+    letter.textContent = userProfile.letter.toUpperCase();
   }
 
   if (window.innerWidth < 900) {
@@ -45,6 +45,6 @@ export function insertUserProfileData(userProfile: UserProfileInput) {
 
     if (!headerBottom) return;
 
-    headerBottom.style.top = "310px";
+    headerBottom.style.top = "350px";
   }
 }

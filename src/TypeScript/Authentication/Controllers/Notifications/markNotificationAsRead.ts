@@ -1,28 +1,29 @@
 import { Constants } from "../../../Constants/Constants";
-import { NotificationModel } from "../../Models/NotificationsModel";
 
-export async function getNotifications() {
+export async function markNotificationAsRead(notificationId: string): Promise<boolean> {
   try {
     const token = localStorage.getItem("token");
     const response = await fetch(`${Constants.API_BASE_URL}/api/users/notifications`, {
-      method: "GET",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
+      body: JSON.stringify({ notificationId }),
     });
 
+    console.log(response);
+
     if (response.status === 404) {
-      return null;
+      throw new Error("Notification not found");
     }
 
-    try {
-      const data = await response.json();
-      return data as Array<NotificationModel>;
-    } catch (error) {
-      throw new Error("Error parsing response");
+    if (response.status === 201) {
+      return true;
     }
+
+    throw new Error("Error updating notification");
   } catch (error) {
-    return null;
+    return false;
   }
 }
