@@ -14,16 +14,15 @@ export function initEditComments() {
       clearOtherEditingComments(comment);
 
       const commentText = comment.querySelector(".c-comment__text") as HTMLElement;
+      const commentRepliedToLink = comment.querySelector(".c-comment__replied-to") as HTMLElement;
+      commentRepliedToLink.remove();
       commentText.style.display = "none";
 
       const commentInteractions = comment.querySelector(".c-comment__interactions") as HTMLElement;
       commentInteractions.classList.add("c-comment__interactions--editing");
 
       const commentHeader = comment.querySelector(".c-comment__header") as HTMLElement;
-      let oldText = commentText.innerText;
-
-      // Remove '@username ' from the beginning of the oldText
-      oldText = oldText.replace(/^@\w+\s/, "").trim();
+      const oldText = commentText.innerText;
 
       let form = comment.querySelector(".add-comment-container");
       if (!form) {
