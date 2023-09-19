@@ -1,7 +1,7 @@
 import { initHeader } from "../../../../ComponentAssets/simpleComponents/layout/header/header";
-import { setMainElementTopPadding } from "./MainElementTopPadding";
+import { setMainElementSizing } from "./MainElementTopPadding";
 import { initHeaderNavigation } from "./headerNavigation";
 
 initHeader();
-setMainElementTopPadding();
+setMainElementSizing();
 initHeaderNavigation();
