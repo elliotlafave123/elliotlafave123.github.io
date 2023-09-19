@@ -1,11 +1,14 @@
 import { getHeaderHeight } from "./GetHeaderHeight";
 
-export const setMainElementTopPadding = () => {
+export const setMainElementSizing = () => {
   const headerHeight = getHeaderHeight();
   const mainElement = document.getElementById("main") as HTMLElement;
 
   if (mainElement) {
-    mainElement.style.paddingTop = `${headerHeight + 16}px`;
+    mainElement.style.marginTop = `${headerHeight + 16}px`;
+
+    const minHeight = window.innerHeight - headerHeight - 16;
+    mainElement.style.minHeight = `${minHeight}px`;
   }
 };
 
@@ -17,8 +20,8 @@ window.addEventListener("resize", () => {
   }
 
   resizeTimeout = setTimeout(() => {
-    setMainElementTopPadding();
+    setMainElementSizing();
   }, 100);
 });
 
-setMainElementTopPadding();
+setMainElementSizing();
