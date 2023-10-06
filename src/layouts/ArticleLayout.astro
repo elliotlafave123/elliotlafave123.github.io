@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import CommentSection from "../components/CommentSection.astro";
 import BaseHead from "./BaseHead.astro";
 import CookieBanner from "../components/CookieBanner.astro";
+import PromoCard from "../components/Promo Card/PromoCard.vue";
 
 export interface Props {
   title: string;
@@ -59,8 +60,11 @@ const { title, date, time, tag, author, authorRole, streamID } = Astro.props;
         <CommentSection streamID={streamID} />
         <CookieBanner />
       </div>
-      <div>
-        <!-- <h3>More articles</h3> -->
+      <div class="article-sidebar">
+        <h3>More articles</h3>
+        <PromoCard text="Comments section" link="/pages/Articles/Personal/Comments Section/Comments Section.html" />
+        <PromoCard text="Login Audit API" link="/pages/Articles/GMC Work/Login Audit Api/Login Audit Api.html" />
+        <PromoCard text="Login Audit App" link="/pages/Articles/GMC Work/Login Audit App/Login Audit App.html" />
       </div>
     </main>
     <Footer />
