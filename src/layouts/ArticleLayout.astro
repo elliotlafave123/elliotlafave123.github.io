@@ -11,13 +11,15 @@ export interface Props {
   date: string;
   time: string;
   tag?: string;
+  author: string;
+  authorRole: string;
   streamID: string;
 }
 
 const env = import.meta.env.VITE_NETLIFY_ENV as string;
 const isTestSubdomain = env === "test";
 
-const { title, date, time, tag, streamID } = Astro.props;
+const { title, date, time, tag, author, authorRole, streamID } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -45,6 +47,11 @@ const { title, date, time, tag, streamID } = Astro.props;
             <span class="c-article-meta__comments"><i class="fa-sharp fa-solid fa-message-lines"></i>Comments</span>
           </div>
           <button id="share-button" class="c-share-button"><i class="fa-sharp fa-regular fa-share-nodes"></i></button>
+        </div>
+
+        <div class="c-article-author">
+          <h3 class="c-article-author__name">By {author}</h3>
+          <p class="c-article-author__role">{authorRole}</p>
         </div>
 
         <slot />
