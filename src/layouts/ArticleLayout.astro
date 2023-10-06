@@ -25,42 +25,16 @@ const { title, date, time, streamID } = Astro.props;
   <body>
     <p class="hidden" id="jsEnvironment">{env}</p>
     <Header />
-    <main id="main">
-      <!-- --- Article --- -->
-      <section class="article">
-        <!-- Interactions -->
-        <nav class="c-breadcrumb" id="breadcrumbNav"></nav>
-        <div class="article__interactions">
-          <div class="article__interactions--section">
-            <a
-              href="../"
-              id="first-section"
-              class="c-button c-button--large c-button--semi-round c-button--gray-secondary c-button--gray-secondary--with-border"
-              aria-label="Go to previous page"
-            >
-              <i class="fa-sharp fa-regular fa-arrow-left" aria-hidden="true"></i>
-              Go back
-            </a>
-          </div>
-        </div>
-        <div class="article__header">
-          <h1>{title}</h1>
-
-          <div class="article__header-info">
-            <span>Elliot La Fave</span>
-            <p>&#183;</p>
-            <span>{date}</span>
-            <p>&#183;</p>
-            <span>{time}</span>
-          </div>
-
-          <slot />
-        </div>
-      </section>
+    <main id="main" class="article-layout">
+      <div>
+        <slot />
+        <CommentSection streamID={streamID} />
+        <CookieBanner />
+      </div>
+      <div>
+        <h3>More articles</h3>
+      </div>
     </main>
-
-    <CommentSection streamID={streamID} />
-    <CookieBanner />
 
     <Footer />
   </body>

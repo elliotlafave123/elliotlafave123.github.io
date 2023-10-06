@@ -9,7 +9,10 @@
 @import "base/animations";
 @import "../../ComponentAssets/sass/variables/typography";
 
-// COMPONENT LIBRARY
+// COMPONENT LIBRARY#
+// Pages
+@import "../../ComponentAssets/pages/article/article-layout.scss";
+
 // Complex Components
 @import "../../ComponentAssets/complexComponents/CommentsSection/c-comment.scss";
 @import "../../ComponentAssets/complexComponents/CommentsSection/addComment";
