@@ -10,13 +10,14 @@ export interface Props {
   title: string;
   date: string;
   time: string;
+  tag?: string;
   streamID: string;
 }
 
 const env = import.meta.env.VITE_NETLIFY_ENV as string;
 const isTestSubdomain = env === "test";
 
-const { title, date, time, streamID } = Astro.props;
+const { title, date, time, tag, streamID } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -27,15 +28,34 @@ const { title, date, time, streamID } = Astro.props;
     <Header />
     <main id="main" class="article-layout">
       <div>
+        <div class="c-article-header">
+          {
+            tag && (
+              <div class="c-article-tag">
+                <span>{tag}</span>
+              </div>
+            )
+          }
+          <h1>{title}</h1>
+          <div class="c-article-meta">
+            <span class="c-article-meta__date"><i class="fa-sharp fa-regular fa-calendar-days"></i></span>{date}
+            <span class="c-article-meta__dot"></span>
+            <span class="c-article-meta__date"><i class="fa-sharp fa-regular fa-clock"></i>{time}</span>
+            <span class="c-article-meta__dot"></span>
+            <span class="c-article-meta__comments"><i class="fa-sharp fa-solid fa-message-lines"></i>Comments</span>
+          </div>
+          <button id="share-button" class="c-share-button"><i class="fa-sharp fa-regular fa-share-nodes"></i></button>
+        </div>
+
         <slot />
+
         <CommentSection streamID={streamID} />
         <CookieBanner />
       </div>
       <div>
-        <h3>More articles</h3>
+        <!-- <h3>More articles</h3> -->
       </div>
     </main>
-
     <Footer />
   </body>
 </html>
