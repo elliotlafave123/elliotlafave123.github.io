@@ -4,7 +4,15 @@ import WebcraftersAdvert from "../../../../../components/Adverts/WebcraftersAdve
 ---
 
 <!-- <ArticleLayout title="Comments Section" date="07/10/2022" time="16:35pm" streamID="633ec855c6bdedc1a0812586"> -->
-<ArticleLayout title="Comments Section" date="07/10/2022" time="16:35pm" streamID="634003dea85c3632d4597efd">
+<ArticleLayout
+  title="Comments Section"
+  date="07/10/2022"
+  time="16:35pm"
+  tag="Personal projects"
+  author="Elliot La Fave"
+  authorRole="Editor and site admin"
+  streamID="634003dea85c3632d4597efd"
+>
   <!-- Main Content -->
   <div class="article__section" id="Idea">
     <h2>The Idea</h2>
@@ -52,44 +60,70 @@ import WebcraftersAdvert from "../../../../../components/Adverts/WebcraftersAdve
     <h2>Integrating user login</h2>
     <p>I had already created a user authentication API.</p>
     <p>
-      The app uses JWT (JSON web token) authentication. This works by creating a random token when a user successfully
-      logs in. The token is saved n their browser and will allow them access for an amount of time until the token
-      expires and they must log in again.
+      The app uses <a href="https://auth0.com/docs/secure/tokens/json-web-tokens" class="c-link"
+        >JWT (JSON web token)
+      </a> authentication. This works by creating a random token when a user successfully logs in. The token is saved n their
+      browser and will allow them access for an amount of time until the token expires and they must log in again.
     </p>
     <p>
       I designed the pages and connected them to the API and it worked straight away, that would've been the most
       difficult part if I hadn't created the authentication API previously. The signed in state is below:
     </p>
-    <div class="article__image">
-      <img src="/img/articles/Comments Section/SignedInStrip.png" alt="Signed in strip" class="articleImg" />
-      <p>Signed in strip</p>
+    <div class="c-image">
+      <div class="c-image-container">
+        <picture>
+          <source media="(max-width: 480px)" srcset="/img/articles/Comments Section/SignedInStrip.png" />
+          <source
+            media="(min-width: 481px) and (max-width: 1024px)"
+            srcset="/img/articles/Comments Section/SignedInStrip.png"
+          />
+          <img src="/img/articles/Comments Section/SignedInStrip.png" alt="Signed in strip" class="c-image__image" />
+        </picture>
+      </div>
+      <span class="c-image__caption">Signed in strip</span>
     </div>
     <p>
-      I then added a Google Recaptcha checkbox to prevent spam on my site, I also added states for when users are signed
-      in but their email is not verified:
+      I then added a <a href="https://www.google.com/recaptcha/about/" class="c-link">Google Recaptcha</a> checkbox to prevent
+      spam on my site, I also added states for when users are signed in but their email is not verified:
     </p>
-    <div class="article__image">
-      <img src="/img/articles/Comments Section/VerifyStrip.png" alt="Verify email strip" class="articleImg" />
-      <p>Verify email strip</p>
+
+    <div class="c-image">
+      <div class="c-image-container">
+        <picture>
+          <source media="(max-width: 480px)" srcset="/img/articles/Comments Section/VerifyStrip.png" />
+          <source
+            media="(min-width: 481px) and (max-width: 1024px)"
+            srcset="/img/articles/Comments Section/VerifyStrip.png"
+          />
+          <img src="/img/articles/Comments Section/VerifyStrip.png" alt="Verify email strip" class="c-image__image" />
+        </picture>
+        <!-- <span class="c-image__credit"></span> -->
+      </div>
+      <span class="c-image__caption">Verify email strip</span>
     </div>
-    <!--  -->
+
     <p>After logging in a user will be brought back to the page they started the login/sign up process from.</p>
     <p>The pages for the login/sign up pages are below:</p>
     <div class="article__user-story">
-      <ul class="u-margin-bottom-medium">
-        <li>Log In: <a class="storeBackLink" href="/pages/login/login.html">Login</a></li>
-        <li>Sign Up: <a class="storeBackLink" href="/pages/login/signup.html">Sign Up</a></li>
+      <ul class="c-link__list u-margin-bottom-medium">
+        <li><a class="c-link storeBackLink" href="/pages/login/login.html">Login</a></li>
+        <li><a class="c-link storeBackLink" href="/pages/login/signup.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
 
-  <WebcraftersAdvert />
+  <div class="article__section">
+    <WebcraftersAdvert />
+  </div>
 
   <div class="article__section" id="CommentDesign">
     <h2>Comments Section Design</h2>
     <p>
-      I first had to think about what data a comment would need. This would be the data model used by MongoDB and
-      Typescript. The data model I settled with is below:
+      I first had to think about what data a comment would need. This would be the data model used by <a
+        href="https://www.mongodb.com/"
+        class="c-link">MongoDB</a
+      > and
+      <a href="https://www.typescriptlang.org/" class="c-link">Typescript</a>. The data model I settled with is below:
     </p>
     <div class="article__user-story">
       <ul class="u-margin-bottom-medium">
@@ -103,68 +137,127 @@ import WebcraftersAdvert from "../../../../../components/Adverts/WebcraftersAdve
       </ul>
     </div>
     <p>I then created the markup for a comment and styled it using SCSS:</p>
-    <div class="article__image">
-      <img src="/img/articles/Comments Section/AComment.png" alt="A Comment" class="articleImg" />
-      <p>A Comment</p>
+    <div class="c-image">
+      <div class="c-image-container">
+        <picture>
+          <source media="(max-width: 480px)" srcset="/img/articles/Comments Section/AComment.png" />
+          <source
+            media="(min-width: 481px) and (max-width: 1024px)"
+            srcset="/img/articles/Comments Section/AComment.png"
+          />
+          <img src="/img/articles/Comments Section/AComment.png" alt="A Comment" class="c-image__image" />
+        </picture>
+      </div>
+      <span class="c-image__caption">A Comment</span>
     </div>
     <p>When a user is not signed in they will see this state:</p>
-    <div class="article__image">
-      <img
-        src="/img/articles/Comments Section/CommentsLogIn.png"
-        alt="Comments section login buttons"
-        class="articleImg"
-      />
-      <p>Comments section login buttons</p>
+
+    <div class="c-image">
+      <div class="c-image-container">
+        <picture>
+          <source media="(max-width: 480px)" srcset="/img/articles/Comments Section/CommentsLogIn.png" />
+          <source
+            media="(min-width: 481px) and (max-width: 1024px)"
+            srcset="/img/articles/Comments Section/CommentsLogIn.png"
+          />
+          <img
+            src="/img/articles/Comments Section/CommentsLogIn.png"
+            alt="Comments section login buttons"
+            class="c-image__image"
+          />
+        </picture>
+      </div>
+      <span class="c-image__caption">Comments section login buttons</span>
     </div>
+
     <p>When a user is signed in, but their email is not verified they see this state:</p>
-    <div class="article__image">
-      <img
-        src="/img/articles/Comments Section/CommentsVerify.png"
-        alt="Comments section verify email"
-        class="articleImg"
-      />
-      <p>Comments section verify email</p>
+    <div class="c-image">
+      <div class="c-image-container">
+        <picture>
+          <source media="(max-width: 480px)" srcset="/img/articles/Comments Section/CommentsVerify.png" />
+          <source
+            media="(min-width: 481px) and (max-width: 1024px)"
+            srcset="/img/articles/Comments Section/CommentsVerify.png"
+          />
+          <img
+            src="/img/articles/Comments Section/CommentsVerify.png"
+            alt="Comments section verify email"
+            class="c-image__image"
+          />
+        </picture>
+      </div>
+      <span class="c-image__caption">Comments section verify email</span>
     </div>
+
     <p>If a user is signed in and their email is verified they see the comment input box:</p>
-    <div class="article__image">
-      <img
-        src="/img/articles/Comments Section/CommentInputSignedIn.png"
-        alt="Unlocked comment input textarea"
-        class="articleImg"
-      />
-      <p>Unlocked comment input textarea</p>
+    <div class="c-image">
+      <div class="c-image-container">
+        <picture>
+          <source media="(max-width: 480px)" srcset="/img/articles/Comments Section/CommentInputSignedIn.png" />
+          <source
+            media="(min-width: 481px) and (max-width: 1024px)"
+            srcset="/img/articles/Comments Section/CommentInputSignedIn.png"
+          />
+          <img
+            src="/img/articles/Comments Section/CommentInputSignedIn.png"
+            alt="Unlocked comment input textarea"
+            class="c-image__image"
+          />
+        </picture>
+      </div>
+      <span class="c-image__caption">Unlocked comment input textarea</span>
     </div>
+
     <p>All of the designs are responsive so they work on all devices.</p>
   </div>
 
   <div class="article__section" id="CommentAPI">
     <h2>The Comment API</h2>
-    <p>For the API, I wrote the code using Express (A NodeJS library) and Mongoose (A MongoDB library).</p>
     <p>
-      I added a folder into my API server repository and created all of the required endpoints, I used Postman to send
-      requests to the API while developing it.
+      For the API, I wrote the code using <a href="https://expressjs.com/" class="c-link">Express</a> (A NodeJS library)
+      and <a href="https://mongoosejs.com/" class="c-link">Mongoose</a> (A MongoDB library).
+    </p>
+    <p>
+      I added a folder into my API server repository and created all of the required endpoints, I used <a
+        href="https://www.postman.com/"
+        class="c-link">Postman</a
+      > to send requests to the API while developing it.
     </p>
     <p>All of the endpoints use the JWT token to ensure that only verified users can comment.</p>
-    <div class="article__image article__image-thin">
-      <img
-        src="/img/articles/Comments Section/PostmanEndpoints.png"
-        alt="Comments API Endpoints in Postman"
-        class="articleImg"
-      />
-      <p>Comments API Endpoints in Postman</p>
+    <div class="c-image">
+      <div class="c-image-container">
+        <picture>
+          <source media="(max-width: 480px)" srcset="/img/articles/Comments Section/PostmanEndpoints.png" />
+          <source
+            media="(min-width: 481px) and (max-width: 1024px)"
+            srcset="/img/articles/Comments Section/PostmanEndpoints.png"
+          />
+          <img
+            src="/img/articles/Comments Section/PostmanEndpoints.png"
+            alt="Comments API Endpoints in Postman"
+            class="c-image__image"
+          />
+        </picture>
+        <!-- <span class="c-image__credit"></span> -->
+      </div>
+      <span class="c-image__caption">Comments API Endpoints in Postman</span>
     </div>
+
     <p>
-      The API is running on a <a href="https://www.linode.com/" target="_blank">Linode</a> cloud based server. I have configured
-      the server to use HTTPS and with the E-Mail ports allowed so I can send email verification codes to users.
+      The API is running on a <a class="c-link" href="https://www.linode.com/" target="_blank">Linode</a> cloud based server.
+      I have configured the server to use HTTPS and with the E-Mail ports allowed so I can send email verification codes
+      to users via <a href="https://sendgrid.com/" class="c-link">SendGrid</a>.
     </p>
     <p>
       The database is running on a
-      <a href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB Atlas Cloud</a> which is a free service up
-      to a certain amount of traffic or data stored.
+      <a class="c-link" href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB Atlas Cloud</a> which is a
+      free service up to a certain amount of traffic or data stored.
     </p>
   </div>
 
-  <WebcraftersAdvert />
+  <div class="article__section">
+    <WebcraftersAdvert />
+  </div>
 
   <div class="article__section">
     <div id="CommentTS">
@@ -175,17 +268,35 @@ import WebcraftersAdvert from "../../../../../components/Adverts/WebcraftersAdve
       </p>
       <p>
         I wrote logic to call the GET all on stream endpoint, then it will use the data and render it to the page using
-        the JS 'InsertAdjacentHTML' method.
+        the JS <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML" class="c-link"
+          >InsertAdjacentHTML</a
+        > method.
       </p>
 
       <p>
-        Each rendered comment has an ID added to the DataSet property, this is used when editing or deleting a comment.
+        Each rendered comment has an ID added to the <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"
+          class="c-link">DataSet</a
+        > property, this is used when editing or deleting a comment.
       </p>
     </div>
     <p>Users can click the edit button on their comment if they are logged in which changes the look of the comment:</p>
-    <div class="article__image">
-      <img src="/img/articles/Comments Section/Editing.png" alt="Editing state of a comment" class="articleImg" />
-      <p>Editing state of a comment</p>
+    <div class="c-image">
+      <div class="c-image-container">
+        <picture>
+          <source media="(max-width: 480px)" srcset="/img/articles/Comments Section/Editing.png" />
+          <source
+            media="(min-width: 481px) and (max-width: 1024px)"
+            srcset="/img/articles/Comments Section/Editing.png"
+          />
+          <img
+            src="/img/articles/Comments Section/Editing.png"
+            alt="Editing state of a comment"
+            class="c-image__image"
+          />
+        </picture>
+      </div>
+      <span class="c-image__caption">Editing state of a comment</span>
     </div>
     <p>When editing users can use the DELETE endpoint and the PUT (update) endpoint.</p>
 

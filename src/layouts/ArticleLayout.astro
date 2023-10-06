@@ -5,18 +5,22 @@ import Footer from "../components/Footer.astro";
 import CommentSection from "../components/CommentSection.astro";
 import BaseHead from "./BaseHead.astro";
 import CookieBanner from "../components/CookieBanner.astro";
+import PromoCard from "../components/Promo Card/PromoCard.vue";
 
 export interface Props {
   title: string;
   date: string;
   time: string;
+  tag?: string;
+  author: string;
+  authorRole: string;
   streamID: string;
 }
 
 const env = import.meta.env.VITE_NETLIFY_ENV as string;
 const isTestSubdomain = env === "test";
 
-const { title, date, time, streamID } = Astro.props;
+const { title, date, time, tag, author, authorRole, streamID } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -25,43 +29,44 @@ const { title, date, time, streamID } = Astro.props;
   <body>
     <p class="hidden" id="jsEnvironment">{env}</p>
     <Header />
-    <main id="main">
-      <!-- --- Article --- -->
-      <section class="article">
-        <!-- Interactions -->
-        <nav class="c-breadcrumb" id="breadcrumbNav"></nav>
-        <div class="article__interactions">
-          <div class="article__interactions--section">
-            <a
-              href="../"
-              id="first-section"
-              class="c-button c-button--large c-button--semi-round c-button--gray-secondary c-button--gray-secondary--with-border"
-              aria-label="Go to previous page"
-            >
-              <i class="fa-sharp fa-regular fa-arrow-left" aria-hidden="true"></i>
-              Go back
-            </a>
-          </div>
-        </div>
-        <div class="article__header">
+    <main id="main" class="article-layout">
+      <div>
+        <div class="c-article-header">
+          {
+            tag && (
+              <div class="c-article-tag">
+                <span>{tag}</span>
+              </div>
+            )
+          }
           <h1>{title}</h1>
-
-          <div class="article__header-info">
-            <span>Elliot La Fave</span>
-            <p>&#183;</p>
-            <span>{date}</span>
-            <p>&#183;</p>
-            <span>{time}</span>
+          <div class="c-article-meta">
+            <span class="c-article-meta__date"><i class="fa-sharp fa-regular fa-calendar-days"></i></span>{date}
+            <span class="c-article-meta__dot"></span>
+            <span class="c-article-meta__date"><i class="fa-sharp fa-regular fa-clock"></i>{time}</span>
+            <span class="c-article-meta__dot"></span>
+            <span class="c-article-meta__comments"><i class="fa-sharp fa-solid fa-message-lines"></i>Comments</span>
           </div>
-
-          <slot />
+          <button id="share-button" class="c-share-button"><i class="fa-sharp fa-regular fa-share-nodes"></i></button>
         </div>
-      </section>
+
+        <div class="c-article-author">
+          <h3 class="c-article-author__name">By {author}</h3>
+          <p class="c-article-author__role">{authorRole}</p>
+        </div>
+
+        <slot />
+
+        <CommentSection streamID={streamID} />
+        <CookieBanner />
+      </div>
+      <div class="article-sidebar">
+        <h3>More articles</h3>
+        <PromoCard text="Comments section" link="/pages/Articles/Personal/Comments Section/Comments Section.html" />
+        <PromoCard text="Login Audit API" link="/pages/Articles/GMC Work/Login Audit Api/Login Audit Api.html" />
+        <PromoCard text="Login Audit App" link="/pages/Articles/GMC Work/Login Audit App/Login Audit App.html" />
+      </div>
     </main>
-
-    <CommentSection streamID={streamID} />
-    <CookieBanner />
-
     <Footer />
   </body>
 </html>

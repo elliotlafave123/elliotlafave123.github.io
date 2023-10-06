@@ -9,7 +9,10 @@
 @import "base/animations";
 @import "../../ComponentAssets/sass/variables/typography";
 
-// COMPONENT LIBRARY
+// COMPONENT LIBRARY#
+// Pages
+@import "../../ComponentAssets/pages/article/article-layout.scss";
+
 // Complex Components
 @import "../../ComponentAssets/complexComponents/CommentsSection/c-comment.scss";
 @import "../../ComponentAssets/complexComponents/CommentsSection/addComment";
@@ -22,6 +25,8 @@
 // Simple Components
 @import "../../ComponentAssets/simpleComponents/ad/c-ad.scss";
 @import "../../ComponentAssets/simpleComponents/button/button.scss";
+@import "../../ComponentAssets/simpleComponents/link/c-link.scss";
+@import "../../ComponentAssets/simpleComponents/image/c-image.scss";
 @import "../../ComponentAssets/simpleComponents/history/c-history.scss";
 @import "../../ComponentAssets/simpleComponents/certification/c-certification.scss";
 @import "../../ComponentAssets/simpleComponents/certificate/c-certificate.scss";
@@ -39,6 +44,13 @@
 @import "../../ComponentAssets/simpleComponents/dotMenu/c-dot-menu.scss";
 @import "../../ComponentAssets/simpleComponents/skeletonLoader/skeletonLoader";
 @import "../../ComponentAssets/simpleComponents/notification/c-notification.scss";
+
+// Article
+@import "../../ComponentAssets/simpleComponents/article/c-article-header.scss";
+@import "../../ComponentAssets/simpleComponents/article/c-article-tag.scss";
+@import "../../ComponentAssets/simpleComponents/article/c-share-button.scss";
+@import "../../ComponentAssets/simpleComponents/article/c-article-meta.scss";
+@import "../../ComponentAssets/simpleComponents/article/c-article-author.scss";
 
 // Layout
 @import "../../ComponentAssets/simpleComponents/layout/scrollbar/scrollbar";
