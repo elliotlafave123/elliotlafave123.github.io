@@ -78,18 +78,20 @@ import WebcraftersAdvert from "../../../../../components/Adverts/WebcraftersAdve
       <img src="/img/articles/Comments Section/VerifyStrip.png" alt="Verify email strip" class="articleImg" />
       <p>Verify email strip</p>
     </div>
-    <!--  -->
+
     <p>After logging in a user will be brought back to the page they started the login/sign up process from.</p>
     <p>The pages for the login/sign up pages are below:</p>
     <div class="article__user-story">
-      <ul class="u-margin-bottom-medium">
-        <li>Log In: <a class="storeBackLink" href="/pages/login/login.html">Login</a></li>
-        <li>Sign Up: <a class="storeBackLink" href="/pages/login/signup.html">Sign Up</a></li>
+      <ul class="c-link__list u-margin-bottom-medium">
+        <li><a class="c-link storeBackLink" href="/pages/login/login.html">Login</a></li>
+        <li><a class="c-link storeBackLink" href="/pages/login/signup.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
 
-  <WebcraftersAdvert />
+  <div class="article__section">
+    <WebcraftersAdvert />
+  </div>
 
   <div class="article__section" id="CommentDesign">
     <h2>Comments Section Design</h2>
@@ -160,17 +162,20 @@ import WebcraftersAdvert from "../../../../../components/Adverts/WebcraftersAdve
       <p>Comments API Endpoints in Postman</p>
     </div>
     <p>
-      The API is running on a <a href="https://www.linode.com/" target="_blank">Linode</a> cloud based server. I have configured
-      the server to use HTTPS and with the E-Mail ports allowed so I can send email verification codes to users.
+      The API is running on a <a class="c-link" href="https://www.linode.com/" target="_blank">Linode</a> cloud based server.
+      I have configured the server to use HTTPS and with the E-Mail ports allowed so I can send email verification codes
+      to users.
     </p>
     <p>
       The database is running on a
-      <a href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB Atlas Cloud</a> which is a free service up
-      to a certain amount of traffic or data stored.
+      <a class="c-link" href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB Atlas Cloud</a> which is a
+      free service up to a certain amount of traffic or data stored.
     </p>
   </div>
 
-  <WebcraftersAdvert />
+  <div class="article__section">
+    <WebcraftersAdvert />
+  </div>
 
   <div class="article__section">
     <div id="CommentTS">
